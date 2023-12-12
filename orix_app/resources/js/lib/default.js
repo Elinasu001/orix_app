@@ -60,18 +60,16 @@ $(document).ready(function() {
 
     var dmTotalNum	= $(".level3 .check").length;
     var dmCheckNum = $(".level3 .check:checked").length;
-    
-    // /*s : 2023-11-27 추가**/
-    // var terms_id = $(this).attr('terms-pop');
-    // $(".layerpopup").removeClass('on');
-    // $("#"+terms_id).addClass('on');
-    // $('body').css("overflow", "hidden");
-    // /*e : 2023-11-27 추가**/
-    
+   
     /*s : 2023-12-12 추가*/
     var terms_id = $(this).attr("terms-pop"); // Get the ID of the clicked element
-    $("#" + terms_id).show(); // Show the associated popup with the same ID when the element is clicked
-  
+    // $("#" + terms_id).show(); // Show the associated popup with the same ID when the element is clicked
+    
+    if ($(this).prop("checked")) {
+        $("#" + terms_id).show(); // Show the associated popup with the same ID when the element is clicked
+    } else {
+        $("#" + terms_id).hide(); // Hide the associated popup when the checkbox is unchecked
+    }
 
     $(".layerpopup .btn.btn.btn-primary").on("click", function() {
       var popup = $(this).closest('.layerpopup');
@@ -116,11 +114,6 @@ $(document).ready(function() {
       };
       agreeChek();
     };
-    // // terms-pop 약관 팝업
-    // $('.btn-layer-close').on('click', function() {
-    //   $(".layerpopup").removeClass('on');
-    //   $('body').css("overflow", "auto");
-    // });
 
   });
     
