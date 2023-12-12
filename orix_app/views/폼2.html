@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>고려저축은행</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="keywords" content="고려저축은행 keywords" />
+	<meta name="description" content="고려저축은행 description" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<!-- 
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+ -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="No-Cache">
+
+	<link href="/resources/css/default.css" rel="stylesheet" />
+	<link href="/resources/css/renewal.css" rel="stylesheet" />
+	<link href="/resources/css/renewal_.css" rel="stylesheet" />
+
+
+
+	<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+	<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+	<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+	<script type="text/javascript" src="/resources/js/lib/ui.js"></script>
+
+	<style>
+		.layerpopup.on {
+			display: block;
+		}
+
+		.pb100 {
+			padding-bottom: 100px !important;
+		}
+
+		.pop-con-wrap>.default-wrap {
+			padding: 20px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<!-- header -->
+	<header class="headerWrap">
+		<div class="header">
+
+			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+
+			<h2><span>신용조회동의</span></h2>
+		</div>
+		<div class="menu-wrap">
+
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- s: contentsWrap -->
+	<div class="contentsWrap">
+		<!-- s: contents -->
+		<div class="contents">
+			<div class="default-wrap">
+				<section class="terms-area">
+					<div class="terms-wrap level1 chk-all">
+						<fieldset>
+							<input type="checkbox" id="allChk01" name="allChk01" value="" class="check all">
+							<label for="allChk01"><span>약관에 모두 동의할게요</span></label>
+						</fieldset>
+					</div>
+					<div class="terms-wrap level2">
+						<fieldset>
+							<input type="checkbox" id="chkEach01" name="check" value="" class="check"
+								terms-pop="lyPullPop01">
+							<label for="chkEach01"><span>[필수] 개인(신용)정보 수집·이용·제공·조회 동의서</span></label>
+						</fieldset>
+					</div>
+
+					<div class="terms-wrap level2">
+						<fieldset>
+							<input type="checkbox" id="chkEach02" name="check" value="" class="check"
+								terms-pop="lyPullPop02">
+							<label for="chkEach02"><span>[필수] 약관</span></label>
+						</fieldset>
+					</div>
+
+				</section>
+
+			</div>
+		</div>
+		<!-- //e: contents -->
+
+		<!-- s: btn-wrap -->
+		<div class="fixed-btn-wrap">
+			<div class="btn-wrap">
+				<a href="javascript:void(0);" class="btn" onclick="PageFunc.proc();">확인</a>
+			</div>
+			<a href="javascript:void(0);" class="btn-txt" onclick="PageFunc.cancel();">그만하기</a>
+		</div>
+		<!-- //e: btn-wrap -->
+	</div>
+	<!-- // e: contentsWrap -->
+
+	<!-- footer -->
+
+
+
+
+
+
+
+	<footer>
+		<!-- 푸터 타입별 정의 -->
+	</footer>
+
+	<!-- 업무공통 -->
+
+
+
+
+
+	<!--약관팝업-->
+	<div id="lyPullPop01" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close">
+		<div class="pop-header">
+			<h2 class="pop-title">개인(신용)정보 수집·이용·제공·조회 동의서</h2>
+			<button type="button" name="button" class="btn-layer-close" onclick="popup_Close();">닫기</button>
+		</div>
+		<div class="pop-con-wrap">
+			<div class="default-wrap">
+				개인(신용)정보 수집·이용·제공·조회 동의서
+
+			</div>
+		</div>
+		<div class="fixed-btn-wrap">
+			<div class="btn-wrap">
+				<a href="javascript:void(0);" class="btn" onclick="popup_Close();">확인</a>
+			</div>
+		</div>
+	</div>
+
+
+	<!--//약관팝업-->
+
+	<!--약관팝업-->
+	<div id="lyPullPop02" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close">
+		<div class="pop-header">
+			<h2 class="pop-title">약관</h2>
+			<button type="button" name="button" class="btn-layer-close" onclick="popup_Close();">닫기</button>
+		</div>
+		<div class="pop-con-wrap">
+			<div class="default-wrap">
+				개인(신용)정보 수집·이용·제공·조회 동의서2
+
+			</div>
+		</div>
+		<div class="fixed-btn-wrap">
+			<div class="btn-wrap">
+				<a href="javascript:void(0);" class="btn" onclick="popup_Close();">확인</a>
+			</div>
+		</div>
+	</div>
+
+
+	<!--//약관팝업-->
+
+	<script>
+		//팝업 닫기
+		function popup_Close() {
+			$(".laypop-all").removeClass("on");
+			$('body').css("overflow", "auto");
+		};
+	</script>
+
+
+
+
+
+
+
+	<!-- //업무공통 -->
+
+
+
+
+
+
+	<!-- //footer -->
+
+</body>
+
+</html>

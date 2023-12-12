@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../resources/css/lib/default.css">
+
+    <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/ui.js"></script>
+    <script>
+        /* 3자리 수마다 콤마 적용 */
+        $(document).on('keyup', 'input[inputmode=numeric]', function (event) {
+            this.value = this.value.replace(/[^0-9]/g, ''); // 입력값이 숫자가 아니면 공백
+            this.value = this.value.replace(/,/g, ''); // ,값 공백처리
+            this.value = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규식을 이용해서 3자리 마다 , 추가
+        });
+    </script>
+    <style>
+
+.type-spread {  margin:0 -20px; }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- //header -->
+        <!-- <header id="lnb">
+            <a href="javascript:void(0);" onclick="" class="btn_prev">이전</a>
+            <h1>정기예금</h1>
+            <a href="javascript:void(0)" class="btn_menu">메뉴</a>
+        </header> -->
+        <form>
+            <div class="contents-wrap login">
+                <section class="login-bg  type-spread">
+                    <img class="logo" src="../resources/images/common/login_orix_logo.png" alt="오릭스로고">
+                </section>
+                <section class="login-section">
+                    <div class="login-group">
+                        <div class="form-group">
+                            <!-- <label for="user-id">아이디</label> -->
+                            <input type="text" class="form-control" id="user-id" placeholder="아이디 입력">
+                            <!-- <label for="user-password">비밀번호</label> -->
+                            <input type="password" class="form-control" id="user-password" placeholder="비밀번호 입력">
+                            <input type="checkbox" name="user_checkbox" id="check1" class="custom-check">
+                            <label for="check1"></label>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-primary">다음</button>
+                        <ul class="find-list">
+                            <li>
+                                <a href="javascript:void(0);" id="_btnSrchId" class="text">아이디 찾기</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" id="_btnReregPw" class="text">비밀번호 찾기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </div>
+</body>
+
+
+
+
+
+</html>

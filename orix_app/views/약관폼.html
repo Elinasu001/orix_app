@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../resources/css/lib/default.css">
+
+    <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/default.js"></script>
+    <!-- <script type="text/javascript" src="../resources/js/lib/ui.js"></script> -->
+</head>
+
+<body>
+	<!-- header -->
+	<div class="wrap">
+		<header id="lnb">
+			<a href="javascript:void(0);" onclick="" class="btn_prev">이전</a>
+			<h1>정기예금</h1>
+			<a href="javascript:void(0)" class="btn_menu">메뉴</a>
+		</header>
+		<!-- //header -->
+		<form>
+			<!-- s: contentsWrap -->
+			<div class="contents-wrap">
+				<section class="form-wrap">
+					<div class="terms-area">
+						<!-- <div class="tit-wrap">
+							<p class="txt"><strong>간편한도조회</strong>를 위해<br/><strong>약관에 동의</strong>해 주세요</p>
+						</div> -->
+
+						<div class="terms-wrap level1 chk-all">
+							<fieldset>
+								<input type="checkbox" id="allChk01" name="allChk01" value="" class="check all">
+								<label for="allChk01"><span>약관에 모두 동의할게요</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach01" name="check" value="" class="check" terms-pop="lyPullPop02"><!--terms-pop 약관 팝업-->
+								<label for="chkEach01"><span>[필수] 개인(신용)정보 수집·이용·제공·조회 동의서</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach02" name="check" value="" class="check" terms-pop="lyPullPop03">
+								<label for="chkEach02"><span>[필수] 개인(신용)정보 수집·이용·제공 동의서(여신금융거래)</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach03" name="check" value="" class="check all">
+								<label for="chkEach03"><span>[선택] 개인(신용)정보 수집·이용·제공 동의서(상품서비스 안내)</span></label>
+							</fieldset>
+							<div class="etc level3">
+								<div class="terms-wrap">
+									<input type="checkbox" id="svcCheck01" name="check" value="" class="check">
+									<label for="svcCheck01">문자</label>
+								</div>
+								<div class="terms-wrap">
+									<input type="checkbox" id="svcCheck02" name="check" value="" class="check">
+									<label for="svcCheck02">이메일</label>
+								</div>
+								<div class="terms-wrap">
+									<input type="checkbox" id="svcCheck03" name="check" value="" class="check">
+									<label for="svcCheck03">전화</label>
+								</div>
+								<div class="terms-wrap">
+									<input type="checkbox" id="svcCheck04" name="check" value="" class="check">
+									<label for="svcCheck04">DM</label>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach04" name="check" value="" class="check">
+								<label for="chkEach04"><span>[선택] 대출거절사유 고지에 관한 사항</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach05" name="check" value="" class="check">
+								<label for="chkEach05"><span>[필수] 가계대출 상품설명서</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach06" name="check" value="" class="check">
+								<label for="chkEach06"><span>[필수] 개인(신용)정보 조회동의서(서민금융진흥원用)</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach07" name="check" value="" class="check">
+								<label for="chkEach07"><span>[필수] 개인(신용)정보의 수집·이용·제공 및 행정·공공기관 및 금융회사 정보제공
+										동의(서민금융진흥원)</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach08" name="check" value="" class="check">
+								<label for="chkEach08"><span>[필수] 개인(신용)정보 및 기업(신용)정보 조회·수집·이용·제공과 행정정보공동이용, 전자금융거래확인서
+										발급을 위한 동의서 관리</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach09" name="check" value="" class="check">
+								<label for="chkEach09"><span>[필수] 계약 체결이행 등을 위한 필수 동의서 (개인금융성신용보험용)</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach10" name="check" value="" class="check">
+								<label for="chkEach10"><span>[필수] CMS출금이체 동의</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach11" name="check" value="" class="check">
+								<label for="chkEach11"><span>[필수] 개인(신용)정보 제3자 제공동의서(통신관련정보)</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach12" name="check" value="" class="check">
+								<label for="chkEach12"><span>[선택] 개인(신용)정보 수집·이용 동의서(보증료 우대 서비스)</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach13" name="check" value="" class="check">
+								<label for="chkEach13"><span>[선택] 개인(신용)정보 수집·이용 동의서(상품서비스 안내 등)</span></label>
+							</fieldset>
+						</div>
+					</div>
+				</section>
+				<!-- <section>
+				<div class="list-bull type-caption has-border">
+					<strong>알아두세요</strong>
+					<ul>
+						<li>약관 동의 시, 저금리 정책 상품의 결과 조회 및 취급이 가능하며 동의에 의한 개인(신용) 정보 조회는 귀하의 신용등급에 영향을 미치지 않아요</li>
+						<li>단, 당행의 신용평가 시스템 및 해당 정책 상품 실행기관의 심사 기준과 개인의 신용도에 따라 대출 여부가 결정되어요</li>
+					</ul>
+				</div>
+			</section> -->
+				<section class="fixed-btn-wrap">
+					<div class="btn-wrap">
+						<button type="button" class="btn btn-primary">다음</button>
+						<button type="button" class="btn btn-txt">그만하기</button>
+					</div>
+				</section>
+			</div>
+		</form>
+	</div>
+	<!-- footer -->
+
+	<footer>
+		<!-- 푸터 타입별 정의 -->
+	</footer>
+	<!-- //footer -->
+
+</body>
+	<div id="lyPullPop02" class="layerpopup laypop-all" >
+		<div class="content-wrap">
+			<div class="pop-header">
+				<h2 class="pop-title">가가가가</h2>
+				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close" oncick="closePopup('lyPullPop02');">닫기</button>
+			</div>
+
+			<div class="pop-con-wrap" id="PDF_VIEWER_WRAP">
+				<div class="default-wrap">
+					<div class="info-wrap terms-view">
+						<iframe id="PDF_VIEWER" src="../resources/terms/P00001.pdf"
+							style="width:100%; height:100%;"></iframe>
+					</div>
+					<div class="plus-minus-wrap">
+						<button type="button" onclick="fnZoomIn();"><span>+</span></button>
+						<button type="button" onclick="fnZoomOut();"><span>-</span></button>
+					</div>
+				</div>
+			</div>
+
+			<section class="fixed-btn-wrap">
+				<div class="btn-wrap">
+					<button type="button" class="btn btn-primary">확인했어요</button>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div id="lyPullPop03" class="layerpopup laypop-all" >
+		<div class="content-wrap">
+			<div class="pop-header">
+				<h2 class="pop-title">나나나</h2>
+				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close" oncick="closePopup('lyPullPop02');">닫기</button>
+			</div>
+
+			<div class="pop-con-wrap" id="PDF_VIEWER_WRAP">
+				<div class="default-wrap">
+					<div class="info-wrap terms-view">
+						<iframe id="PDF_VIEWER" src="../resources/terms/P00002.pdf"
+							style="width:100%; height:100%;"></iframe>
+					</div>
+					<div class="plus-minus-wrap">
+						<button type="button" onclick="fnZoomIn();"><span>+</span></button>
+						<button type="button" onclick="fnZoomOut();"><span>-</span></button>
+					</div>
+				</div>
+			</div>
+
+			<section class="fixed-btn-wrap">
+				<div class="btn-wrap">
+					<button type="button" class="btn btn-primary">확인했어요</button>
+				</div>
+			</section>
+		</div>
+	</div>
+
+
+</html>

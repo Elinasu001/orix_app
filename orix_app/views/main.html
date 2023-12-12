@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>고려저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="고려저축은행 keywords" />
+<meta name="description" content="고려저축은행 description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0, viewport-fit=cover">
+<!-- 
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+ -->
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="../resources/css/default.css" rel="stylesheet" />
+<link href="../resources/css/renewal.css" rel="stylesheet" />
+<link href="../resources/css/renewal_.css" rel="stylesheet" />
+
+
+
+<link href="../resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="../resources/favicon.ico" />
+
+<script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../resources/js/lib/jquery.cookie.js"></script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.css"> -->
+
+<!-- <script type="text/javascript" src="../resources/js/lib/swiper-bundle.min.js"></script> -->
+<script type="text/javascript" src="../resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="../resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="../resources/js/lib/default.js?v=20230803133439"></script>
+<script type="text/javascript" src="../resources/js/lib/ui.js?v=20230803133439"></script>
+<script type="text/javascript" src="../resources/js/lib/rolldate.js?v=20230803133439"></script>
+<script type="text/javascript" src="../resources/js/app_common_cont.js?v=20230803133439"></script>
+<script type="text/javascript" src="../resources/js/app_common_auth.js?v=20230803133439"></script>
+<script type="text/javascript" src="../resources/js/app_common_funs.js?v=20230803133439"></script>
+<script type="text/javascript" src="../resources/js/app_common_nsl.js?v=20230803133439"></script>
+<script type="text/javascript" src="../resources/js/app_common_util.js?v=20230803133439"></script>
+<script type="text/javascript" src="../resources/js/biz_common.js?version=20230803133439" id="biz_common" 
+	data-menuId=""
+	data-frameId="main"
+	data-serviceCd="main.frm" 
+	data-serverTime="20230803133439"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+<link href="../resources/css/main_renewal.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script type="text/javascript">
+var PageFunc = function() {
+	var _back = function() { // 뒤로가기
+		// TODO 앱 종료 메시지 등
+		return true;
+	}
+	var _proc = function() { // 본처리
+		return true;
+	}
+	var _cancel = function() { // 그만하기
+	}
+	return {
+		back : _back,
+		proc : _proc,
+		cancel : _cancel
+	};
+}();
+
+function goNotiDetail(seq){
+	var notiDetailForm = makeForm("notiDetailForm");
+	addFormData(notiDetailForm, "LINK_ACT", "BBS_SELECT");
+	addFormData(notiDetailForm, "txGbnCd", "N");
+	addFormData(notiDetailForm, "SEQ", seq);
+	doActionFrame("etc/inq/noti2", notiDetailForm);
+}
+function goFaqDetail(seq){
+	var notiDetailForm = makeForm("notiDetailForm");
+	addFormData(notiDetailForm, "LINK_ACT", "BBS_SELECT");
+	addFormData(notiDetailForm, "txGbnCd", "F");
+	addFormData(notiDetailForm, "SEQ", seq);
+	doActionFrame("etc/inq/faq2", notiDetailForm); 
+}
+$(document).ready(function(){
+	
+    var bbsSelectForm = makeForm("bbsSelectForm");
+    addFormData(bbsSelectForm, "txGbnCd", "NOTI"); // NOTI:공지 RKEY:추천검색어 FAQ:FAQ 배너:BNN 팝업:POP 영업점:BRC
+    doAction("MAIN_SELECT", bbsSelectForm, function(resDs){
+    	var tmp_html = '<div class="swiper-slide"><a href="javascript:#FUNC#"><p class="notice-tit">#TITLE#</p><span class="notice-date">#OPEN_START_DT#</span></a></div>';
+        var add_html = "";
+        var noti_cnt = 0;
+        $.each(resDs.REC, function(idx, item){
+        	var r_html = tmp_html;
+        	r_html = r_html.replace("#FUNC#", "goNotiDetail('"+item.SEQ+"');"); 
+        	r_html = r_html.replace("#TITLE#", item.TITLE);
+        	r_html = r_html.replace("#OPEN_START_DT#", item.OPEN_START_DT);
+        	add_html += r_html;
+        	noti_cnt++;
+        });
+        $("#MAIN_NOTI").html(add_html);
+        $("#MAIN_NOTI_CNT").html(noti_cnt);
+        
+     	// 공지사항
+        var noticeSlider = new Swiper('.notice-slider-wrap.swiper', { // 2023-06-20 선택자 변경 : swiper-container => swiper
+            direction : 'vertical',
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            loop : true,
+            loopedSlides: 1,
+            observer: true,
+            observeParents: true,
+        });
+     
+    }, false);
+    
+    var bbsSelect2Form = makeForm("bbsSelect2Form");
+    addFormData(bbsSelect2Form, "txGbnCd", "BNN"); // NOTI:공지 RKEY:추천검색어 FAQ:FAQ 배너:BNN 팝업:POP 영업점:BRC
+    doAction("MAIN_SELECT", bbsSelect2Form, function(resDs){
+    	var tmp_html = '';
+    	
+        var recomSlider = new Swiper('.recom-slider-wrap .swiper', { // 2023-06-20 선택자 변경 : swiper-container => swiper
+            effect: "cards",
+            cardsEffect: {
+                perSlideRotate: 0,
+                slideShadows: false,
+            },
+            // 2023-06-23(2) 수정
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+                reverseDirection: true,
+            },
+            loop : true,
+        });
+        
+    }, false);
+    
+    var bbsSelect3Form = makeForm("bbsSelect3Form");
+    addFormData(bbsSelect3Form, "txGbnCd", "QMNU"); // QMNU:빠른메뉴
+    doAction("MAIN_SELECT", bbsSelect3Form, function(resDs){
+    	 var tmp_html = '<li><a href="#" onclick="javascript:#URI#">#NAME#</a></li>';
+         var add_html = "";
+         $.each(resDs.REC, function(idx, item){
+         	var r_html = tmp_html;
+         	r_html = r_html.replace("#URI#", "doActionMenu('"+item.URI+"');");
+         	r_html = r_html.replace("#NAME#", item.NAME);
+         	add_html += r_html;
+         });
+         $("#MAIN_QUICK_MENU").html(add_html);
+         
+    }, false);
+    
+    var bbsSelect4Form = makeForm("bbsSelect4Form");
+    addFormData(bbsSelect4Form, "txGbnCd", "FAQ"); // NOTI:공지 RKEY:추천검색어 FAQ:FAQ 배너:BNN 팝업:POP 영업점:BRC
+    doAction("MAIN_SELECT", bbsSelect4Form, function(resDs){
+    	var tmp_html = '<li><a href="javascript:#FUNC#" class="go-link">#TITLE#</a></li>';
+        var add_html = "";
+        $.each(resDs.REC, function(idx, item){
+        	var r_html = tmp_html;
+        	r_html = r_html.replace("#FUNC#", "goFaqDetail('"+item.SEQ+"');"); 
+        	r_html = r_html.replace("#TITLE#", item.TITLE);
+        	add_html += r_html;
+        });
+        $("#MAIN_FAQ").html(add_html);
+    }, false);
+    
+    var bbsSelect5Form = makeForm("bbsSelect5Form");
+    addFormData(bbsSelect5Form, "txGbnCd", "POP"); // NOTI:공지 RKEY:추천검색어 FAQ:FAQ 배너:BNN 팝업:POP 영업점:BRC
+    doAction("MAIN_SELECT", bbsSelectForm, function(resDs){
+    	if (resDs.REC.length > 1) {
+    		// TODO 팝업 노출
+    	}
+    }, false);
+    
+	// 하단배너는 고정
+    var newsSlider = new Swiper('.news-slider-wrap.swiper', { 
+        slidesPerView: 1,
+        spaceBetween : 20,
+        pagination : {
+            el : '.swiper-pagination',
+            // clickable : true,
+        },
+		observer:true,
+		observeParents:true,
+        // 2023-06-23 추가
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        loop : true,
+		// loopedSlides: 1,
+		centeredSlides: true,
+		// initialSlide: 0,
+		//   slidesPerGroup: 1,
+		//   roundLengths: true,
+		loopAdditionalSlides: 1,
+    });
+    
+});
+</script>
+</head>
+<div class="wrap main"><!-- [*] main 클래스 어디에 붙을 수 있는지 확인 필요 -->
+    <!-- s: header -->
+    <header class="main-header">
+        <div class="logo-area">
+            <h1><a href="#none" onclick="doActionFrame('etc/testPage');"><img src="../resources/images/main/logo.png" alt="Goryo Savings Bank 고려저축은행" /></a></h1>
+        </div>
+        <div class="notify-area">
+			<div class="login-area">
+				<a href="#">
+					<span>로그인</span>
+				</a>
+			</div>
+            <div class="btn-notify-wrap">
+                <button type="button" class="btn-notify" onclick="javascript:doActionMenu('etc/inq/noti1');"><img src="../resources/images/main/ico_notify.png" alt="" /></button>
+                <em class="count-flag"><span id="MAIN_NOTI_CNT">3</span></em>
+            </div>
+        </div>
+    </header>
+    <!-- //e: header -->
+
+    <!-- s: contentsWrap -->
+    <div class="contentsWrap">
+        <!-- s: contents -->
+        <div class="contents">
+            <div class="default-wrap">
+                <section class="welcome-area">
+                    <p class="welcome-txt">
+                        <span>언제나 든든한 내 금융지원군</span>
+                        <strong>GO BANK</strong>에 오신 것을<br>환영합니다
+                    </p>
+                </section>
+                <section class="quick-menu-area">
+                    <ul class="quick-menu-list">
+                        <li><a href="#none" onclick="javascript:doActionMenu('dep/inq/depList','BBS_SELECT');">예/적금<br>알아보기</a></li>
+                        <li><a href="#none" onclick="javascript:doActionMenu('lon/inq/qckLonLimt1');">대출한도<br>조회하기</a></li>
+                    </ul>
+                </section>
+               
+                
+                <section class="quick-service-area">
+					<div class="flex-between-center">
+						<h2 class="area-title">빠른 서비스</h2>
+						<div class="quick-menu-search" onclick="">
+							<button type="button" class="btn-search">검색</button>
+							<span>메뉴찾기</span>
+						</div>
+					</div>
+                    <ul class="quick-service-list" id="MAIN_QUICK_MENU"><!--[퍼블-2]추가-->]
+						<li class="highlight"><a href="#none" >대출이어하기</a></li>
+						<li class="highlight"><a href="#none">빠른계좌개설</a></li>
+						<li><a href="#none">제증명서발급</a></li>
+						<li><a href="#none">온라인서류제출</a></li>
+						<li><a href="#none">인증보안</a></li>
+					</ul>
+                </section>
+                <section class="recom-area">
+                    <h2 class="area-title">GO BANK가 추천해요!</h2>
+                    <div class="recom-slider-wrap">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background:linear-gradient(115deg, #FD96BF  0%, #FFBEDC 70%, #FFBEDC 100%);" onclick="doActionURL('/lon/inq/loanDetail.frm?LINK_ACT=BBS_SELECT&PDCD=P000000020');"><!-- [퍼블] onclick 이동됨 -->
+                                    <em class="prd-flag">
+                                        <span style="background:#540F27;">대출</span>
+                                        <span style="background:#FFDFEC; color:#E8689B;">모바일전용</span>
+                                    </em>
+                                    <strong class="prd-tit">신용대출 [뉴플랜론III]</strong>
+                                    <p class="prd-desc">
+                                        대출신청부터 송금까지<br>
+                                        쉽고 빠르게
+                                    </p>
+                                    <span class="prd-rate">최대한도 1억원</span>
+                                    <span class="prd-obj"><img src="../resources/images/main/temp_obj_recom02.png" alt=""></span>
+                                    <span class="btn-go-link" 
+                                    style="background-image:url('../../resources/images/main/arrow_right_pink.png');color:#CB7095;">신용대출 신청하기</span><!-- [퍼블] a태그 삭제되고 / span에 a태그에 있던 class,style 속성 추가 (onclick은 div.swiper-slide로 이동) -->
+                                </div>
+                                
+                                <div class="swiper-slide" style="background:linear-gradient(115deg, #8D74F6 0%, #AE9CFE 70%, #AE9CFE 100%);" onclick="javascipt:doActionURL('dep/inq/depDetail.frm?LINK_ACT=BBS_SELECT&PDCD=P000000091');"><!-- [퍼블] onclick 이동됨 -->
+                                    <em class="prd-flag">
+                                        <span>입출금</span>
+                                        <span>모바일전용</span>
+                                    </em>
+                                    <strong class="prd-tit">보고파 파킹통장</strong>
+                                    <p class="prd-desc">
+                                        입출금 자유! 하루만 맡겨도<br>
+                                        확정금리를 드려요
+                                    </p>
+                                    <span class="prd-rate">최고 3.35%</span>
+                                    <span class="prd-obj"><img src="../resources/images/main/temp_obj_recom01.png" alt=""></span>
+                                    <span class="btn-go-link" 
+									style="background-image:url('../../resources/images/main/arrow_right_purple.png');color:#51348D;">보고파 파킹통장 둘러보기</span><!-- [퍼블] a태그 삭제되고 / span에 a태그에 있던 class,style 속성 추가 (onclick은 div.swiper-slide로 이동) -->
+                                </div>
+                                <div class="swiper-slide" style="background:linear-gradient(115deg, #4ABEE2 0%, #92D5EE 70%, #92D5EE 100%);" onclick="javascipt:doActionURL('dep/inq/depDetail.frm?LINK_ACT=BBS_SELECT&PDCD=P000000040');"><!-- [퍼블] onclick 이동됨 -->
+                                    <em class="prd-flag">
+                                        <span style="background:#683B08;">적금</span>
+                                        <span style="background:#FFEDCB; color:#D98A00;">모바일전용</span>
+                                    </em>
+                                    <strong class="prd-tit">챌린지 적금</strong>
+                                    <p class="prd-desc">
+                                        30일만 모아도 쏠쏠한 이율<br>
+                                        내가 직접 목표 금액/기간을<br>
+                                        설정하고 도전하세요
+                                    </p>
+                                    <span class="prd-rate">최고금리 4.2%</span>
+                                    <span class="prd-obj"><img src="../resources/images/main/temp_obj_recom03.png" alt=""></span>
+                                    <span class="btn-go-link" style="background-image:url('../../resources/images/main/arrow_right_yellow.png');color:#D98A00;">챌린지 만들어 도전하기</span><!-- [퍼블] a태그 삭제되고 / span에 a태그에 있던 class,style 속성 추가 (onclick은 div.swiper-slide로 이동) -->
+                                </div>
+								<!--//[추가]-->
+								<div class="swiper-slide" style="background:linear-gradient(115deg, #4ABEE2 0%, #92D5EE 70%, #92D5EE 100%);" onclick="javascipt:doActionURL('dep/inq/depDetail.frm?LINK_ACT=BBS_SELECT&PDCD=P000000040');"><!-- [퍼블] onclick 이동됨 -->
+                                    <em class="prd-flag">
+                                        <span style="background:#154C71;">대출</span>
+                                        <span style="background:#DFF8FF; color:#2B8294;">정책자금</span>
+                                    </em>
+                                    <strong class="prd-tit">햇살론</strong>
+                                    <p class="prd-desc">
+                                        서민을 위한 정부지원 대출
+                                    </p>
+                                    <span class="prd-rate">최대한도 2000만원</span>
+                                    <span class="prd-obj"><img src="../resources/images/main/temp_obj_recom04.png" alt=""></span>
+                                    <span class="btn-go-link" style="background-image:url('../../resources/images/main/arrow_right_blue.png');color:#2B8294;">햇살론 신청하기</span><!-- [퍼블] a태그 삭제되고 / span에 a태그에 있던 class,style 속성 추가 (onclick은 div.swiper-slide로 이동) -->
+                                </div>
+								<!--[추가]//-->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="guide-area">
+                    <h2 class="area-title">처음 오셨나요?</h2>
+                    <ul class="guide-list" id="MAIN_FAQ"></ul>
+                </section>
+                <section class="banner-area">
+                    <a href="#none" class="banner-box"><!-- [퍼블] 태그 변경 : div ==> a -->
+                        <p class="banner-tit">
+                            <span>예/적금과 대출, 현명하게 관리하려면</span>
+                            잉여생활자금 계산하고<br>적정 금액을 정해 보세요
+                        </p>
+                        <div class="go-link-wrap">
+							<span class="btn-go-link">잉여생활자금계산하기</span><!-- [퍼블] a태그 삭제 / span에 클래스 추가 -->
+						</div>
+                    </a>
+                </section>
+                <section class="notice-area">
+                    <div class="notice-slider-wrap swiper">
+                        <div class="swiper-wrapper" id="MAIN_NOTI"></div>
+                    </div>
+                </section>
+                <section class="news-area type-spread">
+                    <h2 class="area-title">GO BANK 소식</h2>
+                    <div class="news-slider-wrap swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background:#F2F6FF;">
+                                <a href="#none">
+                                    <em class="news-flag">깜짝퀴즈이벤트</em>
+                                    <strong class="news-tit">고려저축은행 파킹통장 이름은?!</strong>
+                                    <p class="news-desc">
+                                        정답 남기고 버거킹 와퍼 세트 받아가세요<br>
+                                        친구에게 정답을 공유하면 당첨확률 UP!
+                                    </p>
+                                    <div class="news-img-wrap">
+                                        <img src="../resources/images/main/temp_news_img01.png" alt="" style="width:185px;">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide" style="background:#FFEFF5;">
+                                <a href="#none">
+                                    <em class="news-flag">깜짝퀴즈이벤트 2</em>
+                                    <strong class="news-tit">고려저축은행 파킹통장 이름은?!</strong>
+                                    <p class="news-desc">
+                                        정답 남기고 버거킹 와퍼 세트 받아가세요<br>
+                                        친구에게 정답을 공유하면 당첨확률 UP!
+                                    </p>
+                                    <div class="news-img-wrap">
+                                        <img src="../resources/images/main/temp_news_img01.png" alt="" style="width:185px;">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide" style="background:#F2F6FF;">
+                                <a href="#none">
+                                    <em class="news-flag">깜짝퀴즈이벤트 3</em>
+                                    <strong class="news-tit">고려저축은행 파킹통장 이름은?!</strong>
+                                    <p class="news-desc">
+                                        정답 남기고 버거킹 와퍼 세트 받아가세요<br>
+                                        친구에게 정답을 공유하면 당첨확률 UP!
+                                    </p>
+                                    <div class="news-img-wrap">
+                                        <img src="../resources/images/main/temp_news_img01.png" alt="" style="width:185px;">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </section>
+				
+				<!-- s: 버튼추가 -->
+				<div class="main-function-btn-wrap">
+					<div>
+						<a href="#none" class="btn amount-view-on">금액보이기</a>
+						<!-- <a href="#none" class="btn amount-view-off">금액숨기기</a> -->
+						<a href="#none" class="btn" onclick="openPopupUp('lyPop');">큰 글씨 설정</a>
+					</div>
+				</div>
+				<!-- e: 버튼추가 -->
+				
+				<!-- [퍼블] 수정범위 클래스 추가-->
+                <ul class="sns-list">
+                    <li class="btn_sns sns_facebook"><a href="#none">페이스북</a></li>
+                    <!-- <li class="btn_sns sns_twitter"><a href="#none">트위터</a></li> -->
+                    <li class="btn_sns sns_insta"><a href="#none">인스타그램</a></li>
+                    <li class="btn_sns sns_blog"><a href="#none">네이버 블로그</a></li>
+                    <li class="btn_sns sns_kakao"><a href="#none">카카오톡체널</a></li>
+                </ul>
+				<!-- // [퍼블] 수정범위 클래스 추가-->
+            </div>
+        </div>
+        <!-- //e: contents -->
+    </div>
+    <!-- //e: contentsWrap -->
+
+
+	<!-- s: 레이어팝업 - 큰글씨설정 -->
+	<div id="lyPop" class="layerpopup layer-up has-button">
+		<div class="content-wrap">
+			<div class="pop-header">
+				<h2 class="pop-title">큰 글씨 설정</h2>
+				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+			</div>
+			<!-- [퍼블-2] ly-scroll-con ly-select 지우고 default-wrap 추가 / 하위에 txtbox-wrap 구조 추가 수정범위 영역-->
+			<div class="default-wrap">
+				<div class="fontsize-range-wrap">
+					<p class="font-char font-char-small">가</p>
+					<input type="range" id="textSize" name="textSize" min="0" max="3" value="0" step="1" />
+					<p class="font-char font-char-big">가</p>
+				</div>
+				<dl class="list-bull type-caption">
+					<dt>[알아두세요]</dt>
+					<dd>글씨를 키우면 모양이 기존과 달라질 수 있어요</dd>
+				</dl>
+			</div>
+			<!-- [퍼블] 수정범위 영역-->
+		</div>
+		<div class="fixed-btn-wrap">
+			<div class="btn-wrap type-popup">
+				<a href="#none" class="btn" onclick="closePopupUp('lyPop');">확인</a>
+			</div>
+		</div>
+	</div>
+	<!-- //e: 레이어팝업 - 큰글씨설정  -->
+
+	<!-- [퍼블-3] 이벤트 팝업 -->
+	<div id="event-lyPop" class="layerpopup layer-up show" style="display: block;">
+		<div class="content-wrap">
+			<div class="pop-header">
+				<h2 class="pop-title">이벤트 타이틀</h2>
+			</div>
+			<div class="pop-con-wrap">
+				<div class="default-wrap">
+					<div class="pop-img">
+						<img src="../resources/images/common/event-pop-img.png" alt="이벤트 이미지">
+					</div>
+				</div>
+			</div>
+			<div class="popup-close">
+				<button type="button" name="button" class="pop-out-btn" onclick="closePopup('event-lyPop')">7일 그만보기</button>
+				<button type="button" name="button" class="pop-close-btn" onclick="closePopup('event-lyPop')">닫기</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="event-lyPullPop" class="layerpopup laypop-all on" tabindex="0" data-focus-prev="btn-menu-close" style="display: block;">
+		<div class="pop-header">
+			<h2 class="pop-title">이벤트 타이틀</h2>
+		</div>
+		<div class="pop-con-wrap">
+			<div class="default-wrap type-spread">
+				<div class="pop-img">
+					<img src="../resources/images/common/event-pop-img-pull.png" alt="이벤트 이미지">
+				</div>
+			</div>
+		</div>
+		<div class="popup-close">
+			<button type="button" name="button" class="pop-out-btn" onclick="closePopup('event-lyPullPop')">7일 그만보기</button>
+			<button type="button" name="button" class="pop-close-btn" onclick="closePopup('event-lyPullPop')">닫기</button>
+		</div>
+	</div>
+	
+	<!-- // [퍼블-3] 이벤트 팝업 -->
+	
+	<!-- s: 상단 이동 버튼 -->
+	<button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+	<!-- //e: 상단 이동 버튼 -->
+	
+	<!-- footer -->
+	<footer>
+	<!-- 푸터 타입별 정의 -->
+	</footer>
+
+<!-- s: 큰글씨설정  -->
+<script>
+	const getPercentage = (current, max) => ((current / max) * 100);
+	function initFontSize() {
+		const fontSize = sessionStorage.getItem('fontSize');
+            const defaultFontSize = fontSize ? fontSize : 0;
+            const rangeMax = Number($('input[type=range]').attr('max'));
+            const currentGradient = getPercentage(defaultFontSize, rangeMax);
+            
+            $('html').addClass(`font-size-${defaultFontSize}`);
+
+            $('input[type=range]').css(
+                'background', `linear-gradient(to right, #6836CB 0%, #6836CB ${currentGradient}%, #d5d4d3 ${currentGradient}%, #d5d4d3 100%)`
+            );
+        }
+
+        function fontSizeEvent() {
+            initFontSize();
+        }
+
+		$(document).ready(() => {
+            fontSizeEvent();
+            $('input[type=range]').on('input', function () {
+                const $this = $(this);
+                const html = $('html');
+                const val = Number($this.val());
+                const rangeMax = Number($('input[type=range]').attr('max'));
+                const currentGradient = getPercentage(val, rangeMax);
+
+                sessionStorage.setItem('fontSize', val);
+                html.removeClass((idx, className) => (
+                    (className.match(/(^|\s)font-size-\S+/g) || []).join(' ')
+                ));
+                html.addClass(`font-size-${val}`);
+                
+                $this.css(
+                    'background', `linear-gradient(to right, #6836CB 0%, #6836CB ${currentGradient}%, #d5d4d3 ${currentGradient}%, #d5d4d3 100%)`
+                );
+            });
+        });
+</script>
+<!-- //e: 큰글씨설정  -->
+
+<!-- 업무공통 -->
+<script type="text/javascript">
+var biz = function() {
+	
+	var biz_states = {
+	   zindex : 0,
+	   keypadOpenFlag : false
+	};
+	
+	var _makeId = function(srcId) {
+		
+		if (typeof(closeMenu) == 'function') closeMenu();
+		progressBar(true);
+		
+		var id = "biz_" + Math.random().toString(32).substr(2);
+		$("#biz_layer_area").append("<div id='"+id+"'></div>");
+		$("#"+id).attr("class", $("#"+srcId).attr("class"));
+		$("#"+id).append($("#"+srcId).html());
+		if (biz_states.zindex > 0) {
+			biz_states.zindex = biz_states.zindex+100;
+			$("#"+id).css("z-index", biz_states.zindex);
+		} else {
+			biz_states.zindex = Number($("#"+id).css("z-index"));
+		}
+		return id;
+	};
+	
+	/*
+	 *	biz.alert("알림문구:필수", "버튼문구:선택 기본값'확인'", "다음실행펑션:선택");
+	 */
+	var _alert = function(alertText, btnText, nextFunc) {
+		
+		var id = _makeId("biz_alert"); 
+		$("#"+id).find("[data-id=biz_alert_txt]").html(alertText); 
+		if (typeof(btnText) == 'string') {
+			$("#"+id).find("[data-id=biz_alert_btn]").html(btnText);
+		} else {
+			$("#"+id).find("[data-id=biz_alert_btn]").html('확인');
+		}
+		$("#"+id).find("[data-id=biz_alert_btn]").unbind();
+		$("#"+id).find("[data-id=biz_alert_btn]").click(function() {
+			closePopup(id);
+			$("#"+id).html("");
+			if (typeof(nextFunc) == 'function') nextFunc();
+		});
+		openPopup(id);
+		progressBar(false);
+	};
+
+	/*
+	 *	biz.confirm("컨펌문구:필수", "확인펑션", "거절펑션:선택", "확인버튼문구:선택", "거절버튼문구:선택");
+	 */
+	var _confirm = function(confirmText, confirmFunc, refuseFunc, confirmTxt, refuseTxt) {
+		
+		var id = _makeId("biz_confirm"); 
+		
+		$("#"+id).find("[data-id=biz_confirm_txt]").html(confirmText); 
+		if (typeof (confirmTxt) == 'string') {
+			$("#"+id).find("[data-id=biz_confirm_btn_one]").html(confirmTxt);
+		} else {
+			$("#"+id).find("[data-id=biz_confirm_btn_one]").html('확인');
+		}
+		$("#"+id).find("[data-id=biz_confirm_btn_one]").unbind();
+		$("#"+id).find("[data-id=biz_confirm_btn_one]").click(function() {
+			closePopup(id);
+			$("#"+id).html("");
+			$('body').removeClass('fix');
+			confirmFunc();
+		});
+		
+		if (typeof (refuseTxt) == 'string') {
+			$("#"+id).find("[data-id=biz_confirm_btn_two]").html(refuseTxt);
+		} else {
+			$("#"+id).find("[data-id=biz_confirm_btn_two]").html('취소');
+		}
+		$("#"+id).find("[data-id=biz_confirm_btn_two]").unbind();
+		$("#"+id).find("[data-id=biz_confirm_btn_two]").click(function() {
+			closePopup(id);
+			$("#"+id).html("");
+			$('body').removeClass('fix');
+			if (typeof (refuseFunc) == 'function') refuseFunc();
+		});
+		openPopup(id);
+		$('body').addClass('fix');
+		progressBar(false);
+	};
+	
+	/*
+	 * biz.select("코드명(타이틀)", "그룹코드:필수", 콜백펑션({CODE, NAME}));
+	 */
+	var _select = function(upperCodeName, upperCode, callbackFunc) {
+		var id = _makeId("biz_layer_select"); 
+		var url = "/common/layer/code_select.frm"; 	// 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" : upperCodeName
+			,"upperCode" : upperCode
+			,"LINK_ACT" : "CODE_SELECT"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopupUp(id); 
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopupUp(id)
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	};
+	
+	/*
+	 * biz.certSelect("코드명(타이틀)", "그룹코드:필수", 콜백펑션({CODE, NAME}));
+	 */
+	var _certSelect = function(upperCodeName, upperCode, callbackFunc) {
+		var id = _makeId("biz_layer_select"); 
+		var url = "/common/layer/cert_code_select.frm"; 	// 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" : upperCodeName
+			,"upperCode" : upperCode
+			,"LINK_ACT" : "CODE_SELECT"
+		};
+  
+		$("#"+id).load(url, loadParam, function(data1) {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopupUp(id); 
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopupUp(id)
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	};
+	
+	
+	
+	/*
+	 * biz.input("콜백펑션(입력값)");
+	 */
+	var _input = function(callbackFunc, title) {
+		
+		var id = _makeId("biz_layer"); 
+		var url = "/common/layer/input.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" : title
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopupUp(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	};
+
+	/*
+	 * biz.ocr("콜백펑션(OCR결과)");
+	 */
+	var _ocrAuth = function(callbackFunc) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/ocr_auth.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" :"신분증 확인"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data, imgData) {
+				callback(data, imgData);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	};
+	
+	var _addrSelect = function(callbackFunc) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/addr_select.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" : "주소검색"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	};
+	
+	var _bank = function(callbackFunc) {
+		var id = _makeId("biz_layer_select"); 
+		var url = "/common/layer/bank.frm"; 	// 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" : "은행선택"
+			,"upperCode" : "C008300000"
+			,"LINK_ACT" : "CODE_SELECT"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopupUp(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	};
+	
+	var _jobSelect = function(callbackFunc) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/job_select.frm"; 	// 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" : "직업선택"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	};
+	
+	var _selectYn = function(callbackFunc, title, btnNmY, btnNmN) {
+		var id = _makeId("biz_layer_select"); 
+		var url = "/common/layer/select_yn.frm"; 	// 호출 layer url
+		var callback = callbackFunc;
+		
+		if (typeof (title) == 'undefined' || typeof (title) != 'string') title = "선택하세요";
+		if (typeof (btnNmY) == 'undefined' || typeof (btnNmY) != 'string') btnNmY = "예";
+		if (typeof (btnNmN) == 'undefined' || typeof (btnNmN) != 'string') btnNmN = "아니오";
+		
+		
+		var loadParam = {
+			 "id" : id
+			,"title" : title
+			,"btnNmY" : btnNmY
+			,"btnNmN" : btnNmN
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopupUp(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	};
+	
+	var _mydata = function(callbackFunc) {
+		var id = _makeId("biz_layer"); 
+		var url = "/common/layer/mydata.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" :"마이데이터"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopupUp(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	};
+	
+	var _mydataTaxfree = function(callbackFunc) {
+		var id = _makeId("biz_layer"); 
+		var url = "/common/layer/mydata_taxfree.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" :"마이데이터"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopupUp(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	};
+	
+	var _amt = function() {
+		
+	};
+	
+	// 약관동의 
+	var _terms = function(terms_cd, checkbox) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/terms.frm"; // 호출 layer url
+		var procBtn = $("#procBtn");
+		var loadParam = {
+			 "id" : id
+			,"terms_cd" : terms_cd
+		};
+		
+		//체크 시에 약관팝업 호출
+		if($(checkbox).is(":checked")){
+			$("#"+id).load(url, loadParam, function() {
+				// 완료 시 콜백 처리
+				eval(id + "_Func").callback = function(data) {
+					$(checkbox).prop('checked', data);
+					if (procBtn.hasClass("disabled")) procBtn.removeClass("disabled");
+					
+					closePopup(id);
+					$("#"+id).html("");
+					$('body').removeClass('fix');
+				};
+				// 닫기버튼 이벤트 처리
+				eval(id + "_Func").close = function() {
+					//전체 동의 체크박스
+					if($(checkbox).attr("id") == "allChk01"){
+						//하위 체크박스 모두 해제
+						$(checkbox).parents(".terms-area").find("input").prop("checked",false);
+					} else {
+						$(checkbox).prop('checked', false);
+						$("#allChk01").prop('checked', false); //TODO 필수값일 경우에만 해제하는 요건 나오면 validChk 클래스확인조건추가
+					}
+					if (!procBtn.hasClass("disabled")) procBtn.addClass("disabled");
+					
+					closePopup(id);
+					$("#"+id).html("");
+					$('body').removeClass('fix');
+				};
+				// 취소버튼 이벤트 처리
+				eval(id + "_Func").cancel = function() {
+					closePopup(id);
+					$("#"+id).html("");
+					$('body').removeClass('fix');
+				};
+				openPopup(id);
+				$('body').addClass('fix');
+				progressBar(false);
+			});
+		}
+	};
+	
+	// 본인인증
+	var _userAuth = function(callbackFunc) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/user_auth.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" : "본인인증"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	};
+	
+	/*
+	 *	biz.keypad(키패드타이틀:필수, 자릿수:필수, 콜백펑션:필수);
+	 */ 
+	var _keypad = function(title, len, callbackFunc) {
+		 
+		 if (!biz_states.keypadOpenFlag) {
+			 
+			biz_states.keypadOpenFlag = true;
+			 
+			var id = _makeId("biz_layer_full");	 
+			var url = "/common/layer/keypad.frm"; // 호출 layer url
+			var callback = callbackFunc;
+			var loadParam = {
+				 "id" : id
+				,"title" : title
+				,"len" : len
+			}; 
+
+			$("#"+id).load(url, loadParam, function() {
+				// 완료 시 콜백 처리
+				eval(id + "_Func").callback = function(data) {
+					nshc.close();
+					callback(data);
+					closePopup(id); 
+					$("#"+id).html("");
+					$('body').removeClass('fix');
+					biz_states.keypadOpenFlag = false;
+				};
+				// 닫기버튼 이벤트 처리
+				eval(id + "_Func").close = function() {
+					nshc.close();
+					closePopup(id);
+					$("#"+id).html("");
+					$('body').removeClass('fix');
+					biz_states.keypadOpenFlag = false;
+				};
+				// 취소버튼 이벤트 처리
+				eval(id + "_Func").cancel = function() {
+					nshc.close();
+					closePopup(id);
+					$("#"+id).html("");
+					$('body').removeClass('fix');
+					biz_states.keypadOpenFlag = false;
+				};
+				openPopup(id);
+				$('body').addClass('fix');
+				progressBar(false);
+			});
+		 } else {
+			 console.log("keypad already open");
+		 }
+		
+	};
+	
+	var _selectAuth = function(title, type, callbackFunc) {
+		var id = _makeId("biz_layer_select"); 
+		var url = "/common/layer/select_auth.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" : title
+			,"type" : type // AUTH:본인인증, SIGN:전자서명
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopupUp(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	// 계좌인증 1원송금
+	var _acnoAuth = function(callbackFunc) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/acno_auth.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			 ,"title" : "타행본인계좌인증"
+			 
+		};
+		
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	// 계좌인증 1원송금 - 인증
+	var _acnoAuthConfirm = function(callbackFunc, bkcd, bknm, acno) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/acno_auth_confirm.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			 ,"title" : "타행본인계좌인증"
+			 ,"bkcd" : bkcd
+			 ,"bknm" : bknm
+			 ,"acno" : acno
+			 
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	// 전체화면 layer
+	var _fullLayer = function(url, title, callbackFunc, cancelFunc) {
+		var id = _makeId("biz_layer_full"); 
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" : title
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				if (typeof(cancelFunc) == "function") cancelFunc();
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+				
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	// 계좌선택 layer accoKncd:0.수신전계좌 1.요구성 2.적금 3.정기예금 4.대출 // selectTab: 1.최근입금 2.자주쓰는 3.내계좌 4.입금지정
+	var _acnoSelect = function(accoKncd, selectTab, callbackFunc) {
+		var id = _makeId("biz_layer_select"); 
+		var url = "/common/layer/acno_select.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			 ,"accoKncd" : accoKncd // ACCO_KNCD 0.수신전계좌 1.요구성 2.적금 3.정기예금 4.대출
+			 ,"selectTab" : selectTab
+			,"LINK_ACT" : "ACNO_SELECT"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopupUp(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	// 계좌선택 layer 내계좌 목적별
+	var _acnoList = function(accoKncd, callbackFunc) {
+		var id = _makeId("biz_layer_select"); 
+		var url = "/common/layer/acno_list.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"accoKncd" : accoKncd // ACCO_KNCD 0.수신전계좌 1.요구성 2.적금 3.정기예금 4.대출
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopupUp(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	// 전자금융가입 (전자금융만가입여부, callback(SUCC Y/N))
+	var _usrIdReg = function(usrIdOnlyYn, callbackFunc) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/usr_id_reg.frm"; // 호출 layer url TODO 화면작업후 변경
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"USR_ID_ONLY_YN" : usrIdOnlyYn
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	// 계좌인증 1원송금(중앙회)
+	var _fsbAcnoAuth = function(callbackFunc) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/fsb_acno_auth.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			 ,"title" : "타행본인계좌인증"
+			 
+		};
+		
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	// 계좌인증 1원송금 - 인증(중앙회)
+	var _fsbAcnoAuthConfirm = function(callbackFunc, bkcd, acno) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/fsb_acno_auth_confirm.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			 ,"title" : "타행본인계좌인증"
+			 ,"bkcd" : bkcd
+			 ,"acno" : acno
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	var _dateInq = function(callbackFunc, flag) {
+		if (typeof(flag) != 'string') flag = "H";
+		
+		var id = _makeId("biz_layer"); 
+		var url = "/common/layer/date_inq.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" : "조회기간 설정"
+			,"flag" : flag //거래유형 T:거래유형, R:결과유형 , H:hide, 
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopupUp(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	};
+	
+	// 직원조회 
+	var _empInq = function(callbackFunc) {
+		
+		var id = _makeId("biz_layer"); 
+		var url = "/common/layer/emp_inq.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" : "추천인 찾기"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopupUp(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	};
+	
+	// 이메일 
+	var _email = function(callbackFunc) {
+		
+		var id = _makeId("biz_layer"); 
+		var url = "/common/layer/email.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" : "이메일"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopupUp(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	};
+	
+	// 로그인
+	var _login = function(callbackFunc) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/login.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			 ,"title" : "로그인"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+				goMainPage();
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	var _passbook = function(acno, accoKncd, callbackFunc) {
+		var id = _makeId("biz_layer_select"); 
+		var url = "/common/layer/passbook.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			 ,"ACNO":acno
+			 ,"ACCO_KNCD" : accoKncd // ACCO_KNCD 0.수신전계좌 1.요구성 2.적금 3.정기예금 4.대출
+			,"LINK_ACT" : "ACNO_DETAIL"
+			,"txGbnCd" : "D"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopupUp(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopupUp(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	// 추가인증 인증타입,인증상세,콜백 
+	var _doubleAuth = function(authType, authDetail, callbackFunc) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/double_auth.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			  "id" : id
+			 ,"title" : "추가인증"
+			 ,"authType" : authType
+			 ,"authDetail" : authDetail
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	// 보안카드 인증
+	var _secuCard = function(callbackFunc) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/secu_card.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			  "id" : id
+			 ,"title" : "보안카드"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	// OTP인증
+	var _otpAuth = function(callbackFunc) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/otp_auth.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			  "id" : id
+			 ,"title" : "OTP 인증"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	var _camera = function(callbackFunc) {
+		var id = _makeId("biz_layer_full"); 
+		var url = "/common/layer/camera.frm"; // 호출 layer url
+		var callback = callbackFunc;
+		var loadParam = {
+			 "id" : id
+			,"title" :"사진촬영"
+		};
+
+		$("#"+id).load(url, loadParam, function() {
+			// 완료 시 콜백 처리
+			eval(id + "_Func").callback = function(data) {
+				callback(data);
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 닫기버튼 이벤트 처리
+			eval(id + "_Func").close = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			// 취소버튼 이벤트 처리
+			eval(id + "_Func").cancel = function() {
+				closePopup(id);
+				$("#"+id).html("");
+				$('body').removeClass('fix');
+			};
+			openPopup(id);
+			$('body').addClass('fix');
+			progressBar(false);
+		});
+	}
+	
+	return {
+			alert : _alert,
+			confirm : _confirm,
+			select : _select,
+			certSelect : _certSelect,
+			selectYn : _selectYn,
+			selectAuth : _selectAuth,
+			ocrAuth : _ocrAuth,
+			mydata : _mydata,
+			mydataTaxfree : _mydataTaxfree,
+			addrSelect : _addrSelect,
+			amt : _amt,
+			terms : _terms,
+			userAuth : _userAuth,
+			bank : _bank,
+			input : _input,
+			email : _email,
+			keypad : _keypad,
+			jobSelect : _jobSelect,
+			acnoAuth : _acnoAuth,
+			acnoAuthConfirm : _acnoAuthConfirm,
+			fsbAcnoAuth : _fsbAcnoAuth,
+			fsbAcnoAuthConfirm : _fsbAcnoAuthConfirm,
+			fullLayer : _fullLayer,
+			acnoSelect : _acnoSelect,
+			acnoList : _acnoList,
+			usrIdReg : _usrIdReg,
+			dateInq : _dateInq,
+			empInq : _empInq,
+			login : _login,
+			passbook : _passbook,
+			doubleAuth : _doubleAuth,
+			secuCard : _secuCard,
+			otpAuth : _otpAuth,
+			camera : _camera
+		};
+	}();
+</script>
+<div id="biz_layer_area"></div>
+
+<!-- s: alert -->
+<div id="biz_alert" class="layerpopup type-alert" style="display:none;">
+	<div class="content-wrap">
+	    <div class="pop-con-wrap">
+	        <span class="pop-con" data-id="biz_alert_txt"></span>
+	    </div>
+	    <div class="btn-wrap sm-alert">
+	        <a href="#none" class="btn" data-id="biz_alert_btn"></a>
+	    </div>
+    </div>
+</div>
+<!-- //e: alert -->
+
+<!-- s: alert -->
+<div id="biz_confirm" class="layerpopup type-alert" style="display:none;">
+	<div class="content-wrap">
+	    <div class="pop-con-wrap">
+	        <span class="pop-con" data-id="biz_confirm_txt"></span>
+	    </div>
+	    <div class="btn-wrap sm-alert">
+	        <a href="#none" class="btn" data-id="biz_confirm_btn_one"></a>
+	        <a href="#none" class="btn" data-id="biz_confirm_btn_two"></a>
+	    </div>
+    </div>
+</div>
+<!-- //e: alert -->
+
+<div id="biz_layer_select" class="layerpopup layer-up" tabindex="0" data-focus-prev="btn-layer-close" style="display:none;">
+</div>
+
+<div id="biz_layer" class="layerpopup layer-up has-button" tabindex="0" data-focus-prev="btn-layer-close" style="display:none;">
+</div>
+
+<div id="biz_layer_full" class="layerpopup laypop-all has-button" tabindex="0" data-focus-prev="btn-layer-close" style="display:none;">
+</div>
+
+<div id="lyFullPopup" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-layer-close" style="display:none;">
+</div>
+
+<div id="layer" class="layerpopup layer-up has-button" tabindex="0" data-focus-prev="btn-layer-close" style="display:none;">
+</div>
+
+
+
+
+
+<script type="text/javascript">
+var EFN_CSNO = '';								// 중앙회고객번호
+var EFN_USR_ID = '';							// 인뱅ID    
+var EFN_SECU_MEDI_DVCD = '';			// 보안매체구분코드 C:보안카드 O:OTP M:MOTP
+var EFN_INDV_CORP_DSTC_CD = '';	// 개인법인구분 1:개인 2:법인    
+var EFN_OTP_VNDR_CD = '';				// OTP 벤더코드        
+var EFN_OTP_SRNO_VAL = '';				// OTP 시리얼넘버      
+var EFN_INDV_BUSI_DVCD = '';			// 개인/법인사업자구분 1:법인사업자 2:개인사업자
+var EFN_FRST_PSWD_REG_YN = '';		// 최초패스워드등록여부
+var EFN_ACNT_RS = ''; 						// 계좌목록
+
+var efn = function() {
+	
+	// 인뱅ID 프로세스 
+	var _usrIdProc = function(callbackFunc) {
+		
+		if (EFN_CSNO == '') {
+			biz.alert('로그인 후 이용가능한 거래에요', '확인', function(){
+				biz.userAuth(function(){
+					// 현재 메뉴 새로고침
+					window.location.reload();
+				});
+			});
+			
+		} else if (EFN_USR_ID == '') {
+			
+			biz.confirm('서비스 이용을 위해서는 전자금융 가입이 필요해요'
+					, function(){
+						// 전자금융가입 레이어 호출
+						biz.usrIdReg(function(){
+							// 현재 메뉴 새로고침
+							window.location.reload();
+						});
+					}
+					, function(){
+						goMainPage();
+					}
+					, '전자금융가입'
+					, '다음에');
+			
+		} else if (EFN_FRST_PSWD_REG_YN == 'Y'){
+			// 최초패스워드 등록해야 사용가능
+			
+		} else {
+			// 인뱅ID 다음 프로세스
+			callbackFunc();
+		}
+	}
+	
+	// 추가인증
+	var _addAuth = function() {
+		
+	}
+	
+	// 보안매체인증
+	var _secuMediProc = function() {
+		
+	}
+	
+	// OTP 인증
+	var _otpAuth = function() {
+		
+	}
+	
+	// 보안카드 인증
+	var _secuCardAuth = function() {
+		
+	}
+	
+	// ARS 인증
+	var _arsAuth = function() {
+		
+	}
+	
+	// 계좌상세 (계좌번호, 콜백펑션) 
+	var _acnoDetail = function(acno, callbackFunc) {
+		var acnoDetailForm = makeForm("acnoDetailForm");
+		//addFormData(acnoDetailForm, "txGbnCd", txGbnCd);
+		addFormData(acnoDetailForm, "acno", acno);
+		doAction("ACNO_DETAIL", acnoDetailForm, callbackFunc);
+	}
+	
+	// 이체계좌상세 (계좌번호, 콜백펑션)
+	var _transAcnoDetail = function(acno, callbackFunc) {
+		var transAcnoDetailForm = makeForm("transAcnoDetailForm");
+		addFormData(transAcnoDetailForm, "acno", acno);
+		doAction("TRANS_ACNO_DETAIL", transAcnoDetailForm, callbackFunc);
+	}
+	
+	// 계좌수취조회
+	var _acctHldrInq = function(acno, bkcd, txGbnCd, callbackFunc) {
+		var acctHldrInqForm = makeForm("acctHldrInqForm");
+		addFormData(acctHldrInqForm, "ACNO", acno);
+		addFormData(acctHldrInqForm, "BKCD", bkcd);
+		addFormData(acctHldrInqForm, "txGbnCd", txGbnCd); // W:출금계좌 M:입금계좌
+		doAction("ACCT_HLDR_INQ", acctHldrInqForm, callbackFunc);
+	}
+	
+	// 지연이체가입상태조회
+	var _delayTransInq = function(callbackFunc) {
+		var usrIdInqForm = makeForm("usrIdInqForm");
+		addFormData(usrIdInqForm, "txGbnCd", "D"); // D 지연이체
+		doAction("USR_ID_INQ", usrIdInqForm, callbackFunc);
+	}
+	
+	// 패스워드 검증
+	var _pswdConfirm = function(pswd1, pswd2, callbackFunc) {
+		var pswdConfirmForm = makeForm("pswdConfirmForm");
+		addFormData(pswdConfirmForm, "E2E_PSWD1", pswd1);
+		addFormData(pswdConfirmForm, "E2E_PSWD2", pswd2);
+		doAction("PSWD_MNG", pswdConfirmForm, callbackFunc);
+	}
+	
+	// 계좌 패스워드 검증
+	var _acnoPswdConfirm = function(pswd, acno, callbackFunc) {
+		var pwDataForm = makeForm("pwDataForm");
+		addFormData(pwDataForm, "E2E_PSNT_PSWD", pswd);
+		addFormData(pwDataForm, "ACNO", acno);
+		doAction("ACNO_PSWD_CFM", pwDataForm, function(res) {
+		if (res.API_RS_MSG == "SUCCESS" && res.PROCS_RSLT == "0") {
+			callbackFunc();
+			
+		} else {				
+			var resCd = res.API_RS_MSG.split(",")[0];
+			if ( resCd == "ECB12208" || resCd == "ECB10115") {
+				biz.alert("계좌 비밀번호 3회 오류입니다.<br> 서비스를 종료하고 계좌비밀번호 오류해제 메뉴로 이동합니다.", "확인"
+						, function(){
+						// TODO 오류해제 메뉴로 이동
+							doActionFrame("");
+						});
+			
+			} else {
+				biz.alert("계좌비밀번호 입력 오류입니다.");
+			}
+			return false;
+		}
+	});
+		
+	}
+	
+	return {
+		usrIdProc : _usrIdProc,
+		acnoDetail : _acnoDetail,
+		acctHldrInq : _acctHldrInq,
+		delayTransInq : _delayTransInq,
+		pswdConfirm : _pswdConfirm,
+		acnoPswdConfirm : _acnoPswdConfirm
+	};
+}();
+</script>
+
+
+
+<!-- //업무공통 -->
+
+<div class="bottom-menu-area">
+    <ul class="bottom-menu-list">
+        <!-- s: 2023-06-23 수정 범위 -->
+        <li class="on"><a href="javascript:goMainPage();">홈</a></li>
+        <li><a href="javascript:doActionMenu('lon/inq/loanList','BBS_SELECT');">대출</a></li>
+        <li><a href="javascript:doActionMenu('dep/inq/depList','BBS_SELECT');">예/적금</a></li>
+        <li><a href="javascript:openMenu('menuWrap');">전체메뉴</a></li>
+        <!-- e: 2023-06-23 수정 범위 -->
+    </ul>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#menuDiv").load("/includes/menu.frm", {"LINK_ACT":"MAIN_SELECT","txGbnCd":"MNU"}, 
+			function(){});	
+});
+</script>
+<div id="menuDiv"></div>
+
+<!-- 프로그레스바 -->
+<div class="loading" id="loading" style="display:none">
+	<div class="loader-square-9"></div>
+</div>
+
+
+
+<script type="text/javascript">
+	
+	
+		var _SITE_SystemMode = "test"; // real, test
+	
+    var _SITE_SystemLang = "KOR"; // KOR, ENG, CHN, JPN
+    var _SITE_SiteName = "delfino";     // pc, mobile, tablet
+    var _SITE_ModuleType = ""; // "", G2, G3, G4
+
+</script>
+<script src="../resources/wizvera/delfino/delfino_config.js?230803_1334" charset="utf-8"></script>
+<script src="../resources/wizvera/delfino/delfino_internal.min.js?230803_1334" charset="utf-8"></script>
+<script src="../resources/wizvera/delfino/delfino.js?230803_1334" charset="utf-8"></script>
+<script src="../resources/wizvera/delfino/delfino_site.js?230803_1334" charset="utf-8"></script>
+<!-- Open Web nFilter 가상키패드 -->
+
+
+
+<!-- OWN default script -->
+<script language="JavaScript" type="text/javascript" src="../resources/nfilter/js/jquery-1.12.4.min.js" charset="UTF-8"></script>
+<script> var own = $.noConflict() </script>
+<script language="JavaScript" type="text/javascript" src="../resources/nfilter/js/jquery-ui.js" charset="UTF-8"></script>
+<script language="JavaScript" type="text/javascript" src="../resources/nfilter/js/open_nFilter.js" charset="UTF-8"></script>
+<script language="JavaScript" type="text/javascript" src="../resources/nfilter/js/secretUtil.js" charset="UTF-8"></script>
+
+<script type="text/javascript" charset="UTF-8">
+
+    nshc.contextPath = "";
+    nshc.CSSPath = nshc.contextPath + "../resources/nfilter/css";
+    nshc.imgPath = nshc.contextPath + "../resources/nfilter/image";
+    nshc.randomIdLength = 10;
+    nshc.serviceNameKeypadManager = "resources/nfilter/jsp/open_nFilter_keypad_manager.jsp";
+    nshc.algName = "RSA";
+    nshc.keyLength = "2048";
+    nshc.uuSessionUse = false;
+    nshc.NSCryptoUse = true;
+
+</script>
+
+<script type="text/javascript">
+//Delfino G10 Setting
+Delfino.setModule('G10');
+// 가상키패드 서버키
+nshc.setInit();
+</script>
+
+
+	<!-- //footer -->
+	
+</div>
+</body>
+</html>

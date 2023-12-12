@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Totobank</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="Totobank keywords" />
+<meta name="description" content="Totobank description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<!-- 
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+ -->
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="../resources/css/default.css" rel="stylesheet" />/
+<link href="../resources/css/renewal.css" rel="stylesheet" />
+
+<link href="../resources/css/swiper-bundle.min.css" rel="stylesheet" />
+
+<script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../resources/js/lib/jquery.cookie.js"></script>
+
+<!-- <script type="text/javascript" src="../resources/js/lib/swiper-bundle.min.js"></script> -->
+<!-- <script type="text/javascript" src="../resources/js/lib/TweenMax.min.js"></script> 애니메이션 -->
+<!-- <script type="text/javascript" src="../resources/js/lib/jquery.animateSprite.min.js"></script> -->
+<!-- <script type="text/javascript" src="../resources/js/lib/default.js?v=20230803164003"></script> -->
+<!-- <script type="text/javascript" src="../resources/js/lib/ui.js?v=20230803164003"></script> -->
+<!-- <script type="text/javascript" src="../resources/js/lib/rolldate.js?v=20230803164003"></script>납입일 사용 시 필요 -->
+
+<!-- <script type="text/javascript" src="../resources/js/app_common_util.js?v=20230803164003"></script> -->
+<!-- <script type="text/javascript" src="../resources/js/biz_common.js?version=20230803164003" id="biz_common"
+	data-menuId="bnk/prc"
+	data-frameId="autoTransReg1"
+	data-serviceCd="autoTransReg1.frm"
+	data-serverTime="20230803164003"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>납입일 사용 시 필요 -->
+</head>
+<body>
+	<!-- //header -->
+    <header class="headerWrap">
+        <div class="header">
+
+            <a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+
+            <h2><span>자동이체</span></h2>
+        </div>
+        <div class="menu-wrap">
+
+        </div>
+    </header>
+	<!-- header// -->
+
+	<!-- //contentsWrap -->
+	<div class="contentsWrap">
+        
+		<!-- //contents -->
+        <div class="contents">
+            <form id="dataForm" name="dataForm" method="post">
+                
+                <div class="default-wrap grid"><!--D: list-bull일 있을 경우 section 두개로 나누고 default-wrap 태그에 grid 추가 필요-->
+                    <section>
+                        <div class="form-cont">
+                            <div class="tit-area">
+                                <h3>셀렉트</h3>
+                            </div>
+                            <div class="tit-area">
+                                <h3>출금계좌</h3>
+                                <button class="btn-gray" type="button" onclick="selectAcnoCall('WTCH');">최근입금계좌</button>
+                            </div>
+                            <ul class="li-input">
+                                <li>
+									<label for="user-hpnum" class="formlabel">휴대폰번호</label>
+									<p class="input flex">
+										<span class="select tel">
+											<select class="select-point">
+												<option value="SKT">SKT</option>
+												<option value="">KT</option>
+												<option value="">LGU+</option>
+												<option value="">알뜰 SKT</option>
+												<option value="">알뜰KT</option>
+												<option value="">알뜰 LGU+</option>
+											</select>
+										</span>
+										<span class="tel_number">
+											<input id="user-hpnum" name="user-hpnum" class="inp" type="tel" maxlength="11" placeholder="휴대폰번호를 입력하세요(-없이 입력)" title="휴대폰번호">
+											<!--<span>●●●●●●</span>-->
+										</span>
+									</p>
+								</li>
+                                
+                                <li class="select-wrap">
+                                    <p class="select-box" tabindex="1" id="div_WTCH_BKCD" onclick="openPopupUp('lySel');">
+                                        <label for="WTCH_BKCD">가나다라</label>
+                                        <span class="option" id="WTCH_BKNM">미선택</span>
+                                    </p>
+                                    <input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" class="validChk">
+                                </li>
+                                <li class="line-none">
+									<p class="exp-txt">출금 가능금액 : <span id="Acct_Amt">50,000,000원</span></p>
+								</li>
+                                <li class="select-wrap disabled">
+                                    <p class="select-box" tabindex="1" id="div_WTCH_BKCD" onclick="removeErr(this); biz.bank(wtchBankCallback);">
+                                        <label for="WTCH_BKCD">은행선택</label>
+                                        <span class="option" id="WTCH_BKNM">미선택</span>
+                                    </p>
+                                    <input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" class="validChk">
+                                </li>
+
+                                <li class="line-none">
+                                    <div class="info-txt-wrap">
+                                        <span class="info-mark">!</span>
+                                        <p class="info">가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사</p>
+                                    </div>
+                                    <!-- <p class="info-txt">계좌 해지 신청이 불가능해요222222222222222222222222222222222222222222222222222222</p> -->
+                                </li>
+                                <li class="select-wrap on">
+                                    <p class="select-box" tabindex="1" id="">
+                                        <label for="">1일 이체한도</label>
+                                        <span class="option" id=""><span>1,500,000</span>원</span>
+                                    </p>
+                                </li>
+                                <li class="select-wrap">
+                                    <p class="select-box" tabindex="1" id="div_WTCH_BKCD" onclick="removeErr(this); biz.bank(wtchBankCallback);">
+                                        <label for="WTCH_BKCD">은행선택</label>
+                                        <span class="option" id="WTCH_BKNM">미선택</span>
+                                    </p>
+                                    <input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" class="validChk">
+                                </li>
+
+                                <li class="select-wrap">
+                                    <p class="select-box" tabindex="1" id="div_WTCH_BKCD" onclick="removeErr(this); biz.bank(wtchBankCallback);">
+                                        <label for="WTCH_BKCD">은행선택</label>
+                                        <span class="option" id="WTCH_BKNM">미선택</span>
+                                    </p>
+                                    <input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" class="validChk">
+                                </li>
+                                <li class="select-wrap" id="div_WTCH_BKNM">
+                                    <p class="select-box" tabindex="1" id="div_WTCH_BKCD" onclick="removeErr(this); biz.bank(wtchBankCallback);">
+                                        <label for="WTCH_BKCD">은행선택</label>
+                                        <span class="option" id="WTCH_BKNM">미선택</span>
+                                    </p>
+                                    <input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" class="validChk">
+                                    <p class="info-txt">계좌 해지 신청이 불가능해요</p>
+                                </li>
+                                <li class="line-none">
+                                    <div class="info-txt-wrap">
+                                        <span class="info-mark">!</span>
+                                        <p class="info">계좌 해지 신청이 불가능해요</p>
+                                    </div>
+                                </li>
+
+                                <li class="select-wrap  type2 type-dd on">
+                                    <p id="rolldate2" class="select-box" tabindex="1">
+                                        <label for="">납입일</label>
+                                        <span class="option">23</span>
+                                    </p>
+                                </li>
+
+                                <li class="check-wrap">
+                                    <input type="checkbox" id="smsChk">
+                                    <label for="smsChk">
+                                        <span>만기 SMS 알림</span>
+                                        <p class="switch-btn">
+                                            <span class="off">OFF</span>
+                                            <span class="on">ON</span>
+                                            <span class="inside"></span>
+                                        </p>
+                                    </label>
+                                </li>
+                                <li class="line-none">
+                                    <div class="info-txt-wrap">
+                                        <span class="info-mark">!</span>
+                                        <p class="info">이미지(jpg, png, gif 등) 파일 또는 PDF 파일만 첨부 가능해요</p>
+                                    </div>
+                                    <div class="info-txt-wrap">
+                                        <span class="info-mark">!</span>
+                                        <p class="info">첨부파일은 10MB 이하만 등록이 가능해요</p>
+                                    </div>
+                                </li>
+                                <li class="check-wrap">
+                                    <input type="checkbox" id="check02">
+                                    <label for="check02">
+                                        <span>
+                                            출금중지설정
+                                        </span>
+                                        <p class="switch-btn">
+                                            <span class="off">OFF</span>
+                                            <span class="on">ON</span>
+                                            <span class="inside"></spa>
+                                        </p>
+                                    </label>
+                                </li>
+                                <li class="line-none">
+                                    <div class="info-txt-wrap">
+                                        <span class="info-mark">!</span>
+                                        <p class="info">가나다라마바사</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                    </section>
+
+                </div>
+            </form>
+        </div>
+        <!-- contents// -->
+
+        <!-- //fixed-btn-wrap -->
+		<div class="fixed-btn-wrap">
+			<div class="btn-wrap">
+				<a href="javascript:void(0);" class="btn" id="procBtn" onclick="PageFunc.validate();">다음</a><!-- [퍼블] 클래스 변경 -->
+			</div>
+			<a href="#none" class="btn-txt" onclick="PageFunc.cancel();">그만하기</a>
+		</div>
+        <!-- fixed-btn-wrap// -->
+    </div>
+	<!-- contentsWrap// -->
+
+
+    <div id="lySel" class="layerpopup layer-up show" style=""><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+		<div class="content-wrap">
+			<div class="pop-header">
+				<h2 class="pop-title">가나다라</h2>
+				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+			</div>
+			<div class="ly-scroll-con ly-select">
+				<ul class="ly-select-list">
+					<li><button>가가가가</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+					<li><button>나나나나</button></li>
+					<li><button>나나나나</button></li>
+					<li><button>나나나나</button></li>
+					<li><button>나나나나</button></li>
+					<li><button>나나나나</button></li>
+					<li><button>나나나나</button></li>
+					<li><button>나나나나</button></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+<footer>
+<!-- 푸터 타입별 정의 -->
+</footer>
+
+
+
+</body>
+
+</html>

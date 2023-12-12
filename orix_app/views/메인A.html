@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../resources/css/lib/default.css">
+
+    <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/ui.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- //header -->
+        <header id="lnb">
+            <a href="javascript:void(0);" onclick="" class="btn_prev">이전</a>
+            <h1>정기예금</h1>
+            <a href="javascript:void(0)" class="btn_menu">메뉴</a>
+        </header>
+        <form>
+            <div class="contents-wrap">
+                <div class="login-on-wrap user_m_img">
+                    <p>안녕하세요,<strong>홍길동님!</strong></p>
+                    <button class="btn logout" type="button" onclick="selectAcnoCall('WTCH');">로그아웃</button>
+                </div>
+
+				<section class="quick-service-area">
+                    <div class="tit-area">
+                        <p class="title">심사(신용조회 동의 포함) 요청</p>
+                    </div>
+					<div class="visaul-info-box">
+						<div class="info-tit">
+							<p>홍길동 고객님</p>
+							<p>심사요청 진행상황</p>
+						</div>
+						<div class="tit-ok">승인완료</div>
+						<div class="btn-cont-wrap">
+							<a href="#none" class="btn btn-info">자세히보기</a>
+							<a href="#none" class="btn btn-primary">결과확인</a>
+						</div>
+					</div>
+                </section>
+
+				<section class="quick-service-area">
+					<div class="arrow-button-wrap">
+						<ul class="arrow-button-list list-icon">
+							<li class="audit"><a href="#none" onclick="expRenewPop();">심사(신용조회 등)결과 확인</a></li>
+							<li class="documents"><a href="#none" onclick="">서류제출 / 약정체결</a></li>
+							<li class="remittance"><a href="#none" onclick="acnoCancelBtn('')">송금요청</a></li>
+							<li class="market_price"><a href="#none" onclick="">차량시세 조회</a></li>
+							<li class="performance"><a href="#none" onclick="">실적조회</a></li>
+							<li class="counseling"><a href="#none" onclick="">신차상담</a></li>
+							<li class="Pre_guidance"><a href="#none" onclick="">방문판매 사전안내</a></li>
+							<li class="approval"><a href="#none" onclick="">모바일 승인</a></li>
+						</ul>
+					</div>
+				</section>
+                <section>
+                    <div class="histroy-box">
+                        <div class="tit-area">
+                            <p class="title">신용조회 동의완료 고객 선택</p>
+                        </div>
+                        <ul class="history-list col3">
+                            <li>
+                                <p class="num">4</p>
+                                <span class="text">신차상담</span>
+                            </li>
+                            <li>
+                                <p class="num">8</p>
+                                <span class="text">심사요청</span>
+                            </li>
+                            <li>
+                                <p class="num">12</p>
+                                <span class="text">약정체결</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </div>
+</body>
+
+
+
+
+
+</html>

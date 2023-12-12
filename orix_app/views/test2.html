@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>고려저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="고려저축은행 keywords" />
+<meta name="description" content="고려저축은행 description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<!-- 
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+ -->
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="../resources/css/default.css" rel="stylesheet" />
+<link href="../resources/css/renewal.css" rel="stylesheet" />
+<link href="../resources/css/renewal_.css" rel="stylesheet" />
+
+<link href="../resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="../resources/favicon.ico" />
+
+<script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="../resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="../resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="../resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="../resources/js/lib/default.js?v=20230803164003"></script>
+<script type="text/javascript" src="../resources/js/lib/ui.js?v=20230803164003"></script>
+<script type="text/javascript" src="../resources/js/lib/rolldate.js?v=20230803164003"></script>
+<script type="text/javascript" src="../resources/js/app_common_cont.js?v=20230803164003"></script>
+<script type="text/javascript" src="../resources/js/app_common_auth.js?v=20230803164003"></script>
+<script type="text/javascript" src="../resources/js/app_common_funs.js?v=20230803164003"></script>
+<script type="text/javascript" src="../resources/js/app_common_nsl.js?v=20230803164003"></script>
+<script type="text/javascript" src="../resources/js/app_common_util.js?v=20230803164003"></script>
+<script type="text/javascript" src="../resources/js/biz_common.js?version=20230803164003" id="biz_common"
+	data-menuId="bnk/prc"
+	data-frameId="autoTransReg1"
+	data-serviceCd="autoTransReg1.frm"
+	data-serverTime="20230803164003"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+
+</head>
+<body>
+	<!-- //header -->
+    <header class="headerWrap">
+        <div class="header">
+
+            <a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+
+            <h2><span>자동이체</span></h2>
+        </div>
+        <div class="menu-wrap">
+
+        </div>
+    </header>
+	<!-- header// -->
+
+	<!-- //contentsWrap -->
+	<div class="contentsWrap">
+        
+		<!-- //contents -->
+        <div class="contents">
+            <form id="dataForm" name="dataForm" method="post">
+                <input type="hidden" id="PROD_NM" name="PROD_NM" />
+                <input type="hidden" id="WTCH_KNCD" name="WTCH_KNCD" />
+                <input type="hidden" id="WTCH_PDNM" name="WTCH_PDNM" />
+                <input type="hidden" id="WTCH_NAME" name="WTCH_NAME" />
+                <input type="hidden" id="MNRC_KNCD" name="MNRC_KNCD" />
+                <input type="hidden" id="MNRC_PDNM" name="MNRC_PDNM" />
+                <input type="hidden" id="MNRC_NAME" name="MNRC_NAME" />
+                <div class="default-wrap grid">
+                    <section>
+
+                        <div class="tit-wrap">
+                            <p class="txt"><b>자동이체 계좌정보</b>를<br/>입력해주세요</p>
+                        </div>
+                        
+                        <div class="form-cont">
+                            <div class="input_cont">
+                                <div class="tit-area">
+                                    <h3>타이틀</h3>
+                                </div>
+                                <ul class="li_input">
+    
+                                    <li class="focus">
+                                        <label for="user_name" class="formlabel">성명</label>
+                                        <p class="input">
+                                            <input id="user_name" name="user_name" class="inp" type="text" title="성명" placeholder="성명을 입력해주세요.">
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="select-wrap">
+                                        <div class="select-box" tabindex="1" id="div_WTCH_BKCD" onclick="removeErr(this); biz.bank(wtchBankCallback);">
+                                            <label for="WTCH_BKCD">은행선택</label>
+                                            <span class="option" id="WTCH_BKNM">미선택</span>
+                                        </div>
+                                        <input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" class="validChk">
+                                    </li>
+
+                                    <li class="select-wrap disabled">
+                                        <div class="select-box" tabindex="1" id="div_WTCH_BKCD" onclick="removeErr(this); biz.bank(wtchBankCallback);">
+                                            <label for="WTCH_BKCD">은행선택</label>
+                                            <span class="option" id="WTCH_BKNM">미선택</span>
+                                        </div>
+                                        <input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" class="validChk">
+                                    </li>
+
+                                    <li class="select-wrap">
+                                        <div class="tit-area">
+                                            <h3>출금계좌</h3>
+                                            <button class="btn-gray" type="button" onclick="selectAcnoCall('WTCH');">최근입금계좌</button>
+                                        </div>
+                                        <div class="select-box" tabindex="1" id="div_WTCH_BKCD" onclick="removeErr(this); biz.bank(wtchBankCallback);">
+                                            <label for="WTCH_BKCD">은행선택</label>
+                                            <span class="option" id="WTCH_BKNM">미선택</span>
+                                        </div>
+                                        <input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" class="validChk">
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </section>
+                    
+                    <section>
+                        <div>
+                            <dl class="list-bull has-border type-caption">
+                                <dt>알아두세요</dt>
+                                <dd>상기 사항에 동의 시, 저금리 정책 상품의 결과조회 및 취급이 가능하며 동의에 의한 개인(신용)정보 조회는 신용등급에 영향을 미치지 않아요</dd>
+                                <dd>단, 당행의 신용평가 시스템 및 해당 정책상품 실행기관의 심사기준과 개인의 신용도에 따라 대출여부가 결정돼요</dd>
+                            </dl>
+                        </div>
+                    </section>
+                </div>
+            </form>
+        </div>
+        <!-- contents// -->
+
+        <!-- //fixed-btn-wrap -->
+		<div class="fixed-btn-wrap">
+			<div class="btn-wrap">
+				<a href="javascript:void(0);" class="btn" id="procBtn" onclick="PageFunc.validate();">다음</a><!-- [퍼블] 클래스 변경 -->
+			</div>
+			<a href="#none" class="btn-txt" onclick="PageFunc.cancel();">그만하기</a>
+		</div>
+        <!-- fixed-btn-wrap// -->
+    </div>
+	<!-- contentsWrap// -->
+
+
+
+<footer>
+<!-- 푸터 타입별 정의 -->
+</footer>
+
+
+</body>
+</html>

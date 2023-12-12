@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../resources/css/lib/swiper-bundle.min.css">
+
+    <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/ui.js"></script>
+</head>
+
+
+
+<body>
+    <div class="wrap">
+        <!-- //header -->
+        <header id="lnb">
+            <a href="javascript:void(0);" onclick="" class="btn_prev">이전</a>
+            <h1>정기예금</h1>
+            <a href="javascript:void(0)" class="btn_menu">메뉴</a>
+        </header>
+        <form>
+            <div class="contents-wrap">
+                <section>
+                    <div class="service-wrap">
+                        <ul class="service-box">
+                            <li class="counsel">
+                                <a href="#none">
+                                    <P class="title">신차상담</P>
+                                    <span class="desc">
+                                        오릭스캐피탈<br>신차상담입니다.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="guide">
+                                <a href="#none">
+                                    <P class="title">방문판매<br>사전안내</P>
+                                    <span class="desc">
+                                        방문 판매에 대한<br>사전안내입니다.
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="news-area">
+                        <div class="news-slider-wrap swiper mySwiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide slide1">
+                                    <a href="#none">
+                                        <p class="desc">
+                                            오릭스캐피탈코리아 홈페이지에서 확인하세요!
+                                        </p>
+                                        <span class="title">오릭스캐피탈 중고차</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide slide2">
+                                    <a href="#none">
+                                        <p class="desc">
+                                            오릭스캐피탈코리아 홈페이지에서 확인하세요!
+                                        </p>
+                                        <span class="title">오릭스캐피탈 중고차</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide slide3">
+                                    <a href="#none">
+                                        <p class="desc">
+                                            오릭스캐피탈코리아 홈페이지에서 확인하세요!
+                                        </p>
+                                        <span class="title">오릭스캐피탈 중고차</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    // var swiper1 = new Swiper(".mySwiper", {
+    //         loop: true,
+    //         pagination: {
+    //             el: ".swiper-pagination", // 버튼을담을 태그 설정
+    //             clickable: true,
+    //         },
+    //     });
+
+
+        
+$(document).ready(function(){
+    var newsSlider = new Swiper('.news-slider-wrap.swiper', { 
+        slidesPerView : 1, /*1.1*/
+        spaceBetween : 20,
+        pagination : {
+            el : '.swiper-pagination',
+            clickable : true,
+        },
+        // 2023-06-23 추가
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        loop : true,
+    });
+
+    var noticeSlider = new Swiper('.notice-slider-wrap.swiper', { // 2023-06-20 선택자 변경 : swiper-container => swiper
+        direction : 'vertical',
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        loop : true,
+        loopedSlides: 1,
+        observer: true,
+        observeParents: true,
+    });
+
+    var recomSlider = new Swiper('.recom-slider-wrap .swiper', { // 2023-06-20 선택자 변경 : swiper-container => swiper
+        effect: "cards",
+        cardsEffect: {
+            perSlideRotate: 0,
+            slideShadows: false,
+        },
+        // 2023-06-23(2) 수정
+        // autoplay: {
+        //     delay: 3500,
+        //     disableOnInteraction: false,
+        //     reverseDirection: true,
+        // },
+        // loop : true,
+    });
+
+});
+
+
+</script>
+
+
+
+
+</html>

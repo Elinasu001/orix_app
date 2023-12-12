@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../resources/css/lib/default.css">
+
+    <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/ui.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- //header -->
+        <header id="lnb">
+            <a href="javascript:void(0);" onclick="" class="btn_prev">이전</a>
+            <h1>정기예금</h1>
+            <a href="javascript:void(0)" class="btn_menu">메뉴</a>
+        </header>
+        <form>
+            <div class="contents-wrap">
+                <section class="form-wrap">
+                    <div class="form-group">
+                        <label for="user_name">성명</label>
+                        <input id="user_name" type="text" name="user-name" class="form-control" placeholder="성명">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user_name">Invaild</label>
+                        <input id="user_name" type="text" name="user-name" class="form-control is-invalid" placeholder="성명"><!--is-invalid : 유효하지 않을 경우-->
+                        <div class="invalid-feedback">사용자 이름을 선택하세요.</div><!--invalid-feedback : 유효하지 않을 경우-->
+                    </div>
+                    <div class="form-group">
+                        <label for="user_name">Disalbed</label>
+                        <input id="user_name" type="text" name="user-name" class="form-control" placeholder="성명"
+                            disabled><!--disalbed-->
+                    </div>
+                    <div class="form-group">
+                        <label for="user_name">Readonly</label>
+                        <input id="user_name" type="text" name="user-name" class="form-control" placeholder="성명"
+                            readonly><!--readonly-->
+                    </div>
+                  
+                    <div class="form-group">
+                        <div class="form-tit">주민등록번호</div>
+                        <label for="user_resi_number">주민등록번호</label>
+                        <div class="form-row" id="user_resi_number">
+                            <div class="col">
+                                <input type="password" class="form-control" maxlength="6" placeholder="">
+                            </div>
+                            <div class="input-hyphen">-</div>
+                            <div class="col">
+                                <input type="password" class="form-control" maxlength="7" placeholder="●●●●●●●">
+                            </div>
+                        </div>
+                    </div>
+                    <!--하단 팝업으로 올라오게 만듦 : why? 모바일 환경의 기본 컨트롤들은 시스템 내장 UI들이므로 오버레이로 뜨는 선택 창 이것은 고칠 수가 없음, 커스텀을 할 경우 개발에 불편함. ui 페이지 소스 크기가 커서 좋은 웹사이트를 만들 수 없음. select 태그를 쓰되 자바스크립트가 이 태그를 찾아 치환 해주는 프레임 워크든 라이브러리를 사용하면 되지만 option 대체 방법이 쉬운 편은 아님-->
+                    <!-- <div class="form-group">
+                        <div class="mb-2">
+                            <label for="user_phone">휴대폰 번호</label>
+                            <select id="user_phone" class="form-control" disabled >
+                                <option selected>통신사 선택</option>
+                                <option value="1">SKT</option>
+                                <option value="2">KT</option>
+                                <option value="3">LG</option>
+                                <option value="4">알뜰폰 SKT</option>
+                                <option value="5">알뜰폰 KT</option>
+                                <option value="6">알뜰폰 LG</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input  type="text" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력">
+                        </div>
+                    </div> -->
+
+                    <div class="form-group">
+                        <label for="user_phone">휴대폰 번호</label>
+                        <div class="form-control select"  onclick="openPopupUp('lySel')"  tabindex="0">
+                            <a href="#none" tabindex="-1"><span>통신사 선택</span></a>
+                        </div>
+                        <input id="user_phone" type="tel" name="phone" class="form-control" maxlength="11"
+                            placeholder="- 없이 숫자만 입력" inputmode="tel"><!--휴대폰 번호 : type="tel"/ inputmode="tel"-->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user-email">이메일</label>
+                        <input type="email" name="email" class="form-control" id="user-email"
+                            aria-describedby="emailHelp" placeholder="이메일을 입력해주세요"
+                            inputmode="email"><!--inputmode="email"-->
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
+                        <div class="info-txt-wrap">
+                            <span class="info-mark">!</span>
+                            <p class="info">영문, 숫자, 특수문자를 조합한 8~12자리를 입력해 주세요</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-id">아이디</label>
+                        <input type="text" class="form-control" id="user-id" placeholder="아이디를 입력해주세요">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-password">비밀번호</label>
+                        <input type="password" class="form-control" id="user-password" placeholder="비밀번호를 입력해주세요">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-password">비밀번호 확인</label>
+                        <input type="password" class="form-control" id="user-password" placeholder="비밀번호 확인해주세요">
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="amount">금액</label>
+                        <div class="amount">
+                            <input type="amount" class="form-control amount-num" id="amount" placeholder="금액을 입력해주세요"
+                                inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                            <span class="amount-txt">원</span>
+                        </div>
+                    </div>
+                    <!-- //디자인 보고 다시 만들기 필요 -->
+                    <div class="form-group">
+                        <label for="search">주소 검색</label>
+                        <div class="form-group address">
+                            <input type="search" id="search" class="form-control" placeholder=""
+                                aria-label="Search Addresses" aria-describedby="user-search"
+                                inputmode="search"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
+                            <!-- <div class="input-group-prepend"></div> -->
+                            <button class="btn btn-clear outline-secondary" type="reset"></button>
+                            <button class="btn btn-search outline-secondary" type="button">검색</button>
+                        </div>
+                        <!-- <div class="reset-wrap">
+                                <input type="reset" class="reset" value="X" alt="Clear the search form" >
+                            </div> -->
+                        <!-- <span onclick="var input = this.previousElementSibling; input.value = ''; input.focus();">x</span> -->
+                        <!-- <div class="input-group-append">
+                                <button class="btn search img" type="button">검색</button>
+                            </div> -->
+                    </div>
+                   
+
+                    <!-- <div class="form-group address line">
+                        <div class="input" tabindex="0">
+                            <a href="#none" tabindex="-1">
+                                <span class="address-num">12347</span>
+                                <span class="address-text">서울특별시 서초구 매헌로 16 (하이브랜드) 1518호</span>
+                            </a>
+                        </div>
+                        <div class="input" tabindex="0">
+                            <a href="#none" tabindex="-1">
+                                <span class="address-num">12347</span>
+                                <span class="address-text">서울특별시 서초구 매헌로 16 (하이브랜드) 1518호</span>
+                            </a>
+                        </div>
+                          
+                    </div> -->
+                    <!-- <div class="input-group-append">
+                                <button class="btn search" type="button" id="user-search">재검색</button>
+                            </div> -->
+                    <!-- 디자인 보고 다시 만들기 필요// -->
+
+                </section>
+                <section class="form-wrap">
+                    <div class="form-group address line" tabindex="0">
+                        <button class="btn btn-research outline-secondary" type="button">재검색</button>
+                        <div class="input">
+                            <span class="address-num">12347</span>
+                            <span class="address-text">서울특별시 서초구 매헌로 16 (하이브랜드) 1518호</span>
+                        </div>
+                    </div>
+                    <div class="form-group address line" tabindex="0">
+                        <button class="btn btn-research outline-secondary" type="button">재검색</button>
+                        <div class="input">
+                            <span class="address-num">12347</span>
+                            <span class="address-text">서울특별시 서초구 매헌로 16 (하이브랜드) 1518호</span>
+                        </div>
+                    </div>
+                </section>
+                <!--absolute 필요 없느 radio-->
+                <!-- <section class="form-wrap">
+                    <div class="form-group radio-custom">
+                        <div class="form-tit">Radio-custom</div>
+                        <fieldset>
+                            <label>
+                                <input type="radio" name="contact" value="email" checked />
+                                <span>이메일</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="contact" value="phone" />
+                                <span>전화</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="contact" value="fax" disabled />
+                                <span>팩스</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="contact" value="mail" />
+                                <span>우편</span>
+                            </label>
+                        </fieldset>
+                    </div>
+                </section> -->
+                
+                <section class="form-wrap">
+                    <div class="form-group radio-buttons">
+                        <label for="term-1" class="radio-button">1학기
+                            <input type="radio" id="term-1" name="terms">
+                            <span class="custom-radio"></span>
+                        </label>
+                        <label for="term-2" class="radio-button">2학기
+                            <input type="radio" id="term-2" name="terms">
+                            <span class="custom-radio"></span>
+                        </label>
+                        <label for="term-3" class="radio-button">추가학기
+                            <input type="radio" id="term-3" name="terms">
+                            <span class="custom-radio"></span>
+                        </label>
+                    </div>
+                </section>
+                
+                <section class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-primary">다음</button>
+                        <button type="button" class="btn btn-txt">그만하기</button>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </div>
+</body>
+
+
+</html>
+
+<!--//휴대폰팝업-->
+<div id="lySel" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">통신사 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>SKT</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                <li><button>KT</button></li>
+                <li><button>LG</button></li>
+                <li><button>알뜰폰 SK</button></li>
+                <li><button>알뜰폰 KT</button></li>
+                <li><button>알뜰폰 LG</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--휴대폰팝업//-->

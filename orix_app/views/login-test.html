@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/bootstrap/renewal.css">
+    <!-- <link rel="stylesheet" href="../resources/css/bootstrap/terms_guide_view.css"> -->
+    <!-- <link rel="stylesheet" href="../resources/css/bootstrap/bootstrap-grid.css"> -->
+    <!-- <link rel="stylesheet" href="../resources/css/default.css"> -->
+
+    <!-- <script src="../resources/js/bootstrap/bootstrap.bundle.js"></script> -->
+    <!-- <script type="text/javascript" src="../resources/js/lib/ui.js"></script> -->
+
+
+    <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+    <!-- <script type="text/javascript" src="../resources/js/bootstrap/terms_guide_view.js"></script> -->
+    <!-- <script type="text/javascript" src="../resources/js/lib/default.js"></script> -->
+    <script type="text/javascript" src="../resources/js/bootstrap/bootstrap2.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script> -->
+
+    <script>
+        /* 3자리 수마다 콤마 적용 */
+        $(document).on('keyup', 'input[inputmode=numeric]', function (event) {
+            this.value = this.value.replace(/[^0-9]/g, ''); // 입력값이 숫자가 아니면 공백
+            this.value = this.value.replace(/,/g, ''); // ,값 공백처리
+            this.value = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규식을 이용해서 3자리 마다 , 추가
+        });
+    </script>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- //header -->
+        <header id="lnb">
+            <a href="javascript:void(0);" onclick="" class="btn_prev">이전</a>
+            <h1>정기예금</h1>
+            <a href="javascript:void(0)" class="btn_menu">메뉴</a>
+        </header>
+        <form>
+            <div class="contents-wrap">
+                <section class="form-wrap">
+                    <div class="form-group">
+                        <h3 class="form-tit">성명</h3>
+                        <label for="user_name">성명</label>
+                        <input id="user_name" type="text" name="user-name" class="form-control" placeholder="성명">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="수신자의 사용자 이름" aria-label="두 개의 버튼 애드온이 포함된 수신자의 사용자 이름" aria-describedby="button-addon4">
+                        <div class="input-group-append" id="button-addon4">
+                            <button class="btn btn-outline-secondary" type="button">단추</button>
+                            <button class="btn btn-outline-secondary" type="button">단추</button>
+                        </div>
+                    </div>
+                </section>
+            
+                <section class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-primary">다음</button>
+                        <button type="button" class="btn btn-txt">그만하기</button>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </div>
+</body>
+
+
+
+
+
+</html>
+

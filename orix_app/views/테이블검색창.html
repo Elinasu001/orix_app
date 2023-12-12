@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../resources/css/lib/default.css">
+
+    <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/ui.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- //header -->
+        <header id="lnb">
+            <a href="javascript:void(0);" onclick="" class="btn_prev">이전</a>
+            <h1>정기예금</h1>
+            <a href="javascript:void(0)" class="btn_menu">메뉴</a>
+        </header>
+        <form>
+            <div class="contents-wrap">
+                <section class="form-wrap">
+                    <div class="form-group">
+                        <!-- <label for="search">신용조회 동의완료 고객 선택</label> -->
+                        <div class="input-group address">
+                            <input type="text" id="search" class="form-control" placeholder="신용조회 동의완료 고객 선택" aria-label="Search Addresses" aria-describedby="user-search" inputmode="search" disabled><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
+                            <button class="btn btn-search outline-secondary" type="button">검색</button>
+                            <!-- <div class="input-group-prepend">
+                                <button class="btn btn-clear outline-secondary" type="reset"></button>
+                                <button class="btn btn-search img outline-secondary" type="button">검색</button>
+                            </div> -->
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <!-- <label for="search">신용조회 동의완료 고객 선택</label> -->
+                        <div class="input-group">
+                            <input type="text" id="search" class="form-control" placeholder="신용조회 동의완료 고객 선택" aria-label="Search Addresses" aria-describedby="user-search" inputmode="search" disabled><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
+                            <button class="btn btn-txt-search outline-secondary" type="button">검색</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-tit">모델로 조회</div>
+                        <div class="input-group">
+                            <div class="form-control select" tabindex="0">
+                                <a href="#none" tabindex="-1"><span>제조사 선택</span></a>
+                            </div>
+                            <button class="btn btn-txt-search outline-secondary" type="button">검색</button>
+                        </div>
+                    </div>
+                    <div class="tit-area">
+                        <p class="title">신용조회 동의완료 고객 선택</p>
+                        <button class="btn btn-txt-img-search outline-secondary" type="button"><span class="img"></span><span class="text">검색</span></button>
+                    </div>
+                    <div class="table-type table-row table-scroll check">
+                        <table class="">
+                            <caption>신용조회 동의 완료 고객 선택 테이블</caption>
+                            <colgroup>
+                                <col width="*%">
+                                <col width="*%">
+                                <col width="33.333%">
+                                <col width="33.333%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th scope="row">고객명</th>
+                                    <th scope="row">연락처</th>
+                                    <th scope="row">동의일자</th>
+                                    <th scope="row">신청상품</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td ><input type="checkbox" name="user_checkbox" id="check1" class="custom-check"><label for="check1"></label></td>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="user_checkbox" id="check2" class="custom-check"><label for="check2"></label></td>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                                <!-- <tr>
+                                    <td><div class="custom-control custom-checkbox"><input type="checkbox" name="user_checkbox" id="customCheck1" class="custom-control-input"><label for="customCheck1" class="custom-control-label"></label></div></td>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </div>
+</body>
+
+
+</html>
+
+

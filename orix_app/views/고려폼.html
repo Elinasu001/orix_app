@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Totobank</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="Totobank keywords" />
+<meta name="description" content="Totobank description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<!-- 
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+ -->
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+ <link rel="stylesheet" href="../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../resources/css/lib/default.css">
+
+    <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/ui.js"></script>
+</head>
+<body>
+	<!-- //header -->
+    <header class="headerWrap">
+        <div class="header">
+
+            <a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+
+            <h2><span>자동이체</span></h2>
+        </div>
+        <div class="menu-wrap">
+
+        </div>
+    </header>
+	<!-- header// -->
+
+	<!-- //contentsWrap -->
+	<div class="contentsWrap">
+        
+		<!-- //contents -->
+        <div class="contents">
+            <form id="dataForm" name="dataForm" method="post">
+                <input type="hidden" id="PROD_NM" name="PROD_NM" />
+                <input type="hidden" id="WTCH_KNCD" name="WTCH_KNCD" />
+                <input type="hidden" id="WTCH_PDNM" name="WTCH_PDNM" />
+                <input type="hidden" id="WTCH_NAME" name="WTCH_NAME" />
+                <input type="hidden" id="MNRC_KNCD" name="MNRC_KNCD" />
+                <input type="hidden" id="MNRC_PDNM" name="MNRC_PDNM" />
+                <input type="hidden" id="MNRC_NAME" name="MNRC_NAME" />
+                <div class="default-wrap grid"><!--D: list-bull일 있을 경우 section 두개로 나누고 default-wrap 태그에 grid 추가 필요-->
+                    <section>
+
+                        <div class="tit-wrap">
+                            <p class="txt"><b>자동이체 계좌정보</b>를<br/>입력해주세요</p>
+                        </div>
+                        
+                        <div class="form-cont">
+                            <div class="tit-area">
+                                <h3>타이틀</h3>
+                            </div>
+                            <div class="tit-area">
+                                <h3>출금계좌</h3>
+                                <button class="btn-gray" type="button" onclick="selectAcnoCall('WTCH');">최근입금계좌</button>
+                            </div>
+                            <ul class="li-input">
+
+                                <li class="focus">
+                                    <label for="user_name" class="formlabel">성명</label>
+                                    <p class="input">
+                                        <input id="user_name" name="user_name" class="inp" type="text" title="성명" placeholder="성명을 입력해주세요.">
+                                    </p>
+                                </li>
+                                <li>
+                                    <label for="user_number" class="formlabel">주민번호</label>
+                                    <p class="input flex">
+                                        <span>
+                                            <input id="user_number" name="user_number" class="inp" type="tel" maxlength="6" placeholder="앞자리" title="주민등록번호 앞자리">
+                                        </span>
+                                        <span class="input-hyphen">-</span>
+                                        <span class="user_number_bg">
+                                            <input id="user_number2" name="user_number2" class="inp" type="password" maxlength="7" placeholder="뒷자리" title="주민등록번호 뒷자리">
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="">
+                                    <label for="user_name" class="formlabel">아이디</label>
+                                    <p class="input button">
+                                        <input id="user_name" name="user_name" class="inp" type="text" title="성명" placeholder="아이디">
+                                    </p>
+                                    <button type="button" class="btn-form">중복확인</button>
+                                </li>
+                                <li class="line-none">
+                                    <div class="info-txt-wrap">
+                                        <span class="info-mark">!</span>
+                                        <p class="info">영문(소문자), 숫자를 조합한 6~12자리를 입력해 주세요</p>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <label for="user_number" class="formlabel">비밀번호</label>
+                                    <p class="input">
+                                        <span class="user_number_bg">
+                                            <input id="user_number2" name="user_number2" class="inp" type="password" maxlength="13" placeholder="비밀번호" title="비밀번호">
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="">
+                                    <label for="user_number" class="formlabel">비밀번호 확인</label>
+                                    <p class="input">
+                                        <span class="user_number_bg">
+                                            <input id="user_number2" class="inp" name="user_number2" type="password" value="" maxlength="13" placeholder="비밀번호 확인" title="비밀번호 확인" autocomplete="new-password" ><!--D: 패스워드 자동입력을 막고 싶다면  autocomplete="new-password"-->
+                                        </span>
+                                    </p>
+                                </li>
+                                
+                                <li class="line-none">
+                                    <div class="info-txt-wrap">
+                                        <span class="info-mark">!</span>
+                                        <p class="info">영문, 숫자, 특수문자를 조합한 8~12자리를 입력해 주세요</p>
+                                    </div>
+                                </li>
+                                <li class="line-none">
+                                    <div class="info-txt-wrap">
+                                        <span class="info-mark">!</span>
+                                        <p class="info">주민등록번호, 휴대폰번호, 전화번호, 아이디와 4자 이상 일치하는 문자는 사용할 수 없어요</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="user_name" class="formlabel">버튼생생</label>
+                                    <p class="input button">
+                                        <input id="user_name" name="user_name" class="inp" type="text" title="성명" placeholder="버튼이 있을경우">
+                                    </p>
+                                    <button type="button" class="btn-form">다시검색</button>
+                                </li>
+
+                                <li>
+                                    <label for="address">주소검색</label>
+                                    <p class="input search">
+                                        <span>
+                                            <input id="address" name="address" class="inp" type="search" placeholder="주소를 검색하세요" title="주소검색">
+                                        </span>
+                                    </p>
+                                </li>
+                                
+                                <li class="li-address">
+                                    <button type="button" class="btn-form">다시검색</button>
+                                    <label for="address">주소검색</label>
+                                    <p class="input">
+
+                                        <span class="address-num">12347</span>
+                                        <span class="address-text">서울특별시 서초구 매헌로 16 (하이브랜드) 1518호</span>
+                                    </p>
+                                </li>
+
+                                <li>
+									<label for="user-hpnum" class="formlabel">휴대폰번호</label>
+									<p class="input flex">
+										<span class="select tel">
+											<select class="select-point">
+												<option value="SKT">SKT</option>
+												<option value="">KT</option>
+												<option value="">LGU+</option>
+												<option value="">알뜰 SKT</option>
+												<option value="">알뜰KT</option>
+												<option value="">알뜰 LGU+</option>
+											</select>
+										</span>
+										<span class="tel_number">
+											<input id="user-hpnum" name="user-hpnum" class="inp" type="tel" maxlength="11" placeholder="휴대폰번호를 입력하세요(-없이 입력)" title="휴대폰번호">
+											<!--<span>●●●●●●</span>-->
+										</span>
+									</p>
+								</li>
+
+                                <li class="">
+                                    <label for="" class="formlabel">이메일</label>
+                                    <p class="input">
+                                        <input id="" name="email" class="inp" type="text" title="이메일" pattern=".+@\." placeholder="이메일"  value="" required="">
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <label for="amount" class="formlabel">금액</label>
+                                    <p class="input amount">
+                                        <input id="amount" name="amount" class="inp amount-num" type="tel" title="금액" placeholder="금액을 입력해주세요." inputmode="numeric"><!--D: 금액 콤마 필요할 경우 inputmode="numeric"-->
+                                        <span>원</span>
+                                    </p>
+                                </li>
+                                
+                                <li class="select-wrap">
+                                    <p class="select-box" tabindex="1" id="div_WTCH_BKCD" onclick="openPopupUp('lySel');">
+                                        <label for="WTCH_BKCD">가나다라</label>
+                                        <span class="option" id="WTCH_BKNM">미선택</span>
+                                    </p>
+                                    <input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" class="validChk">
+                                </li>
+                                <li class="line-none">
+									<p class="exp-txt">출금 가능금액 : <span id="Acct_Amt">50,000,000원</span></p>
+								</li>
+                                <li class="select-wrap disabled">
+                                    <p class="select-box" tabindex="1" id="div_WTCH_BKCD" onclick="removeErr(this); biz.bank(wtchBankCallback);">
+                                        <label for="WTCH_BKCD">은행선택</label>
+                                        <span class="option" id="WTCH_BKNM">미선택</span>
+                                    </p>
+                                    <input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" class="validChk">
+                                </li>
+
+                                <li class="line-none">
+                                    <div class="info-txt-wrap">
+                                        <span class="info-mark">!</span>
+                                        <p class="info">가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사</p>
+                                    </div>
+                                    <!-- <p class="info-txt">계좌 해지 신청이 불가능해요222222222222222222222222222222222222222222222222222222</p> -->
+                                </li>
+                                <li class="select-wrap on">
+                                    <p class="select-box" tabindex="1" id="">
+                                        <label for="">1일 이체한도</label>
+                                        <span class="option" id=""><span>1,500,000</span>원</span>
+                                    </p>
+                                </li>
+                                <li class="select-wrap">
+                                    <p class="select-box" tabindex="1" id="div_WTCH_BKCD" onclick="removeErr(this); biz.bank(wtchBankCallback);">
+                                        <label for="WTCH_BKCD">은행선택</label>
+                                        <span class="option" id="WTCH_BKNM">미선택</span>
+                                    </p>
+                                    <input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" class="validChk">
+                                </li>
+
+                                <li class="select-wrap">
+                                    <p class="select-box" tabindex="1" id="div_WTCH_BKCD" onclick="removeErr(this); biz.bank(wtchBankCallback);">
+                                        <label for="WTCH_BKCD">은행선택</label>
+                                        <span class="option" id="WTCH_BKNM">미선택</span>
+                                    </p>
+                                    <input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" class="validChk">
+                                </li>
+                                <li class="select-wrap" id="div_WTCH_BKNM">
+                                    <p class="select-box" tabindex="1" id="div_WTCH_BKCD" onclick="removeErr(this); biz.bank(wtchBankCallback);">
+                                        <label for="WTCH_BKCD">은행선택</label>
+                                        <span class="option" id="WTCH_BKNM">미선택</span>
+                                    </p>
+                                    <input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" class="validChk">
+                                    <p class="info-txt">계좌 해지 신청이 불가능해요</p>
+                                </li>
+                                <li class="line-none">
+                                    <div class="info-txt-wrap">
+                                        <span class="info-mark">!</span>
+                                        <p class="info">계좌 해지 신청이 불가능해요</p>
+                                    </div>
+                                </li>
+
+                                <li class="select-wrap  type2 type-dd on">
+                                    <p id="rolldate2" class="select-box" tabindex="1">
+                                        <label for="">납입일</label>
+                                        <span class="option">23</span>
+                                    </p>
+                                </li>
+
+                                <li class="check-wrap">
+                                    <input type="checkbox" id="smsChk">
+                                    <label for="smsChk">
+                                        <span>만기 SMS 알림</span>
+                                        <p class="switch-btn">
+                                            <span class="off">OFF</span>
+                                            <span class="on">ON</span>
+                                            <span class="inside"></span>
+                                        </p>
+                                    </label>
+                                </li>
+                                <li class="line-none">
+                                    <div class="info-txt-wrap">
+                                        <span class="info-mark">!</span>
+                                        <p class="info">이미지(jpg, png, gif 등) 파일 또는 PDF 파일만 첨부 가능해요</p>
+                                    </div>
+                                    <div class="info-txt-wrap">
+                                        <span class="info-mark">!</span>
+                                        <p class="info">첨부파일은 10MB 이하만 등록이 가능해요</p>
+                                    </div>
+                                </li>
+                                <li class="check-wrap">
+                                    <input type="checkbox" id="check02">
+                                    <label for="check02">
+                                        <span>
+                                            출금중지설정
+                                            <!-- <div class="tooltip-wrap">
+                                                <a href="#none" class="tooltip-btn">?</a>
+                                                <div class="tooltip-txt">
+                                                    <p>
+                                                        출금중지설정을 ON으로<br>
+                                                        변경 시 해당계좌는 출금 및<br>
+                                                        이체가 불가능해요
+                                                    </p>
+                                                    <button type="button" class="tooltip-close">닫기</button>
+                                                </div>
+                                            </div> -->
+                                        </span>
+                                        <p class="switch-btn">
+                                            <span class="off">OFF</span>
+                                            <span class="on">ON</span>
+                                            <span class="inside"></spa>
+                                        </p>
+                                    </label>
+                                </li>
+                                <li class="line-none">
+                                    <div class="info-txt-wrap">
+                                        <span class="info-mark">!</span>
+                                        <p class="info">가나다라마바사</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!--금액입력 totobank style1-->
+                        <div class="form-cont">
+                            <div class="tit-area">
+                                <h3>가입금액</h3>
+                            </div>
+                            <ul class="li-input">
+                                <li class="btn-cont">
+                                    <ul class="btn-item col05">
+                                        <li><button type="button" class="btn btn-white">1만</button></li>
+                                        <li><button type="button" class="btn btn-white">3만</button></li>
+                                        <li><button type="button" class="btn btn-white">5만</button></li>
+                                        <li><button type="button" class="btn btn-white">10만</button></li>
+                                        <li><button type="button" class="btn btn-white">100만</button></li>
+                                    </ul>
+                                </li>
+                                <li class="label-none">
+                                    <label for="user_name" class="formlabel">가입금액</label>
+                                    <p class="input amount">
+                                        <input id="amount" name="amount" class="inp amount-num" type="tel" title="금액" placeholder="가입금액을 입력해주세요." inputmode="numeric">
+                                        <span>만원</span>
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="info-txt-wrap">
+                                <span class="info-mark">!</span>
+                                <p class="info">가나다라마바사</p>
+                            </div>
+                        </div>
+                        <!--//금액입력 totobank style1-->
+
+                        <!--금액입력 totobank style1-1-->
+                        <div class="form-cont">
+                            <div class="tit-area">
+                                <h3>가입금액</h3>
+                            </div>
+                            <ul class="li-input">
+                                <li class="label-none line">
+                                    <label for="user_name" class="formlabel">가입금액</label>
+                                    <p class="input amount">
+                                        <input id="amount" name="amount" class="inp amount-num" type="tel" title="금액" placeholder="가입금액을 입력해주세요." numberonly inputmode="numeric">
+                                        <span>만원</span>
+                                    </p>
+                                </li>
+                                <li class="btn-cont">
+                                    <ul class="btn-item col05">
+                                        <li><button type="button" class="btn btn-white">1만</button></li>
+                                        <li><button type="button" class="btn btn-white">3만</button></li>
+                                        <li><button type="button" class="btn btn-white">5만</button></li>
+                                        <li><button type="button" class="btn btn-white">10만</button></li>
+                                        <li><button type="button" class="btn btn-white">100만</button></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="info-txt-wrap">
+                                <span class="info-mark">!</span>
+                                <p class="info">가나다라마바사</p>
+                            </div>
+                        </div>
+                        <!--//금액입력 totobank style1-1-->
+
+                        <!--금액입력 style2-->
+                        <!-- <div class="form-cont">
+                            <div class="form-wrap type2">
+                                <label for="TRNF_AMT">이체금액</label>
+                                <div class="input">
+                                    <input type="tel" title="" class="validChk" id="TRNF_AMT" name="TRNF_AMT" value="" placeholder="이체금액을 입력해주세요." maxlength="12" required="" numberonly="">
+                                    <div class="value-wrap">
+                                        <strong class="value TRNF_AMT">0</strong>
+                                        <span class="unit">원</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inquiry-set-wrap">
+                                <div class="type-area">
+                                    <ul class="radio-list style-button">
+                                        <li><button type="button" onclick="incrsAmt(this, 10000);">1만</button></li>
+                                        <li><button type="button" onclick="incrsAmt(this, 50000);">5만</button></li>
+                                        <li><button type="button" onclick="incrsAmt(this, 100000);">10만</button></li>
+                                        <li><button type="button" onclick="incrsAmt(this, 1000000);">100만</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info-txt-wrap">
+                                <span class="info-mark">!</span>
+                                <p class="info">가나다라마바사</p>
+                            </div>
+                        </div> -->
+                        <!--//금액입력 style2-->
+
+                    </section>
+
+                    <section>
+                        <div class="arrow-button-wrap">
+                            <ul class="arrow-button-list">
+                                <li><a href="#none" onclick="goTrnHist()">거래내역</a></li>
+                                <li><a href="#none" onclick="goRpyList()">상환일정조회</a></li>
+                                <li><a href="#none" onclick="goIntrWthd()">이자(원리금)즉시출금요청</a></li>
+                                <li><a href="#none" onclick="openPopup('lyPullPop01')">유의사항</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <section>
+
+                        <div class="tit-wrap">
+                            <p class="txt"><strong>사고신고 내역조회</strong></p>
+                        </div>
+
+                        <div class="txt-list-wrap">
+
+                            <div class="txt-detail-area">
+                                <div class="txt-detail-tit">
+                                    <strong>e-정기예금 단리</strong><span><em class="flag style4">통합분실</em></span>
+                                </div>
+                                <ul class="txt-list">
+                                    <li>
+                                        <span class="tit">계좌번호</span>
+                                        <span class="txt" id="OTP_VNDR_CD">12324-123-1234-12</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">신고일</span>
+                                        <span class="txt" id="OTP_SRNO1">2023.06.08</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="txt-detail-area">
+                                <div class="txt-detail-tit">
+                                    <strong>보고파 정기적금</strong><span><em class="flag style4">인감분실</em></span>
+                                </div>
+                                <ul class="txt-list">
+                                    <li>
+                                        <span class="tit">계좌번호</span>
+                                        <span class="txt" id="OTP_VNDR_CD">12324-123-1234-12</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">신고일</span>
+                                        <span class="txt" id="OTP_SRNO1">2023.06.08</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="txt-detail-area">
+                                <div class="txt-detail-tit">
+                                    <strong>보고파 정기적금</strong><span><em class="flag style4">인감분실</em></span>
+                                </div>
+                                <ul class="txt-list">
+                                    <li>
+                                        <span class="tit">계좌번호</span>
+                                        <span class="txt" id="OTP_VNDR_CD">12324-123-1234-12</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">신고일</span>
+                                        <span class="txt" id="OTP_SRNO1">2023.06.08</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    
+                    <section>
+                        <div class="list-bull type-caption">
+                            <strong>알아두세요</strong>
+                            <ul>
+                                <li>고려저축은li계좌를 개설하실 때 가입하신 전자금융 아이디를 입력해주세요</li>
+                                <li>비밀번호를 다섯 번 잘못 입력하실 경우 비밀번호 오류를 해제 하셔야해요</li>
+                                <li>아이디가 기억나지 않으실 경우 본인인증을 통해서도로그인이 가능해요</li>
+                            </ul>
+                        </div>
+                        <div class="list-bull type-caption has-border">
+                            <strong>알아두세요</strong>
+                            <ul>
+                                <li>매달 정해진 날짜에 납입하시는 정액식 정기적금에 한하여 납입일을 변경하실 수 있어요<lid>
+                                <li>자동이체 또는 CMS설정 계좌의 경우 정상적으로 이체되지 않아 연체가 발생될 수 있으니 창구로 내방하시어 처리해 주세요</li>
+                                <li>납입일 변경 시에는 변경 납입일 만큼 만기일이 뒤로 밀려날 수 있어요</li>
+                                <li>납입일 변경 시점에 따라 만기일이 한 달 이상 늦춰질 수 있으니 현재 납입일 이전 일자로는 변경하실 수 없어요</li>
+                                <li>현재 납입일이 (D)일인 경우(D+1)일부터 해당 월의 말일까지가능해요</li>
+                                <li>예: 납입일이 (10)일인 경우 (11)일부터 해당 월의 말일 (30 또는 31일, 2월의 경우 해당월의 말일)까지만 가능해요</l>
+                            </ul>
+                        </div>
+                        <div class="list-bull">
+							<ul>
+								<li>계속 거래중이며, 해지하면 재산상 불이익이 발생하는 금융상품 중 다음을 제외한 경우</li>
+								<li class="hyphen">'온라인 투자 연계 금융업 및 이용자보호에 관한 법률'에 따른 온라인 투자 연계 금융 업자와 체결하는 계약</li>
+								<li class="hyphen">'온라인 투자 연계 금융업 및 이용자보호에 관한 법률'에 따른 온라인 투자 연계 금융 업자와 체결하는 계약</li>
+							</ul>
+						</div>
+
+                        <div class="list-bull">
+                            <ul>
+                                <li>가입 상품의 계약 체결을 위한 사실을 안 날로부터 1년 이내</li>
+                                <li class="num">
+                                    <em>①</em>단, 5년 이내 계약한 상품만 위법계약해지 신청이 가능해요
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sub-tit-wrap">
+                            <p class="tit">이자 지급 시기 및 방법</p>
+                            <div class="list-bull type-large bg-box">
+                                <ul>
+                                    <li class="num"><em>1.</em>예금일로부터 지급일 전날 또는 결산 기준일까지를 매일의 잔액을 기준으로 고려저축은행에서 게재한 잔액별 이율을 적용하여 계산</li>
+                                    <li class="num"><em>2.</em>매월 셋째주 토요일을 <strong>결산기준일로</strong> 하여 다음날 원금에 가산</li>
+                                    <li class="num over">
+                                        <em>10.</em>
+                                        인터넷 금융거래에 이용되는 PC에 백신 프로그램을 설치하여 실행함으로써 해킹 등의 보안 침해사고에 대비할 것
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- <div class="sub-tit-wrap">
+							<p class="tit">이자 지급 시기 및 방법</p>
+							<div class="list-bull type-large num bg-box">
+								<ul class="">
+									<li>
+										<em>1.</em>
+										예금일로부터 지급일 전날 또는 결산 기준일까지를 매일의 잔액을 기준으로 고려저축은행에서 게재한 잔액별 이율을 적용하여 계산
+									</li>
+									<li>
+										<em>2.</em>
+										매월 셋째주 토요일을 결산기준일로 하여 다음날 원금에 가산
+									</li>
+								</ul>
+							</div>
+						</div> -->
+                    </section>
+                </div>
+            </form>
+        </div>
+        <!-- contents// -->
+
+        <!-- //fixed-btn-wrap -->
+		<div class="fixed-btn-wrap">
+			<div class="btn-wrap">
+				<a href="javascript:void(0);" class="btn" id="procBtn" onclick="PageFunc.validate();">다음</a><!-- [퍼블] 클래스 변경 -->
+			</div>
+			<a href="#none" class="btn-txt" onclick="PageFunc.cancel();">그만하기</a>
+		</div>
+        <!-- fixed-btn-wrap// -->
+    </div>
+	<!-- contentsWrap// -->
+
+
+    <div id="lySel" class="layerpopup layer-up show" style=""><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+		<div class="content-wrap">
+			<div class="pop-header">
+				<h2 class="pop-title">가나다라</h2>
+				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+			</div>
+			<div class="ly-scroll-con ly-select">
+				<ul class="ly-select-list">
+					<li><button>가가가가</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+					<li><button>나나나나</button></li>
+					<li><button>나나나나</button></li>
+					<li><button>나나나나</button></li>
+					<li><button>나나나나</button></li>
+					<li><button>나나나나</button></li>
+					<li><button>나나나나</button></li>
+					<li><button>나나나나</button></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+    <!-- <div id="lyPullPop01" class="layerpopup laypop-all on" tabindex="0" data-focus-prev="btn-menu-close" style="">
+		<div class="pop-header">
+			<h2 class="pop-title">공동인증서 사용 유의사항</h2>
+			<button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyPullPop01')">닫기</button>
+		</div>
+		<div class="pop-con-wrap">
+			<div class="default-wrap">
+			
+					<ul class="list-bull">
+						<li>인증서는 PC, 인터넷 이메일에 보관하지 마시고 <span class="point-red">이동식 저장장치에 저장</span>하여 사용하는 것이 안전하고 편리해요</li>
+						<li><span class="point-red">전자금융거래 이용에 필요한 정보가 제3자에게 유출되는 것을 방지</span>하고, 사고를 사전에 예방하기 위해 아래의 10개 사항을 유념해주세요</li>
+					</ul>
+					<ul class="list-bull num">
+						<li><em>①</em>USB나 스마트카드 등 <span class="point-red">이동성 저장장치</span>에 인증서 저장</li>
+						<li><em>②</em>인증서 유출이 의심되면 <span class="point-red">즉시 폐기하고 재발급</span></li>
+						<li><em>③</em>금융계좌 이메일과 인증서 <span class="point-red">비밀번호를 다르게</span> 설정</li>
+						<li><em>④</em>금융회사에서 제공하는 <span class="point-red">보안프로그램 설치</span></li>
+						<li><em>⑤</em>비밀번호는 <span class="point-red">주기적으로 변경</span><p></p></li>
+						<li><em>⑥</em>PC방 등 공공장소에서는 <span class="point-red">사용 자제하고 양도 금지</span></li>
+						<li><em>⑦</em>거래내역 알려주는 <span class="point-red">휴대전화 문자서비스</span> 이용</li>
+						<li><em>⑧</em>금융거래 사이트는 <span class="point-red">즐겨찾기</span>에 저장</li>
+						<li><em>⑨</em>의심되는 이메일이나 게시판은 <span class="point-red">클릭 금지</span></li>
+						<li><em>⑩</em><span class="point-red">바이러스 백신과 윈도우 보안패치 업그레이드</span></li>
+					</ul>
+			</div>
+		</div>
+	</div> -->
+
+
+<footer>
+<!-- 푸터 타입별 정의 -->
+</footer>
+<script>
+    //totobank
+	// const input = document.querySelector('input#amount');
+	// input.addEventListener('keyup', function (e) {
+	//   var value = e.target.value;
+	//   value = Number(value.replaceAll(',', ''));
+	//   if (isNaN(value)) {
+	// 	input.value = 0;
+	//   } else {
+	// 	const formatValue = value.toLocaleString('ko-KR');
+	// 	input.value = formatValue;
+	//   }
+	// });
+ 
+</script>
+
+
+</body>
+</html>
