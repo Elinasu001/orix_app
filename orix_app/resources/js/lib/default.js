@@ -61,26 +61,45 @@ $(document).ready(function() {
     var dmTotalNum	= $(".level3 .check").length;
     var dmCheckNum = $(".level3 .check:checked").length;
     
-    // terms-pop 약관 팝업
+    // /*s : 2023-11-27 추가**/
     // var terms_id = $(this).attr('terms-pop');
     // $(".layerpopup").removeClass('on');
     // $("#"+terms_id).addClass('on');
-    // $('body').css("overflow", "auto");
-    $(".check").on("change", function() {
-      var popupID = $(this).attr("terms-pop"); // Get the ID of the associated popup
-      var isChecked = $(this).is(":checked"); // Check if the checkbox is checked
+    // $('body').css("overflow", "hidden");
+    // /*e : 2023-11-27 추가**/
     
-      if (isChecked) {
-        $("#" + popupID).show(); // Show the associated popup when the checkbox is checked
-      } else {
-        $("#" + popupID).hide(); // Hide the associated popup when the checkbox is unchecked
-      }
-    });
+    /*s : 2023-12-12 추가*/
+    var terms_id = $(this).attr("terms-pop"); // Get the ID of the clicked element
+    $("#" + terms_id).show(); // Show the associated popup with the same ID when the element is clicked
+  
+
+    $(".layerpopup .btn.btn.btn-primary").on("click", function() {
+      var popup = $(this).closest('.layerpopup');
+      var popupID = popup.attr("id"); // Get the ID of the popup
     
-    $(".btn-layer-close").on("click", function() {
-      $(this).closest('.layerpopup').hide(); // Hide the closest popup when the close button is clicked
+      // Extract the terms-pop function ID from the popup ID
+      var termsPopID = popupID.replace("-popup", "");
+    
+      // Check the associated checkbox for the terms-pop function
+      $("[terms-pop='" + termsPopID + "']").prop("checked", true);
+
+      popup.hide();
     });
 
+    $(".btn-layer-close").on("click", function() {
+      var popup = $(this).closest('.layerpopup');
+      var popupID = popup.attr("id"); // Get the ID of the popup
+    
+      // Extract the terms-pop function ID from the popup ID
+      var termsPopID = popupID.replace("-popup", "");
+    
+      // Check the associated checkbox for the terms-pop function
+      $("[terms-pop='" + termsPopID + "']").prop("checked", false);
+
+      popup.hide();
+    });
+    /*e : 2023-12-12 추가*/
+    
     if (!$(this).parent().parent('div.level3').hasClass('etc')) {
       //약관 개별동의
       if (totalNum == checkNum) {
