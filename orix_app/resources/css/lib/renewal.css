@@ -87,7 +87,7 @@ svg { vertical-align:middle; border-style:none; }
 table { border-collapse:collapse; }
 button { border-radius:0; }
 .line { border: 1px solid #ced4da; border-radius:5px; background-color: #fff; padding:10px; }
-
+.type-spread { margin:0 -20px; }
 
 /* flex */
 .form-row { display:-ms-flexbox; display:flex; -ms-flex-wrap:wrap; flex-wrap:wrap;  /*margin-right:-5px; margin-left:-5px;*/ width:100%; }
