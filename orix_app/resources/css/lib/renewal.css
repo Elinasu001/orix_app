@@ -81,7 +81,7 @@ label { display: inline-block; font-size:0.875rem; line-height:1rem; color:#7575
 .dp-none { display:none; }
 legend, caption{width:0; height:0; text-indent:-10000px; font-size:0; line-height:0; position:absolute; left:-99999px; }
 table{/*border-collapse:collapse;*/ border-spacing:0; width:100%}
-a { /* color: #007bff; */ color:#495057; text-decoration:none; background-color:transparent; }
+a { /* color: #007bff; */ color:#B2B2B2; text-decoration:none; background-color:transparent; }
 img,
 svg { vertical-align:middle; border-style:none; }
 table { border-collapse:collapse; }
@@ -188,7 +188,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /** input **/
 .form-wrap .form-group:first-child { margin-top:40px; }
 .form-group .form-tit { display:inline-block; margin-bottom:10px; color:#757575; font-size:0.89rem; font-weight:400;}
-.form-group { margin-bottom:20px; }
+.form-group + .form-group { margin-top:20px; }
 .form-group label { margin-bottom:10px; }
 /* .form-group label { display:none; } */
 .form-control { display:block; width:100%; min-height:44px; /*height:calc(2.25rem + 2px);*/ padding:4px 7px; font-size:0.875rem; line-height:1rem; font-weight:400; color:#B2B2B2; background-color: #fff;  background-clip: padding-box; border: 1px solid #E2E2E2; border-radius:5px; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
@@ -210,18 +210,9 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .input-group { position:relative; display:-ms-flexbox; display:flex; -ms-flex-wrap:wrap; flex-wrap:wrap; -ms-flex-align:stretch; align-items:stretch; width:100%; }
 .input-group > .form-control { position:relative; -ms-flex:1 1 auto; flex:1 1 auto; width:1%; margin-bottom:0; }
 .input-group > .form-control + .form-control{ margin-left:-1px; }
-/* .input-group > .form-control:not(:last-child) { border-top-right-radius:0; border-bottom-right-radius:0; } */
 .input-group > .form-control:focus {   z-index:3; }
 
 .input-group-prepend { margin-right:-1px; }
-
-/* .input-group > .input-group-append > .btn,
-.input-group > .input-group-prepend:not(:first-child) > .btn,
-.input-group > .input-group-prepend:first-child > .btn:not(:first-child) { border-top-left-radius:0; border-bottom-left-radius:0; }
-.input-group > .input-group-prepend > .btn,
-.input-group > .input-group-append:not(:last-child) > .btn,
-.input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle) { border-top-right-radius:0; border-bottom-right-radius:0; } */
-
 .input-group-prepend .btn,
 .input-group-append .btn { position:relative; z-index:2; }
 .input-group-prepend .btn:focus,
@@ -239,18 +230,14 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .amount .amount-num + .amount-txt { position:absolute; right:15px; top:50%; transform:translate(0, -50%); font-size:1rem; font-weight:600; }
 
 /* address */
-/* .input,.input.select { display:block; width:100%; height:100%; padding: 4px 7px; font-size:1rem; font-weight:400; line-height:1; color:#495057; background-color:#fff; background-clip:padding-box; border:1px solid #ced4da; border-radius:0.25rem; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; } */
 .input span { display:block; }
 .form-group.address .input { width:100%; }
 .form-group > .input { position:relative; -ms-flex: 1 1 auto; flex: 1 1 auto; width:1%; /*margin-bottom:0;*/ }
 .input .address-num { font-weight:500; margin-top:10px; margin-bottom:20px; }
 .input .address-text {  }
-/* .input-group.address .form-control { border-right:0; } */
-/* .input-group.address input:focus, */
-/* .input-group.address input:focus { border: 1px solid #ced4da; } */
 
 /*input-hyphen*/
-.input-hyphen { display:flex; width:20px; align-items:center; justify-content: center; }
+.input-hyphen { display:flex; width:10px; align-items:center; justify-content: center; }
 
 /** select **/
 /* select *//* ::after로 화살표 지정 안됨 option 박스 안열림 */
@@ -261,51 +248,55 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 select { -webkit-appearance:none; /* for chrome */ -moz-appearance:none; /*for firefox*/ appearance:none; }
 select::-ms-expand{ display:none;/*for IE10,11*/ }
 select,
-.select { background:url(../../images/common/arrow_select.png)no-repeat 98%/16px auto; }
+.select { background:url(../../images/common/svg/ico_select.svg)no-repeat 98%/16px auto; }
 
-/* custom-check [table] */
+
+/** [table] custom-check label 없는 경우 **/
 input[type="checkbox"].custom-check { display:none; }
 input[type="checkbox"].custom-check + label { display:inline-block;   position:relative; width:20px; height:20px; border:2px solid #E2E2E2; border-radius:5px; vertical-align: middle; }
-input[type="checkbox"]:checked.custom-check + label {  border:0;  }
+input[type="checkbox"]:checked.custom-check + label {  border:0; }
 input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"✓";  position:absolute; top:0; left:0px; font-size:0.68rem; font-weight:600; width:20px; height:20px; border:2px solid #B095DC; border-radius:5px; color:#FFFFFF; background-color:#B095DC; text-align:center; /*background:url(../../../resources/images/common/ic-checkmark-on.png)no-repeat center 100%/16px auto;*/ }
 
-/* custom-check label 필요한 경우 */
 
-/* radio-cutom */
-/* absolute 필요 없는 경우 */
-/* .form-group.radio-custom label { display:inline-block; }
-.form-group.radio-custom [type="radio"], span { vertical-align:middle; }
-.form-group.radio-custom [type="radio"] { appearance:none; border:2px solid #E2E2E2; border-radius:50%; width:20px; height:20px; transition:border 0.2s; }
-.form-group.radio-custom [type="radio"]:checked { border: 1px solid #B095DC; background-color:#B095DC; }
-.form-group.radio-custom  [type="radio"]:disabled { background-color: #CED0D6;  box-shadow: none; opacity: 0.7; cursor: not-allowed; }
-.form-group.radio-custom [type="radio"]:disabled + span { opacity: 0.7;  cursor: not-allowed; } */
+/** ratio/checkbox label 필요한 경우 **/
 
-/* custom-radio  absolute 필요 */
-.form-group.radio-buttons label { display:inline-block; }
+/* ratio/checkbox absolute 필요 */
 
-.radio-buttons {  display:flex; align-items:center;  }
-.radio-buttons .radio-button { cursor:pointer; position:relative; padding-left:30px; line-height:1.25rem; }
+.radio-buttons,
+.check-buttons {  display:flex; align-items:center; flex-wrap: wrap; }
+.radio-buttons .radio-button,
+.check-buttons .check-button { cursor:pointer; position:relative; padding-left:30px; line-height:1.25rem; }
 
-/* 기존 라디오 버튼 삭제 */
-.radio-button input[type="radio"] {  position:absolute;  opacity:0; height:0; width:0; }
+.radio-button,
+.check-button{ margin-right:30px; }
 
-/* 커스텀 라디오 버튼, 외부 원 (border 처리) */
-.radio-buttons .radio-button .custom-radio { position:absolute; top:0; left:0; height:20px; width:20px; border-radius:50%; background-color:#FFFFFF; border:1px solid #E2E2E2; }
+/* 기존 ratio/checkbox 버튼 삭제 */
+.radio-button input[type="radio"],
+.check-button input[type="checkbox"] {  position:absolute; left:0; opacity:0; height:0; width:0; }
 
-/* 라디오 버튼 선택 시 배경 색상 변경, 외부 원 (border 처리) */
-.radio-buttons .radio-button input[type="radio"]:checked ~ .custom-radio { border:1px solid #B095DC; }
+/* ratio/checkbox checked 안됐을 경우 */
+.radio-buttons .radio-button .custom-radio,
+.check-buttons .check-button .custom-check  { position:absolute; top:0; left:0; height:20px; width:20px; background-color:#FFFFFF; border:1px solid #E2E2E2; }
+.radio-buttons .radio-button .custom-radio {  border-radius:50%; }
+.check-buttons .check-button .custom-check {  border-radius:5px; }
 
-/* 라디오 버튼, 내부 원 */
 .radio-buttons .custom-radio:after { content:""; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:10px; height:10px; border-radius:50%; background:#E2E2E2;}
+.check-buttons .custom-check:after { content:"✓"; position:absolute; top:18%; left:50%; transform:translate( -50%, -50%); width:10px; height:10px; color: #E2E2E2; }
 
-/* 라디오 버튼 선택 시 색상 변경, 내부 원 */
+/* ratio/checkbox checked 됐을 경우 */
+.radio-buttons .radio-button input[type="radio"]:checked ~ .custom-radio,
+.check-buttons .check-button input[type="checkbox"]:checked ~ .custom-check  { border:1px solid #B095DC; }
+
 .radio-buttons .radio-button input[type="radio"]:checked ~ .custom-radio:after { background-color: #B095DC; }
 
+.check-buttons .check-button input[type="checkbox"]:checked ~ .custom-check  { background-color: #B095DC; }
+.check-buttons .check-button input[type="checkbox"]:checked ~ .custom-check:after { color:#FFFFFF;  }
 
 /* info */
 .info-txt-wrap { display:flex; margin-top:10px;}
 .info-txt-wrap .info-mark { display:flex; align-items:center; justify-content:center;  margin-right:5px; padding:8px; width:16px; height:17px; border:1px solid #038297; border-radius:50%; color:#038297; font-size:0.66667rem; font-weight:bold; text-align:center; }
 .info-txt-wrap .info {  margin:0; font-weight:300; color:#757575; font-size:0.77778rem; word-break:normal; }
+
 
 /** popup **/
 

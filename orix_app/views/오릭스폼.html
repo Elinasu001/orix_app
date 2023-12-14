@@ -90,6 +90,31 @@
                             </div>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <!-- <div class="form-tit">휴폰폰 번호2</div> -->
+                        <label for="user_resi_number">휴폰폰 번호2</label>
+                        <div class="form-row" id="user_resi_number">
+                            <div class="col-3">
+                                <div class="form-control select"  onclick="openPopupUp('lySel')"  tabindex="0">
+                                    <a href="#none" tabindex="-1"><span>통신사</span></a>
+                                </div>
+                            </div>
+                            <div class="input-hyphen"></div>
+                            <div class="col">
+                                <input id="user_phone" type="tel" name="phone" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력" inputmode="tel">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user_phone">휴대폰 번호</label>
+                        <div class="form-control select"  onclick="openPopupUp('lySel')"  tabindex="0">
+                            <a href="#none" tabindex="-1"><span>통신사 선택</span></a>
+                        </div>
+                        <input id="user_phone" type="tel" name="phone" class="form-control" maxlength="11"
+                            placeholder="- 없이 숫자만 입력" inputmode="tel"><!--휴대폰 번호 : type="tel"/ inputmode="tel"-->
+                    </div>
+
                     <!--하단 팝업으로 올라오게 만듦 : why? 모바일 환경의 기본 컨트롤들은 시스템 내장 UI들이므로 오버레이로 뜨는 선택 창 이것은 고칠 수가 없음, 커스텀을 할 경우 개발에 불편함. ui 페이지 소스 크기가 커서 좋은 웹사이트를 만들 수 없음. select 태그를 쓰되 자바스크립트가 이 태그를 찾아 치환 해주는 프레임 워크든 라이브러리를 사용하면 되지만 option 대체 방법이 쉬운 편은 아님-->
                     <!-- <div class="form-group">
                         <div class="mb-2">
@@ -109,14 +134,7 @@
                         </div>
                     </div> -->
 
-                    <div class="form-group">
-                        <label for="user_phone">휴대폰 번호</label>
-                        <div class="form-control select"  onclick="openPopupUp('lySel')"  tabindex="0">
-                            <a href="#none" tabindex="-1"><span>통신사 선택</span></a>
-                        </div>
-                        <input id="user_phone" type="tel" name="phone" class="form-control" maxlength="11"
-                            placeholder="- 없이 숫자만 입력" inputmode="tel"><!--휴대폰 번호 : type="tel"/ inputmode="tel"-->
-                    </div>
+                    
 
                     <div class="form-group">
                         <label for="user-email">이메일</label>
@@ -151,6 +169,26 @@
                             <span class="amount-txt">원</span>
                         </div>
                     </div>
+
+
+                    <div class="form-group">
+                        <!-- <label for="search">신용조회 동의완료 고객 선택</label> -->
+                        <div class="input-group">
+                            <input type="text" id="search" class="form-control" placeholder="신용조회 동의완료 고객 선택" aria-label="Search Addresses" aria-describedby="user-search" inputmode="search" disabled=""><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
+                            <button class="btn btn-txt-search outline-secondary" type="button">검색</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-tit">모델로 조회</div>
+                        <div class="input-group">
+                            <div class="form-control select" tabindex="0" onclick="openPopupUp('lySel')">
+                                <a href="#none" tabindex="-1"><span>제조사 선택</span></a>
+                            </div>
+                            <button class="btn btn-txt-search outline-secondary" type="button">검색</button>
+                        </div>
+                    </div>
+
                     <!-- //디자인 보고 다시 만들기 필요 -->
                     <div class="form-group">
                         <label for="search">주소 검색</label>
@@ -239,21 +277,38 @@
                 
                 <section class="form-wrap">
                     <div class="form-group radio-buttons">
-                        <label for="term-1" class="radio-button">1학기
-                            <input type="radio" id="term-1" name="terms">
+                        <label for="radio-1" class="radio-button">1학기
+                            <input type="radio" id="radio-1" name="terms">
                             <span class="custom-radio"></span>
                         </label>
-                        <label for="term-2" class="radio-button">2학기
-                            <input type="radio" id="term-2" name="terms">
+                        <label for="radio-2" class="radio-button">2학기
+                            <input type="radio" id="radio-2" name="terms">
                             <span class="custom-radio"></span>
                         </label>
-                        <label for="term-3" class="radio-button">추가학기
-                            <input type="radio" id="term-3" name="terms">
+                        <label for="radio-3" class="radio-button">추가학기
+                            <input type="radio" id="radio-3" name="terms">
                             <span class="custom-radio"></span>
                         </label>
                     </div>
                 </section>
                 
+                <section class="form-wrap">
+                    <div class="form-group check-buttons">
+                        <label for="check-1" class="check-button">1학기
+                            <input type="checkbox" id="check-1" name="terms">
+                            <span class="custom-check"></span>
+                        </label>
+                        <label for="check-2" class="check-button">2학기
+                            <input type="checkbox" id="check-2" name="terms">
+                            <span class="custom-check"></span>
+                        </label>
+                        <label for="check-3" class="check-button">추가학기
+                            <input type="checkbox" id="check-3" name="terms">
+                            <span class="custom-check"></span>
+                        </label>
+                    </div>
+                </section>
+
                 <section class="fixed-btn-wrap">
                     <div class="btn-wrap">
                         <button type="button" class="btn btn-primary">다음</button>
