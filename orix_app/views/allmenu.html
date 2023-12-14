@@ -28,7 +28,7 @@
 	<!-- <link href="../resources/css/lib/swiper-bundle.min.css" rel="stylesheet" /> -->
 
     <link rel="stylesheet" href="../resources/css/lib/renewal.css">
-    <!-- <link rel="stylesheet" href="../resources/css/lib/default.css"> -->
+    <link rel="stylesheet" href="../resources/css/lib/default.css">
     
 	<script type="text/javascript" src="../resources/js/lib/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
@@ -269,7 +269,7 @@
 					</div>
 				</div>
 
-				<div class="all-menu-header log-in">
+				<!-- <div class="all-menu-header log-in">
 					<a  href="#none"><span><b>김고려</b>님</span> 반가워요!</a>
 					<div>
 						<a onclick="" class="btn-mypage">마이페이지</a>
@@ -277,10 +277,16 @@
 						<a onclick="" class="btn-option">설정</a>
 						<a onclick="" class="btn-menu-close">닫기</a>
 					</div>
-				</div>
+				</div> -->
 				
 			</div>
-			<div></div>
+			<div class="login-wrap menu">
+				<div class="login-tit user-m-img">
+					<p class="tit"><strong>안녕하세요,홍길동님!</strong></p>
+					<p class="text">리스크관리팀</p>
+				</div>
+				<button class="btn logout-text" type="button">로그아웃</button>
+			</div>
 		</div>
 		<div class="top-menu">
 			<ul class="top-icon">
@@ -637,7 +643,6 @@
 .layerpopup.laypop-all .pop-header.none-bor { border-bottom:0; }
 .gnb-tit { font-weight:bold; color:#333; }
 
-
 .listmenu-box { margin:40px 0; }
 .listmenu-box.all > ul { margin-bottom:50px; }
 .listmenu-box > ul { margin-bottom:20px; }
@@ -645,31 +650,16 @@
 .listmenu-box > ul > li > a { display:inline-block; position:relative; width:100%; padding:10px 0; color:#333333; font-size:0.9rem; }
 .listmenu-box > ul > li > a::after { content:''; display:inline-block; width:20px; height:20px; background:url("../resources/images/common/ic-arrow-right.png") center center no-repeat; position:absolute; right:0; top:50%; transform:translate(0, -50%); background-size:100%; }
 
-.tab-slidemenu.bg-bor { overflow:hidden; border-top:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; }
-.tab-slidemenu.bg-bor ul {display:flex; justify-content: space-between; width:100%; overflow-y:hidden; overflow-x:auto; white-space:nowrap; padding:16px 20px; }
-.tab-slidemenu.bg-bor li { display:inline-block; margin-right:10px; }
-.tab-slidemenu.bg-bor li a { z-index:1; position:relative; font-size:0.875rem; line-height:1rem; color:#3B3B3B; }
-.tab-slidemenu.bg-bor li a:before { z-index:-1; content:""; position:absolute; border:3px solid #E7F0F5;  width:100%; height:3px; bottom:0; }
-
-
-
-
 /****전체메뉴****/
-.wrap { overflow-y:hidden; height:100%; }
 
-.menuWrap { position:fixed; left:0; top:0; z-index:100; width:100%; height:100%; overflow:hidden; background:#fff; }
-.all-menu-wrap { width:100%; height:100%; }
-.all-menu-wrap > div { width:100%; }
-.all-menu-info {  }
-.all-menu-info { background:#B095DC; padding:0 20px 20px;}
-.all-menu-area { display:flex; flex:1; height:100%; overflow:hidden; padding:0; -webkit-overflow-scrolling:touch;  }
-
-
+/* 주석 */
 .all-menu-header { width:100%; height:60px; line-height:60px; }
 .all-menu-header >  a { color:#FFFFFF; }
 .all-menu-header > div { display:inline-block; float:right; height:100%; }
 .all-menu-header > div > a { display:inline-block; float:left; width:40px; height:100%; font-size:0; }
-.all-menu-header .btn-mypage { background:url('../resources/images/common/ico-menubar-home.png')right center no-repeat; background-size:24px; } 
+
+/* s 주석 */
+/* .all-menu-header .btn-mypage { background:url('../resources/images/common/ico-menubar-home.png')right center no-repeat; background-size:24px; } 
 .all-menu-header .btn-home { background:url('../resources/images/common/ico-menubar-home.png')right center no-repeat; background-size:24px; } 
 .all-menu-header .btn-option { background:url('../resources/images/common/ico-menubar-setting.png')right center no-repeat; background-size:24px; }
 .all-menu-header .btn-menu-close { background:url('../resources/images/common/ico-menubar-close.png')right center no-repeat; background-size:24px; }
@@ -679,17 +669,8 @@
 .all-menu-header.log-in > a { color:#B3ADC1; font-weight:normal; }
 .all-menu-header.log-in > a > span { color:#fff; }
 .all-menu-header.log-out > a { display:inline-block; position:relative; float:left; height:100%; padding-right:25px; font-size:0.9rem; font-weight:bold; color:#fff; }
-.all-menu-header.log-out > a::after { content:''; position:absolute; right:0; top:50%; transform:translate(0, -50%); display:inline-block; width:24px; height:24px; background:url('../resources/images/common/ic-arrow-right.png')center no-repeat; background-size:100%; }
-
-
-.top-menu .top-icon { display:flex; flex-direction:row; justify-content:space-between; width:100%; padding:20px 0; text-align:center;  }
-.top-menu .top-icon li { position:relative;  width:100%; padding-top:55px;  }
-.top-menu .top-icon li > a { display:flex; justify-content:center; color:#333333; font-size:0.75rem;  line-height:0.875rem; }
-.top-menu .top-icon li > a::before { content:''; display:inline-block; position:absolute; top:0; width:40px; height:40px; border-radius:50%; }
-.top-menu .top-icon li.alarm > a::before { background: url('../resources/images/common/ico_alarm.png')no-repeat #F4F4F4 50%/26px auto; }
-.top-menu .top-icon li.loanProgress > a::before { background: url('../resources/images/common/ico_loanProgress.png')no-repeat #F4F4F4 50%/26px auto;  }
-.top-menu .top-icon li.doorSales > a::before { background: url('../resources/images/common/ico_doorSales.png')no-repeat #F4F4F4 50%/26px auto; }
-.top-menu .top-icon li.settlement > a::before { background: url('../resources/images/common/ico_settlement.png')no-repeat #F4F4F4 50%/26px auto; }
+.all-menu-header.log-out > a::after { content:''; position:absolute; right:0; top:50%; transform:translate(0, -50%); display:inline-block; width:24px; height:24px; background:url('../resources/images/common/ic-arrow-right.png')center no-repeat; background-size:100%; } */
+/* e  주석 */
 
 .quick-menu { width:100%; padding:20px; }
 /* .quick-menu > dt { position:relative; width:100%; color:#333333; font-weight:600; font-size:0.7rem; }
@@ -699,20 +680,6 @@
 .quick-menu  li { display:table; width:100%; margin:5px 0; }
 .quick-menu  li  a { display:inline-block; /* width:calc(50% - 10px); */ margin:5px; margin-right:5px; padding:5px 15px; font-size:0.8rem; border-radius:25px; background:#E6E2FB; color:#260F54; text-align:center; }
 
-.menuArea { width:100px; /*padding-top:20px;*/ background:#F5F6F7; /*box-shadow:4px 0px 4px 0px rgb(247 247 247);*/ }
-.menuArea li { position:relative;}
-.menuArea li.on::before { content:''; z-index:1; display:inline-block; position:absolute; left:0; top:0; width:110px; height:100%; /*background:linear-gradient(298deg, #080311, #480FBB);*/ background:#FFFFFF; /*border-radius:0 20px 20px 0;*/ }
-.menuArea a { position:relative; z-index:2; display:inline-block; width:100%; padding:20px 0; color:#333; text-indent:20px;  font-size:0.8rem; font-weight:bold; }
-.menuArea li.on a {  color:#333333; }
 
-.scroll-wrap { flex:1; position:relative; overflow-y:auto; height:100vh; }
-.scroll-wrap li { border-bottom:1px solid #EAEAEA; }
-.scroll-wrap a { display:block; padding:15px 0; color:#666; font-size:0.9rem; }
-
-.listArea { width:100%; height:100%; margin:20px 0;  padding:0 0 0 30px; }
-.listArea > li { display:none; }
-.listArea > li.on { display:block; }
-.depth li:first-child > a { padding-top:0; }
-
-</style> 
+</style>
 </html>

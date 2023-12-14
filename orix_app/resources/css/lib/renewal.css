@@ -1,13 +1,3 @@
-/* grid */
-html { box-sizing:border-box; -ms-overflow-style:scrollbar; }
-
-/* *,
-*::before,
-*::after { box-sizing: inherit; } */
-
-/* .wrap * { box-sizing:border-box; } */
-.wrap { position:relative; display:block; margin:0; /*padding:50px 0 0;*/ width:100%; height:100%; min-height:420px;  }
-.contents-wrap { overflow-y:auto; overflow-x:hidden; margin:0; height:100%; padding-right:15px; padding-left:15px; padding-bottom:150px; margin-right:auto; margin-left:auto; }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
@@ -520,12 +510,22 @@ iframe { border:none; }
 
 /* 로그아웃 */
 .btn.logout { padding:6px 10px; border-radius: 32px;font-size:0.75rem; line-height:0.875rem; font-weight:400; color:#848B95; background:#EBEDEF; }
+/* 로그아웃 전체메뉴 */
+.btn.logout-text { padding-top:0; color:#EAEAEA; font-size:0.875rem; line-height:1rem; font-weight:500;  }
 
 /* 프로필 이미지 */
-.login-on-wrap { display:flex; align-items:center; justify-content:space-between; margin-top:10px; }
-.login-on-wrap p { padding-left:45px; }
-.login-on-wrap p:before { content:''; background-color:#E4EAF5 !important; position:absolute; left:0; top:50%; transform:translate(0, -50%); width:36px;; height:36px; border-radius:50%; }
-.login-on-wrap.user_m_img p:before {  background:url('../../images/common/ic_target.png') no-repeat 50%/36px auto; }
+.login-wrap { display:flex; align-items:center; justify-content:space-between; margin-top:10px; }
+.login-wrap .login-tit { padding-left:45px; }
+.login-wrap .login-tit:before { content:'';  position:absolute; left:0; top:50%; transform:translate(0, -50%); width:36px;; height:36px; border-radius:50%; background-color:#E4EAF5!important; }
+.login-wrap .login-tit.user-m-img:before {  background:url('../../images/common/ic_target.png') no-repeat 50%/36px auto ; }
+
+
+/* 프로필 이미지 전체메뉴*/
+.login-wrap.menu .login-tit:before { content:''; width:54px; height:54px;  background-color:#FFFFFF!important; }
+.login-wrap.menu .login-tit { padding-left:59px; }
+.login-wrap.menu .login-tit .tit { color:#FFFFFF; font-size:1.125rem; line-height:1.25rem; }
+.login-wrap.menu .login-tit .text {  margin-top:5px; color:#EAEAEA; font-size:0.75rem; line-height:0.875rem; font-weight:500; }
+
 
 /* list-icon */
 .list-icon li::before{ content:''; position:absolute; top:12px; left:15px; width:36px;; height:36px; border-radius:12px; }
@@ -601,3 +601,55 @@ iframe { border:none; }
 
 /* terms */
 .info-wrap iframe { width:100%; height:100%; }
+
+
+/** 전체메뉴 **/
+.wrap { overflow-y:hidden; height:100%; }
+
+.menuWrap { position:fixed; left:0; top:0; z-index:100; width:100%; height:100%; overflow:hidden; background:#fff; }
+.all-menu-wrap { width:100%; height:100%; }
+.all-menu-wrap > div { width:100%; }
+.all-menu-info { background:#B095DC; padding:0 20px 20px;}
+.all-menu-area { display:flex; flex:1; height:100%; overflow:hidden; padding:0; -webkit-overflow-scrolling:touch;  }
+
+/* 로그아웃 */
+.logout-area { display:flex; justify-content: space-between; }
+
+.all-menu-header { width:100%; height:60px; line-height:60px; }
+.all-menu-header >  a { color:#FFFFFF; }
+.all-menu-header > div { display:inline-block; float:right; height:100%; }
+.all-menu-header > div > a { display:inline-block; float:left; width:40px; height:100%; font-size:0; }
+
+/* top-menu */
+.top-menu .top-icon { display:flex; flex-direction:row; justify-content:space-between; width:100%; padding:20px 0; text-align:center;  }
+.top-menu .top-icon li { position:relative;  width:100%; padding-top:55px;  }
+.top-menu .top-icon li > a { display:flex; justify-content:center; color:#333333; font-size:0.75rem;  line-height:0.875rem; }
+.top-menu .top-icon li > a::before { content:''; display:inline-block; position:absolute; top:0; width:40px; height:40px; border-radius:50%; }
+.top-menu .top-icon li.alarm > a::before { background: url('../../images/common/ico_alarm.png')no-repeat #F4F4F4 50%/26px auto; }
+.top-menu .top-icon li.loanProgress > a::before { background: url('../../images/common/ico_loanProgress.png')no-repeat #F4F4F4 50%/26px auto;  }
+.top-menu .top-icon li.doorSales > a::before { background: url('../../images/common/ico_doorSales.png')no-repeat #F4F4F4 50%/26px auto; }
+.top-menu .top-icon li.settlement > a::before { background: url('../../images/common/ico_settlement.png')no-repeat #F4F4F4 50%/26px auto; }
+
+/* tab-slinemenu */
+.tab-slidemenu.bg-bor { overflow:hidden; border-top:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; }
+.tab-slidemenu.bg-bor ul {display:flex; justify-content: space-between; width:100%; overflow-y:hidden; overflow-x:auto; white-space:nowrap; padding:16px 20px; }
+.tab-slidemenu.bg-bor li { display:inline-block; margin-right:10px; }
+.tab-slidemenu.bg-bor li a { z-index:1; position:relative; font-size:0.875rem; line-height:1rem; color:#3B3B3B; }
+.tab-slidemenu.bg-bor li a:before { z-index:-1; content:""; position:absolute; border:3px solid #E7F0F5;  width:100%; height:3px; bottom:0; }
+
+/* all-menu-area */
+.menuArea { width:100px; /*padding-top:20px;*/ background:#F5F6F7; /*box-shadow:4px 0px 4px 0px rgb(247 247 247);*/ }
+.menuArea li { position:relative;}
+.menuArea li.on::before { content:''; z-index:1; display:inline-block; position:absolute; left:0; top:0; width:110px; height:100%; /*background:linear-gradient(298deg, #080311, #480FBB);*/ background:#FFFFFF; /*border-radius:0 20px 20px 0;*/ }
+.menuArea a { position:relative; z-index:2; display:inline-block; width:100%; padding:20px 0; color:#333; text-indent:20px;  font-size:0.8rem; font-weight:bold; }
+.menuArea li.on a {  color:#333333; }
+
+.scroll-wrap { flex:1; position:relative; overflow-y:auto; height:100vh; }
+.scroll-wrap li { border-bottom:1px solid #EAEAEA; }
+.scroll-wrap a { display:block; padding:15px 0; color:#666; font-size:0.9rem; }
+
+.listArea { width:100%; height:100%; margin:20px 0;  padding:0 0 0 30px; }
+.listArea > li { display:none; }
+.listArea > li.on { display:block; }
+.depth li:first-child > a { padding-top:0; }
+
