@@ -284,10 +284,10 @@
 		</div>
 		<div class="top-menu">
 			<ul class="top-icon">
-				<li class="alarm"><a href="#none" onclick="openPopup('customer-view');">알림(<span>0</span>)</a></li>
-				<li class="loan"><a href="#none" onclick="openPopup('security-view');">대출진행현황</a></li>
-				<li class="sale"><a href="#none" onclick="openPopup('accident-view');">방문판매안내</a></li>
-				<li class="payment"><a href="#none">영업결제</a></li>
+				<li class="alarm"><a href="#none" onclick="openPopup('customer-view');"><span></span>알림(<span>0</span>)</a></li>
+				<li class="loanProgress"><a href="#none" onclick="openPopup('security-view');">대출진행현황</a></li>
+				<li class="doorSales"><a href="#none" onclick="openPopup('accident-view');">방문판매안내</a></li>
+				<li class="settlement"><a href="#none">영업결제</a></li>
 			</ul>
 		</div>
 		<!-- <div class="quick-menu" >
@@ -685,11 +685,11 @@
 .top-menu .top-icon { display:flex; flex-direction:row; justify-content:space-between; width:100%; padding:20px 0; text-align:center;  }
 .top-menu .top-icon li { position:relative;  width:100%; padding-top:55px;  }
 .top-menu .top-icon li > a { display:flex; justify-content:center; color:#333333; font-size:0.75rem;  line-height:0.875rem; }
-.top-menu .top-icon li > a::before { content:''; display:inline-block; position:absolute; top:0; width:48px; height:48px; border-radius:50%; }
-.top-menu .top-icon li.alarm > a::before { background:#F4F4F4 url('../resources/images/common/ico-menubar-callcenter.png')center no-repeat; background-size:60%;  }
-.top-menu .top-icon li.loan > a::before { background:#F4F4F4 url('../resources/images/common/ico-menubar-callcenter.png')center no-repeat; background-size:60%;  }
-.top-menu .top-icon li.sale > a::before { background:#F4F4F4 url('../resources/images/common/ico-menubar-callcenter.png')center no-repeat; background-size:60%;  }
-.top-menu .top-icon li.payment > a::before { background:#F4F4F4 url('../resources/images/common/ico-menubar-callcenter.png')center no-repeat; background-size:60%;  }
+.top-menu .top-icon li > a::before { content:''; display:inline-block; position:absolute; top:0; width:40px; height:40px; border-radius:50%; }
+.top-menu .top-icon li.alarm > a::before { background: url('../resources/images/common/ico_alarm.png')no-repeat #F4F4F4 50%/26px auto; }
+.top-menu .top-icon li.loanProgress > a::before { background: url('../resources/images/common/ico_loanProgress.png')no-repeat #F4F4F4 50%/26px auto;  }
+.top-menu .top-icon li.doorSales > a::before { background: url('../resources/images/common/ico_doorSales.png')no-repeat #F4F4F4 50%/26px auto; }
+.top-menu .top-icon li.settlement > a::before { background: url('../resources/images/common/ico_settlement.png')no-repeat #F4F4F4 50%/26px auto; }
 
 .quick-menu { width:100%; padding:20px; }
 /* .quick-menu > dt { position:relative; width:100%; color:#333333; font-weight:600; font-size:0.7rem; }
