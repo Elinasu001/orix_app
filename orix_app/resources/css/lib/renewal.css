@@ -510,7 +510,7 @@ iframe { border:none; }
 
 /* 로그아웃 */
 .btn.logout { padding:6px 10px; border-radius: 32px;font-size:0.75rem; line-height:0.875rem; font-weight:400; color:#848B95; background:#EBEDEF; }
-/* 로그아웃 전체메뉴 */
+/* 전체메뉴 - 로그아웃  */
 .btn.logout-text { padding-top:0; color:#EAEAEA; font-size:0.875rem; line-height:1rem; font-weight:500;  }
 
 /* 프로필 이미지 */
@@ -520,9 +520,9 @@ iframe { border:none; }
 .login-wrap .login-tit.user-m-img:before {  background:url('../../images/common/ic_target.png') no-repeat 50%/36px auto ; }
 
 
-/* 프로필 이미지 전체메뉴*/
-.login-wrap.menu .login-tit:before { content:''; width:54px; height:54px;  background-color:#FFFFFF!important; }
-.login-wrap.menu .login-tit { padding-left:59px; }
+/* 전체메뉴 - 프로필 이미지 */
+.login-wrap.menu .login-tit:before { content:''; width:52px; height:52px;  background-color:#FFFFFF!important; }
+.login-wrap.menu .login-tit { padding-left:57px; }
 .login-wrap.menu .login-tit .tit { color:#FFFFFF; font-size:1.125rem; line-height:1.25rem; }
 .login-wrap.menu .login-tit .text {  margin-top:5px; color:#EAEAEA; font-size:0.75rem; line-height:0.875rem; font-weight:500; }
 
@@ -635,7 +635,7 @@ iframe { border:none; }
 .tab-slidemenu.bg-bor ul {display:flex; justify-content: space-between; width:100%; overflow-y:hidden; overflow-x:auto; white-space:nowrap; padding:16px 20px; }
 .tab-slidemenu.bg-bor li { display:inline-block; margin-right:10px; }
 .tab-slidemenu.bg-bor li a { z-index:1; position:relative; font-size:0.875rem; line-height:1rem; color:#3B3B3B; }
-.tab-slidemenu.bg-bor li a:before { z-index:-1; content:""; position:absolute; border:3px solid #E7F0F5;  width:100%; height:3px; bottom:0; }
+.tab-slidemenu.bg-bor li a:before { z-index:-1; content:""; position:absolute; width:100%; height:3px; bottom:0; border:3px solid #E7F0F5; border-radius:3px; }
 
 /* all-menu-area */
 .menuArea { width:100px; /*padding-top:20px;*/ background:#F5F6F7; /*box-shadow:4px 0px 4px 0px rgb(247 247 247);*/ }
