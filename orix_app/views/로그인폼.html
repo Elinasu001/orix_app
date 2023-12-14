@@ -28,7 +28,7 @@
 	<!-- <link href="../resources/css/lib/swiper-bundle.min.css" rel="stylesheet" /> -->
 
     <link rel="stylesheet" href="../resources/css/lib/renewal.css">
-    <!-- <link rel="stylesheet" href="../resources/css/lib/default.css"> -->
+    <link rel="stylesheet" href="../resources/css/lib/default.css">
     
 	<script type="text/javascript" src="../resources/js/lib/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
@@ -51,29 +51,32 @@
                 <section class="login-bg  type-spread">
                     <img class="logo" src="../resources/images/common/login_orix_logo.png" alt="오릭스로고">
                 </section>
-                <section class="login-section">
-                    <div class="login-group">
-                        <div class="form-group">
-                            <!-- <label for="user-id">아이디</label> -->
-                            <input type="text" class="form-control" id="user-id" placeholder="아이디 입력">
-                            <!-- <label for="user-password">비밀번호</label> -->
-                            <input type="password" class="form-control" id="user-password" placeholder="비밀번호 입력">
-                            <input type="checkbox" name="user_checkbox" id="check1" class="custom-check">
-                            <label for="check1"></label>
-                        </div>
+                <section class="form-wrap login">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="user-id" placeholder="아이디 입력">
                     </div>
-                    <div class="btn-wrap">
-                        <button type="button" class="btn btn-primary">다음</button>
-                        <ul class="find-list">
-                            <li>
-                                <a href="javascript:void(0);" id="_btnSrchId" class="text">아이디 찾기</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);" id="_btnReregPw" class="text">비밀번호 찾기</a>
-                            </li>
-                        </ul>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="user-password" placeholder="비밀번호 입력">
+                    </div>
+                    <div class="form-group check-buttons">
+                        <label for="check-1" class="check-button">
+                            <input type="checkbox" id="check-1" name="terms">
+                            <span class="custom-check"></span>
+                            <span>로그인 상태 유지</span>
+                        </label>
                     </div>
                 </section>
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-primary">다음</button>
+                    <ul class="find-list">
+                        <li>
+                            <a href="javascript:void(0);" id="_btnSrchId" class="text">아이디 찾기</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="_btnReregPw" class="text">비밀번호 찾기</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </form>
     </div>

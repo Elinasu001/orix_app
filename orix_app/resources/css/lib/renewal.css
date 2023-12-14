@@ -589,8 +589,10 @@ iframe { border:none; }
 .login-bg .logo { display:block; margin: 0 auto; width:70px; height:95px; }
 
 .login-section .login-group + .btn-wrap { margin-top:40px; padding:0 }
-.login-group { margin-top:-72px; padding:30px 20px; border-radius:15px; background-color:#FFFFFF; box-shadow:0px 5px 15px rgb(24 59 86 / 14%); }
-.login-group .form-group { margin-bottom:0; }
+.form-wrap.login { margin-top:-72px; padding:30px 20px; border-radius:15px; background-color:#FFFFFF; box-shadow:0px 5px 15px rgb(24 59 86 / 14%); }
+.form-wrap.login .form-group:first-child { margin-top:0; }
+
+.form-wrap + .btn-wrap { padding:0;  margin-top:40px; }
 
 .btn-wrap .find-list { display:flex; justify-content:center; margin-top:15px; text-align:center; width:100%;  }
 .btn-wrap .find-list li { position:relative; width:50%;}
