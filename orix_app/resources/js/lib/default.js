@@ -1,6 +1,17 @@
 
 $(document).ready(function() {
 
+  /** 전체 메뉴 **/
+  $(".menuArea > li > a").on("click", function () {
+		var $this = $(this).parent("li");
+		target = $(this).attr("data-focus");
+		$(".menuArea > li").removeClass("on");
+		$(".listArea > li").removeClass("on");
+
+		$this.addClass("on");
+		$(".listArea > li."+target).addClass("on");
+	});
+
   /**  3자리 수마다 콤마 적용 **/
   $(document).on('keyup', 'input[inputmode=numeric]', function (event) {
     this.value = this.value.replace(/[^0-9]/g, ''); // 입력값이 숫자가 아니면 공백

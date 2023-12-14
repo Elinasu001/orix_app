@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ORIX Capital</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="keywords" content="ORIX Capital keywords" />
+	<meta name="description" content="ORIX Capital description" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<!-- 
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+	-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="No-Cache">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.png" />
+	<link rel="icon" type="image/x-icon" href="../resources/favicon.png" />
+
+	<!-- <link href="../resources/css/lib/swiper-bundle.min.css" rel="stylesheet" /> -->
+
+    <link rel="stylesheet" href="../resources/css/lib/renewal.css">
+    <!-- <link rel="stylesheet" href="../resources/css/lib/default.css"> -->
+    
+	<script type="text/javascript" src="../resources/js/lib/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+
+    <script type="text/javascript" src="../resources/js/lib/default.js"></script>
+</head>
+<body>
+<div class="wrap main"><!-- [*] main 클래스 어디에 붙을 수 있는지 확인 필요 -->
+    <!-- s: header -->
+    <header class="main-header">
+        <div class="logo-area">
+            <h1><a href="#none"><img src="../../resources/images/main/logo.png" alt="Goryo Savings Bank 고려저축은행" /></a></h1>
+        </div>
+        <div class="notify-area">
+            <div class="btn-notify-wrap">
+                <button type="button" class="btn-notify" onclick=""><img src="../../resources/images/main/ico_notify.png" alt="" /></button>
+                <em class="count-flag"><span>3</span></em>
+            </div>
+        </div>
+    </header>
+    <!-- //e: header -->
+
+    <!-- s: contentsWrap -->
+    <div class="contentsWrap">
+        <!-- s: contents -->
+        <div class="contents">
+            <div class="default-wrap"><!-- [D] 좌우 여백 용도 : 다른 클래스와 중복 사용 X -->
+                <section class="welcome-area">
+                    <p class="welcome-txt">
+                        <span>언제나 든든한 내 금융지원군</span>
+                        <strong>GO BANK</strong>에 오신 것을<br>환영합니다
+                    </p>
+                </section>
+                <section class="quick-menu-area">
+                    <ul class="quick-menu-list">
+                        <li><a href="#none">예/적금<br>상품보기</a></li>
+                        <li><a href="#none">통합대출한도<br>조회하기</a></li>
+                    </ul>
+                </section>
+                <section class="quick-service-area">
+                    <h2 class="area-title">빠른 서비스</h2>
+                    <ul class="quick-service-list">
+                        <li><a href="#none">대출이어하기</a></li>
+                        <li><a href="#none">대출전자약정조회</a></li>
+                        <li><a href="#none">대출한도조회</a></li>
+                        <li><a href="#none">계좌개설</a></li>
+                        <li><a href="#none">인증보안</a></li>
+                    </ul>
+                </section>
+                <section class="recom-area">
+                    <h2 class="area-title">GO BANK가 추천해요!</h2>
+                    <!-- <div class="recom-slider-wrap">
+                        슬라이더 영역
+                    </div> -->
+                    <div class="recom-slider-wrap" style="padding-right:20px;">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-color:#AE9CFE;">
+                                    <em class="prd-flag">
+                                        <span>입출금</span>
+                                        <span>모바일전용</span>
+                                    </em>
+                                    <strong class="prd-tit">보고파 파킹통장</strong>
+                                    <p class="prd-desc">
+                                        입출금 자유! 하루만 맡겨도<br>
+                                        확정금리를 드려요
+                                    </p>
+                                    <span class="prd-rate">최고 3.35%</span>
+                                    <span class="prd-obj"><img src="../../resources/images/main/temp_obj_recom01.png" alt=""></span>
+                                    <a href="#none" class="btn-go-link"><span>보고파 파킹통장 둘러보기</span></a>
+                                </div>
+                                <div class="swiper-slide" style="background-color:#FFE2ED;">
+                                    <em class="prd-flag">
+                                        <span>입출금</span>
+                                        <span>모바일전용</span>
+                                    </em>
+                                    <strong class="prd-tit">보고파 파킹통장</strong>
+                                    <p class="prd-desc">
+                                        입출금 자유! 하루만 맡겨도<br>
+                                        확정금리를 드려요
+                                    </p>
+                                    <span class="prd-rate">최고 3.35%</span>
+                                    <span class="prd-obj"><img src="../../resources/images/main/temp_obj_recom02.png" alt=""></span>
+                                    <a href="#none" class="btn-go-link"><span>보고파 파킹통장 둘러보기</span></a>
+                                </div>
+                                <div class="swiper-slide" style="background-color:#D6D6D6;">
+                                    <em class="prd-flag">
+                                        <span>입출금</span>
+                                        <span>모바일전용</span>
+                                    </em>
+                                    <strong class="prd-tit">보고파 파킹통장</strong>
+                                    <p class="prd-desc">
+                                        입출금 자유! 하루만 맡겨도<br>
+                                        확정금리를 드려요
+                                    </p>
+                                    <span class="prd-rate">최고 3.35%</span>
+                                    <span class="prd-obj"><img src="../../resources/images/main/temp_obj_recom03.png" alt=""></span>
+                                    <a href="#none" class="btn-go-link"><span>보고파 파킹통장 둘러보기</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="guide-area">
+                    <h2 class="area-title">처음 오셨나요?</h2>
+                    <ul class="guide-list">
+                        <li>
+                            <a href="#none" class="go-link">고뱅크를 이용하면 이런 점이 좋아요!</a>
+                        </li>
+                        <li>
+                            <a href="#none" class="go-link">고려저축은행 지점 위치가 궁금하세요?</a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="banner-area">
+                    <div class="banner-box">
+                        <p class="banner-tit">
+                            <span>예/적금과 대출, 현명하게 관리하려면</span>
+                            잉여생활자금 계산하고<br>적정 금액을 정해 보세요
+                        </p>
+                        <div class="go-link-wrap"><a href="#none" class="btn-go-link"><span>잉여생활자금계산하기</span></a></div>
+                    </div>
+                </section>
+                <section class="notice-area">
+                    <div class="notice-slider-wrap swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <p class="notice-tit">신분증 진위확인 서비스 일시중단 안내 1</p>
+                                    <span class="notice-date">2023.05.04</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <p class="notice-tit">신분증 진위확인 서비스 일시중단 안내 2</p>
+                                    <span class="notice-date">2023.05.04</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none">
+                                    <p class="notice-tit">신분증 진위확인 서비스 일시중단 안내 3</p>
+                                    <span class="notice-date">2023.05.04</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="news-area type-spread">
+                    <h2 class="area-title">GO BANK 소식</h2>
+                    <!-- <div class="news-slider-wrap">
+                        슬라이더 영역
+                    </div> -->
+                    <div class="news-slider-wrap swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background:#F2F6FF;">
+                                <a href="#none">
+                                    <em class="news-flag">깜짝퀴즈이벤트</em>
+                                    <strong class="news-tit">고려저축은행 파킹통장 이름은?!</strong>
+                                    <p class="news-desc">
+                                        정답 남기고 버거킹 와퍼 세트 받아가세요<br>
+                                        친구에게 정답을 공유하면 당첨확률 UP!
+                                    </p>
+                                    <div class="news-img-wrap">
+                                        <img src="../../resources/images/main/temp_news_img01.png" alt="" style="width:185px;">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide" style="background:#FFEFF5;">
+                                <a href="#none">
+                                    <em class="news-flag">깜짝퀴즈이벤트 2</em>
+                                    <strong class="news-tit">고려저축은행 파킹통장 이름은?!</strong>
+                                    <p class="news-desc">
+                                        정답 남기고 버거킹 와퍼 세트 받아가세요<br>
+                                        친구에게 정답을 공유하면 당첨확률 UP!
+                                    </p>
+                                    <div class="news-img-wrap">
+                                        <img src="../../resources/images/main/temp_news_img01.png" alt="" style="width:185px;">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide" style="background:#F2F6FF;">
+                                <a href="#none">
+                                    <em class="news-flag">깜짝퀴즈이벤트 3</em>
+                                    <strong class="news-tit">고려저축은행 파킹통장 이름은?!</strong>
+                                    <p class="news-desc">
+                                        정답 남기고 버거킹 와퍼 세트 받아가세요<br>
+                                        친구에게 정답을 공유하면 당첨확률 UP!
+                                    </p>
+                                    <div class="news-img-wrap">
+                                        <img src="../../resources/images/main/temp_news_img01.png" alt="" style="width:185px;">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </section>
+                <ul class="sns-list">
+                    <li><a href="#none">페이스북</a></li>
+                    <li><a href="#none">트위터</a></li>
+                    <li><a href="#none">인스타</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- //e: contents -->
+    </div>
+    <!-- //e: contentsWrap -->
+
+    <div class="bottom-menu-area">
+        <ul class="bottom-menu-list">
+            <li class="on"><a href="#none">홈</a></li>
+            <li><a href="#none">대출상품</a></li>
+            <li><a href="#none">예/적금상품</a></li>
+            <li><a href="#none">전체메뉴</a></li>
+        </ul>
+    </div>
+
+
+
+</div>
+
+
+
+<!-- s:menuWrap -->
+<div class="menuWrap">
+
+
+
+	<div class="all-menu-wrap">
+		<div class="all-menu-info">
+			<div>
+				<div class="all-menu-header">
+					<a href="#none">전체메뉴</a>
+					<div>
+						<a onclick="" class="btn-home">홈으로</a>
+						<a onclick="" class="btn-option">설정</a>
+						<a onclick="" class="btn-menu-close">닫기</a>
+					</div>
+				</div>
+
+				<div class="all-menu-header log-in">
+					<a  href="#none"><span><b>김고려</b>님</span> 반가워요!</a>
+					<div>
+						<a onclick="" class="btn-mypage">마이페이지</a>
+						<a onclick="" class="btn-home">홈으로</a>
+						<a onclick="" class="btn-option">설정</a>
+						<a onclick="" class="btn-menu-close">닫기</a>
+					</div>
+				</div>
+				
+			</div>
+			<div></div>
+		</div>
+		<div class="top-menu">
+			<ul class="top-icon">
+				<li class="alarm"><a href="#none" onclick="openPopup('customer-view');">알림(<span>0</span>)</a></li>
+				<li class="loan"><a href="#none" onclick="openPopup('security-view');">대출진행현황</a></li>
+				<li class="sale"><a href="#none" onclick="openPopup('accident-view');">방문판매안내</a></li>
+				<li class="payment"><a href="#none">영업결제</a></li>
+			</ul>
+		</div>
+		<!-- <div class="quick-menu" >
+			<ul>
+				<dt><button type="button" class="btn-allopen" onclick="openPopup('all-menu-view');">메뉴펼쳐보기</button></dt>
+				<li>
+					<a href="#none">심사결과조회</a>
+					<a href="#none">대출진행현황</a>
+					<a href="#none">팀실적조회</a>
+					<a href="#none">송금요청</a>
+				</li>
+			</ul>
+		</div> -->
+		<div class="tab-slidemenu bg-bor">
+			<ul>
+				<li><a href=""><a>심사결과조회</a></li>
+				<li><a href=""><a>대출진행현황</a></li>
+				<li><a href=""><a>팀실적조회</a></li>
+				<li><a href=""><a>송금요청</a></li>
+				<!-- <li><a href="#myBanking" data-focus="myBanking">마이뱅킹</a></li>
+				<li><a href="#lone" data-focus="lone">대출</a></li>
+				<li><a href="#deposit" data-focus="deposit">예적금</a></li>
+				<li><a href="#quickSev" data-focus="quickSev">빠른 서비스</a></li>
+				<li><a href="#setting" data-focus="setting">설정</a></li>
+				<li><a href="#customer" data-focus="customer">고객센터</a></li>
+				<li><a href="#certification" data-focus="certification">인증/보안</a></li>
+				<li><a href="#accident" data-focus="accident">사고신고</a></li> -->
+			</ul>
+		</div>
+		
+		<div class="all-menu-area">
+			<ul class="menuArea">
+				<li class="on"><a href="#none" data-focus="myBanking" >마이뱅킹</a></li>
+				<li><a href="#none" data-focus="lone">대출</a></li>
+				<li><a href="#none"  data-focus="deposit">예적금</a></li>
+			</ul>
+			<div class="scroll-wrap">
+				<ul class="listArea">
+					<li class="myBanking on">
+						<ul class="depth">
+							<li><a href="#">전계좌조회</a></li>
+							<li><a href="#">이체</a></li>
+							<li><a href="#">이체결과조회</a></li>
+							<li><a href="#">자동이체</a></li>
+							<li><a href="#">자동이체관리</a></li>
+						</ul>
+					
+					</li>
+					<li class="lone">
+						<ul class="depth">
+							<li><a href="#">대출상품</a></li>
+							<li><a href="#">간편한도조회</a></li>
+							<li><a href="#">온라인바로대출</a></li>
+							<li><a href="#">이어서 대출신청</a></li>
+							<li><a href="#">일반대출신청</a></li>
+							<li><a href="#">담보대출신청</a></li>
+						</ul>
+					
+					</li>
+					<li class="deposit">
+						<ul class="depth">
+							<li><a href="#">예적금상품</a></li>
+							<li><a href="#">비대면계좌개설</a></li>
+						</ul>
+					
+					</li>
+				
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="all-menu-view" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" >
+		<!-- s: contents -->
+		<div class="pop-header none-bor">
+			<h2 class="pop-title">전체메뉴</h2>
+			<a class="btn-back" onclick="backKeyAction();"><span class="blind">이전페이지 이동하기</span></a>
+			<button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyPullPop')">닫기</button>
+		</div>
+		<div class="pop-con-wrap">
+			<div class="default-wrap"><!-- [D] default-wrap - 좌우 여백 용도로 space(ex. mt0) 외의 다른 클래스와 중복 사용 X -->
+				<!-- s: 검색 영역 -->
+				<div class="search-area">
+					<div class="form-wrap">
+						<div class="input">
+							<input type="search" title="" id="test1" class="" name="" value="" placeholder="검색어를 입력하세요." required="">
+						</div>
+						<button type="button" class="btn-search">검색</button>
+						<button type="button" class="btn-delete">검색어 삭제</button>
+					</div>
+				</div>
+				<div class="tab-slidemenu">
+					<ul>
+						<li><a href="#myBanking" data-focus="myBanking">마이뱅킹</a></li>
+						<li><a href="#lone" data-focus="lone">대출</a></li>
+						<li><a href="#deposit" data-focus="deposit">예적금</a></li>
+						<li><a href="#quickSev" data-focus="quickSev">빠른 서비스</a></li>
+						<li><a href="#setting" data-focus="setting">설정</a></li>
+						<li><a href="#customer" data-focus="customer">고객센터</a></li>
+						<li><a href="#certification" data-focus="certification">인증/보안</a></li>
+						<li><a href="#accident" data-focus="accident">사고신고</a></li>
+					</ul>
+				
+				</div>
+				<div class="listmenu-box all">
+					<ul id="myBanking">
+						<li class="tit">마이뱅킹</li>
+						<li><a href="#none">전계좌 조회</a></li>
+						<li><a href="#none">이체</a></li>
+						<li><a href="#none">이체결과조회</a></li>
+						<li><a href="#none">자동이체</a></li>
+						<li><a href="#none">자동이체관리</a></li>
+					</ul>
+					<ul id="lone">
+						<li class="tit">마이뱅킹2</li>
+						<li><a href="#none">전계좌 조회</a></li>
+						<li><a href="#none">이체</a></li>
+						<li><a href="#none">이체결과조회</a></li>
+						<li><a href="#none">자동이체</a></li>
+						<li><a href="#none">자동이체관리</a></li>
+					</ul>
+					<ul id="deposit">
+						<li class="tit">마이뱅킹3</li>
+						<li><a href="#none">전계좌 조회</a></li>
+						<li><a href="#none">이체</a></li>
+						<li><a href="#none">이체결과조회</a></li>
+						<li><a href="#none">자동이체</a></li>
+						<li><a href="#none">자동이체관리</a></li>
+					</ul>
+					<ul id="quickSev">
+						<li class="tit">마이뱅킹4</li>
+						<li><a href="#none">전계좌 조회</a></li>
+						<li><a href="#none">이체</a></li>
+						<li><a href="#none">이체결과조회</a></li>
+						<li><a href="#none">자동이체</a></li>
+						<li><a href="#none">자동이체관리</a></li>
+					</ul>
+					<ul id="setting">
+						<li class="tit">마이뱅킹5</li>
+						<li><a href="#none">전계좌 조회</a></li>
+						<li><a href="#none">이체</a></li>
+						<li><a href="#none">이체결과조회</a></li>
+						<li><a href="#none">자동이체</a></li>
+						<li><a href="#none">자동이체관리</a></li>
+					</ul>
+					<ul id="customer">
+						<li class="tit">마이뱅킹6</li>
+						<li><a href="#none">전계좌 조회</a></li>
+						<li><a href="#none">이체</a></li>
+						<li><a href="#none">이체결과조회</a></li>
+						<li><a href="#none">자동이체</a></li>
+						<li><a href="#none">자동이체관리</a></li>
+					</ul>
+					<ul id="certification">
+						<li class="tit">마이뱅킹7</li>
+						<li><a href="#none">전계좌 조회</a></li>
+						<li><a href="#none">이체</a></li>
+						<li><a href="#none">이체결과조회</a></li>
+						<li><a href="#none">자동이체</a></li>
+						<li><a href="#none">자동이체관리</a></li>
+					</ul>
+					<ul id="accident">
+						<li class="tit">마이뱅킹8</li>
+						<li><a href="#none">전계좌 조회</a></li>
+						<li><a href="#none">이체</a></li>
+						<li><a href="#none">이체결과조회</a></li>
+						<li><a href="#none">자동이체</a></li>
+						<li><a href="#none">자동이체관리</a></li>
+					</ul>
+				
+				</div>
+				
+			</div>
+				<!-- //e: 검색 결과 영역 -->
+		</div>
+	</div>
+
+	<div id="customer-view" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close">
+		<!-- s: contents -->
+		<div class="pop-header none-bor">
+			<h2 class="pop-title">고객센터</h2>
+			<a class="btn-back" onclick="backKeyAction();"><span class="blind">이전페이지 이동하기</span></a>
+			<button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyPullPop')">닫기</button>
+		</div>
+		<div class="pop-con-wrap">
+			<div class="default-wrap mt40"><!-- [D] default-wrap - 좌우 여백 용도로 space(ex. mt0) 외의 다른 클래스와 중복 사용 X -->
+				<p class="gnb-tit">고객님 무엇을 도와드릴까요?</p>
+				<div class="listmenu-box">
+					<ul>
+						<li><a href="#none">공지사항</a></li>
+						<li><a href="#none">자주묻는 질문</a></li>
+						<li><a href="#none">전자민원신청</a></li>
+						<li><a href="#none">영업점 안내</a></li>
+					</ul>
+
+					<ul>
+						<li class="tit">이용자 유의사항</li>
+						<li><a href="#none">전자금융거래이용자 유의사항</a></li>
+						<li><a href="#none">스마트폰 금융거래 유의사항</a></li>
+						<li><a href="#none">보이스피싱 피해예방 유의사항</a></li>
+					</ul>
+
+					<ul>
+						<li class="tit">이용안내</li>
+						<li><a href="#none">이용시간 안내</a></li>
+						<li><a href="#none">상담원 연결</a></li>
+					</ul>
+
+					<ul>
+						<li class="tit">금융소비자보호</li>
+						<li><a href="#none">이용약관</a></li>
+						<li><a href="#none">전자금융이용약관</a></li>
+						<li><a href="#none">개인정보처리방침</a></li>
+						<li><a href="#none">위법계약해지권</a></li>
+					</ul>
+
+					<ul>
+						<li><a href="#none">증명서발급신청</a></li>
+					</ul>
+
+				
+				</div>
+				
+			</div>
+				<!-- //e: 검색 결과 영역 -->
+		</div>
+	</div>
+
+	<div id="security-view" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close">
+		<!-- s: contents -->
+		<div class="pop-header none-bor">
+			<h2 class="pop-title">인증/보안</h2>
+			<a class="btn-back" onclick="backKeyAction();"><span class="blind">이전페이지 이동하기</span></a>
+			<button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyPullPop')">닫기</button>
+		</div>
+		<div class="pop-con-wrap">
+			<div class="default-wrap mt40"><!-- [D] default-wrap - 좌우 여백 용도로 space(ex. mt0) 외의 다른 클래스와 중복 사용 X -->
+				<p class="gnb-tit">고객님의 정보를 확실히 보호할게요</p>
+				<div class="listmenu-box">
+					<ul>
+						<li><a href="#none">공동인증서안내</a></li>
+					</ul>
+
+					<ul>
+						<li class="tit">공동인증서</li>
+						<li><a href="#none">공동인증서 가져오기</a></li>
+						<li><a href="#none">공동인증서 내보내기</a></li>
+						<li><a href="#none">공동인증서 관리</a></li>
+					</ul>
+
+					<ul>
+						<li class="tit">타기관 인증서</li>
+						<li><a href="#none">타기관 인증서 등록</a></li>
+						<li><a href="#none">타기관 인증서 해제</a></li>
+					</ul>
+
+					<ul>
+						<li class="tit">전자금융사기예방서비스</li>
+						<li><a href="#none">단말기지정서비스 가입</a></li>
+						<li><a href="#none">단말기지정서비스 조회/해지</a></li>
+						<li><a href="#none">추가인증서비스 가입</a></li>
+						<li><a href="#none">추가인증서비스 변경</a></li>
+						<li><a href="#none">인증 예외서비스 등록</a></li>
+					</ul>
+
+					<ul>
+						<li class="tit">간편비밀번호</li>
+						<li><a href="#none">등록/재등록</a></li>
+						<li><a href="#none">해지</a></li>
+					</ul>
+
+					<ul>
+						<li class="tit">패턴인증</li>
+						<li><a href="#none">등록/재등록</a></li>
+						<li><a href="#none">해지</a></li>
+					</ul>
+
+					<ul>
+						<li class="tit">바이오인증</li>
+						<li><a href="#none">등록/재등록</a></li>
+						<li><a href="#none">해지</a></li>
+					</ul>
+
+					<ul>
+						<li><a href="#none">mOTP 설정/재설정</a></li>
+					</ul>
+
+					<ul>
+						<li><a href="#none">타기관 OTP 등록/변경</a></li>
+					</ul>
+
+					<ul>
+						<li><a href="#none">OTP 보정</a></li>
+					</ul>
+				</div>
+				
+			</div>
+				<!-- //e: 검색 결과 영역 -->
+		</div>
+	</div>
+
+	<div id="accident-view" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close">
+		<!-- s: contents -->
+		<div class="pop-header none-bor">
+			<h2 class="pop-title">사고신고</h2>
+			<a class="btn-back" onclick="backKeyAction();"><span class="blind">이전페이지 이동하기</span></a>
+			<button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyPullPop')">닫기</button>
+		</div>
+		<div class="pop-con-wrap">
+			<div class="default-wrap mt40"><!-- [D] default-wrap - 좌우 여백 용도로 space(ex. mt0) 외의 다른 클래스와 중복 사용 X -->
+				<p class="gnb-tit">신고하실 항목을 선택하세요</p>
+				<div class="listmenu-box">
+					<ul>
+						<li><a href="#none">통장/인감 사고신고</a></li>
+					</ul>
+
+					<ul>
+						<li><a href="#none">보안카드/OTP사고신고</a></li>
+					</ul>
+
+					<ul>
+						<li class="tit">현금카드 사고신고</li>
+						<li><a href="#none">사고신고</a></li>
+						<li><a href="#none">내역조회</a></li>
+					</ul>
+
+					<ul>
+						<li><a href="#none">OTP사고회복</a></li>
+					</ul>
+				</div>
+				
+			</div>
+				<!-- //e: 검색 결과 영역 -->
+		</div>
+	</div>
+
+</div>
+<!-- e:menuWrap -->
+
+</body>
+
+
+	
+<style>
+
+/****전체보기****/
+.layerpopup.laypop-all .pop-header.none-bor { border-bottom:0; }
+.gnb-tit { font-weight:bold; color:#333; }
+
+
+.listmenu-box { margin:40px 0; }
+.listmenu-box.all > ul { margin-bottom:50px; }
+.listmenu-box > ul { margin-bottom:20px; }
+.listmenu-box > ul > li.tit { color:#999999; font-size:0.8rem; padding-bottom:10px; }
+.listmenu-box > ul > li > a { display:inline-block; position:relative; width:100%; padding:10px 0; color:#333333; font-size:0.9rem; }
+.listmenu-box > ul > li > a::after { content:''; display:inline-block; width:20px; height:20px; background:url("../resources/images/common/ic-arrow-right.png") center center no-repeat; position:absolute; right:0; top:50%; transform:translate(0, -50%); background-size:100%; }
+
+.tab-slidemenu.bg-bor { overflow:hidden; border-top:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; }
+.tab-slidemenu.bg-bor ul {display:flex; justify-content: space-between; width:100%; overflow-y:hidden; overflow-x:auto; white-space:nowrap; padding:16px 20px; }
+.tab-slidemenu.bg-bor li { display:inline-block; margin-right:10px; }
+.tab-slidemenu.bg-bor li a { z-index:1; position:relative; font-size:0.875rem; line-height:1rem; color:#3B3B3B; }
+.tab-slidemenu.bg-bor li a:before { z-index:-1; content:""; position:absolute; border:3px solid #E7F0F5;  width:100%; height:3px; bottom:0; background: 3px solid #E7F0F5; }
+
+
+
+
+/****전체메뉴****/
+.wrap { overflow-y:hidden; height:100%; }
+
+.menuWrap { position:fixed; left:0; top:0; z-index:100; width:100%; height:100%; overflow:hidden; background:#fff; }
+.all-menu-wrap { width:100%; height:100%; }
+.all-menu-wrap > div { width:100%; }
+.all-menu-info {  }
+.all-menu-info { background:#B095DC; padding:0 20px 20px;}
+.all-menu-area { display:flex; flex:1; height:100%; overflow:hidden; padding:0; -webkit-overflow-scrolling:touch;  }
+
+
+.all-menu-header { width:100%; height:60px; line-height:60px; }
+.all-menu-header >  a { color:#FFFFFF; }
+.all-menu-header > div { display:inline-block; float:right; height:100%; }
+.all-menu-header > div > a { display:inline-block; float:left; width:40px; height:100%; font-size:0; }
+.all-menu-header .btn-mypage { background:url('../resources/images/common/ico-menubar-home.png')right center no-repeat; background-size:24px; } 
+.all-menu-header .btn-home { background:url('../resources/images/common/ico-menubar-home.png')right center no-repeat; background-size:24px; } 
+.all-menu-header .btn-option { background:url('../resources/images/common/ico-menubar-setting.png')right center no-repeat; background-size:24px; }
+.all-menu-header .btn-menu-close { background:url('../resources/images/common/ico-menubar-close.png')right center no-repeat; background-size:24px; }
+
+
+.log-in { display:none; }
+.all-menu-header.log-in > a { color:#B3ADC1; font-weight:normal; }
+.all-menu-header.log-in > a > span { color:#fff; }
+.all-menu-header.log-out > a { display:inline-block; position:relative; float:left; height:100%; padding-right:25px; font-size:0.9rem; font-weight:bold; color:#fff; }
+.all-menu-header.log-out > a::after { content:''; position:absolute; right:0; top:50%; transform:translate(0, -50%); display:inline-block; width:24px; height:24px; background:url('../resources/images/common/ic-arrow-right.png')center no-repeat; background-size:100%; }
+
+
+.top-menu .top-icon { display:flex; flex-direction:row; justify-content:space-between; width:100%; padding:20px 0; text-align:center;  }
+.top-menu .top-icon li { position:relative;  width:100%; padding-top:55px;  }
+.top-menu .top-icon li > a { display:flex; justify-content:center; color:#333333; font-size:0.75rem;  line-height:0.875rem; }
+.top-menu .top-icon li > a::before { content:''; display:inline-block; position:absolute; top:0; width:48px; height:48px; border-radius:50%; }
+.top-menu .top-icon li.alarm > a::before { background:#F4F4F4 url('../resources/images/common/ico-menubar-callcenter.png')center no-repeat; background-size:60%;  }
+.top-menu .top-icon li.loan > a::before { background:#F4F4F4 url('../resources/images/common/ico-menubar-callcenter.png')center no-repeat; background-size:60%;  }
+.top-menu .top-icon li.sale > a::before { background:#F4F4F4 url('../resources/images/common/ico-menubar-callcenter.png')center no-repeat; background-size:60%;  }
+.top-menu .top-icon li.payment > a::before { background:#F4F4F4 url('../resources/images/common/ico-menubar-callcenter.png')center no-repeat; background-size:60%;  }
+
+.quick-menu { width:100%; padding:20px; }
+/* .quick-menu > dt { position:relative; width:100%; color:#333333; font-weight:600; font-size:0.7rem; }
+.quick-menu > dt > button { position:absolute; top:50%; transform:translate(0, -50%); right:0; padding-right:20px; color:#444444; font-size:0.7rem; }
+.quick-menu > dt > button::after { content:''; position:absolute; right:0; top:50%; transform:translate(0, -50%); display:inline-block; width:16px; height:16px; background:url('../resources/images/common/ic-arrow-right.png') no-repeat center/100%; } */
+
+.quick-menu  li { display:table; width:100%; margin:5px 0; }
+.quick-menu  li  a { display:inline-block; /* width:calc(50% - 10px); */ margin:5px; margin-right:5px; padding:5px 15px; font-size:0.8rem; border-radius:25px; background:#E6E2FB; color:#260F54; text-align:center; }
+
+.menuArea { width:100px; /*padding-top:20px;*/ background:#F5F6F7; /*box-shadow:4px 0px 4px 0px rgb(247 247 247);*/ }
+.menuArea li { position:relative;}
+.menuArea li.on::before { content:''; z-index:1; display:inline-block; position:absolute; left:0; top:0; width:110px; height:100%; /*background:linear-gradient(298deg, #080311, #480FBB);*/ background:#FFFFFF; /*border-radius:0 20px 20px 0;*/ }
+.menuArea a { position:relative; z-index:2; display:inline-block; width:100%; padding:20px 0; color:#333; text-indent:20px;  font-size:0.8rem; font-weight:bold; }
+.menuArea li.on a {  color:#333333; }
+
+.scroll-wrap { flex:1; position:relative; overflow-y:auto; height:100vh; }
+.scroll-wrap li { border-bottom:1px solid #EAEAEA; }
+.scroll-wrap a { display:block; padding:15px 0; color:#666; font-size:0.9rem; }
+
+.listArea { width:100%; height:100%; margin:20px 0;  padding:0 0 0 30px; }
+.listArea > li { display:none; }
+.listArea > li.on { display:block; }
+.depth li:first-child > a { padding-top:0; }
+
+</style> 
+</html>
