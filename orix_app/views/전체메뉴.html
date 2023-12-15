@@ -38,200 +38,22 @@
 <body>
 <div class="wrap main"><!-- [*] main 클래스 어디에 붙을 수 있는지 확인 필요 -->
     <!-- s: header -->
-    <header class="main-header">
-        <div class="logo-area">
-            <h1><a href="#none"><img src="../../resources/images/main/logo.png" alt="Goryo Savings Bank 고려저축은행" /></a></h1>
-        </div>
-        <div class="notify-area">
-            <div class="btn-notify-wrap">
-                <button type="button" class="btn-notify" onclick=""><img src="../../resources/images/main/ico_notify.png" alt="" /></button>
-                <em class="count-flag"><span>3</span></em>
-            </div>
-        </div>
-    </header>
+    
+	<div id="headerWrap">
+		<script>
+		$(document).ready(function(){
+			document.charset="euc-kr";
+			$("#headerWrap").load("./include/inc_main_header.html");
+		});
+		</script>
+	</div>
     <!-- //e: header -->
 
     <!-- s: contentsWrap -->
     <div class="contentsWrap">
         <!-- s: contents -->
-        <div class="contents">
-            <div class="default-wrap"><!-- [D] 좌우 여백 용도 : 다른 클래스와 중복 사용 X -->
-                <section class="welcome-area">
-                    <p class="welcome-txt">
-                        <span>언제나 든든한 내 금융지원군</span>
-                        <strong>GO BANK</strong>에 오신 것을<br>환영합니다
-                    </p>
-                </section>
-                <section class="quick-menu-area">
-                    <ul class="quick-menu-list">
-                        <li><a href="#none">예/적금<br>상품보기</a></li>
-                        <li><a href="#none">통합대출한도<br>조회하기</a></li>
-                    </ul>
-                </section>
-                <section class="quick-service-area">
-                    <h2 class="area-title">빠른 서비스</h2>
-                    <ul class="quick-service-list">
-                        <li><a href="#none">대출이어하기</a></li>
-                        <li><a href="#none">대출전자약정조회</a></li>
-                        <li><a href="#none">대출한도조회</a></li>
-                        <li><a href="#none">계좌개설</a></li>
-                        <li><a href="#none">인증보안</a></li>
-                    </ul>
-                </section>
-                <section class="recom-area">
-                    <h2 class="area-title">GO BANK가 추천해요!</h2>
-                    <!-- <div class="recom-slider-wrap">
-                        슬라이더 영역
-                    </div> -->
-                    <div class="recom-slider-wrap" style="padding-right:20px;">
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide" style="background-color:#AE9CFE;">
-                                    <em class="prd-flag">
-                                        <span>입출금</span>
-                                        <span>모바일전용</span>
-                                    </em>
-                                    <strong class="prd-tit">보고파 파킹통장</strong>
-                                    <p class="prd-desc">
-                                        입출금 자유! 하루만 맡겨도<br>
-                                        확정금리를 드려요
-                                    </p>
-                                    <span class="prd-rate">최고 3.35%</span>
-                                    <span class="prd-obj"><img src="../../resources/images/main/temp_obj_recom01.png" alt=""></span>
-                                    <a href="#none" class="btn-go-link"><span>보고파 파킹통장 둘러보기</span></a>
-                                </div>
-                                <div class="swiper-slide" style="background-color:#FFE2ED;">
-                                    <em class="prd-flag">
-                                        <span>입출금</span>
-                                        <span>모바일전용</span>
-                                    </em>
-                                    <strong class="prd-tit">보고파 파킹통장</strong>
-                                    <p class="prd-desc">
-                                        입출금 자유! 하루만 맡겨도<br>
-                                        확정금리를 드려요
-                                    </p>
-                                    <span class="prd-rate">최고 3.35%</span>
-                                    <span class="prd-obj"><img src="../../resources/images/main/temp_obj_recom02.png" alt=""></span>
-                                    <a href="#none" class="btn-go-link"><span>보고파 파킹통장 둘러보기</span></a>
-                                </div>
-                                <div class="swiper-slide" style="background-color:#D6D6D6;">
-                                    <em class="prd-flag">
-                                        <span>입출금</span>
-                                        <span>모바일전용</span>
-                                    </em>
-                                    <strong class="prd-tit">보고파 파킹통장</strong>
-                                    <p class="prd-desc">
-                                        입출금 자유! 하루만 맡겨도<br>
-                                        확정금리를 드려요
-                                    </p>
-                                    <span class="prd-rate">최고 3.35%</span>
-                                    <span class="prd-obj"><img src="../../resources/images/main/temp_obj_recom03.png" alt=""></span>
-                                    <a href="#none" class="btn-go-link"><span>보고파 파킹통장 둘러보기</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="guide-area">
-                    <h2 class="area-title">처음 오셨나요?</h2>
-                    <ul class="guide-list">
-                        <li>
-                            <a href="#none" class="go-link">고뱅크를 이용하면 이런 점이 좋아요!</a>
-                        </li>
-                        <li>
-                            <a href="#none" class="go-link">고려저축은행 지점 위치가 궁금하세요?</a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="banner-area">
-                    <div class="banner-box">
-                        <p class="banner-tit">
-                            <span>예/적금과 대출, 현명하게 관리하려면</span>
-                            잉여생활자금 계산하고<br>적정 금액을 정해 보세요
-                        </p>
-                        <div class="go-link-wrap"><a href="#none" class="btn-go-link"><span>잉여생활자금계산하기</span></a></div>
-                    </div>
-                </section>
-                <section class="notice-area">
-                    <div class="notice-slider-wrap swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#none">
-                                    <p class="notice-tit">신분증 진위확인 서비스 일시중단 안내 1</p>
-                                    <span class="notice-date">2023.05.04</span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#none">
-                                    <p class="notice-tit">신분증 진위확인 서비스 일시중단 안내 2</p>
-                                    <span class="notice-date">2023.05.04</span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#none">
-                                    <p class="notice-tit">신분증 진위확인 서비스 일시중단 안내 3</p>
-                                    <span class="notice-date">2023.05.04</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="news-area type-spread">
-                    <h2 class="area-title">GO BANK 소식</h2>
-                    <!-- <div class="news-slider-wrap">
-                        슬라이더 영역
-                    </div> -->
-                    <div class="news-slider-wrap swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" style="background:#F2F6FF;">
-                                <a href="#none">
-                                    <em class="news-flag">깜짝퀴즈이벤트</em>
-                                    <strong class="news-tit">고려저축은행 파킹통장 이름은?!</strong>
-                                    <p class="news-desc">
-                                        정답 남기고 버거킹 와퍼 세트 받아가세요<br>
-                                        친구에게 정답을 공유하면 당첨확률 UP!
-                                    </p>
-                                    <div class="news-img-wrap">
-                                        <img src="../../resources/images/main/temp_news_img01.png" alt="" style="width:185px;">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide" style="background:#FFEFF5;">
-                                <a href="#none">
-                                    <em class="news-flag">깜짝퀴즈이벤트 2</em>
-                                    <strong class="news-tit">고려저축은행 파킹통장 이름은?!</strong>
-                                    <p class="news-desc">
-                                        정답 남기고 버거킹 와퍼 세트 받아가세요<br>
-                                        친구에게 정답을 공유하면 당첨확률 UP!
-                                    </p>
-                                    <div class="news-img-wrap">
-                                        <img src="../../resources/images/main/temp_news_img01.png" alt="" style="width:185px;">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide" style="background:#F2F6FF;">
-                                <a href="#none">
-                                    <em class="news-flag">깜짝퀴즈이벤트 3</em>
-                                    <strong class="news-tit">고려저축은행 파킹통장 이름은?!</strong>
-                                    <p class="news-desc">
-                                        정답 남기고 버거킹 와퍼 세트 받아가세요<br>
-                                        친구에게 정답을 공유하면 당첨확률 UP!
-                                    </p>
-                                    <div class="news-img-wrap">
-                                        <img src="../../resources/images/main/temp_news_img01.png" alt="" style="width:185px;">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </section>
-                <ul class="sns-list">
-                    <li><a href="#none">페이스북</a></li>
-                    <li><a href="#none">트위터</a></li>
-                    <li><a href="#none">인스타</a></li>
-                </ul>
-            </div>
+        <div class="contents-wrap">
+			
         </div>
         <!-- //e: contents -->
     </div>
