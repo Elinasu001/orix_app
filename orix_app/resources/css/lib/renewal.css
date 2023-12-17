@@ -622,23 +622,27 @@ iframe { border:none; }
 .logout-area { display:flex; justify-content: space-between; }
 
 .all-menu-header { display:flex; justify-content: space-between; width:100%; height:50px; line-height:50px; }
+.all-menu-header .left-menu p { color:#FFFFFF; }
 .all-menu-header div > a { color:#FFFFFF; }
 /* .all-menu-header > div { display:inline-block; float:right; height:100%; }/ */
 /* .all-menu-header > div > a { display:inline-block; float:left; width:40px; height:100%; font-size:0; } */
 .all-menu-header .right-menu a { font-size:0; }
-.all-menu-header .right-menu a:before { position:absolute; right:0; top:0; padding:0; width:40px; height:40px; font-size:0; }
-.all-menu-header .right-menu a:before { content:""; display:block; width:40px; height:40px;  }
-.all-menu-header .right-menu a.btn-menu-close:before {background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='23' height='23' viewBox='0 0 23 23'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect width='23' height='23' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='반복_그리드_1' data-name='반복 그리드 1' clip-path='url(%23clip-path)'%3E%3Cg id='그룹_36660' data-name='그룹 36660' transform='translate(-893 -1954)'%3E%3Cg id='그룹_36659' data-name='그룹 36659' transform='translate(-77.937 52.063)'%3E%3Cpath id='패스_44601' data-name='패스 44601' d='M0,0H14.877' transform='translate(977.339 1908.339) rotate(45)' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-width='1.7'/%3E%3Cpath id='패스_44602' data-name='패스 44602' d='M0,0H14.877' transform='translate(977.339 1918.858) rotate(-45)' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-width='1.7'/%3E%3C/g%3E%3Crect id='사각형_17011' data-name='사각형 17011' width='23' height='23' transform='translate(893 1954)' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")no-repeat; }
+.all-menu-header .right-menu a:before {  content:""; position:absolute; right:0; top:25%; padding:0; width:25px; height:25px; font-size:0; }
+.all-menu-header .right-menu a.btn-menu-close:before {background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='23' height='23' viewBox='0 0 23 23'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect width='23' height='23' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='반복_그리드_1' data-name='반복 그리드 1' clip-path='url(%23clip-path)'%3E%3Cg id='그룹_36660' data-name='그룹 36660' transform='translate(-893 -1954)'%3E%3Cg id='그룹_36659' data-name='그룹 36659' transform='translate(-77.937 52.063)'%3E%3Cpath id='패스_44601' data-name='패스 44601' d='M0,0H14.877' transform='translate(977.339 1908.339) rotate(45)' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-width='1.7'/%3E%3Cpath id='패스_44602' data-name='패스 44602' d='M0,0H14.877' transform='translate(977.339 1918.858) rotate(-45)' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-width='1.7'/%3E%3C/g%3E%3Crect id='사각형_17011' data-name='사각형 17011' width='23' height='23' transform='translate(893 1954)' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")no-repeat; cursor:pointer; }
 
 /* top-menu */
 .top-menu .top-icon { display:flex; flex-direction:row; justify-content:space-between; width:100%; padding:20px 0; text-align:center;  }
 .top-menu .top-icon li { position:relative;  width:100%; padding-top:55px;  }
 .top-menu .top-icon li > a { display:flex; justify-content:center; color:#333333; font-size:0.75rem;  line-height:0.875rem; }
-.top-menu .top-icon li > a::before { content:''; display:inline-block; position:absolute; top:0; width:40px; height:40px; border-radius:50%; }
+.top-menu .top-icon li > a::before { content:''; position:absolute; top:0; width:40px; height:40px; border-radius:50%; }
 .top-menu .top-icon li.alarm > a::before { background: url('../../images/common/ico_alarm.png')no-repeat #F4F4F4 50%/26px auto; }
 .top-menu .top-icon li.loanProgress > a::before { background: url('../../images/common/ico_loanProgress.png')no-repeat #F4F4F4 50%/26px auto;  }
 .top-menu .top-icon li.doorSales > a::before { background: url('../../images/common/ico_doorSales.png')no-repeat #F4F4F4 50%/26px auto; }
 .top-menu .top-icon li.settlement > a::before { background: url('../../images/common/ico_settlement.png')no-repeat #F4F4F4 50%/26px auto; }
+/* .top-menu .top-icon li.alarm > a::after { content:''; position:absolute; border:3px solid #FF0000; transform:translate(-50%,-50%); top:25px; right:25%; top:25px; right:25px; border-radius:50%; } */
+.alarm-flag { position: relative; }
+.alarm-flag:before { content:''; position:absolute; top:-45px; right:-26px; width:5px; height:5px; border-radius:50%; box-sizing:content-box; background:#FF0000; }
+
 
 /* tab-slinemenu */
 .tab-slidemenu.bg-bor { overflow:hidden; border-top:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; }
