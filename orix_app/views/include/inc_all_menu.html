@@ -49,6 +49,7 @@
 			</ul>
 		</div> -->
 		<div class="tab-slidemenu bg-bor">
+			<!-- <div>#최근 사용한 메뉴</div> -->
 			<ul>
 				<li><a href=""><a>심사결과조회</a></li>
 				<li><a href=""><a>대출진행현황</a></li>
@@ -67,7 +68,8 @@
 		
 		<div class="all-menu-area">
 			<ul class="menuArea">
-				<li class="on"><a href="#none" data-focus="myBanking" >중고승용 오토론</a></li>
+				<li class="on"><a href="#none" data-focus="recent" >최근 사용한 메뉴</a></li>
+				<li class=""><a href="#none" data-focus="myBanking" >중고승용 오토론</a></li>
 				<li><a href="#none" data-focus="lone">재고금융</a></li>
 				<li><a href="#none"  data-focus="deposit">신자할부/대출</a></li>
 				<li><a href="#none"  data-focus="deposit">일반기계</a></li>
@@ -80,8 +82,36 @@
 			</ul>
 			<div class="scroll-wrap">
 				<ul class="listArea">
-					<li class="myBanking on">
+					<li class="recent on">
 						<ul class="depth">
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+						</ul>
+					</li>
+					<li class="myBanking">
+						<ul class="depth">
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+							<li><a href="#">가가가</a></li>
+
 							<li><a href="#">신용조회동의 요청</a></li>
 							<li><a href="#">시세조회 및 심사요청</a></li>
 							<li><a href="#">서류제출 및 판매사정보입력</a></li>
@@ -376,24 +406,15 @@
 				<!-- //e: 검색 결과 영역 -->
 		</div>
 	</div>
-
+	
 </div>
 <!-- e:menuWrap -->
 
 <script>
 		
 /** 전체 메뉴 **/
-$(document).ready(function() {
-  $('.btn-menu').on('click', function() {
-      $('#menuWrap').addClass('menu-open');
-  });
 
-  $('.btn-menu-close').on('click', function() {
-      $('#menuWrap').removeClass('menu-open');
-  });
-});
-
-/** 전체 메뉴  menuArea **/
+// menuArea
 $(".menuArea > li > a").on("click", function () {
 	var $this = $(this).parent("li");
 	target = $(this).attr("data-focus");
@@ -402,5 +423,25 @@ $(".menuArea > li > a").on("click", function () {
 
 	$this.addClass("on");
 	$(".listArea > li."+target).addClass("on");
+
+	$(".scroll-wrap").scrollTop(0);
 });
+
+
+
+// menu open, close
+$(document).ready(function() {
+  $('.btn-menu').on('click', function() {
+    $('#menuWrap').addClass('menu-open');
+	  
+  });
+
+  $('.btn-menu-close').on('click', function() {
+      $('#menuWrap').removeClass('menu-open');
+  });
+});
+
+
+
+
 </script>

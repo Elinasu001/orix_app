@@ -667,11 +667,11 @@ iframe { border:none; }
 .menuArea a { position:relative; z-index:2; display:block; width:100%; padding:20px 0; color:#333; text-indent:20px;  font-size:0.8rem; font-weight:bold; }
 .menuArea li.on a {  color:#333333; }
 
-.scroll-wrap { flex:1; position:relative; overflow-y:auto; height:100vh; }
+.scroll-wrap { flex:1; position:relative; overflow-y:scroll; height:100%; }
 .scroll-wrap li { border-bottom:1px solid #EAEAEA; }
 .scroll-wrap a { display:block; padding:15px 0; color:#666; font-size:0.9rem; }
 
-.listArea { width:100%; height:100%; margin:20px 0;  padding:0 0 0 30px; }
+.listArea { width:100%; height:500px; margin:20px 0;  padding:0 0 0 30px; }
 .listArea > li { display:none; }
 .listArea > li.on { display:block; }
 .depth li:first-child > a { padding-top:0; }
