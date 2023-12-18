@@ -113,10 +113,10 @@ button,
 [type="submit"] { -webkit-appearance:button; }
 
 
-button::-moz-focus-inner,
+/* button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner { padding:0; border-style:none; }
+[type="submit"]::-moz-focus-inner { padding:0; border-style:none; } */
 
 input[type="radio"],
 input[type="checkbox"] { box-sizing: border-box; padding: 0; }
@@ -180,6 +180,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .btn.btn-research { z-index:1; position:absolute; padding:10px; top:10px; right:10px; cursor:pointer; font-weight:500; color:#FFFFFF; border:1px solid #7A78FF; background-color:#7A78FF; }
 
 /** input **/
+input::placeholder { color:#B2B2B2; }
 .form-wrap { margin-top:20px; }
 .form-group .form-tit { display:inline-block; margin-bottom:10px; color:#757575; font-size:0.89rem; font-weight:400;}
 .form-group + .form-group { margin-top:20px; }
