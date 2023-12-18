@@ -298,7 +298,7 @@ input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"
 .layerpopup { position:absolute; display:none; overflow-y:auto; width:91.25%;  z-index:22; background:#fff; -webkit-overflow-scrolling:touch; outline:none; }
 .layerpopup.has-button .default-wrap { padding-bottom:40px; }
 .layerpopup .btn-layer-close { position:absolute; top:20px; right:20px; z-index:22; width:24px; height:24px; border:none; background:url("../../images/common/ic_btn_close.png") no-repeat 50%/24px auto; text-indent:-9999px; }
-.layerpopup .btn-layer-close:after { content:''; position:absolute; top:50%; left:50%; width:150%; height:150%; transform:translate(-50%, -50%); }
+/* .layerpopup .btn-layer-close:after { content:''; position:absolute; top:50%; left:50%; width:150%; height:150%; transform:translate(-50%, -50%); } 필요없음 */
 .layerpopup .btn-wrap button { margin:0; }
 
 /** 레이어 풀팝업 **/
@@ -323,14 +323,22 @@ input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"
 
 
 /** 알럿팝업 **/
-.layerpopup.type-alert{border:none;border-radius:3px;box-shadow:0 4px 8px 0 rgba(0,0,0,0.50); }
-.layerpopup.type-alert .pop-con-wrap{padding:40px 20px 10px 20px;text-align:center;}
+.layerpopup.type-alert{border:none; border-radius:3px; box-shadow:0 4px 8px 0 rgba(0,0,0,0.50); }
+.layerpopup.type-alert .pop-con-wrap{padding:40px 20px 10px 20px; width:100%; text-align:center; border-radius: 20px 20px 0 0; }
 .layerpopup.type-alert .pop-con{font-size:1rem;color:#333333;}
 .layerpopup.type-alert .pop-btn-wrap{display:block;}
 .layerpopup.type-alert .pop-btn-wrap .col{float:left;}
 .layerpopup.type-alert .pop-btn-wrap .col:first-child{width:40%;}
 .layerpopup.type-alert .pop-btn-wrap .col:last-child{width:60%;}
 .layerpopup.type-alert .pop-btn-wrap .col:first-child:last-child{width:100%;}
+
+/* 2023.12.18 이솔 추가 */
+.layerpopup.type-alert .pop-con-wrap { z-index:999; position:absolute; left:50%; bottom:0; background:#fff; transform:translate(-50%,0); }
+.layerpopup.type-alert .pop-con-wrap .pop-header { padding-bottom:30px; text-align:left; }
+.layerpopup.type-alert .pop-con-wrap .pop-header .pop-title { padding-bottom:10px; }
+.layerpopup.type-alert .pop-btn-wrap { display:flex; }
+.layerpopup.type-alert .pop-btn-wrap .btn + .btn { margin-left: 10px; }
+.layerpopup.type-alert .pop-btn-wrap .btn-primary.btn-layer-close { position:unset; width:100%; height:auto; text-indent:unset; color:#FFF; background-image:none; background-color:#B095DC; border-color:#B095DC; }
 
 /** 하단노출 레이어팝업 - 바텀시트 **/
 .layer-up { display:none; overflow:hidden; position:fixed; left:0 !important; right:0 !important; top:auto !important; bottom:0; /*z-index:105;*/ z-index:100; width:100%; padding-bottom:0px; border-radius:20px 20px 0 0; box-sizing:border-box; background:#fff; }
