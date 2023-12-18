@@ -60,8 +60,8 @@ header .left-menu  { left:0; }
 header .right-menu { right:0; }
 header .left-menu a:before,
 header .right-menu a:before { content:""; display:block; width:40px; height:40px; }
-header .left-menu a.btn-prev::before {  background:url(../../images/header/heder_pre.png) no-repeat 50%/24px auto; }
-header .right-menu a.btn-menu::before { background:url(../../images/header/header_menu.png) no-repeat 50%/24px auto; }
+header .left-menu a.btn-prev::before {  background:url(../../images/header/heder_pre.svg) no-repeat 50%/24px auto; }
+header .right-menu a.btn-menu::before { background:url(../../images/header/header_menu.svg) no-repeat 50%/24px auto; }
 header h1.center { overflow:hidden; margin:0; padding:0; font-size:1rem; font-weight:500; line-height:40px; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
 header h1.logo:before { content:""; display:block; width:84px; height:40px; background: url(../../images/header/header_logo.png) no-repeat 50%/64px auto; }
 
@@ -612,7 +612,8 @@ iframe { border:none; }
 /** 전체메뉴 **/
 .wrap { overflow-y:hidden; height:100%; }
 
-.menuWrap { position:fixed; left:0; top:0; z-index:100; width:100%; height:100%; overflow:hidden; background:#fff; }
+#menuWrap { position:fixed; top:0; right:-100%; width:100%; height:100%; background-color:#FFFFFF; transition:right 0.3s ease-in-out; z-index:1000; }
+.menu-open { right:0px !important; }
 .all-menu-wrap { width:100%; height:100%; }
 .all-menu-wrap > div { width:100%; }
 .all-menu-info { background:#B095DC; padding:0 20px 20px;}
@@ -627,8 +628,8 @@ iframe { border:none; }
 /* .all-menu-header > div { display:inline-block; float:right; height:100%; }/ */
 /* .all-menu-header > div > a { display:inline-block; float:left; width:40px; height:100%; font-size:0; } */
 .all-menu-header .right-menu a { font-size:0; }
-.all-menu-header .right-menu a:before {  content:""; position:absolute; right:0; top:25%; padding:0; width:25px; height:25px; font-size:0; }
-.all-menu-header .right-menu a.btn-menu-close:before {background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='23' height='23' viewBox='0 0 23 23'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect width='23' height='23' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='반복_그리드_1' data-name='반복 그리드 1' clip-path='url(%23clip-path)'%3E%3Cg id='그룹_36660' data-name='그룹 36660' transform='translate(-893 -1954)'%3E%3Cg id='그룹_36659' data-name='그룹 36659' transform='translate(-77.937 52.063)'%3E%3Cpath id='패스_44601' data-name='패스 44601' d='M0,0H14.877' transform='translate(977.339 1908.339) rotate(45)' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-width='1.7'/%3E%3Cpath id='패스_44602' data-name='패스 44602' d='M0,0H14.877' transform='translate(977.339 1918.858) rotate(-45)' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-width='1.7'/%3E%3C/g%3E%3Crect id='사각형_17011' data-name='사각형 17011' width='23' height='23' transform='translate(893 1954)' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")no-repeat; cursor:pointer; }
+.all-menu-header .right-menu a:before {  content:""; position:absolute; right:0; top:25%; padding:0; width:24px; height:24px; font-size:0; }
+.all-menu-header .right-menu a.btn-menu-close:before { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='40' height='40' viewBox='0 0 40 40'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_3428' data-name='사각형 3428' width='24' height='24' transform='translate(333 13)' fill='%23cccee4'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='menu-area' transform='translate(-325 -5)'%3E%3Crect id='ico-menu-header-area' width='40' height='40' transform='translate(325 5)' fill='%23cccee4' opacity='0'/%3E%3Cg id='ic-close-header' transform='translate(333 13)'%3E%3Cg id='ico-menu-header' transform='translate(-333 -13)' clip-path='url(%23clip-path)'%3E%3Cg id='그룹_33768' data-name='그룹 33768' transform='translate(1.248 1.248)'%3E%3Cg id='그룹_1' data-name='그룹 1' transform='translate(338 18)'%3E%3Cline id='선_113' data-name='선 113' x2='12' y2='12' transform='translate(-0.248 -0.248)' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='1.5'/%3E%3C/g%3E%3Cg id='그룹_33767' data-name='그룹 33767' transform='translate(338 18)'%3E%3Cline id='선_113-2' data-name='선 113' x1='12' y2='12' transform='translate(-0.248 -0.248)' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='1.5'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E")no-repeat center; cursor:pointer; }
 
 /* top-menu */
 .top-menu .top-icon { display:flex; flex-direction:row; justify-content:space-between; width:100%; padding:20px 0; text-align:center;  }
@@ -667,3 +668,20 @@ iframe { border:none; }
 .listArea > li.on { display:block; }
 .depth li:first-child > a { padding-top:0; }
 
+
+
+/** bottom-menu **/
+/** 바텀메뉴 **/
+.bottom-menu-area { position:fixed; bottom:0; left:0; z-index:9; width:100%; height:68px; border-top:1px solid #EEECF8; background:#fff; padding-bottom: constant(safe-area-inset-bottom); padding-bottom: env(safe-area-inset-bottom); }
+.bottom-menu-list { font-size:0; height:100%; display:flex;  }
+.bottom-menu-list li {  padding-top:10px; padding-bottom:15px; text-align:center; width:100%; height:100%; }
+.bottom-menu-list li a { color:#959DA8; font-size:0.66667rem; line-height:1.58334;  }
+.bottom-menu-list li.on a { color:#260F54; }
+.bottom-menu-list a:before { content:''; display:block; width:100%;  height:26px;  background:url('../images/main/ico_bottom-menu_01.png') no-repeat 50%/ 24px auto; }
+.bottom-menu-list li.on a:before { background-image:url('../images/main/ico_bottom-menu_01_on.png'); }
+.bottom-menu-list li:nth-child(2) a:before { background-image:url('../images/main/ico_bottom-menu_02.png'); }
+.bottom-menu-list li:nth-child(2).on a:before { background-image:url('../images/main/ico_bottom-menu_02_on.png'); }
+.bottom-menu-list li:nth-child(3) a:before { background-image:url('../images/main/ico_bottom-menu_03.png'); }
+.bottom-menu-list li:nth-child(3).on a:before { background-image:url('../images/main/ico_bottom-menu_03_on.png'); }
+.bottom-menu-list li:nth-child(4) a:before { background-image:url('../images/main/ico_bottom-menu_04.png'); }
+.bottom-menu-list li:nth-child(4).on a:before { background-image:url('../images/main/ico_bottom-menu_04_on.png'); }

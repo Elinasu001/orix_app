@@ -1,17 +1,6 @@
 
 $(document).ready(function() {
 
-  /** 전체 메뉴 **/
-  $(".menuArea > li > a").on("click", function () {
-		var $this = $(this).parent("li");
-		target = $(this).attr("data-focus");
-		$(".menuArea > li").removeClass("on");
-		$(".listArea > li").removeClass("on");
-
-		$this.addClass("on");
-		$(".listArea > li."+target).addClass("on");
-	});
-
   /**  3자리 수마다 콤마 적용 **/
   $(document).on('keyup', 'input[inputmode=numeric]', function (event) {
     this.value = this.value.replace(/[^0-9]/g, ''); // 입력값이 숫자가 아니면 공백
@@ -72,7 +61,6 @@ $(document).ready(function() {
     var dmTotalNum	= $(".level3 .check").length;
     var dmCheckNum = $(".level3 .check:checked").length;
    
-    /*s : 2023-12-12 추가*/
     var terms_id = $(this).attr("terms-pop"); // Get the ID of the clicked element
     // $("#" + terms_id).show(); // Show the associated popup with the same ID when the element is clicked
     
@@ -144,7 +132,7 @@ $(document).ready(function() {
 function layerFunc(_target) {
 
   if (_target.hasClass('laypop-all')) {
-    //전체풀팝업일경우 dimmed 생기지않음 2020-04-10
+    //전체풀팝업일경우 dimmed 생기지않음
 
   } else {
     if (_target.outerHeight() > $(window).height()) {
@@ -290,6 +278,7 @@ function getCenterAlignPos(containerSize, targetSize) {
   var pos = (containerSize - targetSize) / 2;
   return pos;
 }
+
 
 
 
