@@ -519,15 +519,19 @@ $(".menuArea > li > a").on("click", function () {
 });
 
 $(".scroll-wrap").on("scroll", function () {
-    var listItems = $(".listArea > li");
+    var $listItems = $(".listArea > li");
+    var $menuItems = $(".menuArea > li");
 
-    listItems.each(function () {
-        var targetClass = $(this).attr("class");
+    $listItems.each(function () {
         var $targetElement = $(this).find(".depth dt");
 
         if ($targetElement.length && isElementInViewport($targetElement[0])) {
-            $(".menuArea > li").removeClass("on");
-            $(".menuArea > li").find('a[data-focus="' + targetClass + '"]').parent("li").addClass("on");
+            // Remove 'on' class from all menu items
+            $menuItems.removeClass("on");
+
+            // Get the target class and add 'on' class to the corresponding menu item
+            var targetClass = $(this).attr("class");
+            $menuItems.find('a[data-focus="' + targetClass + '"]').parent("li").addClass("on");
         }
     });
 });
@@ -561,9 +565,10 @@ $(document).ready(function() {
 
 </script>
 <style>
+	.scroll-wrap { height:100vh; }
     .listArea > li { display:block; }
     .listArea > li.on { display: block; }
-    .listArea { margin-top:0; }
+    .listArea { height:100%; margin-top:0; }
     .scroll-wrap dl dd { border-bottom:1px solid #EAEAEA; }
     .scroll-wrap dl dt:first-child a { padding:20px 0; }
     .scroll-wrap dl dt a { color:#000000; font-size:1rem; font-weight:700; }
