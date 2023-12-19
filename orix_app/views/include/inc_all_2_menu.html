@@ -518,34 +518,17 @@ $(".menuArea > li > a").on("click", function () {
     }
 });
 
-$(".scroll-wrap").on("scroll", function () {
-    var $listItems = $(".listArea > li");
-    var $menuItems = $(".menuArea > li");
-
-    $listItems.each(function () {
-        var $targetElement = $(this).find(".depth dt");
-
-        if ($targetElement.length && isElementInViewport($targetElement[0])) {
-            // Remove 'on' class from all menu items
-            $menuItems.removeClass("on");
-
-            // Get the target class and add 'on' class to the corresponding menu item
-            var targetClass = $(this).attr("class");
-            $menuItems.find('a[data-focus="' + targetClass + '"]').parent("li").addClass("on");
-        }
-    });
-});
 
 // Function to check if element is in viewport
-function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
+// function isElementInViewport(el) {
+//     var rect = el.getBoundingClientRect();
+//     return (
+//         rect.top >= 0 &&
+//         rect.left >= 0 &&
+//         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+//     );
+// }
 
 
 // menu open, close
@@ -567,8 +550,8 @@ $(document).ready(function() {
 <style>
     .listArea > li { display:block; }
     .listArea > li.on { display: block; }
-    .listArea {  margin-top:0; }
-	.scroll-wrap{  }
+    .listArea {  margin-top:0; margin-bottom:300px; }
+	.listArea li + li { margin-top:30px; }
     .scroll-wrap dl dd { border-bottom:1px solid #EAEAEA; }
     .scroll-wrap dl dt:first-child a { padding:20px 0; }
     .scroll-wrap dl dt a { color:#000000; font-size:1rem; font-weight:700; }
