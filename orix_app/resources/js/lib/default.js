@@ -224,20 +224,19 @@ function openPopupUp(id) {
   });
 
   if (_target.has('.ly-select-list').length > 0) {
-    _target.find('.ly-select-list > li > button').not('.ly-select-list.non-click > li > button').on('click', function () {
-      // Get the text of the clicked list item
+    _target.find('.ly-select-list > li > button').on('click', function () {
+      
       var selectedText = $(this).text();
       
-      // Apply the selected text to a specific location, for example, a div with ID 'selectedText'
-      $('.form-control.select span').text(selectedText);
+      $('[onclick="openPopupUp(\'' + id + '\')"]').closest('.form-control.select').find('span').text(selectedText);
       
       closePopupUp(id);
       $('body').removeAttr('style');
       $(window).scrollTop(currentTop);
       _target.removeClass('show');
     });
-    
   }
+
   if (_target.has('.ly-acc-select').length > 0) {
     _target.find('.ly-acc-select > .acc-list-area > a').on('click', function (e) {
       closePopupUp(id);

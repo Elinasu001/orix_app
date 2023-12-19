@@ -105,7 +105,7 @@
                         <label for="user_resi_number">휴폰폰 번호2</label>
                         <div class="form-row" id="user_resi_number">
                             <div class="col-3">
-                                <div class="form-control select"  onclick="openPopupUp('lySel')"  tabindex="0">
+                                <div class="form-control select"  onclick="openPopupUp('lySel1')"  tabindex="0">
                                     <a href="#none" tabindex="-1"><span>통신사</span></a>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@
 
                     <div class="form-group">
                         <label for="user_phone">휴대폰 번호</label>
-                        <div class="form-control select"  onclick="openPopupUp('lySel')"  tabindex="0">
+                        <div class="form-control select"  onclick="openPopupUp('lySel2')"  tabindex="0">
                             <a href="#none" tabindex="-1"><span>통신사 선택</span></a>
                         </div>
                         <input id="user_phone" type="tel" name="phone" class="form-control" maxlength="11"
@@ -340,7 +340,7 @@
 </html>
 
 <!--//휴대폰팝업-->
-<div id="lySel" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+<div id="lySel1" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
     <div class="content-wrap">
         <div class="pop-header">
             <h2 class="pop-title">통신사 선택</h2>
@@ -359,3 +359,22 @@
     </div>
 </div>
 <!--휴대폰팝업//-->
+
+<div id="lySel2" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">통신사 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>SKT</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                <li><button>KT</button></li>
+                <li><button>LG</button></li>
+                <li><button>알뜰폰 SK</button></li>
+                <li><button>알뜰폰 KT</button></li>
+                <li><button>알뜰폰 LG</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
