@@ -182,6 +182,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /** input **/
 input::placeholder { color:#B2B2B2; }
 .form-wrap { margin-top:20px; }
+/* .form-group.flex:not(.form-group .form-tit) { display:flex; margin-bottom:10px; }/ */
 .form-group .form-tit { display:inline-block; margin-bottom:10px; color:#757575; font-size:0.89rem; font-weight:400;}
 .form-group + .form-group,
 .text-area { margin-top:20px; }
@@ -203,9 +204,8 @@ input::placeholder { color:#B2B2B2; }
 .form-control:invalid { border-color:#dc3545; }
 
 /* input-group */
-.input-group { margin-bottom:10px; }
-.input-group { position:relative; display:-ms-flexbox; display:flex; -ms-flex-wrap:wrap; flex-wrap:wrap; -ms-flex-align:stretch; align-items:stretch; width:100%; }
-.input-group > .form-control { position:relative; -ms-flex:1 1 auto; flex:1 1 auto; width:1%; margin-bottom:0; }
+.input-group { display:-ms-flexbox; display:flex; -ms-flex-wrap:wrap; flex-wrap:wrap; -ms-flex-align:stretch; align-items:stretch; width:100%; margin-bottom:10px;; }
+.input-group > .form-control { -ms-flex:1 1 auto; flex:1 1 auto; width:1%; margin-bottom:0; }
 .input-group > .form-control + .form-control{ margin-left:-1px; }
 .input-group > .form-control:focus {   z-index:3; }
 
