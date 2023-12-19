@@ -311,7 +311,7 @@ body {
 }
 
 .container .header {
-    position: fixed;
+    /* position: fixed; */
     z-index: 99999;
     width: 100%;
     background: var(--sub-clr);
@@ -322,7 +322,6 @@ body {
 
 .container .cont {
     padding: 20px;
-    margin-top: 100px;
 }
 
 .progressArea {
