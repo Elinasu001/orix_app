@@ -285,15 +285,13 @@ function getCenterAlignPos(containerSize, targetSize) {
 //   $('accordion .accordion-cont').siblings.removeClass('.on');
 // })
 
-$(document).ready(function(){
-  $('.accordion > .button').on('click', function(){
-      // this : 이벤트가 발생환 주체
-    $('.accordion-cont').toggleClass('on');
-  })
-})
 
-
-
+$(document).ready(function() {
+  $('.accordion .button').click(function() {
+      var accordionCont = $(this).next('.accordion-cont');
+      accordionCont.toggleClass('on');
+  });
+});
 
 
 

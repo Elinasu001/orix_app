@@ -61,25 +61,25 @@
             <div class="contents-wrap">
                 <section>
                     <div class="accordion-item">
-                        <div class="accordion" id="accordion">
-                            <button class="button select">· 고객 정보 입력</button>
-                            <div id="menu1" class="accordion-cont">
-    
+                        <div class="accordion">
+                            <button type="button"  class="button select">· 고객 정보 입력</button>
+                            <div class="accordion-cont">
+                                <p>내용을 추가해주세요</p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <div class="accordion" id="accordion">
-                            <button class="button select">· 방문판매원 정보 입력</button>
-                            <div id="menu1" class="accordion-cont">
-    
+                        <div class="accordion" >
+                            <button type="button"  class="button select">· 방문판매원 정보 입력</button>
+                            <div class="accordion-cont">
+                                <p>내용을 추가해주세요</p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <div class="accordion" id="accordion">
-                            <button class="button select">· 방문판매 정보</button>
-                            <div id="menu1" class="accordion-cont">
+                        <div class="accordion">
+                            <button type="button"  class="button select">· 방문판매 정보</button>
+                            <div  class="accordion-cont">
                                 <div class="form-group">
                                     <label for="user_phone">상품구분</label>
                                     <div class="form-control select" onclick="openPopupUp('lySel')" tabindex="0">
@@ -124,10 +124,5 @@
 </div>
 <!--금융상품팝업//-->
 <script>
-    $(document).ready(function(){
-  $('.accordion > .button').on('click', function(){
-      // this : 이벤트가 발생환 주체
-    $('.accordion-cont').toggleClass('on');
-  })
-})
+ 
 </script>
