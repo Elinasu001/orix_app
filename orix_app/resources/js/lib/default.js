@@ -8,30 +8,38 @@ $(document).ready(function() {
     this.value = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규식을 이용해서 3자리 마다 , 추가
   });
 
-  /** table 의 checkbox **/
-  // 클래스 'custom-check'를 사용하여 모든 "checkbox"를 가져옴.
-  var checkboxes = document.querySelectorAll('input[type="checkbox"].custom-check');
-  // 각 "checkbox"에 'change' event listener 추가.
-  checkboxes.forEach(function(checkbox) {
-    checkbox.addEventListener('change', function() {
-        // checked되면
-        if (this.checked) {
-          // 'tbody'에서 가장 가까운 'tr'(테이블 행)을 구함.
-          var closestTr = this.closest('tr');
-          if (closestTr) {
-              // 가장 가까운 'tr'에 'checked' 클래스를 추가.
-              closestTr.classList.add('checked');
-          }
-        } else {
-          // 이 선택하지 않으면 가장 가까운 'tr'에서 'checked' 클래스를 제거.
-          var closestTr = this.closest('tr');
-          if (closestTr) {
-              closestTr.classList.remove('checked');
-          }
-        }
+  // /** table 의 checkbox **/
+  // // 클래스 'custom-check'를 사용하여 모든 "checkbox"를 가져옴.
+  // var checkboxes = document.querySelectorAll('input[type="checkbox"].custom-check');
+  // // 각 "checkbox"에 'change' event listener 추가.
+  // checkboxes.forEach(function(checkbox) {
+  //   checkbox.addEventListener('change', function() {
+  //       // checked되면
+  //       if (this.checked) {
+  //         // 'tbody'에서 가장 가까운 'tr'(테이블 행)을 구함.
+  //         var closestTr = this.closest('tr');
+  //         if (closestTr) {
+  //             // 가장 가까운 'tr'에 'checked' 클래스를 추가.
+  //             closestTr.classList.add('checked');
+  //         }
+  //       } else {
+  //         // 이 선택하지 않으면 가장 가까운 'tr'에서 'checked' 클래스를 제거.
+  //         var closestTr = this.closest('tr');
+  //         if (closestTr) {
+  //             closestTr.classList.remove('checked');
+  //         }
+  //       }
+  //   });
+  // });
+
+  // /** table 의 checkbox **/
+  $(document).ready(function() {
+    $('.table-type tbody tr').on('click', function() {
+        $(this).toggleClass('checked');
+        var checkbox = $(this).find('.custom-check');
+        checkbox.prop('checked', !checkbox.prop('checked'));
     });
   });
-
 
   /** 전체동의**/
   $('.check.all').on('click',  function() {
