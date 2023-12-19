@@ -180,6 +180,10 @@
                         </div>
                     </div>
 
+                    <div class="form-group" onclick="openPopupUp('lySel3')">
+                        <input type="text" id="" class="form-control" placeholder="신용조회 동의완료 고객 선택" aria-label="" aria-describedby="" inputmode="search"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
+                        <button class="btn btn-txt-select" type="button" >선택</button>
+                    </div>
 
                     <div class="form-group">
                         <!-- <label for="search">신용조회 동의완료 고객 선택</label> -->
@@ -338,6 +342,25 @@
 
 
 </html>
+<div id="lySel" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">통신사 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>SKT</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                <li><button>KT</button></li>
+                <li><button>LG</button></li>
+                <li><button>알뜰폰 SK</button></li>
+                <li><button>알뜰폰 KT</button></li>
+                <li><button>알뜰폰 LG</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 
 <!--//휴대폰팝업-->
 <div id="lySel1" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
@@ -378,3 +401,82 @@
         </div>
     </div>
 </div>
+
+<!--//선택팝업-->
+<div id="lySel3" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">고객 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="form-group img-search">
+            <input type="search" id="search" class="form-control" placeholder="" aria-label="Search Addresses" aria-describedby="user-search" inputmode="search"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
+            <!-- <div class="input-group-prepend"></div> -->
+            <!-- <button class="btn btn-clear outline-secondary" type="reset"></button> -->
+            <button class="btn btn-search outline-secondary" type="button">검색</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <div class="table-type table-row table-scroll check">
+                <table class="">
+                    <caption>신용조회 동의 완료 고객 선택 테이블</caption>
+                    <colgroup>
+                        <!-- <col width="*%"> -->
+                        <col width="50%">
+                        <col width="50%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <!-- <th></th> -->
+                            <th scope="row">고객명</th>
+                            <th scope="row">연락처</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <!-- <td ><input type="checkbox" name="user_checkbox" id="check1" class="custom-check"><label for="check1"></label></td> -->
+                            <td class="name">홍길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="user_checkbox" id="check2" class="custom-check"><label for="check2"></label></td> -->
+                            <td class="name">김길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
+                            <td class="name">박길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
+                            <td class="name">송길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
+                            <td class="name">진길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
+                            <td class="name">황길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
+                            <td class="name">민길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
+                            <td class="name">오길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--선택팝업//-->

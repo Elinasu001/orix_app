@@ -249,15 +249,15 @@ function openPopupUp(id) {
     _target.removeClass('show');
   });
 
-  // if (_target.has('.ly-acc-select').length > 0) {
-  //   _target.find('.ly-acc-select > .acc-list-area > a').on('click', function (e) {
-  //     closePopupUp(id);
-  //     $('body').removeAttr('style');
-  //     $(window).scrollTop(currentTop);
-  //     _target.removeClass('show');
-  //     e.preventDefault();
-  //   });
-  // }
+  if (_target.has('.ly-acc-select').length > 0) {
+    _target.find('.ly-acc-select > .acc-list-area > a').on('click', function (e) {
+      closePopupUp(id);
+      $('body').removeAttr('style');
+      $(window).scrollTop(currentTop);
+      _target.removeClass('show');
+      e.preventDefault();
+    });
+  }
 }
 
 function closePopup(id) {
