@@ -170,7 +170,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 /* btn-search */
 .btn.btn-search:focus { border-left:1px solid #ced4da; }
-.btn.btn-search { z-index:3; position:absolute; top:0; right:0; width:45px; height:45px; padding:0 25px; border:none; /*border-top-left-radius:0; border-bottom-left-radius:0;*/font-size:0;  background:url(../../images/common/ic_search.png) no-repeat #7A78FF center 50%/24px auto; }
+.btn.btn-search { z-index:3; position:absolute; top:0; right:0; width:45px; height:43px; padding:0 25px; border:none; /*border-top-left-radius:0; border-bottom-left-radius:0;*/font-size:0;  background:url(../../images/common/ic_search.png) no-repeat #B095DC center 50%/24px auto; }
 
 .btn.btn-txt-search { margin-left:10px; padding:0 14px; min-height:44px; border:none; font-size:0.8rem; color:#FFFFFF; background-color:#86B9E5;/*background:url(../../images/common/ico_orix_search.png) no-repeat #7A78FF center 50%/24px auto;*/ }
 .btn.btn-txt-img-search { padding:5px 10px; min-height:28px; border:none; font-size:0.8rem; color:#FFFFFF; background-color:#86B9E5; }
@@ -376,6 +376,9 @@ input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"
 .layerpopup .ly-select-list + div .sub-title { padding-top:30px; }
 .layerpopup .txtbox-wrap { color:#666666; }
 
+/* 선택 검색 팝업 */
+.layerpopup .form-group.img-search { margin-bottom:10px; padding:0 20px 20px 20px; }
+.layerpopup .btn.btn-search { right:20px; }
 
 /** _스크롤 컨텐츠 레이어 **/
 .layer-up .ly-scroll-con { overflow:hidden; overflow-y:auto; max-height:287px; padding:0 20px 10px; }

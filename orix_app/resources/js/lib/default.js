@@ -43,6 +43,7 @@ $(document).ready(function() {
     // tr row
     $('.table-type tbody tr').on('click', function() {
         var checkbox = $(this).find('.custom-check');
+        
         checkbox.prop('checked', !checkbox.prop('checked')).change();
     });
   });
@@ -177,7 +178,7 @@ function deleteBlock(_full) {
     $('.block').fadeOut(300);
     $('.block').remove();
   }
-  $('body, html, .wrap').css({ 'height': '', 'overflow': '' });
+  $('html, .wrap').css({ 'height': '', 'overflow': '' });
   $('body').removeAttr('style');
   $(window).scrollTop(winScrollTop);
 }
