@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>오릭스캐피탈 | app worklist</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keyword" content="">
+    <meta name="description" content="ia, worklist">
+    <meta name="author" content="kys">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="./resources/css/lib/worklist.css" />
+    <script src="./resources/js/lib/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="container">
+
+            <div class="header">
+                <h1>오릭스캐피탈 - app worklist</h1>
+                <ul>
+                    <li>프로젝트 기간 : 2023.11.27 ~ (퍼블 투입)</li>
+                    <!-- <li><span id="delCnt"></span> / <span id="compCnt"></span> (loan / renewal)</li> -->
+                    <li>
+                        <h3>전체페이지 나온 이후 수정진척률 확인용</h3>
+                        <span id="wipCnt"></span> (남은 화면 수)
+                    </li>
+                    <li><span id="totCnt"></span> (총 본수)</li><!-- 2023-06-19 숨김처리 -> 2023-07-14 수정 진척률로 변경 -->
+                    <!--
+        <li>총 <span id="totCnt"></span>개</li>
+        <li>작업중 <span id="wipCnt"></span>개</li>
+        <li>완료 <span id="compCnt"></span>개</li>
+        -->
+                </ul>
+                <div class="progressArea"><span></span></div><!-- 2023-06-19 숨김처리 -> 2023-07-14 수정 진척률로 변경 -->
+
+                <dl>
+                    <dt>메모사항</dt>
+                </dl>
+            </div>
+
+            <div class="cont">
+                <!-- s: 가이드 -->
+                <div class="guide">
+                    <h3 class="tit">가이드</h3>
+                    <summary></summary>
+                    <table>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="8%">
+                            <col width="22%">
+                            <col width="15%">
+                            <col width="10%">
+                            <col width="*">
+                            <col width="10%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">분류</th>
+                                <th scope="col">설명</th>
+                                <th scope="col" class="fileName">화면ID</th>
+                                <th scope="col">담당</th>
+                                <th scope="col">추가 작업 필요</th>
+                                <th scope="col">작업 진행 사항</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>공통</td>
+                                <td>input 공통</td>
+                                <td class="fileName"><a href="./views/오릭스폼.html"
+                                    target="_blank">오릭스폼.html</a></td>
+                                <td></td>
+                                <td>화면 설계서 & 디자인 나온 후 추가 작업 필요</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>공통</td>
+                                <td>alert</td>
+                                <td class="fileName"><a href="./views/alert.html"
+                                    target="_blank">alert.html</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>레이아웃</td>
+                                <td>로그인폼</td>
+                                <td class="fileName"><a href="./views/로그인폼.html"
+                                    target="_blank">로그인폼.html</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+							<tr>
+                                <td>메인</td>
+                                <td>메인A</td>
+                                <td class="fileName"><a href="./views/메인A.html"
+                                        target="_blank">메인A.html</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+							<tr>
+                                <td>레이아웃</td>
+                                <td>약관폼</td>
+                                <td class="fileName"><a href="./views/약관폼.html"
+                                        target="_blank">약관폼.html</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>레이아웃</td>
+                                <td>인덱스A</td>
+                                <td class="fileName"><a href="./views/인덱스A.html"
+                                        target="_blank">인덱스A.html</a></td>
+                                <td></td>
+                                <td>화면 설계서  + 디자인 나온 후 재작업 필요 (  기존 시안으로만 작업함 )</td>
+                                <td></td>
+                            </tr>
+							<tr>
+                                <td>레이아웃</td>
+                                <td>전페메뉴</td>
+                                <td class="fileName"><a href="./views/전체메뉴.html"
+                                        target="_blank">전체메뉴.html</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>레이아웃</td>
+                                <td>전페메뉴2</td>
+                                <td class="fileName"><a href="./views/전체메뉴2.html"
+                                        target="_blank">전체메뉴2.html</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>컴포넌트</td>
+                                <td>테이블검색창</td>
+                                <td class="fileName"><a href="./views/테이블검색창.html"
+                                        target="_blank">테이블검색창.html</a></td>
+                                <td></td>
+                                <td>개발 입히는 과정 필요</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- e: 가이드 -->
+
+                <!-- s: 공통 -->
+                <div class="guide">
+                    <h3 class="tit">메인</h3>
+                    <summary></summary>
+                    <table>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="12%">
+                            <col width="10%">
+                            <col width="8%">
+                            <col width="8%">
+                            <col width="15%">
+                            <col width="8%">
+                            <col width="10%">
+                            <col width="*">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">분류</th>
+                                <th scope="col">분류</th>
+                                <th scope="col">분류</th>
+                                <th scope="col">형태</th>
+                                <th scope="col" class="fileName">화면ID</th>
+                                <th scope="col">담당</th>
+                                <th scope="col">날짜</th>
+                                <th scope="col">비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>앱 접근 권한</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/app/appAccess.html" target="_blank">appAccess.html</a></td>
+                                <td>김승희</td>
+                                <td>2023-06-19</td>
+                                <td>파일명/위치 수급 후 수정 예정<br>클래스 list-wrap 삭제</td>
+                            </tr>
+							<tr>
+                                <td>앱설치안내</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/app/install.html" target="_blank">install.html</a></td>
+                                <td>조아름</td>
+                                <td>2023-06-28</td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td>약관</td>
+                                <td>약관 팝업</td>
+                                <td></td>
+                                <td>레이어풀팝업</td>
+                                <td class="fileName"><a href="" target="_blank"></a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td>*기존작업 중 공통화면 정리 필요</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>약관 상세</td>
+                                <td></td>
+                                <td>레이어풀팝업</td>
+                                <td class="fileName"><a href="" target="_blank"></a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td>*기존작업 중 공통화면 정리 필요</td>
+                            </tr>
+                            <tr>
+                                <td>은행 선택 팝업</td>
+                                <td>검색</td>
+                                <td></td>
+                                <td>바텀시트</td>
+                                <td class="fileName"><a href="./guide/bankAndStockInfoPop.html" target="_blank">bankAndStockInfoPop.html</a></td>
+                                <td>김승희</td>
+                                <td>2023-07-13</td>
+                                <td>07/13 pop-header 영역 수정, search-area 영역 클래스 type3, pt0 pb20 추가<br/>6/19 검색 리스트 추가로 인한 구조 변경</td>
+                            </tr>
+
+                            <tr>
+                                <td>이메일 입력 팝업</td>
+                                <td>@입력</td>
+                                <td></td>
+                                <td>바텀시트</td>
+                                <td class="fileName"><a href="./html/online/onlineContract/onlineContractConfirm_popup01.html" target="_blank">onlineContractConfirm_popup01.html</a></td>
+                                <td>김승희</td>
+                                <td>2023-07-13</td>
+                                <td>*기존작업 중 공통화면 정리 필요</td>
+                            </tr>
+
+                            <tr>
+                                <td>조회기간 설정 팝업</td>
+                                <td></td>
+                                <td></td>
+                                <td>바텀시트</td>
+                                <td class="fileName"><a href="./html/common/inquiry_set.html"
+                                    target="_blank">inquiry_set.html</a></td>
+                                <td>이청아</td>
+                                <td>2023-07-17</td>
+                                <td>7/17 .radio-list.style-button 영역 삭제<br/>파일명/위치 수급 후 수정 예정</td>
+                            </tr>
+                            <tr>
+                                <td>직종선택 팝업</td>
+                                <td>step1</td>
+                                <td></td>
+                                <td>레이어풀팝업</td>
+                                <td class="fileName"><a href="./html/common/job/srchJobPopup_1.html"
+                                    target="_blank">srchJobPopup_1</a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>step2</td>
+                                <td></td>
+                                <td>레이어풀팝업</td>
+                                <td class="fileName"><a href="./html/common/job/srchJobPopup_2.html"
+                                    target="_blank">srchJobPopup_2</a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>step3</td>
+                                <td></td>
+                                <td>레이어풀팝업</td>
+                                <td class="fileName"><a href="./html/common/job/srchJobPopup_3.html"
+                                    target="_blank">srchJobPopup_3</a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>step4</td>
+                                <td></td>
+                                <td>레이어풀팝업</td>
+                                <td class="fileName"><a href="./html/common/job/srchJobPopup_4.html"
+                                    target="_blank">srchJobPopup_4</a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>준비사항 팝업</td>
+                                <td></td>
+                                <td></td>
+                                <td>바텀시트</td>
+                                <td class="fileName"><a href="./html/common/prepare.html"
+                                    target="_blank">prepare.html</a></td>
+                                <td>이청아</td>
+                                <td>2023-06-19</td>
+                                <td>파일명/위치 수급 후 수정 예정</td>
+                            </tr>
+                            <tr>
+                                <td>계좌선택</td>
+                                <td></td>
+                                <td></td>
+                                <td>바텀시트</td>
+                                <td class="fileName"><a href="./html/common/account_choice.html"
+                                    target="_blank">account_choice.html</a></td>
+                                <td>이청아</td>
+                                <td>2023-07-17</td>
+                                <td>7/17.pop-title 삭제,클래스 .star 추가<br/>파일명/위치 수급 후 수정 예정</td>
+                            </tr>
+                            <tr>
+                                <td>입/출금 계좌선택</td>
+                                <td></td>
+                                <td></td>
+                                <td>바텀시트</td>
+                                <td class="fileName"><a href="./guide/accountSelectPop.html" target="_blank">accountSelectPop.html</a></td>
+                                <td>최인혜</td>
+                                <td>2023-07-17</td>
+                                <td>7/17 클래스 .star 추가</td>
+                            </tr>
+                            <tr>
+                                <td>휴대폰 본인인증</td>
+                                <td>약관동의</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/auth/mobile_socket.html"
+                                    target="_blank">mobile_socket.html</a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>정보입력</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/auth/mobile_socket_2.html" target="_blank">mobile_socket_2.html</a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>다른 인증수단 선택 팝업</td>
+                                <td></td>
+                                <td></td>
+                                <td>바텀시트</td>
+                                <td class="fileName"><a href="./html/common/certification.html"
+                                    target="_blank">certification</a></td>
+                                <td>이청아</td>
+                                <td>2023-07-17</td>
+                                <td>7/17 클래스 mb10 추가,.pop-title text 수정<br/>파일명/위치 수급 후 수정 예정</td>
+                            </tr>
+                            <tr>
+                                <td>인증서 선택 팝업</td>
+                                <td></td>
+                                <td></td>
+                                <td>바텀시트</td>
+                                <td class="fileName"><a href="./guide/certiSelectPop.html" target="_blank">certiSelectPop.html</a></td>
+                                <td>최인혜</td>
+                                <td>2023-06-28</td>
+                                <td>파일명/위치 수급 후 수정 예정</td>
+                            </tr>
+                            <tr>
+                                <td>신분증 촬영</td>
+                                <td>촬영 전 안내</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/ocr/ocr_main.html"
+                                    target="_blank">ocr_main</a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td>7/17 .btn-txt 삭제<br/>클래스 btn-camera 추가</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>촬영</td>
+                                <td>신분증 촬영</td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/ocr/ocr_camera.html"
+                                    target="_blank">ocr_camera</a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>서류촬영</td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/ocr/ocr_camera_type-high.html"
+                                    target="_blank">ocr_camera_type-high</a></td>
+                                <td></td>
+                                <td></td>
+                                <td>.ocr-wrap 에 클래스 type-high</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>촬영 후</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/ocr/ocr_main2.html"
+                                    target="_blank">ocr_main2</a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>직장정보</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/loan/nonstop/nonstopStep3.html" target="_blank">nonstopStep3.html</a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>타은행 본인계좌 인증</td>
+                                <td>타은행 계좌번호 입력</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/include/inc_outBankTransCrtf.html" target="_blank">inc_outBankTransCrtf.html</a></td>
+                                <td>김승희</td>
+                                <td>2023-06-21</td>
+                                <td>*하단 확인 버튼 누르면 보안카드 풀팝업 노출</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>1원인증</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/loan/nonstop/nonstopStep7_outBankTransCrtf.html" target="_blank">nonstopStep7_outBankTransCrtf.html</a></td>
+                                <td>김승희</td>
+                                <td>2023-06-21</td>
+                                <td>*기존작업 중 공통화면 정리 필요<br>6/21 div.input 영역 안의 .value-wrap 삭제</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>보안카드</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/security_card.html" target="_blank">security_card</a></td>
+                                <td>김승희</td>
+                                <td>2023-06-21</td>
+                                <td>
+                                    7/26 공통 부분으로 inc_outBankTransCrtf.html 에서 파일 분리<br>
+                                    6/21 inc_outBankTransCrtf.html 확인 버튼 누를시 추가 완료
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>추가인증</td>
+                                <td>방법 선택</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/auth/ars.html" target="_blank">ars.html</a></td>
+                                <td>김승희</td>
+                                <td>2023-06-21</td>
+                                <td>6/21 풀팝업 형태로 구조 수정</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>ARS 인증번호</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName">ars.html 에서 확인가능</td>
+                                <td>김승희</td>
+                                <td>2023-06-21</td>
+                                <td>6/21 ars.html 에 추가 완료</td>
+                            </tr>
+                            <tr>
+                                <td>우편번호 찾기</td>
+                                <td>기본 주소 검색 전</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/juso/jusoRordPopup.html"
+                                    target="_blank">jusoRordPopup</a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>기본 주소 검색 시</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/juso/jusoRordPopup_2.html"
+                                    target="_blank">jusoRordPopup_2</a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>기본주소 선택 후</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/juso/jusoRordPopup_3.html"
+                                    target="_blank">jusoRordPopup_3</a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>상세주소 입력 후</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/juso/jusoRordPopup_4.html"
+                                    target="_blank">jusoRordPopup_4</a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>검색 결과 없음</td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="" target="_blank"></a></td>
+                                <td></td>
+                                <td>기존작업</td>
+                                <td>*기존작업 중 공통화면 정리 필요</td>
+                            </tr>
+                            <tr>
+                                <td>상품리스트 템플릿</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/loan/nonstop/loanList.html" target="_blank">loanList.html</a></td>
+                                <td>이청아, 김승희</td>
+                                <td></td>
+                                <td>상품 비교하기 풀팝업, 찜한 상품 풀팝업 포함</td>
+                            </tr>
+							<!-- <tr>
+                                <td>상품리스트 템플릿</td>
+                                <td>상품 비교하기</td>
+                                <td></td>
+                                <td>레이어풀팝업</td>
+                                <td class="fileName"><a href="./html/loan/nonstop/loanList_popup01.html" target="_blank">loanList_popup01.html</a></td>
+                                <td>김승희</td>
+                                <td></td>
+                                <td>6/27 디자인 미확정으로 추가작업 예정</td>
+                            </tr>
+							<tr>
+                                <td>상품리스트 템플릿</td>
+                                <td>찜한 상품</td>
+                                <td></td>
+                                <td>레이어풀팝업</td>
+                                <td class="fileName"><a href="./html/loan/nonstop/loanList_popup02.html" target="_blank">loanList_popup02.html</a></td>
+                                <td>김승희</td>
+                                <td></td>
+                                <td>6/27 수정 예정</td>
+                            </tr> loanList.html 에 포함 -->
+                            <tr>
+                                <td>상품상세 템플릿</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/loan/nonstop/loanView.html" target="_blank">loanView.html</a></td>
+                                <td>이청아, 김승희</td>
+                                <td>2023-06-27</td>
+                                <td>6/23 보고파뱅킹통장 > 직장인신용대출 로 내용 수정(오전반영)<br>직장인신용대출 내용 재수정(오후반영)<br>대출상품 상세페이지 파일명 변경<br>6/26 기획에서 변경된 내용 반영 완료<br>6/27 div.sub-button-wrap 영역의 금리인하요구권,대출철회신청 버튼 삭제</td>
+                            </tr>
+                            <tr>
+                                <td>자동로그아웃 알림 팝업</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="fileName"><a href="./html/common/auto_logout.html" target="_blank">auto_logout.html</a></td>
+                                <td>이청아</td>
+                                <td>2023-07-16</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- e: 공통 -->
+            </div>
+        </section>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            var fromDate = [],
+                toDate = [],
+                dateGap = [];
+
+            var totCnt, wipCnt = 0, compCnt = 0;
+
+            pjState();
+
+            var headerH = $(".container .header").outerHeight();
+
+            //alert(headerH);
+            $(".container .cont").css("margin-top", headerH + "px");
+
+
+            function pjState() {
+                $(".page table tbody tr").each(function (i, e) {
+                    // fromDate[i] = new Date($(".fromDate").eq(i).text());
+                    // toDate[i] = new Date($(".toDate").eq(i).text());
+                    // dateGap[i] = Math.ceil((toDate[i].getTime() - fromDate[i].getTime()) / (1000 * 3600 * 24));
+
+                    // dateGap[i] >= 0 ? $(".state").eq(i).text("완료").closest("tr").addClass("comp") : $(".state").eq(i).text(""); 기존소스 - 시작날짜 없는 화면의 진척률 파악 위해 아래와 같이 임시 수정(종료날짜만 입력하면 완료 상태로 처리)
+                    
+                    !!($(".toDate").eq(i).text()) ? $(".state").eq(i).text("완료").closest("tr").addClass("comp") : $(".state").eq(i).text("");
+
+                    ($(".state").eq(i).text() == "완료") ? compCnt++ : wipCnt++;
+
+                });
+
+                var allpage = $(".page table tbody tr").length; //전체
+                var Nonpage = $('tr.Non').length; //제외
+                var Okpage = $('tr.comp').length; //완료
+                totCnt = $(".page table tbody tr").length;
+
+                compCnt = Okpage; //완료본수
+                test = allpage - Nonpage; //실질적인화면수
+                wipCnt = totCnt - compCnt - Nonpage; //남은본수
+
+                $("#totCnt").text(totCnt); //전체
+                $("#wipCnt").text(wipCnt);  //남은본수
+                $("#compCnt").text(compCnt); //완료
+                $("#delCnt").text(Nonpage); //제외
+
+                $(".progressArea > span").animate({ "width": (compCnt / test) * 100 + "%" }, 1500);
+                // $(".progressArea > span").after("종합 진척률 : " + Math.floor((compCnt / test) * 100) + "%"); 2023-07-14 수정 진척률로 변경 전 백업
+                $(".progressArea > span").after("수정 진척률 : " + Math.floor((compCnt / test) * 100) + "%");
+            }
+
+            /* list toggle */
+            $('.cont .tit').addClass('on');
+            $('.cont .tit').on('click', function () {
+                $(this).toggleClass('on');
+            })
+        });
+    </script>
+</body>
+
+</html>

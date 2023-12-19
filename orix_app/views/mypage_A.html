@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/lib/renewal.css">
+    <!-- <link rel="stylesheet" href="../resources/css/bootstrap/terms_guide_view.css"> -->
+    <!-- <link rel="stylesheet" href="../resources/css/bootstrap/bootstrap-grid.css"> -->
+    <link rel="stylesheet" href="../resources/css/lib/default.css">
+
+    <!-- <script src="../resources/js/bootstrap/bootstrap.bundle.js"></script> -->
+    <!-- <script type="text/javascript" src="../resources/js/lib/ui.js"></script> -->
+
+
+    <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+    <!-- <script type="text/javascript" src="../resources/js/bootstrap/terms_guide_view.js"></script> -->
+    <!-- <script type="text/javascript" src="../resources/js/lib/default.js"></script> -->
+    <script type="text/javascript" src="../resources/js/bootstrap/bootstrap2.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script> -->
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- //header -->
+         <!-- //header -->
+        <div id="headerWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#headerWrap").load("./include/inc_header.html");
+            });
+            </script>
+        </div>
+        <form>
+            <div class="contents-wrap">
+                <section>
+                    <div class="user-imgbox">
+						<div class="user-img">
+                            <img src="../../../resources/images/common/user_img(1).png" alt="고객 이미지프로필">
+                            <!-- <span class="photo_edit"> -->
+                                <!-- <label for="ex_file">프로필 수정</label> -->
+                                <input type="file">
+                            <!-- </span> -->
+                        </div>
+                        <div class="user-txt">
+                            <p class="user-modify"><b>홍길동</b>님</p>
+                            <div class="user-affiliation">
+                                <p class="user-team">리스크관리팀</p>
+                                <p>임직원</p>
+                            </div>
+                        </div>
+                        <button class="btn logout" type="button" onclick="selectAcnoCall('WTCH');">로그아웃</button>
+					</div>
+                </section>
+				<section class="quick-service-area">
+					<div class="arrow-button-wrap">
+						<ul class="arrow-button-list list-icon">
+							<li class="audit"><a href="#none" onclick="expRenewPop();">심사(신용조회 등)결과 확인</a></li>
+							<li class="documents"><a href="#none" onclick="">서류제출 / 약정체결</a></li>
+							<li class="market_price"><a href="#none" onclick="">차량시세 조회</a></li>
+						</ul>
+					</div>
+				</section>
+                <section class="history-box">
+                    <div class="tit-area">
+                        <p class="title">진행중인 활동내역</p>
+                    </div>
+                    <ul class="history-list">
+                        <li class="in-txt-flex">
+                            <p class="num">4</p>
+                            <span class="text">신차상담</span>
+                        </li>
+                        <li class="in-txt-flex">
+                            <p class="num">8</p>
+                            <span class="text">심사요청</span>
+                        </li>
+                        <li class="in-txt-flex">
+                            <p class="num">12</p>
+                            <span class="text">약정체결</span>
+                        </li>
+                    </ul>
+                    <div class="tit-area">
+                        <p class="title">완료된 활동내역</p>
+                    </div>
+                    <ul class="history-list">
+                        <li class="in-txt-flex">
+                            <p class="num">3</p>
+                            <span class="text">신차상담</span>
+                        </li>
+                        <li class="in-txt-flex">
+                            <p class="num">4</p>
+                            <span class="text">심사요청</span>
+                        </li>
+                        <li class="in-txt-flex">
+                            <p class="num">9</p>
+                            <span class="text">약정체결</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </form>
+    </div>
+</body>
+
+
+
+
+
+</html>
