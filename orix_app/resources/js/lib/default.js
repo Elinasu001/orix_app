@@ -35,14 +35,14 @@ $(document).ready(function() {
   // /** table 의 checkbox **/
   $(document).ready(function() {
     // checkbox
-    $('.table-type tbody .custom-check').on('change', function() {
+    $('.table-type tbody input').on('change', function() {
         var isChecked = $(this).is(':checked');
         $(this).closest('tr').toggleClass('checked', isChecked);
     });
 
     // tr row
     $('.table-type tbody tr').on('click', function() {
-        var checkbox = $(this).find('.custom-check');
+        var checkbox = $(this).find('input');
         
         checkbox.prop('checked', !checkbox.prop('checked')).change();
     });
@@ -236,19 +236,28 @@ function openPopupUp(id) {
       $(window).scrollTop(currentTop);
       _target.removeClass('show');
     });
+
   }
 
-  if (_target.has('.ly-acc-select').length > 0) {
-    _target.find('.ly-acc-select > .acc-list-area > a').on('click', function (e) {
-      closePopupUp(id);
-      $('body').removeAttr('style');
-      $(window).scrollTop(currentTop);
-      _target.removeClass('show');
-      e.preventDefault();
-    });
-
+  $('.table-type.check tbody tr').on('click', function() {
+    var nameText = $(this).find('.name').text();
+    $('input.search').attr('placeholder', nameText);
     
-  }
+    closePopupUp(id);
+    $('body').removeAttr('style');
+    $(window).scrollTop(currentTop);
+    _target.removeClass('show');
+  });
+
+  // if (_target.has('.ly-acc-select').length > 0) {
+  //   _target.find('.ly-acc-select > .acc-list-area > a').on('click', function (e) {
+  //     closePopupUp(id);
+  //     $('body').removeAttr('style');
+  //     $(window).scrollTop(currentTop);
+  //     _target.removeClass('show');
+  //     e.preventDefault();
+  //   });
+  // }
 }
 
 function closePopup(id) {
