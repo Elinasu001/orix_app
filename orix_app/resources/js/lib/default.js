@@ -46,6 +46,8 @@ $(document).ready(function() {
         
         checkbox.prop('checked', !checkbox.prop('checked')).change();
     });
+
+    
   });
 
   /** 전체동의**/
@@ -241,8 +243,9 @@ function openPopupUp(id) {
 
   $('.table-type.check tbody tr').on('click', function() {
     var nameText = $(this).find('.name').text();
-    $('input.search').attr('placeholder', nameText);
     
+    $('input.search').attr('placeholder', nameText);
+
     closePopupUp(id);
     $('body').removeAttr('style');
     $(window).scrollTop(currentTop);
