@@ -285,7 +285,7 @@ function getCenterAlignPos(containerSize, targetSize) {
 //   $('accordion .accordion-cont').siblings.removeClass('.on');
 // })
 
-
+/** accordion **/
 $(document).ready(function() {
   $('.accordion .button').click(function() {
       var accordionCont = $(this).next('.accordion-cont');
