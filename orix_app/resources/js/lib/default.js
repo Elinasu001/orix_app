@@ -34,10 +34,16 @@ $(document).ready(function() {
 
   // /** table 의 checkbox **/
   $(document).ready(function() {
+    // checkbox
+    $('.table-type tbody .custom-check').on('change', function() {
+        var isChecked = $(this).is(':checked');
+        $(this).closest('tr').toggleClass('checked', isChecked);
+    });
+
+    // tr row
     $('.table-type tbody tr').on('click', function() {
-        $(this).toggleClass('checked');
         var checkbox = $(this).find('.custom-check');
-        checkbox.prop('checked', !checkbox.prop('checked'));
+        checkbox.prop('checked', !checkbox.prop('checked')).change();
     });
   });
 
