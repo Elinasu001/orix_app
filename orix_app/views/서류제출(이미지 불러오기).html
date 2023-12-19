@@ -51,11 +51,54 @@
             <div class="contents-wrap">
                 <section class="form-wrap">
                     <div class="form-group">
-                        <!-- <label for="search">신용조회 동의완료 고객 선택</label> -->
                         <div class="input-group">
                             <input type="text" id="search" class="form-control" placeholder="신용조회 동의완료 고객 선택" aria-label="Search" aria-describedby="user-search" inputmode="search"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
                             <button class="btn btn-txt-search outline-secondary" type="button">검색</button>
                         </div>
+                    </div>
+                    <div class="table-type table-row table-scroll check">
+                        <table class="">
+                            <caption>신용조회 동의 완료 고객 선택 테이블</caption>
+                            <colgroup>
+                                <col width="*%">
+                                <col width="*%">
+                                <col width="33.333%">
+                                <col width="33.333%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th scope="row">고객명</th>
+                                    <th scope="row">연락처</th>
+                                    <th scope="row">동의일자</th>
+                                    <th scope="row">신청상품</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td><input type="checkbox" name="user_checkbox" id="check1" class="custom-check"><label for="check1"></label></td>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                                <tr class="">
+                                    <td><input type="checkbox" name="user_checkbox" id="check2" class="custom-check"><label for="check2"></label></td>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                                <tr class="">
+                                    <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </section>
 
