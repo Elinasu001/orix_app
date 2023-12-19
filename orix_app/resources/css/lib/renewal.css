@@ -183,7 +183,8 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 input::placeholder { color:#B2B2B2; }
 .form-wrap { margin-top:20px; }
 .form-group .form-tit { display:inline-block; margin-bottom:10px; color:#757575; font-size:0.89rem; font-weight:400;}
-.form-group + .form-group { margin-top:20px; }
+.form-group + .form-group,
+.text-area { margin-top:20px; }
 .form-group label,
 .text-area label { margin-bottom:10px; }
 /* .form-group label { display:none; } */
@@ -715,11 +716,11 @@ iframe { border:none; }
 
 /* 2023.12.19 이솔 추가 */
 /* 아코디언 */
-.accordion-item { margin-bottom:20px; padding:20px; border:1px solid; }
+.accordion-item { margin-bottom:20px; padding:20px; border:1px solid; border-radius:10px; }
 .accordion-item .accordion { width:100%; }
 .accordion-item .accordion button { border:none; }
 .accordion-item .accordion button.button { display:block; padding:20px 0; width:100%; border-bottom:1px solid; text-align:left; cursor:pointer; }
-.accordion-item .accordion .accordion-cont > div { margin-top:10px; }
+/* .accordion-cont .text-area { margin-top:20px; } */
 .accordion-cont .form-group label,
 .accordion-cont .text-area label { position:relative; padding-right:10px; }
 .accordion-cont .form-group label::after,
