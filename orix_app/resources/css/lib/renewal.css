@@ -184,7 +184,8 @@ input::placeholder { color:#B2B2B2; }
 .form-wrap { margin-top:20px; }
 .form-group .form-tit { display:inline-block; margin-bottom:10px; color:#757575; font-size:0.89rem; font-weight:400;}
 .form-group + .form-group { margin-top:20px; }
-.form-group label { margin-bottom:10px; }
+.form-group label,
+.text-area label { margin-bottom:10px; }
 /* .form-group label { display:none; } */
 .form-control { display:block; width:100%; min-height:44px; /*height:calc(2.25rem + 2px);*/ padding:4px 7px; font-size:0.875rem; line-height:1rem; font-weight:400; color:#B2B2B2; background-color: #fff;  background-clip: padding-box; border: 1px solid #E2E2E2; border-radius:5px; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
 .form-control:focus:not(.form-control[readonly]:focus),
@@ -711,3 +712,19 @@ iframe { border:none; }
 .bottom-menu-list li:nth-child(3).on a:before { background-image:url('../images/main/ico_bottom-menu_03_on.png'); }
 .bottom-menu-list li:nth-child(4) a:before { background-image:url('../images/main/ico_bottom-menu_04.png'); }
 .bottom-menu-list li:nth-child(4).on a:before { background-image:url('../images/main/ico_bottom-menu_04_on.png'); }
+
+/* 2023.12.19 이솔 추가 */
+/* 아코디언 */
+.accordion-item { display:block; margin-bottom:20px; padding:20px; border:1px solid; }
+.accordion-item .accordion { width:100%; }
+.accordion-item .accordion button { border:none; }
+.accordion-item .accordion button.button { display:block; padding:20px 0; width:100%; border-bottom:1px solid; text-align:left; cursor:pointer; }
+.accordion-item .accordion .accordion-cont { display:none; }
+.accordion-item .accordion .accordion-cont > div { margin-top:10px; }
+.accordion-cont .form-group label,
+.accordion-cont .text-area label { position:relative; padding-right:10px; }
+.accordion-cont .form-group label::after,
+.accordion-cont .text-area label::after { content:'*'; display:block; position:absolute; top:0; right:0; color:var(--red); }
+textarea { overflow-y:scroll; padding:10px; width:100%; height:200px; background:#F8F8F8; font-size:0.88889rem; line-height:1.4375; white-space:pre-line; }
+
+.accordion-item .accordion .accordion-cont.on { display:block; }

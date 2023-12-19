@@ -279,6 +279,18 @@ function getCenterAlignPos(containerSize, targetSize) {
   return pos;
 }
 
+//accordion
+// $('#accordion > button.select').click(function(){
+//   $('accordion .accordion-cont').addClass('.on');
+//   $('accordion .accordion-cont').siblings.removeClass('.on');
+// })
+
+$(document).ready(function(){
+  $('.accordion > .button').on('click', function(){
+      // this : 이벤트가 발생환 주체
+    $('.accordion-cont').toggleClass('on');
+  })
+})
 
 
 
