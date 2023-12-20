@@ -381,7 +381,7 @@ input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"
 
 
 /* 선택 검색 팝업 */
-.layerpopup .form-group.img-search { margin-bottom:10px; }
+.layerpopup .form-group.img-search { margin-bottom:20px; }
 /* .layerpopup .btn.btn-search { right:20px; } */
 
 /** _스크롤 컨텐츠 레이어 **/
