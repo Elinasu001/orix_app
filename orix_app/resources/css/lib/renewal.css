@@ -278,7 +278,7 @@ input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"
 .check-buttons .check-button .custom-check {  border-radius:5px; }
 
 .radio-buttons .custom-radio:after { content:""; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:10px; height:10px; border-radius:50%; background:#E2E2E2;}
-.check-buttons .custom-check:after { content:"✓"; position:absolute; top:22%; left:50%; transform:translate( -50%, -50%); width:10px; height:10px; color: #E2E2E2; }
+.check-buttons .custom-check:after { content:"✓"; position:absolute; top:22%; left:50%; transform:translate( -50%, -50%); width:13px; height:10px; font-weight:600;  color: #E2E2E2; }
 
 /* ratio/checkbox checked 됐을 경우 */
 .radio-buttons .radio-button input[type="radio"]:checked ~ .custom-radio,
