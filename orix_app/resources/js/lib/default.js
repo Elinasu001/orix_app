@@ -7,32 +7,8 @@ $(document).ready(function() {
     this.value = this.value.replace(/,/g, ''); // ,값 공백처리
     this.value = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규식을 이용해서 3자리 마다 , 추가
   });
-
-  // /** table 의 checkbox **/
-  // // 클래스 'custom-check'를 사용하여 모든 "checkbox"를 가져옴.
-  // var checkboxes = document.querySelectorAll('input[type="checkbox"].custom-check');
-  // // 각 "checkbox"에 'change' event listener 추가.
-  // checkboxes.forEach(function(checkbox) {
-  //   checkbox.addEventListener('change', function() {
-  //       // checked되면
-  //       if (this.checked) {
-  //         // 'tbody'에서 가장 가까운 'tr'(테이블 행)을 구함.
-  //         var closestTr = this.closest('tr');
-  //         if (closestTr) {
-  //             // 가장 가까운 'tr'에 'checked' 클래스를 추가.
-  //             closestTr.classList.add('checked');
-  //         }
-  //       } else {
-  //         // 이 선택하지 않으면 가장 가까운 'tr'에서 'checked' 클래스를 제거.
-  //         var closestTr = this.closest('tr');
-  //         if (closestTr) {
-  //             closestTr.classList.remove('checked');
-  //         }
-  //       }
-  //   });
-  // });
-
-  // /** table 의 checkbox **/
+  
+  /** table 의 checkbox **/
   $(document).ready(function() {
     // checkbox
     $('.table-type tbody input').on('change', function() {
@@ -132,6 +108,50 @@ $(document).ready(function() {
     };
 
   });
+
+  /** accorion **/
+  $('.accordion .button').click(function() {
+    var accordionCont = $(this).next('.accordion-cont');
+    $(this).toggleClass('on');
+    accordionCont.toggleClass('on');
+  });
+
+  /** 이미지 불러오기 **/
+  $('.thumb-wrap ul').on('change', '.ip-file', function(e) {
+    const file = e.target.files[0]; // 불러온 파일 가져오기
+    const $parentListItem = $(this).closest('li');
+
+    if (file) {
+        const reader = new FileReader(); // 파일을 읽기 위한 FileReader 객체 생성
+
+        reader.onload = function(e) {
+            const imageUrl = e.target.result; // 이미지 URL을 얻기
+
+            // 이미지를 표시할 새로운 list item을 생성
+            const newListItem = $('<li><img src="' + imageUrl + '" alt="Uploaded Image"></li>');
+
+            // 현재의 li에 이미지를 추가하고 클래스를 변경
+            $parentListItem.replaceWith(newListItem);
+
+            // 현재 li에 delete 클래스 추가
+            newListItem.addClass('delete');
+
+
+            // 새로운 "추가" 버튼을 생성
+            const newPlusListItem = $('<li class="plus"><input type="file" id="file" class="ip-file">추가</li>');
+
+            // 리스트의 맨 뒤에 새로운 "추가" 버튼을 추가
+            $('.thumb-wrap ul').append(newPlusListItem);
+        };
+
+        reader.readAsDataURL(file); // 파일을 읽어 data URL 형태로 변환
+    }
+  });
+  /** 이미지 불러오기 삭제 **/
+  $('.thumb-wrap ul').on('click', '.delete', function() {
+    $(this).remove(); // 해당 li 요소를 삭제
+  });
+
     
 
 });
@@ -310,17 +330,6 @@ function getCenterAlignPos(containerSize, targetSize) {
 //   $('accordion .accordion-cont').addClass('.on');
 //   $('accordion .accordion-cont').siblings.removeClass('.on');
 // })
-
-/** accordion **/
-$(document).ready(function() {
-  $('.accordion .button').click(function() {
-      var accordionCont = $(this).next('.accordion-cont');
-      $(this).toggleClass('on');
-      accordionCont.toggleClass('on');
-  });
-});
-
-
 
 
 
