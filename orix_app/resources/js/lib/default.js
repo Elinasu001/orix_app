@@ -302,6 +302,7 @@ function getCenterAlignPos(containerSize, targetSize) {
 $(document).ready(function() {
   $('.accordion .button').click(function() {
       var accordionCont = $(this).next('.accordion-cont');
+      $(this).toggleClass('on');
       accordionCont.toggleClass('on');
   });
 });

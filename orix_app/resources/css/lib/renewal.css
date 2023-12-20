@@ -719,7 +719,9 @@ iframe { border:none; }
 .accordion-item { margin-bottom:20px; padding:20px; border:1px solid; border-radius:10px; }
 .accordion-item .accordion { width:100%; }
 .accordion-item .accordion button { border:none; }
-.accordion-item .accordion button.button { display:block; padding:20px 0; width:100%; border-bottom:1px solid; text-align:left; cursor:pointer; }
+.accordion-item .accordion button.button { display:block; position:relative; padding:20px 0; width:100%; border-bottom:1px solid #E2E2E2; text-align:left; color:#B2B2B2; background-color:transparent; cursor:pointer; }
+.accordion-item .accordion button::after { content:""; display:block; position:absolute; top:50%; right:20px; transform:translateY(-50%) rotate(180deg); width:16px; height:16px; background: url(../../images/common/svg/ico_select.svg)no-repeat 98%/16px auto; }
+.accordion-item .accordion button.on::after { transform:translateY(-50%) rotate(0deg); }
 /* .accordion-cont .text-area { margin-top:20px; } */
 .accordion-cont .form-group label,
 .accordion-cont .text-area label { position:relative; padding-right:10px; }
