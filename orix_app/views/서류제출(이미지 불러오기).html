@@ -63,8 +63,8 @@
                             <li><a href="javascript:void(0);">img</a></li>
                             <li><a href="javascript:void(0);">img</a></li>
                             <li><a href="javascript:void(0);">img</a></li>
-                            <li class="plus"><a href="javascript:void(0);">추가</a></li><!--D: plus 클래스 : 이미지 추가 -->
-                            <li class="plus"><a href="javascript:void(0);">추가</a></li>
+                            <li class="plus"><a href="javascript:void(0);"><input type="file" id="file" class="ip-file">추가</a></li><!--D: plus 클래스 : 이미지 추가 -->
+                            <li class="plus"><a href="javascript:void(0);"><input type="file" id="file" class="ip-file">추가</a></li>
                         </ul>
                     </div>
                 </section>
@@ -160,3 +160,33 @@
     </div>
 </div>
 <!--선택팝업//-->
+
+
+<script>
+// 파일 업로드 input 요소를 가져옵니다.
+const fileInput = document.querySelectorAll('.ip-file');
+
+fileInput.forEach(input => {
+    input.addEventListener('change', function(e) {
+        const file = e.target.files[0]; // 업로드된 파일 가져오기
+
+        if (file) {
+            const reader = new FileReader(); // 파일을 읽기 위한 FileReader 객체 생성
+
+            reader.onload = function(e) {
+                const imageUrl = e.target.result; // 이미지 URL을 얻습니다.
+
+                // 이미지를 표시할 새로운 list item을 생성합니다.
+                const newListItem = document.createElement('li');
+                newListItem.innerHTML = `<a href="${imageUrl}" target="_blank"><img src="${imageUrl}" alt="Uploaded Image"></a>`;
+
+                // ul 요소를 선택하여 새로운 이미지를 추가합니다.
+                const imageList = input.parentElement.parentElement;
+                imageList.insertBefore(newListItem, imageList.lastElementChild);
+            };
+
+            reader.readAsDataURL(file); // 파일을 읽어 data URL 형태로 변환합니다.
+        }
+    });
+});
+</script>
