@@ -117,7 +117,7 @@ $(document).ready(function() {
   });
 
     /** 이미지 불러오기 **/
-    $('.thumb-wrap ul').on('change', '.ip-file', function(e) {
+    $('.thumb-wrap ul').on('change', '.plus', function(e) {
       const file = e.target.files[0]; // 불러온 파일 가져오기
       const $parentListItem = $(this).closest('li');
   
@@ -135,7 +135,6 @@ $(document).ready(function() {
   
               // 현재 li에 delete 클래스 추가
               newListItem.addClass('delete');
-  
   
               // 새로운 "추가" 버튼을 생성
               const newPlusListItem = $('<li class="plus"><input type="file" id="file" class="ip-file">추가</li>');
