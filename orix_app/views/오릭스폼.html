@@ -87,25 +87,48 @@
                             readonly><!--readonly-->
                     </div>
                   
-                    <div class="form-group"><!--D: input-hypen 있을 경우 col 사용 필요-->
+                    <div class="form-group">
+                        <div class="form-tit">주민등록번호</div>
                         <label for="user_resi_number">주민등록번호</label>
                         <div class="form-row" id="user_resi_number">
-                            <input type="password" class="form-control col" maxlength="6" placeholder="">
+                            <div class="col-5">
+                                <input type="password" class="form-control" maxlength="6" placeholder="">
+                            </div>
                             <div class="input-hyphen">-</div>
-                            <input type="password" class="form-control col" maxlength="7" placeholder="●●●●●●●">
+                            <div class="col">
+                                <input type="password" class="form-control" maxlength="7" placeholder="●●●●●●●">
+                            </div>
                         </div>
                     </div>
 
-                    <div class="form-group invalid">
+                    <div class="form-group">
+                        <div class="form-tit">주민등록번호</div>
+                        <label for="user_resi_number">주민등록번호</label>
+                        <div class="form-row" id="user_resi_number">
+                            <div class="col">
+                                <input type="password" class="form-control" maxlength="6" placeholder="">
+                            </div>
+                            <div class="input-hyphen">-</div>
+                            <div class="col">
+                                <input type="password" class="form-control" maxlength="7" placeholder="●●●●●●●">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <!-- <div class="form-tit">휴폰폰 번호2</div> -->
                         <label for="user_resi_number">휴폰폰 번호2</label>
                         <div class="form-row" id="user_resi_number">
-                            <div class="form-control select col-3"  onclick="openPopupUp('lySel1')"  tabindex="0">
-                                <a href="#none" tabindex="-1"><span>통신사</span></a>
+                            <div class="col-3">
+                                <div class="form-control select"  onclick="openPopupUp('lySel1')"  tabindex="0">
+                                    <a href="#none" tabindex="-1"><span>통신사</span></a>
+                                </div>
                             </div>
-                            <input id="user_phone" type="tel" name="phone" class="form-control col" maxlength="11" placeholder="- 없이 숫자만 입력" inputmode="tel">
+                            <div class="input-hyphen"></div>
+                            <div class="col">
+                                <input id="user_phone" type="tel" name="phone" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력" inputmode="tel">
+                            </div>
                         </div>
-                        <div class="feedback">통신사를 선택하세요.</div>
                     </div>
 
                     <div class="form-group">
@@ -179,9 +202,9 @@
 
                     <div class="form-group">
                         <!-- <label for="search">신용조회 동의완료 고객 선택</label> -->
-                        <div class="form-row">
+                        <div class="input-group">
                             <input type="text" id="search" class="form-control" placeholder="신용조회 동의완료 고객 선택" aria-label="Search Addresses" aria-describedby="user-search" inputmode="search" disabled=""><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
-                            <button class="btn btn-txt-search" type="button">검색</button>
+                            <button class="btn btn-txt-search outline-secondary" type="button">검색</button>
                         </div>
                     </div>
 
@@ -191,7 +214,7 @@
                             <div class="form-control select" tabindex="0" onclick="openPopupUp('lySel')">
                                 <a href="#none" tabindex="-1"><span>제조사 선택</span></a>
                             </div>
-                            <button class="btn btn-txt-search " type="button">검색</button>
+                            <button class="btn btn-txt-search outline-secondary" type="button">검색</button>
                         </div>
                     </div>
 

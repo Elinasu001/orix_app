@@ -9,22 +9,18 @@ $(document).ready(function() {
   });
   
   /** table 의 checkbox **/
-  $(document).ready(function() {
-    // checkbox
-    $('.table-type tbody input').on('change', function() {
-        var isChecked = $(this).is(':checked');
-        $(this).closest('tr').toggleClass('checked', isChecked);
-    });
-
-    // tr row
-    $('.table-type tbody tr').on('click', function() {
-        var checkbox = $(this).find('input');
-        
+  $('.table-type tbody tr').on('click', function(event) {
+    // 클릭한 요소가 input인지 확인
+    if (!$(event.target).is('input')) {
+        var checkbox = $(this).find('input[type="checkbox"]');
         checkbox.prop('checked', !checkbox.prop('checked')).change();
-    });
-
-    
+    }
+    $(this).toggleClass('checked');
   });
+
+  //  해당 엘리먼트의 클릭이벤트를 제거함
+  $('.table-type tbody input').off('change');
+
 
   /** 전체동의**/
   $('.check.all').on('click',  function() {
