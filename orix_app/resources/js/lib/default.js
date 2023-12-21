@@ -128,7 +128,7 @@ $(document).ready(function() {
               const imageUrl = e.target.result; // 이미지 URL을 얻기
   
               // 이미지를 표시할 새로운 list item을 생성
-              const newListItem = $('<li><img src="' + imageUrl + '" alt="Uploaded Image"><span>이미지 불러오기</span></li>');
+              const newListItem = $('<li><img src="' + imageUrl + '" alt="Uploaded Image"><span>추가</span></li>');
   
               // 현재의 li에 이미지를 추가하고 클래스를 변경
               $parentListItem.replaceWith(newListItem);
@@ -137,7 +137,7 @@ $(document).ready(function() {
               newListItem.addClass('delete');
   
               // 새로운 "추가" 버튼을 생성
-              const newPlusListItem = $('<li class="plus"><input type="file" id="file" class="ip-file"><span>이미지 불러오기</span></li>');
+              const newPlusListItem = $('<li class="plus"><input type="file" id="file" class="ip-file"><span>추가</span></li>');
   
               // 리스트의 맨 뒤에 새로운 "추가" 버튼을 추가
               $('.thumb-wrap ul').append(newPlusListItem);
