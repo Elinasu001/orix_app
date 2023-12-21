@@ -186,7 +186,7 @@ function layerFunc(_target) {
         }
       }
     }
-  }
+}
 
 //block
 var winScrollTop;
@@ -289,7 +289,7 @@ function closePopup(id) {
   $('#' + id).fadeOut(600);
   _target.removeClass('on');
 }
-//close popup slideDown 
+//close popup slideDown
 function closePopupUp(id) {
   deleteBlock();
   //ADD eunji 2020-10-05
