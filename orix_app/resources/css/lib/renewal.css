@@ -684,7 +684,7 @@ iframe { border:none; }
 
 /* all-menu-area */
 .scroll-left-wrap { overflow-y:scroll; height:100%; background:#F5F6F7; }
-.menuArea { width:130px; overflow-y:scroll; height:400px;/*box-shadow:4px 0px 4px 0px rgb(247 247 247);*/ }
+.menuArea { width:130px; overflow-y:scroll; height:380px;/*box-shadow:4px 0px 4px 0px rgb(247 247 247);*/ }
 .menuArea li { position:relative;}
 .menuArea li.on::before { content:''; z-index:1; display:block; position:absolute; left:0; top:0; width:130px; height:100%; /*background:linear-gradient(298deg, #080311, #480FBB);*/ background:#FFFFFF; /*border-radius:0 20px 20px 0;*/ }
 .menuArea a { position:relative; z-index:2; display:block; width:100%; padding:20px 0; color:#333; text-indent:20px;  font-size:0.8rem; font-weight:bold; }
