@@ -9,19 +9,19 @@ $(document).ready(function() {
   });
   
   /** table 의 checkbox **/
-  $('.table-type tbody tr').on('click', function(event) {
-    // 클릭한 요소가 input인지 확인
-    if (!$(event.target).is('input')) {
-        var checkbox = $(this).find('input[type="checkbox"]');
-        checkbox.prop('checked', !checkbox.prop('checked')).change();
-    }
-    $(this).toggleClass('checked');
+  // checkbox
+  $('.table-type tbody input').on('change', function() {
+      var isChecked = $(this).is(':checked');
+      $(this).closest('tr').toggleClass('checked', isChecked);
   });
 
-  //  해당 엘리먼트의 클릭이벤트를 제거함
-  $('.table-type tbody input').off('change');
-
-
+  // tr row
+  $('.table-type tbody tr').on('click', function() {
+      var checkbox = $(this).find('input');
+      
+      checkbox.prop('checked', !checkbox.prop('checked')).change();
+  });
+    
   /** 전체동의**/
   $('.check.all').on('click',  function() {
     
@@ -59,7 +59,7 @@ $(document).ready(function() {
         $("#" + terms_id).hide(); // Hide the associated popup when the checkbox is unchecked
     }
 
-    $(".layerpopup .btn.btn.btn-primary").on("click", function() {
+    $(".layerpopup .btn.btn-primary").on("click", function() {
       var popup = $(this).closest('.layerpopup');
       var popupID = popup.attr("id"); // Get the ID of the popup
     
@@ -257,16 +257,50 @@ function openPopupUp(id) {
 
   }
 
-  $('.table-type.check tbody tr').on('click', function() {
-    var nameText = $(this).find('.name').text();
-    
-    $('input.search').attr('placeholder', nameText);
+  // // 테이블에서 항목 클릭 시
+  // $('.table-type.check tbody tr').on('click', function() {
+  //   var isSelected = $(this).hasClass('checked'); // 현재 클릭된 항목의 선택 상태 확인
 
+  //   if (!isSelected) {
+  //     // 선택된 항목에만 클래스 추가
+  //     $(this).addClass('checked');
+
+  //     // 선택된 항목의 이름을 검색 입력란의 placeholder로 설정
+  //     var nameText = $(this).find('.name').text();
+  //     $('input.search').attr('placeholder', nameText);
+  //   }
+
+  //   // 팝업 닫기
+  //   closePopupUp(id);
+  //   $('body').removeAttr('style');
+  //   $(window).scrollTop(currentTop);
+  //   _target.removeClass('show');
+  // });
+
+  // 테이블에서 항목 클릭 시
+  $('.table-type.check tbody tr').on('click', function() {
+    var $clickedItem = $(this);
+    var $checkedItems = $('.table-type.check tbody tr.checked');
+
+    if (!$clickedItem.hasClass('checked')) {
+      // 모든 선택 제거
+      $checkedItems.removeClass('checked');
+
+      // 클릭된 항목에만 클래스 추가
+      $clickedItem.addClass('checked');
+
+      // 선택된 항목의 이름을 검색 입력란의 placeholder로 설정
+      var nameText = $clickedItem.find('.name').text();
+      $('input.search').attr('placeholder', nameText);
+    }
+
+    // 팝업 닫기
     closePopupUp(id);
     $('body').removeAttr('style');
     $(window).scrollTop(currentTop);
     _target.removeClass('show');
   });
+
 
   if (_target.has('.ly-acc-select').length > 0) {
     _target.find('.ly-acc-select > .acc-list-area > a').on('click', function (e) {
