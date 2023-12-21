@@ -116,42 +116,43 @@ $(document).ready(function() {
     accordionCont.toggleClass('on');
   });
 
-  /** 이미지 불러오기 **/
-  $('.thumb-wrap ul').on('change', '.ip-file', function(e) {
-    const file = e.target.files[0]; // 불러온 파일 가져오기
-    const $parentListItem = $(this).closest('li');
-
-    if (file) {
-        const reader = new FileReader(); // 파일을 읽기 위한 FileReader 객체 생성
-
-        reader.onload = function(e) {
-            const imageUrl = e.target.result; // 이미지 URL을 얻기
-
-            // 이미지를 표시할 새로운 list item을 생성
-            const newListItem = $('<li><img src="' + imageUrl + '" alt="Uploaded Image"></li>');
-
-            // 현재의 li에 이미지를 추가하고 클래스를 변경
-            $parentListItem.replaceWith(newListItem);
-
-            // 현재 li에 delete 클래스 추가
-            newListItem.addClass('delete');
-
-
-            // 새로운 "추가" 버튼을 생성
-            const newPlusListItem = $('<li class="plus"><input type="file" id="file" class="ip-file">추가</li>');
-
-            // 리스트의 맨 뒤에 새로운 "추가" 버튼을 추가
-            $('.thumb-wrap ul').append(newPlusListItem);
-        };
-
-        reader.readAsDataURL(file); // 파일을 읽어 data URL 형태로 변환
-    }
+    /** 이미지 불러오기 **/
+    $('.thumb-wrap ul').on('change', '.ip-file', function(e) {
+      const file = e.target.files[0]; // 불러온 파일 가져오기
+      const $parentListItem = $(this).closest('li');
+  
+      if (file) {
+          const reader = new FileReader(); // 파일을 읽기 위한 FileReader 객체 생성
+  
+          reader.onload = function(e) {
+              const imageUrl = e.target.result; // 이미지 URL을 얻기
+  
+              // 이미지를 표시할 새로운 list item을 생성
+              const newListItem = $('<li><img src="' + imageUrl + '" alt="Uploaded Image"></li>');
+  
+              // 현재의 li에 이미지를 추가하고 클래스를 변경
+              $parentListItem.replaceWith(newListItem);
+  
+              // 현재 li에 delete 클래스 추가
+              newListItem.addClass('delete');
+  
+  
+              // 새로운 "추가" 버튼을 생성
+              const newPlusListItem = $('<li class="plus"><input type="file" id="file" class="ip-file">추가</li>');
+  
+              // 리스트의 맨 뒤에 새로운 "추가" 버튼을 추가
+              $('.thumb-wrap ul').append(newPlusListItem);
+          };
+  
+          reader.readAsDataURL(file); // 파일을 읽어 data URL 형태로 변환
+      }
+    });
+    /** 이미지 불러오기 삭제 **/
+    $('.thumb-wrap ul').on('click', '.delete', function(e) {
+      e.stopPropagation(); // 부모 요소로의 이벤트 전파(stopPropagation) 중단
+  
+      $(this).remove(); // 해당 li 요소를 삭제
   });
-  /** 이미지 불러오기 삭제 **/
-  $('.thumb-wrap ul').on('click', '.delete', function() {
-    $(this).remove(); // 해당 li 요소를 삭제
-  });
-
     
 
 });
