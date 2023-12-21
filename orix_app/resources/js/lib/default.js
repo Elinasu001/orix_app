@@ -149,9 +149,9 @@ $(document).ready(function() {
     });
     /** 이미지 불러오기 삭제 **/
     $('.thumb-wrap ul').on('click', '.delete', function(e) {
-      e.stopPropagation(); // 부모 요소로의 이벤트 전파(stopPropagation) 중단
+      e.stopPropagation();//중단
   
-      $(this).remove(); // 해당 li 요소를 삭제
+      $(this).remove();
   });
     
 
