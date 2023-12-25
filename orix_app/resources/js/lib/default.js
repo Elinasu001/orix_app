@@ -214,8 +214,9 @@ function openPopup(id) {
   if (_target.hasClass('layer-up')) {
 
   } else if (_target.hasClass('type-alert')){
+  _target.css('bottom', '20px');
 	_target.fadeIn(600);
-    _target.focus();
+  _target.focus();
 	_target.addClass("on");
   
   }else{
