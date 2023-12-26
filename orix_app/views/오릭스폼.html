@@ -128,9 +128,9 @@
                         <label for="">방문 예정 일자</label>
                         <div class="form-row" id="">
                             <div class="col">
-                                <div class="input__wrap">
-                                    <input type="text" class="form-control input__item" placeholder="">
-                                  </div>
+                                <div class="input_wrap">
+                                    <input type="text" class="form-control input_item">
+                                </div>
                                 <!-- <input type="text" id="datepicker" class="form-control datepicker" placeholder=""> -->
                             </div>
                             <div class="col">
@@ -605,7 +605,7 @@ $(document).ready(function() {
 <script>
 $(function () {
 
-    var datepicker = $('.input__item');
+    var datepicker = $('.input_item');
 
     datepicker.datepicker({
         dateFormat: 'yy-mm-dd',
@@ -630,7 +630,7 @@ $(function () {
 
 
     // custom datepicker 
-    const dateInput = document.querySelector('.input__item'),
+    const dateInput = document.querySelector('.input_item'),
         dateIcon = document.querySelector('.ui-datepicker-trigger'),
         calendar = document.querySelector('#ui-datepicker-div');
 
@@ -657,6 +657,7 @@ $(function () {
 
     //back layer hide
     const layer = document.querySelector('.datepicker-layer');
+ 
 
     window.addEventListener('click', function (e) {
         if (e.target === layer) {
@@ -668,43 +669,51 @@ $(function () {
     function dimDisplay(display) {
         layer.style.display = display;
     }
+
 });
 </script>
 
 <style>
     .datepicker-layer { width: 100%; height: 100%;  position: fixed;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.5); z-index: 200 !important; display: none; }
-    .ui-datepicker { width: 90%;
+    .ui-datepicker {
+    
+    width: 100%;
     /* max-width: 360px; */
     position: fixed !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%);
+    top: inherit !important;
+    left: inherit !important;
+    bottom:0;
+    /* transform: translate(-50%, -50%); */
     padding: 1em;
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
     z-index: 200 !important;
     display: none; }
     .ui-datepicker-trigger { width:16px; height:16px; }
     /* .ui-datepicker { width:90%; max-width:360px; position:fixed !important; top:50% !important; left:50% !important; transform: translate(-50%, -50%); padding: 1em; background-color: #fff; border-radius: 5px; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4); z-index: 200  !important; display: none;} */
-    .ui-datepicker-header {     position: relative;
+    .ui-datepicker-header { position: relative;
     width: 100%;
     height: 46px;
     display: flex;
     justify-content: center;
     padding: 4px 0;
-    background-color: #FFDD00;
-    border-top: 1px solid #FFDD00;
-    border-bottom: 1px solid #FFDD00;
+    /* background-color: #00345F;
+    border-top: 1px solid #00345F;
+    border-bottom: 1px solid #00345F; */
     border-radius: 5px; }
+    .ui-widget-header { border:none; }
     .ui-datepicker-title { width: 100%; max-width: 160px; display: flex; }
     .ui-datepicker .ui-datepicker-title select { margin:1px 7px; }
     .ui-datepicker-year { background-position: center right 0; }
-    .ui-datepicker-year, .ui-datepicker-month { margin:0 12px; padding-right:8px; border:none; background-color:#FFDD00; }
+    .ui-datepicker-year, .ui-datepicker-month { margin:0 12px; padding-right:8px; border:none; /*background-color:#FFDD00;*/ }
     
-    .ui-datepicker-calendar .ui-datepicker-other-month { color: #B1A7A6; background-color: #F5F3F4; }
+    .ui-datepicker-calendar .ui-datepicker-other-month { color: #B1A7A6; /*background-color: #F5F3F4;*/ }
     .ui-datepicker-calendar td {   position: relative; width: 24px; border:0; height: 24px; padding: 5px 2px; }
     .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active
     {  border: none; text-align: center; background: #f6f6f6; font-weight: normal; color: #454545; }
-    .ui-datepicker-today { color: #FF7B00; font-weight: 800; }
+    td.ui-datepicker-today { color: #FF7B00; font-weight: 800; }
+    .ui-datepicker-days-cell-over.ui-datepicker-today .ui-state-default.ui-state-highlight{ background:#00345F; color:#FFFFFF;  }
+    .ui-state-default.ui-state-active { background:#00345F; color:#FFFFFF; }
+    /* .ui-state-default.ui-state-highlight { background:#00345F; color:#FFFFFF; } */
 </style>
