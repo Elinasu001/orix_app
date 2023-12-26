@@ -201,6 +201,7 @@ function deleteBlock(_full) {
   $(window).scrollTop(winScrollTop);
 }
 
+
 // popup
 function openPopup(id) {
   var _target = $('#' + id);
@@ -212,35 +213,32 @@ function openPopup(id) {
     $(window).scrollTop(currentTop);
   });
   if (_target.hasClass('layer-up')) {
-
+    _target.fadeIn(600);
+    _target.focus();
+    _target.addClass("on");
   } else if (_target.hasClass('type-alert')){
-  _target.css('bottom', '20px');
+  // _target.css('top','0');
 	_target.fadeIn(600);
   _target.focus();
 	_target.addClass("on");
-  
-  }else{
-    _target.fadeIn(600);
-	_target.addClass("on");
-    _target.focus();
   }
 }
 
 //open popup slideup
-function openPopupUp(id) {
+function openPopup(id) {
   var _target = $('#' + id);
   currentTop = $(window).scrollTop();
   $('body').css({ 'position': 'fixed', 'top': -currentTop });
   //_target.fadeIn(300);
   layerFunc(_target);
   _target.removeClass('close');
-  _target.addClass('show').show();
+  _target.addClass('on').show();
   _target.focus();
   _target.find('.btn-layer-close').on('click', function () {
     closePopupUp(id);
     $('body').removeAttr('style');
     $(window).scrollTop(currentTop);
-    _target.removeClass('show');
+    _target.removeClass('on');
   });
 
   if (_target.has('.ly-select-list').length > 0) {
@@ -248,36 +246,15 @@ function openPopupUp(id) {
       
       var selectedText = $(this).text();
       
-      $('[onclick="openPopupUp(\'' + id + '\')"]').closest('.form-control.select').find('span').text(selectedText);
+      $('[onclick="openPopup(\'' + id + '\')"]').closest('.form-control.select').find('span').text(selectedText);
       
       closePopupUp(id);
       $('body').removeAttr('style');
       $(window).scrollTop(currentTop);
-      _target.removeClass('show');
+      _target.removeClass('on');
     });
 
   }
-
-  // // 테이블에서 항목 클릭 시
-  // $('.table-type.check tbody tr').on('click', function() {
-  //   var isSelected = $(this).hasClass('checked'); // 현재 클릭된 항목의 선택 상태 확인
-
-  //   if (!isSelected) {
-  //     // 선택된 항목에만 클래스 추가
-  //     $(this).addClass('checked');
-
-  //     // 선택된 항목의 이름을 검색 입력란의 placeholder로 설정
-  //     var nameText = $(this).find('.name').text();
-  //     $('input.search').attr('placeholder', nameText);
-  //   }
-
-  //   // 팝업 닫기
-  //   closePopupUp(id);
-  //   $('body').removeAttr('style');
-  //   $(window).scrollTop(currentTop);
-  //   _target.removeClass('show');
-  // });
-
   // 테이블에서 항목 클릭 시
   $('.table-type.check tbody tr').on('click', function() {
     var $clickedItem = $(this);
@@ -299,16 +276,14 @@ function openPopupUp(id) {
     closePopupUp(id);
     $('body').removeAttr('style');
     $(window).scrollTop(currentTop);
-    _target.removeClass('show');
+    _target.removeClass('on');
   });
-
-
   if (_target.has('.ly-acc-select').length > 0) {
     _target.find('.ly-acc-select > .acc-list-area > a').on('click', function (e) {
       closePopupUp(id);
       $('body').removeAttr('style');
       $(window).scrollTop(currentTop);
-      _target.removeClass('show');
+      _target.removeClass('on');
       e.preventDefault();
     });
   }
