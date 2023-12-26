@@ -34,6 +34,14 @@
     <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
 
     <script type="text/javascript" src="../resources/js/lib/default.js"></script>
+
+
+    <!-- jQuery UI CSS -->
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
 </head>
 
 
@@ -120,11 +128,13 @@
                         <label for="">방문 예정 일자</label>
                         <div class="form-row" id="">
                             <div class="col">
-                                <input type="date" class="form-control" maxlength="6" placeholder="">
+                                <div class="input__wrap">
+                                    <input type="text" class="form-control input__item" placeholder="">
+                                  </div>
+                                <!-- <input type="text" id="datepicker" class="form-control datepicker" placeholder=""> -->
                             </div>
-                            <div class="input-hyphen">-</div>
                             <div class="col">
-                                <input type="date" class="form-control" maxlength="7" placeholder="">
+                                <input type="time" id="" class="form-control" placeholder="">
                             </div>
                         </div>
                     </div>
@@ -510,3 +520,187 @@
     </div>
 </div>
 <!--선택팝업//-->
+
+<!-- <script>
+$(function() {
+    //input을 datepicker로 선언
+    $("#datepicker").datepicker({
+        dateFormat: 'yy-mm-dd' //Input Display Format 변경
+        ,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+        ,showMonthAfterYear:true //년도 먼저 나오고, 뒤에 월 표시
+        ,changeYear: true //콤보박스에서 년 선택 가능
+        ,changeMonth: true //콤보박스에서 월 선택 가능
+        ,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시
+        ,buttonImage: "'https://cdn-icons-png.flaticon.com/512/2838/2838779.png'" //버튼 이미지 경로
+        ,buttonImageOnly: true //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
+        ,buttonText: "선택" //버튼에 마우스 갖다 댔을 때 표시되는 텍스트
+        ,yearSuffix: "년" //달력의 년도 부분 뒤에 붙는 텍스트
+        ,monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'] //달력의 월 부분 텍스트
+        ,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip 텍스트
+        ,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 부분 텍스트
+        ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 부분 Tooltip 텍스트
+        ,minDate: "-1M" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
+        ,maxDate: "+1M" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)
+        // ,beforeShow: function (input) {
+        //         var i_offset = $(input).offset(); //클릭된 input의 위치값 체크
+        //         setTimeout(function(){
+        //             $('#ui-datepicker-div').css({'top':i_offset.top, 'bottom':'', 'left':'13px'});//datepicker의 div의 포지션을 강제로 input 위치에 그리고 좌측은 모바일이여서 작기때문에 무조건 10px에 놓았다.		    })		} 
+
+        //         })
+        // }
+        
+    });
+    
+    //초기값을 오늘 날짜로 설정
+    $('#datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+
+    
+
+});
+
+
+
+$(document).ready(function() {
+   
+    // datepicker div 감싸기
+    $('.ui-datepicker').wrap('<div class="custom-datepicker-wrapper"></div>');
+        // 함수로 화면 크기 조정
+        function adjustDatePickerWidth() {
+        $('.ui-datepicker').css('width', $(window).width());
+    }
+
+    $('#datepicker, .datepicker > img').on('click', function() {
+        // var i_offset = $(this).offset();
+        $('.ui-datepicker').css({
+            'overflow': 'hidden',
+            'position': 'fixed',
+            'z-index': '999',
+            'padding': '20px',
+            'left': '0',
+            'right': '0',
+            'top': 'auto',
+            'bottom': '0',
+            'width': '100%',
+            'border-radius': '20px 20px 0 0',
+            'box-sizing': 'border-box',
+            'background': '#FFFFFF'
+        });
+        $('.ui-datepicker').offset({
+            // top: i_offset.top + $(this).outerHeight(),
+            left: 0
+        });
+        // 뒷 배경에 어둡고 불투명한 레이어 추가
+        
+    });
+
+
+});
+
+
+        
+</script> -->
+
+
+
+<script>
+$(function () {
+
+    var datepicker = $('.input__item');
+
+    datepicker.datepicker({
+        dateFormat: 'yy-mm-dd',
+        showOtherMonths: true,
+        showMonthAfterYear: true,
+        changeYear: true,
+        changeMonth: true,
+        showOn: 'both',
+        buttonImage: ('https://cdn-icons-png.flaticon.com/512/2838/2838779.png'),
+        buttonImageOnly: true,
+        showAnim: '',
+        onSelect: function () {
+            dimDisplay('none'); //hide back layer when date selected
+        }
+    });
+
+    $('#datepicker').datepicker('setDate', 'today'); // set date as today
+
+
+    // custom datepicker 
+    const dateInput = document.querySelector('.input__item'),
+        dateIcon = document.querySelector('.ui-datepicker-trigger'),
+        calendar = document.querySelector('#ui-datepicker-div');
+
+    // add back layer
+    const dim = document.createElement('div');
+    dim.classList.add('datepicker-layer');
+
+    calendar.before(dim);
+
+
+    // back layer show
+    dateInput.addEventListener('focus', function () {
+        if (calendar.style.display === 'block') {
+            dimDisplay('block');
+        }
+    })
+
+    dateIcon.addEventListener('click', function () {
+        if (calendar.style.display == 'block') {
+            dimDisplay('block');
+        }
+
+    })
+
+    //back layer hide
+    const layer = document.querySelector('.datepicker-layer');
+
+    window.addEventListener('click', function (e) {
+        if (e.target === layer) {
+            dimDisplay('none');
+        }
+    });
+
+    // back layer display control
+    function dimDisplay(display) {
+        layer.style.display = display;
+    }
+});
+</script>
+
+<style>
+    .datepicker-layer { width: 100%; height: 100%;  position: fixed;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.5); z-index: 200 !important; display: none; }
+    .ui-datepicker { width: 90%;
+    /* max-width: 360px; */
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    z-index: 200 !important;
+    display: none; }
+    .ui-datepicker-trigger { width:16px; height:16px; }
+    /* .ui-datepicker { width:90%; max-width:360px; position:fixed !important; top:50% !important; left:50% !important; transform: translate(-50%, -50%); padding: 1em; background-color: #fff; border-radius: 5px; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4); z-index: 200  !important; display: none;} */
+    .ui-datepicker-header {     position: relative;
+    width: 100%;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    padding: 4px 0;
+    background-color: #FFDD00;
+    border-top: 1px solid #FFDD00;
+    border-bottom: 1px solid #FFDD00;
+    border-radius: 5px; }
+    .ui-datepicker-title { width: 100%; max-width: 160px; display: flex; }
+    .ui-datepicker .ui-datepicker-title select { margin:1px 7px; }
+    .ui-datepicker-year { background-position: center right 0; }
+    .ui-datepicker-year, .ui-datepicker-month { margin:0 12px; padding-right:8px; border:none; background-color:#FFDD00; }
+    
+    .ui-datepicker-calendar .ui-datepicker-other-month { color: #B1A7A6; background-color: #F5F3F4; }
+    .ui-datepicker-calendar td {   position: relative; width: 24px; border:0; height: 24px; padding: 5px 2px; }
+    .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active
+    {  border: none; text-align: center; background: #f6f6f6; font-weight: normal; color: #454545; }
+    .ui-datepicker-today { color: #FF7B00; font-weight: 800; }
+</style>
