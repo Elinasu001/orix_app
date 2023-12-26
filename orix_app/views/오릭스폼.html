@@ -623,8 +623,27 @@ $(function () {
         showAnim: '',
         onSelect: function () {
             dimDisplay('none'); //hide back layer when date selected
+        },
+        // onSelect: function () {
+        //     enableScroll(); // 날짜 선택 시 스크롤 잠금 해제
+        // },
+        beforeShow: function(input, inst) {
+            disableScroll(); // datepicker가 열릴 때 스크롤 잠금
+        },
+        onClose: function() {
+            enableScroll(); // datepicker가 닫힐 때 스크롤 잠금 해제
         }
     });
+
+     // 스크롤을 잠그는 함수
+    function disableScroll() {
+        $('body').css('overflow', 'hidden');
+    }
+
+    // 스크롤을 다시 활성화하는 함수
+    function enableScroll() {
+        $('body').css('overflow', 'auto');
+    }
 
     $('#datepicker').datepicker('setDate', 'today'); // set date as today
 
