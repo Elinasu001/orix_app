@@ -82,7 +82,6 @@ table { border-collapse:collapse; }
 button { border-radius:0; }
 .line { border: 1px solid #ced4da; border-radius:5px; background-color: #fff; padding:10px; }
 .type-spread { margin:0 -20px; }
-section  + section { margin-top:20px; }
 /* flex */
 
 
@@ -848,3 +847,5 @@ iframe { border:none; }
 
 .calculation-area .visaul-info-box { margin-bottom:17px; padding:19px 51px 18px; color:#FFFFFF; text-align:center; background:#00345F; border-radius:4px; }
 .calculation-area .visaul-info-box span strong { font-weight:700; }
+
+.list-box-bottom { margin-bottom:20px; }
