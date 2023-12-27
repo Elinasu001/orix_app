@@ -798,8 +798,7 @@ iframe { border:none; }
 
 /* datepicker */
 /* #ui-datepicker-div { top:674px; } */
-.ui-datepicker-trigger,
-.ui-datetimepicker-trigger { position:absolute; right:10px; top:30%; }
+.ui-datepicker-trigger { position:absolute; right:10px; top:30%; }
 
 /*메뉴-확인리스트*/
 .txt-list-wrap + .form-cont { margin-top:40px; }
