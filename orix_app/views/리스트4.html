@@ -61,57 +61,65 @@
             <div class="contents-wrap">
                 <section>
                     <div class="txt-list-wrap">
-                        <div class="txt-detail-area">
-                            <div class="txt-detail-tit">
-                                <span><strong>김현대</strong> 고객님</span>
-                                <span><em class="flag style2">발송 예정</em></span>
+                        <div class="calculation-area form-wrap">
+                            <div class="form-group">
+                                <label for="user_phone">상환방법</label>
+                                <div class="form-control disabled" onclick="openPopup('lySel1')" tabindex="0">
+                                    <a href="#none" tabindex="-1"><span>원리금균등분할상환</span></a>
+                                </div>
                             </div>
-                            <ul class="txt-list">
-                                <li>
-                                    <span class="tit">전화번호</span>
-                                    <span class="txt">010-1234-5678</span>
-                                </li>
-                                <li>
-                                    <span class="tit">방문예쩡일자</span>
-                                    <span class="txt">YYYY.MM.DD HH:MM</span>
-                                </li>
-                                <li>
-                                    <span class="tit">방문자</span>
-                                    <span class="txt">오토영업2팀 홍길동</span>
-                                </li>
-                            </ul>
-                            <div class="btn-cont-wrap">
-                                <a href="#none" class="btn btn-primary">상세보기</a>
+                            <div class="form-group">
+                                <label for="amount">대출금액</label>
+                                <div class="amount">
+                                    <input type="amount" class="form-control amount-num" id="amount" placeholder="금액을 입력해주세요" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                    <span class="amount-txt">원</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="amount">대출기간</label>
+                                <div class="amount">
+                                    <input type="amount" class="form-control amount-num" id="amount" placeholder="금액을 입력해주세요">
+                                    <span class="amount-txt">개월</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="amount">예상금리</label>
+                                <div class="amount">
+                                    <input type="amount" class="form-control amount-num" id="amount" placeholder="금액을 입력해주세요">
+                                    <span class="amount-txt">%</span>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="txt-detail-area">
+                    </div>
+                </section>
+                <section>
+                    <div class="txt-list-wrap">
+                        <div class="calculation-area">
+                            <div class="visaul-info-box">
+                                <span>상환 예정 금액은<br>매월 약 <strong>450,450원</strong> 입니다</span>
+                            </div>
                             <div class="txt-detail-tit">
-                                <span><strong>장기아</strong> 고객님</span>
-                                <span><em class="flag style1">발송 완료</em></span>
+                                <span class="tit"><strong>상환예정금액</strong></span>
                             </div>
                             <ul class="txt-list">
                                 <li>
-                                    <span class="tit">전화번호</span>
-                                    <span class="txt">010-1234-5678</span>
+                                    <span class="tit">상환원금</span>
+                                    <span class="txt">387,017원</span>
                                 </li>
                                 <li>
-                                    <span class="tit">방문예쩡일자</span>
-                                    <span class="txt">YYYY.MM.DD HH:MM</span>
+                                    <span class="tit">이자금액</span>
+                                    <span class="txt">63,333원</span>
                                 </li>
                                 <li>
-                                    <span class="tit">방문자</span>
-                                    <span class="txt">오토영업2팀 홍길동</span>
+                                    <span class="tit">월납부금</span>
+                                    <span class="txt">540,540원</span>
                                 </li>
                             </ul>
-                            <div class="btn-cont-wrap">
-                                <a href="#none" class="btn btn-primary">상세보기</a>
-                            </div>
                         </div>
                     </div>
                 </section>
             </div>
         </form>
     </div>
-</body>
+,</body>
 </html>
