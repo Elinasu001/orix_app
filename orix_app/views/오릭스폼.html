@@ -612,8 +612,6 @@ $(function () {
         }
     });
 
-   
-
  
 
     $('#datepicker').datepicker('setDate', 'today'); // set date as today
@@ -660,107 +658,20 @@ $(function () {
         layer.style.display = display;
     }
 
-    /** datetimepicker custom **/
 
-    function getCurrentTime(date) {
-        // extract hours and minutes from given date
-        var hours = date.getHours(),
-            minutes = date.getMinutes();
-
-        // round minutes to half hour or next hour
-        if (minutes <= 30) {
-            minutes = "30";
-        } else {
-            minutes = "00";
-            hours = (hours + 1) % 24; // loop on 24 hours
-        }
-
-        // calc if morning or afternoon
-        var ampm = hours >= 12 ? "pm" : "am";
-
-        // adjust hour to 12h format
-        hours = hours % 12;
-        hours = hours ? hours : 12; // the hour '0' should be '12'
-
-        return hours + ":" + minutes + " " + ampm;
-    }
-
-    var cur_time = new Date();
-            cur_time.setHours(cur_time.getHours() + 1);
-            $('.timepicker').timepicker({
-                timeFormat: 'hh:mm p',
-                interval: 30,
-                minTime: getCurrentTime(new Date()),
-                // minTime: '1',
-                // maxTime: '11:30pm', 
-                // startTime: '01:00',
-                dynamic: false,
-                dropdown: true,
-                scrollbar: true
-            });
-    $('.timepicker').timepicker('setTime', cur_time);
-
-    // var datetimepicker = $('.timepicker');
-
-    // datetimepicker.timepicker({
-    //     datepicker:false,
-    //     datetimepicker:false,
-    //     minTime: '09:00am', // 조회하고자 할 시작 시간 ( 09시 부터 선택 가능 )
-    //     maxTime: '20:00pm', // 조회하고자 할 종료 시간 ( 20시 까지 선택 가능 )            
-    //     step: 30,// 30분 단위로 지정. ( 10을 넣으면 10분 단위 )
-    //     onOpen: function() {
-    //         // Timepicker가 열릴 때 body의 overflow를 hidden으로 변경하여 스크롤을 막음
-    //         $('body').css('overflow', 'hidden');
-    //     },
-    //     onClose: function() {
-    //         // Timepicker가 닫힐 때 body의 overflow를 다시 visible로 변경하여 스크롤을 활성화
-    //         $('body').css('overflow', 'visible');
-    //     }
-    // });
-
-    // back layer show/hide for timepicker
-    const timeInput = document.querySelector('.timepicker'),
-        timeContainer = document.querySelector('.ui-timepicker-container');
-    // timepickerContainer.classList.remove('ui-helper-hidden', 'ui-timepicker-hidden');
-
-    // add back layer for timepicker
-    const timeDim = document.createElement('div');
-    timeDim.classList.add('timepicker-layer');
-    timeDim.style.display = 'none'; // Initially hidden
-
-    timeContainer.before(timeDim);
-
-    // show back layer for timepicker
-    timeInput.addEventListener('click', function () {
-        if (timeContainer.style.display === 'block') {
-            dimTimeDisplay('block');
-            // timeContainer.classList.remove('ui-timepicker-hidden');
-        }
-        
+    // back layer click/touch event
+    layer.addEventListener('click', function (e) {
+        e.preventDefault(); // 기본 클릭 이벤트 동작 막기
+        e.stopPropagation(); // 클릭 이벤트 전파 방지
     });
 
-    
-
-    // hide back layer for timepicker
-    const timeLayer = document.querySelector('.timepicker-layer');
-
-    window.addEventListener('click', function (e) {
-        if (e.target === timeLayer) {
-            dimTimeDisplay('none');
-        }
-    });
-
-    // back layer display control for timepicker
-    function dimTimeDisplay(display) {
-        timeLayer.style.display = display;
-    }
-
-    $('.ui-corner-all').on('click', function() {
-        dimTimeDisplay('none');
+    layer.addEventListener('touchstart', function (e) {
+        e.preventDefault(); // 기본 터치 이벤트 동작 막기
+        e.stopPropagation(); // 터치 이벤트 전파 방지
     });
 
 
-    /** 스크롤 공통 **/
+     /** 스크롤 공통 **/
     // 스크롤을 잠그는 함수
     function disableScroll() {
         $('body').css('overflow', 'hidden');
@@ -771,7 +682,90 @@ $(function () {
         $('body').css('overflow', 'auto');
     }
 
-   
+    /** datetimepicker custom **/
+
+    // function getCurrentTime(date) {
+    //     // extract hours and minutes from given date
+    //     var hours = date.getHours(),
+    //         minutes = date.getMinutes();
+
+    //     // round minutes to half hour or next hour
+    //     if (minutes <= 30) {
+    //         minutes = "30";
+    //     } else {
+    //         minutes = "00";
+    //         hours = (hours + 1) % 24; // loop on 24 hours
+    //     }
+
+    //     // calc if morning or afternoon
+    //     var ampm = hours >= 12 ? "pm" : "am";
+
+    //     // adjust hour to 12h format
+    //     hours = hours % 12;
+    //     hours = hours ? hours : 12; // the hour '0' should be '12'
+
+    //     return hours + ":" + minutes + " " + ampm;
+    // }
+
+    // var cur_time = new Date();
+    //         cur_time.setHours(cur_time.getHours() + 1);
+    //         $('.timepicker').timepicker({
+    //             timeFormat: 'hh:mm p',
+    //             interval: 30,
+    //             minTime: getCurrentTime(new Date()),
+    //             // minTime: '1',
+    //             // maxTime: '11:30pm', 
+    //             // startTime: '01:00',
+    //             dynamic: false,
+    //             dropdown: true,
+    //             scrollbar: true
+    //         });
+    // $('.timepicker').timepicker('setTime', cur_time);
+
+    // // var datetimepicker = $('.timepicker');
+
+
+    // // back layer show/hide for timepicker
+    // const timeInput = document.querySelector('.timepicker'),
+    //     timeContainer = document.querySelector('.ui-timepicker-container');
+    // // timepickerContainer.classList.remove('ui-helper-hidden', 'ui-timepicker-hidden');
+
+    // // add back layer for timepicker
+    // const timeDim = document.createElement('div');
+    // timeDim.classList.add('timepicker-layer');
+    // timeDim.style.display = 'none'; // Initially hidden
+
+    // timeContainer.before(timeDim);
+
+    // // show back layer for timepicker
+    // timeInput.addEventListener('click', function () {
+    //     if (timeContainer.style.display === 'block') {
+    //         dimTimeDisplay('block');
+    //         // timeContainer.classList.remove('ui-timepicker-hidden');
+    //     }
+        
+    // });
+
+    
+
+    // // hide back layer for timepicker
+    // const timeLayer = document.querySelector('.timepicker-layer');
+
+    // window.addEventListener('click', function (e) {
+    //     if (e.target === timeLayer) {
+    //         dimTimeDisplay('none');
+    //     }
+    // });
+
+    // // back layer display control for timepicker
+    // function dimTimeDisplay(display) {
+    //     timeLayer.style.display = display;
+    // }
+
+    // $('.ui-corner-all').on('click', function() {
+    //     dimTimeDisplay('none');
+    // });
+
 
 });
 
@@ -785,7 +779,7 @@ $(function () {
 <style>
     /* .ui-timepicker-hidden  */
     .datepicker-layer,
-    .timepicker-layer { width: 100%; height: 100%;  position: fixed;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.5); z-index: 200!important; display: none; }
+    .timepicker-layer { width: 100%; height: 100%;  position: fixed;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.2); z-index: 200!important; display: none; }
     .ui-datepicker,
     .ui-timepicker-container  {
 cursor:inherit !important;
