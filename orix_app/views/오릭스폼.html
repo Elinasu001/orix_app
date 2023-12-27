@@ -145,6 +145,18 @@
                             </div> -->
                         </div>
                     </div>
+                    <div class="form-group">
+                        <!-- <div class="form-tit">방문 예정 일자</div> -->
+                        <label for="">방문 예정 일자</label>
+                        <div class="form-row" id="">
+                            <div class="col">
+                                <input type="text" class="form-control datepicker" placeholder="0000-00-00"  inputmode="none" >
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control timepicker" placeholder="-- : -- --" inputmode="none" >
+                            </div>
+                        </div>
+                    </div>
 
 
                     <div class="form-group">
@@ -533,7 +545,7 @@
 <div id="lySel4" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
     <div class="content-wrap">
         <div class="pop-header">
-            <h2 class="pop-title">통신사 선택</h2>
+            <h2 class="pop-title">방문 시간 선택</h2>
             <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
         </div>
         <div class="ly-scroll-con ly-select">
@@ -562,85 +574,6 @@
     </div>
 </div>
 <!--시간팝업//-->
-
-<!-- <script>
-$(function() {
-    //input을 datepicker로 선언
-    $("#datepicker").datepicker({
-        dateFormat: 'yy-mm-dd' //Input Display Format 변경
-        ,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
-        ,showMonthAfterYear:true //년도 먼저 나오고, 뒤에 월 표시
-        ,changeYear: true //콤보박스에서 년 선택 가능
-        ,changeMonth: true //콤보박스에서 월 선택 가능
-        ,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시
-        ,buttonImage: "'https://cdn-icons-png.flaticon.com/512/2838/2838779.png'" //버튼 이미지 경로
-        ,buttonImageOnly: true //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
-        ,buttonText: "선택" //버튼에 마우스 갖다 댔을 때 표시되는 텍스트
-        ,yearSuffix: "년" //달력의 년도 부분 뒤에 붙는 텍스트
-        ,monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'] //달력의 월 부분 텍스트
-        ,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip 텍스트
-        ,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 부분 텍스트
-        ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 부분 Tooltip 텍스트
-        ,minDate: "-1M" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
-        ,maxDate: "+1M" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)
-        // ,beforeShow: function (input) {
-        //         var i_offset = $(input).offset(); //클릭된 input의 위치값 체크
-        //         setTimeout(function(){
-        //             $('#ui-datepicker-div').css({'top':i_offset.top, 'bottom':'', 'left':'13px'});//datepicker의 div의 포지션을 강제로 input 위치에 그리고 좌측은 모바일이여서 작기때문에 무조건 10px에 놓았다.		    })		} 
-
-        //         })
-        // }
-        
-    });
-    
-    //초기값을 오늘 날짜로 설정
-    $('#datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-    
-
-});
-
-
-
-$(document).ready(function() {
-   
-    // datepicker div 감싸기
-    $('.ui-datepicker').wrap('<div class="custom-datepicker-wrapper"></div>');
-        // 함수로 화면 크기 조정
-        function adjustDatePickerWidth() {
-        $('.ui-datepicker').css('width', $(window).width());
-    }
-
-    $('#datepicker, .datepicker > img').on('click', function() {
-        // var i_offset = $(this).offset();
-        $('.ui-datepicker').css({
-            'overflow': 'hidden',
-            'position': 'fixed',
-            'z-index': '999',
-            'padding': '20px',
-            'left': '0',
-            'right': '0',
-            'top': 'auto',
-            'bottom': '0',
-            'width': '100%',
-            'border-radius': '20px 20px 0 0',
-            'box-sizing': 'border-box',
-            'background': '#FFFFFF'
-        });
-        $('.ui-datepicker').offset({
-            // top: i_offset.top + $(this).outerHeight(),
-            left: 0
-        });
-        // 뒷 배경에 어둡고 불투명한 레이어 추가
-        
-    });
-
-
-});
-
-
-        
-</script> -->
 
 
 
@@ -729,6 +662,44 @@ $(function () {
 
     /** datetimepicker custom **/
 
+    function getCurrentTime(date) {
+        // extract hours and minutes from given date
+        var hours = date.getHours(),
+            minutes = date.getMinutes();
+
+        // round minutes to half hour or next hour
+        if (minutes <= 30) {
+            minutes = "30";
+        } else {
+            minutes = "00";
+            hours = (hours + 1) % 24; // loop on 24 hours
+        }
+
+        // calc if morning or afternoon
+        var ampm = hours >= 12 ? "pm" : "am";
+
+        // adjust hour to 12h format
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+
+        return hours + ":" + minutes + " " + ampm;
+    }
+
+    var cur_time = new Date();
+            cur_time.setHours(cur_time.getHours() + 1);
+            $('.timepicker').timepicker({
+                timeFormat: 'hh:mm p',
+                interval: 30,
+                minTime: getCurrentTime(new Date()),
+                // minTime: '1',
+                // maxTime: '11:30pm', 
+                // startTime: '01:00',
+                dynamic: false,
+                dropdown: true,
+                scrollbar: true
+            });
+    $('.timepicker').timepicker('setTime', cur_time);
+
     // var datetimepicker = $('.timepicker');
 
     // datetimepicker.timepicker({
@@ -747,46 +718,46 @@ $(function () {
     //     }
     // });
 
-    // // back layer show/hide for timepicker
-    // const timeInput = document.querySelector('.timepicker'),
-    // timeContainer = document.querySelector('.ui-timepicker-container');
-    // // timepickerContainer.classList.remove('ui-helper-hidden', 'ui-timepicker-hidden');
+    // back layer show/hide for timepicker
+    const timeInput = document.querySelector('.timepicker'),
+        timeContainer = document.querySelector('.ui-timepicker-container');
+    // timepickerContainer.classList.remove('ui-helper-hidden', 'ui-timepicker-hidden');
 
-    // // add back layer for timepicker
-    // const timeDim = document.createElement('div');
-    // timeDim.classList.add('timepicker-layer');
-    // timeDim.style.display = 'none'; // Initially hidden
+    // add back layer for timepicker
+    const timeDim = document.createElement('div');
+    timeDim.classList.add('timepicker-layer');
+    timeDim.style.display = 'none'; // Initially hidden
 
-    // timeContainer.before(timeDim);
+    timeContainer.before(timeDim);
 
-    // // show back layer for timepicker
-    // timeInput.addEventListener('click', function () {
-    //     if (timeContainer.style.display === 'block') {
-    //         dimTimeDisplay('block');
-    //         // timeContainer.classList.remove('ui-timepicker-hidden');
-    //     }
+    // show back layer for timepicker
+    timeInput.addEventListener('click', function () {
+        if (timeContainer.style.display === 'block') {
+            dimTimeDisplay('block');
+            // timeContainer.classList.remove('ui-timepicker-hidden');
+        }
         
-    // });
+    });
 
     
 
-    // // hide back layer for timepicker
-    // const timeLayer = document.querySelector('.timepicker-layer');
+    // hide back layer for timepicker
+    const timeLayer = document.querySelector('.timepicker-layer');
 
-    // window.addEventListener('click', function (e) {
-    //     if (e.target === timeLayer) {
-    //         dimTimeDisplay('none');
-    //     }
-    // });
+    window.addEventListener('click', function (e) {
+        if (e.target === timeLayer) {
+            dimTimeDisplay('none');
+        }
+    });
 
-    // // back layer display control for timepicker
-    // function dimTimeDisplay(display) {
-    //     timeLayer.style.display = display;
-    // }
+    // back layer display control for timepicker
+    function dimTimeDisplay(display) {
+        timeLayer.style.display = display;
+    }
 
-    // $('.ui-corner-all').on('click', function() {
-    //     dimTimeDisplay('none');
-    // });
+    $('.ui-corner-all').on('click', function() {
+        dimTimeDisplay('none');
+    });
 
 
     /** 스크롤 공통 **/
