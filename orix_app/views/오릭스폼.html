@@ -41,6 +41,10 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+
 
 </head>
 
@@ -128,13 +132,11 @@
                         <label for="">방문 예정 일자</label>
                         <div class="form-row" id="">
                             <div class="col">
-                                <div class="input_wrap">
-                                    <input type="text" class="form-control input_item" placeholder="0000-00-00"  inputmode="none">
-                                </div>
+                                <input type="text" class="form-control datepicker" placeholder="0000-00-00"  inputmode="none" >
                                 <!-- <input type="text" id="datepicker" class="form-control datepicker" placeholder=""> -->
                             </div>
                             <div class="col">
-                                <input type="time" id="" class="form-control" placeholder="">
+                                <input type="text" class="form-control timepicker" placeholder="-- : -- --" inputmode="none" >
                             </div>
                         </div>
                     </div>
@@ -604,8 +606,10 @@ $(document).ready(function() {
 
 <script>
 $(function () {
+    $('.datepicker, .timepicker').wrap('<div class="input_wrap"></div>');
 
-    var datepicker = $('.input_item');
+    /** datepicker custom **/
+    var datepicker = $('.datepicker');
 
     datepicker.datepicker({
         dateFormat: 'yy-mm-dd',
@@ -635,23 +639,17 @@ $(function () {
         }
     });
 
-     // 스크롤을 잠그는 함수
-    function disableScroll() {
-        $('body').css('overflow', 'hidden');
-    }
+   
 
-    // 스크롤을 다시 활성화하는 함수
-    function enableScroll() {
-        $('body').css('overflow', 'auto');
-    }
+ 
 
     $('#datepicker').datepicker('setDate', 'today'); // set date as today
 
-
     // custom datepicker 
-    const dateInput = document.querySelector('.input_item'),
+    const dateInput = document.querySelector('.datepicker'),
         dateIcon = document.querySelector('.ui-datepicker-trigger'),
         calendar = document.querySelector('#ui-datepicker-div');
+   
 
     // add back layer
     const dim = document.createElement('div');
@@ -674,9 +672,9 @@ $(function () {
 
     })
 
+
     //back layer hide
     const layer = document.querySelector('.datepicker-layer');
- 
 
     window.addEventListener('click', function (e) {
         if (e.target === layer) {
@@ -689,14 +687,83 @@ $(function () {
         layer.style.display = display;
     }
 
+    /** datetimepicker custom **/
+
+    var datetimepicker = $('.timepicker');
+
+    datetimepicker.timepicker({
+        datepicker:false,
+        datetimepicker:false,
+        minTime: '09:00am', // 조회하고자 할 시작 시간 ( 09시 부터 선택 가능 )
+        maxTime: '20:00pm', // 조회하고자 할 종료 시간 ( 20시 까지 선택 가능 )            
+        step: 30// 30분 단위로 지정. ( 10을 넣으면 10분 단위 )
+    });
+
+    // back layer show/hide for timepicker
+    const timeInput = document.querySelector('.timepicker'),
+    timeContainer = document.querySelector('.ui-timepicker-container');
+
+    // add back layer for timepicker
+    const timeDim = document.createElement('div');
+    timeDim.classList.add('timepicker-layer');
+    timeDim.style.display = 'none'; // Initially hidden
+
+    timeContainer.before(timeDim);
+
+    // show back layer for timepicker
+    timeInput.addEventListener('click', function () {
+        if (timeContainer.style.display === 'block') {
+            dimTimeDisplay('block');
+        }
+    });
+
+
+    // hide back layer for timepicker
+    const timeLayer = document.querySelector('.timepicker-layer');
+
+    window.addEventListener('click', function (e) {
+        if (e.target === timeLayer) {
+            dimTimeDisplay('none');
+        }
+    });
+
+    // back layer display control for timepicker
+    function dimTimeDisplay(display) {
+        timeLayer.style.display = display;
+    }
+
+    $('.ui-corner-all').on('click', function() {
+        dimTimeDisplay('none');
+    });
+
+
+
+    /** 스크롤 공통 **/
+    // 스크롤을 잠그는 함수
+    function disableScroll() {
+        $('body').css('overflow', 'hidden');
+    }
+
+    // 스크롤을 다시 활성화하는 함수
+    function enableScroll() {
+        $('body').css('overflow', 'auto');
+    }
+
 });
+
+
+
+
+
+
 </script>
 
 <style>
-    .datepicker-layer { width: 100%; height: 100%;  position: fixed;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.5); z-index: 200 !important; display: none; }
-    .ui-datepicker {
-    
-    width: 100%;
+    .datepicker-layer,
+    .timepicker-layer { width: 100%; height: 100%;  position: fixed;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.5); z-index: 200 !important; display: none; }
+    .ui-datepicker,
+    .ui-timepicker-container  {
+    width: 100% !important;
     /* max-width: 360px; */
     position: fixed !important;
     top: inherit !important;
@@ -737,4 +804,9 @@ $(function () {
     .ui-datepicker-days-cell-over.ui-datepicker-today .ui-state-default.ui-state-highlight{ background:#00345F; color:#FFFFFF;  }
     .ui-state-default.ui-state-active { background:#00345F; color:#FFFFFF; }
     /* .ui-state-default.ui-state-highlight { background:#00345F; color:#FFFFFF; } */
+
+
+    /* timepicker custom */
+    .ui-timepicker-standard a { padding:10px !important; }
+    .ui-timepicker-standard .ui-state-hover { background:#00345F!important; color:#FFFFFF!important; border-radius:7px; }
 </style>
