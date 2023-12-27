@@ -696,12 +696,21 @@ $(function () {
         datetimepicker:false,
         minTime: '09:00am', // 조회하고자 할 시작 시간 ( 09시 부터 선택 가능 )
         maxTime: '20:00pm', // 조회하고자 할 종료 시간 ( 20시 까지 선택 가능 )            
-        step: 30// 30분 단위로 지정. ( 10을 넣으면 10분 단위 )
+        step: 30,// 30분 단위로 지정. ( 10을 넣으면 10분 단위 )
+        onOpen: function() {
+            // Timepicker가 열릴 때 body의 overflow를 hidden으로 변경하여 스크롤을 막음
+            $('body').css('overflow', 'hidden');
+        },
+        onClose: function() {
+            // Timepicker가 닫힐 때 body의 overflow를 다시 visible로 변경하여 스크롤을 활성화
+            $('body').css('overflow', 'visible');
+        }
     });
 
     // back layer show/hide for timepicker
     const timeInput = document.querySelector('.timepicker'),
     timeContainer = document.querySelector('.ui-timepicker-container');
+    // timepickerContainer.classList.remove('ui-helper-hidden', 'ui-timepicker-hidden');
 
     // add back layer for timepicker
     const timeDim = document.createElement('div');
@@ -714,9 +723,12 @@ $(function () {
     timeInput.addEventListener('click', function () {
         if (timeContainer.style.display === 'block') {
             dimTimeDisplay('block');
+            // timeContainer.classList.remove('ui-timepicker-hidden');
         }
+        
     });
 
+    
 
     // hide back layer for timepicker
     const timeLayer = document.querySelector('.timepicker-layer');
@@ -737,7 +749,6 @@ $(function () {
     });
 
 
-
     /** 스크롤 공통 **/
     // 스크롤을 잠그는 함수
     function disableScroll() {
@@ -749,6 +760,8 @@ $(function () {
         $('body').css('overflow', 'auto');
     }
 
+   
+
 });
 
 
@@ -759,10 +772,12 @@ $(function () {
 </script>
 
 <style>
+    /* .ui-timepicker-hidden  */
     .datepicker-layer,
-    .timepicker-layer { width: 100%; height: 100%;  position: fixed;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.5); z-index: 200 !important; display: none; }
+    .timepicker-layer { width: 100%; height: 100%;  position: fixed;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.5); z-index: 200!important; display: none; }
     .ui-datepicker,
     .ui-timepicker-container  {
+cursor:inherit !important;
     width: 100% !important;
     /* max-width: 360px; */
     position: fixed !important;
