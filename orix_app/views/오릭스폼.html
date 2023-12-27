@@ -550,7 +550,7 @@
         </div>
         <div class="ly-scroll-con ly-select">
             <ul class="ly-select-list">
-                <li><button>9:00 AM</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                <li><button>9:00 AM</button></li>
                 <li><button>9:30 AM</button></li>
                 <li><button>10:00 AM</button></li>
                 <li><button>10:30 AM</button></li>
@@ -770,44 +770,16 @@ $(function () {
 });
 
 
-
-
-
-
 </script>
 
 <style>
     /* .ui-timepicker-hidden  */
     .datepicker-layer,
-    .timepicker-layer { width: 100%; height: 100%;  position: fixed;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.2); z-index: 200!important; display: none; }
+    .timepicker-layer { z-index: 200!important; display: none; position: fixed; width: 100%; height: 100%;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.2); }
     .ui-datepicker,
-    .ui-timepicker-container  {
-cursor:inherit !important;
-    width: 100% !important;
-    /* max-width: 360px; */
-    position: fixed !important;
-    top: inherit !important;
-    left: inherit !important;
-    bottom:0;
-    /* transform: translate(-50%, -50%); */
-    padding: 1em;
-    background-color: #fff;
-    border-radius: 20px 20px 0 0;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-    z-index: 200 !important;
-    display: none; }
+    .ui-timepicker-container  {  z-index: 200 !important;  display: none; position: fixed !important; width: 100% !important; top: inherit !important; left: inherit !important; bottom:0; padding: 1em; background-color: #FFFFFF; border-radius: 20px 20px 0 0; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); }
     .ui-datepicker-trigger { width:16px; height:16px; }
-    /* .ui-datepicker { width:90%; max-width:360px; position:fixed !important; top:50% !important; left:50% !important; transform: translate(-50%, -50%); padding: 1em; background-color: #fff; border-radius: 5px; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4); z-index: 200  !important; display: none;} */
-    .ui-datepicker-header { position: relative;
-    width: 100%;
-    height: 46px;
-    display: flex;
-    justify-content: center;
-    padding: 4px 0;
-    /* background-color: #00345F;
-    border-top: 1px solid #00345F;
-    border-bottom: 1px solid #00345F; */
-    border-radius: 5px; }
+    .ui-datepicker-header { position: relative; width: 100%; height: 46px; display: flex; justify-content: center; padding: 4px 0; border-radius: 5px; }
     .ui-widget-header { border:none; }
     .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { top:20%; }
     .ui-datepicker .ui-datepicker-prev-hover,.ui-datepicker .ui-datepicker-next-hover { top:20%; }
@@ -818,15 +790,17 @@ cursor:inherit !important;
     
     .ui-datepicker-calendar .ui-datepicker-other-month { color: #B1A7A6; /*background-color: #F5F3F4;*/ }
     .ui-datepicker-calendar td {   position: relative; width: 24px; border:0; height: 24px; padding: 5px 2px; }
-    .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default,
+    .ui-button, 
+    html .ui-button.ui-state-disabled:hover,
+    html .ui-button.ui-state-disabled:active
     {  border: none; text-align: center; background: #f6f6f6; font-weight: normal; color: #454545; }
     td.ui-datepicker-today { color: #FF7B00; font-weight: 800; }
     .ui-datepicker-days-cell-over.ui-datepicker-today .ui-state-default.ui-state-highlight{ background:#00345F; color:#FFFFFF;  }
     .ui-state-default.ui-state-active { background:#00345F; color:#FFFFFF; }
-    /* .ui-state-default.ui-state-highlight { background:#00345F; color:#FFFFFF; } */
-
-
     /* timepicker custom */
-    .ui-timepicker-standard a { padding:10px !important; }
-    .ui-timepicker-standard .ui-state-hover { background:#00345F!important; color:#FFFFFF!important; border-radius:7px; }
+    /* .ui-timepicker-standard a { padding:10px !important; }
+    .ui-timepicker-standard .ui-state-hover { background:#00345F!important; color:#FFFFFF!important; border-radius:7px; } */
 </style>
