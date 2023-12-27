@@ -82,7 +82,7 @@ table { border-collapse:collapse; }
 button { border-radius:0; }
 .line { border: 1px solid #ced4da; border-radius:5px; background-color: #fff; padding:10px; }
 .type-spread { margin:0 -20px; }
-section  + section { margin-top:20px; }
+
 /* flex */
 
 
