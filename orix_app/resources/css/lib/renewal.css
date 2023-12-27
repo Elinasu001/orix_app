@@ -82,7 +82,7 @@ table { border-collapse:collapse; }
 button { border-radius:0; }
 .line { border: 1px solid #ced4da; border-radius:5px; background-color: #fff; padding:10px; }
 .type-spread { margin:0 -20px; }
-
+section  + section { margin-top:20px; }
 /* flex */
 
 
@@ -190,7 +190,7 @@ input:autofill:active { -webkit-text-fill-color: #B2B2B2 !important; -webkit-box
 .form-group label,
 .text-area label { margin-bottom:10px; }
 .form-control { display:block; width:100%; min-height:44px; /*height:calc(2.25rem + 2px);*/ padding:4px 7px; font-size:0.875rem; line-height:1rem; font-weight:400; color:#B2B2B2; background-clip: padding-box; border: 1px solid #E2E2E2; border-radius:5px; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-.form-control:focus:not(.form-control[readonly]:focus),
+.form-control:focus:not(.form-control[readonly]:focus, .form-control.disabled),
 .input:focus { color:#495057; outline:0; background-color:#fff; border-color:#B095DC; /*box-shadow:0 0 0 0.2rem rgba(0, 123, 255, 0.25);*/ }
 .form-control:disabled,
 .form-control[readonly] { background-color:#F2F2F2; }
@@ -236,14 +236,19 @@ input:autofill:active { -webkit-text-fill-color: #B2B2B2 !important; -webkit-box
 
 /** select **/
 /* select *//* ::after로 화살표 지정 안됨 option 박스 안열림 */
-.form-control.select { display:flex; align-items:center; }
+.form-control.select,
+.form-control.disabled { display:flex; align-items:center; }
 .form-control.select + .form-control { margin-top:10px; }
 .form-control.select span { color:#B2B2B2; }
 .form-control.select + input { margin-top:10px; }
 select { -webkit-appearance:none; /* for chrome */ -moz-appearance:none; /*for firefox*/ appearance:none; }
 select::-ms-expand{ display:none;/*for IE10,11*/ }
 select,
-.select { background:url(../../images/common/svg/ico_select.svg)no-repeat 98%/16px auto; }
+.select,
+.disabled { background:url(../../images/common/svg/ico_select.svg)no-repeat 98%/16px auto; }
+/* disabled */
+.form-control.disabled { border:1px solid #D1D1D1; border-radius:4px; background-color:#F8F8F8; pointer-events:none; } /*정의된 커서 옵션 비활성화*/
+.form-control.disabled a { font-size:0.875rem; font-weight:300; color:#A9A9A9; }
 
 /** [table] custom-check label 없는 경우 **/
 input[type="checkbox"].custom-check { display:none; }
@@ -768,9 +773,11 @@ iframe { border:none; }
 .accordion-item .accordion button.on::after { transform:translateY(-50%) rotate(0deg); }
 /* .accordion-cont .text-area { margin-top:20px; } */
 .accordion-cont .form-group label,
-.accordion-cont .text-area label { position:relative; padding-right:10px; }
+.accordion-cont .text-area label,
+.calculation-area .form-group label { position:relative; padding-right:10px; }
 .accordion-cont .form-group label::after,
-.accordion-cont .text-area label::after { content:'*'; display:block; position:absolute; top:0; right:0; color:var(--red); }
+.accordion-cont .text-area label::after,
+.calculation-area .form-group label::after { content:'*'; display:block; position:absolute; top:0; right:0; color:var(--red); }
 
 .accordion-item .accordion .accordion-cont { display: none; overflow: hidden; transition: max-height 0.3s ease; }
 .accordion-item .accordion .accordion-cont.on { display:block; max-height:500px; }
@@ -795,11 +802,18 @@ iframe { border:none; }
 
 /*메뉴-확인리스트*/
 .txt-list-wrap + .form-cont { margin-top:40px; }
-.txt-list-wrap .txt-detail-area { position:relative; padding:14px 20px 30px; border-radius:15px; border:1px solid #E2E2E2; }
+.txt-list-wrap .txt-detail-area,
+.txt-list-wrap .calculation-area { position:relative; border-radius:15px; border:1px solid #E2E2E2; }
+.txt-list-wrap .txt-detail-area { padding:7px 20px 30px; }
+.txt-list-wrap .calculation-area {padding:20px 20px 30px; }
 .txt-list-wrap .txt-detail-area + .txt-detail-area { margin-top:20px; }
-.txt-detail-area .txt-detail-tit { display:flex; align-items:center; justify-content: space-between; padding:14px 0 12px; border-bottom:1px solid #E2E2E2; font-size:0; color:#333333; }
-.txt-detail-area .txt-detail-tit strong { flex:1;  font-weight:700; font-size:1rem; }
-.txt-detail-area .txt-detail-tit span { font-size:0.8rem; font-weight:500; color:#00345F; }
+.txt-detail-area .txt-detail-tit,
+.calculation-area .txt-detail-tit { display:flex; align-items:center; justify-content: space-between; padding:7px 0 12px; border-bottom:1px solid #E2E2E2; font-size:0; color:#333333; }
+.txt-detail-area .txt-detail-tit strong,
+.calculation-area .txt-detail-tit strong { font-weight:700; font-size:1rem; }
+.txt-detail-area .txt-detail-tit span { font-size:0.875rem; font-weight:500; }
+.txt-detail-area .txt-detail-tit .tit,
+.calculation-area .txt-detail-tit .tit { color:#00345F; }
 .txt-detail-area .txt-detail-tit span .btn-gray,
 .txt-detail-area .txt-detail-tit span .normal-btn { color:#454545; }
 .txt-detail-area .txt-detail-tit span .flag { line-height:unset; margin-right:0; padding:3px 5px; border-radius:4px; color:#000000; font-size:0.75rem; line-height:0.875rem; }
@@ -811,7 +825,8 @@ iframe { border:none; }
 .txt-list li.none-bor:first-child { padding-top:0; }
 .txt-list li .tit { font-weight:400; font-size:1rem; color:#000000; }/*2023-12-27 스타일가이드 반영*/
 .txt-list li .tit .ref { font-size:0.77778rem; line-height:1.5;}
-.txt-list li .txt{ flex:1; padding-left:30px; font-weight:400; vertical-align:top; text-align:right; font-size:1rem; color:#000000; word-break:break-all; }
+.txt-list li .txt,
+.txt-detail-tit .txt { flex:1; padding-left:30px; font-weight:400; vertical-align:top; text-align:right; font-size:1rem; color:#000000; word-break:break-all; }
 .txt-list li .txt.yes-txt{ font-size:0.875rem; font-weight:700; color:#00345F; }
 .txt-list li .txt.no-txt{ font-size:0.875rem; font-weight:700; color:#FF0000; }
 .txt-list li .txt a[href*="tel"] { color:#260F54; word-break:break-all; }
@@ -830,3 +845,6 @@ iframe { border:none; }
 
 .flag.style1 { font-style:normal; background:#EEF8FF; }
 .flag.style2 { font-style:normal; background:#FEF6CB; }
+
+.calculation-area .visaul-info-box { margin-bottom:17px; padding:19px 51px 18px; color:#FFFFFF; text-align:center; background:#00345F; border-radius:4px; }
+.calculation-area .visaul-info-box span strong { font-weight:700; }
