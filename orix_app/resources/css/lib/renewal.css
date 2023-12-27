@@ -202,7 +202,7 @@ input:autofill:active { -webkit-text-fill-color: #B2B2B2 !important; /*-webkit-b
 .input:focus { color:#000000; outline:0; background-color:#fff; border-color:#B095DC; }
 .form-control:disabled,
 .form-control.disabled { background-color:#F2F2F2; pointer-events:none; }
- 
+
 /** invaild style **/
 .form-group.invalid .form-control { border-color:#dc3545; color:#dc3545; }
 .form-group .feedback { display:none; }
