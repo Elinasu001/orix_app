@@ -791,3 +791,38 @@ iframe { border:none; }
 /* datepicker */
 /* #ui-datepicker-div { top:674px; } */
 .ui-datepicker-trigger { position:absolute; right:10px; top:30%; }
+
+/*메뉴-확인리스트*/
+.txt-list-wrap + .form-cont { margin-top:40px; }
+.txt-list-wrap .txt-detail-area { position:relative; padding:20px; border-radius:15px; border:1px solid #E2E2E2; }
+.txt-list-wrap .txt-detail-area + .txt-detail-area { margin-top:20px; }
+.txt-detail-area .txt-detail-tit { display:flex; align-items:center; justify-content: space-between; padding:10px 0; border-bottom:1px solid #E2E2E2; font-size:0; color:#333333; }
+.txt-detail-area .txt-detail-tit strong { flex:1;  font-weight:700; font-size:1rem; }
+.txt-detail-area .txt-detail-tit span { font-size:0.8rem; font-weight:500; }
+.txt-detail-area .txt-detail-tit span .btn-gray,
+.txt-detail-area .txt-detail-tit span .normal-btn { color:#454545; }
+.txt-detail-area .txt-detail-tit span .flag { height:unset; line-height:unset; margin-right:0; padding:7px 12px; }
+.txt-detail-area .txt-detail-tit:has(.btn-request) { padding:0 0 18px; }
+.txt-list li { display:flex; align-items:center; padding:10px 0; }
+.txt-list li span { color:#2E66C7; }
+.txt-list li:first-child { padding-top:20px; }
+.txt-list li:last-child { padding-bottom:10px; border-bottom:0; }
+.txt-list li.none-bor:first-child { padding-top:0; }
+.txt-list li .tit { font-weight:300; font-size:1rem; color:#454545; }/*2023-07-14 스타일가이드 반영*/
+.txt-list li .tit .ref { font-size:0.77778rem; line-height:1.5;}
+.txt-list li .txt{ flex:1; padding-left:30px; font-weight:500; vertical-align:top; text-align:right; font-size:1rem; color:#260F54; word-break:break-all; }
+.txt-list li .txt a[href*="tel"] { color:#260F54; word-break:break-all; }
+.txt-list .cusnm { color:#000!important; }
+
+.txt-list-wrap .txt-detail-area.account-info .txt-list li { display:flex; }
+.txt-list-wrap .txt-detail-area.account-info .txt-list li .tit { flex:1 1 fit-content; }
+.txt-list-wrap .txt-detail-area.account-info .txt-list li .txt { flex:1 1 auto; }
+.txt-detail-area .desc { color:#757575; font-size:0.88889rem; line-height:1.4375; }
+.txt-detail-area > .tit { font-size:0.88889rem; line-height:1.4375; }
+/* .txt-detail-area:has(.tit) { color:#666666; } */
+.txt-detail-area .btn-cont-wrap { margin:0!important; padding:0!important; }
+.txt-detail-area .txt-list + .btn-cont-wrap { margin-top:10px!important; }
+.txt-detail-area .q-wrap { margin-top:18px; margin-bottom:0; }
+
+.flag.style1 { font-style: normal; color:#FFFFFF; background:#86B9E5; }
+.flag.style2 { font-style: normal; color:#743759; background:#FEF6CB; }
