@@ -198,7 +198,7 @@ input:valid { font-size:0.875rem; font-weight:300; color:#000000; }
 
 /* 기본 */
 .info-txt-wrap { display:flex; margin-top:10px;}
-.info-txt-wrap .info-mark { display:flex; align-items:center; justify-content:center;  margin-right:5px; /*padding:8px;*/ width:17px; height:17px; border:1px solid #BBBBBB; border-radius:50%; color:#BBBBBB; font-size:0.66667rem; font-weight:bold; text-align:center; }
+.info-txt-wrap .info-mark { display:flex; align-items:center; justify-content:center;  margin-right:5px; /*padding:8px;*/ width:20px; height:17px; border:1px solid #BBBBBB; border-radius:50%; color:#BBBBBB; font-size:0.66667rem; font-weight:bold; text-align:center; }
 .info-txt-wrap .info {  margin:0; font-weight:300; color:#BBBBBB; font-size:0.77778rem; word-break:normal; }
 
 
