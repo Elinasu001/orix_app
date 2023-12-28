@@ -15,8 +15,8 @@ $(function () {
         dayNamesMin: ['일','월','화','수','목','금','토'], //달력의 요일 부분 텍스트
         dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'], //달력의 요일 부분 Tooltip 텍스트
         showOn: 'both',
-        buttonImage: ('https://cdn-icons-png.flaticon.com/512/2838/2838779.png'),
-        buttonImageOnly: true,
+        // buttonImage: ('../../images/common/datepicker_cal.png'),
+        // buttonImageOnly: true,
         showAnim: '',
         onSelect: function () {
             dimDisplay('none'); //hide back layer when date selected
@@ -30,9 +30,7 @@ $(function () {
         onClose: function() {
             enableScroll(); // datepicker가 닫힐 때 스크롤 잠금 해제
         }
-    });
-
- 
+    }).datepicker("setDate", new Date());
 
     $('#datepicker').datepicker('setDate', 'today'); // set date as today
 

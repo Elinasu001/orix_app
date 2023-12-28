@@ -139,7 +139,7 @@
                         <label for="">방문 예정 일자</label>
                         <div class="form-row" id="">
                             <div class="col">
-                                <input type="text" class="form-control datepicker" placeholder="0000-00-00"  inputmode="none" readonly>
+                                <input type="text" class="form-control datepicker" placeholder=""  inputmode="none" readonly>
                                 <!-- <input type="text" id="datepicker" class="form-control datepicker" placeholder=""> -->
                             </div>
                             <div class="col">
@@ -210,7 +210,7 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
-                                <input type="text" id="search" class="form-control" placeholder="인증번호 입력" aria-label="Search Addresses" inputmode="search"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
+                                <input type="number" id="search" class="form-control" placeholder="인증번호 입력"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
                             </div>
                             <button class="btn btn-txt" type="button">인증번호요청</button>
                         </div>
@@ -249,18 +249,22 @@
 
                 </section>
                 <section class="form-wrap">
-                    <div class="form-group address line" tabindex="0">
-                        <button class="btn btn-research outline-secondary" type="button">재검색</button>
+                    <div class="form-group address line">
                         <div class="input">
                             <span class="address-num">12347</span>
                             <span class="address-text">서울특별시 서초구 매헌로 16 (하이브랜드) 1518호</span>
                         </div>
+                        <div class="btn-wrap">
+                            <button class="btn btn-research" type="button">재검색</button>
+                        </div>
                     </div>
-                    <div class="form-group address line" tabindex="0">
-                        <button class="btn btn-research outline-secondary" type="button">재검색</button>
+                    <div class="form-group address line">
                         <div class="input">
                             <span class="address-num">12347</span>
                             <span class="address-text">서울특별시 서초구 매헌로 16 (하이브랜드) 1518호</span>
+                        </div>
+                        <div class="btn-wrap">
+                            <button class="btn btn-research" type="button">재검색</button>
                         </div>
                     </div>
                 </section>
@@ -631,7 +635,7 @@
     .timepicker-layer { z-index: 200!important; display: none; position: fixed; width: 100%; height: 100%;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.2); }
     .ui-datepicker,
     .ui-timepicker-container  {  z-index: 200 !important;  display: none; position: fixed !important; width: 100% !important; top: inherit !important; left: inherit !important; bottom:0; padding: 1em; background-color: #FFFFFF; border-radius: 20px 20px 0 0; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); }
-    .ui-datepicker-trigger { width:16px; height:16px; }
+    .ui-datepicker-trigger { position:absolute;  top:50%; right:10px; transform:translateY(-50%);  width:24px; height:24px; border:none; background: url(../resources/images/common/datepicker_cal.png)no-repeat center 50%/24px auto; }
     .ui-datepicker-header { position: relative; width: 100%; height: 46px; display: flex; justify-content: center; padding: 4px 0; border-radius: 5px; }
     .ui-widget-header { border:none; }
     .ui-widget-header .ui-icon.ui-icon-circle-triangle-e { width:18px; height:18px; background:url(../resources/images/common/datepicker_next.png)no-repeat 50%/18px auto; }
@@ -648,7 +652,7 @@
     .ui-state-default,
     .ui-widget-content .ui-state-default,
     .ui-widget-header .ui-state-default,
-    .ui-button, 
+    .ui-button,
     html .ui-button.ui-state-disabled:hover,
     html .ui-button.ui-state-disabled:active { border: none; text-align: center; background: #f6f6f6; font-weight: normal; color: #454545; }
     td.ui-datepicker-today { color: #FF7B00; font-weight: 800; }
