@@ -145,8 +145,7 @@
                             </div> -->
                         </div>
                     </div>
-                    <div class="form-group">
-                        <!-- <div class="form-tit">방문 예정 일자</div> -->
+                    <!-- <div class="form-group">
                         <label for="">방문 예정 일자</label>
                         <div class="form-row" id="">
                             <div class="col">
@@ -156,7 +155,7 @@
                                 <input type="text" class="form-control timepicker" placeholder="-- : -- --" inputmode="none" readonly>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
 
                     <div class="form-group">
@@ -602,7 +601,7 @@ $(function () {
             dimDisplay('none'); //hide back layer when date selected
         },
         // onSelect: function () {
-        //     enableScroll(); // 날짜 선택 시 스크롤 잠금 해제
+        //     enableScroll(''); // 날짜 선택 시 스크롤 잠금 해제
         // },
         beforeShow: function(input, inst) {
             disableScroll(); // datepicker가 열릴 때 스크롤 잠금
@@ -620,7 +619,6 @@ $(function () {
     const dateInput = document.querySelector('.datepicker'),
         dateIcon = document.querySelector('.ui-datepicker-trigger'),
         calendar = document.querySelector('#ui-datepicker-div');
-   
 
     // add back layer
     const dim = document.createElement('div');
@@ -658,19 +656,6 @@ $(function () {
         layer.style.display = display;
     }
 
-
-    // back layer click/touch event
-    layer.addEventListener('click', function (e) {
-        e.preventDefault(); // 기본 클릭 이벤트 동작 막기
-        e.stopPropagation(); // 클릭 이벤트 전파 방지
-    });
-
-    layer.addEventListener('touchstart', function (e) {
-        e.preventDefault(); // 기본 터치 이벤트 동작 막기
-        e.stopPropagation(); // 터치 이벤트 전파 방지
-    });
-
-
      /** 스크롤 공통 **/
     // 스크롤을 잠그는 함수
     function disableScroll() {
@@ -681,6 +666,17 @@ $(function () {
     function enableScroll() {
         $('body').css('overflow', 'auto');
     }
+
+    // // back layer click/touch event
+    // layer.addEventListener('click', function (e) {
+    //     e.preventDefault(); // 기본 클릭 이벤트 동작 막기
+    //     e.stopPropagation(); // 클릭 이벤트 전파 방지
+    // });
+
+    // layer.addEventListener('touchstart', function (e) {
+    //     e.preventDefault(); // 기본 터치 이벤트 동작 막기
+    //     e.stopPropagation(); // 터치 이벤트 전파 방지
+    // });
 
     /** datetimepicker custom **/
 
