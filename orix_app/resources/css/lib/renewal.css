@@ -82,9 +82,9 @@ table { border-collapse:collapse; }
 button { border-radius:0; }
 .line { border: 1px solid #ced4da; border-radius:5px; background-color: #fff; padding:10px; }
 .type-spread { margin:0 -20px; }
-
-/* flex */
-
+.essential::after { content:"*"; color:#FF0000; padding-left:3px; }
+textarea { overflow-y:scroll; width:100%; height:200px; padding:10px; resize:none; border-radius:4px; border:1px solid #D1D1D1; background:#FFFFFF; font-size:0.875rem; line-height:1rem; color:#B2B2B2; font-weight:300; white-space:pre-line; }
+textarea::placeholder { color:#D1D1D1; }
 
 .form-row { display:-ms-flexbox; display:flex; -ms-flex-wrap:nowrap; flex-wrap:nowrap; justify-content:space-between;  /*margin-right:-5px; margin-left:-5px;*/ width:100%; }
 .form-row > .col,
@@ -104,10 +104,6 @@ button { border-radius:0; }
 button,
 input { overflow: visible; }
 
-textarea { overflow-y:scroll; width:100%; height:200px; border-radius:15px; background:#F8F8F8; font-size:0.88889rem; line-height:1.4375; color:#B2B2B2; white-space:pre-line; }
-textarea{ padding:20px; border:none; line-height:1.5; resize:none; }
-textarea::placeholder { color:#B2B2B2; }
-
 input {  vertical-align: middle; padding: 0; margin: 0; }
 form { height:100%; }
 
@@ -121,8 +117,6 @@ input[type="search"],
 input[type="email"],
 input[type="number"]{ box-sizing:border-box; background:#fff;font-size:0.875rem; line-height:1rem; font-weight:400; font-family:inherit; -webkit-appearance:none; -moz-appearance:none; appearance:none; }
 
-textarea { overflow-y:scroll; width:100%; height:200px; border-radius:15px; background:#F8F8F8; font-size:0.88889rem; line-height:1.4375; white-space:pre-line; }
-textarea::placeholder { color:#999999; }
 
 select, .select-box { outline:none; -webkit-appearance:none; }
 
@@ -189,6 +183,7 @@ input:autofill:active { -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset; transi
 .form-control:focus:not(.form-control[readonly]:focus),
 .input:focus { outline:0; background-color:#FFFFFF; border-color:#003763; color:#CECECE; }
 
+
 /* value */
 .form-control.valid span,
 .form-control:valid,
@@ -216,8 +211,7 @@ input::-webkit-search-results-decoration{ -webkit-appearance:none; display:none;
 
 /** input style **/
 .form-wrap { margin-top:20px; }
-.form-group + .form-group,
-.text-area { margin-top:20px; }
+.form-group + .form-group { margin-top:20px; }
 .form-control { display:block; width:100%; height:40px; padding:0px 10px; font-size:0.875rem; line-height:1rem; font-weight:400; color:#999999; background-clip: padding-box; border: 1px solid #DDDDDD; border-radius:4px; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
 .form-group.img-search .form-control { border:none; border-bottom:1px solid #DDDDDD;   }
 
@@ -266,7 +260,7 @@ select { background:url(../../images/common/svg/ico_select.svg)no-repeat 95%/16p
 /* .form-group.address .input { width:100%; } */
 /* .form-group > .input { position:relative; -ms-flex: 1 1 auto; flex: 1 1 auto; width:1%; } */
 .form-group.address.line { padding:20px 15px 15px 15px; }
-.input .address-num { margin-bottom:10px; font-size:1.125rem; line-height:1.25rem; font-weight:500;  }
+.input .address-num { display:block; margin-bottom:10px; font-size:1.125rem; line-height:1.25rem; font-weight:500;  }
 .input .address-text { font-size:0.875rem; line-height:1rem; font-size:400; }
 
 /*input-hyphen*/
@@ -285,32 +279,42 @@ input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"
 .radio-buttons,
 .check-buttons {  display:flex; align-items:center; flex-wrap: wrap; }
 .radio-buttons .radio-button,
-.check-buttons .check-button { cursor:pointer; position:relative; padding-left:30px; line-height:1.25rem; }
+.check-buttons .check-button { cursor:pointer; position:relative; padding-left:30px; font-size:1rem; line-height:1.188rem; color:#999999; }
+
 
 .radio-button,
-.check-button{ margin-right:30px; }
+.check-button{ margin-right:28px; }
 
 /* 기존 ratio/checkbox 버튼 삭제 */
 .radio-button input[type="radio"],
 .check-button input[type="checkbox"] {  position:absolute; left:0; opacity:0; height:0; width:0; }
 
 /* ratio/checkbox checked 안됐을 경우 */
+.radio-buttons .radio-button .custom-radio { border:6px solid #E2E2E2; }
+.check-buttons .check-button .custom-check { border:1px solid #E2E2E2; }
 .radio-buttons .radio-button .custom-radio,
-.check-buttons .check-button .custom-check  { position:absolute; top:0; left:0; height:20px; width:20px; background-color:#FFFFFF; border:1px solid #E2E2E2; }
+.check-buttons .check-button .custom-check  { position:absolute; top:0; left:0; height:20px; width:20px; background-color:#FFFFFF;}
 .radio-buttons .radio-button .custom-radio {  border-radius:50%; }
-.check-buttons .check-button .custom-check {  border-radius:5px; }
+.check-buttons .check-button .custom-check {  border-radius:4px; }
 
-.radio-buttons .custom-radio:after { content:""; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:10px; height:10px; border-radius:50%; background:#E2E2E2;}
-.check-buttons .custom-check:after { content:"✓"; position:absolute; top:22%; left:50%; transform:translate( -50%, -50%); width:13px; height:10px; font-weight:600;  color: #E2E2E2; }
+.radio-buttons .custom-radio:after { content:""; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:8px; height:8px; border-radius:50%; background:#FFFFFF;}
+.check-buttons .custom-check:after { content:""; position:absolute; top:50%; left:50%; transform:translate( -50%, -50%); width:10px; height:10px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16' height='16' viewBox='0 0 16 16'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_16518' data-name='사각형 16518' width='16' height='16' fill='%23fff' stroke='%23707070' stroke-width='1'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='ic-checkmark' clip-path='url(%23clip-path)'%3E%3Cpath id='Icon_feather-check' data-name='Icon feather-check' d='M16.525,9,9.289,16.236,6,12.947' transform='translate(-3.568 -3.784)' fill='none' stroke='%23ddd' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
 
 /* ratio/checkbox checked 됐을 경우 */
-.radio-buttons .radio-button input[type="radio"]:checked ~ .custom-radio,
-.check-buttons .check-button input[type="checkbox"]:checked ~ .custom-check  { border:1px solid #B095DC; }
+.radio-buttons .radio-button input[type="radio"]:checked ~ .custom-radio { border:6px solid #00345F; }
+.check-buttons .check-button input[type="checkbox"]:checked ~ .custom-check  { border:1px solid #00345F; }
 
-.radio-buttons .radio-button input[type="radio"]:checked ~ .custom-radio:after { background-color: #B095DC; }
+.radio-buttons .radio-button input[type="radio"]:checked ~ .custom-radio:after { background-color: #FFFFFF; }
 
-.check-buttons .check-button input[type="checkbox"]:checked ~ .custom-check  { background-color: #B095DC; }
-.check-buttons .check-button input[type="checkbox"]:checked ~ .custom-check:after { color:#FFFFFF;  }
+.check-buttons .check-button input[type="checkbox"]:checked ~ .custom-check  { background-color: #00345F; }
+.check-buttons .check-button input[type="checkbox"]:checked ~ .custom-check:after {  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16' height='16' viewBox='0 0 16 16'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_16518' data-name='사각형 16518' width='16' height='16' fill='%23fff' stroke='%23ffffff' stroke-width='1'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='ic-checkmark' clip-path='url(%23clip-path)'%3E%3Cpath id='Icon_feather-check' data-name='Icon feather-check' d='M16.525,9,9.289,16.236,6,12.947' transform='translate(-3.568 -3.784)' fill='none' stroke='%23ddd' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E")no-repeat center;  }
+
+.radio-button input[type="radio"]:checked + .custom-radio + .text,
+.check-button input[type="checkbox"]:checked + .custom-check + .text { color:#333333; }
+
+/* ratio/checkbox disabed 됐을 경우 */
+.radio-button input[type="radio"]:disabled + .custom-radio + .text { color:#CECECE; }
+.check-button input[type="checkbox"]:disabled + .custom-check + .text { color:#CECECE }
 
 /** button **/
 .fixed-btn-wrap { position:fixed; padding:15px; bottom:0; left:0; width:100%; z-index:20; text-align:center; background:linear-gradient(0deg, rgba(255,255,255,1) 89%, rgba(255,255,255,0) 100%); }
@@ -538,7 +542,7 @@ iframe { border:none; }
 [class^="table-type"] th,
 [class^="table-type"] td{ text-align:center; font-size:0.875rem; line-height:1rem; font-weight:400;  border-bottom:1px solid #EEEEEE; word-break: keep-all; }
 [class^="table-wrap"] thead th,
-[class^="table-type"] thead th {  padding:5px 30px; background:#00345F; font-size:0.875rem; line-height:1rem; font-weight:300; color:#FFFFFF; }
+[class^="table-type"] thead th {  padding:10px 30px; background:#00345F; font-size:0.875rem; line-height:1rem; font-weight:300; color:#FFFFFF; }
 [class^="table-wrap"] tbody td,
 [class^="table-type"] tbody td {  padding:12px 30px; font-size:0.875rem; line-height:1rem; font-weight:300; }
 .table-type td:last-child { border-right:0; }
@@ -795,13 +799,6 @@ iframe { border:none; }
 .accordion-item .accordion button::after { content:""; display:block; position:absolute; top:50%; right:20px; transform:translateY(-50%) rotate(180deg); width:16px; height:16px; background: url(../../images/common/svg/ico_select.svg)no-repeat 98%/16px auto; }
 .accordion-item .accordion button.on::after { transform:translateY(-50%) rotate(0deg); }
 /* .accordion-cont .text-area { margin-top:20px; } */
-.accordion-cont .form-group label,
-.accordion-cont .text-area label,
-.calculation-area .form-group label { position:relative; padding-right:10px; }
-.accordion-cont .form-group label::after,
-.accordion-cont .text-area label::after,
-.calculation-area .form-group label::after { content:'*'; display:block; position:absolute; top:0; right:0; color:var(--red); }
-
 .accordion-item .accordion .accordion-cont { display: none; overflow: hidden; transition: max-height 0.3s ease; }
 .accordion-item .accordion .accordion-cont.on { display:block; max-height:500px; }
 

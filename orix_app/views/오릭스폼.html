@@ -201,10 +201,20 @@
                             <span class="amount-txt">원</span>
                         </div>
                     </div>
-
-                    <div class="form-group" onclick="openPopup('lySel3')">
-                        <input type="text" id="search" class="form-control search" placeholder="신용조회 동의완료 고객 선택" aria-label="Search" aria-describedby="user-search" inputmode="search"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
+                    <!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
+                    <!-- <div class="form-group" onclick="openPopup('lySel3')">
+                        <input type="text" id="search" class="form-control search" placeholder="신용조회 동의완료 고객 선택" aria-label="Search" aria-describedby="user-search" inputmode="search">
                         <button class="btn btn-txt-select" type="button" >선택</button>
+                    </div> -->
+
+                    <div class="form-group">
+                        <label for="search" class="essential">방문자</label><!--essential 필수일 경우-->
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" id="search" class="form-control" placeholder="방문자 선택" readonly>
+                            </div>
+                            <button class="btn btn-txt" type="button" onclick="openPopup('lySel3')">선택</button>
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -215,16 +225,7 @@
                             <button class="btn btn-txt" type="button">인증번호요청</button>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <div class="form-row">
-                            <div class="col">
-                                <input type="text" id="search" class="form-control" placeholder="신용조회 동의완료 고객 선택" aria-label="Search Addresses" inputmode="search"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
-                            </div>
-                            <button class="btn btn-txt" type="button">검색</button>
-                        </div>
-                    </div>
-
+                    
                     <div class="form-group">
                         <div class="form-tit">모델로 조회</div>
                         <div class="form-row">
@@ -237,8 +238,10 @@
                         </div>
                     </div>
 
+
+
                     <div class="form-group">
-                        <label for="search">주소 검색</label>
+                        <label for="search" class="essential">주소 검색</label><!--essential 필수일 경우-->
                         <div class="form-row">
                             <div class="col">
                                 <input type="text" id="search" class="form-control" placeholder="도로명, 지번을 입력해주세요" aria-label="Search Addresses" inputmode="search"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
@@ -301,17 +304,17 @@
                         <label for="radio-1" class="radio-button">
                             <input type="radio" id="radio-1" name="terms">
                             <span class="custom-radio"></span>
-                            <span>1학기</span>
+                            <span class="text">1학기</span>
                         </label>
                         <label for="radio-2" class="radio-button">
                             <input type="radio" id="radio-2" name="terms">
                             <span class="custom-radio"></span>
-                            <span>2학기</span>
+                            <span class="text">2학기</span>
                         </label>
                         <label for="radio-3" class="radio-button">
-                            <input type="radio" id="radio-3" name="terms">
+                            <input type="radio" id="radio-3" name="terms" disabled>
                             <span class="custom-radio"></span>
-                            <span>추가학기</span>
+                            <span class="text">추가학기</span>
                         </label>
                     </div>
                 </section>
@@ -321,18 +324,23 @@
                         <label for="check-1" class="check-button">
                             <input type="checkbox" id="check-1" name="terms">
                             <span class="custom-check"></span>
-                            <span>1학기</span>
+                            <span class="text">1학기</span>
                         </label>
                         <label for="check-2" class="check-button">
                             <input type="checkbox" id="check-2" name="terms">
                             <span class="custom-check"></span>
-                            <span>2학기</span>
+                            <span class="text">2학기</span>
                         </label>
                         <label for="check-3" class="check-button">
-                            <input type="checkbox" id="check-3" name="terms">
+                            <input type="checkbox" id="check-3" name="terms" disabled>
                             <span class="custom-check"></span>
-                            <span>추가학기</span>
+                            <span class="text">추가학기</span>
                         </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user_phone" class="essential">내용</label><!--essential 필수일 경우-->
+                        <textarea type="text" title="성명" id="ipt02" class="inp" name="" value="" placeholder="내용을 입력해주세요" maxlength="" required=""></textarea>
                     </div>
                 </section>
 
@@ -635,7 +643,7 @@
     .timepicker-layer { z-index: 200!important; display: none; position: fixed; width: 100%; height: 100%;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.2); }
     .ui-datepicker,
     .ui-timepicker-container  {  z-index: 200 !important;  display: none; position: fixed !important; width: 100% !important; top: inherit !important; left: inherit !important; bottom:0; padding: 1em; background-color: #FFFFFF; border-radius: 20px 20px 0 0; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); }
-    .ui-datepicker-trigger { position:absolute;  top:50%; right:10px; transform:translateY(-50%);  width:24px; height:24px; border:none; background: url(../resources/images/common/datepicker_cal.png)no-repeat center 50%/24px auto; }
+    .ui-datepicker-trigger { position:absolute;  top:50%; right:10px; transform:translateY(-50%);  width:16px; height:24px; border:none; background: url(../resources/images/common/datepicker_cal.png)no-repeat center 50%/16px auto; }
     .ui-datepicker-header { position: relative; width: 100%; height: 46px; display: flex; justify-content: center; padding: 4px 0; border-radius: 5px; }
     .ui-widget-header { border:none; }
     .ui-widget-header .ui-icon.ui-icon-circle-triangle-e { width:18px; height:18px; background:url(../resources/images/common/datepicker_next.png)no-repeat 50%/18px auto; }
