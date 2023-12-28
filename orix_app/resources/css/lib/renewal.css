@@ -191,15 +191,15 @@ input:valid { font-size:0.875rem; font-weight:300; color:#000000; }
 
 /** invaild **/
 .form-group.invalid .form-control { border-color:#FF0000; color:#FF0000; }
-.form-group.invalid .info-txt-wrap { display:none; }
-.form-group.invalid .info-txt-wrap { display:flex; width:100%; color:#FF0000; }
-.form-group.invalid .info-mark{ border-color:#FF0000; color:#FF0000; }
+.form-group.invalid .info-txt-wrap { /*display:none;*/ }
+.form-group.invalid .info-mark{ border-color:#FF0000; }
+.form-group.invalid .info-txt-wrap .info-mark:after,
 .form-group.invalid .info { color:#FF0000; }
-
 /* 기본 */
 .info-txt-wrap { display:flex; margin-top:5px; }
-.info-txt-wrap .info-mark { display:flex; align-items:center; justify-content:center; margin-right:5px; padding:2px 5px; width:14px; height:14px; border:1px solid #BBBBBB; border-radius:50%; font-size:0.75rem;  line-height:0.875rem; font-weight:400; color:#BBBBBB; text-align:center; }
-.info-txt-wrap .info {  margin:0; font-size:0.75rem;  line-height:0.875rem; font-weight:400; color:#BBBBBB; word-break:normal; }
+.info-txt-wrap .info-mark { position:relative; display:flex; justify-content:center; width:15px; height:14px; font-size:0; border:1px solid #BBBBBB; border-radius:50%; }
+.info-txt-wrap .info-mark:after { position:absolute; content:'!'; top:50%; transform:translateY(-50%); font-size:0.75rem; line-height:0.875rem; font-weight:400; color:#BBBBBB; text-align:center; }
+.info-txt-wrap .info {  margin:0; padding-left:5px; font-size:0.75rem;  line-height:0.875rem; font-weight:400; color:#BBBBBB; word-break:normal; }
 
 
 input::-ms-clear,input::-ms-reveal{ -webkit-appearance:none; display:none; }
