@@ -191,15 +191,15 @@ input:valid { font-size:0.875rem; font-weight:300; color:#000000; }
 
 /** invaild **/
 .form-group.invalid .form-control { border-color:#FF0000; color:#FF0000; }
-.form-group .info-txt-wrap { display:none; }
-.form-group.invalid .info-txt-wrap { display:flex; width:100%; margin-top:5px; font-size:0.78rem; color:#FF0000; }
+.form-group.invalid .info-txt-wrap { display:none; }
+.form-group.invalid .info-txt-wrap { display:flex; width:100%; color:#FF0000; }
 .form-group.invalid .info-mark{ border-color:#FF0000; color:#FF0000; }
 .form-group.invalid .info { color:#FF0000; }
 
 /* 기본 */
-.info-txt-wrap { display:flex; margin-top:10px;}
-.info-txt-wrap .info-mark { display:flex; align-items:center; justify-content:center;  margin-right:5px; /*padding:8px;*/ width:20px; height:17px; border:1px solid #BBBBBB; border-radius:50%; color:#BBBBBB; font-size:0.66667rem; font-weight:bold; text-align:center; }
-.info-txt-wrap .info {  margin:0; font-weight:300; color:#BBBBBB; font-size:0.77778rem; word-break:normal; }
+.info-txt-wrap { display:flex; margin-top:5px; }
+.info-txt-wrap .info-mark { display:flex; align-items:center; justify-content:center; margin-right:5px; padding:2px 5px; width:14px; height:14px; border:1px solid #BBBBBB; border-radius:50%; font-size:0.75rem;  line-height:0.875rem; font-weight:400; color:#BBBBBB; text-align:center; }
+.info-txt-wrap .info {  margin:0; font-size:0.75rem;  line-height:0.875rem; font-weight:400; color:#BBBBBB; word-break:normal; }
 
 
 input::-ms-clear,input::-ms-reveal{ -webkit-appearance:none; display:none; }
