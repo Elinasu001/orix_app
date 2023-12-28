@@ -160,13 +160,12 @@ input::-moz-placeholder { /* Mozilla Firefox 19+ */ color:#999999; }
 
 /* disabled */
 .form-control:disabled,
-.form-control.disabled 
-.form-control.disabled span,
-input:disabled::placeholder { font-size:0.875rem; font-weight:300; color:#A9A9A9; pointer-events:none;}
-input:disabled::-webkit-input-placeholder {/* WebKit browsers */  color:#A9A9A9; pointer-events:none; }
-input:disabled:-ms-input-placeholder {  /* Internet Explorer 10+ */ color:#A9A9A9; pointer-events:none; }
+.form-control.disabled,
+input:disabled::placeholder { font-size:0.875rem; font-weight:300; color:#A9A9A9; background-color:#F8F8F8; pointer-events:none;}
+input:disabled::-webkit-input-placeholder {/* WebKit browsers */  color:#A9A9A9; background-color:#F8F8F8; pointer-events:none; }
+input:disabled:-ms-input-placeholder {  /* Internet Explorer 10+ */ color:#A9A9A9; background-color:#F8F8F8; pointer-events:none; }
 input:disabled:-moz-placeholder{ /* Firefox 18- */ color: #A9A9A9; }
-input:disabled::-moz-placeholder {  /* Mozilla Firefox 19+ */ color:#A9A9A9; pointer-events:none; }
+input:disabled::-moz-placeholder {  /* Mozilla Firefox 19+ */ color:#A9A9A9; background-color:#F8F8F8; pointer-events:none; }
 
 /* focus */
 /** 인풋 자동완성 reset **/
