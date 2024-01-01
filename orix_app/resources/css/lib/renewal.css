@@ -812,6 +812,7 @@ iframe { border:none; }
 
 /*메뉴-확인리스트*/
 /* .txt-list-wrap + .form-cont { margin-top:40px; } */
+.txt-list-wrap .form-wrap { margin-top:0; }
 .txt-list-wrap .txt-detail-area {  padding:15px 20px 30px; border-radius:4px; border:1px solid #E2E2E2; }
 .txt-list-wrap .txt-detail-area + .txt-detail-area { margin-top:20px; }
 .txt-detail-area .txt-detail-header { display:flex; align-items:center; justify-content: space-between; padding-bottom:15px; border-bottom:1px solid #E2E2E2; font-size:0; color:#333333; }
@@ -819,6 +820,7 @@ iframe { border:none; }
 .txt-detail-area .txt-detail-header p  { font-size:0.875rem; line-height:1rem; font-weight:500; }
 .txt-detail-area .txt-detail-header .txt  { font-weight:400; }
 .txt-detail-area .txt-detail-header span.tit { font-size:1rem; line-height:1.188rem; font-weight:600; color:#00345F; }
+.txt-detail-area.pd-top { padding:20px 20px 30px; }
 
 .txt-list li { display:flex; align-items:center; margin:12px 0; }
 .txt-list li span { font-size:0.875rem; font-weight:600; color:#00345F; }
