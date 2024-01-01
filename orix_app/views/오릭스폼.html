@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="../resources/css/lib/renewal.css">
     <link rel="stylesheet" href="../resources/css/lib/default.css">
     <link rel="stylesheet" href="../resources/css/ui/jquery-ui.css">
+    <link rel="stylesheet" href="../resources/css/ui/datepicker.css">
+    
     
 	<script type="text/javascript" src="../resources/js/ui/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="../resources/js/ui/jquery-1.12.4.min.js"></script>
@@ -38,17 +40,6 @@
 
 </head>
 
-    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script> -->
-
-<!-- <div class="quick-menu">
-    <ul>
-        <li><a href="#none">심사결과조회</a></li>
-        <li><a href="#none">대출진행현황</a></li>
-        <li><a href="#none">팀실적조회</a></li>
-        <li><a href="#none">송금요청</a></li>
-    </ul>
-</div> -->
 
 <body>
     <div class="wrap">
@@ -61,67 +52,64 @@
 			});
 			</script>
         </div>
-    
-        <!-- <header id="lnb">
-            <a href="javascript:void(0);" onclick="" class="btn_prev">이전</a>
-            <h1>정기예금</h1>
-            <a href="javascript:void(0)" class="btn_menu">메뉴</a>
-        </header> -->
+
         <form>
             <div class="contents-wrap">
                 <section class="form-wrap">
                     <div class="form-group">
-                        <label for="user_name">성명</label>
-                        <input id="user_name" type="text" name="user-name" class="form-control" placeholder="성명" invalid>
+                        <label for="">성명</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="성명" invalid>
                     </div>
                     <div class="form-group">
-                        <label for="user_name">vaild</label>
-                        <input id="user_name" type="text" name="user-name" class="form-control" placeholder="성명" value="오릭스"><!--vaild-->
+                        <label for="">vaild</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="성명" value="오릭스">
                     </div>
-                    <div class="form-group invalid">
-                        <label for="user_name">Invaild</label>
-                        <input id="user_name" type="text" name="user-name" class="form-control" placeholder="성명"><!--invaild-->
-                        <!-- <div class="feedback">사용자 이름을 선택하세요.</div> -->
+                    <div class="form-group"><!--invalid시 invalid 클래스 적용 필요-->
+                        <label for="">Invaild</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="성명">
+                        <div class="info-txt-wrap dp-none"> <!--dp-none은 invalid 필요할 경우 기본으로 적용 필요 -->
+                            <p class="info">영문, 숫자, 특수문자를 조합한 8~12자리를 입력해 주세요</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">이메일</label>
+                        <input id="" type="email" name="" class="form-control"  placeholder="이메일을 입력해주세요">
                         <div class="info-txt-wrap">
                             <p class="info">영문, 숫자, 특수문자를 조합한 8~12자리를 입력해 주세요</p>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="user-email">이메일</label>
-                        <input type="email" name="email" class="form-control" id="user-email"  placeholder="이메일을 입력해주세요">
-                        <div class="info-txt-wrap">
-                            <p class="info">영문, 숫자, 특수문자를 조합한 8~12자리를 입력해 주세요</p>
-                        </div>
+                        <label for="">Disalbed</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="성명" disabled><!--disalbed-->
                     </div>
 
                     <div class="form-group">
-                        <label for="user_name">Disalbed</label>
-                        <input id="user_name" type="text" name="user-name" class="form-control" placeholder="성명"disabled><!--disalbed-->
+                        <label for="">Readonly</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="성명" readonly><!--readonly-->
                     </div>
 
                     <div class="form-group">
-                        <div class="form-tit">Disalbed select</div>
-                        <div class="form-control select disabled" tabindex="0" >
-                            <a href="#none" tabindex="-1"><span>제조사 선택</span></a>
-                        </div>
+                        <label for="">select</label>
+                        <input id="" type="text" name="" class="form-control select" placeholder="select" onclick="openPopup('lySel')">
                     </div>
 
                     <div class="form-group">
-                        <label for="user_name">Readonly</label>
-                        <input id="user_name" type="text" name="user-name" class="form-control" placeholder="성명"readonly><!--readonly-->
+                        <label for="">Disabled select</label>
+                        <input id="" type="text" name="" class="form-control select" placeholder="select" disabled><!--disalbed-->
                     </div>
-                  
+
                     <div class="form-group">
                         <!-- <div class="form-tit">주민등록번호</div> -->
-                        <label for="user_resi_number">주민등록번호</label>
-                        <div class="form-row" id="user_resi_number">
+                        <label for="">주민등록번호</label>
+                        <div class="form-row">
                             <div class="col">
-                                <input type="number" class="form-control" maxlength="6" placeholder="">
+                                <input id="" type="number" class="form-control" maxlength="6" placeholder="">
                             </div>
                             <div class="input-hyphen">-</div>
                             <div class="col">
-                                <input type="password" class="form-control" maxlength="7" placeholder="●●●●●●●">
+                                <input id="" type="password" class="form-control" maxlength="7" placeholder="●●●●●●●">
                             </div>
                         </div>
                     </div>
@@ -129,96 +117,76 @@
                     <div class="form-group">
                         <!-- <div class="form-tit">방문 예정 일자</div> -->
                         <label for="">방문 예정 일자</label>
-                        <div class="form-row" id="">
+                        <div class="form-row" >
                             <div class="col">
-                                <input type="text" class="form-control datepicker" placeholder=""  inputmode="none" readonly>
-                                <!-- <input type="text" id="datepicker" class="form-control datepicker" placeholder=""> -->
+                                <input id="" type="text" class="form-control datepicker" placeholder=""  inputmode="none" readonly><!--readonly-->
                             </div>
                             <div class="col">
-                                <div class="form-control select"  onclick="openPopup('lySel4')"  tabindex="0">
-                                    <a href="#none" tabindex="-1"><span>시간 선택</span></a>
-                                </div>
+                                <input id="" type="text" class="form-control select" placeholder="시간 선택" onclick="openPopup('lySel4')">
                             </div>
                         </div>
                     </div>
-
 
                     <div class="form-group">
-                        <!-- <div class="form-tit">휴폰폰 번호</div> -->
-                        <label for="user_resi_number">휴폰폰 번호</label>
-                        <div class="form-row" id="user_resi_number">
+                        <label for="">휴대폰 번호</label>
+                        <div class="form-row">
                             <div class="col-3">
-                                <div class="form-control select"  onclick="openPopup('lySel1')"  tabindex="0">
-                                    <a href="#none" tabindex="-1"><span>통신사</span></a>
-                                </div>
+                                <input id="" type="text" class="form-control select"  placeholder="통신사"  onclick="openPopup('lySel2')">
                             </div>
                             <div class="col">
-                                <input id="user_phone" type="tel" name="phone" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력" inputmode="tel">
+                                <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력">
                             </div>
                         </div>
                     </div>
+
                     
                     <div class="form-group">
-                        <label for="user-id">아이디</label>
-                        <input type="text" class="form-control" id="user-id" placeholder="아이디를 입력해주세요">
+                        <label for="">아이디</label>
+                        <input id="" type="text" class="form-control" placeholder="아이디를 입력해주세요">
                     </div>
                     <div class="form-group">
-                        <label for="user-password">비밀번호</label>
-                        <input type="password" class="form-control" id="user-password" placeholder="비밀번호를 입력해주세요">
+                        <label for="">비밀번호</label>
+                        <input id="" type="password" class="form-control" placeholder="비밀번호를 입력해주세요">
                     </div>
                     <div class="form-group">
-                        <label for="user-password">비밀번호 확인</label>
-                        <input type="password" class="form-control" id="user-password" placeholder="비밀번호 확인해주세요">
+                        <label for="">비밀번호 확인</label>
+                        <input id="" type="password" class="form-control" placeholder="비밀번호 확인해주세요">
                     </div>
 
                     <div class="form-group row">
-                        <label for="amount">금액</label>
+                        <label for="">금액</label>
                         <div class="amount">
-                            <input type="amount" class="form-control amount-num" id="amount" placeholder="금액을 입력해주세요"
-                                inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                            <input id="" type="amount" class="form-control amount-num"  placeholder="금액을 입력해주세요" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
                             <span class="amount-txt">원</span>
                         </div>
                     </div>
-                    <!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
-                    <!-- <div class="form-group" onclick="openPopup('lySel3')">
-                        <input type="text" id="search" class="form-control search" placeholder="신용조회 동의완료 고객 선택" aria-label="Search" aria-describedby="user-search" inputmode="search">
-                        <button class="btn btn-txt-select" type="button" >선택</button>
-                    </div> -->
-
+                
                     <div class="form-group" >
-                        <label for="search" class="essential">방문자</label><!--essential 필수일 경우-->
-                        <input type="text" id="search" class="form-control search" placeholder="신용조회 동의완료 고객 선택" aria-label="Search" aria-describedby="user-search" inputmode="search"onclick="openPopup('lySel3')"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
-                        <button class="btn btn-txt" type="button" >선택</button>
+                        <label for="" class="essential">방문자</label><!--essential 필수일 경우-->
+                        <input id="" type="text" class="form-control select" placeholder="신용조회 동의완료 고객 선택" onclick="openPopup('lySel3')">
                     </div>
 
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
-                                <input type="number" id="search" class="form-control" placeholder="인증번호 입력"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
+                                <input id="" type="number" class="form-control" placeholder="인증번호 입력">
                             </div>
                             <button class="btn btn-txt" type="button">인증번호요청</button>
                         </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <div class="form-tit">모델로 조회</div>
-                        <div class="form-row">
-                            <div class="col">
-                                <div class="form-control select" tabindex="0" onclick="openPopup('lySel')">
-                                    <a href="#none" tabindex="-1"><span>제조사 선택</span></a>
-                                </div>
-                            </div>
-                            <button class="btn btn-txt img" type="button">검색</button>
-                        </div>
+
+
+                    <div class="form-group" >
+                        <label for="" class="essential">모델로 조회 input버전</label><!--essential 필수일 경우-->
+                        <input id="" type="text" class="form-control select" placeholder="제조사 선택"  onclick="openPopup('lySel3')">
                     </div>
-
-
+                    
 
                     <div class="form-group">
-                        <label for="search" class="essential">주소 검색</label><!--essential 필수일 경우-->
+                        <label for="" class="essential">주소 검색</label><!--essential 필수일 경우-->
                         <div class="form-row">
                             <div class="col">
-                                <input type="text" id="search" class="form-control" placeholder="도로명, 지번을 입력해주세요" aria-label="Search Addresses" inputmode="search"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
+                                <input id="" type="text" class="form-control" placeholder="도로명, 지번을 입력해주세요">
                             </div>
                             <button class="btn btn-txt img" type="button">검색</button>
                         </div>
@@ -245,33 +213,6 @@
                         </div>
                     </div>
                 </section>
-                <!--absolute 필요 없느 radio-->
-                <!-- <section class="form-wrap">
-                    <div class="form-group radio-custom">
-                        <div class="form-tit">Radio-custom</div>
-                        <fieldset>
-                            <label>
-                                <input type="radio" name="contact" value="email" checked />
-                                <span>이메일</span>
-                            </label>
-
-                            <label>
-                                <input type="radio" name="contact" value="phone" />
-                                <span>전화</span>
-                            </label>
-
-                            <label>
-                                <input type="radio" name="contact" value="fax" disabled />
-                                <span>팩스</span>
-                            </label>
-
-                            <label>
-                                <input type="radio" name="contact" value="mail" />
-                                <span>우편</span>
-                            </label>
-                        </fieldset>
-                    </div>
-                </section> -->
                 
                 <section class="form-wrap">
                     <div class="form-group radio-buttons">
@@ -313,8 +254,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="user_phone" class="essential">내용</label><!--essential 필수일 경우-->
-                        <textarea type="text" title="성명" id="ipt02" class="inp" name="" value="" placeholder="내용을 입력해주세요" maxlength="" required=""></textarea>
+                        <label for="" class="essential">내용</label><!--essential 필수일 경우-->
+                        <textarea id="myTextarea" type="text" title="성명" class="inp" name="" placeholder="내용을 입력해주세요" maxlength="" required=""></textarea>
                     </div>
                 </section>
 
@@ -507,138 +448,10 @@
 <!--시간팝업//-->
 
 
-
 <script>
-
-
-    // // back layer click/touch event
-    // layer.addEventListener('click', function (e) {
-    //     e.preventDefault(); // 기본 클릭 이벤트 동작 막기
-    //     e.stopPropagation(); // 클릭 이벤트 전파 방지
-    // });
-
-    // layer.addEventListener('touchstart', function (e) {
-    //     e.preventDefault(); // 기본 터치 이벤트 동작 막기
-    //     e.stopPropagation(); // 터치 이벤트 전파 방지
-    // });
-
-    /** datetimepicker custom **/
-
-    // function getCurrentTime(date) {
-    //     // extract hours and minutes from given date
-    //     var hours = date.getHours(),
-    //         minutes = date.getMinutes();
-
-    //     // round minutes to half hour or next hour
-    //     if (minutes <= 30) {
-    //         minutes = "30";
-    //     } else {
-    //         minutes = "00";
-    //         hours = (hours + 1) % 24; // loop on 24 hours
-    //     }
-
-    //     // calc if morning or afternoon
-    //     var ampm = hours >= 12 ? "pm" : "am";
-
-    //     // adjust hour to 12h format
-    //     hours = hours % 12;
-    //     hours = hours ? hours : 12; // the hour '0' should be '12'
-
-    //     return hours + ":" + minutes + " " + ampm;
-    // }
-
-    // var cur_time = new Date();
-    //         cur_time.setHours(cur_time.getHours() + 1);
-    //         $('.timepicker').timepicker({
-    //             timeFormat: 'hh:mm p',
-    //             interval: 30,
-    //             minTime: getCurrentTime(new Date()),
-    //             // minTime: '1',
-    //             // maxTime: '11:30pm', 
-    //             // startTime: '01:00',
-    //             dynamic: false,
-    //             dropdown: true,
-    //             scrollbar: true
-    //         });
-    // $('.timepicker').timepicker('setTime', cur_time);
-
-    // // var datetimepicker = $('.timepicker');
-
-
-    // // back layer show/hide for timepicker
-    // const timeInput = document.querySelector('.timepicker'),
-    //     timeContainer = document.querySelector('.ui-timepicker-container');
-    // // timepickerContainer.classList.remove('ui-helper-hidden', 'ui-timepicker-hidden');
-
-    // // add back layer for timepicker
-    // const timeDim = document.createElement('div');
-    // timeDim.classList.add('timepicker-layer');
-    // timeDim.style.display = 'none'; // Initially hidden
-
-    // timeContainer.before(timeDim);
-
-    // // show back layer for timepicker
-    // timeInput.addEventListener('click', function () {
-    //     if (timeContainer.style.display === 'block') {
-    //         dimTimeDisplay('block');
-    //         // timeContainer.classList.remove('ui-timepicker-hidden');
-    //     }
-        
-    // });
-
-    
-
-    // // hide back layer for timepicker
-    // const timeLayer = document.querySelector('.timepicker-layer');
-
-    // window.addEventListener('click', function (e) {
-    //     if (e.target === timeLayer) {
-    //         dimTimeDisplay('none');
-    //     }
-    // });
-
-    // // back layer display control for timepicker
-    // function dimTimeDisplay(display) {
-    //     timeLayer.style.display = display;
-    // }
-
-    // $('.ui-corner-all').on('click', function() {
-    //     dimTimeDisplay('none');
-    // });
-
-
-
 
 </script>
 
 <style>
-    /* .ui-timepicker-hidden  */
-    .datepicker-layer,
-    .timepicker-layer { z-index: 200!important; display: none; position: fixed; width: 100%; height: 100%;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.2); }
-    .ui-datepicker,
-    .ui-timepicker-container  {  z-index: 200 !important;  display: none; position: fixed !important; width: 100% !important; top: inherit !important; left: inherit !important; bottom:0; padding: 1em; background-color: #FFFFFF; border-radius: 20px 20px 0 0; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); }
-    .ui-datepicker-trigger { position:absolute;  top:50%; right:10px; transform:translateY(-50%);  width:16px; height:24px; border:none; background: url(../resources/images/common/datepicker_cal.png)no-repeat center 50%/16px auto; }
-    .ui-datepicker-header { position: relative; width: 100%; height: 46px; display: flex; justify-content: center; padding: 4px 0; border-radius: 5px; }
-    .ui-widget-header { border:none; }
-    .ui-widget-header .ui-icon.ui-icon-circle-triangle-e { width:18px; height:18px; background:url(../resources/images/common/datepicker_next.png)no-repeat 50%/18px auto; }
-    .ui-widget-header .ui-icon.ui-icon-circle-triangle-w { width:18px; height:18px; background:url(../resources/images/common/datepicker_pre.png)no-repeat 50%/18px auto; }
-    .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { top:20%; }
-    .ui-datepicker .ui-datepicker-prev-hover,.ui-datepicker .ui-datepicker-next-hover { top:20%; }
-    .ui-datepicker-title { width: 100%; max-width: 160px; display: flex; }
-    .ui-datepicker .ui-datepicker-title select { margin:1px 7px; }
-    .ui-datepicker-year { background-position: center right 0; }
-    .ui-datepicker-year, .ui-datepicker-month { margin:0 12px; padding-right:8px; border:none; /*background-color:#FFDD00;*/ }
-    
-    .ui-datepicker-calendar .ui-datepicker-other-month { color: #B1A7A6; /*background-color: #F5F3F4;*/ }
-    .ui-datepicker-calendar td {   position: relative; width: 24px; border:0; height: 24px; padding: 5px 2px; }
-    .ui-state-default,
-    .ui-widget-content .ui-state-default,
-    .ui-widget-header .ui-state-default,
-    .ui-button,
-    html .ui-button.ui-state-disabled:hover,
-    html .ui-button.ui-state-disabled:active { border: none; text-align: center; background: #f6f6f6; font-weight: normal; color: #454545; }
-    td.ui-datepicker-today { color: #FF7B00; font-weight: 800; }
-    .ui-datepicker-days-cell-over.ui-datepicker-today .ui-state-default.ui-state-highlight{ background:#00345F; color:#FFFFFF;  }
-    .ui-state-default.ui-state-active { background:#00345F; color:#FFFFFF; }
     
 </style>

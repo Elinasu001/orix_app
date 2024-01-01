@@ -25,9 +25,10 @@
 	<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.png" />
 	<link rel="icon" type="image/x-icon" href="../resources/favicon.png" />
 
-    <link rel="stylesheet" href="../resources/css/ui/jquery-ui.css">
     <link rel="stylesheet" href="../resources/css/lib/renewal.css">
-    <link rel="stylesheet" href="../resources/css/lib/default.css">
+	<link rel="stylesheet" href="../resources/css/lib/default.css">
+	<link rel="stylesheet" href="../resources/css/ui/jquery-ui.css">
+	<link rel="stylesheet" href="../resources/css/ui/datepicker.css">
     
 	<script type="text/javascript" src="../resources/js/ui/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="../resources/js/ui/jquery-1.12.4.min.js"></script>
@@ -37,16 +38,6 @@
     <script type="text/javascript" src="../resources/js/lib/datepicker.js"></script>
 
 </head>
-
-
-<!-- <div class="quick-menu">
-    <ul>
-        <li><a href="#none">심사결과조회</a></li>
-        <li><a href="#none">대출진행현황</a></li>
-        <li><a href="#none">팀실적조회</a></li>
-        <li><a href="#none">송금요청</a></li>
-    </ul>
-</div> -->
 
 <body>
     <div class="wrap">
@@ -64,32 +55,9 @@
                 <section>
                     <div class="accordion-item">
                         <div class="accordion">
-                            <button type="button"  class="button">· 고객 정보 입력</button>
+                            <button type="button" class="button">고객 정보 입력</button>
                             <div class="accordion-cont form-wrap">
-                                <div class="form-group">
-                                    <label for="user_phone">고객구분</label>
-                                    <div class="form-control select" onclick="openPopup('lySel1')" tabindex="0">
-                                        <a href="#none" tabindex="-1"><span>일반금융소비자</span></a>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="user-name">고객명</label>
-                                    <input type="text" class="form-control" id="user-id" placeholder="고객명 입력">
-                                </div>
-                                <div class="form-group">
-                                    <label for="user_resi_number">휴폰폰 번호</label>
-                                    <div class="form-row" id="user_resi_number">
-                                        <div class="col-3">
-                                            <div class="form-control select" onclick="openPopup('lySel2')" tabindex="0">
-                                                <a href="#none" tabindex="-1"><span>통신사</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="input-hyphen"></div>
-                                        <div class="col">
-                                            <input id="user_phone" type="tel" name="phone" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력" inputmode="tel">
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -105,23 +73,7 @@
                         <div class="accordion">
                             <button type="button"  class="button">· 방문판매 정보</button>
                             <div  class="accordion-cont form-wrap">
-                                <div class="form-group">
-                                    <label for="user_phone">상품구분</label>
-                                    <div class="form-control select" onclick="openPopup('lySel3')" tabindex="0">
-                                        <a href="#none" tabindex="-1"><span>금융상품</span></a>
-                                    </div>
-                                </div>
-                                <div class="form-group line-none">
-                                    <label for="user_phone">내용</label>
-                                    <textarea type="text" title="성명" id="ipt02" class="inp" name="" value="" placeholder="내용을 입력해주세요" maxlength="" required=""></textarea>
-                                </div>
-                            </div>
                         </div>
-                    </div>
-                </section>
-                <section class="fixed-btn-wrap">
-                    <div class="btn-wrap" onclick="openPopup('lyAlert')"  tabindex="0">
-                        <button type="button" class="btn btn-primary">다음</button>
                     </div>
                 </section>
             </div>
@@ -129,57 +81,3 @@
     </div>
 </body>
 </html>
-<!--//고객구분팝업-->
-<div id="lySel1" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
-    <div class="content-wrap">
-        <div class="pop-header">
-            <h2 class="pop-title">고객구분</h2>
-            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        </div>
-        <div class="ly-scroll-con ly-select">
-            <ul class="ly-select-list">
-                <li><button>일반금융소비자</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                <li><button>전문금융소비자</button></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!--고객구분팝업//-->
-<!--//휴대폰팝업-->
-<div id="lySel2" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
-    <div class="content-wrap">
-        <div class="pop-header">
-            <h2 class="pop-title">통신사 선택</h2>
-            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        </div>
-        <div class="ly-scroll-con ly-select">
-            <ul class="ly-select-list">
-                <li><button>SKT</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                <li><button>KT</button></li>
-                <li><button>LG</button></li>
-                <li><button>알뜰폰 SK</button></li>
-                <li><button>알뜰폰 KT</button></li>
-                <li><button>알뜰폰 LG</button></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!--휴대폰팝업//-->
-<!--//금융상품팝업-->
-<div id="lySel3" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
-    <div class="content-wrap">
-        <div class="pop-header">
-            <h2 class="pop-title">상품구분</h2>
-            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        </div>
-        <div class="ly-scroll-con ly-select">
-            <ul class="ly-select-list">
-                <li><button>금융상품</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                <li><button>금융상품2</button></li>
-                <li><button>금융상품3</button></li>
-                <li><button>금융상품4</button></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!--금융상품팝업//-->

@@ -1,0 +1,28 @@
+/* .ui-timepicker-hidden  */
+.datepicker-layer,
+.timepicker-layer { z-index: 200!important; display: none; position: fixed; width: 100%; height: 100%;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.2); }
+.ui-datepicker,
+.ui-timepicker-container  {  z-index: 200 !important;  display: none; position: fixed !important; width: 100% !important; top: inherit !important; left: inherit !important; bottom:0; padding: 1em; background-color: #FFFFFF; border-radius: 20px 20px 0 0; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); }
+.ui-datepicker-trigger { position:absolute;  top:50%; right:10px; transform:translateY(-50%);  width:16px; height:24px; font-size:0; border:none; background: url(../../images/common/datepicker_cal.png)no-repeat center 50%/16px auto; }
+.ui-datepicker-header { position: relative; width: 100%; height: 46px; display: flex; justify-content: center; padding: 4px 0; border-radius: 5px; }
+.ui-widget-header { border:none; }
+.ui-widget-header .ui-icon.ui-icon-circle-triangle-e { width:18px; height:18px; background:url(../../images/common/datepicker_next.png)no-repeat 50%/18px auto; }
+.ui-widget-header .ui-icon.ui-icon-circle-triangle-w { width:18px; height:18px; background:url(../../images/common/datepicker_pre.png)no-repeat 50%/18px auto; }
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { top:20%; }
+.ui-datepicker .ui-datepicker-prev-hover,.ui-datepicker .ui-datepicker-next-hover { top:20%; }
+.ui-datepicker-title { width: 100%; max-width: 160px; display: flex; }
+.ui-datepicker .ui-datepicker-title select { margin:1px 7px; }
+.ui-datepicker-year { background-position: center right 0; }
+.ui-datepicker-year, .ui-datepicker-month { margin:0 12px; padding-right:8px; border:none;  }
+
+.ui-datepicker-calendar .ui-datepicker-other-month { color: #B1A7A6; /*background-color: #F5F3F4;*/ }
+.ui-datepicker-calendar td {   position: relative; width: 24px; border:0; height: 24px; padding: 5px 2px; }
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active { border: none; text-align: center; background: #f6f6f6; font-weight: normal; color: #454545; }
+td.ui-datepicker-today { color: #FF7B00; font-weight: 800; }
+.ui-datepicker-days-cell-over.ui-datepicker-today .ui-state-default.ui-state-highlight{ background:#00345F; color:#FFFFFF;  }
+.ui-state-default.ui-state-active { background:#00345F; color:#FFFFFF; }

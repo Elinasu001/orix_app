@@ -243,10 +243,11 @@ function openPopup(id) {
 
   if (_target.has('.ly-select-list').length > 0) {
     _target.find('.ly-select-list > li > button').on('click', function () {
-      
-      var selectedText = $(this).text();
-      
-      $('[onclick="openPopup(\'' + id + '\')"]').closest('.form-control.select').find('span').text(selectedText);
+      var selectedValue = $(this).text(); // 선택한 값의 텍스트를 가져옴
+      var inputId = 'input::placeholder'; // 여기에 해당 입력란의 ID를 넣어주세요
+
+      // 선택한 값을 해당 ID의 입력란에 넣기
+      $('#' + inputId).val(selectedValue);
       
       closePopupUp(id);
       $('body').removeAttr('style');
@@ -255,6 +256,7 @@ function openPopup(id) {
     });
 
   }
+
   // 테이블에서 항목 클릭 시
   $('.table-type.check tbody tr').on('click', function() {
     var $clickedItem = $(this);
@@ -268,8 +270,9 @@ function openPopup(id) {
       $clickedItem.addClass('checked');
 
       // 선택된 항목의 이름을 검색 입력란의 placeholder로 설정
-      var nameText = $clickedItem.find('.name').text();
-      $('input.search').attr('placeholder', nameText);
+      // var nameText = $clickedItem.find('.name').text();
+      // $('input.select').attr('placeholder', nameText);
+      
     }
 
     // 팝업 닫기
@@ -336,11 +339,5 @@ function getCenterAlignPos(containerSize, targetSize) {
 //   $('accordion .accordion-cont').addClass('.on');
 //   $('accordion .accordion-cont').siblings.removeClass('.on');
 // })
-
-
-
-
-
-
 
 
