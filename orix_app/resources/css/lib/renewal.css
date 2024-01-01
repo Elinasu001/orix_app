@@ -341,9 +341,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 .btn-wrap .btn { z-index:2; display:block; position:relative; padding:14px 5px; width:100%; border-radius:10px;  color:var(--text-color04); font-size:1rem; font-weight:600; text-align:center; }
 
-.btn-cont-wrap { display:flex; padding:0; text-align:center; }
-.btn-cont-wrap { z-index:2; position:relative; width:100%; border-radius:10px;  color:var(--text-color04); font-size:1rem; font-weight:500; text-align:center;  }
-.btn-cont-wrap .btn + .btn { margin-left:10px; }
+.btn-cont-wrap { display:flex; z-index:2; position:relative; width:100%; gap:10px; border-radius:10px; color:var(--text-color04); font-size:1rem; font-weight:500; text-align:center;  }
 
 /* .btn-cont-wrap .btn.btn-info { background:#FFFFFF; color:#101010; } */
 .btn.btn-primary { background:#00345F; color:#FFFFFF; }
@@ -814,9 +812,9 @@ iframe { border:none; }
 
 /*메뉴-확인리스트*/
 /* .txt-list-wrap + .form-cont { margin-top:40px; } */
-.txt-list-wrap .txt-detail-area {  padding:14px 20px 30px; border-radius:4px; border:1px solid #E2E2E2; }
+.txt-list-wrap .txt-detail-area {  padding:15px 20px 30px; border-radius:4px; border:1px solid #E2E2E2; }
 .txt-list-wrap .txt-detail-area + .txt-detail-area { margin-top:20px; }
-.txt-detail-area .txt-detail-header { display:flex; align-items:center; justify-content: space-between; padding-bottom:12px; border-bottom:1px solid #E2E2E2; font-size:0; color:#333333; }
+.txt-detail-area .txt-detail-header { display:flex; align-items:center; justify-content: space-between; padding-bottom:15px; border-bottom:1px solid #E2E2E2; font-size:0; color:#333333; }
 
 .txt-detail-area .txt-detail-header p  { font-size:0.875rem; line-height:1rem; font-weight:500; }
 .txt-detail-area .txt-detail-header .txt  { font-weight:400; }
