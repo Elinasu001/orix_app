@@ -152,9 +152,14 @@ $(document).ready(function() {
     /** textarea css **/
     $('#myTextarea').on('focus', function() {
       $(this).css({
-          'color': '#000000',
           'border-color': '#003763',
+          'color': '#000000',
       });
+    }).on('blur', function() {
+        $(this).css({
+            'border-color': '#DDDDDD',
+            'color': '#999999',
+        });
     });
 
 });
