@@ -830,8 +830,8 @@ iframe { border:none; }
 .txt-list li .tit .ref { font-size:0.77778rem; line-height:1.5;}
 .txt-list li .txt,
 .txt-detail-header .txt { flex:1; padding-left:30px; font-weight:400; vertical-align:top; text-align:right; font-size:1rem; color:#000000; word-break:break-all; }
-.txt-list li .txt.yes-txt{ font-size:0.875rem; font-weight:700; color:#00345F; }
-.txt-list li .txt.no-txt{ font-size:0.875rem; font-weight:700; color:#FF0000; }
+.txt-list li .txt.yes{ font-size:0.875rem; font-weight:700; color:#00345F; }
+.txt-list li .txt.no{ font-size:0.875rem; font-weight:700; color:#FF0000; }
 .txt-list li .txt a[href*="tel"] { color:#260F54; word-break:break-all; }/*기기대응*/
 .txt-list .cusnm { color:#000!important; } /*기기대응*/
 
