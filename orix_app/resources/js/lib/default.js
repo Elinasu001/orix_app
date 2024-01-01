@@ -149,6 +149,13 @@ $(document).ready(function() {
     $(this).remove();
   });
     
+    /** textarea css **/
+    $('#myTextarea').on('focus', function() {
+      $(this).css({
+          'color': '#000000',
+          'border-color': '#003763',
+      });
+    });
 
 });
 
@@ -334,10 +341,6 @@ function getCenterAlignPos(containerSize, targetSize) {
   return pos;
 }
 
-//accordion
-// $('#accordion > button.select').click(function(){
-//   $('accordion .accordion-cont').addClass('.on');
-//   $('accordion .accordion-cont').siblings.removeClass('.on');
-// })
+
 
 
