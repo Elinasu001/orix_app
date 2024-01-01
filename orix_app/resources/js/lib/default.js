@@ -288,6 +288,7 @@ function openPopup(id) {
     $(window).scrollTop(currentTop);
     _target.removeClass('on');
   });
+
   if (_target.has('.ly-acc-select').length > 0) {
     _target.find('.ly-acc-select > .acc-list-area > a').on('click', function (e) {
       closePopupUp(id);

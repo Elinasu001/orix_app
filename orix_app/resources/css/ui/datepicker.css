@@ -1,6 +1,5 @@
 /* .ui-timepicker-hidden  */
-.datepicker-layer,
-.timepicker-layer { z-index: 200!important; display: none; position: fixed; width: 100%; height: 100%;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.2); }
+.datepicker-layer { z-index: 200!important; display:none; position: fixed; width: 100%; height: 100%;  top: 0;  left: 0 !important;  background-color: rgba(0, 0, 0, 0.2); }
 .ui-datepicker,
 .ui-timepicker-container  {  z-index: 200 !important;  display: none; position: fixed !important; width: 100% !important; top: inherit !important; left: inherit !important; bottom:0; padding: 1em; background-color: #FFFFFF; border-radius: 20px 20px 0 0; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); }
 .ui-datepicker-trigger { position:absolute;  top:50%; right:10px; transform:translateY(-50%);  width:16px; height:24px; font-size:0; border:none; background: url(../../images/common/datepicker_cal.png)no-repeat center 50%/16px auto; }

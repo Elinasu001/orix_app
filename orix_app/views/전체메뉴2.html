@@ -24,10 +24,10 @@
 	<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.png" />
 	<link rel="icon" type="image/x-icon" href="../resources/favicon.png" />
 
-	<link rel="stylesheet" href="../resources/css/lib/renewal.css">
-	<link rel="stylesheet" href="../resources/css/lib/default.css">
 	<link rel="stylesheet" href="../resources/css/ui/jquery-ui.css">
 	<link rel="stylesheet" href="../resources/css/ui/datepicker.css">
+	<link rel="stylesheet" href="../resources/css/lib/renewal.css">
+	<link rel="stylesheet" href="../resources/css/lib/default.css">
 	
 	<script type="text/javascript" src="../resources/js/ui/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="../resources/js/ui/jquery-1.12.4.min.js"></script>
@@ -47,6 +47,14 @@
 		});
 		</script>
 	</div>
+	<div id="headerWrap">
+		<script>
+		$(document).ready(function(){
+			document.charset="euc-kr";
+			$("#headerWrap").load("./include/inc_header.html");
+		});
+		</script>
+	</div>
     <!-- e: header -->
 	<!-- s:menuWrap -->
 	<div id="menuWrap">
@@ -60,13 +68,9 @@
 	<!-- e:menuWrap -->
 
     <!-- s: contentsWrap -->
-    <div class="contentsWrap">
-        <!-- s: contents -->
-        <div class="contents-wrap">
-			
-        </div>
-        <!-- //e: contents -->
-    </div>
+	<div class="contents-wrap">
+		
+	</div>
     <!-- //e: contentsWrap -->
 
     <!-- <div class="bottom-menu-area">

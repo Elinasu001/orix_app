@@ -52,7 +52,16 @@
 			});
 			</script>
         </div>
-
+        <!-- s:menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("./include/inc_all_menu.html");
+            });
+            </script>
+        </div>
+        <!-- e:menuWrap -->
         <form>
             <div class="contents-wrap">
                 <section class="form-wrap">
@@ -74,7 +83,8 @@
 
                     <div class="form-group">
                         <label for="">이메일</label>
-                        <input id="" type="email" name="" class="form-control"  placeholder="이메일을 입력해주세요">
+                        <input id="emailInput" type="text" name="" class="form-control"  placeholder="이메일을 입력해주세요">
+                        <div id="emailList"></div>
                         <div class="info-txt-wrap">
                             <p class="info">영문, 숫자, 특수문자를 조합한 8~12자리를 입력해 주세요</p>
                         </div>
@@ -453,5 +463,5 @@
 </script>
 
 <style>
-    
+
 </style>

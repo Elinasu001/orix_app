@@ -60,65 +60,58 @@
         </div>
         <form>
             <div class="contents-wrap">
-                <section class="list-box-bottom">
-                    <div class="txt-list-wrap">
-                        <div class="calculation-area form-wrap">
-                            <div class="form-group">
-                                <label for="user_phone">상환방법</label>
-                                <div class="form-control disabled" onclick="openPopup('lySel1')" tabindex="0">
-                                    <a href="#none" tabindex="-1"><span>원리금균등분할상환</span></a>
-                                </div>
+                <div class="txt-list-wrap">
+                    <div class="txt-detail-area form-wrap">
+                        <div class="form-group">
+                            <label class="essential" for="">상환방법</label>
+                            <input type="" class="form-control select" id="" placeholder="상환 방법을 선택해주세요" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">대출금액</label>
+                            <div class="amount">
+                                <input type="amount" class="form-control amount-num" id="amount" placeholder="금액을 입력해주세요" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                <span class="amount-txt">원</span>
                             </div>
-                            <div class="form-group">
-                                <label for="amount">대출금액</label>
-                                <div class="amount">
-                                    <input type="amount" class="form-control amount-num" id="amount" placeholder="금액을 입력해주세요" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
-                                    <span class="amount-txt">원</span>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">대출기간</label>
+                            <div class="amount">
+                                <input type="amount" class="form-control amount-num" id="amount" placeholder="기간을 입력해주세요">
+                                <span class="amount-txt">개월</span>
                             </div>
-                            <div class="form-group">
-                                <label for="amount">대출기간</label>
-                                <div class="amount">
-                                    <input type="amount" class="form-control amount-num" id="amount" placeholder="금액을 입력해주세요">
-                                    <span class="amount-txt">개월</span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="amount">예상금리</label>
-                                <div class="amount">
-                                    <input type="amount" class="form-control amount-num" id="amount" placeholder="금액을 입력해주세요">
-                                    <span class="amount-txt">%</span>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">예상금리</label>
+                            <div class="amount">
+                                <input type="amount" class="form-control amount-num" id="amount" placeholder="예상 금리를 입력해주세요">
+                                <span class="amount-txt">%</span>
                             </div>
                         </div>
                     </div>
-                </section>
-                <section>
-                    <div class="txt-list-wrap">
-                        <div class="calculation-area">
-                            <div class="visaul-info-box">
-                                <span>상환 예정 금액은<br>매월 약 <strong>450,450원</strong> 입니다</span>
-                            </div>
-                            <div class="txt-detail-tit">
-                                <span class="tit"><strong>상환예정금액</strong></span>
-                            </div>
-                            <ul class="txt-list">
-                                <li>
-                                    <span class="tit">상환원금</span>
-                                    <span class="txt">387,017원</span>
-                                </li>
-                                <li>
-                                    <span class="tit">이자금액</span>
-                                    <span class="txt">63,333원</span>
-                                </li>
-                                <li>
-                                    <span class="tit">월납부금</span>
-                                    <span class="txt">540,540원</span>
-                                </li>
-                            </ul>
+
+                    <div class="txt-detail-area">
+                        <div class="visaul-info-box">
+                            <span>상환 예정 금액은<br>매월 약 <strong>450,450원</strong> 입니다</span>
                         </div>
+                        <div class="txt-detail-tit">
+                            <span class="tit"><strong>상환예정금액</strong></span>
+                        </div>
+                        <ul class="txt-list">
+                            <li>
+                                <span class="tit">상환원금</span>
+                                <span class="txt">387,017원</span>
+                            </li>
+                            <li>
+                                <span class="tit">이자금액</span>
+                                <span class="txt">63,333원</span>
+                            </li>
+                            <li>
+                                <span class="tit">월납부금</span>
+                                <span class="txt">540,540원</span>
+                            </li>
+                        </ul>
                     </div>
-                </section>
+                </div>
             </div>
         </form>
     </div>
