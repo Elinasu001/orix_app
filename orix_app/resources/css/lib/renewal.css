@@ -337,7 +337,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /* .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus { } */
 
 /* btn-txt */
-.fixed-btn-wrap .btn.btn-txt { width:100%; color:#666666; }/
+.fixed-btn-wrap .btn.btn-txt { width:100%; color:#666666; }
 
 
 /* btn-clear */
