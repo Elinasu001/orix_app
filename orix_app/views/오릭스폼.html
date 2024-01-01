@@ -61,11 +61,11 @@
                         <input id="" type="text" name="" class="form-control" placeholder="성명" invalid>
                     </div>
                     <div class="form-group">
-                        <label for="">vaild</label>
+                        <label for="">valid</label>
                         <input id="" type="text" name="" class="form-control" placeholder="성명" value="오릭스">
                     </div>
-                    <div class="form-group"><!--invalid시 invalid 클래스 적용 필요-->
-                        <label for="">Invaild</label>
+                    <div class="form-group invalid"><!--invalid시 invalid 클래스 적용 필요-->
+                        <label for="">invalid</label>
                         <input id="" type="text" name="" class="form-control" placeholder="성명">
                         <div class="info-txt-wrap dp-none"> <!--dp-none은 invalid 필요할 경우 기본으로 적용 필요 -->
                             <p class="info">영문, 숫자, 특수문자를 조합한 8~12자리를 입력해 주세요</p>
@@ -92,7 +92,7 @@
 
                     <div class="form-group">
                         <label for="">select</label>
-                        <input id="" type="text" name="" class="form-control select" placeholder="select" onclick="openPopup('lySel')">
+                        <input id="" type="text" name="" class="form-control select" placeholder="select" onclick="openPopup('lySel')"><!--select 클래스 추가 및 onclick 팝업 추가하기-->
                     </div>
 
                     <div class="form-group">
@@ -160,12 +160,7 @@
                             <span class="amount-txt">원</span>
                         </div>
                     </div>
-                
-                    <div class="form-group" >
-                        <label for="" class="essential">방문자</label><!--essential 필수일 경우-->
-                        <input id="" type="text" class="form-control select" placeholder="신용조회 동의완료 고객 선택" onclick="openPopup('lySel3')">
-                    </div>
-
+                   
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
@@ -177,8 +172,13 @@
 
 
                     <div class="form-group" >
-                        <label for="" class="essential">모델로 조회 input버전</label><!--essential 필수일 경우-->
-                        <input id="" type="text" class="form-control select" placeholder="제조사 선택"  onclick="openPopup('lySel3')">
+                        <label for="" class="essential">고객 선택</label><!--essential 필수일 경우-->
+                        <div class="form-row" onclick="openPopup('lySel3')">
+                            <div class="col">
+                                <input id="" type="text" class="form-control" placeholder="제조사 선택" >
+                            </div>
+                            <button class="btn btn-txt" type="button">선택</button>
+                        </div>
                     </div>
                     
 
