@@ -230,7 +230,7 @@ select { background: url('../../images/common/svg/ico_select.svg') no-repeat rig
 
 
 /* input-group */
-.input-group { display:-ms-flexbox; display:flex; -ms-flex-wrap:wrap; flex-wrap:wrap; -ms-flex-align:stretch; align-items:stretch; width:100%; margin-bottom:10px;; }
+/* .input-group { display:-ms-flexbox; display:flex; -ms-flex-wrap:wrap; flex-wrap:wrap; -ms-flex-align:stretch; align-items:stretch; width:100%; margin-bottom:10px;; }
 .input-group > .form-control { -ms-flex:1 1 auto; flex:1 1 auto; width:1%; margin-bottom:0; }
 .input-group > .form-control + .form-control{ margin-left:-1px; }
 .input-group > .form-control:focus {   z-index:3; }
@@ -245,7 +245,7 @@ select { background: url('../../images/common/svg/ico_select.svg') no-repeat rig
 .input-group-prepend { margin-right: -1px; }
 .input-group-append { margin-left:-1px; }
 .input-group-prepend,
-.input-group-append { display:-ms-flexbox; display:flex; }
+.input-group-append { display:-ms-flexbox; display:flex; } */
 
 /* amount */
 .amount { position:relative; }
@@ -319,6 +319,7 @@ input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"
 /* .btn-wrap { padding:15px; } */
 .btn { display:inline-block; padding:17px 0; height:52px; width:100%; font-size:1rem; line-height:1.188rem; font-weight:400;  color:#212529; text-align:center; vertical-align:middle; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; background-color:transparent; /*border:1px solid transparent;*/ border:none; border-radius:10px; transition:color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
 /* .btn:hover { color:#212529; text-decoration:none; } */
+.form-row .btn { width:initial; }
 .btn:focus,
 .btn.focus { outline:0; /*border:1px solid #80bdff;*/ /*box-shadow:0 0 0 0.2rem rgba(0, 123, 255, 0.25); */}
 .btn.disabled, .btn:disabled { color:#8A8A8A; background-color:#EFEFEF;}/* 색감 지정 필요 */
