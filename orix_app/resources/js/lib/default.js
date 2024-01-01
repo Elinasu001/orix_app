@@ -255,11 +255,6 @@ function openPopup(id) {
 
   if (_target.has('.ly-select-list').length > 0) {
     _target.find('.ly-select-list > li > button').on('click', function () {
-      var selectedValue = $(this).text(); // 선택한 값의 텍스트를 가져옴
-      var inputId = 'input::placeholder'; // 여기에 해당 입력란의 ID를 넣어주세요
-
-      // 선택한 값을 해당 ID의 입력란에 넣기
-      $('#' + inputId).val(selectedValue);
       
       closePopupUp(id);
       $('body').removeAttr('style');
