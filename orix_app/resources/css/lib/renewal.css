@@ -801,9 +801,11 @@ iframe { border:none; }
 .menuArea li.on::before { content:''; z-index:1; display:block; position:absolute; left:0; top:0; width:130px; height:100%; /*background:linear-gradient(298deg, #080311, #480FBB);*/ background:#FFFFFF; /*border-radius:0 20px 20px 0;*/ }
 .menuArea a { position:relative; z-index:2; display:block; width:100%; padding:20px 0; color:#333; text-indent:20px;  font-size:0.8rem; font-weight:bold; }
 .menuArea li.on a {  color:#333333; }
+.menuArea li:last-child { padding-bottom:50px; }
 
 .scroll-wrap { flex:1; position:relative; overflow-y:scroll; width:100%; height:500px; }
 .scroll-wrap li { border-bottom:1px solid #EAEAEA; }
+.scroll-wrap li:last-child { border-bottom:0; }
 .scroll-wrap a { display:block; padding:15px 0; color:#666; font-size:0.9rem; }
 
 .listArea { margin:0 0 290px 30px;  }
@@ -825,6 +827,8 @@ iframe { border:none; }
 .bottom-menu-list li:nth-child(3).on a:before { background-image:url('../images/main/ico_bottom-menu_03_on.png'); }
 .bottom-menu-list li:nth-child(4) a:before { background-image:url('../images/main/ico_bottom-menu_04.png'); }
 .bottom-menu-list li:nth-child(4).on a:before { background-image:url('../images/main/ico_bottom-menu_04_on.png'); }
+
+.no-scroll { overflow:hidden; }
 
 /* 2023.12.19 이솔 추가 */
 /* 아코디언 */

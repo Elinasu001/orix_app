@@ -452,11 +452,13 @@ $(".menuArea > li > a").on("click", function () {
 $(document).ready(function() {
   $('.btn-menu').on('click', function() {
     $('#menuWrap').addClass('menu-open');
+	$('body').addClass('no-scroll');
 	  
   });
 
   $('.btn-menu-close').on('click', function() {
       $('#menuWrap').removeClass('menu-open');
+	  $('body').removeClass('no-scroll');
   });
 });
 
