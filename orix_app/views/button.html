@@ -240,6 +240,38 @@
 						});
 					</script>
 
+                    <p class="test-tit">TAP Background - swiper</p>
+                    <section class="tabs-wrap tab-bg">
+                        <div class="tabs swiper">
+                            <ul class="swiper-pager"></ul>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                     내용1
+                                </div>
+                                <div class="swiper-slide">
+                                    내용2
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </section>
+
+                    <script>
+                        var pager = ['텍스트1', '텍스트2'];
+                        var swiper = new Swiper('.tabs.swiper', {
+                            spaceBetween: 20,
+                            autoHeight: true,
+                            pagination: {
+                                el: '.tabs  ul',
+                                clickable: true,
+                                renderBullet: function (index, className) {
+                                return '<li class="' + className + '">' + (pager[index]) + '</li>';
+                                }
+                            },
+                        });
+                    </script>
+
+
                     <p class="test-tit">btn-text</p>
                     <div class="form-group">
                         <div class="form-row">
