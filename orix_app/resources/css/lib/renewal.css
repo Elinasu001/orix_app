@@ -398,6 +398,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .tabs-wrap.tab-bg .swiper-pager li.swiper-pagination-bullet-active a { font-weight:500; border-radius:10px; color:#00345F; background:#FFFFFF;  }
 .tabs-wrap.tab-bg .tab-item li.on::after ,
 .tabs-wrap.tab-bg .swiper-pager li.swiper-pagination-bullet-active::after { content:none; }
+.tabs-wrap.tab-bg  .tab-item:before { content:none; }
 
 /* tab-bg - cont*/
 .tabs-wrap.tab-bg.cont .tab-item li a { padding:7px 0; font-weight:400; color:#8A8A8A;}
