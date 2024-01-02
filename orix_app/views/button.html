@@ -178,7 +178,7 @@
                     <section class="tabs-wrap tab-bg">
                         <div class="tabs">
                             <ul class="tab-item">
-                                <li data-tab="tab-cont03"><a href="#none" title="선택됨">텍스트1</a></li>
+                                <li data-tab="tab-cont03" class="on"><a href="#none" title="선택됨">텍스트1</a></li>
                                 <li data-tab="tab-cont04"><a href="#none">텍스트2</a></li>
                             </ul>
                             <div class="tab-content-area">
@@ -197,7 +197,7 @@
                     <section class="tabs-wrap tab-bg cont">
                         <div class="tabs">
                             <ul class="tab-item">
-                                <li data-tab="tab-cont05"><a href="#none" title="선택됨">텍스트1</a></li>
+                                <li data-tab="tab-cont05" class="on"><a href="#none" title="선택됨">텍스트1</a></li>
                                 <li data-tab="tab-cont06"><a href="#none">텍스트2</a></li>
                             </ul>
                             <div class="tab-content-area">
@@ -301,6 +301,28 @@
                         <a href="#none" class="btn btn-text big-line">로그인 하시겠어요?</a>
                     </div>
 
+                    <p class="test-tit">Popup 셀렉트버튼</p>
+                    <div class="form-wrap">
+                        <div class="form-group popup-search">
+                            <!-- <label for="">select</label> -->
+                            <div class="form-row">
+                                <div class="col">
+                                    <select class="form-control" name="select">
+                                        <option value="">가가</option>
+                                        <option value="">나나</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <input id="" type="text" class="form-control" placeholder="조회">
+                                </div>
+                            </div>
+                            <div class="btn-cont-wrap">
+                                <a href="#none" class="btn btn-primary">조회</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
                 </section>
                 <section class="fixed-btn-wrap">
                     <div class="btn-wrap">
@@ -319,8 +341,18 @@
     .test-tit { position:relative; margin-top:40px; margin-bottom:20px; padding-left:20px; font-size:0.89rem; }
     .test-tit:before { content:""; position:absolute; top:50%; left:0; transform:translateY(-50%); width:10px; height:10px; border-radius:50%;  background-color: #267DC5;  }
 
+    select::-ms-expand { 
+	display: none;
+}
+.select {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 
-
+.form-group.popup-search { padding:10px; border:1px solid #DDDDDD; }
+.form-group.popup-search .btn-cont-wrap .btn.btn-primary { width:100%; margin-top:20px; }
 </style>
 <script>
 </script>
