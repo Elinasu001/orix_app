@@ -24,15 +24,17 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.png" />
     <link rel="icon" type="image/x-icon" href="../resources/favicon.png" />
-
+    
+    <link rel="stylesheet" href="../resources/css/lib/swiper-bundle.min.css">
     <link rel="stylesheet" href="../resources/css/ui/jquery-ui.css">
     <link rel="stylesheet" href="../resources/css/lib/renewal.css">
     <link rel="stylesheet" href="../resources/css/lib/default.css">
     <link rel="stylesheet" href="../resources/css/ui/datepicker.css">
-    
+
+
+    <script  type="text/javascript" src="../resources/js/ui/jquery-ui-1.12.1.js"></script>
     <script type="text/javascript" src="../resources/js/ui/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="../resources/js/ui/jquery-1.12.4.min.js"></script>
-    <script  type="text/javascript" src="../resources/js/ui/jquery-ui-1.12.1.js"></script>
 
     <script type="text/javascript" src="../resources/js/lib/default.js"></script>
     <script type="text/javascript" src="../resources/js/lib/datepicker.js"></script>
@@ -142,7 +144,7 @@
                     <p class="test-tit">버튼이 텍스트로 들어가는 경우</p>
                     <div class="form-group">
                         <label for="" class="essential">고객 선택</label><!--essential 필수일 경우-->
-                        <div class="form-row" onclick="openPopup('lySel3')">
+                        <div class="form-row" ><!--onclick="openPopup('')"-->
                             <div class="col">
                                 <input id="" type="text" class="form-control" placeholder="제조사 선택">
                             </div>
@@ -207,6 +209,37 @@
                         </div>
                     </section>
 
+                    <p class="test-tit">TAP Text - swiper</p>
+                    <section class="tabs-wrap">
+                        <div class="tabs swiper">
+                            <ul class="swiper-pager"></ul>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                     내용1
+                                </div>
+                                <div class="swiper-slide">
+                                    내용2
+                                </div>
+                                
+							</div>
+                        </div>
+                    </section>
+
+                    <script>
+						var pager = ['텍스트1', '텍스트2'];
+						var swiper = new Swiper('.tabs.swiper', {
+							spaceBetween: 20,
+							autoHeight: true,
+							pagination: {
+								el: '.tabs  ul',
+								clickable: true,
+								renderBullet: function (index, className) {
+								return '<li class="' + className + '">' + (pager[index]) + '</li>';
+								}
+							},
+						});
+					</script>
+
                     <p class="test-tit">btn-text</p>
                     <div class="form-group">
                         <div class="form-row">
@@ -250,7 +283,9 @@
     .test-tit.red:before { content:none; }
     .test-tit { position:relative; margin-top:40px; margin-bottom:20px; padding-left:20px; font-size:0.89rem; }
     .test-tit:before { content:""; position:absolute; top:50%; left:0; transform:translateY(-50%); width:10px; height:10px; border-radius:50%;  background-color: #267DC5;  }
+
+
+
 </style>
 <script>
-  
 </script>
