@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ORIX Capital</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords" />
+    <meta name="description" content="ORIX Capital description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <!-- 
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.png" />
+
+    <link rel="stylesheet" href="../resources/css/ui/jquery-ui.css">
+    <link rel="stylesheet" href="../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../resources/css/ui/datepicker.css">
+    
+    <script type="text/javascript" src="../resources/js/ui/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../resources/js/ui/jquery-1.12.4.min.js"></script>
+    <script  type="text/javascript" src="../resources/js/ui/jquery-ui-1.12.1.js"></script>
+
+    <script type="text/javascript" src="../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/datepicker.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- //header -->
+        <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("./include/inc_header.html");
+			});
+			</script>
+        </div>
+        <form>
+            <div class="contents-wrap">
+
+                <p class="test-tit red">* contents 버튼으로 들어가는 경우는 btn-cont-wrap으로 사용 fixded-btn-wrap에 들어갈 경우 btn-wrap으로 사용</p>
+                <section>
+                    <p class="test-tit">버튼 두개 일 경우</p>
+                    <div class="btn-cont-wrap btn2">
+                        <a href="#none" class="btn btn-primary">대출 심사요청</a>
+                        <a href="#none" class="btn btn-primary">할부 심사요청</a>
+                    </div>
+
+                    <p class="test-tit">그만하기 버튼 있을 경우</p>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-close">그만하기</button>
+                        <button type="button" class="btn btn-primary">다음</button>
+                    </div>
+
+                    <p class="test-tit">radio button normal custom</p>
+                    <section class="form-wrap">
+                        <div class="form-group radio-buttons">
+                            <label for="radio-1" class="radio-button">
+                                <input type="radio" id="radio-1" name="terms">
+                                <span class="custom-radio"></span>
+                                <span class="text">1학기</span>
+                            </label>
+                            <label for="radio-2" class="radio-button">
+                                <input type="radio" id="radio-2" name="terms">
+                                <span class="custom-radio"></span>
+                                <span class="text">2학기</span>
+                            </label>
+                            <label for="radio-3" class="radio-button">
+                                <input type="radio" id="radio-3" name="terms" disabled>
+                                <span class="custom-radio"></span>
+                                <span class="text">추가학기</span>
+                            </label>
+                        </div>
+                    </section>
+
+                    <p class="test-tit">check button normal custom</p>
+                    <section class="form-wrap">
+                        <div class="form-group check-buttons">
+                            <label for="check-1" class="check-button">
+                                <input type="checkbox" id="check-1" name="terms">
+                                <span class="custom-check"></span>
+                                <span class="text">1학기</span>
+                            </label>
+                            <label for="check-2" class="check-button">
+                                <input type="checkbox" id="check-2" name="terms">
+                                <span class="custom-check"></span>
+                                <span class="text">2학기</span>
+                            </label>
+                            <label for="check-3" class="check-button">
+                                <input type="checkbox" id="check-3" name="terms" disabled>
+                                <span class="custom-check"></span>
+                                <span class="text">추가학기</span>
+                            </label>
+                        </div>
+                    </section>
+
+                    <p class="test-tit">background radio</p>
+                    <div class="form-wrap">
+                        <div class="form-row radio-bg-button">
+                            <div class="col">
+                                <input type="radio" name="q2" id="q21" value="Y">
+                                <label for="q21" class="rd">예</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" name="q2" id="q22" value="N">
+                                <label for="q22" class="rd">아니오</label>
+                            </di>
+                        </div>
+					</div>
+
+                    <p class="test-tit">검색버튼이 이미지로 들어가는 경우</p>
+                    <div class="form-group">
+                        <label for="" class="essential">주소 검색</label><!--essential 필수일 경우-->
+                        <div class="form-row">
+                            <div class="col">
+                                <input id="" type="text" class="form-control" placeholder="도로명, 지번을 입력해주세요">
+                            </div>
+                            <button class="btn btn-txt search-img" type="button">검색</button>
+                        </div>
+                    </div>
+
+
+                    <p class="test-tit">버튼이 텍스트로 들어가는 경우</p>
+                    <div class="form-group">
+                        <label for="" class="essential">고객 선택</label><!--essential 필수일 경우-->
+                        <div class="form-row" onclick="openPopup('lySel3')">
+                            <div class="col">
+                                <input id="" type="text" class="form-control" placeholder="제조사 선택">
+                            </div>
+                            <button class="btn btn-txt" type="button">선택</button>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-close">그만하기</button>
+                        <button type="button" class="btn btn-primary">다음</button>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<style>
+    .test-tit.red { background:#dddddd; border-radius:10px; color:#555555; padding:20px; }
+    .test-tit.red:before { content:none; }
+    .test-tit { position:relative; margin-top:40px; margin-bottom:20px; padding-left:20px; font-size:0.89rem; }
+    .test-tit:before { content:""; position:absolute; top:50%; left:0; transform:translateY(-50%); width:10px; height:10px; border-radius:50%;  background-color: #267DC5;  }
+</style>
