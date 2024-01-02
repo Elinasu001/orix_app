@@ -162,6 +162,19 @@ $(document).ready(function() {
         });
     });
 
+    /** tab **/
+    $(".tab-item > li").click(function(){
+	
+      var tabCont = $(this).attr("data-tab");
+      
+      $(this).siblings().removeClass("on");
+      if (!$(this).hasClass('swiper'))  $(this).addClass("on");
+  
+      $(this).closest("ul").siblings("div").children("div").addClass("dp-none");
+      $("#" + tabCont).removeClass("dp-none");
+  
+    });
+
 });
 
 // var winH2 = $(window).height() || window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;

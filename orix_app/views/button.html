@@ -62,8 +62,8 @@
 
                     <p class="test-tit">그만하기 버튼 있을 경우</p>
                     <div class="btn-wrap">
-                        <button type="button" class="btn btn-close">그만하기</button>
-                        <button type="button" class="btn btn-primary">다음</button>
+                        <a type="button" class="btn btn-close">그만하기</a>
+                        <a type="button" class="btn btn-primary">다음</a>
                     </div>
 
                     <p class="test-tit">radio button normal custom</p>
@@ -108,8 +108,8 @@
                         </div>
                     </section>
 
-                    <p class="test-tit">background radio custom</p>
-                    <div class="form-wrap">
+                    <p class="test-tit">radio background custom</p>
+                    <di class="form-wrap">
                         <div class="form-row radio-bg-button">
                             <div class="col">
                                 <input type="radio" name="q2" id="q21" value="Y">
@@ -133,7 +133,6 @@
                         </div>
                     </div>
 
-
                     <p class="test-tit">버튼이 텍스트로 들어가는 경우</p>
                     <div class="form-group">
                         <label for="" class="essential">고객 선택</label><!--essential 필수일 경우-->
@@ -145,11 +144,94 @@
                         </div>
                     </div>
 
+                    <p class="test-tit">TAP Text</p>
+                    <section class="tabs-wrap">
+                        <div class="tabs">
+                            <ul class="tab-item">
+                                <li data-tab="tab-cont01"><a href="#none" title="선택됨">텍스트1</a></li>
+                                <li data-tab="tab-cont02"><a href="#none">텍스트2</a></li>
+                            </ul>
+                            <div class="tab-content-area">
+                                <div id="tab-cont01" class="tab-content">
+                                    내용 1
+                                </div>
+    
+                                <div id="tab-cont02" class="tab-content dp-none">
+                                    내용 2
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <p class="test-tit">TAP Background - main</p>
+                    <section class="tabs-wrap tab-bg">
+                        <div class="tabs">
+                            <ul class="tab-item">
+                                <li data-tab="tab-cont03"><a href="#none" title="선택됨">텍스트1</a></li>
+                                <li data-tab="tab-cont04"><a href="#none">텍스트2</a></li>
+                            </ul>
+                            <div class="tab-content-area">
+                                <div id="tab-cont03" class="tab-content">
+                                    내용 1
+                                </div>
+    
+                                <div id="tab-cont04" class="tab-content dp-none">
+                                    내용 2
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <p class="test-tit">TAP Background - cont</p>
+                    <section class="tabs-wrap tab-bg cont">
+                        <div class="tabs">
+                            <ul class="tab-item">
+                                <li data-tab="tab-cont05"><a href="#none" title="선택됨">텍스트1</a></li>
+                                <li data-tab="tab-cont06"><a href="#none">텍스트2</a></li>
+                            </ul>
+                            <div class="tab-content-area">
+                                <div id="tab-cont05" class="tab-content">
+                                    내용 1
+                                </div>
+    
+                                <div id="tab-cont06" class="tab-content dp-none">
+                                    내용 2
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <p class="test-tit">btn-text</p>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col check-buttons">
+                                <label for="check-4" class="check-button">
+                                    <input type="checkbox" id="check-4" name="terms">
+                                    <span class="custom-check"></span>
+                                    <span class="text">아이디 기억하기</span>
+                                </label>
+                            </div>
+                            <div class="col btn-cont-wrap right">
+                                <a href="#none" class="btn btn-text">패스워드 찾기</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="test-tit">btn-text small-line</p>
+                    <div class="btn-cont-wrap center">
+                        <a href="#none" class="btn btn-text small-line">+ 더보기</a>
+                    </div>
+
+                    <p class="test-tit">btn-text big-line</p>
+                    <div class="btn-cont-wrap">
+                        <a href="#none" class="btn btn-text big-line">로그인 하시겠어요?</a>
+                    </div>
+
                 </section>
                 <section class="fixed-btn-wrap">
                     <div class="btn-wrap">
-                        <button type="button" class="btn btn-close">그만하기</button>
-                        <button type="button" class="btn btn-primary">다음</button>
+                        <a href="#none" class="btn btn-close">그만하기</a>
+                        <a href="#none" class="btn btn-primary">다음</a>
                     </div>
                 </section>
             </div>
@@ -163,3 +245,6 @@
     .test-tit { position:relative; margin-top:40px; margin-bottom:20px; padding-left:20px; font-size:0.89rem; }
     .test-tit:before { content:""; position:absolute; top:50%; left:0; transform:translateY(-50%); width:10px; height:10px; border-radius:50%;  background-color: #267DC5;  }
 </style>
+<script>
+  
+</script>
