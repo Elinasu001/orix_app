@@ -121,6 +121,8 @@ input[type="search"],
 input[type="email"],
 input[type="number"]{ box-sizing:border-box; background:#fff;font-size:0.875rem; line-height:1rem; font-weight:400; font-family:inherit; -webkit-appearance:none; -moz-appearance:none; appearance:none; }
 
+select::-ms-expand { display:none }
+.select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none }
 
 select, .select-box { outline:none; -webkit-appearance:none; }
 
@@ -227,6 +229,8 @@ input::-webkit-search-results-decoration{ -webkit-appearance:none; display:none;
 select { background: url('../../images/common/svg/ico_select.svg') no-repeat right 10px center / 16px auto; }
 .form-control.select { background: url('../../images/common/svg/ico_select.svg') no-repeat right 10px center / 16px auto; }
 /* .form-control.select[disabled] { background: url('../../images/common/svg/ico_select.svg') no-repeat right 10px center / 16px auto; } */
+.form-group.popup-search { padding:10px; border:1px solid #DDDDDD; }
+.form-group.popup-search .btn-cont-wrap .btn.btn-primary { width:100%; margin-top:20px; }
 
 /* amount */
 .amount { position:relative; }
