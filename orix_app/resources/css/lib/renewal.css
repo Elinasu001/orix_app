@@ -700,6 +700,20 @@ iframe { border:none; }
 .list-icon .Pre_guidance::before { background:url('../../images/common/list_Pre_guidance.png') no-repeat #FFFFFF 50%/21px auto; }
 .list-icon .approval::before { background:url('../../images/common/list_approval.png') no-repeat #FFFFFF 50%/21px auto; }
 
+.list-icon2 .camera::before { background:url('../../images/common/list_camera.png') no-repeat #EFF3F6 50%/21px auto; }
+.list-icon2 .storage::before { background:url('../../images/common/list_storage.png') no-repeat #EFF3F6 50%/21px auto; }
+.list-icon2 .location::before { background:url('../../images/common/list_location.png') no-repeat #EFF3F6 50%/21px auto; }
+.list-icon2 .call::before { background:url('../../images/common/list_call.png') no-repeat #EFF3F6 50%/21px auto; }
+.list-icon2 .sms::before { background:url('../../images/common/list_sms.png') no-repeat #EFF3F6 50%/21px auto; }
+.list-icon2 .picture::before { background:url('../../images/common/list_picture.png') no-repeat #EFF3F6 50%/21px auto; }
+
+/* 리스트 공통-화살표X */
+.list-icon2 li { position:relative; }
+.list-icon2 li + li { margin-top:28px; }
+.list-icon2 li::before{ content:''; position:absolute; top:4px; left:5px; width:40px;; height:40px; border-radius:10px; }
+.list-icon2 li span { display:block; padding-left:69px; font-size:0.875rem; line-height: 1.375rem; }
+.list-icon2 li .tit { font-weight:700; }
+
 /* txt-flex-box */
 .history-list { display:flex; justify-content:space-between; padding:28px 26px; border-radius:10px; border:1px solid #E2E2E2; }
 .history-list li.in-txt-flex { position:relative; padding-left:30px; text-align:center; }
