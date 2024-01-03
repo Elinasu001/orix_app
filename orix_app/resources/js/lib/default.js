@@ -262,13 +262,21 @@ function openPopup(id) {
   _target.focus();
 	_target.addClass("on");
   }
+
+    
 }
+
 
 //open popup slideup
 function openPopup(id) {
   var _target = $('#' + id);
   currentTop = $(window).scrollTop();
   $('body').css({ 'position': 'fixed', 'top': -currentTop });
+
+  if (_target.hasClass('type-alert')) {
+    $('.layer-up.on').removeClass('on'); // 열린 다른 팝업 닫기
+  }
+
   //_target.fadeIn(300);
   layerFunc(_target);
   _target.removeClass('close');
@@ -279,6 +287,7 @@ function openPopup(id) {
     $('body').removeAttr('style');
     $(window).scrollTop(currentTop);
     _target.removeClass('on');
+    $('.layer-up').css('display', '');//layer-up닫힘
   });
 
   if (_target.has('.ly-select-list').length > 0) {
@@ -326,6 +335,7 @@ function openPopup(id) {
       e.preventDefault();
     });
   }
+
 }
 
 function closePopup(id) {

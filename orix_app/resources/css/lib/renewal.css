@@ -287,7 +287,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 /* .btn-cont-wrap .btn.btn-info { background:#FFFFFF; color:#101010; } */
 .btn.btn-primary { background:#00345F; color:#FFFFFF; }
-.btn-wrap .btn.btn-close { width:initial; padding:17px 15px; background:#EFF3F6; color:#00345F; }
+.btn-wrap .btn.btn-close { width:initial; padding:17px 30px; background:#EFF3F6; color:#00345F; }
 
 /* 로그인 */
 /* .btn-cont-wrap.find-list { margin-top:15px; } */
@@ -485,15 +485,15 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 /** 알럿팝업 **/
 .layerpopup.type-alert{border:none; border-radius:3px; box-shadow:0 4px 8px 0 rgba(0,0,0,0.50); }
-.layerpopup.type-alert .content-wrap{padding:40px 20px 10px 20px; width:100%; text-align:center; border-radius: 20px 20px 0 0; }
+/* .layerpopup.type-alert .content-wrap{padding:40px 20px 10px 20px; width:100%; text-align:center; border-radius: 20px 20px 0 0; }
 .layerpopup.type-alert .content-wrap {font-size:1rem;color:#333333;}
 .layerpopup.type-alert .content-wrap {display:block;}
 .layerpopup.type-alert .content-wrap .col{float:left;}
 .layerpopup.type-alert .content-wrap .col:first-child{width:40%;}
 .layerpopup.type-alert .content-wrap .col:last-child{width:60%;}
-.layerpopup.type-alert .content-wrap .col:first-child:last-child{width:100%;}
+.layerpopup.type-alert .content-wrap .col:first-child:last-child{width:100%;} */
 
-.layerpopup.type-alert { width:100%; height:100%; position:fixed; left:0; /*top:0;*/ background:none; }
+.layerpopup.type-alert { width:100%; height:100%; position:fixed; left:0; background:none; }
 .layerpopup.type-alert > div { z-index:999; position:absolute; left:50%; /*bottom:20px;*/ background:#fff; transform:translate(-50%,0); }
 
 
@@ -506,11 +506,10 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .layerpopup.type-alert .content-wrap .btn-primary.btn-layer-close { position:unset; width:100%; height:auto; text-indent:unset; color:#FFF; background-image:none; background-color:#B095DC; border-color:#B095DC; }
  */
 .layerpopup.type-alert .content-wrap .pop-btn-wrap { display:flex }
-.layerpopup.type-alert .content-wrap .btn-primary.btn-layer-close { position:unset; width:100%; height:auto; text-indent:unset; color:#FFF; background-image:none; background-color:#B095DC; border-color:#B095DC; }
-
+.layerpopup.type-alert .content-wrap .btn-primary.btn-layer-close { position:unset; width:100%; height:auto; text-indent:unset; color:#FFF; background-image:none; background-color:#00345F; }
 
 /* .layerpopup.type-alert { width:100%; height:100%; position:fixed; left:0; top:0; background:none; } */
-.layerpopup.type-alert .content-wrap { width:calc(100% - 40px); z-index:999; position:absolute; left:50%; bottom:20px; border-radius:15px; background:#fff; transform:translate(-50%,0); }
+.layerpopup.type-alert .content-wrap { width:calc(100% - 25px); z-index:999; position:absolute; left:50%; bottom:15px; border-radius:10px; background:#fff; transform:translate(-50%,0); }
 
 /** 하단노출 레이어팝업 - 바텀시트 **/
 .layer-up { display:none; overflow:hidden; position:fixed; left:0 !important; right:0 !important; top:auto !important; bottom:0; /*z-index:105;*/ z-index:100; width:100%; padding-bottom:0px; border-radius:20px 20px 0 0; box-sizing:border-box; background:#fff; }
@@ -549,8 +548,10 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /* .layer-up .ly-select .ly-select-list li:hover > button , */
 .layer-up .ly-select .ly-select-list li.checked > button { background:#00345F; color:#FFFFFF; }
 .layer-up .ly-content { padding:0 4.375%;}
-.layer-up .pop-header { background:#fff; padding:20px 0 30px 0; border-radius:20px 20px 0 0; text-align:left; }
-.layer-up .pop-header .pop-title { display:inline-block; font-size:1.125rem; line-height:1.25rem; font-weight:700; color:#000; line-height:1.39; letter-spacing:-.4px; word-break:keep-all; }
+.layer-up .pop-header,
+.type-alert .pop-header { background:#fff; padding:20px 0 30px 0; border-radius:20px 20px 0 0; text-align:left; }
+.layer-up .pop-header .pop-title,
+.type-alert .pop-header .pop-title { display:inline-block; font-size:1.125rem; line-height:1.25rem; font-weight:700; color:#000; line-height:1.39; letter-spacing:-.4px; word-break:keep-all; }
 
 /** 공통 - 약관 **/
 
