@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,36 +34,64 @@
     <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
     <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
 </head>
-
 <body>
-    <!--//wrap-->
     <div class="wrap">
+        <!-- //header -->
+        <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_header.html");
+			});
+			</script>
+        </div>
         <form>
-            <!--//contents-wrap-->
             <div class="contents-wrap">
-                <form>
-                   
-                </form>
+                <section>
+                    <div class="tit-main-area">
+                        <p class="tit">앱 접근 권한</p>
+                        <p class="text">앱 서비스 이용을 위해 권한 허용이 필요합니다</p>
+                    </div>
+					<div class="list-area">
+                        <div class="tit-area">
+                            <p class="tit">필수 접근 권한</p>
+                        </div>
+						<ul class="list-icon2">
+							<li class="camera">
+                                <span class="tit">카메라</span>
+                                <span class="txt">실명확인을 위한 신분증 촬영</span>
+                            </li>
+							<li class="storage">
+                                <span class="tit">저장공간</span>
+                                <span class="txt">공동 인증서 저장, 임시저장공간 사용</span>
+                            </li>
+							<li class="location">
+                                <span class="tit">위치</span>
+                                <span class="txt">주변 영업점 검색 시 사용</span>
+                            </li>
+							<li class="call">
+                                <span class="tit">전화</span>
+                                <span class="txt">휴대전화 기기정보를 수집 시 사용</span>
+                            </li>
+							<li class="sms">
+                                <span class="tit">SMS</span>
+                                <span class="txt">이체 결과 등의 정보전송 시 사용</span>
+                            </li>
+							<li class="picture">
+                                <span class="tit">사진</span>
+                                <span class="txt">신분확인을 위해 기기 내 저장된 사진을 사용</span>
+                            </li>
+						</ul>
+					</div>
+				</section>
+                <section class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-close">그만하기</button>
+                        <button type="button" class="btn btn-primary">확인</button>
+                    </div>
+                </section>
             </div>
-            <!--contents-wrap//-->
         </form>
     </div>
-    <!--wrap//-->
 </body>
 </html>
-
-<div id="lySel3" class="layerpopup layer-up on" tabindex="0" style="position: fixed; top: 148.5px; left: 0px; display: block;"><!---->
-    <div class="content-wrap">
-        <div class="pop-header">
-            <h2 class="pop-title">최초 로그인 사용자</h2>
-            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        </div>
-        <div class="ly-cont-wrap">
-            <p class="sub-title">최초 로그인 시 비밀번호 변경이 필요합니다.</p>
-            <p class="sub-title">비밀번호 변경 페이지로 이동합니다.</p>
-        </div>
-        <div class="btn-cont-wrap">
-            <a href="#none" class="btn btn-primary">확인</a>
-        </div>
-    </div>
-</div>
