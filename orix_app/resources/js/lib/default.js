@@ -273,8 +273,9 @@ function openPopup(id) {
   currentTop = $(window).scrollTop();
   $('body').css({ 'position': 'fixed', 'top': -currentTop });
 
-  if (_target.hasClass('type-alert')) {
-    $('.layer-up.on').removeClass('on'); // 열린 다른 팝업 닫기
+
+  if (_target.hasClass('layerpopup')) {
+    $(this).removeClass('on'); // 열린 다른 팝업 닫기
   }
 
   //_target.fadeIn(300);
@@ -287,7 +288,7 @@ function openPopup(id) {
     $('body').removeAttr('style');
     $(window).scrollTop(currentTop);
     _target.removeClass('on');
-    $('.layer-up').css('display', '');//layer-up닫힘
+    $('.layerpopup').css('display', '');
   });
 
   if (_target.has('.ly-select-list').length > 0) {
