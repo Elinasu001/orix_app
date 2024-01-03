@@ -223,6 +223,7 @@ input::-webkit-search-results-decoration{ -webkit-appearance:none; display:none;
 .form-group + .form-group:has(>label) { margin-top:28px; }
 .form-group + .form-group { margin-top:20px; }
 .form-control { display:block; width:100%; padding:11px 10px; font-size:0.875rem; line-height:1rem; font-weight:400; color:#999999; background-clip: padding-box; border: 1px solid #DDDDDD; border-radius:4px; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+.jumintext { position: absolute; left: 40px; top: 50%; transform: translate(0, -50%); letter-spacing: 6px; color: #666; font-size: 0.55556rem; }
 
 /* label style */
 .form-group label:not(.check-button,.radio-button) { margin-bottom:10px; }

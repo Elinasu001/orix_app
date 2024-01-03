@@ -32,6 +32,7 @@
     <script type="text/javascript" src="../resources/js/ui/jquery-1.12.4.min.js"></script>
     <script  type="text/javascript" src="../resources/js/ui/jquery-ui-1.12.1.js"></script>
 
+    <script type="text/javascript" src="../resources/js/lib/ui.js"></script>
     <script type="text/javascript" src="../resources/js/lib/default.js"></script>
     <script type="text/javascript" src="../resources/js/lib/datepicker.js"></script>
 </head>
@@ -111,15 +112,17 @@
                         <label for="">주민등록번호</label>
                         <div class="form-row">
                             <div class="col">
-                                <input id="" type="number" class="form-control" maxlength="6" placeholder="">
+                                <input id="" type="tel" class="form-control" name="" value="" maxlength="6" placeholder=""  required="">
                             </div>
                             <div class="input-hyphen">-</div>
                             <div class="col">
                                 <input id="" type="password" class="form-control" maxlength="7" placeholder="●●●●●●●">
+                                <!-- <input id="" type="tel" title="주민등록번호 뒷자리(첫번째 숫자)" class="form-control" name="jumin1" value="" maxlength="1" required="">
+                                <span class="jumintext">●●●●●●</span> -->
                             </div>
                         </div>
                     </div>
-
+                
                     <div class="form-group">
                         <!-- <div class="form-tit">방문 예정 일자</div> -->
                         <label for="">방문 예정 일자</label>
