@@ -118,7 +118,7 @@
                         <label for="" class="essential">휴대폰 번호</label>
                         <div class="form-row">
                             <div class="col-3">
-                                <input id="" type="text" class="form-control select" placeholder="통신사" onclick="openPopup('lySel2')">
+                                <input id="" type="text" class="form-control select" placeholder="통신사" onclick="openPopup('lySel1')">
                             </div>
                             <div class="col">
                                 <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력">
@@ -259,4 +259,25 @@
     </div>
 </div>
 <!--인터넷 서비스 이용약관//-->
+
+<!--//통신사 선택-->
+<div id="lySel1" class="layerpopup layer-up on" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">통신사 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>SKT</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                <li><button>KT</button></li>
+                <li><button>LG</button></li>
+                <li><button>알뜰폰 SK</button></li>
+                <li><button>알뜰폰 KT</button></li>
+                <li><button>알뜰폰 LG</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--통신사 선택//-->
 </html>
