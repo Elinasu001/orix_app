@@ -454,7 +454,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 /*** 팝업 ***/
 .layerpopup { position:absolute; display:none; overflow-y:auto; width:91.25%;  z-index:22; background:#fff; -webkit-overflow-scrolling:touch; outline:none; }
-.layerpopup.has-button .default-wrap { padding-bottom:40px; }
+.layerpopup.has-button .ly-cont-wrap { margin-bottom:40px; }
 .layerpopup .btn-layer-close { position:absolute; top:0px; right:0px; z-index:22; width:24px; height:24px; border:none; background:url("../../images/common/ic_btn_close.png") no-repeat 50%/24px auto; text-indent:-9999px; }
 /* .layerpopup .btn-layer-close:after { content:''; position:absolute; top:50%; left:50%; width:150%; height:150%; transform:translate(-50%, -50%); } 필요없음 */
 .layerpopup .btn-wrap button { margin:0; }
