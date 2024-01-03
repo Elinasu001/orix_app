@@ -458,3 +458,5 @@ table dl dd {
     padding-left:16px;
     text-indent:-10px;
 }
+
+.line { text-decoration:line-through; }
