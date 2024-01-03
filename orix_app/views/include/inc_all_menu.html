@@ -34,9 +34,9 @@
 			<ul class="top-icon">
 				<li class="alarm"><a href="#none"><em class="alarm-flag"></em><span>알림(<span>0</span>)</a></li><!--D:count-flag 알림 있을 경우-->
 				<!-- <li class="alarm"><a href="#none" onclick="openPopup('customer-view');"><span>알림(<span>0</span>)</a></li> -->
-				<li class="loanProgress"><a href="#none" onclick="openPopup('security-view');">대출진행현황</a></li>
-				<li class="doorSales"><a href="#none" onclick="openPopup('accident-view');">방문판매안내</a></li>
-				<li class="settlement"><a href="#none">영업결제</a></li>
+				<li class="loanProgress"><a href="#none">대출진행현황</a></li>
+				<li class="doorSales"><a href="#none">영업결재</a></li>
+				<li class="settlement"><a href="#none">방문판매안내</a></li>
 			</ul>
 		</div>
 		<!-- <div class="quick-menu" >
@@ -51,7 +51,7 @@
 			</ul>
 		</div> -->
 		<div class="tab-slidemenu bg-bor">
-			<!-- <div>#최근 사용한 메뉴</div> -->
+			<p class="recently">#최근 사용한 메뉴</p>
 			<ul>
 				<li><a href=""><a>심사결과조회</a></li>
 				<li><a href=""><a>대출진행현황</a></li>
@@ -70,17 +70,19 @@
 		<div class="all-menu-area">
 			<div class="scroll-left-wrap">
 				<ul class="menuArea">
-					<li class="on"><a href="#none" data-focus="1" >최근 사용한 메뉴</a></li>
-					<li><a href="#none" data-focus="2" >중고차</a></li>
-					<li><a href="#none" data-focus="3">재고금융</a></li>
-					<li><a href="#none"  data-focus="4">신차</a></li>
-					<li><a href="#none"  data-focus="5">일반설비</a></li>
-					<li><a href="#none"  data-focus="6">건설기계/상용</a></li>
-					<li><a href="#none"  data-focus="7">취급실적조회</a></li>
-					<li><a href="#none"  data-focus="8">마이페이지</a></li>
-					<li><a href="#none"  data-focus="9">공지사항</a></li>
-					<li><a href="#none"  data-focus="10">push 알림</a></li>
-					<li><a href="#none"  data-focus="11">금융계산기</a></li>
+					<li><a href="#none" data-focus="1">중고차</a></li>
+					<li><a href="#none" data-focus="2" >재고금융</a></li>
+					<li><a href="#none" data-focus="3">신차</a></li>
+					<li><a href="#none"  data-focus="4">일반설비</a></li>
+					<li><a href="#none"  data-focus="5">건설기계/상용</a></li>
+					<li><a href="#none"  data-focus="6">취급실적조회</a></li>
+					<li><a href="#none"  data-focus="7">마이페이지</a></li>
+					<li><a href="#none"  data-focus="8">공지사항</a></li>
+					<li><a href="#none"  data-focus="9">push 알림</a></li>
+					<li><a href="#none"  data-focus="10">금융계산기</a></li>
+					<li><a href="#none"  data-focus="11">신용조회관리</a></li>
+					<li><a href="#none"  data-focus="12">모바일결재</a></li>
+					<li><a href="#none"  data-focus="13">방문판매사전안내</a></li>
 				</ul>
 			</div>
 			<div class="scroll-wrap">
@@ -88,50 +90,43 @@
 					<li class="1 on">
 						<ul class="depth">
 							<li><a href="#">신용조회요청</a></li>
-						</ul>
-					</li>
-					<li class="2">
-						<ul class="depth">
-							<li><a href="#">신용조회요청</a></li>
 							<li><a href="#">심사요청</a></li>
 							<li><a href="#">심사완료</a></li>
 							<li><a href="#">약정체결</a></li>
 							<li><a href="#">송금요청</a></li>
 							<li><a href="#">차량시세조회</a></li>
-							<li><a href="#">차량시세조회</a></li>
+							<li><a href="#">차량사고이력조회</a></li>
 							<li><a href="#">매매상사검색</a></li>
+						</ul>
+					</li>
+					<li class="2">
+						<ul class="depth">
+							<li><a href="#">재고금융신청</a></li>
+							<li><a href="#">차량시세조회</a></li>
 						</ul>
 					</li>
 					<li class="3">
 						<ul class="depth">
-							<li><a href="#">재고금융신청</a></li>
-							<li><a href="#">상환신청</a></li>
+							<li><a href="#">신차</a></li>
 						</ul>
-					
 					</li>
 					<li class="4">
-						<ul class="depth">
-							
-						</ul>
-					
-					</li>
-					<li class="5">
 						<ul class="depth">
 							<li><a href="#">일반기계안내</a></li>
 						</ul>
 					</li>
-					<li class="6">
+					<li class="5">
 						<ul class="depth">
 							<li><a href="#">건설기계안내</a></li>
 						</ul>
 					</li>
-					<li class="7">
+					<li class="6">
 						<ul class="depth">
 							<li><a href="#">나의실적조회</a></li>
 							<li><a href="#">팀실적조회</a></li>
 						</ul>
 					</li>
-					<li class="8">
+					<li class="7">
 						<ul class="depth">
 							<li><a href="#">대출진행현황</a></li>
 							<li><a href="#">고객진행현황</a></li>
@@ -139,24 +134,40 @@
 							<li><a href="#">비밀번호변경</a></li>
 						</ul>
 					</li>
+					<li class="8">
+						<ul class="depth">
+							<li><a href="#">공지사항</a></li>
+						</ul>
+					</li>
 					<li class="9">
 						<ul class="depth">
-							<li><a href="#">list</a></li>
-							<li><a href="#">view</a></li>
+							<li><a href="#">Push 알림</a></li>
 						</ul>
 					</li>
 					<li class="10">
 						<ul class="depth">
-							<li><a href="#">list</a></li>
-							<li><a href="#">view</a></li>
+							<li><a href="#">금융계산기</a></li>
 						</ul>
 					</li>
 					<li class="11">
 						<ul class="depth">
-							<li><a href="#"></a></li>
+							<li><a href="#">신용조회요청</a></li>
+							<li><a href="#">신용조회결과</a></li>
 						</ul>
 					</li>
-				
+					<li class="12">
+						<ul class="depth">
+							<li><a href="#">영업결재</a></li>
+							<li><a href="#">수기심사승인</a></li>
+						</ul>
+					</li>
+					<li class="12">
+						<ul class="depth">
+							<li><a href="#">사전안내(목록)</a></li>
+							<li><a href="#">상세보기 </a></li>
+							<li><a href="#">사전안내등록 </a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>
