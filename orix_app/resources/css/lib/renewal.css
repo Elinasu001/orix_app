@@ -19,6 +19,7 @@
 .col:last-child { margin-left:10px; } */
 
 :root {
+    --main-color: #00345F;
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -53,18 +54,18 @@
 *::before,
 *::after { box-sizing: border-box; outline:none; }
 
-header { position:fixed; top:0; left:0; z-index:10; width:100%; min-height:40px; line-height:40px; background-color: #FFFFFF; }
+header { position:fixed; top:0; left:0; z-index:10; width:100%; min-height:44px; line-height:44px; background-color: #FFFFFF; }
 header .left-menu,
-header .right-menu { position:absolute;  top:0; bottom:0; z-index:2; padding:0; width:40px; height:40px; font-size:0; }
+header .right-menu { position:absolute;  top:0; bottom:0; z-index:2; padding:0; width:44px; height:44px; font-size:0; }
 header .left-menu  { left:0; }
 header .right-menu { right:0; }
 header .left-menu a:before,
-header .right-menu a:before { content:""; display:block; width:40px; height:40px; }
+header .right-menu a:before { content:""; display:block; width:44px; height:44px; }
 header .left-menu a.btn-prev::before {  background:url(../../images/header/heder_pre.svg) no-repeat 50%/24px auto; }
 header .right-menu a.btn-menu::before { background:url(../../images/header/header_menu.svg) no-repeat 50%/24px auto; }
-header h1.center { overflow:hidden; margin:0; padding:0; font-size:1rem; font-weight:500; line-height:40px; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
+header h1.center { overflow:hidden; margin:0; padding:0; font-size:1rem; font-weight:500; line-height:44px; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
 header h1.logo:before { content:""; display:block; width:84px; height:40px; background: url(../../images/header/header_logo.png) no-repeat 50%/64px auto; }
-
+header .left-menu.logo a:before { width:123px; background:url(../../images/header/header_logo2.png)no-repeat 50%/92px auto; }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display: block; }
 [tabindex="-1"]:focus { outline: 0 !important; }
@@ -89,6 +90,7 @@ label { display: inline-block; font-size:0.875rem; line-height:1rem; color:#7575
 textarea { overflow-y:scroll; width:100%; height:200px; padding:10px; resize:none; border-radius:4px; border:1px solid #DDDDDD; background:#FFFFFF; font-size:0.875rem; line-height:1rem; color:#B2B2B2; font-weight:300; white-space:pre-line; }
 textarea::placeholder { color:#999999; }
 textarea:focus { color:#000000; font-size:0.875rem; font-weight:300; border-color:#003763; outline:none; }
+
 
 .form-row { display:-ms-flexbox; display:flex; -ms-flex-wrap:nowrap; flex-wrap:nowrap; justify-content:space-between;  /*margin-right:-5px; margin-left:-5px;*/ width:100%; }
 .form-row > .col,
@@ -789,7 +791,7 @@ iframe { border:none; }
 
 /* tab-slinemenu */
 .tab-slidemenu.bg-bor { overflow:hidden; border-top:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; }
-.tab-slidemenu.bg-bor ul {display:flex; justify-content: space-between; width:100%; overflow-y:hidden; overflow-x:auto; white-space:nowrap; margin:16px 20px; }
+.tab-slidemenu.bg-bor ul {display:flex; justify-content: space-between; width:100%; overflow-y:hidden; overflow-x:auto; white-space:nowrap; padding:16px 20px; }
 .tab-slidemenu.bg-bor li { display:inline-block; margin-right:10px; }
 .tab-slidemenu.bg-bor li a { z-index:1; position:relative; font-size:0.875rem; line-height:1rem; color:#3B3B3B; }
 .tab-slidemenu.bg-bor li a:before { z-index:-1; content:""; position:absolute; width:100%; height:3px; bottom:0; border:3px solid #E7F0F5; border-radius:3px; }
@@ -889,3 +891,11 @@ iframe { border:none; }
 .txt-detail-area .txt-detail-header .flag { padding:3px 7px; border-radius:4px; color:#000000; font-size:0.75rem; line-height:0.875rem; font-weight:400; }
 .flag.style1 { background:#EEF8FF; }
 .flag.style2 { background:#FEF6CB; }
+
+/** text **/
+
+/* intro text */
+.intro-text-wrap { margin-top:100px; }
+.intro-text-wrap p { font-size:35px; line-height: 2.188rem; font-weight:500;}
+.intro-text-wrap p span { font-weight:700; color:var(--main-color); }
+.intro-text-wrap P.text { margin-top:36px; font-size:1rem; line-height:1.188rem; color:#333333; }

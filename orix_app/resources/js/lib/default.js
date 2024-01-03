@@ -1,5 +1,20 @@
 
 $(document).ready(function() {
+  // // .headerWrap 클래스를 가진 요소를 찾습니다.
+  // var elements = document.querySelectorAll('#headerWrap');
+
+  // // 모든 .headerWrap 클래스를 가진 요소에 스타일을 적용합니다.
+  // elements.forEach(function(element) {
+  //     element.style.position = 'fixed';
+  //     element.style.top = '0';
+  //     element.style.left = '0';
+  //     element.style.zIndex = '10';
+  //     element.style.width = '100%';
+  //     element.style.minHeight = '40px';
+  //     element.style.lineHeight = '40px';
+  //     element.style.backgroundColor = '#FFFFFF';
+  //     element.style.fontSize = '0';
+  // });
 
   /**  3자리 수마다 콤마 적용 **/
   $(document).on('keyup', 'input[inputmode=numeric]', function (event) {
@@ -355,6 +370,8 @@ function getCenterAlignPos(containerSize, targetSize) {
   return pos;
 }
 
+
+    
 
 
 
