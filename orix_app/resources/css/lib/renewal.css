@@ -90,6 +90,7 @@ label { display: inline-block; font-size:0.875rem; line-height:1rem; color:#7575
 textarea { overflow-y:scroll; width:100%; height:200px; padding:10px; resize:none; border-radius:4px; border:1px solid #DDDDDD; background:#FFFFFF; font-size:0.875rem; line-height:1rem; color:#B2B2B2; font-weight:300; white-space:pre-line; }
 textarea::placeholder { color:#999999; }
 textarea:focus { color:#000000; font-size:0.875rem; font-weight:300; border-color:#003763; outline:none; }
+.mcolor { color:#00345F: }
 
 
 .form-row { display:-ms-flexbox; display:flex; -ms-flex-wrap:nowrap; flex-wrap:nowrap; justify-content:space-between;  /*margin-right:-5px; margin-left:-5px;*/ width:100%; }
@@ -925,21 +926,24 @@ iframe { border:none; }
 /** 결과화면 **/
 .result-area  { text-align:center; }
 .result-area::before { content:''; display:inline-block; width:64px; height:64px; }
-
+.result-area.nodata::before { width:54px; height:54px; }
 /* 이미지 */
 .result-area { margin-top:12vh; }
 .result-area.checking::before { background:url("../../images/common/ico_result_check.png") center no-repeat; background-size:100%; }
-
+.result-area.error::before { background:url("../../images/common/ico_result_error.png") center no-repeat; background-size:100%; }
+.result-area.warning::before { background:url("../../images/common/ico_result_warning.png") center no-repeat; background-size:100%; }
+.result-area.nodata::before {  background:url("../../images/common/ico_result_nodata.png") center no-repeat; background-size:100%; }
 
 /* 텍스트 */
-.result-area .txt-wrap > .tit{ margin-top:30px; }
-.result-area .txt-wrap .tit { font-size:1.5rem; line-height:2.188rem; font-weight:700; }
-.result-area .txt-wrap .text { font-size:1rem;  line-height:1.188rem; font-weight:700; }
+.result-area .txt-wrap .tit{ margin-top:30px; }
+.result-area.nodata .txt-wrap .tit { margin-top:13px; }
+.result-area .txt-wrap .tit { font-size:1.5rem; line-height:2.188rem; font-weight:700; color:#333333; }
+.result-area .txt-wrap .text { font-size:1rem;  line-height:1.188rem; font-weight:400; margin-top:13px; }
+.result-area .txt-wrap.check  .tit { color:#00345F; }
+.result-area .txt-wrap .name { color:#00345F; font-weight:700; }
 
+.result-area.nodata .txt-wrap .tit { font-size:1.375rem; line-height:1.5rem; font-weight:500; }
 
-.result-area.nodata { margin-top:80px; }
-.result-area.nodata::before { width:48px; height:48px; background:url("../images/common/ico_result_nodata.png") no-repeat 50%/48px auto; }
-.result-area.nodata p { margin-top:14px; font-weight:300;; color:#666666; font-size:0.88889rem; line-height:1.4375; }
 .result-area.search::before { width:150px; height:110px; background:url("../images/common/ico_que.png") no-repeat 50%/150px auto; }
 .result-area.find:before { width:120px; height:120px; background:url("../images/common/ico_result_find.png") no-repeat 50%/120px auto; }
 
@@ -954,3 +958,6 @@ iframe { border:none; }
 /* 공통 - 직종검색 */
 .result-area.nodata .desc { font-weight:300; color:#999; font-size:0.88889rem; line-height:1.4375; }
 .result-area.nodata .desc + .desc { margin-top:20px; }
+.result-area .txt-list-wrap.result .txt-detail-area { border:none; border-top:1px solid #DDDDDD; margin-top:26px; }
+.result-area .txt-list-wrap.result .txt-list .blue { color:#00345F;}
+.result-area .txt-list-wrap.result .txt-list .red { color:#FF0000;}
