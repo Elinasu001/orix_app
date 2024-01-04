@@ -1,0 +1,217 @@
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ORIX Capital</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords" />
+    <meta name="description" content="ORIX Capital description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../resources/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../../resources/favicon.png" />
+    
+    <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../../resources/css/ui/jquery-ui.css">
+    <link rel="stylesheet" href="../../resources/css/ui/datepicker.css">
+    
+    <script type="text/javascript" src="../../resources/js/ui/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui/jquery-1.12.4.min.js"></script>
+    <script  type="text/javascript" src="../../resources/js/ui/jquery-ui-1.12.1.js"></script>
+
+    <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
+</head>
+
+<body>
+    <!--//wrap-->
+    <div class="wrap">
+        <!-- //headerWrap -->
+        <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_header.html");
+			});
+			</script>
+        </div>
+        <!-- headerWrap// -->
+        <!-- //menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("../include/inc_all_menu.html");
+            });
+            </script>
+        </div>
+	    <!-- menuWrap// -->
+        <form>
+            <!--//contents-wrap-->
+            <div class="contents-wrap">
+                <sectin>
+                    <p class="test-tit">셀렉트 팝업</p>
+                    <div class="btn-cont-wrap">
+                        <a href="#none" class="btn btn-primary" onclick="openPopup('lySel1')">셀렉트 팝업</a>
+                    </div>
+
+                    <p class="test-tit">바텀시트 팝업</p>
+                    <div class="btn-cont-wrap">
+                        <a href="#none" class="btn btn-primary" onclick="openPopup('lySel2')">바텀시트 팝업</a>
+                    </div>
+
+                    <p class="test-tit">풀 팝업</p>
+                    <div class="btn-cont-wrap">
+                        <a href="#none" class="btn btn-primary" onclick="openPopup('lySel4')">풀 팝업</a>
+                    </div>
+
+
+                    <p class="test-tit">풀 팝업(약관)</p>
+                    <div class="terms-area">
+						<div class="terms-wrap level1 chk-all">
+							<fieldset>
+								<input type="checkbox" id="allChk01" name="allChk01" value="" class="check all">
+								<label for="allChk01"><span>약관에 모두 동의할게요</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach01" name="check" value="" class="check" terms-pop="lySel5"><!--terms-pop 약관 팝업-->
+								<label for="chkEach01"><span>[필수] 개인(신용)정보 수집·이용·제공·조회 동의서</span></label>
+							</fieldset>
+						</div>
+
+					</div>
+
+                </sectin>
+            </div>
+            <!--contents-wrap//-->
+        </form>
+    </div>
+    <!--wrap//-->
+,</body>
+
+<!--//셀렉트 팝업-->
+<div id="lySel1" class="layerpopup layer-up on" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">통신사 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>SKT</button></li>
+                <li><button>KT</button></li>
+                <li><button>LG</button></li>
+                <li><button>알뜰폰 SK</button></li>
+                <li><button>알뜰폰 KT</button></li>
+                <li><button>알뜰폰 LG</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--셀렉트 팝업//-->
+
+<!--//바텀시트 팝업-->
+<div id="lySel2" class="layerpopup layer-up on" tabindex="0"><!---->
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">신용조회 동의 요청</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-cont-wrap">
+            <p class="sub-title">김영수님에 대한 신용조회 동의를<br/>요청하시겠습니까?</p>
+        </div>
+        <div class="btn-wrap">
+            <a href="#none" class="btn btn-close">취소</a>
+            <a href="#none" class="btn btn-primary" onclick="openPopup('lySel3')" >동의 요청</a>
+        </div>
+    </div>
+</div>
+<!--바텀시트 팝업//-->
+
+<!--//풀 팝업-->
+<div id="lySel3" class="layerpopup layer-up" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">요청 완료</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-cont-wrap">
+            <p class="sub-title">김영수 님께 신용조회 동의 URL을<br/>
+                발송하였습니다.</p>
+        </div>
+        <div class="btn-wrap">
+            <a href="#none" class="btn btn-primary btn-layer-close">확인</a>
+        </div>
+    </div>
+</div>
+<!--풀 팝업//-->
+
+<!--//풀 팝업-->
+<div id="lySel4" class="layerpopup laypop-all">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">가가가가</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+
+        <div class="ly-con-wrap" id="">
+           
+        </div>
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <button type="button" class="btn btn-primary">-</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--풀 팝업//-->
+
+<!--//풀 팝업(약관)-->
+<div id="lySel5" class="layerpopup laypop-all">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">가가가가</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+
+        <div class="ly-con-wrap" id="">
+            <div class="info-wrap terms-view">
+                <iframe id="" src=""></iframe><!--[D]:약관 들어가는 경로-->
+            </div>
+            <!-- <div class="plus-minus-wrap">
+                <button type="button"><span>+</span></button>
+                <button type="button"><span>-</span></button>
+            </div> -->
+        </div>
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <button type="button" class="btn btn-primary">확인했어요</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--풀 팝업(약관)//-->
+</html>
+
+<style>
+    .test-tit.red { background:#dddddd; border-radius:10px; color:#555555; padding:20px; }
+    .test-tit.red:before { content:none; }
+    .test-tit { position:relative; margin-top:40px; margin-bottom:20px; padding-left:20px; font-size:0.89rem; }
+    .test-tit:before { content:""; position:absolute; top:50%; left:0; transform:translateY(-50%); width:10px; height:10px; border-radius:50%;  background-color: #267DC5;  }
+</style>

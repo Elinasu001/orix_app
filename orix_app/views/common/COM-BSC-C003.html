@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ORIX Capital</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords" />
+    <meta name="description" content="ORIX Capital description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../resources/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../../resources/favicon.png" />
+    
+    <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../../resources/css/ui/jquery-ui.css">
+    <link rel="stylesheet" href="../../resources/css/ui/datepicker.css">
+    
+    <script type="text/javascript" src="../../resources/js/ui/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui/jquery-1.12.4.min.js"></script>
+    <script  type="text/javascript" src="../../resources/js/ui/jquery-ui-1.12.1.js"></script>
+
+    <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
+</head>
+
+
+<body>
+    <div class="wrap">
+        <!-- //header -->
+        <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_header.html");
+			});
+			</script>
+        </div>
+        <!-- s:menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("../include/inc_all_menu.html");
+            });
+            </script>
+        </div>
+        <!-- e:menuWrap -->
+        <form>
+            <div class="contents-wrap">
+                <section class="form-wrap">
+                    <div class="form-group">
+                        <label for="">성명</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="성명" invalid>
+                    </div>
+                    <div class="form-group">
+                        <label for="">valid</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="성명" value="오릭스">
+                    </div>
+                    <div class="form-group invalid"><!--invalid시 invalid 클래스 적용 필요-->
+                        <label for="">invalid</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="성명">
+                        <div class="info-txt-wrap dp-none"> <!--dp-none은 invalid 필요할 경우 기본으로 적용 필요 -->
+                            <p class="info">영문, 숫자, 특수문자를 조합한 8~12자리를 입력해 주세요</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">이메일</label>
+                        <input id="emailInput" type="text" name="" class="form-control"  placeholder="이메일을 입력해주세요">
+                        <div id="emailList"></div>
+                        <div class="info-txt-wrap">
+                            <p class="info">영문, 숫자, 특수문자를 조합한 8~12자리를 입력해 주세요</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Disalbed</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="성명" disabled><!--disalbed-->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Readonly</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="성명" readonly><!--readonly-->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">select</label>
+                        <input id="" type="text" name="" class="form-control select" placeholder="select" onclick="openPopup('lySel')"><!--select 클래스 추가 및 onclick 팝업 추가하기-->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Disabled select</label>
+                        <input id="" type="text" name="" class="form-control select" placeholder="select" disabled><!--disalbed-->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">주민등록번호</label>
+                        <div class="form-row">
+                            <div class="col">
+                                <input id="" type="number" class="form-control" maxlength="6" placeholder="">
+                            </div>
+                            <div class="input-hyphen">-</div>
+                            <div class="col">
+                                <input id="" type="password" class="form-control" maxlength="7" placeholder="●●●●●●●">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">방문 예정 일자</label>
+                        <div class="form-row" >
+                            <div class="col">
+                                <input id="" type="text" class="form-control datepicker" placeholder=""  inputmode="none" readonly><!--readonly-->
+                            </div>
+                            <div class="col">
+                                <input id="" type="text" class="form-control select" placeholder="시간 선택" onclick="openPopup('lySel4')">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">휴대폰 번호</label>
+                        <div class="form-row">
+                            <div class="col-3">
+                                <input id="" type="text" class="form-control select"  placeholder="통신사"  onclick="openPopup('lySel2')">
+                            </div>
+                            <div class="col">
+                                <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label for="">아이디</label>
+                        <input id="" type="text" class="form-control" placeholder="아이디를 입력해주세요">
+                    </div>
+                    <div class="form-group">
+                        <label for="">비밀번호</label>
+                        <input id="" type="password" class="form-control" placeholder="비밀번호를 입력해주세요">
+                    </div>
+                    <div class="form-group">
+                        <label for="">비밀번호 확인</label>
+                        <input id="" type="password" class="form-control" placeholder="비밀번호 확인해주세요">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">금액</label>
+                        <div class="amount">
+                            <input id="" type="amount" class="form-control amount-num"  placeholder="금액을 입력해주세요" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                            <span class="amount-txt">원</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="amount">개월</label>
+                        <div class="amount">
+                            <input type="number" class="form-control amount-num" id="amount" placeholder="기간을 입력해주세요">
+                            <span class="amount-txt">개월</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">%</label>
+                        <div class="amount">
+                            <input type="number" class="form-control amount-num" id="amount" placeholder="예상 금리를 입력해주세요">
+                            <span class="amount-txt">%</span>
+                        </div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="">휴대폰 번호</label>
+                        <div class="form-row">
+                            <div class="col-3">
+                                <input id="" type="text" class="form-control select" placeholder="통신사" onclick="openPopup('lySel2')">
+                            </div>
+                            <div class="col">
+                                <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <input id="" type="number" class="form-control" placeholder="인증번호 입력">
+                            </div>
+                            <button class="btn btn-txt" type="button">인증번호요청</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group" >
+                        <label for="" class="essential">고객 선택</label><!--essential 필수일 경우-->
+                        <div class="form-row" onclick="openPopup('lySel3')">
+                            <div class="col">
+                                <input id="" type="text" class="form-control" placeholder="제조사 선택" >
+                            </div>
+                            <button class="btn btn-txt" type="button">선택</button>
+                        </div>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label for="" class="essential">주소 검색</label><!--essential 필수일 경우-->
+                        <div class="form-row">
+                            <div class="col">
+                                <input id="" type="text" class="form-control" placeholder="도로명, 지번을 입력해주세요">
+                            </div>
+                            <button class="btn btn-txt search-img" type="button">검색</button>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="form-wrap">
+                    <div class="form-group address line">
+                        <div class="input">
+                            <span class="address-num">12347</span>
+                            <span class="address-text">서울특별시 서초구 매헌로 16 (하이브랜드) 1518호</span>
+                        </div>
+                        <div class="btn-cont-wrap right">
+                            <button class="btn btn-research" type="button">재검색</button>
+                        </div>
+                    </div>
+                    <div class="form-group address line">
+                        <div class="input">
+                            <span class="address-num">12347</span>
+                            <span class="address-text">서울특별시 서초구 매헌로 16 (하이브랜드) 1518호</span>
+                        </div>
+                        <div class="btn-cont-wrap right">
+                            <button class="btn btn-research" type="button">재검색</button>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="form-wrap">
+                    <div class="form-group radio-buttons">
+                        <label for="radio-1" class="radio-button">
+                            <input type="radio" id="radio-1" name="terms">
+                            <span class="custom-radio"></span>
+                            <span class="text">1학기</span>
+                        </label>
+                        <label for="radio-2" class="radio-button">
+                            <input type="radio" id="radio-2" name="terms">
+                            <span class="custom-radio"></span>
+                            <span class="text">2학기</span>
+                        </label>
+                        <label for="radio-3" class="radio-button">
+                            <input type="radio" id="radio-3" name="terms" disabled>
+                            <span class="custom-radio"></span>
+                            <span class="text">추가학기</span>
+                        </label>
+                    </div>
+                </section>
+                
+                <section class="form-wrap">
+                    <div class="form-group check-buttons">
+                        <label for="check-1" class="check-button">
+                            <input type="checkbox" id="check-1" name="terms">
+                            <span class="custom-check"></span>
+                            <span class="text">1학기</span>
+                        </label>
+                        <label for="check-2" class="check-button">
+                            <input type="checkbox" id="check-2" name="terms">
+                            <span class="custom-check"></span>
+                            <span class="text">2학기</span>
+                        </label>
+                        <label for="check-3" class="check-button">
+                            <input type="checkbox" id="check-3" name="terms" disabled>
+                            <span class="custom-check"></span>
+                            <span class="text">추가학기</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="essential">내용</label><!--essential 필수일 경우-->
+                        <textarea id="myTextarea" type="text" title="성명" class="inp" name="" placeholder="내용을 입력해주세요" maxlength="" required=""></textarea>
+                    </div>
+                </section>
+
+                <section class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-close">그만하기</button>
+                        <button type="button" class="btn btn-primary">다음</button>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </div>
+</body>
+
+
+</html>
+<div id="lySel" class="layerpopup layer-up" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">통신사 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>SKT</button></li>
+                <li><button>KT</button></li>
+                <li><button>LG</button></li>
+                <li><button>알뜰폰 SK</button></li>
+                <li><button>알뜰폰 KT</button></li>
+                <li><button>알뜰폰 LG</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!--//휴대폰팝업1-->
+<div id="lySel1" class="layerpopup layer-up" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">통신사 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>SKT</button></li>
+                <li><button>KT</button></li>
+                <li><button>LG</button></li>
+                <li><button>알뜰폰 SK</button></li>
+                <li><button>알뜰폰 KT</button></li>
+                <li><button>알뜰폰 LG</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--휴대폰팝업1//-->
+
+<!--//휴대폰팝업2-->
+<div id="lySel2" class="layerpopup layer-up" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">통신사 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>SKT</button></li>
+                <li><button>KT</button></li>
+                <li><button>LG</button></li>
+                <li><button>알뜰폰 SK</button></li>
+                <li><button>알뜰폰 KT</button></li>
+                <li><button>알뜰폰 LG</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--휴대폰팝업2//-->
+
+<!--//선택팝업-->
+<div id="lySel3" class="layerpopup layer-up" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">고객 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="form-group gray-search">
+            <input type="search" id="search" class="form-control" placeholder="이름 입력" aria-label="Search Addresses" aria-describedby="user-search" inputmode="search"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
+            <button class="btn btn-search outline-secondary" type="button">검색</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <div class="table-type table-row table-scroll check">
+                <table class="">
+                    <caption>신용조회 동의 완료 고객 선택 테이블</caption>
+                    <colgroup>
+                        <col width="40%">
+                        <col width="60%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="row">고객명</th>
+                            <th scope="row">연락처</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <td class="name">홍길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <td class="name">김길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <td class="name">박길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <td class="name">송길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <td class="name">진길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <td class="name">황길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <td class="name">민길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <td class="name">오길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--선택팝업//-->
+
+<!--//시간팝업-->
+<div id="lySel4" class="layerpopup layer-up" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">방문 시간 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>9:00 AM</button></li>
+                <li><button>9:30 AM</button></li>
+                <li><button>10:00 AM</button></li>
+                <li><button>10:30 AM</button></li>
+                <li><button>11:00 AM</button></li>
+                <li><button>11:30 AM</button></li>
+                <li><button>12:00 PM</button></li>
+                <li><button>12:30 PM</button></li>
+                <li><button>13:00 PM</button></li>
+                <li><button>13:30 PM</button></li>
+                <li><button>14:00 PM</button></li>
+                <li><button>14:30 PM</button></li>
+                <li><button>15:00 PM</button></li>
+                <li><button>15:30 PM</button></li>
+                <li><button>16:00 PM</button></li>
+                <li><button>16:30 PM</button></li>
+                <li><button>17:00 PM</button></li>
+                <li><button>17:30 PM</button></li>
+                <li><button>18:00 PM</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--시간팝업//-->
+
+
+<script>
+
+</script>
+
+<style>
+
+</style>

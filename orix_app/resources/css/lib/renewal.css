@@ -272,7 +272,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .btn-wrap { display:flex; z-index:2; position:relative; gap:10px; border-radius:10px; color:var(--text-color04); font-size:1rem; text-align:center;  }
 .btn-cont-wrap .btn { font-weight:500; }
 .btn-wrap .btn { font-weight:600; }
-.btn-cont-wrap.right { display:flex; justify-content:flex-end; }/*버튼 오른쪽*/
+.btn-cont-wrap.right { display:flex; justify-content:flex-end; align-items:center; }/*버튼 오른쪽*/
 .btn-cont-wrap.center { display:flex; justify-content: center; }
 
 /* btn-primary */
@@ -285,7 +285,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /* shadow 색감 지정 필요 */
 /* .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus { } */
 
-/* .btn-cont-wrap .btn.btn-info { background:#FFFFFF; color:#101010; } */
+
 .btn.btn-primary { background:#00345F; color:#FFFFFF; }
 .btn-wrap .btn.btn-close { width:initial; padding:17px 30px; background:#EFF3F6; color:#00345F; }
 
@@ -920,3 +920,37 @@ iframe { border:none; }
 .flag.style1 { background:#EEF8FF; }
 .flag.style2 { background:#FEF6CB; }
 
+
+
+/** 결과화면 **/
+.result-area  { text-align:center; }
+.result-area::before { content:''; display:inline-block; width:64px; height:64px; }
+
+/* 이미지 */
+.result-area { margin-top:12vh; }
+.result-area.checking::before { background:url("../../images/common/ico_result_check.png") center no-repeat; background-size:100%; }
+
+
+/* 텍스트 */
+.result-area .txt-wrap > .tit{ margin-top:30px; }
+.result-area .txt-wrap .tit { font-size:1.5rem; line-height:2.188rem; font-weight:700; }
+.result-area .txt-wrap .text { font-size:1rem;  line-height:1.188rem; font-weight:700; }
+
+
+.result-area.nodata { margin-top:80px; }
+.result-area.nodata::before { width:48px; height:48px; background:url("../images/common/ico_result_nodata.png") no-repeat 50%/48px auto; }
+.result-area.nodata p { margin-top:14px; font-weight:300;; color:#666666; font-size:0.88889rem; line-height:1.4375; }
+.result-area.search::before { width:150px; height:110px; background:url("../images/common/ico_que.png") no-repeat 50%/150px auto; }
+.result-area.find:before { width:120px; height:120px; background:url("../images/common/ico_result_find.png") no-repeat 50%/120px auto; }
+
+.result-area > p.tit { margin-top:20px; margin-bottom:0; font-size:1.33333rem; color:#333333; line-height:1.29167; word-break: keep-all;}
+.result-area > .sub-txt { margin-bottom:20px; text-align:center; font-size:1rem; color:#000000; }
+
+.result-area .txtbox-wrap p { color:#666; }
+
+.result-area.search .txtbox-wrap { margin-top:15px; }
+.result-area.search .txtbox-wrap > p { font-size: 0.77778rem; line-height: 1.5; color: #999999; }
+
+/* 공통 - 직종검색 */
+.result-area.nodata .desc { font-weight:300; color:#999; font-size:0.88889rem; line-height:1.4375; }
+.result-area.nodata .desc + .desc { margin-top:20px; }
