@@ -42,7 +42,7 @@
 			<script>
 			$(document).ready(function(){
 				document.charset="euc-kr";
-				$("#headerWrap").load("..include/inc_header.html");
+				$("#headerWrap").load("../include/inc_header.html");
 			});
 			</script>
         </div>
@@ -59,12 +59,35 @@
 	    <!-- menuWrap// -->
         <form>
             <!--//contents-wrap-->
-            <div class="contents-wrap">
-                
+            <div class="contents-wrap bg-wrap">
+            
+                <div class="urgency-wrap type-spread">
+                    <a href="#none">비대면 모바일 플랫폼 구축 TF팀 긴급 회의</a>
+                </div>
 
-               <section class="bg-wrap">
+                <section class="credit-check-wrap type-spread">
+                    <div class="form-wrap">
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col">
+                                    <input id="" type="text" class="form-control" placeholder="검색어를 입력해 주세요">
+                                </div>
+                                <button class="btn btn-txt" type="button">선택</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-slidemenu round-bor">
+                        <ul>
+                            <li class="on"><a href="#none">대출심사 가능</a></li><!--on 클래스 추가 시 스타일 적용-->
+                            <li><a href="#none">할부심사 가능</a></li>
+                            <li><a href="#none">심사 불가</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="credit-result-wrap">
                     <div class="txt-list-wrap">
-                        <div class="txt-detail-area">
+                        <div class="txt-detail-area on"><!--on 클래스 추가 시 display:block; -->
                             <div class="txt-detail-header">
                                 <p><span class="tit">김영수</span> 고객님</p>
                                 <p class="txt">개인</p>
@@ -80,19 +103,18 @@
                                 </li>
                                 <li>
                                     <span class="tit">대출</span>
-                                    <span class="txt yes-txt">심사진행 가능</span>
+                                    <span class="txt yes">심사진행 가능</span>
                                 </li>
                                 <li>
                                     <span class="tit">할부</span>
-                                    <span class="txt yes-txt">심사진행 가능</span>
+                                    <span class="txt yes">심사진행 가능</span>
                                 </li>
                             </ul>
-                            <div class="btn-cont-wrap btn2">
+                            <div class="btn-cont-wrap">
                                 <a href="#none" class="btn btn-primary">대출 심사요청</a>
                                 <a href="#none" class="btn btn-primary">할부 심사요청</a>
                             </div>
                         </div>
-
                         <div class="txt-detail-area">
                             <div class="txt-detail-header">
                                 <p><span class="tit">이영희</span> 고객님</p>
@@ -113,15 +135,14 @@
                                 </li>
                                 <li>
                                     <span class="tit">할부</span>
-                                    <span class="txt no">필터링 적발</span><!--no-->
+                                    <span class="txt no">채무불이행</span><!--no-->
                                 </li>
                             </ul>
-                            <div class="btn-cont-wrap btn2">
+                            <div class="btn-cont-wrap">
                                 <a href="#none" class="btn btn-primary">대출 심사요청</a>
-                                <a href="#none" class="btn disabled">할부 심사불가</a>
+                                <a href="#none" class="btn btn-primary disabled">할부 심사불가</a>
                             </div>
                         </div>
-
                         <div class="txt-detail-area">
                             <div class="txt-detail-header">
                                 <p><span class="tit">이영희</span> 고객님</p>
@@ -138,23 +159,31 @@
                                 </li>
                                 <li>
                                     <span class="tit">대출</span>
-                                    <span class="txt yes">심사진행 가능</span><!--yse-->
+                                    <span class="txt no">채무조정중</span><!--yse-->
                                 </li>
                                 <li>
                                     <span class="tit">할부</span>
-                                    <span class="txt no">필터링 적발</span><!--no-->
+                                    <span class="txt no">채무불이행</span><!--no-->
                                 </li>
                             </ul>
                             <div class="btn-cont-wrap btn2">
-                                <a href="#none" class="btn btn-primary">대출 심사요청</a>
+                                <a href="#none" class="btn btn-primary 채무불이행">대출 심사요청</a>
+                                <a href="#none" class="btn btn-primary disabled">할부 심사불가</a>
                             </div>
                         </div>
                     </div>
                 </section>
+
             </div>
             <!--contents-wrap//-->
         </form>
     </div>
     <!--wrap//-->
-,</body>
+</body>
 </html>
+<style>
+    /* 긴급공지 */
+    .urgency-wrap { position:relative; padding:10px 20px 10px 46px; background:#EEF8FF; }
+    .urgency-wrap a { font-size:0.875rem; line-height:1rem; font-weight:400; color:#00345F; }
+    .urgency-wrap a::before { content:""; position:absolute; width:16px; height:16px; left:20px;  background: url(../../resources/images/common/ico_urgency.png) no-repeat center 50%/16px auto; }
+</style>

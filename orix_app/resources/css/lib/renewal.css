@@ -255,9 +255,8 @@ input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"
 .btn { width:100%; padding:17px 0; font-size:1rem; line-height:1.188rem; font-weight:400;  color:#212529; text-align:center; vertical-align:middle; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; border:none; background-color:transparent; /*border:1px solid transparent;*/ border-radius:10px; }
 /* .btn:hover { color:#212529; text-decoration:none; } */
 
-/* .btn:focus,
-.btn.focus { outline:0; border:1px solid #80bdff; box-shadow:0 0 0 0.2rem rgba(0, 123, 255, 0.25); } */
-.btn.disabled, .btn:disabled { color:#8A8A8A; background-color:#EFEFEF;}/* 색감 지정 필요 */
+
+/* .btn.disabled, .btn:disabled { color:#8A8A8A; background-color:#EFEFEF;} */
 .btn:not(:disabled):not(.disabled) { cursor:pointer; }
 a.btn.disabled,
 fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활성화*/
@@ -327,7 +326,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 /* ratio/checkbox absolute 필요 */
 .radio-buttons,
-.check-buttons {  display:flex; align-items:center; flex-wrap: wrap; justify-content:space-between; }
+.check-buttons {  display:flex; align-items:center; flex-wrap: wrap; gap:20px; }
 .radio-buttons .radio-button,
 .check-buttons .check-button { cursor:pointer; position:relative; padding-left:28px; font-size:1rem; line-height:1.188rem; color:#999999; }
 
@@ -770,11 +769,18 @@ iframe { border:none; }
 
 
 /* tab-slinemenu */
-.tab-slidemenu.bg-bor { overflow:hidden; border-top:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; }
-.tab-slidemenu.bg-bor ul {display:flex; justify-content: space-between; width:100%; overflow-y:hidden; overflow-x:auto; white-space:nowrap; padding:16px 20px; }
-.tab-slidemenu.bg-bor li { display:inline-block; margin-right:10px; }
+.tab-slidemenu { overflow:hidden; border-top:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; }
+.tab-slidemenu ul {display:flex; /*justify-content: space-between;*/ width:100%; overflow-y:hidden; overflow-x:auto; white-space:nowrap; gap:10px; padding:16px 20px; }
+.tab-slidemenu li { display:inline-block; }
 .tab-slidemenu.bg-bor li a { z-index:1; position:relative; font-size:0.875rem; line-height:1rem; color:#3B3B3B; }
 .tab-slidemenu.bg-bor li a:before { z-index:-1; content:""; position:absolute; width:100%; height:3px; bottom:0; border:3px solid #E7F0F5; border-radius:3px; }
+.tab-slidemenu.round-bor { border:none; }
+.tab-slidemenu.round-bor ul { padding:20px 0; }
+.tab-slidemenu.round-bor li  { padding:7px 15px; border-radius:17px; border:1px solid #8A8A8A; }
+.tab-slidemenu.round-bor li a { position:relative; font-size:0.75rem;  line-height:0.875rem; color:#8A8A8A; }
+.tab-slidemenu.round-bor li.on { border:1px solid #00345F; background:#EFF3F6; color:#00345F; }
+.tab-slidemenu.round-bor li.on a { color:#00345F; font-weight:700; }
+
 
 /* all-menu-area */
 .scroll-left-wrap { overflow-y:scroll; height:100%; background:#F5F6F7; }
@@ -842,6 +848,7 @@ iframe { border:none; }
 .txt-list-wrap .form-wrap { margin-top:0; }
 .txt-list-wrap .txt-detail-area {  padding:15px 20px 30px; border-radius:4px; border:1px solid #E2E2E2; background:#FFFFFF; }
 .txt-list-wrap .txt-detail-area + .txt-detail-area { margin-top:20px; }
+/* .txt-list-wrap + .txt-list-wrap { margin-top:20px; } */
 .txt-list-wrap .txt-detail-area .btn-cont-wrap { margin-top:30px; }
 .txt-detail-area .txt-detail-header { display:flex; align-items:center; justify-content: space-between; padding-bottom:15px; border-bottom:1px solid #E2E2E2; font-size:0; color:#333333; }
 
@@ -874,8 +881,7 @@ iframe { border:none; }
 .flag.style2 { background:#FEF6CB; }
 
 
-.bg-wrap { margin-left:-15px; margin-right:-15px; background:#F8F8F8; }
-.bg-wrap .txt-list-wrap { padding:20px; }
+.bg-wrap { background:#F8F8F8; }
 
 
 /** 결과화면 **/
@@ -916,3 +922,11 @@ iframe { border:none; }
 .result-area .txt-list-wrap.result .txt-detail-area { border:none; margin-top:26px; border-top:1px solid #DDDDDD; }
 .result-area .txt-list-wrap.result .txt-list .blue { color:#00345F;}
 .result-area .txt-list-wrap.result .txt-list .red { color:#FF0000;}
+
+
+/* 신용조회 */
+.credit-check-wrap .txt-list-wrap .txt-detail-area { display:none; }
+.credit-check-wrap .txt-list-wrap .txt-detail-area.on { display:block; }
+
+.credit-check-wrap.type-spread { background:#FFFFFF; padding:0 20px; }
+.credit-check-wrap + .credit-result-wrap { margin-top:20px; }
