@@ -273,7 +273,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .btn.btn-primary { color:#FFFFFF; background-color:#00345F; border-color:#00345F; }
 /*.btn.btn-primary:hover { color:#fff; background-color:#0069d9; border-color:#0062cc; }*//* 색감 지정 필요 */
 /* .btn.btn-primary:focus, .btn.btn-primary.focus {  } */
-.btn.btn-primary.disabled, .btn.btn-primary:disabled { color:#fff; background-color:#1F4565; border-color:#1F4565; }
+.btn.btn-primary.disabled, .btn.btn-primary:disabled { color:#8A8A8A; background-color:#EFEFEF; border-color:#EFEFEF; }
 /*클릭*//* 색감 지정 필요 */
 /* .btn.btn-primary:not(:disabled):not(.disabled):active, .btn.btn-primary:not(:disabled):not(.disabled).active { color: #fff; background-color: #0062cc; border-color: #005cbf } */
 /* shadow 색감 지정 필요 */
@@ -840,8 +840,9 @@ iframe { border:none; }
 
 /*메뉴-확인리스트*/
 .txt-list-wrap .form-wrap { margin-top:0; }
-.txt-list-wrap .txt-detail-area {  padding:15px 20px 30px; border-radius:4px; border:1px solid #E2E2E2; }
+.txt-list-wrap .txt-detail-area {  padding:15px 20px 30px; border-radius:4px; border:1px solid #E2E2E2; background:#FFFFFF; }
 .txt-list-wrap .txt-detail-area + .txt-detail-area { margin-top:20px; }
+.txt-list-wrap .txt-detail-area .btn-cont-wrap { margin-top:30px; }
 .txt-detail-area .txt-detail-header { display:flex; align-items:center; justify-content: space-between; padding-bottom:15px; border-bottom:1px solid #E2E2E2; font-size:0; color:#333333; }
 
 .txt-detail-area .txt-detail-header p  { font-size:0.875rem; line-height:1rem; font-weight:500; }
@@ -872,6 +873,9 @@ iframe { border:none; }
 .flag.style1 { background:#EEF8FF; }
 .flag.style2 { background:#FEF6CB; }
 
+
+.bg-wrap { margin-left:-15px; margin-right:-15px; background:#F8F8F8; }
+.bg-wrap .txt-list-wrap { padding:20px; }
 
 
 /** 결과화면 **/
@@ -909,6 +913,6 @@ iframe { border:none; }
 /* 공통 - 직종검색 */
 .result-area.nodata .desc { font-weight:300; color:#999; font-size:0.88889rem; line-height:1.4375; }
 .result-area.nodata .desc + .desc { margin-top:20px; }
-.result-area .txt-list-wrap.result .txt-detail-area { border:none; border-top:1px solid #DDDDDD; margin-top:26px; }
+.result-area .txt-list-wrap.result .txt-detail-area { border:none; margin-top:26px; border-top:1px solid #DDDDDD; }
 .result-area .txt-list-wrap.result .txt-list .blue { color:#00345F;}
 .result-area .txt-list-wrap.result .txt-list .red { color:#FF0000;}
