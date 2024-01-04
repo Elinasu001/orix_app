@@ -760,7 +760,7 @@ iframe { border:none; }
 .top-menu .top-icon li { position:relative;  width:100%; padding-top:55px;  }
 .top-menu .top-icon li > a { display:flex; justify-content:center; color:#333333; font-size:0.75rem;  line-height:0.875rem; }
 .top-menu .top-icon li > a::before { content:''; position:absolute; top:0; width:40px; height:40px; border-radius:50%; }
-.top-menu .top-icon li.alarm > a::before { background: url('../../images/common/ico_alarm.png')no-repeat #DFF2FF 50%/26px auto; }
+.top-menu .top-icon li.alarm > a::before { background: url('../../images/common/ico_alarm.png')no-repeat #DFF2FF 50%/24px auto; }
 .top-menu .top-icon li.loanProgress > a::before { background: url('../../images/common/ico_loanProgress.png')no-repeat #DFF2FF 50%/26px auto;  }
 .top-menu .top-icon li.doorSales > a::before { background: url('../../images/common/ico_doorSales.png')no-repeat #DFF2FF 50%/26px auto; }
 .top-menu .top-icon li.settlement > a::before { background: url('../../images/common/ico_settlement.png')no-repeat #DFF2FF 50%/26px auto; }
