@@ -568,7 +568,8 @@ iframe { border:none; }
 /* .table-type.check tbody tr { cursor: pointer; } */
 
 .table-type table { border:solid #EEEEEE; border-width:1px 0; }
-.table-type.table-scroll { overflow-x:scroll; }
+.table-type.table-scroll,
+.table-type2.table-scroll { overflow-x:scroll; }
 
 .table-type.table-col table { border-bottom:none; }
 .table-type th, 
@@ -597,6 +598,28 @@ iframe { border:none; }
 .table-row tr:last-child td,
 [class^="table-wrap"] thead tr:last-child,
 .table-type01 tbody tr:last-child th  { border-bottom:0; } */
+
+/* table-col */
+.table-col {  border:1px solid #DDDDDD; border-radius:4px; }
+.table-col tbody tr th,
+.table-col tbody tr td { padding:10px; font-size:1rem; line-height:1.188rem; }
+.table-col tbody tr th { font-weight:500; color:#00345F; text-align:left; background:#EFF3F6; }
+.table-col tbody tr td { font-weight:400; color:#000000; text-align:right; }
+.table-col tbody tr:last-child th,
+.table-col tbody tr:last-child td { border-bottom:none; }
+
+/* table 색상 변경 */
+[class^="table-wrap2"] thead th,
+[class^="table-type2"] thead th {  padding:13px 20px; background:#EFF3F6; font-size:0.75rem; line-height:0.875rem; font-weight:500; color:#000000; }
+.table-type2 table td { height:54px; }
+.table-type2 td a { color:#00345F; text-decoration:underline; }
+[class^="table-wrap2"] tbody td,
+[class^="table-type2"] tbody td {  padding:12px 20px; font-size:0.75rem; line-height:0.875rem; font-weight:300; background:#EEF8FF; }
+[class^="table-type2"] tbody .td-color td { background:#FFF6CA; }
+[class^="table-wrap2"] th,
+[class^="table-wrap2"] td,
+[class^="table-type2"] th,
+[class^="table-type2"] td{ text-align:center; font-size:0.75rem; line-height:0.875rem; font-weight:400;  border-bottom:1px solid #DDDDDD; word-break:keep-all; }
 
 
 
