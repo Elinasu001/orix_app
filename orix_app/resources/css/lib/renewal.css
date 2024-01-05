@@ -115,15 +115,15 @@ input[type="date"],
 input[type="month"],
 input[type="search"],
 input[type="email"],
-input[type="number"]{ box-sizing:border-box; background:#fff;font-size:0.875rem; line-height:1rem; font-weight:400; font-family:inherit; -webkit-appearance:none; -moz-appearance:none; appearance:none; }
+input[type="number"]{ box-sizing:border-box; background:#fff; font-size:0.875rem; line-height:1rem; font-weight:400; font-family:inherit; -webkit-appearance:none; -moz-appearance:none; appearance:none; }
 
 select::-ms-expand { display:none }
 .select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none }
 
 select, .select-box { outline:none; -webkit-appearance:none; }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+/* input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } */
 
 button,
 [type="button"],
@@ -249,6 +249,8 @@ input[type="checkbox"].custom-check + label { display:inline-block;   position:r
 input[type="checkbox"]:checked.custom-check + label {  border:0; }
 input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"✓";  position:absolute; top:0; left:0px; font-size:0.68rem; font-weight:600; width:20px; height:20px; border:2px solid #B095DC; border-radius:5px; color:#FFFFFF; background-color:#B095DC; text-align:center; /*background:url(../../../resources/images/common/ic-checkmark-on.png)no-repeat center 100%/16px auto;*/ }
 
+/* 주민등록번호 뒷자리 1개 노출일 경우 */
+.jumintext{ position:absolute; left:26px; top:50%; transform:translate(0, -50%); font-size:0.875rem; font-weight:300; color:#00345F;  }
 
 /** 공통 버튼 **/
 
