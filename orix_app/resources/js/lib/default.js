@@ -106,7 +106,7 @@ $(document).ready(function() {
   });
 
   /** accorion **/
-  $('.accordion .button').click(function() {
+  $('.accordion .btn-accordion').click(function() {
     var accordionCont = $(this).next('.accordion-cont');
     $(this).toggleClass('on');
     accordionCont.toggleClass('on');
