@@ -981,3 +981,8 @@ iframe { border:none; }
 
 .credit-check-wrap.type-spread { background:#FFFFFF; padding:0 20px; }
 .credit-check-wrap + .credit-result-wrap { margin-top:20px; }
+
+/* 긴급공지 */
+.urgency-wrap { position:relative; padding:10px 20px 10px 46px; background:#EEF8FF; }
+.urgency-wrap a { font-size:0.875rem; line-height:1rem; font-weight:400; color:#00345F; }
+.urgency-wrap a::before { content:""; position:absolute; width:16px; height:16px; left:20px;  background: url(../../images/common/ico_urgency.png) no-repeat center 50%/16px auto; }
