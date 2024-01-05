@@ -859,14 +859,15 @@ iframe { border:none; }
 /* 아코디언 */
 .accordion-item { margin-bottom:20px; border:1px solid; border-radius:10px; }
 .accordion-item .accordion { width:100%; }
-.accordion-item .accordion button { border:none; }
-.accordion-item .accordion .button { display:block; position:relative; padding:20px; width:100%; text-align:left; font-size:1.125rem; line-height:1.25rem; font-weight:500; color:#555555;  background-color:transparent; cursor:pointer; }
-.accordion-item .accordion button::after { content:""; display:block; position:absolute; top:50%; right:20px; transform:translateY(-50%) rotate(180deg); width:16px; height:16px; background: url(../../images/common/svg/ico_select.svg)no-repeat 100%/16px auto; }
-.accordion-item .accordion button.on::after { transform:translateY(-50%) rotate(0deg); }
+.accordion-item .accordion button.btn-accordion { border:none; }
+.accordion-item .accordion .btn-accordion { display:block; position:relative; padding:20px; width:100%; text-align:left; font-size:1.125rem; line-height:1.25rem; font-weight:500; color:#555555;  background-color:transparent; cursor:pointer; }
+.accordion-item .accordion .btn-accordion::after { content:""; display:block; position:absolute; top:50%; right:20px; transform:translateY(-50%) rotate(180deg); width:16px; height:16px; background: url(../../images/common/svg/ico_select.svg)no-repeat 100%/16px auto; }
+.accordion-item .accordion .btn-accordion.on::after { transform:translateY(-50%) rotate(0deg); }
 .accordion-item .accordion .accordion-cont { display:none; border-top:1px solid #E5E5E5; margin:0 20px; padding:30px 0; overflow: hidden; transition: max-height 0.3s ease; }
 .accordion-item .accordion .accordion-cont.on { display:block; max-height:500px; }
 .accordion-item .accordion .accordion-cont .text { font-size:1rem; line-height:1.188rem; font-weight:500;  }
 .accordion-item .accordion .accordion-cont .btn-cont-wrap { margin-top:30px; }
+
 /* 이미지 불러오기 */
 .thumb-wrap ul { display:flex; flex-wrap:wrap; width:100%; margin-top:20px; }
 .thumb-wrap ul li { width:calc((100% - 24px)/3); height:calc((100vw - 15px)/3); margin:0 12px 20px 0; }
