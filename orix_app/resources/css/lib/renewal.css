@@ -889,26 +889,52 @@ iframe { border:none; }
 .txt-list-wrap .txt-detail-area + .txt-detail-area { margin-top:20px; }
 /* .txt-list-wrap + .txt-list-wrap { margin-top:20px; } */
 .txt-list-wrap .txt-detail-area .btn-cont-wrap { margin-top:30px; }
-.txt-detail-area .txt-detail-header { display:flex; align-items:center; justify-content: space-between; padding-bottom:15px; border-bottom:1px solid #E2E2E2; font-size:0; color:#333333; }
+.txt-list-wrap .txt-detail-area .txt-detail-header { display:flex; align-items:center; justify-content: space-between; padding-bottom:15px; border-bottom:1px solid #E2E2E2; font-size:0; color:#333333; }
 
-.txt-detail-area .txt-detail-header p  { font-size:0.875rem; line-height:1rem; font-weight:500; }
+.txt-detail-area .txt-detail-header p  { font-size:1rem; line-height:1.188rem; font-weight:500; }
 .txt-detail-area .txt-detail-header .txt  { font-weight:400; }
 .txt-detail-area .txt-detail-header span.tit { font-size:1rem; line-height:1.188rem; font-weight:600; color:#00345F; }
 .txt-detail-area .txt-detail-header span.tit .small-tit { font-size:0.875rem; }
+.txt-detail-area .txt-detail-header.no-line { border-bottom:none; }
 .txt-detail-area.pd-top { padding:20px 20px 30px; }
 
+.txt-detail-area.style2 { border:1px solid #555555; border-radius:10px; }
+.txt-detaul-area.style2 .txt { font-size:0.875rem; line-height:1rem; }
+.txt-detail-area.style2 .txt-detail-header p { font-size:1.125rem; line-height:1.25rem; color:#555555; }
+
+
+.txt-detail-header.no-line { border-bottom:none; }
+.txt-detail-header + .txt-detail-header { margin-top:10px; }
+
+
+
 .txt-list li { display:flex; align-items:center; margin:12px 0; }
-.txt-list li span { font-size:0.875rem; font-weight:600; color:#00345F; }
+.txt-list li span {  font-size:0.875rem; line-height:1rem;  color:#00345F; }
 .txt-list li:first-child { margin-top:16px; }
 .txt-list li:last-child { border-bottom:0; }
-.txt-list li .tit { font-weight:400; font-size:1rem; color:#000000; }
+.txt-list li .tit { font-size:0.875rem; line-height:1rem; font-weight:400; color:#000000; }
 .txt-list li .tit .ref { font-size:0.77778rem; line-height:1.5;}
 .txt-list li .txt,
-.txt-detail-header .txt { flex:1; padding-left:30px; font-weight:400; vertical-align:top; text-align:right; font-size:1rem; color:#000000; word-break:break-all; }
+.txt-detail-header .txt { flex:1; padding-left:30px; vertical-align:top; text-align:right; font-size:0.875rem; line-height:1rem; font-weight:500; color:#000000; word-break:break-all; }
 .txt-list li .txt.yes{ font-size:0.875rem; font-weight:700; color:#00345F; }
 .txt-list li .txt.no{ font-size:0.875rem; font-weight:700; color:#FF0000; }
 .txt-list li .txt a[href*="tel"] { color:#260F54; word-break:break-all; }/*기기대응*/
 .txt-list .cusnm { color:#000!important; } /*기기대응*/
+
+/* txt-detail-area style3 */
+/* .style3 .txt-detail-header { border:none; }
+.style3 .txt-detail-header .tit,
+.style4 .txt-detail-header .tit { font-size:1rem; }
+.style3 .txt-list .txt,
+.style4 .txt-list .txt { color:#00345F; } */
+
+/* txt-detail-area style4 */
+/* .txt-list-wrap .txt-detail-area.style4 { border-radius:10px; }
+.style4 .txt-detail-header { border-bottom:1px solid #E2E2E2; }
+.style4 .txt-detail-header .tit { font-size:1.125rem; line-height:1.25rem; }
+.style4 .txt-list li:last-child { margin-bottom:0; } */
+
+
 
 .txt-detail-area .desc { color:#757575; font-size:0.88889rem; line-height:1.4375; }
 .txt-detail-area > .tit { font-size:0.88889rem; line-height:1.4375; }
@@ -923,18 +949,6 @@ iframe { border:none; }
 
 .bg-wrap { background:#F8F8F8; }
 
-/* txt-detail-area style3 */
-.style3 .txt-detail-header { border:none; }
-.style3 .txt-detail-header .tit,
-.style4 .txt-detail-header .tit { font-size:1rem; }
-.style3 .txt-list .txt,
-.style4 .txt-list .txt { color:#00345F; }
-
-/* txt-detail-area style4 */
-.txt-list-wrap .txt-detail-area.style4 { border-radius:10px; }
-.style4 .txt-detail-header { border-bottom:1px solid #E2E2E2; }
-.style4 .txt-detail-header .tit { font-size:1.125rem; line-height:1.25rem; }
-.style4 .txt-list li:last-child { margin-bottom:0; }
 
 
 /** 결과화면 **/
