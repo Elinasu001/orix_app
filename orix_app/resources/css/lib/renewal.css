@@ -168,8 +168,7 @@ input:disabled:-ms-input-placeholder {  /* Internet Explorer 10+ */ color:#A9A9A
 input:disabled:-moz-placeholder{ /* Firefox 18- */ color: #A9A9A9; }
 input:disabled::-moz-placeholder {  /* Mozilla Firefox 19+ */ color:#A9A9A9; }
 
-.form-control:disabled,
-input:disabled { background-color:#F8F8F8 !important; pointer-events:none; }
+input.form-control:disabled { background-color:#F8F8F8 !important; pointer-events:none; }
 
 /* focus */
 /** 인풋 자동완성 reset **/
