@@ -886,6 +886,7 @@ iframe { border:none; }
 .txt-detail-area .txt-detail-header p  { font-size:0.875rem; line-height:1rem; font-weight:500; }
 .txt-detail-area .txt-detail-header .txt  { font-weight:400; }
 .txt-detail-area .txt-detail-header span.tit { font-size:1rem; line-height:1.188rem; font-weight:600; color:#00345F; }
+.txt-detail-area .txt-detail-header span.tit .small-tit { font-size:0.875rem; }
 .txt-detail-area.pd-top { padding:20px 20px 30px; }
 
 .txt-list li { display:flex; align-items:center; margin:12px 0; }
@@ -907,7 +908,7 @@ iframe { border:none; }
 .visaul-info-box { margin-bottom:17px; padding:19px 51px 18px; color:#FFFFFF; text-align:center; background:#00345F; border-radius:4px; }
 .visaul-info-box span strong { font-weight:700; }
 
-.txt-detail-area .txt-detail-header .flag { padding:3px 7px; border-radius:4px; color:#000000; font-size:0.75rem; line-height:0.875rem; font-weight:400; }
+.txt-detail-area .txt-detail-header .flag { padding:3px 16px; border-radius:4px; color:#000000; font-size:0.75rem; line-height:0.875rem; font-weight:400; }
 .flag.style1 { background:#EEF8FF; }
 .flag.style2 { background:#FEF6CB; }
 
