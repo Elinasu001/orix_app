@@ -285,7 +285,10 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 
 .btn.btn-primary { background:#00345F; color:#FFFFFF; }
-.btn-wrap .btn.btn-close { width:initial; padding:17px 30px; background:#EFF3F6; color:#00345F; }
+.btn.btn-close,
+.btn.view { padding:17px 30px; background:#EFF3F6; color:#00345F; }
+
+.btn-wrap .btn.btn-close { width:initial;  }
 
 /* 로그인 */
 .btn.btn-line-text { position: relative; font-size:0.875rem; line-height:1rem; color:#757575; }
