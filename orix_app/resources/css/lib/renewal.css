@@ -921,6 +921,16 @@ iframe { border:none; }
 
 .bg-wrap { background:#F8F8F8; }
 
+/* txt-detail-area style3 */
+.style3 .txt-detail-header { border:none; }
+.style3 .txt-detail-header .tit,
+.style4 .txt-detail-header .tit { font-size:1rem; }
+.style3 .txt-list .txt,
+.style4 .txt-list .txt { color:#00345F; }
+
+/* txt-detail-area style4 */
+.style4 .txt-detail-header { border-bottom:1px solid #E2E2E2; }
+
 
 /** 결과화면 **/
 .result-area  { text-align:center; }
