@@ -121,14 +121,21 @@
                         <div class="accordion-item">
                             <div class="accordion">
                                 <button type="button" class="btn-accordion"><strong>· 대출신청 추가정보</strong></button>
-                                <div class="accordion-cont form-wrap on">
+                                <div class="accordion-cont form-wrap">
                                     <div class="form-group">
                                         <!-- <div class="form-tit">방문 예정 일자</div> -->
-                                        <label for="">방문 예정 일자</label>
-                                        <div class="form-row">
-                                            <div class="col">
-                                                <div class="input_wrap"><input id="dp1704427895122" type="text" class="form-control datepicker hasDatepicker" placeholder="" inputmode="none" readonly=""><button type="button" class="ui-datepicker-trigger">...</button></div><!--readonly-->
-                                            </div>
+                                        <label for="">실행일자</label>
+                                        <input id="" type="text" class="form-control datepicker" placeholder=""  inputmode="none" readonly><!--readonly-->
+                                    </div>
+                                    <p class="form-tit">인지세 처리방법</p>
+                                    <div class="form-row radio-bg-button">
+                                        <div class="col">
+                                            <input type="radio" name="q2" id="q21" value="Y" disabled>
+                                            <label for="q21" class="rd">수남청구</label>
+                                        </div>
+                                        <div class="col">
+                                            <input type="radio" name="q2" id="q22" value="N">
+                                            <label for="q22" class="rd">차감송금</label>
                                         </div>
                                     </div>
                                 </div>
@@ -136,15 +143,43 @@
                         </div>
                         <div class="accordion-item">
                             <div class="accordion">
-                                <button type="button" class="btn-accordion"><strong>· 대출신청 정보</strong></button>
+                                <button type="button" class="btn-accordion"><strong>· 방문판매원 정보 입력</strong></button>
                                 <div class="accordion-cont form-wrap">
                                     <div class="form-group">
-                                        <label for="" class="essential">성명</label><!--essectial 추가-->
-                                        <input id="" type="text" name="" class="form-control" placeholder="성명" invalid="">
+                                        <label for="">매매상사</label><!--essential 필수일 경우-->
+                                        <div class="form-row"><!--onclick="openPopup('')"-->
+                                            <div class="col">
+                                                <input id="" type="text" class="form-control" placeholder="매매상사 검색">
+                                            </div>
+                                            <button class="btn btn-txt" type="button">검색</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">수수료 지급처1</label><!--essential 필수일 경우-->
+                                        <div class="form-row"><!--onclick="openPopup('')"-->
+                                            <div class="col">
+                                                <input id="" type="text" class="form-control" placeholder="수수료 지급처1 검색">
+                                            </div>
+                                            <button class="btn btn-txt" type="button">검색</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">수수료 지급처2</label><!--essential 필수일 경우-->
+                                        <div class="form-row"><!--onclick="openPopup('')"-->
+                                            <div class="col">
+                                                <input id="" type="text" class="form-control" placeholder="수수료 지급처2 검색">
+                                            </div>
+                                            <button class="btn btn-txt" type="button">검색</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </section>
+                <section class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="#none" class="btn btn-primary">약정체결 요청</a>
                     </div>
                 </section>
             </div>

@@ -83,13 +83,15 @@ table { border-collapse:collapse; }
 button { border-radius:0; }
 .line { border: 1px solid #ced4da; border-radius:5px; background-color: #fff; padding:10px; }
 .type-spread { margin:0 -20px; }
-label { display: inline-block; font-size:0.875rem; line-height:1rem; color:#757575; }
+label,
+.form-wrap .form-tit { display: inline-block; font-size:0.875rem; line-height:1rem; color:#757575; }
 .essential { color:#555555; }
 .essential::after { content:"*"; color:#FF0000; padding-left:3px; }
 textarea { overflow-y:scroll; width:100%; height:200px; padding:10px; resize:none; border-radius:4px; border:1px solid #DDDDDD; background:#FFFFFF; font-size:0.875rem; line-height:1rem; color:#B2B2B2; font-weight:300; white-space:pre-line; }
 textarea::placeholder { color:#999999; }
 textarea:focus { color:#000000; font-size:0.875rem; font-weight:300; border-color:#003763; outline:none; }
 
+.form-wrap .form-tit { margin:10px 0; }
 .form-row { display:-ms-flexbox; display:flex; -ms-flex-wrap:nowrap; flex-wrap:nowrap; justify-content:space-between;  /*margin-right:-5px; margin-left:-5px;*/ width:100%; }
 .form-row > .col,
 .form-row > [class*="col-"] { /*padding-right:5px; padding-left:5px;*/ }
@@ -197,6 +199,7 @@ input:valid { font-size:0.875rem; font-weight:300; color:#000000; }
 .form-group.invalid .info { color:#FF0000; }
 .form-group .info-txt-wrap.dp-none { display:none; }
 .form-group.invalid .info-txt-wrap.dp-none { display:block; }
+
 
 /* 기본 */
 .info-txt-wrap { display:flex; margin-top:5px; }
