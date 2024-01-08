@@ -161,7 +161,123 @@
                         </div>
                     </div>
 
-                    <p class="test-tit">조회</p>
+                    <p class="test-tit">조회 tab round-list</p>
+                    <section class="check-wrap type-spread">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input id="" type="text" class="form-control" placeholder="검색어를 입력해 주세요">
+                                    </div>
+                                    <button class="btn btn-txt search-img" type="button">검색</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="tabs-wrap round-list">
+                            <div class="tabs">
+                                <ul class="tab-item">
+                                    <li data-tab="tab-cont10" class="on"><a href="#none" title="선택됨">대출심사 가능</a></li>
+                                    <li data-tab="tab-cont11"><a href="#none">할부심사 가능</a></li>
+                                    <li data-tab="tab-cont12"><a href="#none">심사 불가</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </section>
+    
+                    <section class="result-wrap">
+                        <div class="tab-content-area">
+                            <div id="tab-cont10" class="tab-content">
+                                <div class="txt-list-wrap">
+                                    <div class="txt-detail-area on"><!--on 클래스 추가 시 display:block; -->
+                                        <div class="txt-detail-header">
+                                            <p><span class="tit">김영수 810702-1</span></p>
+                                            <p class="txt">개인</p>
+                                        </div>
+                                        <ul class="txt-list">
+                                            <li>
+                                                <span class="tit">신용조회일자</span>
+                                                <span class="txt">YYYY.MM.DD</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">대출</span>
+                                                <span class="txt yes">심사진행 가능</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">할부</span>
+                                                <span class="txt yes">심사진행 가능</span>
+                                            </li>
+                                        </ul>
+                                        <div class="btn-cont-wrap">
+                                            <a href="#none" class="btn btn-primary">대출 심사요청</a>
+                                            <a href="#none" class="btn btn-primary">할부 심사요청</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div id="tab-cont11" class="tab-content dp-none">
+                                <div class="txt-list-wrap">
+                                    <div class="txt-detail-area">
+                                        <div class="txt-detail-header">
+                                            <p><span class="tit">이영희 810702-2</span></p>
+                                            <p class="txt">개인사업자</p>
+                                        </div>
+                                        <ul class="txt-list">
+                                            <li>
+                                                <span class="tit">신용조회일자</span>
+                                                <span class="txt">YYYY.MM.DD</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">대출</span>
+                                                <span class="txt yes">심사진행 가능</span><!--yse 가능-->
+                                            </li>
+                                            <li>
+                                                <span class="tit">할부</span>
+                                                <span class="txt yes">심사진행 가능</span><!--yse 가능-->
+                                            </li>
+                                        </ul>
+                                        <div class="btn-cont-wrap">
+                                            <a href="#none" class="btn btn-primary">대출 심사요청</a>
+                                            <a href="#none" class="btn btn-primary">할부 심사요청</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div id="tab-cont12" class="tab-content dp-none">
+                                 <div class="txt-list-wrap">
+                                    <div class="txt-detail-area">
+                                        <div class="txt-detail-header">
+                                            <p><span class="tit">이영희 810702-2</span></p>
+                                            <p class="txt">개인사업자</p>
+                                        </div>
+                                        <ul class="txt-list">
+                                            <li>
+                                                <span class="tit">신용조회일자</span>
+                                                <span class="txt">YYYY.MM.DD</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">대출</span>
+                                                <span class="txt yes">심사진행 가능</span><!--yse 가능-->
+                                            </li>
+                                            <li>
+                                                <span class="tit">할부</span>
+                                                <span class="txt no">채무불이행</span><!--no 불가능-->
+                                            </li>
+                                        </ul>
+                                        <div class="btn-cont-wrap">
+                                            <a href="#none" class="btn btn-primary">대출 심사요청</a>
+                                            <a href="#none" class="btn disabled">할부 심사불가</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- <p class="test-tit">조회</p>
                     <section class="check-wrap type-spread">
                         <div class="form-wrap">
                             <div class="form-group">
@@ -175,26 +291,26 @@
                         </div>
                         <div class="tab-slidemenu round-bor">
                             <ul>
-                                <li class="on"><a href="#none">대출심사 가능</a></li><!--on 클래스 추가 시 스타일 적용-->
+                                <li class="on"><a href="#none">대출심사 가능</a></li>
                                 <li><a href="#none">할부심사 가능</a></li>
                                 <li><a href="#none">심사 불가</a></li>
                             </ul>
                         </div>
-                    </section>
+                    </section> -->
 
-                    <p class="test-tit">TAP round</p>
+                    <p class="test-tit">Tab round</p>
                     <section class="tabs-wrap round-list">
                         <div class="tabs">
                             <ul class="tab-item">
-                                <li data-tab="tab-cont01"><a href="#none" title="선택됨">텍스트1</a></li>
-                                <li data-tab="tab-cont02"><a href="#none">텍스트2</a></li>
+                                <li data-tab="tab-cont06"><a href="#none" title="선택됨">텍스트1</a></li>
+                                <li data-tab="tab-cont07"><a href="#none">텍스트2</a></li>
                             </ul>
                             <div class="tab-content-area">
-                                <div id="tab-cont01" class="tab-content">
+                                <div id="tab-cont06" class="tab-content">
                                     내용 1
                                 </div>
     
-                                <div id="tab-cont02" class="tab-content dp-none">
+                                <div id="tab-cont07" class="tab-content dp-none">
                                     내용 2
                                 </div>
                             </div>
@@ -205,15 +321,15 @@
                     <section class="tabs-wrap">
                         <div class="tabs">
                             <ul class="tab-item">
-                                <li data-tab="tab-cont01"><a href="#none" title="선택됨">텍스트1</a></li>
-                                <li data-tab="tab-cont02"><a href="#none">텍스트2</a></li>
+                                <li data-tab="tab-cont08"><a href="#none" title="선택됨">텍스트1</a></li>
+                                <li data-tab="tab-cont09"><a href="#none">텍스트2</a></li>
                             </ul>
                             <div class="tab-content-area">
-                                <div id="tab-cont01" class="tab-content">
+                                <div id="tab-cont08" class="tab-content">
                                     내용 1
                                 </div>
     
-                                <div id="tab-cont02" class="tab-content dp-none">
+                                <div id="tab-cont08" class="tab-content dp-none">
                                     내용 2
                                 </div>
                             </div>
