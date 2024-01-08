@@ -959,7 +959,6 @@ iframe { border:none; }
 .bg-wrap { background:#F8F8F8; }
 
 
-
 /** 결과화면 **/
 .result-area  { text-align:center; }
 .result-area::before { content:''; display:inline-block; width:64px; height:64px; }
