@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ORIX Capital</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="keywords" content="ORIX Capital keywords" />
+	<meta name="description" content="ORIX Capital description" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<!-- 
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+	-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="No-Cache">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../resources/favicon.png" />
+	<link rel="icon" type="image/x-icon" href="../../resources/favicon.png" />
+
+    <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+	<link rel="stylesheet" href="../../resources/css/lib/default.css">
+	<link rel="stylesheet" href="../../resources/css/ui/jquery-ui.css">
+	<link rel="stylesheet" href="../../resources/css/ui/datepicker.css">
+    
+	<script type="text/javascript" src="../../resources/js/ui/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui/jquery-1.12.4.min.js"></script>
+    <script  type="text/javascript" src="../../resources/js/ui/jquery-ui-1.12.1.js"></script>
+
+    <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- //header -->
+        <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_header.html");
+			});
+			</script>
+        </div>
+         <!-- header// -->
+        <!-- //menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("./include/inc_all_menu.html");
+            });
+            </script>
+        </div>
+	    <!-- menuWrap// -->
+        <form>
+            <div class="contents-wrap">
+                <section class="tit-main-area">
+                    <p class="tit">매매상사 조회</p>
+                    <p class="text">매매상사 조회를 위한 정보를 입력하세요.</p>
+                </section>
+                <section class="check-wrap">
+                    <div class="input-box-wrap">
+                        <div class="input-box">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <label for="" class="essential">검색구분</label>
+                                    <input id="" type="text" name="" class="form-control select" placeholder="매매상사명" onclick="openPopup('lySel')"><!--select 클래스 추가 및 onclick 팝업 추가하기-->
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="essential">검색어 입력</label>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input id="" type="text" class="form-control" placeholder="검색어 입력">
+                                        </div>
+                                        <button class="btn btn-txt" type="button">선택</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="result-wrap">
+                    <div class="txt-list-wrap">
+                        <!--//매매상사명 -->
+                        <div class="txt-detail-area">
+                            <div class="txt-detail-header">
+                                <p><span class="tit">카스토어 (이원빈)</span></p>
+                                <p class="txt">120-**-*6311</p>
+                            </div>
+                            <ul class="txt-list">
+                                <li>
+                                    <span class="tit">매매단지명</span>
+                                    <span class="txt">전주매매단지</span>
+                                </li>
+                                <li>
+                                    <span class="tit">주소</span>
+                                    <span class="txt">전북 전주시 덕진구 팔북로 344-3</span>
+                                </li>
+                                <li>
+                                    <span class="tit">은행명</span>
+                                    <span class="txt">우리은행 1002-031-023568</span>
+                                </li>
+                                <li>
+                                    <span class="tit">예금주명</span>
+                                    <span class="txt">이원빈</span>
+                                </li>
+                                <li>
+                                    <span class="tit">할부협약</span>
+                                    <span class="txt no">N</span>
+                                </li>
+                                <li>
+                                    <span class="tit">할부협약일자</span>
+                                    <span class="txt">2023.11.01</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="txt-detail-area">
+                            <div class="txt-detail-header">
+                                <p><span class="tit">(주)카스토어 (장동건)</span></p>
+                                <p class="txt">280211-****849</p>
+                            </div>
+                            <ul class="txt-list">
+                                <li>
+                                    <span class="tit">법인명</span>
+                                    <span class="txt">오토플렉스</span>
+                                </li>
+                                <li>
+                                    <span class="tit">주소</span>
+                                    <span class="txt">서울 강서구 양천로 390</span>
+                                </li>
+                                <li>
+                                    <span class="tit">은행명</span>
+                                    <span class="txt">하나은행 853-910120-256988</span>
+                                </li>
+                                <li>
+                                    <span class="tit">예금주명</span>
+                                    <span class="txt">(주)카스토어</span>
+                                </li>
+                                <li>
+                                    <span class="tit">할부협약</span>
+                                    <span class="txt yes">Y</span>
+                                </li>
+                                <li>
+                                    <span class="tit">할부협약일자</span>
+                                    <span class="txt">2023.11.01</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--매매상사명// -->
+                        <!--//대표자명 -->
+                        <div class="txt-detail-area">
+                            <div class="txt-detail-header">
+                                <p><span class="tit">(주)플렌카 (이원빈)</span></p>
+                                <p class="txt">280211-****849</p>
+                            </div>
+                            <ul class="txt-list">
+                                <li>
+                                    <span class="tit">매매단지명</span>
+                                    <span class="txt">중고차매매단지</span>
+                                </li>
+                                <li>
+                                    <span class="tit">주소</span>
+                                    <span class="txt">서울 강서구 양천고 390</span>
+                                </li>
+                                <li>
+                                    <span class="tit">은행명</span>
+                                    <span class="txt">하나은행 853-910120-25698</span>
+                                </li>
+                                <li>
+                                    <span class="tit">예금주명</span>
+                                    <span class="txt">(주)카스토어</span>
+                                </li>
+                                <li>
+                                    <span class="tit">할부협약</span>
+                                    <span class="txt yes">Y</span>
+                                </li>
+                                <li>
+                                    <span class="tit">할부협약일자</span>
+                                    <span class="txt">2023.11.01</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="txt-detail-area">
+                            <div class="txt-detail-header">
+                                <p><span class="tit">카스토어 (이원빈)</span></p>
+                                <p class="txt">120-**-*6311</p>
+                            </div>
+                            <ul class="txt-list">
+                                <li>
+                                    <span class="tit">매매단지명</span>
+                                    <span class="txt">전주매매단지</span>
+                                </li>
+                                <li>
+                                    <span class="tit">주소</span>
+                                    <span class="txt">전북 전주시 덕진구 팔북로 344-3</span>
+                                </li>
+                                <li>
+                                    <span class="tit">은행명</span>
+                                    <span class="txt">우리은행 1002-031-023568</span>
+                                </li>
+                                <li>
+                                    <span class="tit">예금주명</span>
+                                    <span class="txt">이원빈</span>
+                                </li>
+                                <li>
+                                    <span class="tit">할부협약</span>
+                                    <span class="txt no">N</span>
+                                </li>
+                                <li>
+                                    <span class="tit">할부협약일자</span>
+                                    <span class="txt">2023.11.01</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--대표자명// -->
+                    </div>
+                </section>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<div id="lySel" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">검색구분</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>매매상사명</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                <li><button>대표자명</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
