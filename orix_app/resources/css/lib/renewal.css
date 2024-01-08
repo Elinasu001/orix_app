@@ -501,6 +501,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 /** _스크롤 컨텐츠 레이어 **/
 .layer-up .ly-scroll-con { overflow:hidden; overflow-y:auto; max-height:250px; /*padding:0 20px 10px;*/ }
+.layer-up .ly-scroll-con.plus-height { max-height:350px; }/*높이 더 늘릴 경우*/
 .layer-up .default-wrap {  padding:0 20px 10px; }
 .layer-up:has(.fixed-btn-wrap) .default-wrap { padding-bottom:10px; }
 .layer-up .ly-scroll-con.type-high { max-height:58vh; }
