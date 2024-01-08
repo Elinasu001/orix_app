@@ -216,6 +216,7 @@ input::-webkit-search-results-decoration{ -webkit-appearance:none; display:none;
 
 /** input style **/
 .form-wrap { margin-top:20px; }
+.form-wrap  + .tabs-wrap.round-list { margin-top:20px; }
 .form-group + .form-group:has(>label),
 
 .form-group + .form-group { margin-top:20px; }
@@ -379,6 +380,14 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .tabs-wrap .tab-item li.on::after ,
 .tabs-wrap .swiper-pager li.swiper-pagination-bullet-active::after { position:absolute; content:""; width:100%; height:2px; left:0; bottom:0; border:2px solid #00345F; border-radius:30px; }
 
+
+/* tab-round */
+.tabs-wrap.round-list .tab-item:before { content:none; }
+.tabs-wrap.round-list .tab-item li a { padding:5px 12px; border-radius:13px; font-size: 0.75rem; font-weight:500; line-height: 0.875rem; border:1px solid #DEF2FF; background:#DEF2FF; color:#56A3FD; }
+.tabs-wrap.round-list .tab-item li.on a { font-weight:700; background:#56A3FD; color:#FFFFFF; }
+.tabs-wrap.round-list .tab-item li.on::after { content:none; }
+.tabs-wrap.round-list .tab-item li { margin-right:5px; }
+.tabs-wrap.round-list .tab-item li:last-child { margin-right:0; }
 
 /* tab-bg - main */
 .tabs-wrap.tab-bg .tab-item { display:flex; justify-content:space-between; padding:4px; background:#EFEFEF; border-radius:10px; }

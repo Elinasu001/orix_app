@@ -76,99 +76,177 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-slidemenu round-bor">
-                        <ul>
-                            <li class="on"><a href="#none">대출심사 가능</a></li><!--on 클래스 추가 시 스타일 적용-->
-                            <li><a href="#none">할부심사 가능</a></li>
-                            <li><a href="#none">심사 불가</a></li>
-                        </ul>
+
+                    <div class="tabs-wrap round-list">
+                        <div class="tabs">
+                            <ul class="tab-item">
+                                <li data-tab="tab-cont01" class="on"><a href="#none" title="선택됨">대출심사 가능</a></li>
+                                <li data-tab="tab-cont02"><a href="#none">할부심사 가능</a></li>
+                                <li data-tab="tab-cont03"><a href="#none">심사 불가</a></li>
+                            </ul>
+                        </div>
                     </div>
+                    
                 </section>
+                
 
                 <section class="result-wrap">
-                    <div class="txt-list-wrap">
-                        <div class="txt-detail-area on"><!--on 클래스 추가 시 display:block; -->
-                            <div class="txt-detail-header">
-                                <p><span class="tit">김영수</span> 고객님</p>
-                                <p class="txt">개인</p>
-                            </div>
-                            <ul class="txt-list">
-                                <li>
-                                    <span class="tit">전화번호</span>
-                                    <span class="txt">010-1234-5678</span>
-                                </li>
-                                <li>
-                                    <span class="tit">신용조회일자</span>
-                                    <span class="txt">YYYY.MM.DD</span>
-                                </li>
-                                <li>
-                                    <span class="tit">대출</span>
-                                    <span class="txt yes">심사진행 가능</span>
-                                </li>
-                                <li>
-                                    <span class="tit">할부</span>
-                                    <span class="txt yes">심사진행 가능</span>
-                                </li>
-                            </ul>
-                            <div class="btn-cont-wrap">
-                                <a href="#none" class="btn btn-primary">대출 심사요청</a>
-                                <a href="#none" class="btn btn-primary">할부 심사요청</a>
+                    <div class="tab-content-area">
+                        <div id="tab-cont01" class="tab-content">
+                            <div class="txt-list-wrap">
+                                <div class="txt-detail-area on"><!--on 클래스 추가 시 display:block; -->
+                                    <div class="txt-detail-header">
+                                        <p><span class="tit">김영수 810702-1</span></p>
+                                        <p class="txt">개인</p>
+                                    </div>
+                                    <ul class="txt-list">
+                                        <li>
+                                            <span class="tit">신용조회일자</span>
+                                            <span class="txt">YYYY.MM.DD</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">대출</span>
+                                            <span class="txt yes">심사진행 가능</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">할부</span>
+                                            <span class="txt yes">심사진행 가능</span>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-cont-wrap">
+                                        <a href="#none" class="btn btn-primary">대출 심사요청</a>
+                                        <a href="#none" class="btn btn-primary">할부 심사요청</a>
+                                    </div>
+                                </div>
+                                <div class="txt-detail-area">
+                                    <div class="txt-detail-header">
+                                        <p><span class="tit">이영희 810702-2</span></p>
+                                        <p class="txt">개인사업자</p>
+                                    </div>
+                                    <ul class="txt-list">
+                                        <li>
+                                            <span class="tit">신용조회일자</span>
+                                            <span class="txt">YYYY.MM.DD</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">대출</span>
+                                            <span class="txt yes">심사진행 가능</span><!--yse 가능-->
+                                        </li>
+                                        <li>
+                                            <span class="tit">할부</span>
+                                            <span class="txt no">채무불이행</span><!--no 불가능-->
+                                        </li>
+                                    </ul>
+                                    <div class="btn-cont-wrap">
+                                        <a href="#none" class="btn btn-primary">대출 심사요청</a>
+                                        <a href="#none" class="btn disabled">할부 심사불가</a>
+                                    </div>
+                                </div>
+                                <div class="txt-detail-area">
+                                    <div class="txt-detail-header">
+                                        <p><span class="tit">이영희 810702-3</span></p>
+                                        <p class="txt">개인사업자</p>
+                                    </div>
+                                    <ul class="txt-list">
+                                        <li>
+                                            <span class="tit">신용조회일자</span>
+                                            <span class="txt no">YYYY.MM.DD / 조회기간 만료</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">대출</span>
+                                            <span class="txt yes">심사진행 가능</span><!--yse-->
+                                        </li>
+                                        <li>
+                                            <span class="tit">할부</span>
+                                            <span class="txt no">채무불이행</span><!--no-->
+                                        </li>
+                                    </ul>
+                                    <div class="btn-cont-wrap btn2">
+                                        <a href="#none" class="btn btn-primary">상세보기</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="txt-detail-area">
-                            <div class="txt-detail-header">
-                                <p><span class="tit">이영희</span> 고객님</p>
-                                <p class="txt">개인사업자</p>
-                            </div>
-                            <ul class="txt-list">
-                                <li>
-                                    <span class="tit">전화번호</span>
-                                    <span class="txt">010-1234-5678</span>
-                                </li>
-                                <li>
-                                    <span class="tit">신용조회일자</span>
-                                    <span class="txt">YYYY.MM.DD</span>
-                                </li>
-                                <li>
-                                    <span class="tit">대출</span>
-                                    <span class="txt yes">심사진행 가능</span><!--yse 가능-->
-                                </li>
-                                <li>
-                                    <span class="tit">할부</span>
-                                    <span class="txt no">채무불이행</span><!--no 불가능-->
-                                </li>
-                            </ul>
-                            <div class="btn-cont-wrap">
-                                <a href="#none" class="btn btn-primary">대출 심사요청</a>
-                                <a href="#none" class="btn btn-primary disabled">할부 심사불가</a>
+
+                        <div id="tab-cont02" class="tab-content dp-none">
+                            <div class="txt-list-wrap">
+                                <div class="txt-detail-area">
+                                    <div class="txt-detail-header">
+                                        <p><span class="tit">이영희 810702-2</span></p>
+                                        <p class="txt">개인사업자</p>
+                                    </div>
+                                    <ul class="txt-list">
+                                        <li>
+                                            <span class="tit">신용조회일자</span>
+                                            <span class="txt">YYYY.MM.DD</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">대출</span>
+                                            <span class="txt yes">심사진행 가능</span><!--yse 가능-->
+                                        </li>
+                                        <li>
+                                            <span class="tit">할부</span>
+                                            <span class="txt yes">심사진행 가능</span><!--yse 가능-->
+                                        </li>
+                                    </ul>
+                                    <div class="btn-cont-wrap">
+                                        <a href="#none" class="btn btn-primary">대출 심사요청</a>
+                                        <a href="#none" class="btn btn-primary">할부 심사요청</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="txt-detail-area">
-                            <div class="txt-detail-header">
-                                <p><span class="tit">이영희</span> 고객님</p>
-                                <p class="txt">개인사업자</p>
-                            </div>
-                            <ul class="txt-list">
-                                <li>
-                                    <span class="tit">전화번호</span>
-                                    <span class="txt">010-1234-5678</span>
-                                </li>
-                                <li>
-                                    <span class="tit">신용조회일자</span>
-                                    <span class="txt">YYYY.MM.DD</span>
-                                </li>
-                                <li>
-                                    <span class="tit">대출</span>
-                                    <span class="txt no">채무조정중</span><!--yse-->
-                                </li>
-                                <li>
-                                    <span class="tit">할부</span>
-                                    <span class="txt no">채무불이행</span><!--no-->
-                                </li>
-                            </ul>
-                            <div class="btn-cont-wrap btn2">
-                                <a href="#none" class="btn btn-primary 채무불이행">대출 심사요청</a>
-                                <a href="#none" class="btn btn-primary disabled">할부 심사불가</a>
+
+                        <div id="tab-cont03" class="tab-content dp-none">
+                             <div class="txt-list-wrap">
+                                <div class="txt-detail-area">
+                                    <div class="txt-detail-header">
+                                        <p><span class="tit">이영희 810702-2</span></p>
+                                        <p class="txt">개인사업자</p>
+                                    </div>
+                                    <ul class="txt-list">
+                                        <li>
+                                            <span class="tit">신용조회일자</span>
+                                            <span class="txt">YYYY.MM.DD</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">대출</span>
+                                            <span class="txt yes">심사진행 가능</span><!--yse 가능-->
+                                        </li>
+                                        <li>
+                                            <span class="tit">할부</span>
+                                            <span class="txt no">채무불이행</span><!--no 불가능-->
+                                        </li>
+                                    </ul>
+                                    <div class="btn-cont-wrap">
+                                        <a href="#none" class="btn btn-primary">대출 심사요청</a>
+                                        <a href="#none" class="btn disabled">할부 심사불가</a>
+                                    </div>
+                                </div>
+                                <div class="txt-detail-area">
+                                    <div class="txt-detail-header">
+                                        <p><span class="tit">이영희 810702-3</span></p>
+                                        <p class="txt">개인</p>
+                                    </div>
+                                    <ul class="txt-list">
+                                        <li>
+                                            <span class="tit">신용조회일자</span>
+                                            <span class="txt">YYYY.MM.DD </span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">대출</span>
+                                            <span class="txt no">채무조정중</span><!--no-->
+                                        </li>
+                                        <li>
+                                            <span class="tit">할부</span>
+                                            <span class="txt no">연체이력</span><!--no-->
+                                        </li>
+                                    </ul>
+                                    <div class="btn-cont-wrap btn2">
+                                        <a href="#none" class="btn disabled">대출 심사요청</a>
+                                        <a href="#none" class="btn disabled">할부 심사불가</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

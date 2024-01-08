@@ -170,7 +170,7 @@ $(document).ready(function() {
       $(this).siblings().removeClass("on");
       if (!$(this).hasClass('swiper'))  $(this).addClass("on");
   
-      $(this).closest("ul").siblings("div").children("div").addClass("dp-none");
+      $(".tab-content").addClass("dp-none");
       $("#" + tabCont).removeClass("dp-none");
   
     });
