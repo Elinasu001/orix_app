@@ -1050,7 +1050,7 @@ iframe { border:none; }
 .loader:before { position:absolute; content:""; transform:translate(-50%,-50%); top:50%; left:50%; width: 15px; aspect-ratio: 1;  border-radius: 50%;  animation: l5 1s infinite linear alternate; }
 @keyframes l5 {
 0%  {box-shadow: 20px 0 #ffffff, -20px 0 #00345F;background: #00345F }
-50% {box-shadow: 20px 0 #00345F, -20px 0 #ffffff;background: #00345F}
-/* 66% {box-shadow: 20px 0 #0002,-20px 0 #00345F; background: #0002} */
+80% {box-shadow: 20px 0 #00345F, -20px 0 #ffffff;background: #00345F}
+/* 66% {box-shadow: 20px 0 #ffffff,-20px 0 #00345F; background: #00345F} */
 100%{box-shadow: 20px 0 #00345F,-20px 0 #ffffff; background: #ffffff }
 }
