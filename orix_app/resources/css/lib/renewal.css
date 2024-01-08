@@ -568,8 +568,7 @@ iframe { border:none; }
 /* .table-type.check tbody tr { cursor: pointer; } */
 
 .table-type table { border:solid #EEEEEE; border-width:1px 0; }
-.table-type.table-scroll,
-.table-type2.table-scroll { overflow-x:scroll; }
+.table-type.table-scroll { overflow-x:scroll; }
 
 .table-type.table-col table { border-bottom:none; }
 .table-type th, 
@@ -577,11 +576,20 @@ iframe { border:none; }
 [class^="table-wrap"] th,
 [class^="table-wrap"] td,
 [class^="table-type"] th,
-[class^="table-type"] td{ text-align:center; font-size:0.875rem; line-height:1rem; font-weight:400;  border-bottom:1px solid #EEEEEE; word-break: keep-all; }
+[class^="table-type"] td{ text-align:left; font-size:0.875rem; line-height:1rem; font-weight:400;  border-bottom:1px solid #EEEEEE; word-break: keep-all; }
 [class^="table-wrap"] thead th,
 [class^="table-type"] thead th {  padding:10px 30px; background:#00345F; font-size:0.875rem; line-height:1rem; font-weight:300; color:#FFFFFF; }
 [class^="table-wrap"] tbody td,
 [class^="table-type"] tbody td {  padding:12px 30px; font-size:0.875rem; line-height:1rem; font-weight:300; }
+
+.table-type.ta-c th, 
+.table-type.ta-c td, 
+[class^="table-wrap"] .table-type.ta-c th,
+[class^="table-wrap"] .table-type.ta-c td,
+[class^="table-type"] .table-type.ta-c th,
+[class^="table-type"] .table-type.ta-c td{ text-align:center; font-size:0.875rem; line-height:1rem; font-weight:400;  border-bottom:1px solid #EEEEEE; word-break: keep-all; }
+
+
 .table-type td:last-child { border-right:0; }
 .table-type td { color:#757575; }
 /** table 세로형 **/
@@ -599,21 +607,24 @@ iframe { border:none; }
 [class^="table-wrap"] thead tr:last-child,
 .table-type01 tbody tr:last-child th  { border-bottom:0; } */
 
+.table-type + .table-type { margin-top:20px; } 
+
 /* table-col */
 .table-col {  border:1px solid #DDDDDD; border-radius:4px; }
 .table-col tbody tr th,
 .table-col tbody tr td { padding:10px; font-size:1rem; line-height:1.188rem; }
-.table-col tbody tr th { font-weight:500; color:#00345F; text-align:left; background:#EFF3F6; }
-.table-col tbody tr td { font-weight:400; color:#000000; text-align:right; }
+.table-col.style3 tbody tr th { font-weight:500; color:#FFFFFF; background:#00345F; }
+.table-col thead tr td { font-weight:400; color:#000000; }
 .table-col tbody tr:last-child th,
 .table-col tbody tr:last-child td { border-bottom:none; }
 
+.txt-r { text-align:right !important; }
+.txt-l { text-align:left  !important; }
 
 /* 테이블 스타일4 */
 .table-col tbody tr th:last-child { text-align:right; }
-.table-col tbody tr td { text-align:left; }
+.table-col tbody tr td { text-align:left;  border-right:1px solid #EEEEEE; }
 .table-col tbody tr .td1 { border-right:1px solid #EEEEEE; font-weight:500; color:#00345F; }
-.table-col tbody tr .td3 { border-bottom:none; }
 .table-col tbody tr td:last-child { text-align:right; }
 
 /* table 색상 변경 */
