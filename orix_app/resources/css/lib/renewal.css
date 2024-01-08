@@ -297,18 +297,11 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .btn.btn-line-text { position: relative; font-size:0.875rem; line-height:1rem; color:#757575; }
 .btn-cont-wrap .btn.btn-line-text:first-child:after { content:""; position:absolute; top:50%; right:0; transform:translate(0, -50%); width:1px; height:10px; border:1px solid #EBEBED; }
 .btn.btn-text { padding:0 0!important; font-size:0.875rem; line-height:1rem; font-weight:500; color:#8A8A8A; /*text-align:right;*/ }
-.btn.btn-text:hover,
-.btn.btn-text.big-line:hover,
 .btn.btn-text.small-line:hover  {color:#00345F; }
-.btn.btn-text.big-line:hover,
 .btn.btn-text.small-line:hover { border-bottom:1px solid #00345F; }
-
-.btn.btn-text.small-line,
-.btn.btn-text.big-line  { border-radius:0; width:initial; color:#8A8A8A; border-bottom:1px solid #8A8A8A; }
 .btn.btn-text.small-line { border-radius:0; width:initial; color:#8A8A8A; border-bottom:1px solid #8A8A8A; }
 
-.btn.btn-text.big-line { text-align:left; font-size:1.25rem; line-height:1.375rem; }
-.btn.btn-text.big-line:hover {font-weight:700; }
+.btn.btn-text.big-line  { border-radius:0; width:initial; color:#FFFFFF; border-bottom:1px solid #FFFFFF; font-size:1.125rem; line-height:1.25rem; font-weight:700; }
 
 /* 로그아웃 */
 .btn.logout { padding:6px 10px; border-radius: 32px;font-size:0.75rem; line-height:0.875rem; font-weight:400; color:#848B95; background:#EBEDEF; }
@@ -653,6 +646,13 @@ iframe { border:none; }
 
 .tit-area { display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; }
 .tit-area .tit { font-size:1rem; line-height:1.188rem; color:#00345F; font-weight:600; }
+
+/* intro box */
+.intro-box-wrap { margin-top:97px; padding:76px 20px 40px 20px; border-radius:9px; background:#00345F;}
+.intro-box-wrap p {  font-size:35px; line-height: 3.188rem; font-weight:500; color:#FFFFFF; }
+/* .intro-box-wrap .tit + .tit  {  margin-left:60px; } */
+.intro-box-wrap .text { margin-top:36px; font-size:1rem; line-height:1.188rem;  }
+.intro-box-wrap .btn-cont-wrap { margin-top:120px; }
 
 /* intro text */
 .intro-text-wrap { margin-top:100px; }
