@@ -257,21 +257,17 @@ function openPopup(id) {
   $('body').css({ 'position': 'fixed', 'top': -currentTop });
 
 
-  if (_target.hasClass('layerpopup')) {
-    $(this).removeClass('on'); // 열린 다른 팝업 닫기
-  }
-
   //_target.fadeIn(300);
   layerFunc(_target);
   _target.removeClass('close');
   _target.addClass('on').show();
   _target.focus();
-  _target.find('.btn-layer-close').on('click', function () {
+  _target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
     closePopupUp(id);
     $('body').removeAttr('style');
     $(window).scrollTop(currentTop);
     _target.removeClass('on');
-    $('.layerpopup').css('display', '');
+    // $('.layerpopup').css('display', '');
   });
 
   if (_target.has('.ly-select-list').length > 0) {
