@@ -1008,3 +1008,11 @@ iframe { border:none; }
 .urgency-wrap { position:relative; padding:10px 20px 10px 46px; background:#EEF8FF; }
 .urgency-wrap a { font-size:0.875rem; line-height:1rem; font-weight:400; color:#00345F; }
 .urgency-wrap a::before { content:""; position:absolute; width:16px; height:16px; left:20px;  background: url(../../images/common/ico_urgency.png) no-repeat center 50%/16px auto; }
+
+/* 2024-01-08 이솔 */
+.result-tit-area { border:none; text-align:center; }
+.result-tit-area .tit { font-size:1rem; line-height:1.188rem; color:#999999; }
+
+/* 인풋박스 */
+.input-box { margin-bottom:20px; padding:10px 20px 30px; border:1px solid #E5E5E5; border-radius: 10px; }
+.input-box .btn-cont-wrap { margin-top:30px; }

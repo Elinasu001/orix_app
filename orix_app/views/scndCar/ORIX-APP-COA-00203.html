@@ -196,7 +196,41 @@
             <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
         </div>
         <div class="ly-cont-wrap">
-            <p class="sub-title">김영수 님께 약정체결 요청 URL을<br>발송하였습니다.</p>
+            <div class="form-wrap">
+                <div class="form-group gray-search">
+                    <input type="search" id="search" class="form-control" placeholder="업체명/대표자명 입력" aria-label="Search Addresses" aria-describedby="user-search" inputmode="search"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
+                    <button class="btn btn-search outline-secondary" type="button">검색</button>
+                </div>
+            </div>
+            <div class="result-tit-area">
+                <p class="tit">매매상사를 검색해 주세요</p>
+            </div>
+            <div class="txt-list-wrap">
+                <div class="txt-detail-area"><!--on 클래스 추가 시 display:block; -->
+                    <div class="txt-detail-header">
+                        <p><span class="tit">카스토어 (이원빈)</span> </p>
+                        <p class="txt">120-**-*6311</p>
+                    </div>
+                    <ul class="txt-list">
+                        <li>
+                            <span class="tit">사업자명</span>
+                            <span class="txt">010-1234-5678</span>
+                        </li>
+                        <li>
+                            <span class="tit">신용조회일자</span>
+                            <span class="txt">YYYY.MM.DD</span>
+                        </li>
+                        <li>
+                            <span class="tit">대출</span>
+                            <span class="txt yes">심사진행 가능</span>
+                        </li>
+                        <li>
+                            <span class="tit">할부협약</span>
+                            <span class="txt no">N</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="btn-wrap">
             <a href="#none" class="btn btn-primary">확인</a>
