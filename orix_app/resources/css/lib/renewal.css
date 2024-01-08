@@ -578,7 +578,7 @@ iframe { border:none; }
 [class^="table-type"] th,
 [class^="table-type"] td{ text-align:left; font-size:0.875rem; line-height:1rem; font-weight:400;  border-bottom:1px solid #EEEEEE; word-break: keep-all; }
 [class^="table-wrap"] thead th,
-[class^="table-type"] thead th {  padding:10px 30px; background:#00345F; font-size:0.875rem; line-height:1rem; font-weight:300; color:#FFFFFF; }
+[class^="table-type"] thead th {  padding:10px 30px; background:#EEF8FF; font-size:0.875rem; line-height:1rem; font-weight:300; color:#00345F; }
 [class^="table-wrap"] tbody td,
 [class^="table-type"] tbody td {  padding:12px 30px; font-size:0.875rem; line-height:1rem; font-weight:300; }
 
@@ -610,13 +610,13 @@ iframe { border:none; }
 .table-type + .table-type { margin-top:20px; } 
 
 /* table-col */
-.table-col {  border:1px solid #DDDDDD; border-radius:4px; }
+/* .table-col {  border:1px solid #DDDDDD; border-radius:4px; } */
 .table-col tbody tr th,
 .table-col tbody tr td { padding:10px; font-size:1rem; line-height:1.188rem; }
-.table-col.style3 tbody tr th { font-weight:500; color:#FFFFFF; background:#00345F; }
+.table-col.style3 tbody tr th { font-weight:500; color:#00345F; background:#EEF8FF; }
 .table-col thead tr td { font-weight:400; color:#000000; }
 .table-col tbody tr:last-child th,
-.table-col tbody tr:last-child td { border-bottom:none; }
+/* .table-col tbody tr:last-child td { border-bottom:none; } */
 
 .txt-r { text-align:right !important; }
 .txt-l { text-align:left  !important; }
