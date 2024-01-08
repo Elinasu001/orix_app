@@ -1,0 +1,181 @@
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ORIX Capital</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords" />
+    <meta name="description" content="ORIX Capital description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../resources/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../../resources/favicon.png" />
+    
+    <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../../resources/css/ui/jquery-ui.css">
+    <link rel="stylesheet" href="../../resources/css/ui/datepicker.css">
+    
+    <script type="text/javascript" src="../../resources/js/ui/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui/jquery-1.12.4.min.js"></script>
+    <script  type="text/javascript" src="../../resources/js/ui/jquery-ui-1.12.1.js"></script>
+
+    <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
+</head>
+
+<body>
+    <!--//wrap-->
+    <div class="wrap">
+        <!-- //headerWrap -->
+        <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_header.html");
+			});
+			</script>
+        </div>
+        <!-- headerWrap// -->
+        <!-- //menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("../include/inc_all_menu.html");
+            });
+            </script>
+        </div>
+	    <!-- menuWrap// -->
+        <form>
+            <!--//contents-wrap-->
+            <div class="contents-wrap scndCarLayout">
+                <section class="tit-main-area">
+                    <p class="tit">송금요청</p>
+                    <p class="text">송금요청을 위해 필요 정보를 확인하세요.</p>
+                </section>
+                <section class="form-wrap">
+                    
+                    <div class="form-group">
+                        <div class="amount">
+                            <input type="number" class="form-control amount-num" id="amount" placeholder="김영수 810702-1 / 개인" disabled>
+                            <span class="result-txt style2">대출</span>
+                        </div>
+                    </div>
+                
+                    <div class="accordion-cont-wrap">
+                        <div class="accordion-item">
+                            <div class="accordion">
+                                <button type="button" class="btn-accordion">· 기본정보</button>
+                                <div class="accordion-cont form-wrap">
+
+                                    <div class="txt-detail-area result"><!--[D]: 조회 됐을 경우-->
+                                        <div class="txt-detail-header no-line">
+                                            <p class="tit">현대 제네시스 GV80 가솔린 3.5 터보<br/>
+                                                2022년식 / 456바 7891</p>
+                                        </div>
+                                        <ul class="txt-list">
+                                            <li>
+                                                <span class="tit">해피콜 완료일자</span>
+                                                <span class="txt">YYYY.MM.DD</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">실행일자</span>
+                                                <span class="txt">YYYY.MM.DD</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">신청금액</span>
+                                                <span class="txt">5,000 만원</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">대출기간/금리</span>
+                                                <span class="txt">36개월 / 7.5%</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">상환방식</span>
+                                                <span class="txt">원리금균등분할</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">중도상환수수료율</span>
+                                                <span class="txt">1.0%</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">근저당</span>
+                                                <span class="txt">20%</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">인지세</span>
+                                                <span class="txt">무</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">월납입액</span>
+                                                <span class="txt">1,323,265 원</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion">
+                                <button type="button" class="btn-accordion">· 송금정보</button>
+                                <div class="accordion-cont form-wrap">
+
+                                    <div class="txt-detail-area result"><!--[D]: 조회 됐을 경우-->
+                                        <ul class="txt-list">
+                                            <li>
+                                                <span class="tit">송금금액</span>
+                                                <span class="txt">20,000,000</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">송금일자</span>
+                                                <span class="txt">YYYY.MM.DD</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">은행명</span>
+                                                <span class="txt">하나은행</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">계좌번호</span>
+                                                <span class="txt">123-456789-0123-45</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">예금주</span>
+                                                <span class="txt">김영수</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                    <div class="btn-cont-wrap">
+                        <a href="#none" class="btn btn-primary">송금요청</a>
+                    </div>
+                    
+                </section>
+              
+            </div>
+            <!--contents-wrap//-->
+        </form>
+    </div>
+    <!--wrap//-->
+</body>
+
+
+</html>
