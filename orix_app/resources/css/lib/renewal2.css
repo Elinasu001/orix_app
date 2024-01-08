@@ -959,8 +959,8 @@ iframe { border:none; }
 
 
 /* 신용조회 */
-.credit-check-wrap .txt-list-wrap .txt-detail-area { display:none; }
-.credit-check-wrap .txt-list-wrap .txt-detail-area.on { display:block; }
+.check-wrap .txt-list-wrap .txt-detail-area { display:none; }
+.check-wrap .txt-list-wrap .txt-detail-area.on { display:block; }
 
-.credit-check-wrap.type-spread { background:#FFFFFF; padding:0 20px; }
-.credit-check-wrap + .credit-result-wrap { margin-top:20px; }
+.check-wrap.type-spread { background:#FFFFFF; padding:0 20px; }
+.check-wrap + .result-wrap { margin-top:20px; }

@@ -999,11 +999,13 @@ iframe { border:none; }
 
 
 /* 신용조회 */
-.credit-check-wrap .txt-list-wrap .txt-detail-area { display:none; }
-.credit-check-wrap .txt-list-wrap .txt-detail-area.on { display:block; }
+.check-wrap .txt-list-wrap .txt-detail-area { display:none; }
+.check-wrap .txt-list-wrap .txt-detail-area.on { display:block; }
 
-.credit-check-wrap.type-spread { background:#FFFFFF; padding:0 20px; }
-.credit-check-wrap + .result-wrap { margin-top:20px; }
+.check-wrap { padding-top:28px !important; padding-bottom:28px !important; }
+.check-wrap.type-spread { background:#FFFFFF; padding:0 20px; }
+.check-wrap + .result-wrap { margin-top:20px; }
+.check-wrap .form-wrap  { margin-top:0; }
 
 /* 긴급공지 */
 .urgency-wrap { position:relative; padding:10px 20px 10px 46px; background:#EEF8FF; }
@@ -1015,6 +1017,5 @@ iframe { border:none; }
 .result-tit-area .tit { font-size:1rem; line-height:1.188rem; color:#999999; }
 
 /* 인풋박스 */
-.input-cont-wrap { margin-top:20px; }
-.input-box { margin-bottom:20px; padding:10px 20px 30px; border:1px solid #E5E5E5; border-radius: 10px; }
+.input-box-wrap .input-box { margin-bottom:20px; padding:10px 20px 30px; border:1px solid #E5E5E5; border-radius: 10px; }
 .input-box .btn-cont-wrap { margin-top:30px; }
