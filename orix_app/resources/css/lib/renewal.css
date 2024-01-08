@@ -1042,3 +1042,15 @@ iframe { border:none; }
 /* 인풋박스 */
 .input-box-wrap .input-box { padding:10px 20px 30px; border:1px solid #E5E5E5; border-radius: 10px; }
 .input-box .btn-cont-wrap { margin-top:30px; }
+
+
+/* loading */
+.loading-wrap {position:fixed; display:flex; justify-content:center; right:0; top:0; bottom:0; z-index:100001; width:100%; height:100vh; min-height:100%; background:rgba(0,0,0,0.2); }
+.loader { position:relative; }
+.loader:before { position:absolute; content:""; transform:translate(-50%,-50%); top:50%; left:50%; width: 15px; aspect-ratio: 1;  border-radius: 50%;  animation: l5 1s infinite linear alternate; }
+@keyframes l5 {
+0%  {box-shadow: 20px 0 #ffffff, -20px 0 #00345F;background: #00345F }
+50% {box-shadow: 20px 0 #00345F, -20px 0 #ffffff;background: #00345F}
+/* 66% {box-shadow: 20px 0 #0002,-20px 0 #00345F; background: #0002} */
+100%{box-shadow: 20px 0 #00345F,-20px 0 #ffffff; background: #ffffff }
+}
