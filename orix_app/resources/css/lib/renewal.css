@@ -176,6 +176,8 @@ input:disabled::-moz-placeholder {  /* Mozilla Firefox 19+ */ color:#8A8A8A; }
 
 input.form-control:disabled { background-color:#EFEFEF !important; pointer-events:none; border:1px solid #D1D1D1; }
 
+input.form-control:disabled + .jumintext { color:#DDDDDD; }
+
 /* focus */
 /** 인풋 자동완성 reset **/
 input:-webkit-autofill,
@@ -1121,3 +1123,10 @@ header .right-menu a.btn-alarm.alarm::after {  content:""; position:absolute; tr
 .txt-detail-header + .txt-list.li-box { margin-top:0; }
 
 .rc-gray { margin-top:30px; height:20px; background:#F8F8F8; }
+
+/* 약관팝업 */
+.terms-title { margin-top:40px; font-size:1.125rem; line-height:1.25rem; font-weight:700; color:#00345F; }
+.terms-text-wrap { margin-top:20px; }
+.terms-text-wrap .terms-text-style1 { margin-bottom:20px; }
+.terms-text-wrap .terms-text-style1 dt { padding-bottom:12px; font-size:1rem; line-height:1.188rem; font-weight:500; }
+.terms-text-wrap .terms-text-style2 .terms-tit { padding-bottom:12px; font-size:0.875rem; line-height:1rem; font-weight:700; }
