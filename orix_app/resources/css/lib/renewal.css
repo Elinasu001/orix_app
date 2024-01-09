@@ -1060,3 +1060,12 @@ iframe { border:none; }
 /* 66% {box-shadow: 20px 0 #ffffff,-20px 0 #00345F; background: #00345F} */
 100%{box-shadow: 20px 0 #00345F,-20px 0 #ffffff; background: #ffffff }
 }
+
+/* 2024-01-09 이솔 */
+/* txt-list.li-box */
+.txt-list.li-box { margin-top:30px; padding:13px 18px; background:#EFF3F6; }
+.txt-list.li-box li,
+.txt-list.li-box li:first-child { margin:0; }
+.txt-list.li-box li .tit { position:relative; padding-right:21px; color:#00345F; }
+.txt-list.li-box li .txt { padding-left:0; color:#00345F; }
+.txt-list.li-box li .tit::after { content:""; position:absolute; top:50%; right:0; transform:translateY(-50%); display:block; width:1px; height:20px; background:#00345F; }
