@@ -690,13 +690,14 @@ iframe { border:none; }
 
 /* 화살표 */
 .arrow-button-list li { position:relative;}
-.arrow-button-list li a { display:block; padding:0 20px; width:100%; height:60px; border-radius:15px; line-height:60px; font-weight:300; color:#454545; background:#FFFFFF; box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; }
+.arrow-button-list li a { display:block; padding:0 20px; width:100%; height:60px; border-radius:15px; line-height:60px; font-weight:300; color:#101010; background:#FFFFFF; box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; }
 .arrow-button-list li a:after{ content: ''; display: block; position: absolute; transform: translateY(-50%); width: 16px; height: 16px;  border-radius: 10px; right: 18px; top: 50%; background: url("../../images/common/ic_arrow_right.png")no-repeat 50%/16px auto; }
 .arrow-button-list li + li { margin-top:10px; }
 
 .area-title-wrap .ic-arrow-down{ width: 16px; height: 16px; border: none; background: url("../../images/common/ic_arrow_right.png")no-repeat 50%/21px auto; }
 
 /* 승인확인목록 */
+
 .quick-service-area { margin-top:25px; }
 .quick-service-area .area-title-wrap { display:flex; align-items:center; justify-content:space-between; }
 .quick-service-area > .visaul-info-box { padding:20px; border-radius:10px; background:#F0E9FA; }
@@ -725,14 +726,20 @@ iframe { border:none; }
 .list-icon li::before{ content:''; position:absolute; top:12px; left:15px; width:36px;; height:36px; border-radius:12px; }
 .list-icon li a { padding-left:63px; font-size:0.8rem; font-weight:700; }
 
-.list-icon .audit::before { background:url('../../images/common/list_audit.png') no-repeat #DFF2FF 50%/21px auto; }
-.list-icon .documents::before { background:url('../../images/common/list_documents.png')  no-repeat #DFF2FF 50%/21px auto; }
-.list-icon .remittance::before { background:url('../../images/common/list_remittance.png') no-repeat #DFF2FF 50%/21px auto; }
-.list-icon .market_price::before { background:url('../../images/common/list_market_price.png') no-repeat #DFF2FF 50%/21px auto; }
+.list-icon .audit::before { background:url('../../images/common/list_audit.png') no-repeat #DFF2FF 50%/22px auto; }
+.list-icon .documents::before { background:url('../../images/common/list_documents.png')  no-repeat #DFF2FF 50%/22px auto; }
+.list-icon .examination::before { background:url('../../images/common/list_examination.png') no-repeat #DFF2FF 50%/22px auto; }
+.list-icon .contract::before { background:url('../../images/common/list_contract.png') no-repeat #DFF2FF 50%/21px auto; }
+.list-icon .remittance::before { background:url('../../images/common/list_remittance.png') no-repeat #DFFFE0 50%/22px auto; }
+.list-icon .progress::before { background:url('../../images/common/list_progress.png') no-repeat #DFF2FF 50%/22px auto; }
+.list-icon .document-sub::before { background:url('../../images/common/list_document-sub.png') no-repeat #DFF2FF 50%/22px auto; }
+.list-icon .password-change::before { background:url('../../images/common/list_password-change.png') no-repeat #FEF5CB 50%/29px auto; }
+
+/* .list-icon .market_price::before { background:url('../../images/common/list_market_price.png') no-repeat #DFF2FF 50%/21px auto; }
 .list-icon .performance::before { background:url('../../images/common/list_performance.png') no-repeat #DFF2FF 50%/21px auto; }
 .list-icon .counseling::before { background:url('../../images/common/list_counseling.png') no-repeat #DFF2FF 50%/21px auto; }
 .list-icon .Pre_guidance::before { background:url('../../images/common/list_Pre_guidance.png') no-repeat #DFF2FF 50%/21px auto; }
-.list-icon .approval::before { background:url('../../images/common/list_approval.png') no-repeat #DFF2FF 50%/21px auto; }
+.list-icon .approval::before { background:url('../../images/common/list_approval.png') no-repeat #DFF2FF 50%/21px auto; } */
 
 .list-icon2 .camera::before { background:url('../../images/common/list_camera.png') no-repeat #EFF3F6 50%/21px auto; }
 .list-icon2 .storage::before { background:url('../../images/common/list_storage.png') no-repeat #EFF3F6 50%/21px auto; }
@@ -794,6 +801,10 @@ iframe { border:none; }
 .form-wrap.login .form-group + .form-group { margin-top:10px; }
 .form-wrap.login .form-group + .form-group + .form-group { margin-top:20px; }
 .form-wrap.login + .btn-wrap { margin-top:44px; }
+
+.wrap.login header { position:absolute; background-color:#00345F; }
+.wrap.login header .left-menu a.btn-prev::before { background: url(../../images/header/header_whit_pre.svg) no-repeat 50%/24px auto;  }
+
 
 /* terms */
 .info-wrap iframe { width:100%; height:100%; }
@@ -1036,9 +1047,7 @@ iframe { border:none; }
 .urgency-wrap a { font-size:0.875rem; line-height:1rem; font-weight:400; color:#00345F; }
 .urgency-wrap a::before { content:""; position:absolute; width:16px; height:16px; left:20px;  background: url(../../images/common/ico_urgency.png) no-repeat center 50%/16px auto; }
 
-/* 긴급공지-메인 */
-.urgency-wrap.main { border-radius:12px; margin:17px 20px;padding:16px 20px 16px 46px; }
-.contents-wrap.main .tabs-wrap .tab-item:before  { content:none; }
+
 
 /* 2024-01-08 이솔 */
 .result-tit-area { border:none; text-align:center; }
@@ -1068,3 +1077,22 @@ iframe { border:none; }
 .txt-list.li-box li .tit { position:relative; padding-right:21px; color:#00345F; }
 .txt-list.li-box li .txt { padding-left:0; color:#00345F; }
 .txt-list.li-box li .tit::after { content:""; position:absolute; top:50%; right:0; transform:translateY(-50%); display:block; width:1px; height:20px; background:#00345F; }
+
+
+
+/** main **/
+.main-bg-wrap { padding:20px; height:100%; background:#F7F7F7; }
+.main-bg-wrap .quick-service-area { margin-top:0; }
+
+/* 긴급공지-main */
+.urgency-wrap.main { border-radius:12px; margin:17px 20px;padding:16px 20px 16px 46px; }
+.contents-wrap.main .tabs-wrap .tab-item:before  { content:none; }
+.contents-wrap.main .tabs-wrap .tab-item li a { border-bottom:2px solid #CBCBCB; }
+.contents-wrap.main .tabs-wrap .tab-item li.on::after { border-radius:0; }
+
+.main-cont-wrap { margin:32px 0; }
+.main-cont-wrap .text { font-size:0.875rem; line-height:1rem; color:#404040; font-weight:300; }
+.main-cont-wrap .text .name { font-weight:700; }
+.main-cont-wrap .tit {  margin-top:8px;  font-size:1.125rem; line-height:1.25rem; font-weight:700;color:#00345F;}
+.main-cont-wrap { position:relative; }
+.main-cont-wrap.car { position:absolute; content:""; }

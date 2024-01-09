@@ -38,9 +38,19 @@
 </head>
 
 <body>
-    <div class="wrap">
+    <div class="wrap login">
+         <!-- //headerWrap -->
+		<div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_login_header.html");
+			});
+			</script>
+        </div>
+        <!-- headerWrap// -->
         <form>
-            <div class="contents-wrap login">
+            <div class="contents-wrap">
                 <section class="login-bg  type-spread">
                     <img class="logo" src="../../resources/images/common/login_orix_logo.png" alt="오릭스로고">
                 </section>
