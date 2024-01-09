@@ -376,7 +376,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .tabs-wrap .tab-item li.on,
 .tabs-wrap .swiper-pager li.swiper-pagination-bullet-active { position:relative; }
 .tabs-wrap .tab-item li.on a,
-.tabs-wrap .swiper-pager li.swiper-pagination-bullet-active { font-weight:700; color:#00345F; }
+.tabs-wrap .swiper-pager li.swiper-pagination-bullet-active { font-weight:500; color:#101010; }
 .tabs-wrap .tab-item li.on::after ,
 .tabs-wrap .swiper-pager li.swiper-pagination-bullet-active::after { position:absolute; content:""; width:100%; height:2px; left:0; bottom:0; border:2px solid #00345F; border-radius:30px; }
 
@@ -689,8 +689,8 @@ iframe { border:none; }
 
 
 /* 화살표 */
-.arrow-button-list li { position:relative; box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px -3px; }
-.arrow-button-list li a { display:block; padding:0 20px; width:100%; height:60px; border-radius:15px; line-height:60px; font-weight:300; color:#454545; background:#FFFFFF; }
+.arrow-button-list li { position:relative;}
+.arrow-button-list li a { display:block; padding:0 20px; width:100%; height:60px; border-radius:15px; line-height:60px; font-weight:300; color:#454545; background:#FFFFFF; box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; }
 .arrow-button-list li a:after{ content: ''; display: block; position: absolute; transform: translateY(-50%); width: 16px; height: 16px;  border-radius: 10px; right: 18px; top: 50%; background: url("../../images/common/ic_arrow_right.png")no-repeat 50%/16px auto; }
 .arrow-button-list li + li { margin-top:10px; }
 
@@ -1037,7 +1037,9 @@ iframe { border:none; }
 .urgency-wrap a::before { content:""; position:absolute; width:16px; height:16px; left:20px;  background: url(../../images/common/ico_urgency.png) no-repeat center 50%/16px auto; }
 
 /* 긴급공지-메인 */
-.urgency-wrap.main { border-radius:12px; margin:0 20px; margin-top:5px; padding:16px 20px 16px 46px; }
+.urgency-wrap.main { border-radius:12px; margin:17px 20px;padding:16px 20px 16px 46px; }
+/* .urgency-wrap.main .tabs-wrap .tab-item:before {  } */
+
 
 /* 2024-01-08 이솔 */
 .result-tit-area { border:none; text-align:center; }
