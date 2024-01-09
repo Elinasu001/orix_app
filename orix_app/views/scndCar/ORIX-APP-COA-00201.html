@@ -60,128 +60,7 @@
         <form>
             <!--//contents-wrap-->
             <div class="contents-wrap scndCarLayout">
-                <section class="tit-main-area">
-                    <p class="tit">약정체결</p>
-                    <p class="text">약정체결을 위해 필요 정보를 입력하세요.</p>
-                </section>
-                <section class="form-wrap">
-                    <div class="form-group">
-                        <div class="amount">
-                            <input type="number" class="form-control amount-num" id="amount" placeholder="김영수 810702-1 / 개인" disabled="">
-                            <span class="result-txt style2">대출</span>
-                        </div>
-                    </div>
-                    <div class="accordion-cont-wrap">
-                        <div class="accordion-item">
-                            <div class="accordion">
-                                <button type="button" class="btn-accordion on">· 기본정보</button>
-                                <div class="accordion-cont form-wrap on">
-                                    <div class="txt-detail-area style3">
-                                        <div class="txt-detail-header">
-                                            <p class="tit">현대 제네시스 GV80 가솔린 3.5 터보<br>2022년식 / 456바 7891</p>
-                                        </div>
-                                        <ul class="txt-list">
-                                            <li>
-                                                <span class="tit">승인일자</span>
-                                                <span class="txt">YYYY.MM.DD</span>
-                                            </li>
-                                            <li>
-                                                <span class="tit">신청금액</span>
-                                                <span class="txt">5,000 만원</span>
-                                            </li>
-                                            <li>
-                                                <span class="tit">대출기간/금리</span>
-                                                <span class="txt">36개월/7.5%</span>
-                                            </li>
-                                            <li>
-                                                <span class="tit">상환방식</span>
-                                                <span class="txt">원리금균등분할</span>
-                                            </li>
-                                            <li>
-                                                <span class="tit">중도상환수수료</span>
-                                                <span class="txt">1.0%</span>
-                                            </li>
-                                            <li>
-                                                <span class="tit">근저당</span>
-                                                <span class="txt">20%</span>
-                                            </li>
-                                            <li>
-                                                <span class="tit">인지세</span>
-                                                <span class="txt">무</span>
-                                            </li>
-                                            <li>
-                                                <span class="tit">월 납입액</span>
-                                                <span class="txt">1,232,265 원</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div class="accordion">
-                                <button type="button" class="btn-accordion">· 대출신청 추가정보</button>
-                                <div class="accordion-cont form-wrap">
-                                    <div class="form-group">
-                                        <!-- <div class="form-tit">방문 예정 일자</div> -->
-                                        <label for="">실행일자</label>
-                                        <input id="" type="text" class="form-control datepicker" placeholder=""  inputmode="none" readonly><!--readonly-->
-                                    </div>
-                                    <p class="form-tit">인지세 처리방법</p>
-                                    <div class="form-row radio-bg-button">
-                                        <div class="col">
-                                            <input type="radio" name="q2" id="q21" value="Y" disabled>
-                                            <label for="q21" class="rd">수남청구</label>
-                                        </div>
-                                        <div class="col">
-                                            <input type="radio" name="q2" id="q22" value="N">
-                                            <label for="q22" class="rd">차감송금</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div class="accordion">
-                                <button type="button" class="btn-accordion">· 방문판매원 정보 입력</button>
-                                <div class="accordion-cont form-wrap">
-                                    <div class="form-group">
-                                        <label for="">매매상사</label><!--essential 필수일 경우-->
-                                        <div class="form-row"><!--onclick="openPopup('')"-->
-                                            <div class="col">
-                                                <input id="" type="text" class="form-control" placeholder="매매상사 검색">
-                                            </div>
-                                            <button class="btn btn-txt" type="button">검색</button>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">수수료 지급처1</label><!--essential 필수일 경우-->
-                                        <div class="form-row"><!--onclick="openPopup('')"-->
-                                            <div class="col">
-                                                <input id="" type="text" class="form-control" placeholder="수수료 지급처1 검색">
-                                            </div>
-                                            <button class="btn btn-txt" type="button">검색</button>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">수수료 지급처2</label><!--essential 필수일 경우-->
-                                        <div class="form-row"><!--onclick="openPopup('')"-->
-                                            <div class="col">
-                                                <input id="" type="text" class="form-control" placeholder="수수료 지급처2 검색">
-                                            </div>
-                                            <button class="btn btn-txt" type="button">검색</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="fixed-btn-wrap">
-                    <div class="btn-wrap">
-                        <a href="#none" class="btn btn-primary" onclick="openPopup('lySel2')">약정체결 요청</a>
-                    </div>
-                </section>
+             
             </div>
             <!--contents-wrap//-->
         </form>
@@ -189,7 +68,7 @@
     <!--wrap//-->
 </body>
 <!--//바텀시트 팝업-->
-<div id="lySel2" class="layerpopup layer-up on" tabindex="0" style="display:block;"><!---->
+<div id="lySel2" class="layerpopup layer-up on" tabindex="0" style="display:block;">
     <div class="content-wrap">
         <div class="pop-header">
             <h2 class="pop-title">약정체결 URL 전송</h2>
