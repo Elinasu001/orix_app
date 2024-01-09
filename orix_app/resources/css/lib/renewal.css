@@ -1038,8 +1038,7 @@ iframe { border:none; }
 
 /* 긴급공지-메인 */
 .urgency-wrap.main { border-radius:12px; margin:17px 20px;padding:16px 20px 16px 46px; }
-/* .urgency-wrap.main .tabs-wrap .tab-item:before {  } */
-
+.tabs-wrap.main .tab-item:before  { content:none; }
 
 /* 2024-01-08 이솔 */
 .result-tit-area { border:none; text-align:center; }
