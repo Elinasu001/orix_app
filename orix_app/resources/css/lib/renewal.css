@@ -1112,12 +1112,15 @@ iframe { border:none; }
 
 
 /** 알람 - main **/
+
 .tooltip-wrap { display:flex; gap:10px; }
-.tooltip-wrap .tooltip-txt { position:relative; top:17%; left:0; height:26px; padding:6px 15px; background:#FEF6CB; border-radius:16px;color:#003661; font-size:0.75rem; line-height:0.875rem; font-weight:500; color:#003661; }
-.tooltip-wrap .tooltip-txt:after { position:absolute; content:""; transform: translateY(-50%); top:50%; right:-10px;  width:0; height:0;  border-bottom: 10px solid transparent; border-top: 10px solid transparent;  border-left: 16px solid #FEF6CB; border-right: 1px solid transparent;   }
-header .right-menu a.btn-alarm.alarm::after {  content:""; position:absolute; transform:translateY(-50%); right:3px; top:17px; width:9px; height:9px; border-radius:50%; border:1px solid #FFFFFF; background: #FF0000;  }
-
-
+/* header .right-menu a.btn-alarm.alarm::after {  content:""; position:absolute; transform:translateY(-50%); right:3px; top:17px; width:9px; height:9px; border-radius:50%; border:1px solid #FFFFFF; background: #FF0000;  } */
+.tooltip-wrap.on a.btn-alarm.alarm::after { display:block; content:""; position:absolute; transform:translateY(-50%); right:3px; top:17px; width:9px; height:9px; border-radius:50%; border:1px solid #FFFFFF; background: #FF0000;  }
+.tooltip-wrap.on .tooltip-txt { display:block; position:relative; top:17%; left:0; height:26px; padding:6px 15px; background:#FEF6CB; border-radius:16px;color:#003661; font-size:0.75rem; line-height:0.875rem; font-weight:500; color:#003661; }
+.tooltip-wrap.on .tooltip-txt:after { position:absolute; content:""; transform: translateY(-50%); top:50%; right:-10px;  width:0; height:0;  border-bottom: 10px solid transparent; border-top: 10px solid transparent;  border-left: 16px solid #FEF6CB; border-right: 1px solid transparent;   }
+.tooltip-wrap  a.btn-alarm.alarm::after { display:none; }
+.tooltip-wrap .tooltip-txt { display:none; }
+/* .tooltip-wrap .btn-alarm.alarm { display:none; } */
 /* 2024-01-09 이솔 */
 /* txt-list.li-box */
 .txt-detail-header + .txt-list.li-box { margin-top:0; }
