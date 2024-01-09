@@ -270,6 +270,8 @@ input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"
 a.btn.disabled,
 fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활성화*/
 
+.accordion-cont-wrap + .btn-cont-wrap { margin-top:48px; }
+
 .btn-cont-wrap,
 .btn-wrap { display:flex; z-index:2; position:relative; gap:10px; border-radius:10px; color:var(--text-color04); text-align:center;  }
 .btn-wrap .btn { padding:15px 0; font-size:1rem;  line-height:1.188rem; font-weight:600; }
@@ -602,7 +604,7 @@ iframe { border:none; }
 
 
 .table-type td:last-child { border-right:0; }
-.table-type td { color:#757575; }
+.table-type td { color:#000000 ; }
 /** table 세로형 **/
 /* .table-row th:last-child,
 .table-row td:last-child,
@@ -902,9 +904,9 @@ iframe { border:none; }
 .accordion-item { border:1px solid; border-radius:10px; }
 .accordion-item .accordion { width:100%; }
 .accordion-item .accordion button.btn-accordion { border:none; }
-.accordion-item .accordion .btn-accordion { display:block; position:relative; padding:20px; width:100%; text-align:left; font-size:1.125rem; line-height:1.25rem; font-weight:500; color:#555555;  background-color:transparent; cursor:pointer; }
-.accordion-item .accordion .btn-accordion::after { content:""; display:block; position:absolute; top:50%; right:20px; transform:translateY(-50%) rotate(180deg); width:16px; height:16px; background: url(../../images/common/svg/ico_select.svg)no-repeat 100%/16px auto; transition:all 0.2s ease-in-out;}
-.accordion-item .accordion .btn-accordion.on::after { transform:translateY(-50%) rotate(0deg); }
+.accordion-item .accordion .btn-accordion { display:block; position:relative; padding:20px; width:100%; text-align:left; font-size:1.125rem; line-height:1.25rem; font-weight:500; color:#000000;  background-color:transparent; cursor:pointer; }
+.accordion-item .accordion .btn-accordion::after { content:""; display:block; position:absolute; top:50%; right:20px; transform:translateY(-50%) rotate(0deg); width:16px; height:16px; background: url(../../images/common/svg/ico_select.svg)no-repeat 100%/16px auto; transition:all 0.2s ease-in-out;}
+.accordion-item .accordion .btn-accordion.on::after { transform:translateY(-50%) rotate(180deg); }
 .accordion-item .accordion .accordion-cont { display:none; border-top:1px solid #E5E5E5; margin:0 20px; padding:30px 0; overflow: hidden; transition: max-height 0.3s ease; }
 .accordion-item .accordion .accordion-cont.on { display:block;}
 .accordion-item .accordion .accordion-cont .btn-cont-wrap { margin-top:30px; }

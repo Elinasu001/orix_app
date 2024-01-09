@@ -64,12 +64,135 @@
         <form>
             <div class="contents-wrap">
                 <section class="tit-main-area">
-                    <p class="tit">차량조회 및 대출한도 확인</p>
+                    <p class="tit">신청정보 입력</p>
                     <p class="text">신규대출을 위해 필요 정보를 입력하세요.</p>
+                </section>
+                <section class="form-wrap">
+                    <div class="accordion-cont-wrap">
+                        <div class="accordion-item">
+                            <div class="accordion">
+                                <button type="button" class="btn-accordion">· 대출신청 정보</button>
+                                <div class="accordion-cont form-wrap">
+                                    <div class="form-group">
+                                        <label for="">신청금액</label>
+                                        <div class="amount">
+                                            <input id="" type="amount" class="form-control amount-num" placeholder="금액을 입력해주세요" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                            <span class="amount-txt">원</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="amount">대출기간</label>
+                                        <div class="amount">
+                                            <input type="number" class="form-control amount-num" id="amount" placeholder="기간을 입력해주세요" onclick="openPopup('lySel5')">
+                                            <span class="amount-txt">개월</span>
+                                        </div>
+                                        <div class="info-txt-wrap">
+                                            <p class="info">대출기간 5개월 선택 시 추후 대출연장은 불가능합니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="btn-cont-wrap">
+                                        <a href="#none" class="btn btn-primary">적용</a><!--[D]: 클릭 시 대출결과 확인 영역 show-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion">
+                                <button type="button" class="btn-accordion">· 대출결과 확인</button>
+                                <div class="accordion-cont form-wrap on">
+                                    <div class="form-group">
+                                        <div class="table-type style2 table-col table-scroll">
+                                            <table>
+                                                <caption>대출결과 확인 테이블블</caption>
+                                                <colgroup>
+                                                    <col width="40%">
+                                                    <col width="*">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="col">상환방식</th>
+                                                        <td>원리금균등분할</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">중도상환수수료</th>
+                                                        <td>0%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">설정금액</th>
+                                                        <td>5,000만원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">대출기간</th>
+                                                        <td>5개월</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">초회차 납입액</th>
+                                                        <td>1,000 만원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">매월 납입액</th>
+                                                        <td>1,000 만원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">납부일자</th>
+                                                        <td>매월 15일<br>
+                                                            (초회차 2024.01.15)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">자동이체계좌</th>
+                                                        <td>하나은행<br>
+                                                            123-123456-12345</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">예금주</th>
+                                                        <td>(주)카스토어</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">청구서 수령</th>
+                                                        <td>csr1004@castore.com</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion">
+                                <button type="button" class="btn-accordion">· 대출금 지급계좌 정보</button>
+                                <div class="accordion-cont form-wrap">
+                                    <div class="table-type style2 table-col table-scroll">
+                                        <table>
+                                            <caption>대출금 지급계좌 정보에 대한 테이블</caption>
+                                            <colgroup>
+                                                <col width="40%">
+                                                <col width="*">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="col">은행명</th>
+                                                    <td>우리은행</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">계좌번호</th>
+                                                    <td>1002-225-256986</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">예금주</th>
+                                                    <td>(주)카스토어</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section class="fixed-btn-wrap">
                     <div class="btn-wrap">
-                        <a href="#none" class="btn btn-close">이전</a>
+                        <a href="#none" class="btn btn-close">그만하기</a>
                         <a href="#none" class="btn btn-primary">다음</a>
                     </div>
                 </section>
@@ -77,4 +200,21 @@
         </form>
     </div>
 </body>
+<!--//개월-->
+<div id="lySel5" class="layerpopup layer-up" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">대출기간 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <p class="sub-title">5개월 선택 시 추후 대출연장 불가</p>
+            <ul class="ly-select-list">
+                <li><button>3개월</button></li>
+                <li><button>5개월</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--개월//-->
 </html>

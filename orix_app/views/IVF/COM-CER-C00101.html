@@ -60,28 +60,74 @@
         <form>
             <!--//contents-wrap-->
             <div class="contents-wrap">
+                css와 js 경로 및 headerWrap, menuWrap인크루드 경로가 잘 연결되었는지 확인해주세요.
             </div>
             <!--contents-wrap//-->
         </form>
     </div>
     <!--wrap//-->
-    
-</body>
-<!--//바텀시트 팝업-->
-<div id="lySel2" class="layerpopup layer-up on" tabindex="0" style="position: fixed; top: 420px; left: 0px; display: block;"><!---->
-    <div class="content-wrap">
-        <div class="pop-header">
-            <h2 class="pop-title">대출신청 선택</h2>
-            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        </div>
-        <div class="ly-cont-wrap">
-            <p class="sub-title">신규신청/연장신청 여부를 선택해주세요.</p>
-        </div>
-        <div class="btn-wrap">
-            <a href="#none" class="btn btn-close">연장신청</a>
-            <a href="#none" class="btn btn-primary">신규신청</a>
-        </div>
-    </div>
-</div>
-<!--바텀시트 팝업//-->
+    <div id="lyPullPop02" class="layerpopup laypop-all" style="display: block;">
+		<div class="content-wrap">
+			<div class="pop-header">
+				<h2 class="pop-title">가가가가</h2>
+				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+			</div>
+
+			<div class="ly-con-wrap" id="">
+                <section class="form-wrap">
+					<div class="terms-area">
+						
+						<div class="terms-wrap level1 chk-all">
+							<fieldset>
+								<input type="checkbox" id="allChk01" name="allChk01" value="" class="check all">
+								<label for="allChk01"><span>약관에 모두 동의할게요</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach01" name="check" value="" class="check" terms-pop="lyPullPop02"><!--terms-pop 약관 팝업-->
+								<label for="chkEach01"><span>[필수] 대출신청전자서명 동의</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach02" name="check" value="" class="check" terms-pop="lyPullPop03">
+								<label for="chkEach02"><span>[필수] 자동차저당권 설정 계약서</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach04" name="check" value="" class="check">
+								<label for="chkEach04"><span>[필수] 전자금융거래약관</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach05" name="check" value="" class="check">
+								<label for="chkEach05"><span>[필수] 인터넷 서비스 이용약관</span></label>
+							</fieldset>
+						</div>
+
+						<div class="terms-wrap level2">
+							<fieldset>
+								<input type="checkbox" id="chkEach06" name="check" value="" class="check">
+								<label for="chkEach06"><span>[필수] 통신사 인증 이용약관</span></label>
+							</fieldset>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="fixed-btn-wrap">
+				<div class="btn-wrap">
+					<button type="button" class="btn btn-primary">확인했어요</button>
+				</div>
+			</div>
+		</div>
+	</div>
+,</body>
 </html>
