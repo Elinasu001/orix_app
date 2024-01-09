@@ -517,6 +517,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .type-alert .pop-header { background:#fff; padding:20px 0 30px 0; border-radius:20px 20px 0 0; text-align:left; }
 .layer-up .pop-header .pop-title,
 .type-alert .pop-header .pop-title { display:inline-block; font-size:1.125rem; line-height:1.25rem; font-weight:700; color:#000; line-height:1.39; letter-spacing:-.4px; word-break:keep-all; }
+.pop-header-img img { width:82px; }
 
 /** 공통 - 약관 **/
 
