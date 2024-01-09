@@ -38,11 +38,11 @@
     <!--//wrap-->
     <div class="wrap">
         <!-- //headerWrap -->
-        <div id="headerWrap">
+		<div id="headerWrap">
 			<script>
 			$(document).ready(function(){
 				document.charset="euc-kr";
-				$("#headerWrap").load("./include/inc_header.html");
+				$("#headerWrap").load("./include/inc_main_header.html");
 			});
 			</script>
         </div>
@@ -60,7 +60,31 @@
         <form>
             <!--//contents-wrap-->
             <div class="contents-wrap main">
-                
+				<section class="tabs-wrap">
+					<div class="tabs">
+						<ul class="tab-item">
+							<li data-tab="tab-cont08" class=""><a href="#none" title="선택됨">텍스트1</a></li>
+							<li data-tab="tab-cont09" class="on"><a href="#none">텍스트2</a></li>
+						</ul>
+						<div class="tab-content-area">
+							<div id="tab-cont08" class="tab-content dp-none">
+								<section class="quick-service-area">
+									<div class="arrow-button-wrap">
+										<ul class="arrow-button-list list-icon">
+											<li class="audit"><a href="#none" onclick="expRenewPop();">심사(신용조회 등)결과 확인</a></li>
+											<li class="documents"><a href="#none" onclick="">서류제출 / 약정체결</a></li>
+											<li class="market_price"><a href="#none" onclick="">차량시세 조회</a></li>
+										</ul>
+									</div>
+								</section>
+							</div>
+
+							<div id="tab-cont08" class="tab-content dp-none">
+								내용 2
+							</div>
+						</div>
+					</div>
+				</section>
             </div>
             <!--contents-wrap//-->
         </form>
