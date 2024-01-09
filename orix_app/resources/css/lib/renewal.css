@@ -84,7 +84,7 @@ button { border-radius:0; }
 .line { border: 1px solid #ced4da; border-radius:5px; background-color: #fff; padding:10px; }
 .type-spread { margin:0 -20px; }
 label,
-.form-wrap .form-tit { display: inline-block; font-size:0.875rem; line-height:1rem; color:#757575; }
+.form-wrap .form-tit { display: inline-block; font-size:0.875rem; line-height:1rem; color:#555555; }
 .essential { color:#555555; }
 .essential::after { content:"*"; color:#FF0000; padding-left:3px; }
 textarea { overflow-y:scroll; width:100%; height:200px; padding:10px; resize:none; border-radius:4px; border:1px solid #DDDDDD; background:#FFFFFF; font-size:0.875rem; line-height:1rem; color:#B2B2B2; font-weight:300; white-space:pre-line; }
@@ -167,10 +167,10 @@ input::-moz-placeholder { /* Mozilla Firefox 19+ */ color:#CECECE; }
 input:disabled::placeholder { font-size:0.875rem; font-weight:300; color:#A9A9A9; }
 input:disabled::-webkit-input-placeholder {/* WebKit browsers */  color:#A9A9A9; }
 input:disabled:-ms-input-placeholder {  /* Internet Explorer 10+ */ color:#A9A9A9; }
-input:disabled:-moz-placeholder{ /* Firefox 18- */ color: #A9A9A9; }
-input:disabled::-moz-placeholder {  /* Mozilla Firefox 19+ */ color:#A9A9A9; }
+input:disabled:-moz-placeholder{ /* Firefox 18- */ color: #8A8A8A; }
+input:disabled::-moz-placeholder {  /* Mozilla Firefox 19+ */ color:#8A8A8A; }
 
-input.form-control:disabled { background-color:#F8F8F8 !important; pointer-events:none; }
+input.form-control:disabled { background-color:#EFEFEF !important; pointer-events:none; border:1px solid #D1D1D1; }
 
 /* focus */
 /** 인풋 자동완성 reset **/
@@ -898,7 +898,8 @@ iframe { border:none; }
 
 /* 2023.12.19 이솔 추가 */
 /* 아코디언 */
-.accordion-item { margin-bottom:20px; border:1px solid; border-radius:10px; }
+.accordion-item + .accordion-item {  margin-top:20px; }
+.accordion-item { border:1px solid; border-radius:10px; }
 .accordion-item .accordion { width:100%; }
 .accordion-item .accordion button.btn-accordion { border:none; }
 .accordion-item .accordion .btn-accordion { display:block; position:relative; padding:20px; width:100%; text-align:left; font-size:1.125rem; line-height:1.25rem; font-weight:500; color:#555555;  background-color:transparent; cursor:pointer; }
@@ -1041,6 +1042,7 @@ iframe { border:none; }
 .check-wrap.type-spread { background:#FFFFFF; padding:0 20px;   padding-bottom:28px !important; }
 .check-wrap + .result-wrap { margin-top:20px; }
 .check-wrap .form-wrap  { margin-top:0; }
+.check-wrap + .result-wrap.mt0 { margin-top:0; }
 
 /* 긴급공지 */
 .urgency-wrap { position:relative; padding:10px 20px 10px 46px; background:#EEF8FF; }
@@ -1071,11 +1073,11 @@ iframe { border:none; }
 
 /* 2024-01-09 이솔 */
 /* txt-list.li-box */
-.txt-list.li-box { margin-top:30px; padding:13px 18px; background:#EFF3F6; }
+.txt-list.li-box { margin-top:30px; padding:13px 23px; background:#EFF3F6; }
 .txt-list.li-box li,
 .txt-list.li-box li:first-child { margin:0; }
-.txt-list.li-box li .tit { position:relative; padding-right:21px; color:#00345F; }
-.txt-list.li-box li .txt { padding-left:0; color:#00345F; }
+.txt-list.li-box li .tit { position:relative; padding-right:20px; color:#00345F; }
+.txt-list.li-box li .txt { padding-left:0; text-align:center; }
 .txt-list.li-box li .tit::after { content:""; position:absolute; top:50%; right:0; transform:translateY(-50%); display:block; width:1px; height:20px; background:#00345F; }
 
 
@@ -1096,3 +1098,13 @@ iframe { border:none; }
 .main-cont-wrap .tit {  margin-top:8px;  font-size:1.125rem; line-height:1.25rem; font-weight:700;color:#00345F;}
 .main-cont-wrap { position:relative; }
 .main-cont-wrap.car { position:absolute; content:""; }
+
+
+
+
+
+/* 2024-01-09 이솔 */
+/* txt-list.li-box */
+.txt-detail-header + .txt-list.li-box { margin-top:0; }
+
+.rc-gray { margin-top:30px; height:20px; background:#F8F8F8; }
