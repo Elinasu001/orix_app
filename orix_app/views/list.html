@@ -52,6 +52,39 @@
             <div class="contents-wrap">
                 <section>
                     <div class="txt-list-wrap">
+                        <p class="test-tit">리스트 - 가능 여부 박스 있을 경우</p>
+                        <div class="txt-detail-area result">
+                            <div class="txt-detail-header">
+                                <p><span class="tit">123가 4567</span></p>
+                                <span class="flag style2">신규</span>
+                            </div>
+                            <div class="txt-detail-header no-line">
+                                <p>현대 제네시스 GV80 가솔린 3.5 터보<br>
+                                    2022년형</p>
+                            </div>
+                            <ul class="txt-list li-box">
+                                <li>
+                                    <span class="tit">당월만기<span class="yes">Y</span><span class="yes">(연장가능)</span></span>
+                                    <span class="txt">연체여부<span class="no">N</span>
+                                </span></li>
+                            </ul>
+                            <ul class="txt-list">
+                                <li>
+                                    <span class="tit">대출금액</span>
+                                    <span class="txt">3,000만원</span>
+                                </li>
+                                <li>
+                                    <span class="tit">적용금리</span>
+                                    <span class="txt">6.0%</span>
+                                </li>
+                                <li>
+                                    <span class="tit">납부회차</span>
+                                    <span class="txt">2회차 / 3개월</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p class="test-tit">리스트 - 이름/flag style2</p>
                         <div class="txt-detail-area">
                             <div class="txt-detail-header">
                                 <p><span class="tit">김현대</span><span class="small-tit"> 고객님</span></p>
@@ -76,6 +109,7 @@
                             </div>
                         </div>
 
+                        <p class="test-tit">리스트 - 이름/번호/flag style1</p>
                         <div class="txt-detail-area">
                             <div class="txt-detail-header">
                                 <p><span class="tit">장기아(120-**-*1234)</span></p>
@@ -100,7 +134,7 @@
                             </ul>
                         </div>
 
-
+                        <p class="test-tit">리스트 - 이름/text/하단text/yes/no</p>
                         <div class="txt-detail-area">
                             <div class="txt-detail-header">
                                 <p><span class="tit">김현대</span><span class="small-tit"> 고객님</span></p>
@@ -136,6 +170,7 @@
                             </div>
                         </div>
 
+                        <p class="test-tit">리스트 - flag style3</p>
                         <div class="txt-detail-area">
                             <div class="txt-detail-header">
                                 <p><span class="tit">김현대</span><span class="small-tit"> 고객님</span></p>
@@ -160,6 +195,7 @@
                             </div>
                         </div>
 
+                        <p class="test-tit">리스트 - flag style4</p>
                         <div class="txt-detail-area">
                             <div class="txt-detail-header">
                                 <p><span class="tit">김현대</span><span class="small-tit"> 고객님</span></p>
@@ -184,6 +220,7 @@
                             </div>
                         </div>
 
+                        <p class="test-tit">리스트 - border</p>
                         <div class="txt-detail-area style2 result">
                             <div class="txt-detail-header">
                                 <p>가가가가가가 고객님</p>
@@ -203,13 +240,14 @@
                                 </li>
                             </ul>
                         </div>
-
-                        
                     </div>
+
+                    <p class="test-tit">리스트 - 아코디언</p>
                     <div class="accordion-item">
                         <div class="accordion">
                             <button type="button" class="btn-accordion">· 차량결과</button>
                             <div class="accordion-cont form-wrap on">
+
                                 <div class="txt-detail-area"><!--[D]: 조회 안됐을 경우-->
                                     <div class="txt-detail-header no-line">
                                         <p class="tit">차량조회를 진행해 주세요</p>
@@ -236,9 +274,11 @@
                                         </li>
                                     </ul>
                                 </div>
+
                                 <div class="btn-cont-wrap">
                                     <a href="#none" class="btn disabled">사고이력 보기</a>
                                 </div>
+
                                 <div class="btn-cont-wrap">
                                     <a href="#none" class="btn view">사고이력 보기</a><!--[D]:활성화 됐을 경우-->
                                 </div>
@@ -257,4 +297,10 @@
         </form>
     </div>
 </body>
+<style>
+    .test-tit.red { background:#dddddd; border-radius:10px; color:#555555; padding:20px; }
+    .test-tit.red:before { content:none; }
+    .test-tit { position:relative; margin-top:40px; margin-bottom:20px; padding-left:20px; font-size:0.89rem; }
+    .test-tit:before { content:""; position:absolute; top:50%; left:0; transform:translateY(-50%); width:10px; height:10px; border-radius:50%;  background-color: #267DC5;  }
+</style>
 </html>
