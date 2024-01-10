@@ -1171,7 +1171,7 @@ iframe { border:none; }
 .list-item-box .notice-list li { position:relative; padding-left:10px; font-weight:400; }
 .list-bull li:before,
 .list-bull dd:before,
-.list-item-box .notice-list li:before { content:""; position:absolute; left:0px; top:9px; width:3px; height:3px; border-radius:50%; background:#999999; }
+.list-item-box .notice-list li:before { content:""; position:absolute; left:0px; top:6px; width:3px; height:3px; border-radius:50%; background:#000000; }
 .list-bull li + li,
 .list-bull dd + dd,
 .list-item-box .notice-list li + li { margin-top:5px; }
