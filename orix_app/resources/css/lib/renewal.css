@@ -61,9 +61,10 @@ header .left-menu,
 header .right-menu { position:absolute;  top:0; bottom:0; height:45px; z-index:2; padding:0; font-size:0; }
 header .left-menu  { left:10px; }
 header .right-menu { right:10px;  display:flex; gap:6px; }
-header .left-menu a:before,
-header .right-menu a:before { content:""; display:block; height:44px; width:24px; }
-header .left-menu a.btn-main-logo:before { width:84px; background: url(../../images/header/main_logo.png)no-repeat 50%/64px auto;}
+header .left-menu a.btn-prev:before,
+header .right-menu a.btn-menu:before,
+header .right-menu a.btn-alarm:before { content:""; display:block; height:44px; width:24px; }
+header .left-menu a.btn-main-logo:before { content:""; display:block; width:84px; height:44px; background: url(../../images/header/main_logo.png)no-repeat 50%/64px auto;}
 header .left-menu a.btn-prev::before {  background:url(../../images/header/heder_pre.svg) no-repeat 50%/24px auto; }
 header .right-menu a.btn-alarm::before  { background: url(../../images/header/header_alarm.png) no-repeat 50%/24px auto; }
 header .right-menu a.btn-menu::before { background:url(../../images/header/header_menu.svg) no-repeat 50%/24px auto; }
@@ -1108,7 +1109,8 @@ iframe { border:none; }
 /* 알람 - main */
 .tooltip-wrap { display:flex; gap:10px; }
 .tooltip-wrap.on a.btn-alarm.alarm::after { display:block; content:""; position:absolute; transform:translateY(-50%); right:3px; top:17px; width:9px; height:9px; border-radius:50%; border:1px solid #FFFFFF; background: #FF0000;  }
-.tooltip-wrap.on .tooltip-txt { display:block; position:relative; top:17%; left:0; height:26px; padding:5px 8px; background:#FEF6CB; border-radius:16px;color:#003661; font-size:0.75rem; line-height:0.875rem; font-weight:500; color:#003661; }
+.tooltip-wrap.on .tooltip-txt { display:block; position:relative; top:17%; left:0; height:26px; padding:5px 8px; background:#FEF6CB; border-radius:16px;color:#003661; }
+.tooltip-wrap.on .tooltip-txt a {  font-size:0.75rem; line-height:0.875rem; font-weight:500; color:#003661; }
 .tooltip-wrap.on .tooltip-txt:after { position:absolute; content:""; transform: translateY(-50%); top:50%; right:-10px;  width:0; height:0;  border-bottom: 7px solid transparent; border-top: 7px solid transparent;  border-left: 16px solid #FEF6CB; border-right: 1px solid transparent;   }
 .tooltip-wrap  a.btn-alarm.alarm::after { display:none; }
 .tooltip-wrap .tooltip-txt { display:none; }
