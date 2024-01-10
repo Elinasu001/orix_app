@@ -54,24 +54,6 @@
 *::before,
 *::after { box-sizing: border-box; outline:none; }
 
-
-
-header { position:fixed; top:0; left:0; z-index:10; width:100%; min-height:44px; background-color: #FFFFFF; }
-header .left-menu,
-header .right-menu { position:absolute;  top:0; bottom:0; height:45px; z-index:2; padding:0; font-size:0; }
-header .left-menu  { left:10px; }
-header .right-menu { right:10px;  display:flex; gap:6px; }
-header .left-menu a.btn-prev:before,
-header .right-menu a.btn-menu:before,
-header .right-menu a.btn-alarm:before { content:""; display:block; height:44px; width:24px; }
-header .left-menu a.btn-main-logo:before { content:""; display:block; width:84px; height:44px; background: url(../../images/header/main_logo.png)no-repeat 50%/64px auto;}
-header .left-menu a.btn-prev::before {  background:url(../../images/header/heder_pre.svg) no-repeat 50%/24px auto; }
-header .right-menu a.btn-alarm::before  { background: url(../../images/header/header_alarm.png) no-repeat 50%/24px auto; }
-header .right-menu a.btn-menu::before { background:url(../../images/header/header_menu.svg) no-repeat 50%/24px auto; }
-header h1.center { overflow:hidden; margin:0; padding:0; font-size:1rem; font-weight:500; line-height:44px; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
-header h1.logo:before { content:""; display:block; width:84px; height:40px; background: url(../../images/header/header_logo.png) no-repeat 50%/64px auto; }
-header .left-menu.logo a:before { width:123px; background:url(../../images/header/header_logo2.png)no-repeat 50%/92px auto; }
-
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display: block; }
 [tabindex="-1"]:focus { outline: 0 !important; }
 ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; }
@@ -97,11 +79,6 @@ textarea::placeholder { color:#CECECE; }
 textarea:focus { color:#000000; font-size:0.875rem; font-weight:300; border-color:#003763; outline:none; }
 textarea:valid { color: #000000 !important; }
 
-.form-wrap .form-tit { margin:10px 0; }
-.form-row { display:-ms-flexbox; display:flex; -ms-flex-wrap:nowrap; flex-wrap:nowrap; justify-content:space-between;  /*margin-right:-5px; margin-left:-5px;*/ width:100%; }
-.form-row > .col,
-.form-row > [class*="col-"] { /*padding-right:5px; padding-left:5px;*/ }
-.form-row + .form-row { margin-top:20px; }
 
 .flag { padding:3px 14px; border-radius:4px; color:#000000; font-size:0.75rem; line-height:0.875rem; font-weight:400; }
 .flag.style1 { background:#EEF8FF; }
@@ -117,6 +94,29 @@ textarea:valid { color: #000000 !important; }
 /*모바일 사파리(iOS9)*/
 /* input {    -webkit-appearance: searchfield;}
  *::-webkit-search-cancel-button { -webkit-appearance: searchfield-cancel-button;} */
+
+
+/** header **/
+header .left-menu,
+header .right-menu { position:absolute;  top:0; bottom:0; height:45px; z-index:2; padding:0; font-size:0; }
+header .left-menu  { left:10px; }
+header .right-menu { right:10px;  display:flex; gap:6px; }
+header .left-menu a.btn-prev:before,
+header .right-menu a.btn-menu:before,
+header .right-menu a.btn-alarm:before { content:""; display:block; height:44px; width:24px; }
+header .left-menu a.btn-main-logo:before { content:""; display:block; width:84px; height:44px; background: url(../../images/header/main_logo.png)no-repeat 50%/64px auto;}
+header .left-menu a.btn-prev::before {  background:url(../../images/header/heder_pre.svg) no-repeat 50%/24px auto; }
+header .right-menu a.btn-alarm::before  { background: url(../../images/header/header_alarm.png) no-repeat 50%/24px auto; }
+header .right-menu a.btn-menu::before { background:url(../../images/header/header_menu.svg) no-repeat 50%/24px auto; }
+header h1.center { overflow:hidden; margin:0; padding:0; font-size:1rem; font-weight:500; line-height:44px; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
+header h1.logo:before { content:""; display:block; width:84px; height:40px; background: url(../../images/header/header_logo.png) no-repeat 50%/64px auto; }
+header .left-menu.logo a:before { width:123px; background:url(../../images/header/header_logo2.png)no-repeat 50%/92px auto; }
+
+.form-wrap .form-tit { margin:10px 0; }
+.form-row { display:-ms-flexbox; display:flex; -ms-flex-wrap:nowrap; flex-wrap:nowrap; justify-content:space-between;  /*margin-right:-5px; margin-left:-5px;*/ width:100%; }
+.form-row > .col,
+.form-row > [class*="col-"] { /*padding-right:5px; padding-left:5px;*/ }
+.form-row + .form-row { margin-top:20px; }
 
 /** 인풋 **/
 button,
