@@ -1,0 +1,162 @@
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ORIX Capital</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords" />
+    <meta name="description" content="ORIX Capital description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../resources/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../../resources/favicon.png" />
+    
+    <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../../resources/css/ui/jquery-ui.css">
+    <link rel="stylesheet" href="../../resources/css/ui/datepicker.css">
+    
+    <script type="text/javascript" src="../../resources/js/ui/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui/jquery-1.12.4.min.js"></script>
+    <script  type="text/javascript" src="../../resources/js/ui/jquery-ui-1.12.1.js"></script>
+
+    <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
+</head>
+
+<body>
+    <!--//wrap-->
+    <div class="wrap">
+        <!-- //headerWrap -->
+        <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_header.html");
+			});
+			</script>
+        </div>
+        <!-- headerWrap// -->
+        <!-- //menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("../include/inc_all_menu.html");
+            });
+            </script>
+        </div>
+	    <!-- menuWrap// -->
+        <form>
+            <!--//contents-wrap-->
+            <div class="contents-wrap">
+                <section class="tit-main-area">
+                    <p class="text2">연장 신청이<br><span class="blue">가능</span>한 대출 건 입니다.</p>
+                    <!--[D]: 불가능일 경우-->
+                    <p class="text2">연장 신청이<br><span class="red">불가능</span>한 대출 건 입니다.</p>
+                    <!--불가능일 경우 :[D]-->
+                </section>
+                <section class="result-wrap">
+                    <div class="txt-list-wrap">
+                        <div class="txt-detail-area result">
+                            <div class="txt-detail-header">
+                                <p>차량정보 및 대출한도</p>
+                            </div>
+                            <div class="txt-detail-header no-line">
+                                <p>현대 제네시스 GV80 가솔린 3.5 터보<br>
+                                    2022년식 / 456바 7891</p>
+                            </div>
+                            <ul class="txt-list">
+                                <li>
+                                    <span class="tit">주행거리</span>
+                                    <span class="txt">17,00 km</span>
+                                </li>
+                                <li>
+                                    <span class="tit">배기량</span>
+                                    <span class="txt">3,500 cc</span>
+                                </li>
+                                <li>
+                                    <span class="tit">적격여부</span>
+                                    <span class="txt">취급가능</span>
+                                </li>
+                                <li>
+                                    <span class="tit">대출한도</span>
+                                    <span class="txt">5,000 만원</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="txt-detail-area result">
+                            <div class="txt-detail-header">
+                                <p>기 대출정보</p>
+                            </div>
+                            <ul class="txt-list">
+                                <li>
+                                    <span class="tit">기 대출금액</span>
+                                    <span class="txt">5,000 만원</span>
+                                </li>
+                                <li>
+                                    <span class="tit">최대 취급가능 대출기간</span>
+                                    <span class="txt">6.0%</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--[D]: 불가능일 경우-->
+                        <div class="txt-detail-area result">
+                            <div class="txt-detail-header">
+                                <p>차량정보 및 대출한도</p>
+                            </div>
+                            <div class="txt-detail-header no-line">
+                                <p>현대 제네시스 GV80 가솔린 3.5 터보<br>
+                                    2022년식 / 456바 7891</p>
+                            </div>
+                            <ul class="txt-list">
+                                <li>
+                                    <span class="tit">주행거리</span>
+                                    <span class="txt">17,00 km</span>
+                                </li>
+                                <li>
+                                    <span class="tit">배기량</span>
+                                    <span class="txt">3,500 cc</span>
+                                </li>
+                                <li>
+                                    <span class="tit">적격여부</span>
+                                    <span class="txt no">취급불가 (침수차량)</span>
+                                </li>
+                                <li>
+                                    <span class="tit">대출한도</span>
+                                    <span class="txt">5,000 만원</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--불가능일 경우 :[D]-->
+                    </div>
+                </section>
+                <section class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-close">이전</button>
+                        <button type="button" class="btn btn-primary">다음</button>
+                    </div>
+                    <!--[D]: 불가능일 경우-->
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-close">이전</button>
+                        <button type="button" class="btn btn-primary">메인으로</button>
+                    </div>
+                    <!--불가능일 경우 :[D]-->
+                </section>
+            </div>
+            <!--contents-wrap//-->
+        </form>
+    </div>
+    <!--wrap//-->
+</body>
+</html>

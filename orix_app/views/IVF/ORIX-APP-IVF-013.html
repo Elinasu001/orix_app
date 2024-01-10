@@ -1,0 +1,201 @@
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ORIX Capital</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords" />
+    <meta name="description" content="ORIX Capital description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../resources/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../../resources/favicon.png" />
+    
+    <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../../resources/css/ui/jquery-ui.css">
+    <link rel="stylesheet" href="../../resources/css/ui/datepicker.css">
+    
+    <script type="text/javascript" src="../../resources/js/ui/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui/jquery-1.12.4.min.js"></script>
+    <script  type="text/javascript" src="../../resources/js/ui/jquery-ui-1.12.1.js"></script>
+
+    <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
+</head>
+
+<body>
+    <!--//wrap-->
+    <div class="wrap">
+        <!-- //headerWrap -->
+        <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_header.html");
+			});
+			</script>
+        </div>
+        <!-- headerWrap// -->
+        <!-- //menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("../include/inc_all_menu.html");
+            });
+            </script>
+        </div>
+	    <!-- menuWrap// -->
+        <form>
+            <!--//contents-wrap-->
+            <div class="contents-wrap">
+                <section class="tit-main-area">
+                    <p class="tit">신청정보 입력</p>
+                    <p class="text">대출연장을 위해 필요 정보를 입력하세요.</p>
+                </section>
+                <section class="result-wrap">
+                    <div class="txt-list-wrap">
+                        <div class="txt-detail-area">
+                            <div class="txt-detail-header">
+                                <p><span class="tit">벤틀리 플라잉스퍼 3세대 4.0 2023년형</span></p>
+                            </div>
+                            <ul class="txt-list">
+                                <li>
+                                    <span class="tit">차량번호</span>
+                                    <span class="txt">234나5678</span>
+                                </li>
+                                <li>
+                                    <span class="tit">대출금액</span>
+                                    <span class="txt yes">5,000 만원</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="form-wrap">
+                    <div class="accordion-cont-wrap">
+                        <div class="accordion-item">
+                            <div class="accordion">
+                                <button type="button" class="btn-accordion">· 대출연장 신청 정보</button>
+                                <div class="accordion-cont form-wrap">
+                                    <div class="form-group">
+                                        <label for="">연장신청금액</label>
+                                        <div class="amount">
+                                            <input id="" type="amount" class="form-control amount-num" placeholder="금액을 입력해주세요" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                            <span class="amount-txt">원</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">일시상환필요액</label>
+                                        <div class="amount">
+                                            <input id="" type="amount" class="form-control amount-num" placeholder="10,000,000" inputmode="numeric" disabled=""><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                            <span class="amount-txt">원</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">대출이자</label>
+                                        <div class="amount">
+                                            <input id="" type="amount" class="form-control amount-num" placeholder="700,000" inputmode="numeric" disabled=""><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                            <span class="amount-txt">원</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">총 납입액 (대출이자 포함)</label>
+                                        <div class="amount">
+                                            <input id="" type="amount" class="form-control amount-num" placeholder="10,700,000" inputmode="numeric" disabled=""><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                            <span class="amount-txt">원</span>
+                                        </div>
+                                    </div>
+                                    <div class="btn-cont-wrap">
+                                        <a href="#none" class="btn btn-primary">적용</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!--[D]: 적용 선택할 경우 하단부에 ‘대출연장 결과 정보’ 영역이 Show 처리된다.-->
+                        <div class="accordion-item">
+                            <div class="accordion">
+                                <button type="button" class="btn-accordion">· 대출연장 결과 정보</button>
+                                <div class="accordion-cont form-wrap">
+                                    <div class="table-type style2 table-col table-scroll">
+                                        <table>
+                                            <caption>자동차번호/소유자변경 이력에 대한 테이블</caption>
+                                            <colgroup>
+                                                <col width="40%">
+                                                <col width="*">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="col">상환방식</th>
+                                                    <td>원리금균등분할</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">중도상환수수료</th>
+                                                    <td>0%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">설정금액</th>
+                                                    <td>4,000 만원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">대출기간</th>
+                                                    <td>3개월</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">초회차 납입액</th>
+                                                    <td>1,400 만원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">매월 납입액</th>
+                                                    <td>1,400 만원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">납부일자</th>
+                                                    <td>매월 15일<br>
+                                                        (초회차 2024.01.15)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">자동이체계좌</th>
+                                                    <td>하나은행<br>
+                                                        123-123456-12345</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">예금주</th>
+                                                    <td>(주)카스토어</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">청구서 수령</th>
+                                                    <td>csr1004@castore.com</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-close">그만하기</button>
+                        <button type="button" class="btn btn-primary ">변경하기</button>
+                    </div>
+                </section>
+            </div>
+            <!--contents-wrap//-->
+        </form>
+    </div>
+    <!--wrap//-->
+</body>
+</html>
