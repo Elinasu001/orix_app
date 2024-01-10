@@ -762,6 +762,8 @@ iframe { border:none; }
 .list-icon .progress::before { background:url('../../images/common/list_progress.png') no-repeat #DFF2FF 50%/22px auto; }
 .list-icon .document-sub::before { background:url('../../images/common/list_document-sub.png') no-repeat #DFF2FF 50%/22px auto; }
 .list-icon .password-change::before { background:url('../../images/common/list_password-change.png') no-repeat #FEF5CB 50%/29px auto; }
+.list-icon .banking::before { background:url('../../images/common/list_banking.png') no-repeat #DFFFE0 50%/29px auto; }
+.list-icon .car::before { background:url('../../images/common/list_car.png') no-repeat #DFF2FF 50%/29px auto; }
 
 /* .list-icon .market_price::before { background:url('../../images/common/list_market_price.png') no-repeat #DFF2FF 50%/21px auto; }
 .list-icon .performance::before { background:url('../../images/common/list_performance.png') no-repeat #DFF2FF 50%/21px auto; }
@@ -1100,6 +1102,7 @@ iframe { border:none; }
 .main-cont-wrap::after { position:absolute; content:""; right:0; top:0;}
 .main-cont-wrap.car::after  { width:108px; height:75px; background:url(../../images/common/main_car.png)no-repeat 50%/108px auto; }
 .main-cont-wrap.graph::after{ width:67px; height:81px; background:url(../../images/common/main_graph.png)no-repeat 50%/67px auto;}
+.main-cont-wrap.banking::after{ width:98px; height:93px; background:url(../../images/common/main_banking.png)no-repeat 50%/67px auto;}
 
 /* 알람 - main */
 .tooltip-wrap { display:flex; gap:10px; }
