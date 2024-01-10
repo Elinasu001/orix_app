@@ -1082,7 +1082,7 @@ iframe { border:none; }
 
 /** main **/
 
-.main-bg-wrap { padding:20px 20px 0 20px; height:100%; background:#F7F7F7; }
+.main-bg-wrap { padding:20px 20px 0 20px; height:100%; padding-bottom:120px;  background:#F7F7F7; }
 .main-bg-wrap .quick-service-area { margin-top:0; }
 
 /* 긴급공지 - main */
