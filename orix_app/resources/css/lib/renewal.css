@@ -189,7 +189,7 @@ input.form-control:disabled + .jumintext { color:#DDDDDD; }
 
 /* focus */
 /** 인풋 자동완성 reset **/
-input:focus,
+/* input:focus,
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -198,7 +198,7 @@ input:-webkit-autofill:active { font-size:0.875rem; font-weight:30; color:#00000
 input:autofill,
 input:autofill:hover,
 input:autofill:focus,
-input:autofill:active { -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset; transition: background-color 5000s ease-in-out 0s;  -webkit-text-fill-color: #000000; }
+input:autofill:active { -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset; transition: background-color 5000s ease-in-out 0s;  -webkit-text-fill-color: #000000; } */
 
 .form-control:focus:not(.form-control[readonly]:focus),
 .input:focus { outline:0; background-color:#FFFFFF; border-color:#003763; color:#000000; }
@@ -415,6 +415,8 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .tabs-wrap.round-list .tab-item li:last-child { margin-right:0; }
 
 /* tab-bg - main */
+.tabs-wrap.tab-bg { margin-top:28px; }
+.tabs-wrap.tab-bg .tab-content-area { margin-top:20px; }
 .tabs-wrap.tab-bg .tab-item { display:flex; justify-content:space-between; padding:4px; background:#EFEFEF; border-radius:10px; }
 .tabs-wrap.tab-bg .tab-item li { width:100%; }
 .tabs-wrap.tab-bg  .tab-item li a { padding:11px 0; font-weight:400; color:#8A8A8A;}
