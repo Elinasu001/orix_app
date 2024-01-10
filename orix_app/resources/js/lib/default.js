@@ -367,6 +367,98 @@ function getCenterAlignPos(containerSize, targetSize) {
 // });
 
 
+// fixed button
+    // $(window).load(function(e) {
+    //     var shotCon = false;
+    //     var contentWrapH = $('.contents-wrap').outerHeight() - 25;
+    //     var contentH = $('.contents').outerHeight();
+    //     var windowH = $(window).height();
+    //     if ($('.fixed-btn-wrap').length > 0) {
+    //         // if (contentWrapH <= windowH) {
+    //         //     shotCon = true;
+    //         //     $('.fixed-btn-wrap').addClass('active');
+    //         // }
+    //         if (contentH < windowH) {
+    //             shotCon = true;
+    //             $('.fixed-btn-wrap').addClass('active');
+    //         }
+    //         $(window).scroll(function() {
+    //             if (!shotCon) {
+    //                 if ($(this).scrollTop() > 5) {
+    //                     $('.fixed-btn-wrap').addClass('active');
+    //                 } else {
+    //                     $('.fixed-btn-wrap').removeClass('active');
+    //                 }
+    //             }
+    //         });
+    //     }
+
+    //     if ( window.iphoneX === true ) {
+    //       $('.contents-wrap').css('padding-bottom', 'calc( env(safe-area-inset-bottom) + 100px )');
+    //       if( windowH > contentH  ){
+    //         $('.fixed-btn-wrap').addClass('active');
+    //       }
+    //     }
+
+    // 	/* fixed버튼 유/무에 따른 contentsWrap의 padding-bottom값 제어 - 네이버앱 대응 */
+		// if ($('.fixed-btn-wrap').length !== 0) {
+		// 	function defaultWrapHeight() {
+		// 		const btnWrapHeight = $(".fixed-btn-wrap").height();
+		// 		if ($(".fixed-btn-wrap").hasClass("no-fixed")) {
+		// 		  $(".fixed-btn-wrap").closest('.contents-wrap').css('padding-bottom', 0);
+		// 		} else {
+		// 		  $(".fixed-btn-wrap").closest('.contents-wrap').css('padding-bottom', btnWrapHeight);
+		// 		}
+		// 	  }
+			  
+		// 	  defaultWrapHeight();
+			  
+		// 	  function updateWrapHeight() {
+		// 		$(".layerpopup:visible").each(function () {
+		// 		  const $layerpopup = $(this);
+		// 		  const $fixedBtnWrap = $layerpopup.find('.fixed-btn-wrap');
+		// 		  const $popConWrap = $layerpopup.find('.pop-con-wrap, .layer-up.has-button');
+		// 		  const btnWrapHeight = $fixedBtnWrap.height();
+		// 		  $popConWrap.css('padding-bottom', btnWrapHeight);
+		// 		});
+		// 	  }
+			  
+		// 	  // MutationObserver 생성
+		// 	  const observer = new MutationObserver(function (mutationsList, observer) {
+		// 		for (let mutation of mutationsList) {
+		// 		  if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+		// 			const style = window.getComputedStyle(mutation.target);
+		// 			if (style.display === 'block') {
+		// 			  updateWrapHeight();
+		// 			}
+		// 		  }
+		// 		}
+		// 	  });
+			  
+		// 	  $('.layerpopup').each(function () {
+		// 		observer.observe(this, { attributes: true });
+		// 	  });
+
+		//   	//$('.contents-wrap, .pop-con-wrap').css('padding-bottom', '100px'); // fixed 버튼 case
+		// 	//   if($('.fixed-btn-wrap:has(> a)').length !== 0){
+		// 	//     $('.contents-wrap').css('padding-bottom', '146px'); // fixed버튼이 2row인 case - 바닥화면용
+		// 	//     $('.pop-con-wrap').css('padding-bottom', '186px'); // fixed버튼이 2row인 case - 풀팝업용
+		// 	//   }
+		// 	//   if($('.fixed-btn-wrap.no-fixed').length !== 0){
+		// 	//     $('.contents-wrap, .pop-con-wrap').css('padding-bottom', '0'); // fixed가 아닌 case
+		// 	//   }
+		// 	//   if($('.layerpopup.type-alert .pop-con-wrap').length !== 0){
+		// 	//     $('.layerpopup.type-alert .pop-con-wrap').css('padding-bottom', '10px'); // type-alert 일 경우
+		// 	//   }
+		// } else {
+		//   //$('.contents-wrap').css('padding-bottom', '0'); // fixed-btn-wrap 없는 case
+		//   $('.contents-wrap:has(~ .bottom-menu-area)').css('padding-bottom', '68px'); // bottom-menu-area 있는 case
+		// }
+
+    // });
+
+
+
 
 
 
