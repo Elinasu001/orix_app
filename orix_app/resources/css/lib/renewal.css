@@ -699,6 +699,10 @@ iframe { border:none; }
 .tit-area { display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; }
 .tit-area .tit { font-size:1rem; line-height:1.188rem; color:#00345F; font-weight:600; }
 
+.tit-cont-area { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
+.tit-cont-area .tit { font-size:1rem; line-height:1.188rem; font-weight:400; color:#000000; }
+.tit-cont-area .text { font-size:0.75rem; line-height:0.875rem; font-weight:300; color:#555555; }
+
 /* intro box */
 .intro-box-wrap { margin-top:97px; padding:76px 20px 40px 20px; border-radius:9px; background:#00345F;}
 .intro-box-wrap p {  font-size:35px; line-height: 3.188rem; font-weight:500; color:#FFFFFF; }
@@ -1136,7 +1140,7 @@ iframe { border:none; }
 .main-cont-wrap.banking::after{ width:98px; height:93px; background:url(../../images/common/main_banking.png)no-repeat 50%/67px auto;}
 
 /* 알람 - main */
-.tooltip-wrap { display:flex; gap:10px; }
+.tooltip-wrap { display:flex; gap:5px; }
 .tooltip-wrap.on a.btn-alarm.alarm::after { display:block; content:""; position:absolute; transform:translateY(-50%); right:3px; top:17px; width:9px; height:9px; border-radius:50%; border:1px solid #FFFFFF; background: #FF0000;  }
 .tooltip-wrap.on .tooltip-txt { display:block; position:relative; top:17%; left:0; height:26px; padding:5px 8px; background:#FEF6CB; border-radius:16px;color:#003661; }
 .tooltip-wrap.on .tooltip-txt a {  font-size:0.75rem; line-height:0.875rem; font-weight:500; color:#003661; }
