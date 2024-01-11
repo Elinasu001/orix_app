@@ -25,11 +25,24 @@ $(document).ready(function() {
 
   
   /** table 선택**/
-  $(document).ready(function() {
-    $('.table-type.check tbody tr').click(function() {
-        $(this).toggleClass('checked');
-    });
-});
+  $(".table-type.check tbody tr").click(function () {
+
+    $(".table-type.check tbody tr").not(this).removeClass("checked");
+
+    $(this).toggleClass("checked");
+
+    // $(".table-type.result tbody tr").hide();
+
+    // 만약 클릭된 행이 'checked' 클래스를 가지고 있다면 해당하는 .table-type.result 행을 보여줌
+    if ($(this).hasClass("checked")) {
+        $(".table-type.result").css("display", "block");
+    } else {
+        // 클릭된 행이 'checked' 클래스를 가지고 있지 않다면 .table-type.result 행을 숨김
+        $(".table-type.result").css("display", "none");
+    }
+
+  });
+
   /** 전체동의**/
   $('.check.all').on('click',  function() {
     

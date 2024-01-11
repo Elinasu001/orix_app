@@ -609,8 +609,14 @@ iframe { border:none; }
 
 /** table **/
 /* table-type.checked */
-.table-type.check tbody tr.checked { background-color:#EFF3F6 !important; /*cursor:pointer;*/}
+.table-type.check + .table-type.result { margin-top:30px; }
+.table-type.style3 thead th { background: #00345F; color:#FFFFFF; padding:8px; }
+.table-type.check tbody tr.checked { background-color:#EEF8FF !important;}
+.table-type.check tbody tr { cursor: pointer; }
+.table-type.check tbody tr .num { text-decoration: underline; }
 /* .table-type.check tbody tr { cursor: pointer; } */
+.table-type.result { display:none; }
+
 
 .table-type table { border:solid #EEEEEE; border-width:1px 0; }
 .table-type.table-scroll { overflow-x:scroll; }
@@ -694,12 +700,10 @@ iframe { border:none; }
 
 
 /** text 공통 **/
-.tit-main-area { margin-top:25px; }
+.tit-main-area { margin-top:25px; margin-bottom:40px; }
 .tit-main-area .tit { font-size:1.375rem; line-height:1.5rem; font-weight:700; }
 .tit-main-area .text { font-size:1rem; line-height:1.188rem; font-weight:500; margin-top:5px; }
 .tit-main-area .text2 { font-size:1.375rem; line-height:1.5rem; font-weight:500; margin-top:5px; }
-.tit-main-area + .list-area-wrap,
-.tit-main-area + .form-wrap { margin-top:40px; }
 
 .tit-area { display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; }
 .tit-area .tit { font-size:1rem; line-height:1.188rem; color:#00345F; font-weight:600; }
@@ -1123,8 +1127,9 @@ iframe { border:none; }
   } */
 
 /** main **/
-.contents-wrap.main .tab-item { padding:0 20px; }
-.main-bg-wrap { padding:20px 20px 0 20px; height:100%; /*padding-bottom:120px;*/   }
+.contents-wrap.main  { margin-top:128px; padding:0; }
+.contents-wrap.main .tab-item { padding:34px 20px 0 20px;  }
+.main-bg-wrap { padding:20px; height:100%; /*padding-bottom:120px;*/ }
 .main-bg-wrap .quick-service-area { margin-top:0; }
 
 /* 긴급공지 - main */
@@ -1139,7 +1144,7 @@ iframe { border:none; }
 .main-cont-wrap .text .name { font-weight:700; }
 .main-cont-wrap .tit { margin-top:8px;  font-size:1.125rem; line-height:1.25rem; font-weight:700;color:#00345F;}
 .main-cont-wrap { position:relative; }
-.main-cont-wrap::after { position:absolute; content:""; right:20px; top:25%;}
+.main-cont-wrap::after { position:absolute; content:""; right:10px; top:25%;}
 .main-cont-wrap.car::after  { width:108px; height:75px; background:url(../../images/common/main_car.png)no-repeat 50%/108px auto; }
 .main-cont-wrap.graph::after{ width:67px; height:81px; background:url(../../images/common/main_graph.png)no-repeat 50%/67px auto;}
 .main-cont-wrap.banking::after{ width:98px; height:93px; background:url(../../images/common/main_banking.png)no-repeat 50%/67px auto;}

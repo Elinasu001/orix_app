@@ -61,8 +61,95 @@
             <!--//contents-wrap-->
             <div class="contents-wrap">
                 <div class="form-wrap">
-                    <div class="table-type table-row ta-c table-scroll">
+                    <p class="test-tit">normal table</p>
+                    <div class="table-type ta-c table-scroll">
                         <table class="">
+                            <caption>신용조회 동의 완료 고객 선택 테이블</caption>
+                            <colgroup>
+                                <col width="*%">
+                                <col width="*%">
+                                <col width="33.333%">
+                                <col width="33.333%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="row">고객명</th>
+                                    <th scope="row">연락처</th>
+                                    <th scope="row">동의일자</th>
+                                    <th scope="row">신청상품</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                                <tr>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                                <tr>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="test-tit">normal line table</p>
+                    <div class="table-type ta-c table-col table-scroll">
+                        <table class="">
+                            <caption>신용조회 동의 완료 고객 선택 테이블</caption>
+                            <colgroup>
+                                <col width="*%">
+                                <col width="*%">
+                                <col width="33.333%">
+                                <col width="33.333%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="row">고객명</th>
+                                    <th scope="row">연락처</th>
+                                    <th scope="row">동의일자</th>
+                                    <th scope="row">신청상품</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                                <tr>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                                <tr>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="test-tit">check table</p>
+                    <div class="table-type ta-c table-scroll style3 check">
+                        <table>
                             <caption>신용조회 동의 완료 고객 선택 테이블</caption>
                             <colgroup>
                                 <col width="*%">
@@ -115,6 +202,48 @@
                         </table>
                     </div>
 
+                    <div class="table-type ta-c table-scroll style3 result">
+                        <table>
+                            <caption>신용조회 동의 완료 고객 선택 테이블</caption>
+                            <colgroup>
+                                <col width="*%">
+                                <col width="*%">
+                                <col width="33.333%">
+                                <col width="33.333%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="row">고객명</th>
+                                    <th scope="row">연락처</th>
+                                    <th scope="row">동의일자</th>
+                                    <th scope="row">신청상품</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                                <tr>
+                                    <td>홍길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                                <tr>
+                                    <td>홍asdasd길동</td>
+                                    <td>010-1111-1234</td>
+                                    <td>2023-01-21</td>
+                                    <td>700.대출</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="test-tit">row table</p>
                     <div class="table-type style2 table-col table-scroll">
                         <table>
                             <caption>자동차번호/소유자변경 이력에 대한 테이블</caption>
@@ -144,6 +273,7 @@
                         </table>
                     </div>
 
+                    <p class="test-tit">table</p>
                     <div class="table-type table-col table-scroll ">
                         <table>
                             <caption>내차 피해금액 상세에 대한 테이블</caption>
@@ -192,4 +322,10 @@
     </div>
     <!--wrap//-->
 ,</body>
+<style>
+    .test-tit.red { background:#dddddd; border-radius:10px; color:#555555; padding:20px; }
+    .test-tit.red:before { content:none; }
+    .test-tit { position:relative; margin-top:40px; margin-bottom:20px; padding-left:20px; font-size:0.89rem; }
+    .test-tit:before { content:""; position:absolute; top:50%; left:0; transform:translateY(-50%); width:10px; height:10px; border-radius:50%;  background-color: #267DC5;  }
+</style>
 </html>
