@@ -359,28 +359,3 @@ function getCenterAlignPos(containerSize, targetSize) {
   var pos = (containerSize - targetSize) / 2;
   return pos;
 }
-
-// $(document).ready(function() {
-//   $('.tab-slidemenu.round-bor li').click(function() {
-//     $(this).addClass('on').siblings().removeClass('on');
-//   });
-// });
-
-/** fixed-button input 포커스 될 경우**/
-$( '.form-control').focus(function(){
-    $('.fixed-btn-wrap').hide();
-  });  
-  
-  $( '.form-control').blur(function(){
-    $('.fixed-btn-wrap').show();
-  }); 
-
-
-
-
-
-
-    
-
-
-

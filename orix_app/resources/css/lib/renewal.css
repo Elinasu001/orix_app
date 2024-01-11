@@ -500,14 +500,19 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 
 /** 알럿팝업 **/
-.layerpopup.type-alert{border:none; border-radius:3px; box-shadow:0 4px 8px 0 rgba(0,0,0,0.50); }
+/* .layerpopup.type-alert{border:none; border-radius:3px; box-shadow:0 4px 8px 0 rgba(0,0,0,0.50); }
 .layerpopup.type-alert { width:100%; height:100%; position:fixed; left:0; background:none; }
-.layerpopup.type-alert > div { z-index:999; position:absolute; left:50%; /*bottom:20px;*/ background:#fff; transform:translate(-50%,0); }
+.layerpopup.type-alert > div { z-index:999; position:absolute; left:50%;  background:#fff; transform:translate(-50%,0); }
 
 
 .layerpopup.type-alert .content-wrap .pop-btn-wrap { display:flex }
 
-.layerpopup.type-alert .content-wrap { width:calc(100% - 25px); z-index:999; position:absolute; left:50%; bottom:15px; border-radius:10px; background:#fff; transform:translate(-50%,0); }
+.layerpopup.type-alert .content-wrap { width:calc(100% - 25px); z-index:999; position:absolute; left:50%; bottom:15px; border-radius:10px; background:#fff; transform:translate(-50%,0); } */
+
+.layerpopup.type-alert { display:none; overflow: hidden; width:92.25%; position: fixed; left:15px !important; right:0 !important; top:auto !important; bottom:15px !important; z-index:100; padding-bottom:0px; border-radius:15px; background: #ffffff;; }
+
+
+
 
 /** 하단노출 레이어팝업 - 바텀시트 **/
 .layer-up { display:none; overflow:hidden; position:fixed; left:0 !important; right:0 !important; top:auto !important; bottom:0; /*z-index:105;*/ z-index:100; width:100%; padding-bottom:0px; border-radius:20px 20px 0 0; box-sizing:border-box; background:#fff; }

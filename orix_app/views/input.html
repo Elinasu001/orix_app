@@ -219,7 +219,7 @@
 
                     <div class="form-group" >
                         <label for="" class="essential">고객 선택</label><!--essential 필수일 경우-->
-                        <div class="form-row" onclick="openPopup('lySel3')">
+                        <div class="form-row" onclick="openPopup('lyAlert')">
                             <div class="col">
                                 <input id="" type="text" class="form-control" placeholder="제조사 선택" >
                             </div>
@@ -515,8 +515,32 @@
 <!--개월//-->
 
 
-<script>
+<!--//alert-->
+<div id="lyAlert" class="layerpopup type-alert" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">확인해주세요</h2>
+        </div>
+        <div class="ly-cont-wrap">
+            <p class="sub-title">필수 약관을 동의 해주세요.</p>
+        </div>
+        <div class="btn-wrap">
+            <a href="#none" class="btn btn-primary confirm" >확인</a>
+        </div>
+    </div>
+</div>
+<!--alert//-->
 
+
+<script>
+/** fixed-button input 포커스 될 경우**/
+$('.form-control').focus(function(){
+    $('.fixed-btn-wrap').hide();
+  });
+  
+  $('.form-control').blur(function(){
+    $('.fixed-btn-wrap').show();
+  });
 </script>
 
 <style>
