@@ -366,8 +366,14 @@ function getCenterAlignPos(containerSize, targetSize) {
 //   });
 // });
 
-
-
+/** fixed-button input 포커스 될 경우**/
+$( '.form-control').focus(function(){
+    $('.fixed-btn-wrap').hide();
+  });  
+  
+  $( '.form-control').blur(function(){
+    $('.fixed-btn-wrap').show();
+  }); 
 
 
 
