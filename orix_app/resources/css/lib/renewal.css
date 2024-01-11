@@ -1118,8 +1118,8 @@ iframe { border:none; }
   } */
 
 /** main **/
-
-.main-bg-wrap { padding:20px 20px 0 20px; height:100%; min-height:420px; /*padding-bottom:120px;*/  background:#F7F7F7; }
+.contents-wrap.main .tab-item { padding:0 20px; }
+.main-bg-wrap { padding:20px 20px 0 20px; height:100%; /*padding-bottom:120px;*/   }
 .main-bg-wrap .quick-service-area { margin-top:0; }
 
 /* 긴급공지 - main */
@@ -1129,12 +1129,12 @@ iframe { border:none; }
 .contents-wrap.main .tabs-wrap .tab-item li a { border-bottom:2px solid #CBCBCB; }
 .contents-wrap.main .tabs-wrap .tab-item li.on::after { border-radius:0; }
 
-.main-cont-wrap { margin:32px 0; }
+.main-cont-wrap { padding:32px 20px; background:#FFFFFF; }
 .main-cont-wrap .text { font-size:0.875rem; line-height:1rem; color:#404040; font-weight:300; }
 .main-cont-wrap .text .name { font-weight:700; }
 .main-cont-wrap .tit { margin-top:8px;  font-size:1.125rem; line-height:1.25rem; font-weight:700;color:#00345F;}
 .main-cont-wrap { position:relative; }
-.main-cont-wrap::after { position:absolute; content:""; right:0; top:0;}
+.main-cont-wrap::after { position:absolute; content:""; right:20px; top:25%;}
 .main-cont-wrap.car::after  { width:108px; height:75px; background:url(../../images/common/main_car.png)no-repeat 50%/108px auto; }
 .main-cont-wrap.graph::after{ width:67px; height:81px; background:url(../../images/common/main_graph.png)no-repeat 50%/67px auto;}
 .main-cont-wrap.banking::after{ width:98px; height:93px; background:url(../../images/common/main_banking.png)no-repeat 50%/67px auto;}
