@@ -1,0 +1,244 @@
+<html lang="ko">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ORIX Capital</title>
+        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta name="keywords" content="ORIX Capital keywords" />
+        <meta name="description" content="ORIX Capital description" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta http-equiv="Expires" content="-1">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="No-Cache">
+    
+        <link rel="shortcut icon" type="image/x-icon" href="../../resources/favicon.png" />
+        <link rel="icon" type="image/x-icon" href="../../resources/favicon.png" />
+        
+        <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+        <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+        <link rel="stylesheet" href="../../resources/css/lib/default.css">
+        <link rel="stylesheet" href="../../resources/css/ui/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/ui/datepicker.css">
+        
+        <script type="text/javascript" src="../../resources/js/ui/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="../../resources/js/ui/jquery-1.12.4.min.js"></script>
+        <script  type="text/javascript" src="../../resources/js/ui/jquery-ui-1.12.1.js"></script>
+    
+        <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+        <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
+    </head>
+
+<body>
+    <!--//wrap-->
+    <div class="wrap">
+        <!-- //headerWrap -->
+        <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_header.html");
+			});
+			</script>
+        </div>
+        <!-- headerWrap// -->
+        <!-- //menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("../include/inc_all_menu.html");
+            });
+            </script>
+        </div>
+	    <!-- menuWrap// -->
+        <form>
+            <!--//contents-wrap-->
+            <div class="contents-wrap scndCarLayout">
+                <section class="tit-main-area">
+                    <p class="tit">방문판매 사전안내 등록</p>
+                    <p class="text">방문판매 사전안내 등록을 위한 정보를 입력하세요.</p>
+                </section>
+                <section class="form-wrap">
+                    <div class="accordion-cont-wrap">
+                        <div class="accordion-item">
+                            <div class="accordion">
+                                <button type="button" class="btn-accordion">· 고객 정보 입력</button>
+                                <div class="accordion-cont form-wrap">
+                                    <div class="txt-detail-area result">
+                                        <div class="form-group">
+                                            <label for="" class="essential">구분</label>
+                                            <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel1')">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="" class="essential">고객명</label>
+                                            <input id="" type="text" name="" class="form-control" placeholder="고객명 입력" invalid>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="" class="essential">휴대폰 번호</label>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion">
+                                <button type="button" class="btn-accordion">· 방문판매원 정보 입력</button>
+                                <div class="accordion-cont form-wrap">
+                                    <div class="form-group">
+                                        <label for="">방문자</label>
+                                        <input id="" type="text" name="" class="form-control" placeholder="오인수" disabled><!--[D]: 기본 로그인한 사용자 이름으로 자동 세팅-->
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="essential">방문 예정 일자</label>
+                                        <div class="form-row" >
+                                            <div class="col">
+                                                <input id="" type="text" class="form-control datepicker" placeholder=""  inputmode="none"><!--readonly-->
+                                            </div>
+                                            <div class="col">
+                                                <input id="" type="text" class="form-control select" placeholder="시간 선택" onclick="openPopup('lySel2')">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion">
+                                <button type="button" class="btn-accordion">· 방문판매 정보</button>
+                                <div class="accordion-cont form-wrap">
+                                    <div class="form-group">
+                                        <label for="" class="essential">상품구분</label>
+                                        <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel3')"> 
+                                    </div>
+                                    <div class="tabs-wrap box-list">
+                                        <p class="form-tit essential">내용</p>
+                                        <div class="tabs tabs-disabled"><!--[D]: 필수 입력의 고객 정보와 방문판매원 정보 모두 입력 후 tabs-disabled 제거-->
+                                            <ul class="tab-item">
+                                                <li data-tab="tab-cont01" class=""><a href="#none" title="선택됨">방문 전</a></li>
+                                                <li data-tab="tab-cont02"><a href="#none">방문 후</a></li>
+                                            </ul>
+                                            <div class="form-cont-wrap disabled"><!--[D]:tab 클릭 시 삭제 필요-->
+                                                <ul class="form-list">
+                                                    <li>고객 정보와 방문판매원 정보를 모두 입력 후, [방문 전] 또는 [방문 후] 버튼을 눌러주세요.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-content-area">
+                                                <div id="tab-cont01" class="tab-content dp-none">
+                                                    <div class="form-cont-wrap">
+                                                        <ul class="form-list">
+                                                            <li>[오릭스캐피탈코리아]</li>
+                                                            <li><span class="tit-blue">김영수</span> 님, 안녕하세요.</li>
+                                                            <li>오릭스캐피탈코리아 방문판매원인 <span class="tit-blue">오인수</span>이(가) <span class="tit-blue">2023년 11월 02일 16시 30분 금융상품</span> 소개를 위해 고객님이 요청하신 장소로 <span class="tit-red">방문 드릴 예정입니다.</span></li>
+                                                            <li>만약, <span class="tit-red">방문 일시 혹은 장소 변경을 원하시거나</span> 방문(연락)을 원치 않는 경우 다음의 방법을 통해 연락주시기 바랍니다.</li>
+                                                            <li>- 정보변경<br>영업담당자 연락처 : <span class="tit-blue">080-139-5663</span></li>
+                                                            <li>- 연락금지 요청수단<br>수신자 부담 전화 : 080-139-5663<br>당사 홈페이지 : www.orix.co.kr</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div id="tab-cont02" class="tab-content dp-none">
+                                                    <div class="form-cont-wrap">
+                                                        <ul class="form-list">
+                                                            <li>[오릭스캐피탈코리아]</li>
+                                                            <li><span class="tit-blue">김영수</span> 님, 안녕하세요.</li>
+                                                            <li>오릭스캐피탈코리아 방문판매원인 <span class="tit-blue">오인수</span>이(가) <span class="tit-blue">2023년 11월 02일 16시 30분 금융상품</span> 소개를 위해 고객님이 요청하신 장소로 <span class="tit-red">방문 드렸습니다.</span></li>
+                                                            <li>만약, <span class="tit-red">추가설명이 필요하신 경우 또는 이후</span> 방문(연락)을 원치 않는 경우 다음의 방법을 통해 연락주시기 바랍니다.</li>
+                                                            <li>- 정보변경<br>영업담당자 연락처 : <span class="tit-blue">080-139-5663</span></li>
+                                                            <li>- 연락금지 요청수단<br>수신자 부담 전화 : 080-139-5663<br>당사 홈페이지 : www.orix.co.kr</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-cont-wrap">
+                        <a href="#none" class="btn btn-primary">약정체결 요청</a>
+                    </div>
+                </section>
+            </div>
+            <!--contents-wrap//-->
+        </form>
+    </div>
+    <!--wrap//-->
+</body>
+<!--//고객구분 선택-->
+<div id="lySel1" class="layerpopup layer-up on" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">고객 구분</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>일반금융소비자</button></li>
+                <li><button>전문금융소비자</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--고객구분 선택//-->
+
+<!--//시간팝업-->
+<div id="lySel2" class="layerpopup layer-up" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">방문 시간 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>9:00 AM</button></li>
+                <li><button>9:30 AM</button></li>
+                <li><button>10:00 AM</button></li>
+                <li><button>10:30 AM</button></li>
+                <li><button>11:00 AM</button></li>
+                <li><button>11:30 AM</button></li>
+                <li><button>12:00 PM</button></li>
+                <li><button>12:30 PM</button></li>
+                <li><button>13:00 PM</button></li>
+                <li><button>13:30 PM</button></li>
+                <li><button>14:00 PM</button></li>
+                <li><button>14:30 PM</button></li>
+                <li><button>15:00 PM</button></li>
+                <li><button>15:30 PM</button></li>
+                <li><button>16:00 PM</button></li>
+                <li><button>16:30 PM</button></li>
+                <li><button>17:00 PM</button></li>
+                <li><button>17:30 PM</button></li>
+                <li><button>18:00 PM</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--시간팝업//-->
+
+<!--//상품구분 선택-->
+<div id="lySel3" class="layerpopup layer-up on" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">상품 구분</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>금융상품</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--상품구분 선택//-->
+</html>
