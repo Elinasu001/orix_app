@@ -514,7 +514,6 @@
 </div>
 <!--개월//-->
 
-
 <!--//alert-->
 <div id="lyAlert" class="layerpopup type-alert" tabindex="0">
     <div class="content-wrap">
@@ -534,13 +533,26 @@
 
 <script>
 /** fixed-button input 포커스 될 경우**/
-$('.form-control').focus(function(){
-    $('.fixed-btn-wrap').hide();
-  });
+// $('.form-control').focus(function(){
+//     $('.fixed-btn-wrap').hide();
+//   });
   
-  $('.form-control').blur(function(){
-    $('.fixed-btn-wrap').show();
-  });
+//   $('.form-control').blur(function(){
+//     $('.fixed-btn-wrap').show();
+//   });
+
+
+// $('.form-control').focus(function(){
+//   if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
+//     $('.fixed-btn-wrap').hide();
+//   }
+// });
+
+// $('.form-control').blur(function(){
+//   if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
+//     $('.fixed-btn-wrap').show();
+//   }
+// });
 </script>
 
 <style>

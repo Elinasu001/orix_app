@@ -609,7 +609,7 @@ iframe { border:none; }
 
 /** table **/
 /* table-type.checked */
-.table-type.check tbody tr.checked { background-color:#EFF3F6; /*cursor:pointer;*/}
+.table-type.check tbody tr.checked { background-color:#EFF3F6 !important; /*cursor:pointer;*/}
 /* .table-type.check tbody tr { cursor: pointer; } */
 
 .table-type table { border:solid #EEEEEE; border-width:1px 0; }
