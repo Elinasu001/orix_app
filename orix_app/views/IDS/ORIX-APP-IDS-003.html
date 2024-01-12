@@ -123,18 +123,18 @@
                                     </div>
                                     <div class="tabs-wrap box-list">
                                         <p class="form-tit essential">내용</p>
-                                        <div class="tabs tabs-disabled"><!--[D]: 필수 입력의 고객 정보와 방문판매원 정보 모두 입력 후 tabs-disabled 제거-->
+                                        <div class="tabs"><!--[D]: 필수 입력의 고객 정보와 방문판매원 정보 모두 입력 후 tabs-disabled 제거-->
                                             <ul class="tab-item">
-                                                <li data-tab="tab-cont01" class=""><a href="#none" title="선택됨">방문 전</a></li>
+                                                <li data-tab="tab-cont01" class="on"><a href="#none" title="선택됨">방문 전</a></li>
                                                 <li data-tab="tab-cont02"><a href="#none">방문 후</a></li>
                                             </ul>
-                                            <div class="form-cont-wrap disabled"><!--[D]:tab 클릭 시 삭제 필요-->
+                                            <!-- <div class="form-cont-wrap disabled">
                                                 <ul class="form-list">
                                                     <li>고객 정보와 방문판매원 정보를 모두 입력 후, [방문 전] 또는 [방문 후] 버튼을 눌러주세요.</li>
                                                 </ul>
-                                            </div>
+                                            </div> -->
                                             <div class="tab-content-area">
-                                                <div id="tab-cont01" class="tab-content dp-none">
+                                                <div id="tab-cont01" class="tab-content">
                                                     <div class="form-cont-wrap">
                                                         <ul class="form-list">
                                                             <li>[오릭스캐피탈코리아]</li>
@@ -170,8 +170,8 @@
             <!--contents-wrap//-->
             <div class="fixed-btn-wrap">
                 <div class="btn-wrap">
-                    <a href="#none" class="btn btn-close">그만하기</a>
-                    <a href="#none" class="btn disabled">발송하기</a><!--[D]: 필수 입력 항목 모두 기입될 경우 버튼 활성화(disabled 삭제 후 btn-primary 추가)-->
+                    <a href="#none" class="btn btn-close">삭제</a>
+                    <a href="#none" class="btn btn-primary">재발송</a>
                 </div>
             </div>
         </form>
@@ -244,4 +244,20 @@
     </div>
 </div>
 <!--상품구분 선택//-->
+
+<!-- //요청완료 알럿1 -->
+<div id="lyAlert" class="layerpopup type-alert on" tabindex="0" style="display: block;">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">요청 완료</h2>
+        </div>
+        <div class="ly-cont-wrap">
+            <p class="sub-title"><span>김영수</span> 님께 방문판매 사전안내 문자를<br>재전송하였습니다.</p>
+        </div>
+        <div class="btn-wrap">
+            <a href="#none" class="btn btn-primary confirm" >확인</a>
+        </div>
+    </div>
+</div>
+<!--요청완료 알럿1 // -->
 </html>
