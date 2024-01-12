@@ -954,6 +954,8 @@ iframe { border:none; }
 .accordion-item .accordion .accordion-cont.on { display:block;}
 .accordion-item .accordion .accordion-cont .btn-cont-wrap { margin-top:30px; }
 
+.accordion-item .accordion .accordion-tit { padding:20px; text-align:left; font-size:1.125rem; line-height:1.25rem; font-weight:500; color:#000000;  }
+
 /* 이미지 불러오기 */
 .thumb-wrap ul { display:flex; flex-wrap:wrap; width:100%; margin-top:20px; }
 .thumb-wrap ul li { width:calc((100% - 24px)/3); height:calc((100vw - 15px)/3); margin:0 12px 20px 0; }
