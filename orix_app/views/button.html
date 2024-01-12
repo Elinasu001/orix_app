@@ -65,26 +65,21 @@
                     * swiper 라이브러리 많이 사용 시 오류 사항이 많기 때문에 main tab만  swiper로 가고 나머지는 tab-cont구조로 사용
                 </p>
                 <section>
-                    <p class="test-tit">버튼 두개 일 경우</p>
+                    <p class="test-tit">버튼 두개 일 경우/style1(대출)/style2(할부)</p>
                     <div class="btn-cont-wrap">
                         <a href="#none" class="btn btn-primary style1">대출 심사요청</a>
                         <a href="#none" class="btn btn-primary style2">할부 심사요청</a>
                     </div>
 
-                    <p class="test-tit">버튼 두개 일 경우</p>
+                    <p class="test-tit">버튼 두개 일 경우/disabled/</p>
                     <div class="btn-cont-wrap">
                         <a href="#none" class="btn disabled">대출 심사요청</a>
                         <a href="#none" class="btn btn-primary style2">할부 심사요청</a>
                     </div>
 
-                    <p class="test-tit">리스트, 아코디언에 들어가는 00버튼 일 경우</p>
+                    <p class="test-tit">보기 버튼</p>
                     <div class="btn-cont-wrap">
-                        <a href="#none" class="btn view style3">상세보기</a>
-                        <a href="#none" class="btn view style3">진행현황보기</a>
-                    </div>
-                    <p class="test-tit">리스트, 아코디언에 들어가는 00버튼 일 경우</p>
-                    <div class="btn-cont-wrap">
-                        <a href="#none" class="btn view style3">사고이력 보기</a>
+                        <a href="#none" class="btn view">사고이력 보기</a>
                     </div>
 
                     <p class="test-tit">그만하기 버튼 있을 경우</p>
@@ -144,12 +139,26 @@
                     <di class="form-wrap">
                         <div class="form-row radio-bg-button">
                             <div class="col">
+                                <input type="radio" name="q2" id="q1" value="Y">
+                                <label for="q1" class="rd">예</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" name="q2" id="q2" value="N">
+                                <label for="q2" class="rd">아니오</label>
+                            </di>
+                        </div>
+					</div>
+
+                    <p class="test-tit">radio background custom - img</p>
+                    <di class="form-wrap">
+                        <div class="form-row radio-bg-button">
+                            <div class="col">
                                 <input type="radio" name="q2" id="q21" value="Y">
-                                <label for="q21" class="rd">예</label>
+                                <label for="q21" class="rd"><span class="img individual">개인</span></label>
                             </div>
                             <div class="col">
                                 <input type="radio" name="q2" id="q22" value="N">
-                                <label for="q22" class="rd">아니오</label>
+                                <label for="q22" class="rd"><span class="img buisnessman"></span>개인사업자</label>
                             </di>
                         </div>
 					</div>
