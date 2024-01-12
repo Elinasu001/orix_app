@@ -25,23 +25,42 @@ $(document).ready(function() {
 
   
   /** table 선택**/
-  $(".table-type.check tbody tr").click(function () {
+//   $(".table-type.check tbody tr").click(function () {
+//     // Remove the 'checked' class from all rows
+//     $(".table-type.check tbody tr").removeClass("checked");
+//     // Add the 'checked' class to the clicked row
+//     $(this).addClass("checked");
 
-    $(".table-type.check tbody tr").not(this).removeClass("checked");
+//     // Hide all .table-type.result
+//     $(".table-type.result").hide();
 
-    $(this).toggleClass("checked");
+//     // Show the corresponding .table-type.result
+//     var index = $(this).index();
+//     $(".table-type.result").show();
+// });
 
-    // $(".table-type.result tbody tr").hide();
+$(".table-type.check tbody tr").click(function () {
 
-    // 만약 클릭된 행이 'checked' 클래스를 가지고 있다면 해당하는 .table-type.result 행을 보여줌
-    if ($(this).hasClass("checked")) {
-        $(".table-type.result").css("display", "block");
-    } else {
-        // 클릭된 행이 'checked' 클래스를 가지고 있지 않다면 .table-type.result 행을 숨김
-        $(".table-type.result").css("display", "none");
-    }
+  $(".table-type.check tbody tr").not(this).removeClass("checked");
 
-  });
+  $(this).toggleClass("checked");
+
+  $(".table-type.result").css("display", $(this).hasClass("checked") ? "block" : "none");
+});
+
+  // $(".table-type.result tbody tr").hide();
+
+
+// if ($(this).hasClass("checked")) {
+//     // var index = $(this).index();
+//     // $(".table-type.result tbody tr:eq(" + index + ")").show();
+//     $(".table-type.result").css("display", "block");
+// } else {
+    
+//     $(".table-type.result").css("display", "none");
+// }
+
+// });
 
   /** 전체동의**/
   $('.check.all').on('click',  function() {
@@ -71,23 +90,23 @@ $(document).ready(function() {
     var dmTotalNum	= $(".level3 .check").length;
     var dmCheckNum = $(".level3 .check:checked").length;
    
-    var terms_id = $(this).attr("terms-pop"); // Get the ID of the clicked element
-    // $("#" + terms_id).show(); // Show the associated popup with the same ID when the element is clicked
+    var terms_id = $(this).attr("terms-pop");
+  
     
     if ($(this).prop("checked")) {
-        $("#" + terms_id).show(); // Show the associated popup with the same ID when the element is clicked
+        $("#" + terms_id).show();
     } else {
-        $("#" + terms_id).hide(); // Hide the associated popup when the checkbox is unchecked
+        $("#" + terms_id).hide();
     }
 
     $(".layerpopup .btn.btn-primary").on("click", function() {
       var popup = $(this).closest('.layerpopup');
-      var popupID = popup.attr("id"); // Get the ID of the popup
+      var popupID = popup.attr("id");
     
-      // Extract the terms-pop function ID from the popup ID
+      
       var termsPopID = popupID.replace("-popup", "");
     
-      // Check the associated checkbox for the terms-pop function
+      
       $("[terms-pop='" + termsPopID + "']").prop("checked", true);
 
       popup.hide();
@@ -97,15 +116,15 @@ $(document).ready(function() {
       var popup = $(this).closest('.layerpopup');
       var popupID = popup.attr("id"); // Get the ID of the popup
     
-      // Extract the terms-pop function ID from the popup ID
+      
       var termsPopID = popupID.replace("-popup", "");
     
-      // Check the associated checkbox for the terms-pop function
+      
       $("[terms-pop='" + termsPopID + "']").prop("checked", false);
 
       popup.hide();
     });
-    /*e : 2023-12-12 추가*/
+    
     
     if (!$(this).parent().parent('div.level3').hasClass('etc')) {
       //약관 개별동의
@@ -139,28 +158,28 @@ $(document).ready(function() {
     const $parentListItem = $(this).closest('li');
 
     if (file) {
-        const reader = new FileReader(); // 파일을 읽기 위한 FileReader 객체 생성
+        const reader = new FileReader();
 
         reader.onload = function(e) {
-            const imageUrl = e.target.result; // 이미지 URL을 얻기
+            const imageUrl = e.target.result;
 
-            // 이미지를 표시할 새로운 list item을 생성
+            
             const newListItem = $('<li><img src="' + imageUrl + '" alt="Uploaded Image"><span>추가</span></li>');
 
-            // 현재의 li에 이미지를 추가하고 클래스를 변경
+           
             $parentListItem.replaceWith(newListItem);
 
-            // 현재 li에 delete 클래스 추가
+            
             newListItem.addClass('delete');
 
-            // 새로운 "추가" 버튼을 생성
+            
             const newPlusListItem = $('<li class="plus"><input type="file" id="file" class="ip-file"><span>추가</span></li>');
 
-            // 리스트의 맨 뒤에 새로운 "추가" 버튼을 추가
+            
             $('.thumb-wrap ul').append(newPlusListItem);
         };
 
-        reader.readAsDataURL(file); // 파일을 읽어 data URL 형태로 변환
+        reader.readAsDataURL(file);
     }
   });
   /** 이미지 불러오기 삭제 **/
@@ -258,15 +277,16 @@ function openPopup(id) {
     $('body').removeAttr('style');
     $(window).scrollTop(currentTop);
   });
-  if (_target.hasClass('layer-up')) {
+  if (_target.hasClass('layer-up, type-alert')) {
     _target.fadeIn(600);
     _target.focus();
     _target.addClass("on");
-  } else if (_target.hasClass('type-alert')){
-  // _target.css('top','0');
-	_target.fadeIn(600);
-  _target.focus();
-	_target.addClass("on");
+  // } else if (_target.hasClass('type-alert')){
+  // // _target.css('top','0');
+	// _target.fadeIn(600);
+  // _target.focus();
+	// _target.addClass("on");
+  // }
   }
 
 }
@@ -302,30 +322,7 @@ function openPopup(id) {
 
   }
 
-  // // 테이블에서 항목 클릭 시
-  // $('.table-type.check tbody tr').on('click', function() {
-  //   var $clickedItem = $(this);
-  //   var $checkedItems = $('.table-type.check tbody tr.checked');
 
-  //   if (!$clickedItem.hasClass('checked')) {
-  //     // 모든 선택 제거
-  //     $checkedItems.removeClass('checked');
-
-  //     // 클릭된 항목에만 클래스 추가
-  //     $clickedItem.addClass('checked');
-
-  //     // 선택된 항목의 이름을 검색 입력란의 placeholder로 설정
-  //     // var nameText = $clickedItem.find('.name').text();
-  //     // $('input.select').attr('placeholder', nameText);
-      
-  //   }
-
-  //   // 팝업 닫기
-  //   closePopupUp(id);
-  //   $('body').removeAttr('style');
-  //   $(window).scrollTop(currentTop);
-  //   _target.removeClass('on');
-  // });
 
   if (_target.has('.ly-acc-select').length > 0) {
     _target.find('.ly-acc-select > .acc-list-area > a').on('click', function (e) {
