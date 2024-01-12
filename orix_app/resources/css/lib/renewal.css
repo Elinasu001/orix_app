@@ -305,7 +305,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 .btn.btn-primary { background:#003F86; color:#FFFFFF; }
 .btn.btn-close,
-.btn.view { padding-right:30px; padding-left:30px; background:#DEF2FF; color:#003F86; }
+.btn.view { padding-right:30px; padding-left:30px; background:#EDF3FA; color:#002749; }
 
 .btn-wrap .btn.btn-close { width:initial;  }
 
@@ -315,7 +315,6 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /* btn 스타일 */
 .btn.btn-primary.style1 { background:#FFEBEB; font-weight:600; color:#A73737; }
 .btn.btn-primary.style2 { background:#F3EBFF; font-weight:600; color:#802CE3; }
-.btn.view.style3 { background:#EDF3FA; color:#002749; }
 
 /* 로그인 */
 .btn.btn-line-text { position: relative; font-size:0.875rem; line-height:1rem; color:#757575; }
@@ -989,7 +988,8 @@ iframe { border:none; }
 .txt-detail-area .txt-detail-header p  { font-size:1rem; line-height:1.188rem; font-weight:500; }
 .txt-detail-area .txt-detail-header .txt  { font-weight:400; }
 .txt-detail-area .txt-detail-header span.tit { font-size:1rem; line-height:1.188rem; font-weight:600; color:#003F86; }
-.txt-detail-area .txt-detail-header span.small-tit {font-size:0.875rem; line-height:1rem; }
+.txt-detail-area .txt-detail-header span.small-tit,
+.result-box-wrap .tit .small-tit {font-size:0.875rem; line-height:1rem; }
 .txt-detail-area .txt-detail-header.no-line { border-bottom:none; }
 .txt-detail-area.pd-top { padding:20px 20px 30px; }
 
@@ -1263,3 +1263,4 @@ iframe { border:none; }
 .result-box-wrap { display:flex; justify-content: space-between; padding:14px 10px; margin-bottom:20px; border-radius:4px; }
 .result-box-wrap.style1 { background:#EFEBFF; color:#000000; }
 .result-box-wrap.style2 { background:#FFEBEB; color:#000000; }
+.result-box-wrap .tit { font-size:1rem; line-height:1.188rem; font-weight:600; }
