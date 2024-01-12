@@ -656,7 +656,8 @@ iframe { border:none; }
 
 
 /* table-col */
-.table-col.result { color:#00345F; }
+.table-col.right-color tbody td,
+.table-row.right-color tbody td { color:#00345F; }
 
 .table-col tbody tr:first-child th,
 .table-col tbody tr:first-child td { border-top:1px solid #DDDDDD; }
