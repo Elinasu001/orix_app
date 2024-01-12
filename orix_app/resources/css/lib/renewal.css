@@ -944,7 +944,7 @@ iframe { border:none; }
 /* 2023.12.19 이솔 추가 */
 /* 아코디언 */
 .accordion-item + .accordion-item {  margin-top:20px; }
-.accordion-item { border:1px solid; border-radius:10px; }
+.accordion-item { border:1px solid #555555; border-radius:10px; }
 .accordion-item .accordion { width:100%; }
 .accordion-item .accordion button.btn-accordion { border:none; }
 .accordion-item .accordion .btn-accordion { display:block; position:relative; padding:20px; width:100%; text-align:left; font-size:1.125rem; line-height:1.25rem; font-weight:500; color:#000000;  background-color:transparent; cursor:pointer; }
@@ -954,7 +954,10 @@ iframe { border:none; }
 .accordion-item .accordion .accordion-cont.on { display:block;}
 .accordion-item .accordion .accordion-cont .btn-cont-wrap { margin-top:30px; }
 
-.accordion-item .accordion .accordion-tit { padding:20px; text-align:left; font-size:1.125rem; line-height:1.25rem; font-weight:500; color:#000000;  }
+/* 기존 아코디언 > 리스트로 변경 */
+.accordion-item.list .accordion .accordion-tit { padding:20px; text-align:left; font-size:1.125rem; line-height:1.25rem; font-weight:500; color:#000000;  }
+.accordion-item.list { border:1px solid #DDDDDD; }
+
 
 /* 이미지 불러오기 */
 .thumb-wrap ul { display:flex; flex-wrap:wrap; width:100%; margin-top:20px; }
