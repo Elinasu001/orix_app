@@ -1258,3 +1258,8 @@ iframe { border:none; }
 /* 대출연장 신청 완료 */
 .check-list-wrap { margin-top:56px; padding-bottom:20px; border-radius:12px; background:#F8F8F8; font-size:0.875rem; line-height:1rem; font-weight:500; text-align:center; }
 .check-list-wrap li { padding-top:15px; }
+
+/* 고객정보 변경사항 */
+.result-box-wrap { display:flex; justify-content: space-between; padding:14px 10px; margin-bottom:20px; border-radius:4px; }
+.result-box-wrap.style1 { background:#EFEBFF; color:#000000; }
+.result-box-wrap.style2 { background:#FFEBEB; color:#000000; }
