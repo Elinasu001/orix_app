@@ -422,27 +422,27 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 /* tab-round */
 .tabs-wrap.round-list .tab-item:before { content:none; }
-.tabs-wrap.round-list .tab-item li a { padding:6px 12px; border-radius:13px; font-size: 0.75rem; font-weight:500; line-height: 0.875rem; border:1px solid #EFF3F6; background:#EFF3F6; color:#99A6B1; }
-.tabs-wrap.round-list .tab-item li.on a { font-weight:700; background:#1F4A6E; border:#56A3FD; color:#FFFFFF; }
+.tabs-wrap.round-list .tab-item li a { padding:6px 12px; border-radius:13px; font-size:0.875rem; line-height:1rem; font-weight:500; border:1px solid #E5E5E5; background:#FAFAFA; color:#8A8A8A; }
+.tabs-wrap.round-list .tab-item li.on a { font-weight:500; background:#EDF3FA; border:1px solid #0766DD; color:#1F75E0; }
 .tabs-wrap.round-list .tab-item li.on::after { content:none; }
-.tabs-wrap.round-list .tab-item li { margin-right:5px; }
+.tabs-wrap.round-list .tab-item li { margin-right:8px; }
 .tabs-wrap.round-list .tab-item li:last-child { margin-right:0; }
 
 /* tab-bg - main */
 .tabs-wrap.tab-bg { margin-top:28px; }
 .tabs-wrap.tab-bg .tab-content-area { margin-top:20px; }
-.tabs-wrap.tab-bg .tab-item { display:flex; justify-content:space-between; padding:4px; background:#EFEFEF; border-radius:10px; }
+.tabs-wrap.tab-bg .tab-item { display:flex; justify-content:space-between; padding:4px; background:#EFEFEF; border-radius:8px; }
 .tabs-wrap.tab-bg .tab-item li { width:100%; }
-.tabs-wrap.tab-bg  .tab-item li a { padding:11px 0; font-weight:400; color:#8A8A8A;}
+.tabs-wrap.tab-bg  .tab-item li a { padding:11px 0; font-weight:400; color:#555555;}
 .tabs-wrap.tab-bg .tab-item li.on a,
 .tabs-wrap.tab-bg.cont .tab-item li.on a,
-.tabs-wrap.tab-bg .swiper-pager li.swiper-pagination-bullet-active { font-weight:500; border-radius:10px; color:#003F86; background:#FFFFFF;  }
+.tabs-wrap.tab-bg .swiper-pager li.swiper-pagination-bullet-active { font-weight:500; border-radius:6px; color:#000000; background:#FFFFFF;  }
 .tabs-wrap.tab-bg .tab-item li.on::after ,
 .tabs-wrap.tab-bg .swiper-pager li.swiper-pagination-bullet-active::after { content:none; }
 .tabs-wrap.tab-bg  .tab-item:before { content:none; }
 
 /* tab-bg - cont*/
-.tabs-wrap.tab-bg.cont .tab-item li a { padding:7px 0; font-weight:400; color:#8A8A8A;}
+.tabs-wrap.tab-bg.cont .tab-item li a { padding:7px 0; font-weight:400; color:#555555;}
 
 
 /** .tabs.swiper -text **/
