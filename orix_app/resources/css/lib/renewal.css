@@ -422,11 +422,12 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 
 /* tab-round */
+.tabs-wrap.round-list .tab-item { display:flex; width:100%; overflow-y:hidden; overflow-x:auto; white-space:nowrap; gap:5px; }
 .tabs-wrap.round-list .tab-item:before { content:none; }
 .tabs-wrap.round-list .tab-item li a { padding:4px 16px; border-radius:13px; font-size:0.875rem; line-height:1rem; font-weight:500; border:1px solid #E5E5E5; background:#FAFAFA; color:#8A8A8A; }
 .tabs-wrap.round-list .tab-item li.on a { font-weight:500; background:#EDF3FA; border:1px solid #0766DD; color:#1F75E0; }
 .tabs-wrap.round-list .tab-item li.on::after { content:none; }
-.tabs-wrap.round-list .tab-item li { margin-right:8px; }
+/* .tabs-wrap.round-list .tab-item li { margin-right:8px; } */
 .tabs-wrap.round-list .tab-item li:last-child { margin-right:0; }
 
 /* tab-bg - main */
