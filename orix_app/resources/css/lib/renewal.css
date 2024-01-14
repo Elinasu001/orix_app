@@ -235,7 +235,8 @@ input::-webkit-search-results-decoration{ -webkit-appearance:none; display:none;
 
 /** input style **/
 .form-wrap { margin-top:20px; }
-.form-wrap  + .tabs-wrap.round-list { margin-top:20px; }
+.form-wrap  + .tabs-wrap.round-list,
+.form-group + .tabs-wrap.box-list { margin-top:20px; }
 /* .form-group + .form-group:has(>label), */
 .form-group + .form-group { margin-top:24px; }
 .form-control { display:block; width:100%; padding:11px 10px; font-size:0.875rem; line-height:1rem; font-weight:400; color:#CECECE; background-clip: padding-box; border: 1px solid #DDDDDD; border-radius:4px; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
@@ -634,10 +635,11 @@ iframe { border:none; }
 .table-type.ta-c th, 
 .table-type.ta-c td, 
 [class^="table-type"] .table-type.ta-c th,
-[class^="table-type"] .table-type.ta-c td{ text-align:center;  }
+[class^="table-type"] .table-type.ta-c td { text-align:center;  }
 
 [class^="table-type"] thead th,
 [class^="table-type"] tbody th,
+[class^="table-type"] thead td,
 [class^="table-type"] tbody td { word-break: keep-all; }
 
 [class^="table-type"] thead th,
@@ -649,7 +651,7 @@ iframe { border:none; }
 [class^="table-type"] tbody th { font-size:0.875rem; line-height:1rem; color:#333333; font-weight:400; }
 
 [class^="table-type"] thead td,
-[class^="table-type"] tbody td { font-size:0.875rem; line-height:1rem; color:#212121; font-weight:500; } 
+[class^="table-type"] tbody td { font-size:0.875rem; line-height:1rem; color:#212121; font-weight:500; }
 
 .table-type + .table-type { margin-top:20px; }
 .txt-r { text-align:right !important; }
@@ -704,6 +706,9 @@ iframe { border:none; }
 .tit-main-area .tit { font-size:1.375rem; line-height:1.5rem; font-weight:700; color:#002749; }
 .tit-main-area .text { margin-top:5px; font-size:1rem; line-height:1.188rem; font-weight:500; color:#555555; }
 .tit-main-area .text2 { margin-top:5px; font-size:1.375rem; line-height:1.5rem; font-weight:500; }
+
+.tit-main-area .text2 .blue { font-size:1.375rem; line-height:1.5rem; font-weight:800; color:#003F86; }
+.tit-main-area .text2 .red { font-size:1.375rem; line-height:1.5rem; font-weight:800; color:#FF0000; }
 
 .tit-area { display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; }
 .tit-area .tit { font-size:1rem; line-height:1.188rem; color:#003F86; font-weight:600; }
@@ -779,6 +784,10 @@ iframe { border:none; }
 .list-icon .password-change::before { background:url('../../images/common/list_password-change.png') no-repeat #FEF5CB 50%/29px auto; }
 .list-icon .banking::before { background:url('../../images/common/list_banking.png') no-repeat #DFFFE0 50%/29px auto; }
 .list-icon .car::before { background:url('../../images/common/list_car.png') no-repeat #DFF2FF 50%/29px auto; }
+.list-icon .management::before { background:url('../../images/common/list_management.png') no-repeat #DFF2FF 50%/22px auto; }
+.list-icon .goods::before { background:url('../../images/common/list_goods.png')  no-repeat #DFF2FF 50%/22px auto; }
+.list-icon .Information::before { background:url('../../images/common/list_Information.png') no-repeat #FEF5CB 50%/22px auto; }
+
 
 /* .list-icon .market_price::before { background:url('../../images/common/list_market_price.png') no-repeat #DFF2FF 50%/21px auto; }
 .list-icon .performance::before { background:url('../../images/common/list_performance.png') no-repeat #DFF2FF 50%/21px auto; }
@@ -1085,6 +1094,10 @@ iframe { border:none; }
 .check-wrap .form-wrap  { margin-top:0; }
 .check-wrap + .result-wrap.mt0 { margin-top:0; }
 
+/* 대출연장 신청 완료 */
+.check-list-wrap { margin-top:56px; padding-bottom:20px; border-radius:12px; background:#F8F8F8; font-size:0.875rem; line-height:1rem; font-weight:500; text-align:center; }
+.check-list-wrap li { padding-top:15px; }
+
 /* 긴급공지 */
 .urgency-wrap { position:relative; padding:10px 20px 10px 46px; background:#EEF8FF; }
 .urgency-wrap a { font-size:0.875rem; line-height:1rem; font-weight:400; color:#003F86; }
@@ -1153,6 +1166,7 @@ iframe { border:none; }
 .main-cont-wrap.car::after  { width:108px; height:75px; background:url(../../images/common/main_car.png)no-repeat 50%/108px auto; }
 .main-cont-wrap.graph::after{ width:67px; height:81px; background:url(../../images/common/main_graph.png)no-repeat 50%/67px auto;}
 .main-cont-wrap.banking::after{ width:98px; height:93px; background:url(../../images/common/main_banking.png)no-repeat 50%/67px auto;}
+.main-cont-wrap.executives::after { width: 88px; height: 89px; background: url(../../images/common/main_executives.png)no-repeat 50%/88px auto; }
 
 /* 알람 - main */
 .tooltip-wrap { display:flex; gap:5px; }
@@ -1170,20 +1184,6 @@ iframe { border:none; }
 .terms-text-wrap .terms-text-style1 { margin-bottom:20px; }
 .terms-text-wrap .terms-text-style1 dt { padding-bottom:12px; font-size:1rem; line-height:1.188rem; font-weight:500; }
 .terms-text-wrap .terms-text-style2 .terms-tit { padding-bottom:12px; font-size:0.875rem; line-height:1rem; font-weight:700; }
-
-
-/* 2024-01-10 이솔*/
-.txt-list-wrap .txt-detail-area .txt-list .tit-c { justify-content: center; }
-.txt-list.li-box2 { margin-top:5px; padding:13px 0; background:#EFF3F6; }
-.txt-list.li-box2 li { margin:0; }
-.txt-list.li-box2 li .tit,
-.txt-list.li-box2 li .txt { width:calc(100%/2); text-align:center; }
-.txt-list.li-box2 li .txt { padding-left:0; }
-.txt-list.li-box2 li .tit::after { content:""; position:absolute; top:50%; right:0; transform:translateY(-50%); display:block; width:1px; height:20px; background:#003F86; }
-
-.tit-main-area .text2 .blue { font-size:1.375rem; line-height:1.5rem; font-weight:800; color:#003F86; }
-.tit-main-area .text2 .red { font-size:1.375rem; line-height:1.5rem; font-weight:800; color:#FF0000; }
-
 
 /** 공지사항 **/
 .notice-list-wrap ul { display:block; }
@@ -1203,18 +1203,23 @@ iframe { border:none; }
 .notice_contents { min-height:150px; width:100%; margin-top:18px; padding-top:27px; padding-bottom:50px; border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD; color:#555555; }
 
 
+/* 2024-01-10 이솔 ??*/
+.txt-list-wrap .txt-detail-area .txt-list .tit-c { justify-content: center; }
+.txt-list.li-box2 { margin-top:5px; padding:13px 0; background:#EFF3F6; }
+.txt-list.li-box2 li { margin:0; }
+.txt-list.li-box2 li .tit,
+.txt-list.li-box2 li .txt { width:calc(100%/2); text-align:center; }
+.txt-list.li-box2 li .txt { padding-left:0; }
+.txt-list.li-box2 li .tit::after { content:""; position:absolute; top:50%; right:0; transform:translateY(-50%); display:block; width:1px; height:20px; background:#003F86; }
+
 /* 2024-01-10 */
-.main-cont-wrap.executives::after { width: 88px; height: 89px; background: url(../../images/common/main_executives.png)no-repeat 50%/88px auto; }
-.list-icon .management::before { background:url('../../images/common/list_management.png') no-repeat #DFF2FF 50%/22px auto; }
-.list-icon .goods::before { background:url('../../images/common/list_goods.png')  no-repeat #DFF2FF 50%/22px auto; }
-.list-icon .Information::before { background:url('../../images/common/list_Information.png') no-repeat #FEF5CB 50%/22px auto; }
 
 
 /* 2024-01-11 이솔 */
 .txt-list-wrap + .btn-cont-wrap.center { margin-top: 48px; }
 
 /* tab-box */
-.form-group + .tabs-wrap.box-list { margin-top:20px; }
+
 .tabs-wrap.box-list .tab-item { margin-bottom:20px; }
 .tabs-wrap.box-list .tab-item:before { content:none; }
 .tabs-wrap.box-list .tab-item li a { padding:6px 12px; border-radius:6px;font-size:0.75rem; font-weight:500; line-height:0.875rem;border: 1px solid #EFF3F6;background:#EFF3F6; color:#99A6B1; }
@@ -1225,13 +1230,6 @@ iframe { border:none; }
 
 
 .tabs-disabled::before { display:block; position:absolute; content:""; top:0; width:100%; height:100%; z-index:10; }
-
-/* .tabs.tabs-disabled .form-cont-wrap.disabled{ width:100%; min-height:300px;  border:1px solid red;  } */
-/* 
-
-.tabs.tabs-disabled .form-cont-wrap { display:none; }
-.tabs:not(.tabs-disabled) .form-cont-wrap.disabled { display:none; } */
-/* .tabs-wrap.box-list:not(:has(.tabs-disabled)) .form-cont-wrap.disabled { display:none; } */
 .form-cont-wrap.disabled { min-height:280px; }
 .form-cont-wrap { padding:10px; width:100%; min-height:450px; border:1px solid #E3E3E3; background:#EFEFEF; }
 .form-cont-wrap .form-list { font-size:1rem; line-height:1.188rem; color:#8A8A8A; }
@@ -1240,36 +1238,36 @@ iframe { border:none; }
 .form-list .tit-blue { color:#003F86; font-weight:600; }
 .form-list .tit-red { color:#FF0000; font-weight:600; }
 
-/* .tabs.tabs-disabled .form-cont-wrap.disabled { display:block; }
-.tabs.tabs-disabled .form-cont-wrap.disabled +  .tab-content-area .tab-content .form-cont-wrap { display:none; }
-.tabs .form-cont-wrap.disabled{ display:none; }
-.tabs .form-cont-wrap.disabled +  .tab-content-area .tab-content.dp-none .form-cont-wrap */
 
-
-
-
-/** 2024-01-12 이솔 **/
-/* 대출연장 신청 완료 */
-.check-list-wrap { margin-top:56px; padding-bottom:20px; border-radius:12px; background:#F8F8F8; font-size:0.875rem; line-height:1rem; font-weight:500; text-align:center; }
-.check-list-wrap li { padding-top:15px; }
-
-/* 고객정보 변경사항 */
+/** 고객정보 변경사항 **/
 .result-box-wrap { display:flex; justify-content:space-between; align-items: center; padding:7px 10px; margin-bottom:20px; border-radius:4px; }
 .result-box-wrap .tit { font-size:1rem; line-height:1.188rem; font-weight:600; }
 .result-box-wrap .tit .small-tit { font-size:0.875rem; line-height:1rem; font-weight:400; }
 .result-box-wrap .flag2 { padding:9px 10px; font-size:0.875rem; line-height:1rem; font-weight:600; border-radius:8px; }
-
+/* 대출 */
 .result-box-wrap.style1 { background:#EFEBFF; color:#000000; }
 .result-box-wrap.style1 .flag2 { background:#ffffff; color:#802CE3;  }
-
+/* 할부 */
 .result-box-wrap.style2 { background:#FFEBEB; color:#000000; }
 .result-box-wrap.style2 .flag2 { background:#ffffff; color:#A73737; }
 
 
 /** 신용조회동의 등록 페이지 **/
+.conRegist .titTy02 { margin-top:25px; }
 .conRegist .form-group { display:flex; flex-direction:column; }
 .conRegist .form-wrap .form-group .form-tit { display:flex; }
 .conRegist .form-wrap .form-group .form-tit { margin-top:0; }
 .conRegist .form-group.check-buttons { align-items:flex-start; }
 .conRegist .input-box-wrap table.input-box { display:block; }
 .conRegist .input-box-wrap table.input-box tbody { display:block; width:100%; }
+.conRegist .form-row + .form-control { margin-top:10px; }
+.conRegist .tblSubBox { display:flex; gap:10px; }
+
+/* 신용조회 개별 테이블 */
+.table-type.style4.tyHor .credit td { background:#FEF6CB; }
+.table-type.style4.tyHor .altKey td { background:#DEF5E3; }
+.table-type.style4 .table-bg { background:#F8F8F8; }
+.table-type.style4 tbody tr.table-bg:first-child { border-top:1px solid #395CA8; }
+.table-type.style4 tbody tr.table-bg + .table-bg { border-bottom:1px solid #395CA8; }
+.table-type.style4 tbody tr { border-bottom:1px solid #DDDDDD; }
+.table-type tbody tr .under { text-decoration:underline; }
