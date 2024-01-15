@@ -71,13 +71,13 @@
                                 <label for="">검색기준</label>
                                 <div class="form-row">
                                     <div class="col">
-                                        <input id="" type="text" name="" class="form-control select" placeholder="신용정보" onclick="openPopup('lySel1')"><!--select 클래스 추가 및 onclick 팝업 추가하기-->
+                                        <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel1')" value="신용정보"><!--[D]: 신용정보 default값으로 들어감-->
                                     </div>
                                     <div class="col">
-                                        <input id="" type="text" name="" class="form-control select" placeholder="본인" onclick="openPopup('lySel2')">
+                                        <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel2')" value="본인"><!--[D]: 본인 default값으로 들어감-->
                                     </div>
                                 </div>
-                                <input id="" type="text" name="" class="form-control" placeholder="??">
+                                <input id="" type="text" name="" class="form-control" placeholder="이름을 입력해주세요">
                             </div>
 
                             <div class="form-group">
@@ -104,8 +104,8 @@
                     <div class="tit-cont-area">
                         <p class="tit">요청내역</p>
                         <ul class="flag-list">
-                            <li><span class="credit flag style1">기본키</span></li>
-                            <li><span class="altKey flag style2">대체키</span></li>
+                            <li><span class="credit flag style5">기본키</span></li>
+                            <li><span class="altKey flag style6">대체키</span></li>
                         </ul>
                     </div>
                     <table>
@@ -116,20 +116,13 @@
                         </colgroup>
                         <tbody>
                             <tr class="table-bg">
-                                <th>요청일자</th>
-                                <th>담당자</th>
-                                <th>전화번호</th>
-                                <th>진행상태</th>
-                                <th>이력</th>
+                                <th>요청일자<br>고객클릭</th>
+                                <th>담당자<br>고객명</th>
+                                <th>전화번호<br>문자발송</th>
+                                <th>진행상태<br>동의일시</th>
+                                <th>이력<br>결과</th>
                             </tr>
-                            <tr class="table-bg">
-                                <th>고객클릭</th>
-                                <th>고객명</th>
-                                <th>문자발송</th>
-                                <th>동의일시</th>
-                                <th>결과</th>
-                            </tr>
-                            <!-- s : 신용정보인 경우-->
+                            <!-- //[D] : 신용정보인 경우-->
                             <tr class="credit part">
                                 <td>210805 18:07</td>
                                 <td>김준호</td>
@@ -144,9 +137,9 @@
                                 <td>-</td>
                                 <td>-</td>
                             </tr>
-                            <!-- e : 신용정보인 경우-->
+                            <!-- 신용정보인 경우//-->
 
-                            <!-- s : 대체키인 경우-->
+                            <!-- //[D] : 대체키인 경우-->
                             <tr class="altKey part">
                                 <td>210805 18:07</td>
                                 <td>김준호</td>
@@ -161,21 +154,48 @@
                                 <td>-</td>
                                 <td>-</td>
                             </tr>
-                            <!-- e : 대체키인 경우-->
+                            <!-- 대체키인 경우//-->
                         </tbody>
                     </table>
                 </div>
-
-                
             </div>
-            <!--contents-wrap//-->
-            <!-- <div class="fixed-btn-wrap">
-                <div class="btn-wrap">
-                    <a href="none" class="btn btn-primary">저장</a>
-                </div>
-            </div> -->
         </form>
     </div>
     <!--wrap//-->
 </body>
+<!--//신용정보-->
+<div id="lySel1" class="layerpopup layer-up" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">전체</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>대체키</button></li>
+                <li><button>신용정보</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--신용정보//-->
+
+<!--//본인-->
+<div id="lySel2" class="layerpopup layer-up " tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">전체</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>본인</button></li>
+                <li><button>성명</button></li>
+                <li><button>본점</button></li>
+                <li><button>지점</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--본인//-->
 </html>

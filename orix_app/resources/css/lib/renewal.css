@@ -88,6 +88,8 @@ textarea:valid { color: #000000 !important; }
 .flag.style2 { background:#FEF6CB; }
 .flag.style3 { background:#EFEBFF; color:#000000; }
 .flag.style4 { background:#FFEBEB; color:#000000; }
+.flag.style5 { background:#FFECD0; }
+.flag.style6 { background:#EEF5FF; }
 
 .bg-wrap { background:#F8F8F8; }
 
@@ -123,6 +125,7 @@ header .left-menu.logo a:before { width:123px; background:url(../../images/heade
 .form-row + .form-row { margin-top:20px; }
 .form-row .col + .btn { margin-left:5px; }
 .form-row  + label { margin-top:24px; }
+.form-row + .form-control { margin-top:20px; }
 /** 인풋 **/
 button,
 input { overflow: visible; }
@@ -717,7 +720,8 @@ iframe { border:none; }
 
 .table-type.check tbody tr.checked { background-color:#EEF8FF !important;}
 /* .table-type.check tbody tr { cursor: pointer; } */
-.table-type.check tbody tr .num { text-decoration: underline; }
+/* .table-type.check tbody tr .num { text-decoration: underline; } */
+.table-type tbody tr .under { color:#003F86; text-decoration:underline; }
 .table-type.result { display:none; }
 .table-type.check + .table-type.result { margin-top:30px;  }
 
@@ -1282,10 +1286,10 @@ iframe { border:none; }
 /** 신용조회동의 등록 페이지 **/
 .flag-list { display:flex; gap:5px; }
 
-
 /* 신용조회 개별 테이블 */
-.table-type.style4.tyHor .credit td { background:#FEFFEE; }
-.table-type.style4.tyHor .altKey td { background:#EEF5FF; }
+
+.table-type.style4 .credit td { background:#FFECD0; }
+.table-type.style4 .altKey td { background:#EEF5FF; }
 .table-type.style4 .table-bg { background:#F8F8F8; }
 .table-type.style4 tbody tr.table-bg:first-child { border-top:1px solid #999999; border-bottom:1px solid #999999; }
 .table-type.style4 tbody tr.table-bg + .table-bg { border-bottom:1px solid #395CA8; }
