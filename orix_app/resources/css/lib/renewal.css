@@ -196,6 +196,9 @@ input.form-control:disabled { background-color:#EFEFEF !important; pointer-event
 
 input.form-control:disabled + .jumintext { color:#DDDDDD; }
 
+input.form-control.select:read-only,
+input.form-control.datepicker:read-only { color:#000000; }
+
 /* focus */
 /** 인풋 자동완성 reset **/
 /* input:focus,
