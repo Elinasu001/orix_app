@@ -289,6 +289,9 @@ input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"
 /* .btn:hover { color:#212529; text-decoration:none; } */
 
 .btn.disabled, .btn:disabled { color:#8A8A8A; background-color:#EFEFEF; }
+.btn-cont-wrap .btn.btn-primary.disabled { color:#8A8A8A; background:#EFEFEF; }
+.btn-wrap .btn.btn-primary.disabled { color:#8A8A8A; background:#EFEFEF; }
+
 .btn:not(:disabled):not(.disabled) { cursor:pointer; }
 a.btn.disabled,
 fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활성화*/
@@ -306,8 +309,10 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 .btn.btn-primary { background:#003F86; color:#FFFFFF; }
 .btn.btn-close,
-.btn.view { padding-right:30px; padding-left:30px; background:#EDF3FA; color:#002748; }
+.btn.view { background:#EDF3FA; color:#002748; }
 
+.btn-wrap .btn.btn-close,
+.btn-wrap .btn.btn-view {  padding-right:30px; padding-left:30px; }
 .btn-wrap .btn.btn-close { width:initial;  }
 
 .btn-cont-wrap .btn.btn3 { padding:12px 0; width:240px; border:1px solid #003F86; color:#003F86; }
