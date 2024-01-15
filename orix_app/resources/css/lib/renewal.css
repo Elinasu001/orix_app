@@ -288,9 +288,11 @@ input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"
 .btn { width:100%;  font-size:1rem; line-height:1.188rem; font-weight:400;  color:#212529; text-align:center; vertical-align:middle; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; background:transparent; border:none; border-radius:10px; }
 /* .btn:hover { color:#212529; text-decoration:none; } */
 
-.btn.disabled, .btn:disabled { color:#8A8A8A; background-color:#EFEFEF; }
-.btn-cont-wrap .btn.btn-primary.disabled { color:#8A8A8A; background:#EFEFEF; }
-.btn-wrap .btn.btn-primary.disabled { color:#8A8A8A; background:#EFEFEF; }
+.btn.btn-primary.disabled,
+.btn.disabled,
+.btn:disabled { color:#8A8A8A; background:#EFEFEF; }
+/* .btn-cont-wrap .btn.btn-primary.disabled { color:#8A8A8A; background:#EFEFEF; }
+.btn-wrap .btn.btn-primary.disabled { color:#8A8A8A; background:#EFEFEF; } */
 
 .btn:not(:disabled):not(.disabled) { cursor:pointer; }
 a.btn.disabled,
@@ -411,6 +413,8 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 .radio-bg-button input[type="radio"] + label .img.individual::before {  background:url(../../images/common/ic_individual.png)no-repeat 50%/36px auto; }
 .radio-bg-button input[type="radio"]:checked + label .img.individual::before {  background:url(../../images/common/ic_individual_on.png)no-repeat 50%/36px auto; }
+.radio-bg-button input[type="radio"] + label.img { padding-left:36px; }
+
 /* tab-text */
 .tabs-wrap.vs-hidden { visibility:hidden; }
 .tabs-wrap .tab-item { position:relative; background:#fff; font-size:0; }
