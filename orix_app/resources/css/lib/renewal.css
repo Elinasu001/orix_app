@@ -292,7 +292,11 @@ input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"
 .btn.disabled,
 .btn:disabled { color:#8A8A8A; background:#EFEFEF; }
 .btn-cont-wrap .btn.btn-primary.disabled,
-.btn-wrap .btn.btn-primary.disabled { color:#8A8A8A; background:#EFEFEF; }
+.btn-wrap .btn.btn-primary.disabled,
+.btn-cont-wrap .btn.btn-close.disabled,
+.btn-cont-wrap .btn.view.disabled,
+.btn-wrap .btn.btn-close.disabled,
+.btn-wrap .btn.view.disabled { color:#8A8A8A; background:#EFEFEF; }
 
 .btn:not(:disabled):not(.disabled) { cursor:pointer; }
 a.btn.disabled,
