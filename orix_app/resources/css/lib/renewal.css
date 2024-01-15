@@ -408,8 +408,8 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .radio-bg-button input[type="radio"] + label .img { position:relative; }
 .radio-bg-button input[type="radio"] + label .img::before {  position:absolute; content:""; transform:translateY(-50%); top:40%; left:-37px;  width:36px; height:36px; }
 
-.radio-bg-button input[type="radio"] + label .img.buisnessman::before {  background:url(../../images/common/ic_buisnessman.png)no-repeat 50%/36px auto; }
-.radio-bg-button input[type="radio"]:checked + label .img.buisnessman::before {  background:url(../../images/common/ic_buisnessman_on.png)no-repeat 50%/36px auto; }
+.radio-bg-button input[type="radio"] + label .img.businessman::before {  background:url(../../images/common/ic_businessman.png)no-repeat 50%/36px auto; }
+.radio-bg-button input[type="radio"]:checked + label .img.businessman::before {  background:url(../../images/common/ic_businessman_on.png)no-repeat 50%/36px auto; }
 
 .radio-bg-button input[type="radio"] + label .img.individual::before {  background:url(../../images/common/ic_individual.png)no-repeat 50%/36px auto; }
 .radio-bg-button input[type="radio"]:checked + label .img.individual::before {  background:url(../../images/common/ic_individual_on.png)no-repeat 50%/36px auto; }
