@@ -3,6 +3,7 @@
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col { width:100%; }
 .col:first-child, .col-3:first-child, .col-5:first-child { margin-right:4px; }
 .col:last-child, .col-3:last-child, .col-5:last-child { margin-left:4px; }
+
 /* .col { -ms-flex-preferred-size:0;  flex-basis:0;  -ms-flex-positive:1; flex-grow:1; width:50%; }/// */
 .col-1 { -ms-flex: 0 0 10%; flex: 0 0 10%; max-width:10%; }
 .col-2 { -ms-flex: 0 0 20%; flex: 0 0 20%; max-width:20%; }
@@ -119,6 +120,7 @@ header .left-menu.logo a:before { width:123px; background:url(../../images/heade
 .form-row > .col,
 .form-row > [class*="col-"] { /*padding-right:5px; padding-left:5px;*/ }
 .form-row + .form-row { margin-top:20px; }
+.form-row .col + .btn { margin-left:5px; }
 
 /** 인풋 **/
 button,
