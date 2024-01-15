@@ -1,0 +1,139 @@
+<html lang="ko">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ORIX Capital</title>
+        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta name="keywords" content="ORIX Capital keywords" />
+        <meta name="description" content="ORIX Capital description" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta http-equiv="Expires" content="-1">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="No-Cache">
+    
+        <link rel="shortcut icon" type="image/x-icon" href="../../resources/favicon.png" />
+        <link rel="icon" type="image/x-icon" href="../../resources/favicon.png" />
+        
+        <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+        <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+        <link rel="stylesheet" href="../../resources/css/lib/default.css">
+        <link rel="stylesheet" href="../../resources/css/ui/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/ui/datepicker.css">
+        
+        <script type="text/javascript" src="../../resources/js/ui/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="../../resources/js/ui/jquery-1.12.4.min.js"></script>
+        <script  type="text/javascript" src="../../resources/js/ui/jquery-ui-1.12.1.js"></script>
+    
+        <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+        <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
+    </head>
+    
+    <body>
+        <!--//wrap-->
+        <div class="wrap">
+            <!-- //headerWrap -->
+            <div id="headerWrap">
+                <script>
+                $(document).ready(function(){
+                    document.charset="euc-kr";
+                    $("#headerWrap").load("../include/inc_header.html");
+                });
+                </script>
+            </div>
+            <!-- headerWrap// -->
+            <!-- //menuWrap -->
+            <div id="menuWrap">
+                <script>
+                $(document).ready(function(){
+                    document.charset="euc-kr";
+                    $("#menuWrap").load("../include/inc_all_menu.html");
+                });
+                </script>
+            </div>
+            <!-- menuWrap// -->
+            <form>
+                <!--//contents-wrap-->
+                <div class="contents-wrap bg-wrap">
+                
+                    <section class="urgency-wrap type-spread">
+                        <a href="#none">비대면 모바일 플랫폼 구축 TF팀 긴급 회의</a>
+                    </section>
+    
+                    <section class="check-wrap type-spread">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input id="" type="text" class="form-control" placeholder="검색어를 입력해 주세요">
+                                    </div>
+                                    <button class="btn btn-txt search-img" type="button">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+    
+                    <section class="result-wrap">
+                        <div class="txt-list-wrap">
+                            <div class="txt-detail-area">
+                                <div class="txt-detail-header">
+                                    <p><span class="tit">박재홍 790702-1 / 개인</span></p>
+                                    <span class="flag style4">대출</span><!--[D]: 대출일 경우 -->
+                                </div>
+                                <ul class="txt-list">
+                                    <li>
+                                        <span class="tit">제네시스 GV80 가솔린 3.5 터보</span>
+                                        <span class="txt">2022년식</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">신청금액</span>
+                                        <span class="txt">4,000 만원</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">진행현황</span>
+                                        <span class="txt yes">약정체결진행중</span>
+                                    </li>
+                                </ul>
+                                <div class="btn-cont-wrap">
+                                    <a href="#none" class="btn view">진행현황보기</a>
+                                    <a href="#none" class="btn btn-primary" onclick="openPopup('lySel2')">재요청</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-area nodata">
+                            <div class="txt-wrap">
+                                <p class="tit">조회 결과가 없습니다</p>
+                            </div>
+                        </div>
+                    </section>
+    
+                </div>
+                <!--contents-wrap//-->
+            </form>
+        </div>
+        <!--wrap//-->
+    </body>
+    <!--//신용조회 동의 요청-->
+    <div id="lySel2" class="layerpopup layer-up on" tabindex="0" style="position: fixed; top: 402px; left: 0px; display: block;"><!---->
+        <div class="content-wrap">
+            <div class="pop-header">
+                <h2 class="pop-title">약정체결 재요청</h2>
+                <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+            </div>
+            <div class="ly-cont-wrap">
+                <p class="sub-title"><span>김영수</span>님과의 전자약정 체결을 위해 고객님의<br>휴대폰으로 URL을 재전송 하시겠습니까?</p>
+            </div>
+            <div class="btn-wrap">
+                <a href="#none" class="btn btn-close">취소</a>
+                <a href="#none" class="btn btn-primary">URL 재전송</a>
+            </div>
+        </div>
+    </div>
+    <!--신용조회 동의 요청//-->
+</html>
+    
