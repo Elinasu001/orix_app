@@ -74,7 +74,7 @@ button { border-radius:0; }
 .type-spread { margin:0 -20px; }
 label,
 .form-tit { display: inline-block; margin-bottom:10px;  font-size:0.875rem; line-height:1rem; color:#555555; }
-.txt-detail-area.pd-top .form-tit { padding-bottom:15px; font-size:1rem; line-height:1.188rem; font-weight:600; }
+.txt-detail-area.pd-top .form-tit { padding-bottom:15px; font-size:1rem; line-height:1.188rem; font-weight:600; color:#000000; }
 .essential { color:#555555; }
 .essential::after { content:"*"; color:#FF0000; padding-left:3px; }
 textarea { overflow-y:scroll; width:100%; height:200px; padding:10px; resize:none; border-radius:4px; border:1px solid #DDDDDD; background:#FFFFFF; font-size:0.875rem; line-height:1rem; color:#B2B2B2; font-weight:300; white-space:pre-line; }
@@ -243,7 +243,7 @@ input::-webkit-search-results-decoration{ -webkit-appearance:none; display:none;
 .form-group + .form-group { margin-top:24px; }
 .form-control { display:block; width:100%; padding:11px 10px; font-size:0.875rem; line-height:1rem; font-weight:400; color:#CECECE; background-clip: padding-box; border: 1px solid #DDDDDD; border-radius:4px; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
 .form-wrap .form-group + .accordion-cont-wrap { margin-top:20px; }
-.form-wrap .form-group + .txt-list-wrap { margin-top:20px; }
+.input-box-wrap + .txt-list-wrap { margin-top:20px; }
 
 /* label style */
 .form-group label:not(.check-button,.radio-button) { margin-bottom:10px; }
