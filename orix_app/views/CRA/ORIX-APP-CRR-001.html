@@ -59,125 +59,121 @@
 	    <!-- menuWrap// -->
         <form>
             <div class="contents-wrap conRegist">
-                <div class="contents">
-                    <div class="inner">
-                        <div class="titTy02 tit-area">
-                            <p class="tit">요청목록</p>
-                            <!-- <p class="text">신용조회동의 등록</p>
-                            <p class="text2">신용조회동의 등록</p> -->
-                        </div>
-                        
-                        <div class="searchBox input-box-wrap">
-                            <div class="formTy01 input-box">
-                                <div class="form-group">
-                                    <label class="titTy02">검색 기준</label>
-                                    <div class="form-row">
-                                        <div class="col">
-                                            <select class="form-control">
-                                                <option>신용정보</option>
-                                            </select>
-                                        </div>
-                                        <div class="col">
-                                            <select class="form-control">
-                                                <option>본인</option>
-                                            </select>
-                                        </div>
+                
+                <div class="input-box-wrap">
+                    <div class="tit-cont-area">
+                        <p class="tit">요청목록</p>
+                    </div>
+                    <div class="input-box">
+                        <div class="form-wrap">
+
+                            <div class="form-group">
+                                <label for="">검색기준</label>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input id="" type="text" name="" class="form-control select" placeholder="신용정보" onclick="openPopup('lySel1')"><!--select 클래스 추가 및 onclick 팝업 추가하기-->
                                     </div>
-                                    <input type="text" placeholder="placeholder" class="form-control">
-                                </div>
-                                <div class="formTy01 form-group">
-                                    <label class="titTy02 essential">조회기준일</label>
-                                    <div class="form-row">
-                                        <div class="col">
-                                            <input type="date" class="form-control" inputmode="none">
-                                        </div>
-                                        <div class="col">
-                                            <input type="date" class="form-control" inputmode="none">
-                                        </div>
+                                    <div class="col">
+                                        <input id="" type="text" name="" class="form-control select" placeholder="본인" onclick="openPopup('lySel2')">
                                     </div>
                                 </div>
-                                <div class="btn-cont-wrap">
-                                    <button type="button" class="btnTy02 btn btn-primary">조회</button>
+                                <input id="" type="text" name="" class="form-control" placeholder="??">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">조회기준일</label>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input id="" type="text" class="form-control datepicker" placeholder=""  inputmode="none">
+                                    </div>
+                                    <div class="col">
+                                        <input id="" type="text" class="form-control datepicker" placeholder=""  inputmode="none">
+                                    </div>
                                 </div>
                             </div>
+                            <div class="btn-cont-wrap">
+                                <a href="#none" class="btn btn-primary">조회</a>
+                            </div>
                         </div>
-                        <div class="titTy02 tit-area">
-                            <p class="tit">요청내역</p>
-                            <ul class="tblSubBox">
-                                <li><span class="credit flag style1">기본키</span></li>
-                                <li><span class="altKey flag style2">대체키</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="table-type tblTy01 tyHor ta-c style4 table-scroll">
-                            <table>
-                                <caption>가로형</caption>
-                                <colgroup>
-                                    <col width="20%"><col width="20%"><col width="20%">
-                                    <col width="20%"><col width="20%">
-                                </colgroup>
-                                <tbody>
-                                    <tr class="table-bg">
-                                        <th>요청일자</th>
-                                        <th>담당자</th>
-                                        <th>전화번호</th>
-                                        <th>진행상태</th>
-                                        <th>이력</th>
-                                    </tr>
-                                    <tr class="table-bg">
-                                        <th>고객클릭</th>
-                                        <th>고객명</th>
-                                        <th>문자발송</th>
-                                        <th>동의일시</th>
-                                        <th>결과</th>
-                                    </tr>
-                                    <!-- s : 신용정보인 경우-->
-                                    <tr class="credit part">
-                                        <td>210805 18:07</td>
-                                        <td>김준호</td>
-                                        <td>9957 - **30</td>
-                                        <td>[00] MMS 발송</td>
-                                        <td class="under">보기</td>
-                                    </tr>
-                                    <tr class="credit">
-                                        <td>210805 19:45</td>
-                                        <td>김준호</td>
-                                        <td>전송대기</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <!-- e : 신용정보인 경우-->
-        
-                                    <!-- s : 대체키인 경우-->
-                                    <tr class="altKey part">
-                                        <td>210805 18:07</td>
-                                        <td>김준호</td>
-                                        <td>9957 - **30</td>
-                                        <td>[00] MMS 발송</td>
-                                        <td  class="under">보기</td>
-                                    </tr>
-                                    <tr class="altKey">
-                                        <td>210805 19:45</td>
-                                        <td>김준호</td>
-                                        <td>전송대기</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <!-- e : 대체키인 경우-->
-                                </tbody>
-                            </table>
-                        </div>
-                        
-                      
                     </div>
                 </div>
+                <div class="rc-gray type-spread"></div>
+
+                <div class="table-type tblTy01 tyHor ta-c style4 table-scroll">
+                    
+                    <div class="tit-cont-area">
+                        <p class="tit">요청내역</p>
+                        <ul class="flag-list">
+                            <li><span class="credit flag style1">기본키</span></li>
+                            <li><span class="altKey flag style2">대체키</span></li>
+                        </ul>
+                    </div>
+                    <table>
+                        <caption>가로형</caption>
+                        <colgroup>
+                            <col width="20%"><col width="20%"><col width="20%">
+                            <col width="20%"><col width="20%">
+                        </colgroup>
+                        <tbody>
+                            <tr class="table-bg">
+                                <th>요청일자</th>
+                                <th>담당자</th>
+                                <th>전화번호</th>
+                                <th>진행상태</th>
+                                <th>이력</th>
+                            </tr>
+                            <tr class="table-bg">
+                                <th>고객클릭</th>
+                                <th>고객명</th>
+                                <th>문자발송</th>
+                                <th>동의일시</th>
+                                <th>결과</th>
+                            </tr>
+                            <!-- s : 신용정보인 경우-->
+                            <tr class="credit part">
+                                <td>210805 18:07</td>
+                                <td>김준호</td>
+                                <td>9957 - **30</td>
+                                <td>[00] MMS 발송</td>
+                                <td class="under">보기</td>
+                            </tr>
+                            <tr class="credit">
+                                <td>210805 19:45</td>
+                                <td>김준호</td>
+                                <td>전송대기</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <!-- e : 신용정보인 경우-->
+
+                            <!-- s : 대체키인 경우-->
+                            <tr class="altKey part">
+                                <td>210805 18:07</td>
+                                <td>김준호</td>
+                                <td>9957 - **30</td>
+                                <td>[00] MMS 발송</td>
+                                <td  class="under">보기</td>
+                            </tr>
+                            <tr class="altKey">
+                                <td>210805 19:45</td>
+                                <td>김준호</td>
+                                <td>전송대기</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <!-- e : 대체키인 경우-->
+                        </tbody>
+                    </table>
+                </div>
+
+                
             </div>
             <!--contents-wrap//-->
-            <div class="fixed-btn-wra">
-                <div class="btn-wrap btnArea">
-                    <a href="none" class="btn btn-primary popOpen" data-columns="4">저장</a>
+            <!-- <div class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <a href="none" class="btn btn-primary">저장</a>
                 </div>
-            </div>
+            </div> -->
         </form>
     </div>
     <!--wrap//-->

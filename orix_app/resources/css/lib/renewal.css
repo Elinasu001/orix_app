@@ -93,7 +93,8 @@ textarea:valid { color: #000000 !important; }
 
 /* 회색 선 */
 .rc-gray { margin-top:30px; height:20px; background:#F8F8F8; }
-
+.rc-gray +  .form-group.check-buttons { margin-top:24px; }
+.rc-gray + .table-type { margin-top:24px; }
 /*모바일 사파리(iOS9)*/
 /* input {    -webkit-appearance: searchfield;}
  *::-webkit-search-cancel-button { -webkit-appearance: searchfield-cancel-button;} */
@@ -121,7 +122,7 @@ header .left-menu.logo a:before { width:123px; background:url(../../images/heade
 .form-row > [class*="col-"] { /*padding-right:5px; padding-left:5px;*/ }
 .form-row + .form-row { margin-top:20px; }
 .form-row .col + .btn { margin-left:5px; }
-
+.form-row  + label { margin-top:24px; }
 /** 인풋 **/
 button,
 input { overflow: visible; }
@@ -1276,7 +1277,7 @@ iframe { border:none; }
 
 
 /** 신용조회동의 등록 페이지 **/
-
+.flag-list { display:flex; gap:5px; }
 
 
 /* 신용조회 개별 테이블 */

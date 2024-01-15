@@ -104,7 +104,7 @@
 
                     <div class="form-group">
                         <label for="">사업자번호</label>
-                        <input id="" type="text" name="" class="form-control" placeholder="사업자번호 입력" disabled=""><!--disalbed-->
+                        <input id="" type="text" name="" class="form-control" placeholder="사업자번호를 입력해주세요" disabled=""><!--disalbed-->
                     </div>
                     <div class="form-group">
                         <label for="">사업자번호</label>
@@ -113,17 +113,17 @@
 
                     <div class="form-group">
                         <label for="">상품구분</label>
-                        <input id="" type="text" name="" class="form-control select" placeholder="상품구분 선택" onclick="openPopup('lySel1')"><!--select 클래스 추가 및 onclick 팝업 추가하기-->
+                        <input id="" type="text" name="" class="form-control select" placeholder="상품구분을 선택해주세요" onclick="openPopup('lySel1')"><!--select 클래스 추가 및 onclick 팝업 추가하기-->
                     </div>
 
                     <div class="form-group">
                         <label for="">물건구분</label>
-                        <input id="" type="text" name="" class="form-control select" placeholder="물건구분 선택" onclick="openPopup('lySel2')"><!--select 클래스 추가 및 onclick 팝업 추가하기-->
+                        <input id="" type="text" name="" class="form-control select" placeholder="물건구분을 선택해주세요" onclick="openPopup('lySel2')"><!--select 클래스 추가 및 onclick 팝업 추가하기-->
                     </div>
 
                     <div class="form-group">
                         <label for="">고객명</label>
-                        <input id="" type="text" name="" class="form-control" placeholder="고객명 입력" invalid="">
+                        <input id="" type="text" name="" class="form-control" placeholder="고객명을 입력력해주세요" invalid="">
                     </div>
 
                     <div class="form-group">
@@ -146,41 +146,39 @@
                         <label for="" class="">주요메모</label><!--essential 필수일 경우-->
                         <textarea id="myTextarea" type="text" title="성명" class="" name="" placeholder="내용을 입력해주세요" maxlength="" required=""></textarea>
                     </div>
-                </div>
+                
                 <div class="rc-gray type-spread"></div>
-                <div class="form-wrap">
 
-                    <div class="form-group check-buttons"><!--[D]: 체크 시 하단에 성명 연락처 입력 란 보여짐-->
-                        <label for="check-1" class="check-button">
-                            <input type="checkbox" id="check-1" name="terms">
-                            <span class="custom-check"></span>
-                            <span class="text">알림문자 수신여부</span>
-                        </label>
-                    </div>
-                    
-                    <div class="check-result-wrap">
-                        <div class="form-group">
-                            <label for="" class="">성명</label><!--essential 필수일 경우-->
-                            <div class="form-row">
-                                <div class="col">
-                                    <input id="" type="text" class="form-control" placeholder="성명 검색">
-                                </div>
-                                <button class="btn btn-txt search-img" type="button">검색</button>
+                <div class="form-group check-buttons"><!--[D]: 체크 시 하단에 성명 연락처 입력 란 보여짐-->
+                    <label for="check-1" class="check-button">
+                        <input type="checkbox" id="check-1" name="terms">
+                        <span class="custom-check"></span>
+                        <span class="text">알림문자 수신여부</span>
+                    </label>
+                </div>
+                
+                <div class="check-result-wrap" onclick="openPopup('lySel3')">
+                    <div class="form-group " >
+                        <label for="" class="">성명</label><!--essential 필수일 경우-->
+                        <div class="form-row">
+                            <div class="col">
+                                <input id="" type="text" class="form-control" placeholder="">
                             </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="">연락처</label>
-                            <input id="" type="text" name="" class="form-control" placeholder="연락처 입력" invalid="">
+                            <button class="btn btn-txt search-img" type="button">검색</button>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="">연락처</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="" invalid="">
+                    </div>
+                </div>
 
                 </div>
             </div>
             <!--contents-wrap//-->
             <div class="fixed-btn-wrap">
                 <div class="btn-wrap">
-                    <a href="none" class="btn btn-primary">저장</a>
+                    <a href="#none" class="btn btn-primary">저장</a>
                 </div>
             </div>
         </form>
@@ -229,5 +227,77 @@
 </div>
 <!--물건구분//-->
 
+<!--//FP조회-->
+<div id="lySel3" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">FP조회</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="form-group radio-buttons">
+            <label for="radio-1" class="radio-button">
+                <input type="radio" id="radio-1" name="terms">
+                <span class="custom-radio"></span>
+                <span class="text">이름</span>
+            </label>
+            <label for="radio-2" class="radio-button">
+                <input type="radio" id="radio-2" name="terms">
+                <span class="custom-radio"></span>
+                <span class="text">전화번호</span>
+            </label>
+        </div>
+        <div class="form-group gray-search">
+            <input type="search" id="" class="form-control" placeholder="이름 입력">
+            <button class="btn btn-search" type="button">검색</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <div class="table-type ta-c style3 table-scroll check">
+                <table class="">
+                    <caption>FP조회</caption>
+                    <colgroup>
+                        <!-- <col width="*%"> -->
+                        <col width="40%">
+                        <col width="60%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <!-- <th></th> -->
+                            <th scope="row">고객명</th>
+                            <th scope="row">연락처</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <!-- <td ><input type="checkbox" name="user_checkbox" id="check1" class="custom-check"><label for="check1"></label></td> -->
+                            <td class="name">홍길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="user_checkbox" id="check2" class="custom-check"><label for="check2"></label></td> -->
+                            <td class="name">김길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
+                            <td class="name">박길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
+                            <td class="name">송길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
+                            <td class="name">진길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--FP조회//-->
 
 </html>

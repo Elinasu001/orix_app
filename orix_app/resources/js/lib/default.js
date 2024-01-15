@@ -9,13 +9,13 @@ $(document).ready(function() {
   });
   
   /** table 의 checkbox **/
-  // checkbox
+  // // checkbox
   // $('.table-type tbody input').on('change', function() {
   //     var isChecked = $(this).is(':checked');
   //     $(this).closest('tr').toggleClass('checked', isChecked);
   // });
 
-  // tr row
+  // // tr row
   // $('.table-type tbody tr').on('click', function() {
   //     var checkbox = $(this).find('input');
       
@@ -324,8 +324,8 @@ function openPopup(id) {
 
 
 
-  if (_target.has('.ly-acc-select').length > 0) {
-    _target.find('.ly-acc-select > .acc-list-area > a').on('click', function (e) {
+  if (_target.has('.ly-select > .table-type.check').length > 0) {
+    _target.find('.ly-select > .table-type.check tr tbody > tr').on('click', function (e) {
       closePopupUp(id);
       $('body').removeAttr('style');
       $(window).scrollTop(currentTop);
