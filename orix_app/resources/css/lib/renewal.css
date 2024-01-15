@@ -1254,15 +1254,8 @@ iframe { border:none; }
 
 
 /** 신용조회동의 등록 페이지 **/
-.conRegist .titTy02 { margin-top:25px; }
-.conRegist .form-group { display:flex; flex-direction:column; }
-.conRegist .form-wrap .form-group .form-tit { display:flex; }
-.conRegist .form-wrap .form-group .form-tit { margin-top:0; }
-.conRegist .form-group.check-buttons { align-items:flex-start; }
-.conRegist .input-box-wrap table.input-box { display:block; }
-.conRegist .input-box-wrap table.input-box tbody { display:block; width:100%; }
-.conRegist .form-row + .form-control { margin-top:10px; }
-.conRegist .tblSubBox { display:flex; gap:10px; }
+
+
 
 /* 신용조회 개별 테이블 */
 .table-type.style4.tyHor .credit td { background:#FEF6CB; }
