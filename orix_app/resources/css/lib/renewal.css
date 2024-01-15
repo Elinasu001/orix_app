@@ -338,9 +338,8 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .btn.btn-line-text { position: relative; font-size:0.875rem; line-height:1rem; color:#757575; }
 .btn-cont-wrap .btn.btn-line-text:first-child:after { content:""; position:absolute; top:50%; right:0; transform:translate(0, -50%); width:1px; height:10px; border:1px solid #EBEBED; }
 .btn.btn-text { padding:0 0!important; font-size:0.875rem; line-height:1rem; font-weight:500; color:#333333; /*text-align:right;*/ }
-.btn.btn-text.small-line:hover  {color:#003F86; }
-.btn.btn-text.small-line:hover { border-bottom:1px solid #003F86; }
-.btn.btn-text.small-line { border-radius:0; width:initial; color:#003F86; border-bottom:1px solid #003F86; }
+/* .btn.btn-text.small-line:hover { border-bottom:1px solid #003F86; } */
+.btn.btn-text.small-line { margin-top:40px; border-radius:0; width:initial; color:#003F86; border-bottom:1px solid #003F86; }
 
 .btn.btn-text.big-line  { border-radius:0; width:initial; color:#FFFFFF; border-bottom:1px solid #FFFFFF; font-size:1.125rem; line-height:1.25rem; font-weight:700; }
 
@@ -349,6 +348,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 /* 전체메뉴 - 로그아웃  */
 .btn.logout-text { padding-top:0; padding:0; border-radius:0; border-bottom:1px solid #FFFFFF;  color:#EAEAEA; font-size:0.875rem; line-height:1rem; font-weight:500;  }
+
 
 /** 폼 버튼 **/
 .form-group .btn { width:initial; padding:10px 14px; border-radius:4px; }
@@ -1115,6 +1115,7 @@ iframe { border:none; }
 .check-wrap .txt-list-wrap .txt-detail-area.on { display:block; }
 /* .check-wrap { padding-top:28px !important;} */
 .check-wrap.type-spread { background:#FFFFFF; padding:8px 20px 20px; }
+.check-wrap .form-wrap { margin-top:0; }
 .check-wrap + .result-wrap { margin-top:20px; }
 /* .check-wrap .form-wrap  { margin-top:0; } */
 .check-wrap + .result-wrap.mt0 { margin-top:0; }
@@ -1123,14 +1124,16 @@ iframe { border:none; }
 .check-list-wrap { margin-top:56px; padding-bottom:20px; border-radius:12px; background:#F8F8F8; font-size:0.875rem; line-height:1rem; font-weight:500; text-align:center; }
 .check-list-wrap li { padding-top:15px; }
 
-
+/* 신용조회등록 */
+.check-result-wrap { display:none; }
+.check-result-wrap.on { display:block; }
 .form-group.check-buttons + .check-result-wrap { margin-top:24px; }
 
 /* 긴급공지 */
 .urgency-wrap { position:relative; padding:10px 20px 10px 46px; background:#EEF8FF; }
 .urgency-wrap a { font-size:0.875rem; line-height:1rem; font-weight:400; color:#003F86; }
 .urgency-wrap a::before { content:""; position:absolute; width:16px; height:16px; left:20px;  background: url(../../images/common/ico_urgency.png) no-repeat center 50%/16px auto; }
-.urgency-wrap + .check-wrap { margin-top:20px; }
+.urgency-wrap + .check-wrap { padding-top:28px; }
 
 /* loading */
 .loading-wrap {position:fixed; display:flex; justify-content:center; right:0; top:0; bottom:0; z-index:100001; width:100%; height:100vh; min-height:100%; background:rgba(0,0,0,0.2); }
@@ -1221,7 +1224,7 @@ iframe { border:none; }
 .notice-list-wrap ul li .notice-tit-area .num { font-size:0.75rem;  line-height:0.875rem; font-weight:400; color:#555555; }
 .notice-list-wrap ul li .text { font-size:0.875rem; line-height:1rem; font-weight:500; color:#333333; }
 .notice-list-wrap ul li .notice-tit-area + .text { margin-top:9px; }
-.notice-list-wrap + .btn-cont-wrap.center { margin-top:48px; }
+
 
 /* 공지사항 상세  */
 .list-tit-wrap { margin-top:28px; }

@@ -38,7 +38,7 @@ $(document).ready(function() {
 //     var index = $(this).index();
 //     $(".table-type.result").show();
 // });
-
+/** 테이블  상세현황**/
 $(".table-type.check tbody tr").click(function () {
 
   $(".table-type.check tbody tr").not(this).removeClass("checked");
@@ -250,7 +250,8 @@ function layerFunc(_target) {
 }
 
 //block
-var winScrollTop;
+var currentTop = 0;
+
 function addBlock(_full) {
   $('.close').on('click', function () {
     $('.block').trigger('click');
@@ -263,7 +264,7 @@ function deleteBlock(_full) {
   }
   $('html, .wrap').css({ 'height': '', 'overflow': '' });
   $('body').removeAttr('style');
-  $(window).scrollTop(winScrollTop);
+  // $(window).scrollTop(winScrollTop);
 }
 
 
@@ -295,7 +296,7 @@ function openPopup(id) {
 function openPopup(id) {
   var _target = $('#' + id);
   currentTop = $(window).scrollTop();
-  $('body').css({ 'position': 'fixed', 'top': -currentTop });
+  // $('body').css({ 'position': 'fixed', 'top': -currentTop });
 
 
   //_target.fadeIn(300);
@@ -303,11 +304,12 @@ function openPopup(id) {
   _target.removeClass('close');
   _target.addClass('on').show();
   _target.focus();
+  
   _target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
     closePopupUp(id);
-    $('body').removeAttr('style');
-    $(window).scrollTop(currentTop);
-    _target.removeClass('on');
+    // $('body').removeAttr('style');
+    // $(window).scrollTop(currentTop);
+    // _target.removeClass('on');
     // $('.layerpopup').css('display', '');
   });
 
@@ -315,22 +317,21 @@ function openPopup(id) {
     _target.find('.ly-select-list > li > button').on('click', function () {
       
       closePopupUp(id);
-      $('body').removeAttr('style');
-      $(window).scrollTop(currentTop);
-      _target.removeClass('on');
+      // $('body').removeAttr('style');
+      // $(window).scrollTop(currentTop);
+      // _target.removeClass('on');
     });
 
   }
 
-
-
+  /** 테이블 팝업 **/
   if (_target.has('.ly-select > .table-type.check').length > 0) {
-    _target.find('.ly-select > .table-type.check tr tbody > tr').on('click', function (e) {
+    _target.find('.ly-select .table-type.check tbody tr').on('click', function () {
       closePopupUp(id);
-      $('body').removeAttr('style');
-      $(window).scrollTop(currentTop);
-      _target.removeClass('on');
-      e.preventDefault();
+      // $('body').removeAttr('style');
+      // $(window).scrollTop(currentTop);
+      // _target.removeClass('on');
+       e.preventDefault();
     });
   }
 
@@ -339,8 +340,9 @@ function openPopup(id) {
 function closePopup(id) {
   var _target = $('#' + id);
   deleteBlock();
-  $('#' + id).fadeOut(600);
+  _target.fadeOut(600);
   _target.removeClass('on');
+  $(window).scrollTop(currentTop);  // Set the scroll position back to the stored value
 }
 //close popup slideDown
 function closePopupUp(id) {

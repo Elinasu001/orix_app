@@ -157,19 +157,19 @@
                     </label>
                 </div>
                 
-                <div class="check-result-wrap" onclick="openPopup('lySel3')">
+                <div class="check-result-wrap on"><!--[D]: 알림 문자 수신여부 동의 시 성명 연락처 입력 란 보여짐 On 클래스 : display:block;-->
                     <div class="form-group " >
                         <label for="" class="">성명</label><!--essential 필수일 경우-->
                         <div class="form-row">
                             <div class="col">
-                                <input id="" type="text" class="form-control" placeholder="">
+                                <input id="" type="text" class="form-control" placeholder=""  onclick="openPopup('lySel3')">
                             </div>
                             <button class="btn btn-txt search-img" type="button">검색</button>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="">연락처</label>
-                        <input id="" type="text" name="" class="form-control" placeholder="" invalid="">
+                        <input id="" type="text" name="" class="form-control" placeholder="" invalid=""  onclick="openPopup('lySel3')">
                     </div>
                 </div>
 
@@ -255,40 +255,33 @@
                 <table class="">
                     <caption>FP조회</caption>
                     <colgroup>
-                        <!-- <col width="*%"> -->
                         <col width="40%">
                         <col width="60%">
                     </colgroup>
                     <thead>
                         <tr>
-                            <!-- <th></th> -->
                             <th scope="row">고객명</th>
                             <th scope="row">연락처</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="">
-                            <!-- <td ><input type="checkbox" name="user_checkbox" id="check1" class="custom-check"><label for="check1"></label></td> -->
                             <td class="name">홍길동</td>
                             <td>010-1111-1234</td>
                         </tr>
                         <tr>
-                            <!-- <td><input type="checkbox" name="user_checkbox" id="check2" class="custom-check"><label for="check2"></label></td> -->
                             <td class="name">김길동</td>
                             <td>010-1111-1234</td>
                         </tr>
                         <tr>
-                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
                             <td class="name">박길동</td>
                             <td>010-1111-1234</td>
                         </tr>
                         <tr>
-                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
                             <td class="name">송길동</td>
                             <td>010-1111-1234</td>
                         </tr>
                         <tr>
-                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
                             <td class="name">진길동</td>
                             <td>010-1111-1234</td>
                         </tr>
