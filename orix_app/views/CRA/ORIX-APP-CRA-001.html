@@ -59,16 +59,175 @@
 	    <!-- menuWrap// -->
         <form>
             <div class="contents-wrap conRegist">
-               
+                <!-- <section class="urgency-wrap type-spread">
+                    <a href="#none">비대면 모바일 플랫폼 구축 TF팀 긴급 회의</a>
+                </section> -->
+                <div class="form-wrap">
+                    <div class="tit-cont-area">
+                        <p class="tit">신용조회동의 등록 (<span>김영수</span>)님</p>
+                    </div>
+                    <div class="btn-cont-wrap">
+                        <a href="#none" class="btn btn-primary">초기화</a>
+                    </div>
+                
+
+                    <div class="rc-gray type-spread"></div>
+                
+                    <p class="form-tit">요청내역</p>
+                    <div class="form-group">
+                        <div class="form-row radio-bg-button">
+                            <div class="col">
+                                <input type="radio" name="q2" id="q1" value="Y">
+                                <label for="q1" class="rd">차주</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" name="q2" id="q2" value="N">
+                                <label for="q2" class="rd">보증</label>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="form-tit">고객구분</p>
+                    <div class="form-group">
+                        <div class="form-row radio-bg-button">
+                            <div class="col">
+                                <input type="radio" name="q2" id="q21" value="Y">
+                                <label for="q21" class="img"><span class="img individual">개인</span></label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" name="q2" id="q22" value="N"><!--[D]: 개인사업자 선택시 사업자 번호 disabled 삭제 활성화 -->
+                                <label for="q22" class="img"><span class="img businessman"></span>개인사업자</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">사업자번호</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="사업자번호 입력" disabled=""><!--disalbed-->
+                    </div>
+                    <div class="form-group">
+                        <label for="">사업자번호</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="사업자번호 입력"><!--[D]: 개인사업자 선택시 사업자 번호 disabled 삭제 활성화 -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">상품구분</label>
+                        <input id="" type="text" name="" class="form-control select" placeholder="상품구분 선택" onclick="openPopup('lySel1')"><!--select 클래스 추가 및 onclick 팝업 추가하기-->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">물건구분</label>
+                        <input id="" type="text" name="" class="form-control select" placeholder="물건구분 선택" onclick="openPopup('lySel2')"><!--select 클래스 추가 및 onclick 팝업 추가하기-->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">고객명</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="고객명 입력" invalid="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">차량(물건)가격</label>
+                        <div class="amount">
+                            <input id="" type="amount" class="form-control amount-num" placeholder="금액을 입력해주세요" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                            <span class="amount-txt">원</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">여신신청금액</label>
+                        <div class="amount">
+                            <input id="" type="amount" class="form-control amount-num" placeholder="금액을 입력해주세요" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                            <span class="amount-txt">원</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="">주요메모</label><!--essential 필수일 경우-->
+                        <textarea id="myTextarea" type="text" title="성명" class="" name="" placeholder="내용을 입력해주세요" maxlength="" required=""></textarea>
+                    </div>
+                </div>
+                <div class="rc-gray type-spread"></div>
+                <div class="form-wrap">
+
+                    <div class="form-group check-buttons"><!--[D]: 체크 시 하단에 성명 연락처 입력 란 보여짐-->
+                        <label for="check-1" class="check-button">
+                            <input type="checkbox" id="check-1" name="terms">
+                            <span class="custom-check"></span>
+                            <span class="text">알림문자 수신여부</span>
+                        </label>
+                    </div>
+                    
+                    <div class="check-result-wrap">
+                        <div class="form-group">
+                            <label for="" class="">성명</label><!--essential 필수일 경우-->
+                            <div class="form-row">
+                                <div class="col">
+                                    <input id="" type="text" class="form-control" placeholder="성명 검색">
+                                </div>
+                                <button class="btn btn-txt search-img" type="button">검색</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">연락처</label>
+                            <input id="" type="text" name="" class="form-control" placeholder="연락처 입력" invalid="">
+                        </div>
+                    </div>
+
+                </div>
             </div>
             <!--contents-wrap//-->
             <div class="fixed-btn-wrap">
                 <div class="btn-wrap">
-                    <a href="none" class="btn btn-primary popOpen" data-columns="4">저장</a>
+                    <a href="none" class="btn btn-primary">저장</a>
                 </div>
             </div>
         </form>
     </div>
     <!--wrap//-->
 </body>
+<!--//상품구분-->
+<div id="lySel1" class="layerpopup layer-up on" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">상품구분</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>500, 리스,렌터카</button></li>
+                <li><button>600, 할부</button></li>
+                <li><button>700, 대출</button></li>
+                <li><button>800, 기타</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--상품구분//-->
+
+<!--//물건구분-->
+<div id="lySel2" class="layerpopup layer-up on" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">물건구분</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>100, 승용차(신차)</button></li>
+                <li><button>110, 승용차(중고차)</button></li>
+                <li><button>200, 상용(버스,트럭)</button></li>
+                <li><button>300, 의료기기</button></li>
+                <li><button>400, 공작기계</button></li>
+                <li><button>500, 일반기계</button></li>
+                <li><button>600, 중장비</button></li>
+                <li><button>700, 해당무</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--물건구분//-->
+
+
 </html>

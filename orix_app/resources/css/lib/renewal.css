@@ -1115,6 +1115,9 @@ iframe { border:none; }
 .check-list-wrap { margin-top:56px; padding-bottom:20px; border-radius:12px; background:#F8F8F8; font-size:0.875rem; line-height:1rem; font-weight:500; text-align:center; }
 .check-list-wrap li { padding-top:15px; }
 
+
+.form-group.check-buttons + .check-result-wrap { margin-top:24px; }
+
 /* 긴급공지 */
 .urgency-wrap { position:relative; padding:10px 20px 10px 46px; background:#EEF8FF; }
 .urgency-wrap a { font-size:0.875rem; line-height:1rem; font-weight:400; color:#003F86; }
