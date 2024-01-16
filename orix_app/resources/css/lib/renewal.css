@@ -724,10 +724,9 @@ iframe { border:none; }
 .table-row tbody tr td { border-bottom:1px solid #DDDDDD; border-left:1px solid #DDDDDD; color:#212121; font-weight:500;}
 .table-row tbody tr td:last-child {border-right:1px solid #DDDDDD;}
 
-/* table-type.checked */
+/* table-type.checked 테이블 */
 [class^="table-type"].style3 tbody td { color:#00345F; font-weight:400; border-bottom:1px solid #DDDDDD; }
 [class^="table-type"].style3 thead th {padding:15px 0; font-weight:300; background: #003F86; color:#FFFFFF;  }
-
 
 .table-type.check tbody tr.checked { background-color:#EEF8FF !important;}
 /* .table-type.check tbody tr { cursor: pointer; } */
@@ -735,6 +734,25 @@ iframe { border:none; }
 .table-type tbody tr .under { color:#003F86; text-decoration:underline; }
 .table-type.result { display:none; }
 .table-type.check + .table-type.result { margin-top:30px;  }
+
+/* 신용조회 개별 테이블 */
+.table-type.style4 .credit td { background:#FFECD0; }
+.table-type.style4 .altKey td { background:#EEF5FF; }
+.table-type.style4 .table-bg { background:#F8F8F8; }
+.table-type.style4 tbody tr.table-bg:first-child { border-top:1px solid #999999; border-bottom:1px solid #999999; }
+.table-type.style4 tbody tr.table-bg + .table-bg { border-bottom:1px solid #395CA8; }
+.table-type.style4 tbody tr { border-bottom:1px solid #DDDDDD; }
+.table-type tbody tr .under { color:#003F86; text-decoration:underline; }
+
+/* 품의결재 개별 테이블 */
+[class^="table-type"].style5 tbody td { color:#00345F; }
+ .table-type.style5 tbody th:first-child {  background:#003F86; color:#FFFFFF;  }
+.table-type.style5 tbody > tr > th:first-child { border-top:0px; }
+.table-type.style5 tbody th { border-top:1px solid #DDDDDD; background:#F8F8F8; color:#000000;  }
+.table-type.style5 tbody td { border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD; }
+
+
+
 
 /** text 공통 **/
 .tit-main-area { margin-top:25px; margin-bottom:40px; }
@@ -1302,16 +1320,6 @@ iframe { border:none; }
 
 /** 신용조회동의 등록 페이지 **/
 .flag-list { display:flex; gap:5px; }
-
-/* 신용조회 개별 테이블 */
-
-.table-type.style4 .credit td { background:#FFECD0; }
-.table-type.style4 .altKey td { background:#EEF5FF; }
-.table-type.style4 .table-bg { background:#F8F8F8; }
-.table-type.style4 tbody tr.table-bg:first-child { border-top:1px solid #999999; border-bottom:1px solid #999999; }
-.table-type.style4 tbody tr.table-bg + .table-bg { border-bottom:1px solid #395CA8; }
-.table-type.style4 tbody tr { border-bottom:1px solid #DDDDDD; }
-.table-type tbody tr .under { color:#003F86; text-decoration:underline; }
 
 
 /* 2024-01-16 */
