@@ -84,7 +84,7 @@ textarea:focus { color:#000000; font-size:0.875rem; font-weight:300; border-colo
 textarea:valid { color: #000000 !important; }
 
 
-.flag { padding:3px 12px; border-radius:4px; color:#000000; font-size:0.75rem; line-height:0.875rem; font-weight:400; }
+.flag { /*position:absolute; right:0;*/  padding:3px 12px; border-radius:4px; color:#000000; font-size:0.75rem; line-height:0.875rem; font-weight:400; }
 .flag.style1 { background:#DEF5E3; }
 .flag.style2 { background:#FEF6CB; }
 .flag.style3 { background:#EFEBFF; color:#000000; }
@@ -199,7 +199,9 @@ input.form-control:disabled { background-color:#EFEFEF !important; pointer-event
 input.form-control:disabled + .jumintext { color:#DDDDDD; }
 
 input.form-control.select:read-only,
-input.form-control.datepicker:read-only { color:#000000; }
+input.form-control.datepicker:read-only,
+textarea:read-only { color:#000000; }
+
 
 /* focus */
 /** 인풋 자동완성 reset **/
@@ -1016,7 +1018,7 @@ iframe { border:none; }
 .txt-list-wrap + .accordion-cont-wrap { margin-top:20px; }
 /* .txt-list-wrap + .txt-list-wrap { margin-top:20px; } */
 .txt-list-wrap .txt-detail-area .btn-cont-wrap { margin-top:30px; }
-.txt-list-wrap .txt-detail-area .txt-detail-header { display:flex; align-items:center; justify-content: space-between; padding-bottom:15px;     margin-bottom:15px; border-bottom:1px solid #E2E2E2; font-size:0; color:#333333; }
+.txt-list-wrap .txt-detail-area .txt-detail-header { display:flex; gap:10px; align-items:center; justify-content: space-between; padding-bottom:15px;     margin-bottom:15px; border-bottom:1px solid #E2E2E2; font-size:0; color:#333333; }
 .txt-list-wrap .txt-detail-area .txt-detail-header + .txt-detail-header.no-line { padding:0; }
 
 
