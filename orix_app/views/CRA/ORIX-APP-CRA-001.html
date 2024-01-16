@@ -129,7 +129,7 @@
                     <div class="form-group">
                         <label for="">차량(물건)가격</label>
                         <div class="amount">
-                            <input id="" type="amount" class="form-control amount-num" placeholder="금액 입력" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                            <input id="" type="amount" class="form-control amount-num" placeholder="가격 입력" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
                             <span class="amount-txt">원</span>
                         </div>
                     </div>
@@ -158,18 +158,18 @@
                 </div>
                 
                 <div class="check-result-wrap on"><!--[D]: 알림 문자 수신여부 동의 시 성명 연락처 입력 란 보여짐 On 클래스 : display:block;-->
-                    <div class="form-group " >
+                    <div class="form-group " onclick="openPopup('lySel3')">
                         <label for="" class="">성명</label><!--essential 필수일 경우-->
                         <div class="form-row">
                             <div class="col">
-                                <input id="" type="text" class="form-control" placeholder=""  onclick="openPopup('lySel3')">
+                                <input id="" type="text" class="form-control" placeholder="" readonly>
                             </div>
-                            <button class="btn btn-txt search-img" type="button">검색</button>
+                            <button class="btn btn-txt search-img" type="button" onclick="openPopup('lySel3')" >검색</button>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="">연락처</label>
-                        <input id="" type="text" name="" class="form-control" placeholder="" invalid=""  onclick="openPopup('lySel3')">
+                        <input id="" type="text" name="" class="form-control" placeholder="" invalid="" readonly>
                     </div>
                 </div>
 
