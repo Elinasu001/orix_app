@@ -199,7 +199,7 @@ input.form-control:disabled { background-color:#EFEFEF !important; pointer-event
 input.form-control:disabled + .jumintext { color:#DDDDDD; }
 
 input.form-control.select:read-only,
-input.form-control.datepicker:read-only,
+input.form-control.datepicker:read-only  { color:#000000;}
 /* textarea:read-only { color:#000000; }
 textarea:read-only:focus { color:#000000; border-color:initial;  } */
 /* textarea:focus { color:#000000; font-size:0.875rem; font-weight:300; border-color:#003763; outline:none; } */
