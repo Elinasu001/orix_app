@@ -347,9 +347,13 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .btn-cont-wrap .btn.btn-line-text:first-child:after { content:""; position:absolute; top:50%; right:0; transform:translate(0, -50%); width:1px; height:10px; border:1px solid #EBEBED; }
 .btn.btn-text { padding:0 0!important; font-size:0.875rem; line-height:1rem; font-weight:500; color:#333333; /*text-align:right;*/ }
 /* .btn.btn-text.small-line:hover { border-bottom:1px solid #003F86; } */
-.btn.btn-text.small-line { margin-top:40px; border-radius:0; width:initial; color:#003F86; border-bottom:1px solid #003F86; }
 
+.btn.btn-text.small-line { margin-top:40px; border-radius:0; width:initial; color:#003F86; border-bottom:1px solid #003F86; }
 .btn.btn-text.big-line  { border-radius:0; width:initial; color:#FFFFFF; border-bottom:1px solid #FFFFFF; font-size:1.125rem; line-height:1.25rem; font-weight:700; }
+
+/* 비로그인 */
+.fixed-btn-wrap.center.style2 { margin-bottom:45px; }
+.fixed-btn-wrap.center.style2 .btn.btn-text.big-line.big-line { color:#003F86; border-bottom:1px solid #003F86; }
 
 /* 로그아웃 */
 .btn.logout { padding:6px 10px; border-radius: 32px;font-size:0.75rem; line-height:0.875rem; font-weight:400; color:#848B95; background:#EBEDEF; }
@@ -1282,7 +1286,6 @@ iframe { border:none; }
 .btn-cont-wrap + .form-group { margin-top:25px; }
 
 /* tab-box */
-
 .tabs-wrap.box-list .tab-item { margin-bottom:20px; }
 .tabs-wrap.box-list .tab-item:before { content:none; }
 .tabs-wrap.box-list .tab-item li a { padding:6px 12px; border-radius:6px;font-size:0.75rem; font-weight:500; line-height:0.875rem;border: 1px solid #EFF3F6;background:#EFF3F6; color:#99A6B1; }
@@ -1301,7 +1304,6 @@ iframe { border:none; }
 .form-list .tit-blue { color:#003F86; font-weight:600; }
 .form-list .tit-red { color:#FF0000; font-weight:600; }
 
-
 /** 고객정보 변경사항 **/
 .result-box-wrap { display:flex; justify-content:space-between; align-items: center; padding:7px 10px; margin-bottom:20px; border-radius:4px; }
 .result-box-wrap .tit { font-size:1rem; line-height:1.188rem; font-weight:600; }
@@ -1317,11 +1319,5 @@ iframe { border:none; }
 .result-box-wrap.style3 { background:#F8F8F8; color:#000000; }
 .result-box-wrap.style3 .flag2 { background:#ffffff; color:#999999;  }
 
-
 /** 신용조회동의 등록 페이지 **/
 .flag-list { display:flex; gap:5px; }
-
-
-/* 2024-01-16 */
-.fixed-btn-wrap.center.style2 { margin-bottom:45px; }
-.fixed-btn-wrap.center.style2 .btn.btn-text.big-line.big-line { border-radius:0; width:initial; color:#003F86; border-bottom:1px solid #003F86; font-size:1.125rem; line-height:1.25rem; font-weight:700; }
