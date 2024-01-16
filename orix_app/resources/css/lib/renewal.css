@@ -387,7 +387,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .radio-buttons .radio-button .custom-radio { border:6px solid #E2E2E2; }
 .check-buttons .check-button .custom-check { border:1px solid #E2E2E2; }
 .radio-buttons .radio-button .custom-radio,
-.check-buttons .check-button .custom-check  { position:absolute; top:0; left:0; height:20px; width:20px; background-color:#FFFFFF;}
+.check-buttons .check-button .custom-check  { position:absolute; top:50%; left:0; transform:translateY(-50%); height:20px; width:20px; background-color:#FFFFFF;}
 .radio-buttons .radio-button .custom-radio {  border-radius:50%; }
 .check-buttons .check-button .custom-check {  border-radius:4px; }
 .check-buttons .check-button .text,
