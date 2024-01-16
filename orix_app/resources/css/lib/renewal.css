@@ -753,9 +753,8 @@ iframe { border:none; }
 .tit-cont-area .text { font-size:0.75rem; line-height:0.875rem; font-weight:300; color:#555555; }
 .tit-cont-area.point { border:1px solid #DDDDDD; padding:15px 20px; border-radius:10px; }
 .tit-cont-area.point .point-area .tit { font-size:1rem; line-height:1.188rem; font-weight:600; color:#002749; }
-.tit-cont-area.point .point-area .num span { padding-left:20px; }
-.tit-cont-area.point .point-area .num { position:relative; margin-top:8px; font-size:1.125rem; line-height:1.25rem; font-weight:600; color:#003F86; }
-.tit-cont-area.point .point-area .num span::before { position:absolute; content:''; transform: translateY(-50%); top:50%; left:0; width:18px; height:18px; background:url(../../images/common/ic_point_num.png)no-repeat 50%/18px auto; }
+.tit-cont-area.point .point-area .num { position:relative; margin-top:8px; padding-left:22px; font-size:1.125rem; line-height:1.25rem; font-weight:600; color:#003F86; }
+.tit-cont-area.point .point-area .num::before { position:absolute; content:''; transform: translateY(-50%); top:50%; left:0; width:18px; height:18px; background:url(../../images/common/ic_point_num.png)no-repeat 50%/18px auto; }
 .tit-cont-area.point .point-area { position:relative; }
 .tit-cont-area.point::after { position:absolute; content:''; width:58px; height:58px; right:20px;   background:url(../../images/common/ic_point.png)no-repeat 50%/58px auto;}
 
