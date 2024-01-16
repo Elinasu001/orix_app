@@ -532,10 +532,10 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /** 레이어 풀팝업 **/
 .layerpopup.laypop-all {position:fixed; top:0;left:0;right:0;bottom:0;width:100%;border-top:none;background:#fff;z-index:21;}
 .layerpopup.laypop-all .content-wrap {z-index:20; padding:20px; margin-top:30px;  border-radius:20px 20px 0 0; /*padding-bottom:150px;*/ background:#fff;}
-.layerpopup.laypop-all .pop-header {position:fixed;top:0;left:0;right:0;height:50px; padding-top:17px; padding-left:20px; background:#fff;line-height:50px;z-index:5;}
+.layerpopup.laypop-all .pop-header {position:fixed; top:0; left:0; right:0;height:45px; padding:0 20px; background:#fff;line-height:50px;z-index:5;}
 .layerpopup.laypop-all .pop-header:has(+.pop-con-wrap>.default-wrap>.txt-list-wrap:first-child) { border:0; }
-.layerpopup.laypop-all .pop-header .pop-title { font-size:1.375rem; font-weight:500; }
-.layerpopup.laypop-all .btn-layer-close{position:fixed; top:20px;right:12px;width:40px;height:40px; background: url(../../images/common/ic_btn_close.png) no-repeat 50%/24px auto;text-indent:-9999px;}
+.layerpopup.laypop-all .pop-header .pop-title { text-align:center; font-size:1rem; font-weight:500; }
+.layerpopup.laypop-all .btn-layer-close{position:fixed; top:5px;right:12px;width:40px;height:40px; background: url(../../images/common/ic_btn_close.png) no-repeat 50%/24px auto;text-indent:-9999px;}
 .layerpopup.laypop-all .ly-con-wrap { padding-bottom:80px; }
 .layerpopup .btn-wrap.btn-primary .btn-layer-close { position:static; width:100%; padding:15px 0; height:49px; background-image: none; background-color: #003F86; text-indent:inherit; }
 /* .layerpopup .btn-wrap.btn-close .btn-layer-close { position:static; padding:15px 0; height:49px; background-image: none; background-color: #003F86; text-indent:inherit; } */
@@ -659,6 +659,8 @@ iframe { border:none; }
 [class^="table-type"] tbody tr td.blue { color:#00345F; }
 
 .table-type.table-scroll { overflow-x:scroll; }
+.txt-list-wrap + .table-type.table-scroll { margin-top:20px; }
+.table-type.table-scroll + .btn-cont-wrap { margin-top:30px; }
 .table-type.table-scroll + .txt-list { margin-top:20px; }
 .table-type.table-scroll + .txt-detail-area.result { margin-top:22px; }
 
@@ -1031,14 +1033,14 @@ iframe { border:none; }
 
 .txt-detail-area.style2 { border:1px solid #D1D1D1; border-radius:10px; }
 .txt-detaul-area.style2 .txt { font-size:0.875rem; line-height:1rem; }
-.txt-detail-area.style2 .txt-detail-header p { font-size:1.125rem; line-height:1.25rem; color:#555555; }
+.txt-detail-area.style2 .txt-detail-header p { font-size:1.125rem; line-height:1.25rem; color:#000000; }
 .txt-detail-area.style2 { margin-bottom:20px; }
 
 .txt-detail-header.no-line { border-bottom:none; }
 .txt-detail-header + .txt-detail-header { margin-top:10px; }
 
 
-.txt-detail-area.result .txt-list li .txt { font-weight:500; color:#003F86;  }
+.txt-detail-area.result .txt-list li .txt { font-weight:600; color:#003F86;  }
 .txt-list li { display:flex; align-items:flex-start; margin:20px 0; }
 /* .txt-list li span { font-size:0.875rem; line-height:1rem; line-height:1rem;  color:#003F86; } */
 .txt-list li:first-child { margin-top:0; }
@@ -1051,6 +1053,7 @@ iframe { border:none; }
 .txt-detail-header .txt { flex:1; padding-left:30px; vertical-align:top; text-align:right;  color:#212121; word-break:break-all; font-weight:500; }
 .yes{ font-size:0.875rem!important; font-weight:600!important; color: #003F86!important; }
 .no{ font-size:0.875rem!important; font-weight:600!important; color:#FF0000!important; }
+.normal { font-weight:500!important; color:#212121!important; }
 
 .txt-list li .txt a[href*="tel"] { color:#260F54; word-break:break-all; }/*기기대응*/
 .txt-list .cusnm { color:#000!important; } /*기기대응*/
@@ -1217,7 +1220,7 @@ iframe { border:none; }
 
 
 /* 약관팝업 */
-.terms-title { margin-top:40px; font-size:1.125rem; line-height:1.25rem; font-weight:700; color:#003F86; }
+.terms-title { margin-top:30px; font-size:1.125rem; line-height:1.25rem; font-weight:700; color:#003F86; }
 .terms-text-wrap { margin-top:20px; }
 .terms-text-wrap .terms-text-style1 { margin-bottom:20px; }
 .terms-text-wrap .terms-text-style1 dt { padding-bottom:12px; font-size:1rem; line-height:1.188rem; font-weight:500; }
