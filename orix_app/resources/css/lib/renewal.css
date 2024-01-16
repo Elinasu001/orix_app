@@ -142,7 +142,8 @@ input[type="date"],
 input[type="month"],
 input[type="search"],
 input[type="email"],
-input[type="number"]{ box-sizing:border-box; background:#fff; font-size:0.875rem; line-height:1rem; font-weight:400; font-family:inherit; -webkit-appearance:none; -moz-appearance:none; appearance:none; }
+input[type="number"],
+input[type="amount"]{ box-sizing:border-box; background:#fff; font-size:0.875rem; line-height:1rem; font-weight:400; font-family:inherit; -webkit-appearance:none; -moz-appearance:none; appearance:none; }
 select::-ms-expand { display:none }
 .select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none }
 
