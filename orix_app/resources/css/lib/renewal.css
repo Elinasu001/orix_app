@@ -1255,6 +1255,8 @@ iframe { border:none; }
 .txt-list.li-box2 li .txt { padding-left:0; }
 .txt-list.li-box2 li .tit::after { content:""; position:absolute; top:50%; right:0; transform:translateY(-50%); display:block; width:1px; height:20px; background:#003F86; }
 
+.btn-cont-wrap + .form-group { margin-top:25px; }
+
 /* tab-box */
 
 .tabs-wrap.box-list .tab-item { margin-bottom:20px; }
