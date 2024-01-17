@@ -165,6 +165,19 @@ input[type="file"] { position:absolute; top:0; right:0; opacity:0; }
 
 [hidden] { display:none !important; }
 
+
+
+/* 이미지 불러오기 */
+.camera-wrap { display:flex; align-items:center; justify-content:flex-end; }
+.camera-area { position:relative; width:20px; height:20px; font-size:0; }
+.camera-area.document { margin-left:20px; }
+.camera-area.camera input[type="file"] { left:-20%; }
+.camera-area.document input[type="file"] { right:-20%; }
+.camera-area input[type="file"] { position:absolute; transform:translateY(-50%); top:50%;  width:30px; height:30px; }
+.camera-area:before { width:20px; height:20px;  }
+.camera-area.camera::before { content:""; position:absolute; left:0; transform:translateY(-50%); top:50%; width:20px; height:15px;  background:url(../../images/common/ic_br_camera.png) no-repeat 50%/20px auto; }
+.camera-area.document::before { content:""; position:absolute; right:0; transform:translateY(-50%); top:50%; width:20px; height:15px; background:url(../../images/common/ic_br_document.png)no-repeat 50%/20px auto; }
+
 /* button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -755,7 +768,21 @@ iframe { border:none; }
 .table-type.style5 tbody th { border-top:1px solid #DDDDDD; background:#F8F8F8; color:#000000;  }
 .table-type.style5 tbody td { border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD; }
 
+/* 서류제출 개별 테이블 */
+[class^="table-type"].style6 tbody tr th {  background:#F8F8F8; color:#333333; }
+[class^="table-type"].style6 tbody tr > td:first-child { text-align:left; color:#212121; font-weight:400; }
+[class^="table-type"].style6 tbody tr > td:last-child { text-align:right; }
+[class^="table-type"].style6 tbody tr th:first-child { text-align:left; }
+[class^="table-type"].style6 tbody { border:1px solid #DDDDDD; }
+[class^="table-type"].style6 tbody tr { border-bottom:1px solid #DDDDDD; }
+[class^="table-type"].style6 tbody tr:last-child { border-bottom:0; }
 
+/* 서류제출 이미지 들어올 경우 - 삭제 */
+[class^="table-type"].style6 tbody tr.delete td:first-child { color:#000000; font-weight:500; }
+[class^="table-type"].style6 tbody tr.delete td:last-child { color:#003F86; font-weight:400; }
+
+
+/* .table-type.style6 tbody tr th:nth-of-type(2) { border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD; } */
 
 
 /** text 공통 **/
@@ -1217,7 +1244,7 @@ iframe { border:none; }
   } */
 
 /** main **/
-.contents-wrap.main  { margin-top:128px; padding:0; }
+.contents-wrap.main  { margin-top:115px; padding:0; }
 .contents-wrap.main .tab-item { padding:34px 20px 0 20px;  }
 .main-bg-wrap { padding:20px; height:100%; /*padding-bottom:120px;*/ }
 .main-bg-wrap > .quick-service-area { margin-top:0; }
