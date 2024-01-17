@@ -22,265 +22,10 @@
                 <ul>
                     <li>프로젝트 기간 : 2023.11.27 ~ (퍼블 투입)</li>
                     <!-- <li><span id="delCnt"></span> / <span id="compCnt"></span> (loan / renewal)</li> -->
-                    <li>
-                        <h3>전체페이지 나온 이후 수정진척률 확인용</h3>
-                        <span id="wipCnt"></span> (남은 화면 수)
-                    </li>
-                    <li><span id="totCnt"></span> (총 본수)</li><!-- 2023-06-19 숨김처리 -> 2023-07-14 수정 진척률로 변경 -->
-                    <li style="margin-bottom:30px;"><span style="font-size:20px; color:blue; ">*일괄 수정 사항 : 1/11 - fixed-btn-wrap contents-wrap 밖으로 구조 변경 및 팝업은 풀팝업 일 경우만 구조 변경<br>* 일괄변경: form-control.select/ datepicekr 들어가는 부분은 readonly input에 넣어주기</span></li>
-                    <!--
-        <li>총 <span id="totCnt"></span>개</li>
-        <li>작업중 <span id="wipCnt"></span>개</li>
-        <li>완료 <span id="compCnt"></span>개</li>
-        -->
                 </ul>
-                <div class="progressArea"><span></span></div><!-- 2023-06-19 숨김처리 -> 2023-07-14 수정 진척률로 변경 -->
-
-                <dl>
-                    <dt>메모사항</dt>
-                    <td>01.04 수정</td>
-                </dl>
             </div>
 
             <div class="cont">
-                <!-- s: 가이드 -->
-                <div class="guide">
-                    <h3 class="tit">가이드</h3>
-                    <summary></summary>
-                    <table>
-                        <caption></caption>
-                        <colgroup>
-                            <col width="8%">
-                            <col width="22%">
-                            <col width="15%">
-                            <col width="10%">
-                            <col width="*">
-                            <col width="10%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">분류</th>
-                                <th scope="col">설명</th>
-                                <th scope="col" class="fileName">화면ID</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">추가 작업 필요</th>
-                                <th scope="col">작업 진행 사항</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>기본레이아웃</td>
-                                <td>기본레이아웃</td>
-                                <td class="fileName"><a href="./views/basiclayout.html"
-                                    target="_blank">basiclayout.html</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>공통</td>
-                                <td>input 공통</td>
-                                <td class="fileName"><a href="./views/input.html"
-                                    target="_blank">input.html</a></td>
-                                <td></td>
-                                <td>1/15 이솔 : select 팝업 리스트 색상,글꼭색 변경</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>공통</td>
-                                <td>button 공통</td>
-                                <td class="fileName"><a href="./views/button.html"
-                                    target="_blank">button.html</a></td>
-                                <td></td>
-                                <td>1/12 이솔 : 버튼 색상 변경</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>공통</td>
-                                <td>text</td>
-                                <td class="fileName"><a href="./views/text.html"
-                                    target="_blank">text.html</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>공통</td>
-                                <td>alert</td>
-                                <td class="fileName"><a href="./views/alert.html"
-                                    target="_blank">alert.html</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>공통</td>
-                                <td>no-scroll-popup</td>
-                                <td class="fileName"><a href="./views/no-scroll-popup.html"
-                                    target="_blank">no-scroll-popup.html</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>공통</td>
-                                <td>scroll-popup</td>
-                                <td class="fileName"><a href="./views/scroll-popup.html"
-                                    target="_blank">scroll-popup.html</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>공통</td>
-                                <td>terms-pull-popup</td>
-                                <td class="fileName"><a href="./views/terms-pull-popup.html"
-                                    target="_blank">terms-pull-popup.html</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>공통</td>
-                                <td>pull-popup</td>
-                                <td class="fileName"><a href="./views/pull-popup.html"
-                                    target="_blank">pull-popup.html</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-							<tr>
-                                <td>sampleA</td>
-                                <td>sampleA</td>
-                                <td class="fileName"><a href="./views/sampleA.html"
-                                    target="_blank">sampleA.html</a></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                            </tr>
-                            <tr>
-                                <td>레이아웃</td>
-                                <td>list</td>
-                                <td class="fileName"><a href="./views/list.html"
-                                    target="_blank">list.html</a></td>
-                                <td></td>
-                                <td>1/12 이솔 : 텍스트 스타일 변경,카드 색상 변경<br>1/15 이솔 : padding값 변경</td>
-                                <td></td>
-                            </tr>
-                          
-                            <tr>
-                                <td>레이아웃</td>
-                                <td>list-icon</td>
-                                <td class="fileName"><a href="./views/list2.html"
-                                    target="_blank">list2.html</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>레이아웃</td>
-                                <td>table</td>
-                                <td class="fileName"><a href="./views/table.html"
-                                    target="_blank">table.html</a></td>
-                                <td></td>
-                                <td>1/15 이솔 신용조회 개별 table 색상 변경</td>
-                                <td></td>
-                            </tr>
-                            <!-- <tr>
-                                <td>레이아웃</td>
-                                <td>table2</td>
-                                <td class="fileName"><a href="./views/table2.html"
-                                    target="_blank">table2.html</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>레이아웃</td>
-                                <td>table3</td>
-                                <td class="fileName"><a href="./views/table3.html"
-                                    target="_blank">table3.html</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr> -->
-							<tr>
-                                <td>레이아웃</td>
-                                <td>약관폼</td>
-                                <td class="fileName"><a href="./views/terms.html"
-                                        target="_blank">terms.html</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-							<tr>
-                                <td>레이아웃</td>
-                                <td>전페메뉴</td>
-                                <td class="fileName"><a href="./views/allMenu.html"
-                                        target="_blank">allMenu.html</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>레이아웃</td>
-                                <td>마이페이지</td>
-                                <td class="fileName"><a href="./views/mypage_A.html"
-                                        target="_blank">mypage_A.html</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>레이아웃</td>
-                                <td>결과화면</td>
-                                <td class="fileName"><a href="./views/result.html"
-                                        target="_blank">result.html</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>컴포넌트</td>
-                                <td>아코디언</td>
-                                <td class="fileName"><a href="./views/accordion.html"
-                                        target="_blank">accordion.html</a></td>
-                                <td></td>
-                                <td>1/12 이솔 : padding값 변경<br>1/15 이솔 : 아코디언 안에 .txt-list margin값 변경 </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>레이아웃</td>
-                                <td>search_tab_round_list</td>
-                                <td class="fileName"><a href="./views/search_tab_round_list.html"
-                                        target="_blank">search_tab_round_list.html</a></td>
-                                <td></td>
-                                <td></td>
-                               <td></td>
-                            </tr>
-                            <tr>
-                                <td>레이아웃</td>
-                                <td>loading</td>
-                                <td class="fileName"><a href="./views/loading.html"
-                                        target="_blank">loading.html</a></td>
-                                <td></td>
-                                <td></td>
-                               <td></td>
-                            </tr>
-                            <tr>
-                                <td>레이아웃</td>
-                                <td>메인</td>
-                                <td class="fileName"><a href="./views/main.html"
-                                        target="_blank">main.html</a></td>
-                                <td></td>
-                                <td></td>
-                               <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- e: 가이드 -->
-
                 <!-- s: 공통 -->
                 <div class="guide">
                     <h3 class="tit on">공통</h3>
@@ -293,9 +38,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -304,171 +46,98 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>메인, 조회화면 레이아웃</td>
                                 <td>메인, 조회화면 레이아웃</td>
-                                <td></td>
                                 <td class="fileName"><a href="" target="_blank">COM-BSC-C001_1</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>프로세스 진행</td>
                                 <td>프로세스 진행</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/common/COM-BSC-C001_2.html" target="_blank">COM-BSC-C001_2</a></td>
                                 <td>/views/common/COM-BSC-C001_2.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-10</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>폰트크기</td>
                                 <td>폰트크기</td>
-                                <td></td>
                                 <td class="fileName"><a href="" target="_blank">COM-BSC-C002</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>입력창, 셀렉트박스</td>
                                 <td>입력창, 셀렉트박스</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/common/COM-BSC-C003.html" target="_blank">COM-BSC-C003</a></td>
                                 <td>/views/common/COM-BSC-C003.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-04</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>셀렉트박스 옵션-바텀시트</td>
                                 <td>셀렉트박스 옵션-바텀시트</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/common/COM-BSC-C003_1.html" target="_blank">COM-BSC-C003_1</a></td>
                                 <td>/views/common/COM-BSC-C003_1.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-04</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>체크박스, 라디오</td>
                                 <td>체크박스, 라디오</td>
-                                <td></td>
                                 <td class="fileName"><a href="" target="_blank">COM-BSC-C005</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>페이징, 아이콘</td>
                                 <td>페이징, 아이콘</td>
-                                <td></td>
                                 <td class="fileName"><a href="" target="_blank">COM-BSC-C006</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>화면구성 - 일반</td>
                                 <td>화면구성 - 일반</td>
-                                <td></td>
                                 <td class="fileName"><a href="" target="_blank">COM-BSC-C008</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>화면구성 - 완료</td>
                                 <td>화면구성 - 완료</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/common/COM-BSC-C009.html" target="_blank">COM-BSC-C009</a></td>
                                 <td>/views/common/COM-BSC-C009.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-04</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>화면구성 - 완료(실패)</td>
                                 <td>화면구성 - 완료(실패)</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/common/COM-BSC-C010.html" target="_blank">COM-BSC-C010</a></td>
                                 <td>/views/common/COM-BSC-C010.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-04</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>화면구성 - 조회결과(결과 없을 경우)</td>
                                 <td>화면구성 - 조회결과(결과 없을 경우)</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/common/COM-BSC-C011.html" target="_blank">COM-BSC-C011</a></td>
                                 <td>/views/common/COM-BSC -C011.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-04</td>
-                                <td>1/12 - 이솔 : 이미지 색상 변경</td>
                             </tr>
                             <tr>
                                 <td>화면구성 - 오류화면</td>
                                 <td>화면구성 - 오류화면</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/common/COM-BSC-C012.html" target="_blank">COM-BSC-C012</a></td>
                                 <td>/views/common/COM-BSC-C012.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-04</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>탭, 버튼 유형정의</td>
                                 <td>탭, 버튼 유형정의</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/common/COM-TBN-C001.html" target="_blank">COM-TBN-C001</a></td>
                                 <td>/views/common/COM-TBN-C001.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-04</td>
-                                <td>1/12 - 이솔 : 버튼 색상 변경</td>
                             </tr>
                             <tr>
                                 <td>앱업데이트</td>
                                 <td>앱업데이트</td>
-                                <td></td>
                                 <td class="fileName"><a href="" target="_blank">COM-LOD-C001_3</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>로딩</td>
                                 <td>로딩</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/common/COM-LOD-C002.html" target="_blank">COM-LOD-C002</a></td>
                                 <td>/views/common/COM-LOD-C002.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-09</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>바텀시트-적용예시</td>
                                 <td>바텀시트-적용예시</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/common/COM-ALT-C010.html" target="_blank">COM-ALT-C010</a></td>
                                 <td>/views/common/COM-ALT-C010.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-04</td>
-                                <td>1/15 이솔 : 팝업 헤더 padding 값 수정</td>
                             </tr>
                         </tbody>
                     </table>
@@ -487,9 +156,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -498,21 +164,14 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>전체메뉴</td>
                                 <td>전체메뉴</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/allMenu/ORIX-FME-001.html" target="./views/allMenu/ORIX-FME-001.html">ORIX-FME-001</a></td>
                                 <td>/views/allMeu/ORIX-FME-001.html</td>
-                                <td>박수현</td>
-                                <td></td>
-                                <td>1/9 박수현 : 메뉴 변경<br>1/10 이솔 : 메뉴 변경<br>1/12 이솔 : 메뉴 변경</td>
                             </tr>
                         </tbody>
                     </table>
@@ -531,9 +190,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -542,210 +198,122 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>메인(중고차/마이페이지/재고금융)</td>
-                                <td></td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/main/ORIX-APP-MAN-001.html" target="_blank">ORIX-APP-MAN-001.html</a></td>
                                 <td>/views/main/ORIX-APP-MAN-001.html</td>
-                                <td>박수현</td>
-                                <td>2023-01-10</td>
-                                <td>1/17 박수현 : jsp 필요(신용조회요청,신용조회 결과,약정체결 이미지 변경/심사조회요청->신용조회요청 텍스트 변경)</td>
                             </tr>
                             <tr>
                                 <td>메인(임직원페이지)</td>
-                                <td></td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/main/ORIX-APP-MAN-002.html" target="_blank">ORIX-APP-MAN-002.html</a></td>
                                 <td>/views/main/ORIX-APP-MAN-002.html</td>
-                                <td>박수현</td>
-                                <td>2023-01-10</td>
-                                <td>이미지만 수정작업 탭 메뉴 추후 확인 후 수정예정 - 1/11 기획:탭으로 픽스됨<br>1/17 이솔 : 수정작업 완료</td>
                             </tr>
                             <tr>
                                 <td>앱접근권한</td>
-                                <td></td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/login/COM-LOD-C001.html" target="_blank">COM-LOD-C001</a></td>
                                 <td>/views/login/COM-LOD-C001.html</td>
-                                <td>박수현</td>
-                                <td>2023-01-01</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>비로그인(INTRO)</td>
-                                <td></td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/login/ORIX-APP-LGN-001.html" target="_blank">ORIX-APP-LGN-001</a></td>
                                 <td>/views/login/ORIX-APP-LGN-001.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-01</td>
-                                <td>1/17 이솔 : 헤더 로고 수정 완료</td>
                             </tr>
                             <tr>
                                 <td>비로그인2(INTRO)</td>
-                                <td></td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/login/ORIX-APP-LGN-001_1.html" target="_blank">ORIX-APP-LGN-001_1</a></td>
                                 <td>/views/login/ORIX-APP-LGN-001_1.html</td>
-                                <td>박수현</td>
-                                <td>2023-01-08</td>
-                                <td>1/17 이솔 : 헤더 로고 수정 완료</td>
                             </tr>
                             <tr>
                                 <td rowspan="6">로그인</td>
                                 <td>로그인</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/login/ORIX-APP-LGN-002.html" target="_blank">ORIX-APP-LGN-002</a></td>
                                 <td>/views/login/ORIX-APP-LGN-002.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-01</td>
-                                <td>1/9 박수현 : 헤더 뒤로가기 버튼 추가(inc_login_header)</td>
                             </tr>
                             <tr>
                                 <td>최초 로그인 사용자 안내(팝업)</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/login/ORIX-APP-LGN-00201.html" target="_blank">ORIX-APP-LGN-00201</a></td>
                                 <td>/views/login/ORIX-APP-LGN-00201.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-01</td>
-                                <td>1/9 이솔: 팝업 닫기 버튼 삭제-완료/ 1/10 박수현 : 버튼 클래스 변경</td>
                             </tr>
                             <tr>
                                 <td>휴대폰본인인증 약관동의(팝업)</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/login/ORIX-APP-LGN-002_1.html" target="_blank">ORIX-APP-LGN-002_1</a></td>
                                 <td>/views/login/>ORIX-APP-LGN-002_1.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-03</td>
-                                <td>1/5 - 주민등록번호 > 생년월일로 변경<br/>1/9 - 박수현: 팝업으로 변경</td>
                             </tr>
                             <tr>
                                 <td>휴대폰본인인증 정보입력</td>
-                                <td></td>
                                 <td class="fileName line"><a href="#none" target="_blank">COM-CER-C003</a></td>
                                 <td>/views/login/ORIX-APP-LGN-002_1.html 화면으로 합침</td>
-                                <td>박수현</td>
-                                <td>2024-01-03</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>휴대폰본인인증완료</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/login/COM-CER-C004.html" target="_blank">COM-CER-C004</a></td>
-                                <td>./views/login/COM-CER-C004.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-04</td>
-                                <td>1/10 박수현 : 버튼 클래스 수정</td>
+                                <td>/views/login/COM-CER-C004.html</td>
                             </tr>
                             <tr>
                                 <td>비밀번호찾기</td>
-                                <td></td>
                                 <td class="fileName"><a href="./views/login/ORIX-APP-MYP-041.html" target="_blank">ORIX-APP-MYP-041</a></td>
                                 <td>./views/login/ORIX-APP-MYP-041.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-04</td>
-                                <td></td>
                             </tr>
-                            <tr> 
+                            <tr>
                                 <td rowspan="11">로그인메인</td>
                                 <td>로그아웃</td>
-                                <td></td>
                                 <td class="fileName line"><a href="#none">ORIX-FME-001.html</a></td>
                                 <td>ORIX-FME-001.html통일 - 전체메뉴</td>
-                                <td>박수현</td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>긴급공지</td>
-                                <td></td>
                                 <td class="fileName line"><a href="#none" >ORIX-APP-MAN-001.html</a></td>
                                 <td>ORIX-APP-MAN-001.html통일 - 메인</td>
-                                <td>박수현</td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>공지사항</td>
-                                <td></td>
                                 <td class="fileName line"><a href="#none" >ORIX-APP-MAN-001.html</a></td>
                                 <td>ORIX-APP-MAN-001.html통일 - 메인</td>
-                                <td>박수현</td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td rowspan="5">중고차</td>
                                 <td>신용조회요청</td>
                                 <td class="fileName line"><a href="#none">ORIX-APP-MAN-001.html</a></td>
                                 <td>ORIX-APP-MAN-001.html통일 - 메인</td>
-                                <td>박수현</td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>심사요청</td>
                                 <td class="fileName line"><a href="#none" >ORIX-APP-MAN-001.html</a></td>
                                 <td>ORIX-APP-MAN-001.html통일 - 메인</td>
-                                <td>박수현</td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>심사완료</td>
                                 <td class="fileName line"><a href="#none" >ORIX-APP-MAN-001.html</a></td>
                                 <td>ORIX-APP-MAN-001.html통일 - 메인</td>
-                                <td>박수현</td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>약정체결</td>
                                 <td class="fileName line"><a href="#none" >ORIX-APP-MAN-001.html</a></td>
                                 <td>ORIX-APP-MAN-001.html통일 - 메인</td>
-                                <td>박수현</td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>송금요청</td>
                                 <td class="fileName line"><a href="#none">ORIX-APP-MAN-001.html</a></td>
                                 <td>ORIX-APP-MAN-001.html통일 - 메인</td>
-                                <td>박수현</td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td rowspan="3">마이페이지</td>
                                 <td>대출진행현황</td>
                                 <td class="fileName line"><a href="#none">ORIX-APP-MAN-001.html</a></td>
                                 <td>ORIX-APP-MAN-001.html통일 - 메인</td>
-                                <td>박수현</td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>서류제출</td>
                                 <td class="fileName line"><a href="#none">ORIX-APP-MAN-001.html</a></td>
                                 <td>ORIX-APP-MAN-001.html통일 - 메인</td>
-                                <td>박수현</td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>비미번호변경</td>
                                 <td class="fileName line"><a href="#none" >ORIX-APP-MAN-001.html</a></td>
                                 <td>ORIX-APP-MAN-001.html통일 - 메인</td>
-                                <td>박수현</td>
-                                <td></td>
-                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -764,9 +332,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -775,9 +340,6 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -787,27 +349,18 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-CRC-001.html" target="_blank">ORIX-APP-CRC-001</a></td>
                                 <td>/views/scndCar/ORIX-APP-CRC-001.html</td>
-                                <td>박수현</td>
-                                <td>2023-01-04</td>
-                                <td>1/15 - 박수현 : 버튼 클래스 추가</td>
                             </tr>
                             <tr>
                                 <td>신용조회동의요청-confirm팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-CRC-00101.html" target="_blank">ORIX-APP-CRC-00101</a></td>
                                 <td>/views/scndCar/ORIX-APP-CRC-00101.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-08</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>신용조회동의요청-alert팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-CRC-00102.html" target="_blank">ORIX-APP-CRC-00102</a></td>
                                 <td>/views/scndCar/ORIX-APP-CRC-00102.html</td>
-                                <td>박수현</td>
-                                <td>20254-01-08</td>
-                                <td>1/10 알럿(?)<br>1/16 수현 - jsp필요 : x버튼 삭제-완료</td>
                             </tr>
                             <tr>
                                 <td rowspan="5">심사요청</td>
@@ -815,82 +368,55 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-CTR-001.html" target="_blank">ORIX-APP-CTR-001</a></td>
                                 <td>/views/scndCar/ORIX-APP-CTR-001.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-04</td>
-                                <td>1/8 박수현: 구조변경필요 - 완료<br>1/12 - 이솔 : 버튼 변경<br>1/15 - 박수현 : 상세보기 > 신용 재조회로 변경, btn-primary  추가, 결과화면 없을 경우 추가<br>1/16 박수현 : jsp 필요 - small-tit 및 p태그 변경/ 버튼수정필요 - 완료<br>1/17 박수현 :jsp 필요(신용 재조회 버튼 클래스 btn-primary로 변경</td>
                             </tr>
                             <tr>
                                 <td>심사요청(심사요청정보입력)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-CTR-002.html" target="_blank">ORIX-APP-CTR-002</a></td>
                                 <td>/views/scndCar/ORIX-APP-CTR-002.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-05</td>
-                                <td>1/12 - 박수현 : 아코디언 구조변경필요- 완료<br>1/12 - 이솔 : 고객정보 변경사항 구조,css 변경-완료<br>1/15 - 박수현 : 심사요청 > 심사 재요청 텍스트로 변경, btn-primary 추가 (disabled)<br/>1/16 박수현 : jsp 필요 - placeholder 확인필요 및 % > 원 - 완료</td>
                             </tr>
                             <tr>
                                 <td>심사요청(심사요청/심사재요청)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-CTR-00201.html" target="_blank">ORIX-APP-CTR-00201</a></td>
                                 <td>/views/scndCar/ORIX-APP-CTR-00201.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-08</td>
-                                <td>1/9-박수현 : 코드명변경<br>1/15 - 박수현 : 심사재요청팝업의 할부심사를 대출심사로 텍스트 변경</td>
                             </tr>
                             <tr>
                                 <td>심사요청 완료</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-CTR-00202.html" target="_blank">ORIX-APP-CTR-00202</a></td>
                                 <td>/views/scndCar/ORIX-APP-CTR-00202.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-08</td>
-                                <td>1/9-박수현 : 코드명변경<br>1/15 - 박수현 - 내용 변경<br/>1/16 - 박수현 jsp 필요 x버튼 삭제 및 내용 변경 필요-완료</td>
                             </tr>
                             <tr>
                                 <td>심사재요청 취소</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-CTR-00203.html" target="_blank">ORIX-APP-CTR-00203</a></td>
                                 <td>/views/scndCar/ORIX-APP-CTR-00203.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-08</td>
-                                <td>1/9-박수현 : 코드명변경<br>1/16 박수현 : jsp 필요 - 완료</td>
                             </tr>
                             <tr>
                                 <td rowspan="4">심사결과</td>
-                                <td>심사완료목록</td>
                                 <td></td>
+                                <td>심사완료목록</td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-RTR-001.html" target="_blank">ORIX-APP-RTR-001</a></td>
                                 <td>/views/scndCar/ORIX-APP-RTR-001.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-05</td>
-                                <td>1/9 이솔: 구조변경필요-완료<br>1/12 - 이솔 : 버튼 변경<br>1/16 박수현 : jsp 필요 - 완료/버튼수정필요 - 완료</td>
                             </tr>
                             <tr>
                                 <td>심사결과</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-RTR-002.html" target="_blank">ORIX-APP-RTR-002</a></td>
                                 <td>/views/scndCar/ORIX-APP-RTR-002.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-05</td>
-                                <td>1/12 - 이솔 : 고객정보 변경사항 구조,css 변경-완료<br>1/15 - 박수현 - 헤더 심사결과 텍스트 변경 및 버튼 btn-primary 추가</td>
                             </tr>
                             <tr>
                                 <td>수기심사요청 의견 팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-RTR-00201.html" target="_blank">ORIX-APP-RTR-00201</a></td>
                                 <td>/views/scndCar/ORIX-APP-RTR-00201.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-05</td>
-                                <td>1/16 - 스타일 제거 필요</td>
                             </tr>
                             <tr>
                                 <td>수기심사요청완료 alert팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-RTR-00202.html" target="_blank">ORIX-APP-RTR-00202</a></td>
                                 <td>/views/scndCar/ORIX-APP-RTR-00202.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-08</td>
-                                <td>1/8 박수현 : confirm 추가 - 완료<br>1/16 박수현 : jsp 필요 X버튼삭제 - 완료</td>
                             </tr>
                             <tr>
                                 <td rowspan="6">약정체결</td>
@@ -898,54 +424,36 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-COA-001.html" target="_blank">ORIX-APP-COA-001</a></td>
                                 <td>/views/scndCar/ORIX-APP-COA-001.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-05</td>
-                                <td>1/9 이솔: 구조변경필요-완료<br>1/16 박수현 : jsp 변경 필요 - 완료/ 버튼수정필요 - 완료</td>
                             </tr>
                             <tr>
                                 <td>약정체결요청</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-COA-002.html" target="_blank">ORIX-APP-COA-002</a></td>
                                 <td>/views/scndCar/ORIX-APP-COA-002.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-05</td>
-                                <td>1/8-박수현 : input:checked 추가<br/>1/12 - 박수현 : 아코디언 구조변경필요- 이솔 완료<br>1/12 - 이솔 : 고객정보 변경사항 구조,css 변경-완료<br>1/16 박수현 : jsp 필요(text 수정:수남청구->수납청구/txt-detail-header에 no-line 추가)</td>
                             </tr>
                             <tr>
                                 <td>약정체결요청 confirm팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-COA-00201.html" target="_blank">ORIX-APP-COA-00201</a></td>
                                 <td>/views/scndCar/ORIX-APP-COA-00201.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-08</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>약정체결요청완료 alert팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-COA-00202.html" target="_blank">ORIX-APP-COA-00202</a></td>
                                 <td>/views/scndCar/ORIX-APP-COA-00202.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-08</td>
-                                <td>1/16 박수현 : jsp 필요  X버튼 삭제 - 완료</td>
                             </tr>
                             <tr>
                                 <td>매매상사검색팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-COA-00203.html" target="_blank">ORIX-APP-COA-00203</a></td>
                                 <td>/views/scndCar/ORIX-APP-COA-00203</td>
-                                <td>이솔</td>
-                                <td>2024-01-08</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>수수료지급처 검색팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-COA-00204.html" target="_blank">ORIX-APP-COA-00204</a></td>
                                 <td>/views/scndCar/ORIX-APP-COA-00204.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-08</td>
-                                <td>1/8-박수현 : plus-height 높이 추가 - 완료</td>
                             </tr>
                             <tr>
                                 <td rowspan="4">송금요청</td>
@@ -953,36 +461,24 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-RER-001.html" target="_blank">ORIX-APP-RER-001</a></td>
                                 <td>/views/scndCar/ORIX-APP-RER-001.html</td>
-                                <td>박수현</td>
-                                <td>2023-01-08</td>
-                                <td>1/16 박수현 : jsp 필요 - 완료 / 버튼수정 필요 - 완료</td>
                             </tr>
                             <tr>
                                 <td>송금요청</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-RER-002.html" target="_blank">ORIX-APP-RER-002</a></td>
                                 <td>/views/scndCar/ORIX-APP-RER-002.html</td>
-                                <td>박수현</td>
-                                <td>2023-01-08</td>
-                                <td>1/12 - 박수현 : 아코디언 구조변경필요 - 이솔 완료/ 1/12 - 이솔 : 인풋 > 텍스트로 구조변경<br>1/12 - 이솔 : 고객정보 변경사항 구조,css 변경-완료</td>
                             </tr>
                             <tr>
                                 <td>송금요청 confirm 팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-RER-00201.html" target="_blank">ORIX-APP-RER-00201</a></td>
                                 <td>/views/scndCar/ORIX-APP-RER-00201.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-08</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>송금요청 alert 팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-RER-00202.html" target="_blank">ORIX-APP-RER-00202</a></td>
                                 <td>/views/scndCar/ORIX-APP-RER-00202.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-08</td>
-                                <td>1/16 박수현 : jsp 필요 X버튼 삭제 - 완료</td>
                             </tr>
                             <tr>
                                 <td rowspan="3">차량시세조회</td>
@@ -990,27 +486,18 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-PRI-001.html" target="_blank">ORIX-APP-PRI-001</a></td>
                                 <td>/views/scndCar/ORIX-APP-PRI-001.html</td>
-                                <td>박수현</td>
-                                <td>2024-04-08</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>시세조회검색 결과</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-PRI-00101.html" target="_blank">ORIX-APP-PRI-00101</a></td>
                                 <td>/views/scndCar/ORIX-APP-PRI-00101.html</td>
-                                <td>박수현</td>
-                                <td>2024-04-08</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>시세조회검색  alert팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-PRI-00101_1.html" target="_blank">ORIX-APP-PRI-00101_1</a></td>
                                 <td>/views/scndCar/ORIX-APP-PRI-00101_1.html</td>
-                                <td>박수현</td>
-                                <td>2024-04-08</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td rowspan="2">중고차 사고이력조회</td>
@@ -1018,18 +505,12 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-ACH-001.html" target="_blank">ORIX-APP-ACH-001</a></td>
                                 <td>/views/scndCar/ORIX-APP-ACH-001.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-08</td>
-                                <td>(차량사고이력조회)<br>1/12 이솔 : 테이블 수정-완료<br/>1/16 - 기획: 보유포인트 추가 디자인 완료 시 작업 필요,  jsp추가필요 </td>
                             </tr>
                             <tr>
                                 <td>알림 팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-ACH-00101.html" target="_blank">ORIX-APP-ACH-00101</a></td>
                                 <td>/views/scndCar/ORIX-APP-ACH-00101.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-08</td>
-                                <td>(차량사고이력조회)<br>1/16 박수현 : jsp필요 X버튼 삭제 - 완료</td>
                             </tr>
                             <tr>
                                 <td rowspan="2">매매상사검색</td>
@@ -1037,18 +518,12 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-USC-081.html" target="_blank">ORIX-APP-USC-081</a></td>
                                 <td>/views/scndCar/ORIX-APP-USC-081.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-08</td>
-                                <td>1/16 - 수현 jsp 필요 placeholder - 완료</td>
                             </tr>
                             <tr>
                                 <td>검색구분선택</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/scndCar/ORIX-APP-USC-081_1.html" target="_blank">ORIX-APP-USC-081_1</a></td>
                                 <td>/views/scndCar/ORIX-APP-USC-081_1.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-08</td>
-                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1067,9 +542,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -1078,9 +550,6 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1090,144 +559,96 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/ORIX-APP-IVF-001.html" target="_blank">ORIX-APP-IVF-001</a></td>
                                 <td>/views/IVF/ORIX-APP-IVF-001.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-09</td>
-                                <td>1/12 이솔 : 당월만기/연체여부 테이블로 변경<br>1/15 - 박수현 테이블 변경<br>1/16 박수현 : jsp 수정 필요(placeholder)- 완료</td>
                             </tr>
                             <tr>
                                 <td>대출신청 구분 선택 팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/ORIX-APP-IVF-001_1.html" target="_blank">ORIX-APP-IVF-001_1</a></td>
                                 <td>/views/IVF/ORIX-APP-IVF-001_1.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-09</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>신규대출 신청(신청정보입력 1)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/ORIX-APP-IVF-002.html" target="_blank">ORIX-APP-IVF-002</a></td>
                                 <td>/views/IVF/ORIX-APP-IVF-002.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-09</td>
-                                <td>1/15 - 박수현 : btn-primary  추가(disabled)<br>1/15 박수현 : jsp 필요 - 완료<br>1/17 박수현 : jsp 필요(txt-detail-area에 result 추가)</td>
                             </tr>
                             <tr>
                                 <td>신규대출 신청(신청정보입력 2)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/ORIX-APP-IVF-003.html" target="_blank">ORIX-APP-IVF-003</a></td>
                                 <td>/views/IVF/ORIX-APP-IVF-003.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-09</td>
-                                <td>1/12 이솔 : 당월만기/연체여부 테이블로 변경<br>1/16 박수현 : jsp 수정 필요(placeholder) - 완료 </td>
                             </tr>
                             <tr>
                                 <td>대출기간선택팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/ORIX-APP-IVF-003_1.html" target="_blank">ORIX-APP-IVF-003_1</a></td>
                                 <td>/views/IVF/ORIX-APP-IVF-003_1.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-09</td>
-                                <td>1/16 박수현 : jsp 수정 필요(placeholder) - 완료</td>
                             </tr>
                             <tr>
                                 <td>약관동의 및 본인인증(팝업)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/COM-CER-C00101.html" target="_blank">COM-CER-C00101</a></td>
                                 <td>/views/IVF/COM-CER-C00101.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-09</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>약관동의 상세화면(팝업)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/COM-CER-C002.html" target="_blank">COM-CER-C002</a></td>
                                 <td>/views/IVF/COM-CER-C002.html</td>
-                                <td>이솔</td>
-                                <td></td>
-                                <td>약관 수급되면 수정/레이아웃만 만들어 놓음<br>1/15 이솔 : 풀팝업 헤더 padding 값 수정</td>
                             </tr>
                             <tr>
                                 <td>휴대폰 본인인증 상세 설명(통신사 선택)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/COM-CER-C00101_1.html" target="_blank">COM-CER-C00101_1.html</a></td>
                                 <td>/views/IVF/COM-CER-C00101_1.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-09</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>신규대출신청완료</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/ORIX-APP-IVF-005.html" target="_blank">ORIX-APP-IVF-005.html</a></td>
                                 <td>/views/IVF/ORIX-APP-IVF-005.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-10</td>
-                                <td>차량사진 업로드하기 버튼 만들어야함-완료<br>1/15 이솔 : 버튼 margin 변경</td>
                             </tr>
                             <tr>
                                 <td>대출연장 신청(연장가능 대출목록)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/ORIX-APP-IVF-011.html" target="_blank">ORIX-APP-IVF-011</a></td>
                                 <td>/views/IVF/ORIX-APP-IVF-011.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-10</td>
-                                <td>1/12 이솔 : 당월만기/연체여부 테이블로 변경</td>
                             </tr>
                             <tr>
                                 <td>대출연장 신청(가능 여부 조회)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/ORIX-APP-IVF-012.html" target="_blank">ORIX-APP-IVF-012</a></td>
                                 <td>/views/IVF/ORIX-APP-IVF-012.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-10</td>
-                                <td>1/15 이솔 : text2 line-height 값 변경</td>
                             </tr>
                             <tr>
                                 <td>대출연장신청(신청정보입력)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/ORIX-APP-IVF-013.html" target="_blank">ORIX-APP-IVF-013</a></td>
                                 <td>/views/IVF/ORIX-APP-IVF-013.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-10</td>
-                                <td>1/16 박수현 : jsp 수정 필요(placeholder) - 완료</td>
                             </tr>
                             <tr>
                                 <td>약관동의 및 본인인증(팝업)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/COM-CER-C00101.html" target="_blank">재고금융신규신청과 동일</a></td>
                                 <td>/views/IVF/COM-CER-C00101.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-10</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>약관동의 상세화면(팝업)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/COM-CER-C002.html" target="_blank">재고금융신규신청과 동일</a></td>
                                 <td>/views/IVF/COM-CER-C002.html</td>
-                                <td>이솔</td>
-                                <td></td>
-                                <td>약관 수급되면 수정/레이아웃만 만들어 놓음</td>
                             </tr>
                             <tr>
                                 <td>휴대폰 본인인증 상세 설명(통신사 선택)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/COM-CER-C00101_1.html" target="_blank">재고금융신규신청과 동일</a></td>
                                 <td>/views/IVF/COM-CER-C00101_1.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-10</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>대출연장신청완료</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IVF/ORIX-APP-IVF-014.html" target="_blank">ORIX-APP-IVF-014</a></td>
                                 <td>/views/IVF/ORIX-APP-IVF-014.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-10</td>
-                                <td>1/12 이솔 : 확인해 주세요 수정</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1246,9 +667,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -1257,9 +675,6 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1269,9 +684,6 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/TBD/ORIX-APP-TBD-001_1.html" target="_blank">ORIX-APP-TBD-001_1</a></td>
                                 <td>/views/TBD/ORIX-APP-TBD-001_1.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-09</td>
-                                <td>1/10 박수현 : 버튼태그 수정<br>1/15 이솔 : sub-title 구조 변경, line-height 조절<br>1/15 박수현 : jsp 필요 - 완료</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1290,9 +702,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -1301,9 +710,6 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1313,9 +719,6 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/TBD/ORIX-APP-TBD-001_1.html" target="_blank">ORIX-APP-TBD-001_1</a></td>
                                 <td>/views/TBD/ORIX-APP-TBD-001_1.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-09</td>
-                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1334,9 +737,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -1345,9 +745,6 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1357,9 +754,6 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/TBD/ORIX-APP-TBD-001_1.html" target="_blank">ORIX-APP-TBD-001_1</a></td>
                                 <td>/views/TBD/ORIX-APP-TBD-001_1.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-09</td>
-                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1378,9 +772,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -1389,9 +780,6 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1401,18 +789,12 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/EAI/ORIX-APP-EAI-001.html" target="_blank">ORIX-APP-EAI-001</a></td>
                                 <td>/views/EAI/ORIX-APP-EAI-001.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-12</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>팀실적조회</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/EAI/ORIX-APP-EAT-001.html" target="_blank">ORIX-APP-EAT-001</a></td>
                                 <td>/views/EAI/ORIX-APP-EAT-001.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-12</td>
-                                <td>1/16 - 박수현 : num > under 로 변경</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1431,9 +813,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -1442,9 +821,6 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1454,9 +830,6 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/CRA/ORIX-APP-CRA-001.html" target="_blank">ORIX-APP-CRA-001</a></td>
                                 <td>/views/CRA/ORIX-APP-CRA-001.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-16</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td rowspan="3">신용조회관리</td>
@@ -1464,27 +837,18 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/CRA/ORIX-APP-CRR-001.html" target="_blank">ORIX-APP-CRR-001</a></td>
                                 <td>/views/CRA/ORIX-APP-CRR-001.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-16</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>신용조회결과(이력조회 팝업)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/CRA/ORIX-APP-CRR-001_1.html" target="_blank">ORIX-APP-CRR-001_1</a></td>
                                 <td>/views/CRA/ORIX-APP-CRR-001_1.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-16</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>신용조회결과(결과 팝업)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/CRA/ORIX-APP-CRR-001_2.html" target="_blank">ORIX-APP-CRR-001_2</a></td>
                                 <td>/views/CRA/ORIX-APP-CRR-001_2.html</td>
-                                <td>박수현</td>
-                                <td>2024-01-16</td>
-                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1503,9 +867,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -1514,9 +875,6 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1526,72 +884,48 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-LPS-001.html" target="_blank">ORIX-APP-LPS-001</a></td>
                                 <td>/views/mypage/ORIX-APP-LPS-001.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-15</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>여신진행현황검색</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-LPS-001.html" target="_blank">ORIX-APP-LPS-001</a></td>
                                 <td>/views/mypage/ORIX-APP-LPS-001.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-15  </td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>신용조회 동의 재요청 팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-LPS-00101.html" target="_blank">ORIX-APP-LPS-00101</a></td>
                                 <td>/views/mypage/ORIX-APP-LPS-00101.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-15</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>재요청 완료 alert 팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-LPS-00102.html" target="_blank">ORIX-APP-LPS-00102</a></td>
                                 <td>/views/mypage/ORIX-APP-LPS-00102.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-15</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>약정채결 재요청 팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-LPS-00103.html" target="_blank">ORIX-APP-LPS-00103</a></td>
                                 <td>/views/mypage/ORIX-APP-LPS-00103.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-15</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>재요청 완료 alert 팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-LPS-00104.html" target="_blank">ORIX-APP-LPS-00104</a></td>
                                 <td>/views/mypage/ORIX-APP-LPS-00104.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-15</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>해피콜 재요청 팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-LPS-00105.html" target="_blank">ORIX-APP-LPS-00105</a></td>
                                 <td>/views/mypage/ORIX-APP-LPS-00105.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-15</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>재요청 완료 alert 팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-LPS-00106.html" target="_blank">ORIX-APP-LPS-00106</a></td>
                                 <td>/views/mypage/ORIX-APP-LPS-00106.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-15</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>면허인증 문자발송 팝업</td>
@@ -1599,27 +933,18 @@
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-LPS-00107.html" target="_blank">ORIX-APP-LPS-00107
                                 </a></td>
                                 <td>/views/mypage/ORIX-APP-LPS-00107.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-15</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>발송완료 alert 팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-LPS-00108.html" target="_blank">ORIX-APP-LPS-00108</a></td>
                                 <td>/views/mypage/ORIX-APP-LPS-00108.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-15</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>진행현황 상세 팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-LPS-002.html" target="_blank">ORIX-APP-LPS-002</a></td>
                                 <td>/views/mypage/ORIX-APP-LPS-002.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-15</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td rowspan="3">서류제출</td>
@@ -1627,26 +952,17 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-MYP-031.html" target="_blank">ORIX-APP-MYP-031</a></td>
                                 <td>./views/mypage/ORIX-APP-MYP-031.html</td>
-                                <td>박수현</td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>서류제출-고객선택</td>
                                 <td></td>
                                 <td class="fileName"><a href="" target="_blank">ORIX-APP-MYP-031_1</a></td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>서류제출완료</td>
                                 <td></td>
                                 <td class="fileName"><a href="" target="_blank">ORIX-APP-MYP-032</a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
                                 <td></td>
                             </tr>
                             <tr>
@@ -1655,27 +971,18 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-MYP-041.html" target="_blank">ORIX-APP-MYP-041</a></td>
                                 <td>/views/mypage/ORIX-APP-MYP-041.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-09</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>비밀번호변경 완료</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-MYP-042.html" target="_blank">ORIX-APP-MYP-042</a></td>
                                 <td>/views/mypage/ORIX-APP-MYP-042.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-09</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>비밀번호변경 오류</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/mypage/ORIX-APP-MYP-04201.html" target="_blank">ORIX-APP-MYP-04201</a></td>
                                 <td>/views/mypage/ORIX-APP-MYP-04201.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-09</td>
-                                <td>1/17 박수현 : jsp 필요(txt-wrap 안에 텍스트 수정 및 스타일 변경)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1694,9 +1001,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -1705,9 +1009,6 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1717,9 +1018,6 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/notice/ORIX-APP-NTC-001.html" target="_blank">ORIX-APP-NTC-001</a></td>
                                 <td>/views/notice/ORIX-APP-NTC-001.html</td>
-                                <td>박수현</td>
-                                <td>2023-01-11</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>상세보기</td>
@@ -1727,9 +1025,6 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/notice/ORIX-APP-NTC-002.html" target="_blank">ORIX-APP-NTC-002</a></td>
                                 <td>/views/notice/ORIX-APP-NTC-002.html</td>
-                                <td>박수현</td>
-                                <td>2023-01-11</td>
-                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1748,9 +1043,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -1759,9 +1051,6 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1771,9 +1060,6 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/notice/ORIX-APP-PSH-001.html" target="_blank">ORIX-APP-PSH-001</a></td>
                                 <td>/views/notice/ORIX-APP-PSH-001.html</td>
-                                <td>박수현</td>
-                                <td>2023-01-10</td>
-                                <td>1/10 이솔 : li 추가, 오릭스 알림 내용 추가</td>
                             </tr>
                             <tr>
                                 <td>Push 알림 상세보기</td>
@@ -1781,9 +1067,6 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/notice/ORIX-APP-PSH-002.html" target="_blank">ORIX-APP-PSH-002</a></td>
                                 <td>/views/notice/ORIX-APP-PSH-002.html</td>
-                                <td>박수현</td>
-                                <td>2023-01-11</td>
-                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1802,9 +1085,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -1813,9 +1093,6 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1825,9 +1102,6 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/calculator/ORIX-APP-FNC-001.html" target="_blank">ORIX-APP-FNC-001</a></td>
                                 <td>/views/calculator/ORIX-APP-FNC-001.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-15</td>
-                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1846,9 +1120,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -1857,9 +1128,6 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1869,36 +1137,24 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/RFA/ORIX-APP-RFA-001.htm" target="_blank">ORIX-APP-RFA-001</a></td>
                                 <td>/views/RFA/ORIX-APP-RFA-001.htm</td>
-                                <td>이솔</td>
-                                <td>2024-01-17</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>영업결재-기안상세</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/RFA/ORIX-APP-RFA-002.html" target="_blank">ORIX-APP-RFA-002</a></td>
                                 <td>/views/RFA/ORIX-APP-RFA-002.html</td>
-                                <td>박수현</td>
-                                <td></td>
-                                <td>1/17 이솔 : 버튼추가</td>
                             </tr>
                             <tr>
                                 <td>영업결재-검토의견팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/RFA/ORIX-APP-RFA-00201.html" target="_blank">ORIX-APP-RFA-00201</a></td>
                                 <td>/views/RFA/ORIX-APP-RFA-00201.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-17</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>영업결재-결재완료 alert팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/RFA/ORIX-APP-RFA-00202.html" target="_blank">ORIX-APP-RFA-00202</a></td>
                                 <td>/views/RFA/ORIX-APP-RFA-00202.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-17</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td rowspan="5">수기심사승인</td>
@@ -1906,45 +1162,30 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/RFA/ORIX-APP-RFS-001.html" target="_blank">ORIX-APP-RFS-001</a></td>
                                 <td>/views/RFA/ORIX-APP-RFS-001.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-16</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>수기심사상세</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/RFA/ORIX-APP-RFS-002.html" target="_blank">ORIX-APP-RFS-002</a></td>
                                 <td>/views/RFA/ORIX-APP-RFS-002.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-16</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>심사의견팝업</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/RFA/ORIX-APP-RFS-00201.html" target="_blank">ORIX-APP-RFS-00201</a></td>
                                 <td>/views/RFA/ORIX-APP-RFS-00201.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-16</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>심사의견팝업-승인완료</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/RFA/ORIX-APP-RFS-00202.html" target="_blank">ORIX-APP-RFS-00202</a></td>
                                 <td>/views/RFA/ORIX-APP-RFS-00202.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-16</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>신용조회결과 화면</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/RFA/ORIX-APP-RFS-003.html" target="_blank">ORIX-APP-RFS-003</a></td>
                                 <td>/views/RFA/ORIX-APP-RFS-003.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-17</td>
-                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1963,9 +1204,6 @@
                             <col width="8%">
                             <col width="15%">
                             <col width="15%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
@@ -1974,9 +1212,6 @@
                                 <th scope="col">3depth</th>
                                 <th scope="col" class="fileName">화면ID</th>
                                 <th scope="col">경로</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1986,9 +1221,6 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/IDS/ORIX-APP-IDS-001.html" target="_blank">ORIX-APP-IDS-001</a></td>
                                 <td>/views/IDS/ORIX-APP-IDS-001.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-11</td>
-                                <td>1/12 - 이솔 : 버튼 변경<br>1/16 이솔 : 수정 (placeholder)<br>1/16 수현 : 고객님 텍스트 삭제</td>
                             </tr>
                             <tr>
                                 <td rowspan="5">정보입력</td>
@@ -1996,45 +1228,30 @@
                                 <td></td>
                                 <td class="fileName"><a href="./views/IDS/ORIX-APP-IDS-002.html" target="_blank">ORIX-APP-IDS-002</a></td>
                                 <td>/views/IDS/ORIX-APP-IDS-002.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-11</td>
-                                <td>1/16 이솔 : value랑 datepicekr에 readonly 추가<br>1/16 수현 : 고객님 텍스트 삭제</td>
                             </tr>
                             <tr>
                                 <td>고객구분선택-바텀시트</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IDS/ORIX-APP-IDS-002_1.html" target="_blank">ORIX-APP-IDS-002_1</a></td>
                                 <td>/views/IDS/ORIX-APP-IDS-002_1.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-12</td>
-                                <td>1/16 이솔 : value랑 datepicekr에 readonly 추가<br>1/16 수현 : 고객님 텍스트 삭제</td>
                             </tr>
                             <tr>
                                 <td>방문판매사전안내(상세)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IDS/ORIX-APP-IDS-003.html" target="_blank">ORIX-APP-IDS-003</a></td>
                                 <td>/views/IDS/ORIX-APP-IDS-003.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-12</td>
-                                <td>1/16 이솔 : placeholder수정<br>1/16 수현 : 고객님 텍스트 삭제 및 상품구분 셀렉트 값 금융상품추가</td>
                             </tr>
                             <tr>
                                 <td>방문판매사전안내(상세-삭제)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IDS/ORIX-APP-IDS-003.html" target="_blank">ORIX-APP-IDS-003</a></td>
                                 <td>/views/IDS/ORIX-APP-IDS-003.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-12</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>방문판매사전안내(상세-재전송)</td>
                                 <td></td>
                                 <td class="fileName"><a href="./views/IDS/ORIX-APP-IDS-003.html" target="_blank">ORIX-APP-IDS-003</a></td>
                                 <td>/views/IDS/ORIX-APP-IDS-003.html</td>
-                                <td>이솔</td>
-                                <td>2024-01-12</td>
-                                <td></td>
                             </tr>
                         </tbody>
                     </table>
