@@ -790,11 +790,13 @@ iframe { border:none; }
 /** text 공통 **/
 .tit-main-area { margin-top:25px; margin-bottom:40px; }
 .tit-main-area .tit { font-size:1.375rem; line-height:1.5rem; font-weight:700; color:#002749; }
+.tit-main-area .tit .small-tit {  font-weight:500; color:#333333; }
 .tit-main-area .text { margin-top:8px; font-size:1rem; line-height:1.188rem; font-weight:500; color:#555555; }
 .tit-main-area .text2 { margin-top:5px; font-size:1.375rem; line-height:2rem; font-weight:500; }
 
 .tit-main-area .text2 .blue { font-size:1.375rem; line-height:1.5rem; font-weight:800; color:#003F86; }
 .tit-main-area .text2 .red { font-size:1.375rem; line-height:1.5rem; font-weight:800; color:#FF0000; }
+
 
 .tit-area { display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; }
 .tit-area .tit { font-size:1rem; line-height:1.188rem; color:#003F86; font-weight:600; }
