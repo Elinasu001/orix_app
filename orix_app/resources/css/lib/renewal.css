@@ -1136,6 +1136,9 @@ iframe { border:none; }
 .visaul-info-box .txt { font-size:1.125rem; line-height:1.25rem; font-weight:700; color:#003F86; }
 
 
+/* txt-list-wrap 한 txt-detail-area를 클릭해야 될 경우 */
+.txt-list-wrap.click .txt-detail-area.on { border:1px solid #6F9DD0; }
+
 /** 결과화면 **/
 .result-area  { text-align:center; }
 .result-area::before { content:''; display:inline-block; width:64px; height:64px; }
