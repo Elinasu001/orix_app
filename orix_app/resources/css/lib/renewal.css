@@ -680,6 +680,7 @@ iframe { border:none; }
 
 .table-type.table-scroll { overflow-x:scroll; }
 .txt-list-wrap + .table-type.table-scroll { margin-top:20px; }
+.form-group + .table-type.table-scroll { margin-top:20px; }
 .table-type.table-scroll + .btn-cont-wrap { margin-top:30px; }
 .table-type.table-scroll + .txt-list { margin-top:20px; }
 .table-type.table-scroll + .txt-detail-area.result { margin-top:22px; }
