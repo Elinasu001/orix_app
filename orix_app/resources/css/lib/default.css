@@ -75,7 +75,7 @@ header { position:fixed; top:0; left:0; z-index:10; width:100%; min-height:45px;
 form { height:100%; }
 
 .wrap.login .contents-wrap { margin-top:0; }
-
+.contents-wrap > .table-type { margin-top:28px; }
 /* .wrap.main .contents-wrap { padding:0; margin-top:128px; padding-bottom:0 ; } */
 /* .wrap.main .contents-wrap .tabs-wrap { margin-top:34px; } */
 /* .contents-wrap.main .tabs-wrap { margin-top:36px; } */

@@ -1220,7 +1220,7 @@ iframe { border:none; }
 .contents-wrap.main  { margin-top:128px; padding:0; }
 .contents-wrap.main .tab-item { padding:34px 20px 0 20px;  }
 .main-bg-wrap { padding:20px; height:100%; /*padding-bottom:120px;*/ }
-.main-bg-wrap .quick-service-area { margin-top:0; }
+.main-bg-wrap > .quick-service-area { margin-top:0; }
 
 /* 긴급공지 - main */
 .urgency-wrap.main { border-radius:12px; margin:65px 15px 0px; padding:16px 20px 16px 46px; }
@@ -1272,10 +1272,18 @@ iframe { border:none; }
 /* 공지사항 상세  */
 .list-tit-wrap { margin-top:28px; }
 .list-tit-wrap strong { font-size:1.125rem; line-height:1.45rem; font-weight:700; color:#333333; }
-.list-tit-wrap .date { display:block; margin-top:11px; color:#555555; font-size:0.875rem; line-height:1rem; font-weight:400; }
-.list-tit-wrap p { margin-top:10px; }
-.notice_contents { min-height:150px; width:100%; margin-top:18px; padding-top:27px; padding-bottom:50px; border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD; color:#555555; }
+.list-tit-wrap .date { display:block; margin-top:10px; color:#555555; font-size:0.875rem; line-height:1rem; font-weight:400; }
+/* .list-tit-wrap p { margin-top:10px; } */
+.notice-contents { min-height:230px; width:100%; margin-top:16px; padding-top:20px; padding-bottom:50px; border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD; color:#555555; }
 
+
+/* 품의결재 상세 */
+.list-tit-wrap .date-area { display:flex; align-items:center; justify-content:space-between; margin-top:10px; }
+.list-tit-wrap .date-area .date { margin-top:0; }
+.list-tit-wrap .date-area .num { font-size:0.875rem; line-height:1rem; font-weight:500; color:#212121; }
+.notice-bottom-area { display:flex; align-items:center; justify-content:space-between; margin-top:20px; }
+.notice-contents .tit { font-size:0.875rem; line-height:1rem; font-weight:400; color:#555555; }
+.notice-contents .text { font-size:0.875rem; line-height:1rem; font-weight:500; color:#212121; }
 
 /* 2024-01-10 이솔 ??*/
 .txt-list-wrap .txt-detail-area .txt-list .tit-c { justify-content: center; margin-bottom:0; }
