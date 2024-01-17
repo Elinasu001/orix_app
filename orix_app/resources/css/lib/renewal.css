@@ -175,8 +175,8 @@ input[type="file"] { position:absolute; top:0; right:0; opacity:0; }
 .camera-area.document input[type="file"] { right:-20%; }
 .camera-area input[type="file"] { position:absolute; transform:translateY(-50%); top:50%;  width:30px; height:30px; }
 .camera-area:before { width:20px; height:20px;  }
-.camera-area.camera::before { content:""; position:absolute; left:0; transform:translateY(-50%); top:50%; width:20px; height:15px;  background:url(../../images/common/ic_br_camera.png) no-repeat 50%/20px auto; }
-.camera-area.document::before { content:""; position:absolute; right:0; transform:translateY(-50%); top:50%; width:20px; height:15px; background:url(../../images/common/ic_br_document.png)no-repeat 50%/20px auto; }
+.camera-area.camera::before { content:""; position:absolute; left:0; transform:translateY(-50%); top:50%; width:20px; height:17px;  background:url(../../images/common/ic_br_camera.png) no-repeat 50%/20px auto; }
+.camera-area.document::before { content:""; position:absolute; right:0; transform:translateY(-50%); top:50%; width:20px; height:17px; background:url(../../images/common/ic_br_document.png)no-repeat 50%/20px auto; }
 
 /* button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
