@@ -850,6 +850,7 @@ iframe { border:none; }
 .list-icon .management::before { background:url('../../images/common/list_management.png') no-repeat #DFF2FF 50%/22px auto; }
 .list-icon .goods::before { background:url('../../images/common/list_goods.png')  no-repeat #DFF2FF 50%/22px auto; }
 .list-icon .Information::before { background:url('../../images/common/list_Information.png') no-repeat #FEF5CB 50%/22px auto; }
+.list-icon .announcement::before { background:url('../../images/common/list_announcement.png') no-repeat #FEF5CB 50%/22px auto; }
 
 
 /* .list-icon .market_price::before { background:url('../../images/common/list_market_price.png') no-repeat #DFF2FF 50%/21px auto; }
@@ -1237,7 +1238,9 @@ iframe { border:none; }
 .main-cont-wrap.car::after  { width:108px; height:75px; background:url(../../images/common/main_car.png)no-repeat 50%/108px auto; }
 .main-cont-wrap.graph::after{ width:67px; height:81px; background:url(../../images/common/main_graph.png)no-repeat 50%/67px auto;}
 .main-cont-wrap.banking::after{ width:98px; height:93px; background:url(../../images/common/main_banking.png)no-repeat 50%/67px auto;}
-.main-cont-wrap.executives::after { width: 88px; height: 89px; background: url(../../images/common/main_executives.png)no-repeat 50%/88px auto; }
+.main-cont-wrap.executives::after { width:95px; height: 89px; background: url(../../images/common/main_executives.png)no-repeat 50%/88px auto; }
+.main-cont-wrap.credit::after { width:103px; height: 83px; background: url(../../images/common/main_credit.png)no-repeat 50%/80px auto; }
+.main-cont-wrap.visit::after { width:100px; height: 86px; background: url(../../images/common/main_visit.png)no-repeat 50%/90px auto; }
 
 /* 알람 - main */
 .tooltip-wrap { display:flex; gap:5px; }
