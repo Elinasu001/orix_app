@@ -116,7 +116,7 @@ header .right-menu a.btn-alarm::before  { background: url(../../images/header/he
 header .right-menu a.btn-menu::before { background:url(../../images/header/header_menu.svg) no-repeat 50%/24px auto; }
 header h1.center { overflow:hidden; margin:0; padding:0; font-size:1rem; font-weight:500; line-height:45px; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
 header h1.logo:before { content:""; display:block; width:84px; height:40px; background: url(../../images/header/header_logo.png) no-repeat 50%/64px auto; }
-header .left-menu.logo a:before { width:123px; background:url(../../images/header/header_logo2.png)no-repeat 50%/92px auto; }
+header .left-menu.logo a.logo::before { position:absolute;  content:""; top:0; bottom:0;  width:92px; background:url(../../images/header/header_logo2.png)no-repeat 50%/92px auto; }
 
 .form-wrap .form-tit { margin:24px 0 10px; }
 .form-row { display:-ms-flexbox; display:flex; -ms-flex-wrap:nowrap; flex-wrap:nowrap; justify-content:space-between;  /*margin-right:-5px; margin-left:-5px;*/ width:100%; }
