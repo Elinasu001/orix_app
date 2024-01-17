@@ -1055,7 +1055,7 @@ iframe { border:none; }
 .txt-list-wrap .txt-detail-area .txt-detail-header + .txt-detail-header.no-line { padding:0; }
 
 
-.txt-detail-area .txt-detail-header p  { font-size:1rem; line-height:1.188rem; font-weight:500; }
+.txt-detail-area .txt-detail-header p  { font-size:1rem; line-height:1.188rem; font-weight:600; }
 .txt-detail-area .txt-detail-header .txt  { font-weight:400; }
 .txt-detail-area .txt-detail-header span.tit { font-size:1rem; line-height:1.188rem; font-weight:700; color:#003F86; }
 .txt-detail-area .txt-detail-header span.small-tit {font-size:0.875rem; line-height:1rem; font-weight:500; }
@@ -1234,13 +1234,13 @@ iframe { border:none; }
 .main-cont-wrap .text .name { font-weight:700; }
 .main-cont-wrap .tit { margin-top:8px;  font-size:1.125rem; line-height:1.25rem; font-weight:700;color:#003F86;}
 .main-cont-wrap { position:relative; }
-.main-cont-wrap::after { position:absolute; content:""; right:10px; top:25%;}
-.main-cont-wrap.car::after  { width:108px; height:75px; background:url(../../images/common/main_car.png)no-repeat 50%/108px auto; }
-.main-cont-wrap.graph::after{ width:67px; height:81px; background:url(../../images/common/main_graph.png)no-repeat 50%/67px auto;}
-.main-cont-wrap.banking::after{ width:98px; height:93px; background:url(../../images/common/main_banking.png)no-repeat 50%/67px auto;}
-.main-cont-wrap.executives::after { width:95px; height: 89px; background: url(../../images/common/main_executives.png)no-repeat 50%/88px auto; }
-.main-cont-wrap.credit::after { width:103px; height: 83px; background: url(../../images/common/main_credit.png)no-repeat 50%/80px auto; }
-.main-cont-wrap.visit::after { width:100px; height: 86px; background: url(../../images/common/main_visit.png)no-repeat 50%/90px auto; }
+.main-cont-wrap::after { position:absolute; content:""; right:10px; top:15%;}
+.main-cont-wrap.car::after  { width:110px; height:97px; background:url(../../images/common/main_car.png)no-repeat 50%/110px auto; }
+.main-cont-wrap.graph::after{ width:110px; height:97px; background:url(../../images/common/main_graph.png)no-repeat 50%/110px auto;}
+.main-cont-wrap.banking::after{ width:110px; height:97px; background:url(../../images/common/main_banking.png)no-repeat 50%/110px auto;}
+.main-cont-wrap.executives::after { width:110px; height:97px; background: url(../../images/common/main_executives.png)no-repeat 50%/110px auto; }
+.main-cont-wrap.credit::after { width:110px; height:97px; background: url(../../images/common/main_credit.png)no-repeat 50%/110px auto; }
+.main-cont-wrap.visit::after { width:110px; height:97px; background: url(../../images/common/main_visit.png)no-repeat 50%/110px auto; }
 
 /* 알람 - main */
 .tooltip-wrap { display:flex; gap:5px; }
