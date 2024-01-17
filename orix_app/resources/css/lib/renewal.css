@@ -778,8 +778,8 @@ iframe { border:none; }
 [class^="table-type"].style6 tbody tr:last-child { border-bottom:0; }
 
 /* 서류제출 이미지 들어올 경우 - 삭제 */
-[class^="table-type"].style6 tbody tr.delete td:first-child { color:#000000; font-weight:500; }
-[class^="table-type"].style6 tbody tr.delete td:last-child { color:#003F86; font-weight:400; }
+[class^="table-type"].style6 tbody tr.on td:first-child { color:#000000; font-weight:500; }
+[class^="table-type"].style6 tbody tr.on td:last-child { color:#003F86; font-weight:400; }
 
 
 /* .table-type.style6 tbody tr th:nth-of-type(2) { border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD; } */

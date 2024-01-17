@@ -457,7 +457,7 @@
 
 
                     <p class="test-tit">서류제출 개별 테이블 - style6 </p>
-                    <div class="table-type ta-c table-scroll style6">
+                    <section class="table-type ta-c table-scroll style6">
                         <table>
                             <caption>신용조회 동의 완료 고객 선택 테이블</caption>
                             <colgroup>
@@ -470,17 +470,38 @@
                                     <th>
                                         <div class="camera-wrap">
                                             <div class="camera-area camera">
-                                                <input type="file" accept="image/*" capture="camera" class="img">
+                                                <input type="file" accept="image/*" capture="camera" class="img"><!--[D]: 사진촬영 -->
                                             </div>
                                             <div class="camera-area document">
-                                                 <input type="file" accept="image/*" class="img">
+                                                &nbsp;<input type="file" accept="image/*" class="img"><!--[D]: 사진 불러오기 -->
                                             </div>
                                         </div>
                                     </th>
+                                    
                                 </tr>
+                                <tr class="on"><!--[D]: on 클래스 : 이미지 선택되었을 경우-->
+                                    <td colspan="2">IMG001.jpg</td>
+                                    <td>삭제</td>
+                                </tr>
+                                <tr class="on"><!--[D]: on 클래스 : 이미지 선택되었을 경우-->
+                                    <td colspan="2">IMG001.jpg</td>
+                                    <td>삭제</td>
+                                </tr>
+                                <tr class="on"><!--[D]: on 클래스 : 이미지 선택되었을 경우-->
+                                    <td colspan="2">IMG001.jpg</td>
+                                    <td>삭제</td>
+                                </tr>
+
                                 <tr>
-                                    <td>첨부파일 없음</td>
+                                    <th colspan="2">매매계약서</th>
+                                    <th>
+                                    </th>
                                 </tr>
+                                <tr class="on">
+                                    <td colspan="2">IMG001.jpg</td>
+                                    <td></td>
+                                </tr>
+
                                 <tr>
                                     <th colspan="2">매매계약서</th>
                                     <th>
@@ -489,34 +510,19 @@
                                                 <input type="file" accept="image/*" capture="camera" class="img">
                                             </div>
                                             <div class="camera-area document">
-                                                 <input type="file" accept="image/*" class="img">
+                                                &nbsp;<input type="file" accept="image/*" class="img">
                                             </div>
                                         </div>
                                     </th>
                                 </tr>
                                 <tr>
-                                    <td>첨부파일 없음</td>
+                                    <td colspan="2">첨부 파일 없음</td>
+                                    <td></td>
                                 </tr>
-                                <tr>
-                                    <th colspan="2">매매계약서</th>
-                                    <th>
-                                        <div class="camera-wrap">
-                                            <div class="camera-area camera">
-                                                <input type="file" accept="image/*" capture="camera" class="img">
-                                            </div>
-                                            <div class="camera-area document">
-                                                 <input type="file" accept="image/*" class="img">
-                                            </div>
-                                        </div>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td>첨부파일 없음</td>
-                                </tr>
-                                
+
                             </tbody>
                         </table>
-                    </div>
+                    </section>
                    
                 </div>
             </div>
