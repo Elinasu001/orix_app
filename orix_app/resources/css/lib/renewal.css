@@ -1282,8 +1282,8 @@ iframe { border:none; }
 .list-tit-wrap .date-area .date { margin-top:0; }
 .list-tit-wrap .date-area .num { font-size:0.875rem; line-height:1rem; font-weight:500; color:#212121; }
 .notice-bottom-area { display:flex; align-items:center; justify-content:space-between; margin-top:20px; }
-.notice-contents .tit { font-size:0.875rem; line-height:1rem; font-weight:400; color:#555555; }
-.notice-contents .text { font-size:0.875rem; line-height:1rem; font-weight:500; color:#212121; }
+.notice-bottom-area .tit { font-size:0.875rem; line-height:1rem; font-weight:400; color:#555555; }
+.notice-bottom-area .text { font-size:0.875rem; line-height:1rem; font-weight:500; color:#212121; }
 
 /* 2024-01-10 이솔 ??*/
 .txt-list-wrap .txt-detail-area .txt-list .tit-c { justify-content: center; margin-bottom:0; }
