@@ -8,6 +8,9 @@ $(document).ready(function() {
     this.value = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규식을 이용해서 3자리 마다 , 추가
   });
   
+
+ 
+
   /** 리스트 선택이 필요한 경우 **/
   $('.txt-list-wrap.click .txt-detail-area').click(function () {
 

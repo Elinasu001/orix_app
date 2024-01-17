@@ -180,12 +180,21 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="amount">개월</label>
+                        <label for="amount">개월 - 팝업일 경우</label>
                         <div class="amount">
                             <input type="number" class="form-control amount-num" id="amount" placeholder="기간을 입력해주세요"  onclick="openPopup('lySel5')">
                             <span class="amount-txt">개월</span>
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <label for="amount">개월 - 입력일 경우</label>
+                        <div class="amount">
+                            <input type="number" class="form-control amount-num" id="amount" placeholder="기간을 입력해주세요"  maxlength="4" oninput="maxLengthCheck(this)">
+                            <span class="amount-txt">개월</span>
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <label for="amount">%</label>
                         <div class="amount">
@@ -193,7 +202,7 @@
                             <span class="amount-txt">%</span>
                         </div>
                     </div>
-                   
+
                     <div class="form-group">
                         <label for="">휴대폰 번호</label>
                         <div class="form-row">
@@ -498,7 +507,11 @@
 
 
 <script>
-
+    // 브라우저 maxlength설정
+function maxLengthCheck(object) {
+    if (object.value.length > object.maxLength)
+        object.value = object.value.slice(0, object.maxLength);
+};
 </script>
 
 <style>
