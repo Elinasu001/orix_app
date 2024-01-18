@@ -99,6 +99,7 @@ textarea:valid { color: #000000 !important; }
 .rc-gray { margin-top:30px; margin-bottom:22px; height:20px; background:#F8F8F8; }
 .rc-gray +  .form-group.check-buttons { margin-top:24px; }
 .rc-gray + .table-type { margin-top:24px; }
+.rc-gray + .ly-cont-wrap.ly-scroll-con .result-tit-area { margin-top:20px; }
 /*모바일 사파리(iOS9)*/
 /* input {    -webkit-appearance: searchfield;}
  *::-webkit-search-cancel-button { -webkit-appearance: searchfield-cancel-button;} */
@@ -310,6 +311,7 @@ input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"
 .input-box-wrap .input-box { padding:20px 20px 30px; border:1px solid #E5E5E5; border-radius: 10px; }
 .input-box .form-wrap { margin-top:0; }
 .input-box .btn-cont-wrap { margin-top:30px; }
+.form-wrap + .btn-cont-wrap { margin-top:20px; }
 
 /** 공통 버튼 **/
 
@@ -597,6 +599,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /* 선택 검색 팝업 */
 .layerpopup .form-group.img-search { margin-bottom:20px; }
 /* .layerpopup .btn.btn-search { right:20px; } */
+.layerpopup .rc-gray { margin-top:20px; margin-bottom:20px; height:10px; }
 
 
 /** _스크롤 컨텐츠 레이어 **/
@@ -617,6 +620,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .layer-up .pop-header .pop-title,
 .type-alert .pop-header .pop-title { display:inline-block; font-size:1.125rem; line-height:1.25rem; font-weight:700; color:#000; line-height:1.39; letter-spacing:-.4px; word-break:keep-all; }
 .pop-header-img img { width:82px; }
+.pop-header + .form-wrap { margin-top:0; }
 
 /** 공통 - 약관 **/
 
