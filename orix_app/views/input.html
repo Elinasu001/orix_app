@@ -554,17 +554,18 @@ function maxLengthCheck(object) {
         object.value = object.value.slice(0, object.maxLength);
 };
 
-// $('.form-control').focus(function(){
-//   if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
-//     $('.fixed-btn-wrap').hide();
-//   }
-// });
 
-// $('.form-control').blur(function(){
-//   if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
-//     $('.fixed-btn-wrap').show();
-//   }
-// });
+$('.form-control').focus(function(){
+  if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
+    $('.fixed-btn-wrap').hide();
+  }
+});
+
+$('.form-control').blur(function(){
+  if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
+    $('.fixed-btn-wrap').show();
+  }
+});
 </script>
 
 <style>
