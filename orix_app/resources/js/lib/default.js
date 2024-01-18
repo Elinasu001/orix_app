@@ -10,13 +10,13 @@ $(document).ready(function() {
   
 
  
-$('.form-control:not(.form-control.select), .form-control.amount-num, textarea, .layerpopup').focus(function(){
+$('.form-control:not(.form-control.select), textarea, .layerpopup').focus(function(){
   if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
     $('.fixed-btn-wrap').hide();
   }
 });
 
-$('.form-control:not(.form-control.select), .form-control.amount-num, textarea, .layerpopup').blur(function(){
+$('.form-control:not(.form-control.select), textarea, .layerpopup').blur(function(){
   if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
     $('.fixed-btn-wrap').show();
   }
