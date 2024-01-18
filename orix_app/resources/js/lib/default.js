@@ -10,14 +10,26 @@ $(document).ready(function() {
   
 
  
+// $('.form-control:not(.form-control.select), textarea, .layerpopup').focus(function(){
+//   if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
+//     $('.fixed-btn-wrap').hide();
+//   }
+// });
+
+// $('.form-control:not(.form-control.select), textarea, .layerpopup, .form-control.amount-num').blur(function(){
+//   if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
+//     $('.fixed-btn-wrap').show();
+//   }
+// });
+
 $('.form-control:not(.form-control.select), textarea, .layerpopup').focus(function(){
-  if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
+  if (!$(this).hasClass('select')) {
     $('.fixed-btn-wrap').hide();
   }
 });
 
-$('.form-control:not(.form-control.select), textarea, .layerpopup').blur(function(){
-  if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
+$('.form-control:not(.form-control.select), textarea, .layerpopup, .form-control.amount-num').blur(function(){
+  if (!$(this).hasClass('select')) {
     $('.fixed-btn-wrap').show();
   }
 });
