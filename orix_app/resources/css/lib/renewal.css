@@ -365,7 +365,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /* 로그인 */
 .btn.btn-line-text { position: relative; font-size:0.875rem; line-height:1rem; color:#757575; }
 .btn-cont-wrap .btn.btn-line-text:first-child:after { content:""; position:absolute; top:50%; right:0; transform:translate(0, -50%); width:1px; height:10px; border:1px solid #EBEBED; }
-.btn.btn-text { padding:0 0!important; font-size:0.875rem; line-height:1rem; font-weight:500; color:#333333; /*text-align:right;*/ }
+.btn.btn-text { padding:0 0!important; font-size:0.875rem; line-height:1rem; font-weight:400; color:#333333; /*text-align:right;*/ }
 /* .btn.btn-text.small-line:hover { border-bottom:1px solid #003F86; } */
 
 .btn.btn-text.small-line { position:relative; margin-top:30px; padding-right:17px!important; font-size:1rem; line-height:1.188rem; font-weight:600; border-radius:0; width:initial; color:#003F86; }
