@@ -277,7 +277,7 @@ input::-webkit-search-results-decoration{ -webkit-appearance:none; display:none;
 
 /* label style */
 .form-group label:not(.check-button,.radio-button) { margin-bottom:10px; }
-
+.form-row.radio-bg-button label { margin-bottom:0; }
 /** select style**/
 select { background: url('../../images/common/svg/ico_select.svg') no-repeat right 10px center / 16px auto; }
 .form-control.select { background: url('../../images/common/svg/ico_select.svg') no-repeat right 10px center / 16px auto; }

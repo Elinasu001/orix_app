@@ -10,6 +10,17 @@ $(document).ready(function() {
   
 
  
+$('.form-control:not(.form-control.select), .form-control.amount-num, textarea, .layerpopup').focus(function(){
+  if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
+    $('.fixed-btn-wrap').hide();
+  }
+});
+
+$('.form-control:not(.form-control.select), .form-control.amount-num, textarea, .layerpopup').blur(function(){
+  if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
+    $('.fixed-btn-wrap').show();
+  }
+});
 
   /** 리스트 선택이 필요한 경우 **/
   $('.txt-list-wrap.click .txt-detail-area').click(function () {
