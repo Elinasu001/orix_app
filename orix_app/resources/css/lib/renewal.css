@@ -64,7 +64,10 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; }
 
 body, p, h1, h2, h3, h4, h5, h6, table, caption, form, fieldset, legend, span, div, th, td, address { position:relative; margin:0; padding:0;  }
-label { display: inline-block; font-size:0.875rem; line-height:1rem; color:#757575; }
+label,
+.form-tit { display: inline-block; font-size:0.875rem; line-height:1rem; color:#333333; }
+label:not(label.check-button),
+.form-tit { margin-bottom:10px; }
 .dp-none { display:none; }
 legend, caption{width:0; height:0; text-indent:-10000px; font-size:0; line-height:0; position:absolute; left:-99999px; }
 table{/*border-collapse:collapse;*/ border-spacing:0; width:100%}
@@ -75,10 +78,7 @@ table { border-collapse:collapse; }
 button { border-radius:0; }
 .line { border: 1px solid #ced4da; border-radius:5px; background-color: #fff; padding:10px; }
 .type-spread { margin:0 -20px; }
-label,
-.form-tit { display: inline-block; font-size:0.875rem; line-height:1rem; color:#555555; }
-label:not(label.check-button),
-.form-tit { margin-bottom:10px; }
+
 .txt-detail-area.pd-top .form-tit { padding-bottom:15px; font-size:1rem; line-height:1.188rem; font-weight:600; color:#000000; }
 .essential { color:#555555; }
 .essential::after { content:"*"; color:#FF0000; padding-left:3px; }
@@ -271,7 +271,7 @@ input::-webkit-search-results-decoration{ -webkit-appearance:none; display:none;
 .form-wrap  + .tabs-wrap.round-list { margin-top:20px; }
 /* .form-group + .form-group:has(>label), */
 .form-group + .form-group { margin-top:24px; }
-.form-control { display:block; width:100%; padding:11px 10px; font-size:0.875rem; line-height:1rem; font-weight:400; color:#CECECE; background-clip: padding-box; border: 1px solid #DDDDDD; border-radius:4px; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+.form-control { display:block; width:100%; padding:11px 10px; font-size:0.875rem; line-height:1rem; font-weight:400; color:#CECECE; background-clip: padding-box; border: 1px solid #BEBEBE; border-radius:4px; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
 .form-wrap .form-group + .accordion-cont-wrap { margin-top:20px; }
 .input-box-wrap + .txt-list-wrap { margin-top:20px; }
 
@@ -1211,6 +1211,7 @@ iframe { border:none; }
 /* 대출연장 신청 완료 */
 .check-list-wrap { margin-top:56px; padding-bottom:20px; border-radius:12px; background:#F8F8F8; font-size:0.875rem; line-height:1rem; font-weight:500; text-align:center; }
 .check-list-wrap li { padding-top:15px; }
+
 
 /* 신용조회등록 */
 .check-result-wrap { display:none; }
