@@ -22,13 +22,13 @@ $(document).ready(function() {
 //   }
 // });
 
-$('.form-control:not(.form-control.select), textarea, .layerpopup').focus(function(){
+$('.form-control:not(.form-control.select), textarea').focus(function(){
   if (!$(this).hasClass('select')) {
     $('.fixed-btn-wrap').hide();
   }
 });
 
-$('.form-control:not(.form-control.select), textarea, .layerpopup, .form-control.amount-num').blur(function(){
+$('.form-control:not(.form-control.select), textarea').blur(function(){
   if (!$(this).hasClass('select')) {
     $('.fixed-btn-wrap').show();
   }
