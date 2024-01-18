@@ -1196,6 +1196,8 @@ iframe { border:none; }
 .result-tit-area { border:none; text-align:center; }
 .result-tit-area .tit { font-size:1rem; line-height:1.188rem; color:#999999; }
 
+.layerpopup .result-area { margin-top:40px; }
+
 /* 조회/조회결과 영역 (check-wrap/result-wrap) */
 .check-wrap .txt-list-wrap .txt-detail-area { display:none; }
 .check-wrap .txt-list-wrap .txt-detail-area.on { display:block; }
