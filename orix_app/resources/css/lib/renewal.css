@@ -1270,7 +1270,7 @@ iframe { border:none; }
 .main-cont-wrap .text .name { font-weight:700; }
 .main-cont-wrap .tit { margin-top:8px;  font-size:1.125rem; line-height:1.25rem; font-weight:700;color:#003F86;}
 .main-cont-wrap { position:relative; }
-.main-cont-wrap::after { position:absolute; content:""; right:10px; top:15%;}
+.main-cont-wrap::after { position:absolute; content:""; right:10px; top:10%;}
 .main-cont-wrap.car::after  { width:110px; height:97px; background:url(../../images/common/main_car.png)no-repeat 50%/110px auto; }
 .main-cont-wrap.graph::after{ width:110px; height:97px; background:url(../../images/common/main_graph.png)no-repeat 50%/110px auto;}
 .main-cont-wrap.banking::after{ width:110px; height:97px; background:url(../../images/common/main_banking.png)no-repeat 50%/110px auto;}
