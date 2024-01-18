@@ -368,7 +368,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .btn.btn-text { padding:0 0!important; font-size:0.875rem; line-height:1rem; font-weight:500; color:#333333; /*text-align:right;*/ }
 /* .btn.btn-text.small-line:hover { border-bottom:1px solid #003F86; } */
 
-.btn.btn-text.small-line { position:relative; margin-top:40px; padding-right:17px!important; font-size:1rem; line-height:1.188rem; font-weight:600; border-radius:0; width:initial; color:#003F86; }
+.btn.btn-text.small-line { position:relative; margin-top:30px; padding-right:17px!important; font-size:1rem; line-height:1.188rem; font-weight:600; border-radius:0; width:initial; color:#003F86; }
 .btn.btn-text.small-line::after { content:""; position:absolute; transform:translateY(-50%); top:50%; right:0; width:15px; height:15px; background:url(../../images/common/ico_plus.png)no-repeat 50%/15px auto; }
 .btn.btn-text.big-line  { border-radius:0; width:initial; color:#FFFFFF; border-bottom:1px solid #FFFFFF; font-size:1.125rem; line-height:1.25rem; font-weight:700; }
 
@@ -568,6 +568,8 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /* .layerpopup .btn-wrap.btn-close .btn-layer-close { position:static; padding:15px 0; height:49px; background-image: none; background-color: #003F86; text-indent:inherit; } */
 /* .layerpopup.layer-up .btn-wrap .btn-layer-close { position:static; width:100%; height:60px; background:#003F86;} */
 .layerpopup.laypop-all .ly-con-wrap .btn-cont-wrap { margin-top:48px; }
+.layerpopup.laypop-all .ly-con-wrap .btn-cont-wrap.center { margin-top:30px; }
+.layerpopup.laypop-all .ly-con-wrap .btn-cont-wrap.center .btn.btn-text.small-line { margin-top:0; }
 
 
 /** 알럿팝업 **/
