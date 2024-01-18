@@ -74,7 +74,9 @@ button { border-radius:0; }
 .line { border: 1px solid #ced4da; border-radius:5px; background-color: #fff; padding:10px; }
 .type-spread { margin:0 -20px; }
 label,
-.form-tit { display: inline-block; margin-bottom:10px;  font-size:0.875rem; line-height:1rem; color:#555555; }
+.form-tit { display: inline-block; font-size:0.875rem; line-height:1rem; color:#555555; }
+label:not(label.check-button),
+.form-tit { margin-bottom:10px; }
 .txt-detail-area.pd-top .form-tit { padding-bottom:15px; font-size:1rem; line-height:1.188rem; font-weight:600; color:#000000; }
 .essential { color:#555555; }
 .essential::after { content:"*"; color:#FF0000; padding-left:3px; }
