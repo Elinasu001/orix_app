@@ -1,0 +1,339 @@
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ORIX Capital</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords" />
+    <meta name="description" content="ORIX Capital description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../resources/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../../resources/favicon.png" />
+    
+    <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../../resources/css/ui/jquery-ui.css">
+    <link rel="stylesheet" href="../../resources/css/ui/datepicker.css">
+    
+    <script type="text/javascript" src="../../resources/js/ui/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui/jquery-1.12.4.min.js"></script>
+    <script  type="text/javascript" src="../../resources/js/ui/jquery-ui-1.12.1.js"></script>
+
+    <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
+</head>
+
+<body>
+    <!--//wrap-->
+    <div class="wrap">
+        <!-- //headerWrap -->
+        <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_header.html");
+			});
+			</script>
+        </div>
+        <!-- headerWrap// -->
+        <!-- //menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("../include/inc_all_menu.html");
+            });
+            </script>
+        </div>
+	    <!-- menuWrap// -->
+        <form>
+            <!--//contents-wrap-->
+            <div class="contents-wrap">
+                css와 js 경로 및 headerWrap, menuWrap인크루드 경로가 잘 연결되었는지 확인해주세요.
+            </div>
+            <!--contents-wrap//-->
+        </form>
+    </div>
+    <!--wrap//-->
+    <div id="lyPullPop02" class="layerpopup laypop-all" style="display: block;">
+		<div class="content-wrap">
+			<div class="pop-header">
+				<h2 class="pop-title">사고이력조회</h2>
+				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+			</div>
+
+			<div class="ly-con-wrap" id="">
+                <section class="result-wrap">
+                    <div class="txt-list-wrap">
+                        <div class="txt-detail-area on"><!--on 클래스 추가 시 display:block; -->
+                            <div class="txt-detail-header">
+                                <p><span class="tit">현대 쏘나타 N Line2.5 T 인스퍼레이션</span></p>
+                            </div>
+                            <ul class="txt-list">
+                                <li>
+                                    <span class="tit">연식</span>
+                                    <span class="txt">2022</span>
+                                </li>
+                                <li>
+                                    <span class="tit">취급가능여부</span>
+                                    <span class="txt yes">Y</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-cont-wrap">
+                        <div class="accordion-item">
+                            <div class="accordion">
+                                <button type="button" class="btn-accordion on">· 중고차 사고이력 정보요약</button>
+                                <div class="accordion-cont form-wrap on">
+                                    <div class="txt-detail-area result"><!--[D]: 조회 됐을 경우-->
+                                        <ul class="txt-list">
+                                            <li>
+                                                <span class="tit">차량번호</span>
+                                                <span class="txt">123가4567</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">제조사</span>
+                                                <span class="txt">현대자동차</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">연식</span>
+                                                <span class="txt">2022</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">특수용도이력</span>
+                                                <span class="txt">렌트/영업/관용</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">특수사고</span>
+                                                <span class="txt">전손/도난/침수</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">용도변경</span>
+                                                <span class="txt">0회</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">소유자변경</span>
+                                                <span class="txt">2회</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">내차피해</span>
+                                                <span class="txt">4회(2,246,078원)+미확정</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">상대차피해</span>
+                                                <span class="txt">1회(494,227원)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion">
+                                <button type="button" class="btn-accordion on">· 차량사양정보</button>
+                                <div class="accordion-cont form-wrap on">
+                                    <div class="txt-detail-area result"><!--[D]: 조회 됐을 경우-->
+                                        <ul class="txt-list">
+                                            <li>
+                                                <span class="tit">차량명</span>
+                                                <span class="txt">123가4567</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">배기량</span>
+                                                <span class="txt">현대자동차</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">연료</span>
+                                                <span class="txt">2022</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">차체형상</span>
+                                                <span class="txt">렌트/영업/관용</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">용도 및 차종</span>
+                                                <span class="txt">전손/도난/침수</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">최종보험가입일</span>
+                                                <span class="txt">0회</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion">
+                                <button type="button" class="btn-accordion on">· 자동차번호/소유자변경 이력</button>
+                                
+                                <div class="accordion-cont form-wrap on">
+
+                                    <div class="table-type table-col table-scroll">
+                                        <table>
+                                            <caption>자동차번호/소유자변경 이력에 대한 테이블</caption>
+                                            <colgroup>
+                                                <col width="40%">
+                                                <col width="*">
+                                            </colgroup>
+                                            <!-- <thead>
+                                                <tr>
+                                                    <th scope="col" rowspan="2">변경일자</th>
+                                                </tr>
+                                            </thead> -->
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="col">변경일자</th>
+                                                    <td>2023. 11. 22</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">변경구분</th>
+                                                    <td>소유자변경</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">차량번호</th>
+                                                    <td>-</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">용도</th>
+                                                    <td>자가용 승용</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                  
+                                    <div class="table-type table-col table-scroll">
+                                        <table>
+                                            <caption>자동차번호/소유자변경 이력에 대한 테이블</caption>
+                                            <colgroup>
+                                                <col width="40%">
+                                                <col width="*">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="col">변경일자</th>
+                                                    <td>2023. 06.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">변경구분</th>
+                                                    <td>최초등록</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">차량번호</th>
+                                                    <td>123가 XXXX</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">용도</th>
+                                                    <td>자가용 승용</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion">
+                                <button type="button" class="btn-accordion on">· 내차 피해금액 상세</button>
+                                <div class="accordion-cont form-wrap on">
+                                    <div class="table-type table-col style2 table-scroll">
+                                        <table>
+                                            <caption>내차 피해금액 상세에 대한 테이블</caption>
+                                            <colgroup>
+                                                <col width="30%">
+                                                <col width="*"> 
+                                                <col width="*">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">사고일자</th>
+                                                    <th scope="col" colspan="2"  class="txt-r">2023.10.29</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                               
+                                                <tr>
+                                                    <th rowspan="2" class="td1">내차피해</th>
+                                                    <td>내차보험</td>
+                                                    <td>수리(견적)비용<br>:<span>미확정</span> 원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>상대보험</td>
+                                                    <td>-</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="td1">상환방식</th>
+                                                    <td></td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="table-type  table-col style2 table-scroll">
+                                        <table>
+                                            <caption>내차 피해금액 상세에 대한 테이블</caption>
+                                            <colgroup>
+                                                <col width="30%">
+                                                <col width="*">
+                                                <col width="*">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">사고일자</th>
+                                                    <th scope="col" colspan="2"  class="txt-r">2023.10.29</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="5" class="td1">내차피해</th>
+                                                    <td>내차보험</td>
+                                                    <td>-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="4">상대보험</td>
+                                                    <td>수리(견적)비용<br>:<span>452,374</span> 원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>부품<br>:<span>15,675</span> 원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>공임<br>:<span>208,010</span> 원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>도장<br>:<span>228,689</span> 원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="td1">상대피해</th>
+                                                    <td></td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+			</div>
+		</div>
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <button type="button" class="btn btn-primary">확인</button>
+            </div>
+        </div>
+	</div>
+,</body>
+</html>
