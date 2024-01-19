@@ -234,23 +234,31 @@
             <h2 class="pop-title">FP조회</h2>
             <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
         </div>
-        <div class="form-group radio-buttons">
-            <label for="radio-1" class="radio-button">
-                <input type="radio" id="radio-1" name="terms">
-                <span class="custom-radio"></span>
-                <span class="text">이름</span>
-            </label>
-            <label for="radio-2" class="radio-button">
-                <input type="radio" id="radio-2" name="terms">
-                <span class="custom-radio"></span>
-                <span class="text">전화번호</span>
-            </label>
-        </div>
-        <div class="form-group gray-search">
-            <input type="search" id="" class="form-control" placeholder="이름 입력">
-            <button class="btn btn-search" type="button">검색</button>
+        <div class="form-wrap">
+            <div class="form-group radio-buttons">
+                <label for="radio-1" class="radio-button">
+                    <input type="radio" id="radio-1" name="terms">
+                    <span class="custom-radio"></span>
+                    <span class="text">이름</span>
+                </label>
+                <label for="radio-2" class="radio-button">
+                    <input type="radio" id="radio-2" name="terms">
+                    <span class="custom-radio"></span>
+                    <span class="text">전화번호</span>
+                </label>
+            </div>
+            <div class="form-group gray-search">
+                <input type="search" id="" class="form-control" placeholder="이름 입력">
+                <button class="btn btn-search" type="button">검색</button>
+            </div>
         </div>
         <div class="ly-scroll-con ly-select">
+            <div class="result-area nodata">
+                <div class="txt-wrap">
+                    <p class="tit">조회 결과가 없습니다.</p>
+                </div>
+            </div>
+
             <div class="table-type ta-c style3 table-scroll check">
                 <table class="">
                     <caption>FP조회</caption>
