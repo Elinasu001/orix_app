@@ -243,7 +243,7 @@
                             <div class="col">
                                 <input id="" type="text" class="form-control" placeholder="도로명, 지번을 입력해주세요">
                             </div>
-                            <button class="btn btn-txt search-img" type="button">검색</button>
+                            <button class="btn btn-txt search-img" type="button" onclick="openPopup('test')">검색</button>
                         </div>
                     </div>
 
@@ -538,6 +538,81 @@
     </div>
 </div>
 <!--alert//-->
+
+<!--//test-->
+<div id="test" class="layerpopup layer-up on" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">차량 직접 검색</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="form-wrap">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col">
+                        <input id="" type="text" name="" class="form-control" placeholder="차량모델명 입력">
+                    </div>
+                    <div class="col-3">
+                        <input id="" type="text" name="" class="form-control" placeholder="연식 입력">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-cont-wrap">
+            <a type="button" class="btn btn-primary">검색</a>
+        </div>
+        <div class="rc-gray type-spread"></div>
+        <div class="ly-cont-wrap ly-scroll-con">
+            <div class="result-tit-area">
+                <p class="tit">모델명과 연식을 입력해 주세요</p>
+            </div>
+            <div class="txt-list-wrap">
+                <div class="txt-detail-area">
+                    <div class="txt-detail-header">
+                        <p><span class="tit">현대 쏘나타 N. Line 2.5T 인스퍼레이션</span></p>
+                    </div>
+                    <ul class="txt-list">
+                        <li>
+                            <span class="tit">연식</span>
+                            <span class="txt">2022년식</span>
+                        </li>
+                        <li>
+                            <span class="tit">금액</span>
+                            <span class="txt">3,940만원</span>
+                        </li>
+                    </ul>
+                    <div class="btn-cont-wrap">
+                        <a href="#none" class="btn btn-primary">선택</a>
+                    </div>
+                </div>
+                <div class="txt-detail-area">
+                    <div class="txt-detail-header">
+                        <p><span class="tit">현대 쏘나타 하이브리드 (DN8) 2.0 하이브리드 인스페레이션</span></p>
+                    </div>
+                    <ul class="txt-list">
+                        <li>
+                            <span class="tit">연식</span>
+                            <span class="txt">2022년식</span>
+                        </li>
+                        <li>
+                            <span class="tit">금액</span>
+                            <span class="txt">3,940만원</span>
+                        </li>
+                    </ul>
+                    <div class="btn-cont-wrap">
+                        <a href="#none" class="btn btn-primary">선택</a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-area nodata"><!--[D]:조회 결과가 없을 경우-->
+                <div class="txt-wrap">
+                    <p class="tit">조회 결과가 없습니다</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--test//-->
 
 
 <script>
