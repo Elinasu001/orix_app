@@ -786,9 +786,9 @@ iframe { border:none; }
 
 /* 품의결재 개별 테이블 */
 [class^="table-type"].style5 tbody td { color:#00345F; }
- .table-type.style5 tbody th:first-child {  background:#003F86; color:#FFFFFF;  }
-.table-type.style5 tbody > tr > th:first-child { border-top:0px; }
-.table-type.style5 tbody th { border-top:1px solid #DDDDDD; background:#F8F8F8; color:#000000;  }
+ .table-type.style5 tbody th:first-child {  background:#EFEFEF; color:#333333;  }
+/* .table-type.style5 tbody > tr > th:first-child { border-top:0px; } */
+.table-type.style5 tbody th { border-top:1px solid #DDDDDD; background:#F8F8F8; color:#212121;  }
 .table-type.style5 tbody td { border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD; }
 
 /* 서류제출 개별 테이블 */
