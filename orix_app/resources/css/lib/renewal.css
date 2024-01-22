@@ -1163,7 +1163,7 @@ iframe { border:none; }
 
 
 /* txt-list-wrap 한 txt-detail-area를 클릭해야 될 경우 */
-.txt-list-wrap.click .txt-detail-area.on { border:1px solid #6F9DD0; }
+.txt-list-wrap.click .txt-detail-area.on { border:2px solid #6F9DD0; }
 
 /** 결과화면 **/
 .result-area  { text-align:center; }
@@ -1342,13 +1342,11 @@ iframe { border:none; }
 .notice-list-wrap ul li .notice-tit-area .num { font-size:0.75rem;  line-height:0.875rem; font-weight:400; color:#555555; }
 .notice-list-wrap ul li .text { font-size:0.875rem; line-height:1rem; font-weight:500; color:#333333; }
 .notice-list-wrap ul li .notice-tit-area + .text { margin-top:8px; }
-/* .notice-list-wrap ul li .notice-tit-area .com { color:; } */
 
 /* 공지사항 상세  */
 .list-tit-wrap { margin-top:28px; }
 .list-tit-wrap strong { font-size:1.125rem; line-height:1.45rem; font-weight:700; color:#333333; }
 .list-tit-wrap .date { display:block; margin-top:10px; color:#555555; font-size:0.875rem; line-height:1rem; font-weight:400; }
-/* .list-tit-wrap p { margin-top:10px; } */
 .notice-contents { min-height:230px; width:100%; margin-top:16px; padding-top:20px; padding-bottom:50px; border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD; font-size:0.875rem; color:#555555; }
 
 

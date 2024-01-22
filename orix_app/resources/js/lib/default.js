@@ -72,6 +72,7 @@ $('.form-control:not(.form-control.select, input.form-control:read-only), textar
 //     var index = $(this).index();
 //     $(".table-type.result").show();
 // });
+
 /** 테이블  상세현황**/
 $(".table-type.check tbody tr").click(function () {
 
@@ -196,19 +197,14 @@ $(".table-type.check tbody tr").click(function () {
 
         reader.onload = function(e) {
             const imageUrl = e.target.result;
-
             
             const newListItem = $('<li><img src="' + imageUrl + '" alt="Uploaded Image"><span>추가</span></li>');
 
-           
             $parentListItem.replaceWith(newListItem);
 
-            
             newListItem.addClass('delete');
 
-            
             const newPlusListItem = $('<li class="plus"><input type="file" id="file" class="ip-file"><span>추가</span></li>');
-
             
             $('.thumb-wrap ul').append(newPlusListItem);
         };
