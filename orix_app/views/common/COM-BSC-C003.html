@@ -149,7 +149,7 @@
                         <label for="">휴대폰 번호</label>
                         <div class="form-row">
                             <div class="col-3">
-                                <input id="" type="text" class="form-control select"  placeholder="통신사"  onclick="openPopup('lySel2')">
+                                <input id="" type="text" class="form-control select"  placeholder="통신사"  onclick="openPopup('lySel1')">
                             </div>
                             <div class="col">
                                 <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력">
@@ -188,7 +188,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="amount">개월 - 입력일 경우</label>
+                        <label for="amount">개월 - 입력일 경우 -> [type="number"]로 갈 경우 스크립트와 oninput 추가 필요, [type="tel"]일 경우 불필요</label>
                         <div class="amount">
                             <input type="number" class="form-control amount-num" id="amount" placeholder="기간을 입력해주세요"  maxlength="4" oninput="maxLengthCheck(this)">
                             <span class="amount-txt">개월</span>
@@ -207,7 +207,7 @@
                         <label for="">휴대폰 번호</label>
                         <div class="form-row">
                             <div class="col-3">
-                                <input id="" type="text" class="form-control select" placeholder="통신사" onclick="openPopup('lySel2')">
+                                <input id="" type="text" class="form-control select" placeholder="통신사" onclick="openPopup('lySel1')">
                             </div>
                             <div class="col">
                                 <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력">
@@ -322,27 +322,8 @@
 
 
 </html>
-<div id="lySel" class="layerpopup layer-up" tabindex="0">
-    <div class="content-wrap">
-        <div class="pop-header">
-            <h2 class="pop-title">통신사 선택</h2>
-            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        </div>
-        <div class="ly-scroll-con ly-select">
-            <ul class="ly-select-list">
-                <li><button>SKT</button></li>
-                <li><button>KT</button></li>
-                <li><button>LG</button></li>
-                <li><button>알뜰폰 SK</button></li>
-                <li><button>알뜰폰 KT</button></li>
-                <li><button>알뜰폰 LG</button></li>
-            </ul>
-        </div>
-    </div>
-</div>
 
-
-<!--//휴대폰팝업1-->
+<!--//통신사 선택-->
 <div id="lySel1" class="layerpopup layer-up" tabindex="0">
     <div class="content-wrap">
         <div class="pop-header">
@@ -361,135 +342,14 @@
         </div>
     </div>
 </div>
-<!--휴대폰팝업1//-->
+<!--통신사 선택//-->
 
-<!--//휴대폰팝업2-->
-<div id="lySel2" class="layerpopup layer-up" tabindex="0">
-    <div class="content-wrap">
-        <div class="pop-header">
-            <h2 class="pop-title">통신사 선택</h2>
-            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        </div>
-        <div class="ly-scroll-con ly-select">
-            <ul class="ly-select-list">
-                <li><button>SKT</button></li>
-                <li><button>KT</button></li>
-                <li><button>LG</button></li>
-                <li><button>알뜰폰 SK</button></li>
-                <li><button>알뜰폰 KT</button></li>
-                <li><button>알뜰폰 LG</button></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!--휴대폰팝업2//-->
 
-<!--//선택팝업-->
-<div id="lySel3" class="layerpopup layer-up" tabindex="0">
-    <div class="content-wrap">
-        <div class="pop-header">
-            <h2 class="pop-title">고객 선택</h2>
-            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        </div>
-        <div class="form-group gray-search">
-            <input type="search" id="search" class="form-control" placeholder="이름 입력" aria-label="Search Addresses" aria-describedby="user-search" inputmode="search"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
-            <button class="btn btn-search outline-secondary" type="button">검색</button>
-        </div>
-        <div class="ly-scroll-con ly-select">
-            <div class="table-type table-row table-scroll check">
-                <table class="">
-                    <caption>신용조회 동의 완료 고객 선택 테이블</caption>
-                    <colgroup>
-                        <col width="40%">
-                        <col width="60%">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="row">고객명</th>
-                            <th scope="row">연락처</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="">
-                            <td class="name">홍길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        <tr>
-                            <td class="name">김길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        <tr>
-                            <td class="name">박길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        <tr>
-                            <td class="name">송길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        <tr>
-                            <td class="name">진길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        <tr>
-                            <td class="name">황길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        <tr>
-                            <td class="name">민길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        <tr>
-                            <td class="name">오길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-<!--선택팝업//-->
-
-<!--//시간팝업-->
-<div id="lySel4" class="layerpopup layer-up" tabindex="0">
-    <div class="content-wrap">
-        <div class="pop-header">
-            <h2 class="pop-title">방문 시간 선택</h2>
-            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        </div>
-        <div class="ly-scroll-con ly-select">
-            <ul class="ly-select-list">
-                <li><button>9:00 AM</button></li>
-                <li><button>9:30 AM</button></li>
-                <li><button>10:00 AM</button></li>
-                <li><button>10:30 AM</button></li>
-                <li><button>11:00 AM</button></li>
-                <li><button>11:30 AM</button></li>
-                <li><button>12:00 PM</button></li>
-                <li><button>12:30 PM</button></li>
-                <li><button>13:00 PM</button></li>
-                <li><button>13:30 PM</button></li>
-                <li><button>14:00 PM</button></li>
-                <li><button>14:30 PM</button></li>
-                <li><button>15:00 PM</button></li>
-                <li><button>15:30 PM</button></li>
-                <li><button>16:00 PM</button></li>
-                <li><button>16:30 PM</button></li>
-                <li><button>17:00 PM</button></li>
-                <li><button>17:30 PM</button></li>
-                <li><button>18:00 PM</button></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!--시간팝업//-->
-
-<!--//개월팝업-->
+<!--//개월 선택-->
 <div id="lySel5" class="layerpopup layer-up" tabindex="0">
     <div class="content-wrap">
         <div class="pop-header">
-            <h2 class="pop-title">통신사 선택</h2>
+            <h2 class="pop-title">개월 선택</h2>
             <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
         </div>
         <div class="ly-scroll-con ly-select">
@@ -503,7 +363,7 @@
         </div>
     </div>
 </div>
-<!--개월팝업//-->
+<!--개월 선택//-->
 
 
 <script>
