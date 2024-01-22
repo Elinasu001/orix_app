@@ -101,7 +101,7 @@ textarea:valid { color: #000000 !important; }
 .rc-gray { margin-top:30px; margin-bottom:22px; height:20px; background:#F8F8F8; }
 .rc-gray +  .form-group.check-buttons { margin-top:24px; }
 .rc-gray + .table-type { margin-top:24px; }
-.rc-gray + .ly-cont-wrap.ly-scroll-con .result-tit-area { margin-top:20px; }
+/* .rc-gray + .ly-cont-wrap.ly-scroll-con .result-tit-area { margin-top:10px; } */
 /*모바일 사파리(iOS9)*/
 /* input {    -webkit-appearance: searchfield;}
  *::-webkit-search-cancel-button { -webkit-appearance: searchfield-cancel-button;} */
@@ -552,7 +552,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .layerpopup.layer-up .ly-cont-wrap + .btn-wrap { margin-top:30px; }
 .layerpopup.layer-up .ly-cont-wrap .form-wrap { margin-top:0; }
 .layerpopup.layer-up .ly-cont-wrap + .ly-scroll-con { margin-top:30px; }
-.layerpopup.layer-up .form-wrap + .ly-select .table-type { margin-top:30px;  }
+/* .layerpopup.layer-up .form-wrap + .ly-select .table-type { margin-top:30px;  } */
 .layerpopup.layer-up .result-area.nodata::before { width:45px; height:45px; }
 .layerpopup.layer-up .result-area.nodata .txt-wrap .tit { font-size:1rem; line-height:1.188rem; }
 
@@ -615,8 +615,8 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /* 선택 검색 팝업 */
 .layerpopup .form-group.img-search { margin-bottom:20px; }
 /* .layerpopup .btn.btn-search { right:20px; } */
-.layerpopup .rc-gray { margin-top:20px; margin-bottom:0px; height:10px; }
-.layerpopup .txt-list-wrap { margin-top:20px; }
+.layerpopup .rc-gray { margin-top:20px; margin-bottom:20px; height:10px; }
+/* .layerpopup .txt-list-wrap { margin-top:20px; } */
 .layerpopup .form-wrap + .ly-scroll-con + .table-type { margin-top:20px; }
 /** _스크롤 컨텐츠 레이어 **/
 .layer-up .ly-scroll-con { overflow:hidden; overflow-y:auto; max-height:250px; /*padding:0 20px 10px;*/ }
@@ -636,7 +636,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .layer-up .pop-header .pop-title,
 .type-alert .pop-header .pop-title { display:inline-block; font-size:1.125rem; line-height:1.25rem; font-weight:700; color:#000; line-height:1.39; letter-spacing:-.4px; word-break:keep-all; }
 .pop-header-img img { width:82px; }
-.pop-header + .form-wrap { margin-top:0; }
+.pop-header + .form-wrap { margin-top:0; margin-bottom:20px; }
 
 /** 공통 - 약관 **/
 
@@ -1209,7 +1209,7 @@ iframe { border:none; }
 .result-tit-area .tit { font-size:1rem; line-height:1.188rem; color:#999999; }
 
 .layerpopup .result-tit-area,
-.layerpopup .result-area { margin-top:30px; margin-bottom:30px; }
+.layerpopup .result-area { margin-top:10px; margin-bottom:30px; }
 
 /* 조회/조회결과 영역 (check-wrap/result-wrap) */
 .check-wrap .txt-list-wrap .txt-detail-area { display:none; }
