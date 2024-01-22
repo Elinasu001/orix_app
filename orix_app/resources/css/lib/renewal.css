@@ -552,7 +552,9 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .layerpopup.layer-up .ly-cont-wrap + .btn-wrap { margin-top:30px; }
 .layerpopup.layer-up .ly-cont-wrap .form-wrap { margin-top:0; }
 .layerpopup.layer-up .ly-cont-wrap + .ly-scroll-con { margin-top:30px; }
-/* .layerpopup.layer-up .form-wrap + .ly-select .table-type { margin-top:30px;  } */
+.layerpopup.layer-up .rc-gray { margin-top:20px; margin-bottom:20px; height:10px; }
+.layerpopup.layer-up .pop-header + .form-wrap { margin-top:0; margin-bottom:20px; }
+
 .layerpopup.layer-up .result-area.nodata::before { width:45px; height:45px; }
 .layerpopup.layer-up .result-area.nodata .txt-wrap .tit { font-size:1rem; line-height:1.188rem; }
 
@@ -615,7 +617,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /* 선택 검색 팝업 */
 .layerpopup .form-group.img-search { margin-bottom:20px; }
 /* .layerpopup .btn.btn-search { right:20px; } */
-.layerpopup .rc-gray { margin-top:20px; margin-bottom:20px; height:10px; }
+
 /* .layerpopup .txt-list-wrap { margin-top:20px; } */
 .layerpopup .form-wrap + .ly-scroll-con + .table-type { margin-top:20px; }
 /** _스크롤 컨텐츠 레이어 **/
@@ -636,7 +638,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .layer-up .pop-header .pop-title,
 .type-alert .pop-header .pop-title { display:inline-block; font-size:1.125rem; line-height:1.25rem; font-weight:700; color:#000; line-height:1.39; letter-spacing:-.4px; word-break:keep-all; }
 .pop-header-img img { width:82px; }
-.pop-header + .form-wrap { margin-top:0; margin-bottom:20px; }
+
 
 /** 공통 - 약관 **/
 
