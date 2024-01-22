@@ -1009,10 +1009,12 @@ iframe { border:none; }
 .top-menu .top-icon li { position:relative;  width:100%; padding-top:55px;  }
 .top-menu .top-icon li > a { display:flex; justify-content:center; color:#333333; font-size:0.75rem;  line-height:0.875rem; }
 .top-menu .top-icon li > a::before { content:''; position:absolute; top:0; width:40px; height:40px; border-radius:50%; }
-.top-menu .top-icon li.alarm > a::before { background: url('../../images/common/ico_alarm.png')no-repeat #DFF2FF 50%/24px auto; }
-.top-menu .top-icon li.loanProgress > a::before { background: url('../../images/common/ico_settlement.png')no-repeat #DFF2FF 50%/26px auto;  }
-.top-menu .top-icon li.doorSales > a::before { background: url('../../images/common/ico_doorSales.png')no-repeat #DFF2FF 50%/26px auto; }
-.top-menu .top-icon li.settlement > a::before { background: url('../../images/common/ico_loanProgress.png')no-repeat #DFF2FF 50%/26px auto; }
+.top-menu .top-icon li.alarm > a::before { background: url('../../images/common/list_alarm.png')no-repeat #DFF2FF 50%/24px auto; }
+.top-menu .top-icon li.progress > a::before { background: url('../../images/common/list_progress.png')no-repeat #DFF2FF 50%/21px auto;  }
+.top-menu .top-icon li.doorSales > a::before { background: url('../../images/common/list_doorSales.png')no-repeat #DFF2FF 50%/26px auto; }
+.top-menu .top-icon li.settlement > a::before { background: url('../../images/common/list_loanProgress.png')no-repeat #DFF2FF 50%/26px auto; }
+.top-menu .top-icon li.car > a::before { background: url('../../images/common/list_car.png')no-repeat #DFF2FF 50%/26px auto; }
+.top-menu .top-icon li.document-sub > a::before { background: url('../../images/common/list_document-sub.png')no-repeat #DFF2FF 50%/21px auto; }
 /* .top-menu .top-icon li.alarm > a::after { content:''; position:absolute; border:3px solid #FF0000; transform:translate(-50%,-50%); top:25px; right:25%; top:25px; right:25px; border-radius:50%; } */
 .alarm-flag { position: relative; }
 .alarm-flag:before { content:''; position:absolute; top:-44px; right:-26px; width:6px; height:6px; border-radius:50%; box-sizing:content-box; background:#FF0000; }
@@ -1294,13 +1296,16 @@ iframe { border:none; }
   } */
 
 /** main **/
-.contents-wrap.main  { margin-top:149px; padding:0; }
-.contents-wrap.main .tab-item { padding:0px 20px 0 20px;  }
-.main-bg-wrap { padding:20px; height:100%; /*padding-bottom:120px;*/ }
+.contents-wrap.main  { margin-top:141px; padding:0; }
+.contents-wrap.main .tabs-wrap { padding-top:14px; height:100%; }
+.contents-wrap.main .tabs { padding-bottom:70px; }
+.contents-wrap.main .tab-item { padding:0px 20px 0 20px; }
+.main-bg-wrap { padding:20px; height:100%; background:#F8F8F8; }
 .main-bg-wrap > .quick-service-area { margin-top:0; }
 
+
 /* 긴급공지 - main */
-.urgency-wrap.main { border-radius:12px; margin:65px 15px 34px; padding:16px 20px 16px 46px; }
+.urgency-wrap.main { border-radius:12px; margin:65px 15px 20px; padding:16px 20px 16px 46px; }
 .urgency-wrap.main a { font-weight:600; }
 .contents-wrap.main .tabs-wrap .tab-item:before  { content:none; }
 .contents-wrap.main .tabs-wrap .tab-item li a { border-bottom:2px solid #CBCBCB; }
@@ -1323,7 +1328,7 @@ iframe { border:none; }
 .tooltip-wrap { display:flex; gap:5px; }
 .tooltip-wrap.on a.btn-alarm.alarm::after { display:block; content:""; position:absolute; transform:translateY(-50%); right:3px; top:17px; width:9px; height:9px; border-radius:50%; border:1px solid #FFFFFF; background: #FF0000;  }
 .tooltip-wrap.on .tooltip-txt { display:flex; align-items:center; position:relative; top:20%; left:0; height:26px;color:#003661; font-size:0; }
-.tooltip-wrap.on .tooltip-txt a { padding:6px 12px; border-radius:16px; font-size:0.75rem; line-height:0.875rem; font-weight:500; color:#003661; background:#FEF6CB; }
+.tooltip-wrap.on .tooltip-txt a { padding:6px 15px; border-radius:16px; font-size:0.75rem; line-height:0.875rem; font-weight:500; color:#003661; background:#FEF6CB; }
 .tooltip-wrap.on .tooltip-txt:after { position:absolute; content:""; transform: translateY(-50%); top:50%; right:-6px;  width:0; height:0;  border-bottom: 7px solid transparent; border-top: 7px solid transparent;  border-left: 16px solid #FEF6CB; border-right: 1px solid transparent;   }
 .tooltip-wrap  a.btn-alarm.alarm::after { display:none; }
 .tooltip-wrap .tooltip-txt { display:none; }
