@@ -65,31 +65,41 @@
                     * swiper 라이브러리 많이 사용 시 오류 사항이 많기 때문에 main tab만  swiper로 가고 나머지는 tab-cont구조로 사용
                 </p>
                 <section>
-                    <p class="test-tit">버튼 두개 일 경우</p>
+                    <p class="test-tit">컨텐츠 버튼 두개 일 경우</p>
                     <div class="btn-cont-wrap btn2">
                         <a href="#none" class="btn btn-primary style1">대출 심사요청</a>
                         <a href="#none" class="btn btn-primary style2">할부 심사요청</a>
                     </div>
 
-                    <p class="test-tit">버튼 두개 일 경우 - disabled</p>
+                    <p class="test-tit">컨텐츠 버튼 두개 일 경우 - disabled</p>
                     <div class="btn-cont-wrap btn2">
                         <a href="#none" class="btn btn-primary disabled">대출 심사요청</a>
                         <a href="#none" class="btn btn-primary disabled">할부 심사요청</a>
                     </div>
 
-                    <p class="test-tit">상세보기 - disabled</p>
+                    <p class="test-tit">컨텐츠 상세보기 - disabled</p>
                     <div class="btn-cont-wrap btn2">
                         <a href="#none" class="btn view disabled">상세보기</a>
                         <a href="#none" class="btn view ">상세보기</a>
                     </div>
 
-                    <p class="test-tit">fixed 버튼 - 그만하기 버튼 있을 경우</p>
+                    <p class="test-tit">컨텐츠 주요 버튼</p>
+                    <div class="btn-cont-wrap">
+                        <a href="#none" class="btn btn-primary">수기심사요청</a>
+                    </div>
+
+                    <p class="test-tit">fixed 주요 버튼 -> 이경우 fixed-btn-wrap 구조를 한 번 더 감싸줘야됨.[버튼 정리를 위해 빼놓음]</p>
+                    <div class="btn-wrap">
+                        <a href="#none" class="btn btn-primary">수기심사요청</a>
+                    </div>
+
+                    <p class="test-tit">fixed 버튼 - 그만하기 버튼 있을 경우 -> 이경우 fixed-btn-wrap 구조를 한 번 더 감싸줘야됨.[버튼 정리를 위해 빼놓음]</p>
                     <div class="btn-wrap">
                         <a type="button" class="btn btn-close">그만하기</a>
                         <a type="button" class="btn btn-primary">다음</a>
                     </div>
 
-                    <p class="test-tit">fixed 버튼 - 그만하기 버튼 있을 경우 - disabled</p>
+                    <p class="test-tit">fixed 버튼 - disabled -> 이경우 fixed-btn-wrap 구조를 한 번 더 감싸줘야됨.[버튼 정리를 위해 빼놓음]</p>
                     <div class="btn-wrap">
                         <a type="button" class="btn btn-close disabled">그만하기</a>
                         <a type="button" class="btn btn-primary disabled">다음</a>
@@ -214,9 +224,9 @@
                         <div class="tabs-wrap round-list">
                             <div class="tabs">
                                 <ul class="tab-item">
-                                    <li data-tab="tab-cont10" class="on"><a href="#none" title="선택됨">대출심사 가능</a></li>
-                                    <li data-tab="tab-cont11"><a href="#none">할부심사 가능</a></li>
-                                    <li data-tab="tab-cont12"><a href="#none">심사 불가</a></li>
+                                    <li data-tab="tab-cont01" class="on"><a href="#none" title="선택됨">대출심사 가능</a></li>
+                                    <li data-tab="tab-cont02"><a href="#none">할부심사 가능</a></li>
+                                    <li data-tab="tab-cont03"><a href="#none">심사 불가</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -225,7 +235,7 @@
     
                     <section class="result-wrap">
                         <div class="tab-content-area">
-                            <div id="tab-cont10" class="tab-content">
+                            <div id="tab-cont01" class="tab-content">
                                 <div class="txt-list-wrap">
                                     <div class="txt-detail-area on"><!--on 클래스 추가 시 display:block; -->
                                         <div class="txt-detail-header">
@@ -254,7 +264,7 @@
                                 </div>
                             </div>
     
-                            <div id="tab-cont11" class="tab-content dp-none">
+                            <div id="tab-cont02" class="tab-content dp-none">
                                 <div class="txt-list-wrap">
                                     <div class="txt-detail-area">
                                         <div class="txt-detail-header">
@@ -283,7 +293,7 @@
                                 </div>
                             </div>
     
-                            <div id="tab-cont12" class="tab-content dp-none">
+                            <div id="tab-cont03" class="tab-content dp-none">
                                  <div class="txt-list-wrap">
                                     <div class="txt-detail-area">
                                         <div class="txt-detail-header">
@@ -339,6 +349,25 @@
                     <section class="tabs-wrap round-list">
                         <div class="tabs">
                             <ul class="tab-item">
+                                <li data-tab="tab-cont04"><a href="#none" title="선택됨">텍스트1</a></li>
+                                <li data-tab="tab-cont05"><a href="#none">텍스트2</a></li>
+                            </ul>
+                            <div class="tab-content-area">
+                                <div id="tab-cont04" class="tab-content">
+                                    내용 1
+                                </div>
+    
+                                <div id="tab-cont05" class="tab-content dp-none">
+                                    내용 2
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <p class="test-tit">TAP Text</p>
+                    <section class="tabs-wrap">
+                        <div class="tabs">
+                            <ul class="tab-item">
                                 <li data-tab="tab-cont06"><a href="#none" title="선택됨">텍스트1</a></li>
                                 <li data-tab="tab-cont07"><a href="#none">텍스트2</a></li>
                             </ul>
@@ -354,11 +383,11 @@
                         </div>
                     </section>
 
-                    <p class="test-tit">TAP Text</p>
-                    <section class="tabs-wrap">
+                    <p class="test-tit">TAP Background - main</p>
+                    <section class="tabs-wrap tab-bg">
                         <div class="tabs">
                             <ul class="tab-item">
-                                <li data-tab="tab-cont08"><a href="#none" title="선택됨">텍스트1</a></li>
+                                <li data-tab="tab-cont08" class="on"><a href="#none" title="선택됨">텍스트1</a></li>
                                 <li data-tab="tab-cont09"><a href="#none">텍스트2</a></li>
                             </ul>
                             <div class="tab-content-area">
@@ -366,26 +395,7 @@
                                     내용 1
                                 </div>
     
-                                <div id="tab-cont08" class="tab-content dp-none">
-                                    내용 2
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <p class="test-tit">TAP Background - main</p>
-                    <section class="tabs-wrap tab-bg">
-                        <div class="tabs">
-                            <ul class="tab-item">
-                                <li data-tab="tab-cont03" class="on"><a href="#none" title="선택됨">텍스트1</a></li>
-                                <li data-tab="tab-cont04"><a href="#none">텍스트2</a></li>
-                            </ul>
-                            <div class="tab-content-area">
-                                <div id="tab-cont03" class="tab-content">
-                                    내용 1
-                                </div>
-    
-                                <div id="tab-cont04" class="tab-content dp-none">
+                                <div id="tab-cont09" class="tab-content dp-none">
                                     내용 2
                                 </div>
                             </div>
@@ -396,22 +406,22 @@
                     <section class="tabs-wrap tab-bg cont">
                         <div class="tabs">
                             <ul class="tab-item">
-                                <li data-tab="tab-cont05" class="on"><a href="#none" title="선택됨">텍스트1</a></li>
-                                <li data-tab="tab-cont06"><a href="#none">텍스트2</a></li>
+                                <li data-tab="tab-cont10" class="on"><a href="#none" title="선택됨">텍스트1</a></li>
+                                <li data-tab="tab-cont11"><a href="#none">텍스트2</a></li>
                             </ul>
                             <div class="tab-content-area">
-                                <div id="tab-cont05" class="tab-content">
+                                <div id="tab-cont10" class="tab-content">
                                     내용 1
                                 </div>
     
-                                <div id="tab-cont06" class="tab-content dp-none">
+                                <div id="tab-cont11" class="tab-content dp-none">
                                     내용 2
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <p class="test-tit">TAP Text - swiper</p>
+                    <!-- <p class="test-tit">TAP Text - swiper</p>
                     <section class="tabs-wrap">
                         <div class="tabs swiper">
                             <ul class="swiper-pager"></ul>
@@ -471,7 +481,7 @@
                                 }
                             },
                         });
-                    </script>
+                    </script> -->
 
 
                     <p class="test-tit">btn-text</p>
@@ -495,8 +505,13 @@
                         <a href="#none" class="btn btn-text small-line">더보기</a>
                     </div>
 
-                    <p class="test-tit">btn-text big-line</p>
+                    <p class="test-tit">btn-text big-line - background(#FFFFFF)</p>
                     <div class="btn-cont-wrap center">
+                        <a href="#none" class="btn btn-text big-line">로그인 하시겠어요?</a>
+                    </div>
+                    
+                    <p class="test-tit">btn-text big-line - background(#003F86)  -> 이경우 fixed-btn-wrap 구조를 한 번 더 감싸줘야됨.[버튼 정리를 위해 빼놓음]</p>
+                    <div class="btn-wrap style2 center">
                         <a href="#none" class="btn btn-text big-line">로그인 하시겠어요?</a>
                     </div>
 
@@ -521,14 +536,14 @@
                         
                     </div> -->
 
-                    <p class="test-tit">이미지 불러오기</p>
+                    <!-- <p class="test-tit">이미지 불러오기</p>
                     <section>
                         <div class="thumb-wrap">
                             <ul>
                                 <li class="plus"><input type="file" class="ip-file"  required multiple><span>추가</span></li>
                             </ul>
                         </div>
-                    </section>
+                    </section> -->
                 </section>
             </div>
             <div class="fixed-btn-wrap">

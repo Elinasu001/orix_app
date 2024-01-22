@@ -344,9 +344,9 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .btn-cont-wrap .btn { padding:14px 0;  font-size:0.875rem; line-height:1rem; font-weight:500; }
 .btn-cont-wrap.right { display:flex; justify-content:flex-end; align-items:center; }/*버튼 오른쪽*/
 .btn-cont-wrap.center { display:flex; justify-content: center; }
+.btn-wrap.center { display:flex; justify-content:center; }
 
 /* btn-primary */
-
 .btn.btn-primary { background:#003F86; color:#FFFFFF; }
 .btn.btn-close,
 .btn.view { background:#EDF3FA; color:#002748; }
@@ -370,11 +370,13 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 .btn.btn-text.small-line { position:relative; margin-top:30px; padding-right:17px!important; font-size:1rem; line-height:1.188rem; font-weight:600; border-radius:0; width:initial; color:#003F86; }
 .btn.btn-text.small-line::after { content:""; position:absolute; transform:translateY(-50%); top:50%; right:0; width:15px; height:15px; background:url(../../images/common/ico_plus.png)no-repeat 50%/15px auto; }
+
+/* 비로그인 intro */
 .btn.btn-text.big-line  { border-radius:0; width:initial; color:#FFFFFF; border-bottom:1px solid #FFFFFF; font-size:1.125rem; line-height:1.25rem; font-weight:700; }
 
-/* 비로그인 */
-.fixed-btn-wrap.center.style2 { margin-bottom:45px; }
-.fixed-btn-wrap.center.style2 .btn.btn-text.big-line.big-line { color:#003F86; border-bottom:1px solid #003F86; }
+/* 비로그인 intro2 */
+.btn-wrap.style2 { margin-bottom:45px; }
+.btn-wrap.style2 .btn.btn-text.big-line.big-line {  color:#003F86; border-bottom:1px solid #003F86; }
 
 /* 로그아웃 */
 .btn.logout { padding:6px 10px; border-radius: 32px;font-size:0.75rem; line-height:0.875rem; font-weight:400; color:#848B95; background:#EBEDEF; }
