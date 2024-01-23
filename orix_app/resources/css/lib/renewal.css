@@ -1158,7 +1158,7 @@ iframe { border:none; }
 .txt-list.li-box li .tit { position:relative; padding-right:10px; font-weight:500; color:#212121; }
 .txt-list.li-box li .txt { padding-left:10PX; text-align:center; }
 .txt-list.li-box li { position:relative; }
-.txt-list.li-box li span:first-child:after { content:""; position:absolute; top:50%; right:-10%; transform:translateY(-50%); display:block; width:1px; height:20px; background:#003F86; }
+.txt-list.li-box li span:first-child:after { content:""; position:absolute; top:50%; right:-10%; transform:translateY(-50%); display:block; width:1px; height:20px; background:#00345F; }
 
 
 .txt-detail-area .desc { color:#757575; font-size:0.88889rem; line-height:1.4375; }
