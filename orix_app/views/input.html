@@ -99,7 +99,7 @@
 
                     <div class="form-group">
                         <label for="">select</label>
-                        <input id="" type="text" name="" class="form-control select" placeholder="select" onclick="openPopup('lySel')"><!--select 클래스 추가 및 onclick 팝업 추가하기-->
+                        <input id="" type="text" name="" class="form-control select" placeholder="select"><!--select 클래스 추가 및 onclick 팝업 추가하기-->
                     </div>
 
                     <div class="form-group">
@@ -145,7 +145,7 @@
                                 <input id="" type="text" class="form-control datepicker" placeholder=""  inputmode="none"><!--readonly-->
                             </div>
                             <div class="col">
-                                <input id="" type="text" class="form-control select" placeholder="시간 선택" onclick="openPopup('lySel4')" readonly inputmoede="none">
+                                <input id="" type="text" class="form-control select" placeholder="시간 선택" readonly inputmoede="none" onclick="openPopup('lySel1')">
                             </div>
                         </div>
                     </div>
@@ -154,7 +154,7 @@
                         <label for="">휴대폰 번호</label>
                         <div class="form-row">
                             <div class="col-3">
-                                <input id="" type="text" class="form-control select"  placeholder="통신사"  onclick="openPopup('lySel2')">
+                                <input id="" type="text" class="form-control select"  placeholder="통신사" onclick="openPopup('lySel2')">
                             </div>
                             <div class="col">
                                 <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력">
@@ -187,7 +187,7 @@
                     <div class="form-group">
                         <label for="amount">개월 - 팝업일 경우</label>
                         <div class="amount">
-                            <input type="number" class="form-control amount-num" id="amount" placeholder="기간을 입력해주세요"  onclick="openPopup('lySel5')">
+                            <input type="number" class="form-control amount-num" id="amount" placeholder="기간을 입력해주세요"  onclick="openPopup('lySel4')">
                             <span class="amount-txt">개월</span>
                         </div>
                     </div>
@@ -212,7 +212,7 @@
                         <label for="">휴대폰 번호</label>
                         <div class="form-row">
                             <div class="col-3">
-                                <input id="" type="text" class="form-control select" placeholder="통신사" onclick="openPopup('lySel2')">
+                                <input id="" type="text" class="form-control select" placeholder="통신사" onclick="openPopup('lySel3')">
                             </div>
                             <div class="col">
                                 <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력">
@@ -228,7 +228,7 @@
 
                     <div class="form-group" >
                         <label for="" class="essential">고객 선택</label><!--essential 필수일 경우-->
-                        <div class="form-row" onclick="openPopup('lyAlert')">
+                        <div class="form-row">
                             <div class="col">
                                 <input id="" type="text" class="form-control" placeholder="제조사 선택" >
                             </div>
@@ -243,7 +243,7 @@
                             <div class="col">
                                 <input id="" type="text" class="form-control" placeholder="도로명, 지번을 입력해주세요">
                             </div>
-                            <button class="btn btn-txt search-img" type="button" onclick="openPopup('test')">검색</button>
+                            <button class="btn btn-txt search-img" type="button">검색</button>
                         </div>
                     </div>
 
@@ -326,151 +326,10 @@
     </div>
 </body>
 
-
 </html>
-<div id="lySel" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
-    <div class="content-wrap">
-        <div class="pop-header">
-            <h2 class="pop-title">통신사 선택</h2>
-            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        </div>
-        <div class="ly-scroll-con ly-select">
-            <ul class="ly-select-list">
-                <li><button>SKT</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                <li><button>KT</button></li>
-                <li><button>LG</button></li>
-                <li><button>알뜰폰 SK</button></li>
-                <li><button>알뜰폰 KT</button></li>
-                <li><button>알뜰폰 LG</button></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
-<!--//휴대폰팝업1-->
-<div id="lySel1" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
-    <div class="content-wrap">
-        <div class="pop-header">
-            <h2 class="pop-title">통신사 선택</h2>
-            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        </div>
-        <div class="ly-scroll-con ly-select">
-            <ul class="ly-select-list">
-                <li><button>SKT</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                <li><button>KT</button></li>
-                <li><button>LG</button></li>
-                <li><button>알뜰폰 SK</button></li>
-                <li><button>알뜰폰 KT</button></li>
-                <li><button>알뜰폰 LG</button></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!--휴대폰팝업1//-->
-
-<!--//휴대폰팝업2-->
-<div id="lySel2" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
-    <div class="content-wrap">
-        <div class="pop-header">
-            <h2 class="pop-title">통신사 선택</h2>
-            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        </div>
-        <div class="ly-scroll-con ly-select">
-            <ul class="ly-select-list">
-                <li><button>SKT</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                <li><button>KT</button></li>
-                <li><button>LG</button></li>
-                <li><button>알뜰폰 SK</button></li>
-                <li><button>알뜰폰 KT</button></li>
-                <li><button>알뜰폰 LG</button></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!--휴대폰팝업2//-->
-
-<!--//선택팝업-->
-<div id="lySel3" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
-    <div class="content-wrap">
-        <div class="pop-header">
-            <h2 class="pop-title">고객 선택</h2>
-            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        </div>
-        <div class="form-group gray-search">
-            <input type="search" id="search" class="form-control" placeholder="이름 입력" aria-label="Search Addresses" aria-describedby="user-search" inputmode="search"><!--aria-label: 대체 text, aria-describedby: ARIA-labelledby 보다 상세 외 id 속성값을 일치 시킨 그 요소의 내용  /inputmode="search"-->
-            <!-- <div class="input-group-prepend"></div> -->
-            <!-- <button class="btn btn-clear outline-secondary" type="reset"></button> -->
-            <button class="btn btn-search outline-secondary" type="button">검색</button>
-        </div>
-        <div class="ly-scroll-con ly-select">
-            <div class="table-type table-row table-scroll check">
-                <table class="">
-                    <caption>신용조회 동의 완료 고객 선택 테이블</caption>
-                    <colgroup>
-                        <!-- <col width="*%"> -->
-                        <col width="40%">
-                        <col width="60%">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <!-- <th></th> -->
-                            <th scope="row">고객명</th>
-                            <th scope="row">연락처</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="">
-                            <!-- <td ><input type="checkbox" name="user_checkbox" id="check1" class="custom-check"><label for="check1"></label></td> -->
-                            <td class="name">홍길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        <tr>
-                            <!-- <td><input type="checkbox" name="user_checkbox" id="check2" class="custom-check"><label for="check2"></label></td> -->
-                            <td class="name">김길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        <tr>
-                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
-                            <td class="name">박길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        <tr>
-                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
-                            <td class="name">송길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        <tr>
-                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
-                            <td class="name">진길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        <tr>
-                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
-                            <td class="name">황길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        <tr>
-                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
-                            <td class="name">민길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        <tr>
-                            <!-- <td><input type="checkbox" name="user_checkbox" id="check3" class="custom-check"><label for="check3"></label></td> -->
-                            <td class="name">오길동</td>
-                            <td>010-1111-1234</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-<!--선택팝업//-->
 
 <!--//시간팝업-->
-<div id="lySel4" class="layerpopup layer-up" tabindex="0">
+<div id="lySel1" class="layerpopup layer-up" tabindex="0">
     <div class="content-wrap">
         <div class="pop-header">
             <h2 class="pop-title">방문 시간 선택</h2>
@@ -503,8 +362,52 @@
 </div>
 <!--시간팝업//-->
 
+<!--//휴대폰팝업2-->
+<div id="lySel2" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">통신사 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>SKT</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                <li><button>KT</button></li>
+                <li><button>LG</button></li>
+                <li><button>알뜰폰 SK</button></li>
+                <li><button>알뜰폰 KT</button></li>
+                <li><button>알뜰폰 LG</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--휴대폰팝업2//-->
+
+<!--//휴대폰팝업3-->
+<div id="lySel3" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">통신사 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>SKT</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                <li><button>KT</button></li>
+                <li><button>LG</button></li>
+                <li><button>알뜰폰 SK</button></li>
+                <li><button>알뜰폰 KT</button></li>
+                <li><button>알뜰폰 LG</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--휴대폰팝업3//-->
+
+
+
 <!--//개월-->
-<div id="lySel5" class="layerpopup layer-up" tabindex="0">
+<div id="lySel4" class="layerpopup layer-up" tabindex="0">
     <div class="content-wrap">
         <div class="pop-header">
             <h2 class="pop-title">통신사 선택</h2>
@@ -614,6 +517,26 @@
 </div>
 <!--test//-->
 
+<!--//통신사 선택-->
+<div id="lySel1" class="layerpopup layer-up on" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">통신사 선택</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>SKT</button></li>
+                <li><button>KT</button></li>
+                <li><button>LG</button></li>
+                <li><button>알뜰폰 SK</button></li>
+                <li><button>알뜰폰 KT</button></li>
+                <li><button>알뜰폰 LG</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--통신사 선택//-->
 
 <script>
 /** fixed-button input 포커스 될 경우**/

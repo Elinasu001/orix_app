@@ -351,8 +351,15 @@ function openPopup(id) {
   });
 
   if (_target.has('.ly-select-list').length > 0) {
-    _target.find('.ly-select-list > li > button').on('click', function () {
+  _target.find('.ly-select-list > li > button').on('click', function () {
+
+      //2023-01-23 추가함
+      var selectedText = $(this).text();
       
+      $('[onclick="openPopup(\'' + id + '\')"]').closest('.form-control.select, .form-control.amount-num').val(selectedText);
+      $('#' + id).val(selectedText);
+      //2023-01-23 추가함
+
       closePopupUp(id);
       // $('body').removeAttr('style');
       // $(window).scrollTop(currentTop);
@@ -364,6 +371,14 @@ function openPopup(id) {
   /** 테이블 팝업 **/
   if (_target.has('.ly-select > .table-type.check').length > 0) {
     _target.find('.ly-select .table-type.check tbody tr').on('click', function () {
+
+         //2023-01-23 추가함
+         var selectedText = $(this).text();
+      
+         $('[onclick="openPopup(\'' + id + '\')"]').closest('.form-control.select').val(selectedText);
+         $('#' + id).val(selectedText);
+         //2023-01-23 추가함
+
       closePopupUp(id);
       // $('body').removeAttr('style');
       // $(window).scrollTop(currentTop);
