@@ -35,12 +35,19 @@ $('.form-control:not(.form-control.select, input.form-control:read-only), textar
 });
 
   /** 리스트 선택이 필요한 경우 **/
-  $('.txt-list-wrap.click .txt-detail-area').click(function () {
+  // $('.txt-list-wrap.click .txt-detail-area').click(function () {
 
-    $('.txt-list-wrap.click .txt-detail-area').not(this).removeClass('on');
+  //   $('.txt-list-wrap.click .txt-detail-area').not(this).removeClass('on');
     
+  //   $(this).toggleClass('on');
+    
+  // });
+
+   /** 리스트 선택이 필요한 경우 **/
+  $(document).on('click', '.txt-list-wrap.click .txt-detail-area', function(){
+    $('.txt-list-wrap.click .txt-detail-area').not(this).removeClass('on');
     $(this).toggleClass('on');
-  });
+  })
 
   /** table 의 checkbox **/
   // // checkbox
