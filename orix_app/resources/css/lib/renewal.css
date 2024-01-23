@@ -1152,12 +1152,12 @@ iframe { border:none; }
 /* txt-list.li-box */
 .txt-detail-header + .txt-list.li-box { margin-top:0; }
 .txt-list.li-box {display:inline-block; width:100%; margin-top:30px; padding:13px 10px; background:#EFF3F6; overflow-x: scroll; }
-/* .txt-list.li-box li { display:flex; justify-content: space-between;  } */
-.txt-list.li-box li span { text-align: center; }
+.txt-list.li-box li { display:flex; justify-content:center; align-items:center; }
+.txt-list.li-box li span { text-align: center; width:100%; }
 .txt-list.li-box li,
 .txt-list.li-box li:first-child { margin:0; }
 .txt-list.li-box li .tit { position:relative; padding-right:20px; font-weight:500; color:#212121; }
-.txt-list.li-box li .txt { padding-left:0px;  }
+.txt-list.li-box li .txt { flex:initial; padding-left:0px;  }
 .txt-list.li-box li { position:relative; }
 .txt-list.li-box li span:first-child:after { content:""; position:absolute; top:50%; right:0; transform:translateY(-50%); display:block; width:1px; height:20px; background:#00345F; }
 
