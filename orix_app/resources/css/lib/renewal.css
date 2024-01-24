@@ -623,6 +623,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /** _스크롤 컨텐츠 레이어 **/
 .layer-up .ly-scroll-con { overflow:hidden; overflow-y:auto; max-height:250px; /*padding:0 20px 10px;*/ }
 .layer-up .ly-scroll-con.plus-height { max-height:350px; }/*높이 더 늘릴 경우*/
+.layer-up .ly-scroll-con.min-height { min-height:250px; }
 .layer-up .default-wrap {  padding:0 20px 10px; }
 .layer-up:has(.fixed-btn-wrap) .default-wrap { padding-bottom:10px; }
 .layer-up .ly-scroll-con.type-high { max-height:58vh; }
@@ -1333,7 +1334,7 @@ iframe { border:none; }
 .tooltip-wrap { display:flex; gap:5px; }
 .tooltip-wrap.on a.btn-alarm.alarm::after { display:block; content:""; position:absolute; transform:translateY(-50%); right:3px; top:17px; width:9px; height:9px; border-radius:50%; border:1px solid #FFFFFF; background: #FF0000;  }
 .tooltip-wrap.on .tooltip-txt { display:flex; align-items:center; position:relative; top:20%; left:0; height:26px;color:#003661; font-size:0; }
-.tooltip-wrap.on .tooltip-txt a { padding:6px 15px; border-radius:16px; font-size:0.75rem; line-height:0.875rem; font-weight:500; color:#003661; background:#FEF6CB; }
+.tooltip-wrap.on .tooltip-txt a { display:flex; align-items:center; padding:6px 15px; border-radius:16px; font-size:0.75rem; line-height:0.875rem; font-weight:500; color:#003661; background:#FEF6CB; }
 .tooltip-wrap.on .tooltip-txt:after { position:absolute; content:""; transform: translateY(-50%); top:50%; right:-6px;  width:0; height:0;  border-bottom: 7px solid transparent; border-top: 7px solid transparent;  border-left: 16px solid #FEF6CB; border-right: 1px solid transparent;   }
 .tooltip-wrap  a.btn-alarm.alarm::after { display:none; }
 .tooltip-wrap .tooltip-txt { display:none; }
