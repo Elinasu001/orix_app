@@ -784,8 +784,8 @@ iframe { border:none; }
 .table-type.style4 .credit td { background:#FFECD0; }
 .table-type.style4 .altKey td { background:#EEF5FF; }
 .table-type.style4 .table-bg { background:#F8F8F8; }
-.table-type.style4 tbody tr.table-bg:first-child { border-top:1px solid #999999; border-bottom:1px solid #999999; }
-.table-type.style4 tbody tr.table-bg + .table-bg { border-bottom:1px solid #395CA8; }
+.table-type.style4 tbody .table-bg:first-child { border-top:1px solid #999999; }
+.table-type.style4 tbody tr:nth-child(even){ border-bottom:1px solid #999999; }
 .table-type.style4 tbody tr { border-bottom:1px solid #DDDDDD; }
 .table-type tbody tr .under { color:#003F86; text-decoration:underline; }
 
