@@ -431,3 +431,5 @@ function getCenterAlignPos(containerSize, targetSize) {
   var pos = (containerSize - targetSize) / 2;
   return pos;
 }
+
+

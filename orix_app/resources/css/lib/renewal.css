@@ -203,14 +203,15 @@ input:-moz-placeholder { /* Firefox 18- */ color:#AAAAAA; }
 input::-moz-placeholder { /* Mozilla Firefox 19+ */ color:#AAAAAA; }
 
 /* disabled */
+input:disabled,
 .form-control:disabled::placeholder,
-input:disabled::placeholder { font-size:0.875rem; font-weight:300; color:#A9A9A9; }
-input:disabled::-webkit-input-placeholder {/* WebKit browsers */  color:#A9A9A9; }
-input:disabled:-ms-input-placeholder {  /* Internet Explorer 10+ */ color:#A9A9A9; }
-input:disabled:-moz-placeholder{ /* Firefox 18- */ color: #8A8A8A; }
-input:disabled::-moz-placeholder {  /* Mozilla Firefox 19+ */ color:#8A8A8A; }
+input:disabled::placeholder { font-size:0.875rem; font-weight:300; color:#8A8A8A !important; -webkit-text-fill-color: #8A8A8A; opacity:1;  }
+input:disabled::-webkit-input-placeholder {/* WebKit browsers */  color:#8A8A8A !important; }
+input:disabled::-ms-input-placeholder {  /* Internet Explorer 10+ */ color:#8A8A8A !important; }
+input:disabled::-moz-placeholder{ /* Firefox 18- */ color: #8A8A8A !important; }
+input:disabled::-moz-placeholder {  /* Mozilla Firefox 19+ */ color:#8A8A8A !important; }
 
-input.form-control:disabled { background-color:#EFEFEF !important; pointer-events:none; border:1px solid #D1D1D1; }
+input.form-control:disabled { -webkit-text-fill-color: #8A8A8A; background-color:#EFEFEF !important; pointer-events:none; border:1px solid #D1D1D1; color:#8A8A8A !important; }
 
 input.form-control:disabled + .jumintext { color:#DDDDDD; }
 
@@ -791,7 +792,7 @@ iframe { border:none; }
 [class^="table-type"].style5 tbody td { color:#00345F; }
  .table-type.style5 tbody th:first-child {  background:#EFEFEF; color:#333333;  }
 /* .table-type.style5 tbody > tr > th:first-child { border-top:0px; } */
-.table-type.style5 tbody th { border-top:1px solid #DDDDDD; background:#F8F8F8; color:#212121;  }
+.table-type.style5 tbody th { border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD; background:#F8F8F8; color:#212121;  }
 .table-type.style5 tbody td { border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD; }
 
 /* 서류제출 개별 테이블 */
@@ -1109,14 +1110,14 @@ iframe { border:none; }
 .txt-list-wrap + .accordion-cont-wrap { margin-top:20px; }
 /* .txt-list-wrap + .txt-list-wrap { margin-top:20px; } */
 .txt-list-wrap .txt-detail-area .btn-cont-wrap { margin-top:30px; }
-.txt-list-wrap .txt-detail-area .txt-detail-header { display:flex; gap:5px; align-items:center; justify-content: space-between; padding-bottom:15px;     margin-bottom:22px; border-bottom:1px solid #E2E2E2; font-size:0; color:#333333; }
+.txt-list-wrap .txt-detail-area .txt-detail-header { display:flex; gap:5px; align-items:center; justify-content: space-between; padding-bottom:15px; margin-bottom:22px; border-bottom:1px solid #E2E2E2; font-size:0; color:#333333; }
 .txt-list-wrap .txt-detail-area .txt-detail-header + .txt-detail-header.no-line { padding:0; }
 
 
 .txt-detail-area .txt-detail-header p  { font-size:1rem; line-height:1.188rem; font-weight:600; }
 .txt-detail-area .txt-detail-header .txt  { font-weight:400; }
 .txt-detail-area .txt-detail-header span.tit { font-size:1rem; line-height:1.188rem; font-weight:700; color:#003F86; }
-.txt-detail-area .txt-detail-header span.small-tit {font-size:0.875rem; line-height:1rem; font-weight:500; }
+.txt-detail-area .txt-detail-header span.small-tit { font-family:'Noto Sans KR';   font-size:0.875rem; line-height:1rem; font-weight:600; }
 .txt-detail-area .txt-detail-header.no-line { margin-top: 0; padding: 22px 0; border-bottom:none; }
 .txt-detail-area.pd-top { padding:15px 20px 20px; border:1px solid #DDDDDD; border-radius:8px; }
 
@@ -1139,9 +1140,9 @@ iframe { border:none; }
 .txt-list li span.name { font-weight:600; color:#003F86; }
 .txt-list li .tit .ref { font-size:0.77778rem; line-height:1.5; }
 .txt-list li .txt,
-.txt-detail-header .txt { flex:1; padding-left:30px; vertical-align:top; text-align:right;  color:#212121; word-break:break-all; font-weight:500; }
-.yes{ font-size:0.875rem!important; font-weight:600!important; color: #003F86!important; }
-.no{ font-size:0.875rem!important; font-weight:600!important; color:#FF0000!important; }
+.txt-detail-header .txt { flex:1; padding-left:10px; vertical-align:top; text-align:right;  color:#212121; word-break:break-all; font-weight:500; }
+.yes{  font-family: 'Noto Sans KR'; font-size:0.875rem!important; font-weight:600!important; color: #003F86!important;}
+.no{ font-family:'Noto Sans KR';  font-size:0.875rem!important; font-weight:600!important; color:#FF0000!important;}
 .normal { font-weight:500!important; color:#212121!important; }
 
 .txt-list li .txt a[href*="tel"] { color:#260F54; word-break:break-all; }/*기기대응*/

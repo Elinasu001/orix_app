@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
 /*** font ***/
 @font-face {
 	font-family: 'Pretendard';
