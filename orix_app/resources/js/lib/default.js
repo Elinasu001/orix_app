@@ -47,6 +47,8 @@ $('.form-control:not(.form-control.select, input.form-control:read-only), textar
   $(document).on('click', '.txt-list-wrap.click .txt-detail-area', function(){
     $('.txt-list-wrap.click .txt-detail-area').not(this).removeClass('on');
     $(this).toggleClass('on');
+    $('.txt-list-wrap.click .txt-detail-area').not(this).find('input').removeClasss('on');
+    $(this).find('input').toggleClass('on');
   })
 
   /** table 의 checkbox **/
@@ -354,10 +356,10 @@ function openPopup(id) {
   _target.find('.ly-select-list > li > button').on('click', function () {
 
       //2023-01-23 추가함
-      var selectedText = $(this).text();
+      // var selectedText = $(this).text();
       
-      $('[onclick="openPopup(\'' + id + '\')"]').closest('.form-control.select, .form-control.amount-num').val(selectedText);
-      $('#' + id).val(selectedText);
+      // $('[onclick="openPopup(\'' + id + '\')"]').closest('.form-control.select, .form-control.amount-num').val(selectedText);
+      // $('#' + id).val(selectedText);
       //2023-01-23 추가함
 
       closePopupUp(id);
