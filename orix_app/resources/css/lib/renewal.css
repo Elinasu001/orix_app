@@ -838,11 +838,14 @@ iframe { border:none; }
 .tit-cont-area.point::after { position:absolute; content:''; width:58px; height:58px; right:20px;   background:url(../../images/common/ic_point.png)no-repeat 50%/58px auto;}
 
 /* intro box */
-.intro-box-wrap { margin-top:97px; padding:76px 20px 40px 20px; border-radius:9px; background:#003F86;}
-.intro-box-wrap p {  font-size:35px; line-height: 3.188rem; font-weight:500; color:#FFFFFF; }
+.intro-box-wrap { margin-top:97px; padding:76px 20px 40px 20px; border-radius:20px; background: linear-gradient(#003F86, #002C50); }
+.intro-box-wrap p {  font-size:35px; line-height:3.188rem;  color:#FFFFFF; }
 /* .intro-box-wrap .tit + .tit  {  margin-left:60px; } */
-.intro-box-wrap .text { margin-top:36px; font-size:1rem; line-height:1.188rem;  }
+.intro-box-wrap .tit { font-weight:500; color:#DEDEDE; }
+.intro-box-wrap .intro-bold { font-family:'pretendard'; font-weight:800; color:#FFFFFF; }
+.intro-box-wrap .text {  margin-top:36px; font-size:1rem; line-height:1.188rem; font-weight:500; }
 .intro-box-wrap .btn-cont-wrap { margin-top:120px; }
+
 
 /* intro text */
 .intro-text-wrap { margin-top:100px; }
