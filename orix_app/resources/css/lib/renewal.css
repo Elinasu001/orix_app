@@ -78,7 +78,7 @@ table { border-collapse:collapse; }
 button { border-radius:0; }
 .line { border: 1px solid #ced4da; border-radius:5px; background-color: #fff; padding:10px; }
 .type-spread { margin:0 -20px; }
-
+.revert-type-spread { margin:0 20px; }
 .txt-detail-area.pd-top .form-tit { padding-bottom:15px; font-size:1rem; line-height:1.188rem; font-weight:600; color:#000000; }
 .essential { color:#555555; }
 .essential::after { content:"*"; color:#FF0000; padding-left:3px; }
@@ -1425,4 +1425,11 @@ iframe { border:none; }
 .flag-list { display:flex; gap:5px; }
 
 /* 신용조회관리 */
-.conRegist .tabs-wrap .tabs .tab-item { display:flex; white-space:nowrap; margin-bottom:30px; padding:0 4px; }
+.conRegist .tabs-wrap .tabs .tab-item { display:flex; width:100%; white-space:nowrap; justify-content:space-between; margin-bottom:30px; }
+/* .conRegist .tabs-wrap .tabs .tab-item li { margin-right:5px; }
+.conRegist .tabs-wrap .tabs .tab-item li:last-child { margin-right:0; } */
+.conRegist .tabs-wrap .tab-item li { width:calc(100% /3); }
+.conRegist .tabs-wrap .tab-item li a { padding:20px 0px; font-size:0.9rem; line-height:1.188rem; }
+/* .conRegist  .tabs-wrap .tab-item:after { content:""; position:absolute; border-top:1px solid #EEEEEE; right:-20px; left:-20px; } */
+.conRegist  .tabs-wrap .tab-item:before { right:-20px; left:-20px; }
+.conRegist .tabs-wrap .form-wrap { margin-top:0; }
