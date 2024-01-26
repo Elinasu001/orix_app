@@ -1,0 +1,346 @@
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ORIX Capital</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords" />
+    <meta name="description" content="ORIX Capital description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../resources/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../../resources/favicon.png" />
+    
+    <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../../resources/css/ui/jquery-ui.css">
+    <link rel="stylesheet" href="../../resources/css/ui/datepicker.css">
+    
+    <script type="text/javascript" src="../../resources/js/ui/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui/jquery-1.12.4.min.js"></script>
+    <script  type="text/javascript" src="../../resources/js/ui/jquery-ui-1.12.1.js"></script>
+
+    <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
+</head>
+
+<body>
+    <!--//wrap-->
+    <div class="wrap">
+        <!-- //headerWrap -->
+        <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_header.html");
+			});
+			</script>
+        </div>
+        <!-- headerWrap// -->
+        <!-- //menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("../include/inc_all_menu.html");
+            });
+            </script>
+        </div>
+	    <!-- menuWrap// -->
+        <form>
+            <div class="contents-wrap conRegist">
+                <!-- <section class="urgency-wrap type-spread">
+                    <a href="#none">비대면 모바일 플랫폼 구축 TF팀 긴급 회의</a>
+                </section> -->
+                <div class="form-wrap">
+                    <div class="tit-cont-area">
+                        <p class="tit">신용조회동의 등록 (<span>김영수</span>)님</p>
+                    </div>
+                    <div class="btn-cont-wrap">
+                        <a href="#none" class="btn btn-primary">초기화</a>
+                    </div>
+                
+
+                    <div class="rc-gray type-spread"></div>
+                
+                    <p class="form-tit">요청내역</p>
+                    <div class="form-group">
+                        <div class="form-row radio-bg-button">
+                            <div class="col">
+                                <input type="radio" name="q3" id="q1" value="Y" checked>
+                                <label for="q1" class="rd">차주</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" name="q3" id="q2" value="N" >
+                                <label for="q2" class="rd">보증</label>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="form-tit">고객구분</p>
+                    <div class="form-group">
+                        <div class="form-row radio-bg-button">
+                            <div class="col">
+                                <input type="radio" name="q6" id="q4" value="Y" checked>
+                                <label for="q4" class="img"><span class="img individual">개인</span></label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" name="q6" id="q5" value="N"><!--[D]: 개인사업자 선택시 사업자 번호 disabled 삭제 활성화 -->
+                                <label for="q2q52" class="img"><span class="img businessman"></span>개인사업자</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">사업자번호</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="사업자번호 입력" disabled=""><!--disalbed-->
+                    </div>
+                    <div class="form-group">
+                        <label for="">사업자번호</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="사업자번호 입력"><!--[D]: 개인사업자 선택시 사업자 번호 disabled 삭제 활성화 -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">상품구분</label>
+                        <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel1')" value="상품구분"  readonly><!--[D]:상품구분 default값-->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">물건구분</label>
+                        <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel2')" value="물건구분" readonly><!--[D]:물건구분 default값-->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">고객명</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="고객명 입력" invalid="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">연락처</label>
+                        <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="연락처 입력" invalid="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">차량(물건)가격</label>
+                        <div class="amount">
+                            <input id="" type="amount" class="form-control amount-num" placeholder="가격 입력" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                            <span class="amount-txt">원</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">여신신청금액</label>
+                        <div class="amount">
+                            <input id="" type="amount" class="form-control amount-num" placeholder="금액 입력" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                            <span class="amount-txt">원</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="">주요메모</label><!--essential 필수일 경우-->
+                        <textarea id="myTextarea" type="text" title="성명" class="" name="" placeholder="내용을 입력해주세요" maxlength="" required=""></textarea>
+                    </div>
+                
+                    <div class="rc-gray type-spread"></div>
+
+                    <div class="form-group check-buttons"><!--[D]: 체크 시 하단에 성명 연락처 입력 란 보여짐-->
+                        <label for="check-1" class="check-button">
+                            <input type="checkbox" id="check-1" name="terms">
+                            <span class="custom-check"></span>
+                            <span class="text">알림문자 수신여부</span>
+                        </label>
+                    </div>
+                    
+                    <div class="check-result-wrap on"><!--[D]: 알림 문자 수신여부 동의 시 성명 연락처 입력 란 보여짐 On 클래스 : display:block;-->
+                        <div class="form-group">
+                            <label for="" class="">성명</label><!--essential 필수일 경우-->
+                            <div class="form-row">
+                                <div class="col">
+                                    <input id="" type="text" class="form-control" placeholder="" readonly>
+                                </div>
+                                <button class="btn btn-txt search-img" type="button" onclick="openPopup('lySel3')" >검색</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">연락처</label>
+                            <input id="" type="text" name="" class="form-control" placeholder="" invalid="" readonly>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--contents-wrap//-->
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <a href="#none" class="btn btn-primary" onclick="openPopup('lySel4')" >저장</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--wrap//-->
+</body>
+<!--//상품구분-->
+<div id="lySel1" class="layerpopup layer-up on" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">상품구분</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>상품구분</button></li>
+                <li><button>500, 리스,렌터카</button></li>
+                <li><button>600, 할부</button></li>
+                <li><button>700, 대출</button></li>
+                <li><button>800, 기타</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--상품구분//-->
+
+<!--//물건구분-->
+<div id="lySel2" class="layerpopup layer-up on" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">물건구분</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>물건구분</button></li>
+                <li><button>100, 승용차(신차)</button></li>
+                <li><button>110, 승용차(중고차)</button></li>
+                <li><button>200, 상용(버스,트럭)</button></li>
+                <li><button>300, 의료기기</button></li>
+                <li><button>400, 공작기계</button></li>
+                <li><button>500, 일반기계</button></li>
+                <li><button>600, 중장비</button></li>
+                <li><button>700, 해당무</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--물건구분//-->
+
+<!--//FP검색/조회 및 선택-->
+<div id="lySel3" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">FP조회</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="form-wrap">
+            <div class="form-group radio-buttons">
+                <label for="radio-1" class="radio-button">
+                    <input type="radio" id="radio-1" name="terms">
+                    <span class="custom-radio"></span>
+                    <span class="text">이름</span>
+                </label>
+                <label for="radio-2" class="radio-button">
+                    <input type="radio" id="radio-2" name="terms">
+                    <span class="custom-radio"></span>
+                    <span class="text">전화번호</span>
+                </label>
+            </div>
+            <div class="form-group gray-search">
+                <input type="search" id="" class="form-control" placeholder="이름 입력">
+                <button class="btn btn-search" type="button">검색</button>
+            </div>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <div class="result-area nodata">
+                <div class="txt-wrap">
+                    <p class="tit">조회 결과가 없습니다.</p>
+                </div>
+            </div>
+
+            <div class="table-type ta-c style3 table-scroll check">
+                <table class="">
+                    <caption>FP조회</caption>
+                    <colgroup>
+                        <col width="40%">
+                        <col width="60%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="row">고객명</th>
+                            <th scope="row">연락처</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <td class="name">홍길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <td class="name">김길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <td class="name">박길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <td class="name">송길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                        <tr>
+                            <td class="name">진길동</td>
+                            <td>010-1111-1234</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!--FP검색/조회 및 선택//-->
+
+<!--//신용조회 요청(등록)-->
+<div id="lySel4" class="layerpopup layer-up" tabindex="0" >
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">신용조회 요청 등록</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-cont-wrap">
+            <p class="sub-title">신용조회 동의 요청정보를<br/>등록하시겠습니까?</p>
+        </div>
+        <div class="btn-wrap">
+            <a href="#none" class="btn btn-close">취소</a>
+            <a href="#none" class="btn btn-primary" onclick="openPopup('lySel5')" >등록 요청</a>
+        </div>
+    </div>
+</div>
+<!--//신용조회 요청(등록)-->
+
+<!--//신용조회 요청(등록) - 등록 완료-->
+<div id="lySel5" class="layerpopup layer-up" tabindex="0" >
+    <div class="content-wrap">
+        <div class="pop-header">
+            <!-- <h2 class="pop-title">신용조회 요청 등록</h2> -->
+        </div>
+        <div class="ly-cont-wrap">
+            <p class="sub-title">등록되었습니다.<br/> 고객에게 MMS정보가 발송되었습니다.</p>
+        </div>
+        <div class="btn-wrap">
+            <a href="#none" class="btn btn-primary confirm">확인</a>
+        </div>
+    </div>
+</div>
+<!--//신용조회 요청(등록) - 등록 완료-->
+
+</html>

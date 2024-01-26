@@ -470,7 +470,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .tabs-wrap .tab-item:before { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:#EEEEEE; }
 .tabs-wrap .tab-item li { display:inline-block; position:relative; }
 .tabs-wrap .tab-item li:last-child { margin-right:0; }
-.tabs-wrap .tab-item li a { display:block; padding:8px 20px; text-align:center; font-size:1rem; line-height:1.188rem; font-weight:500; color:#8A8A8A; }
+.tabs-wrap .tab-item li a { display:block; padding:8px 15px; text-align:center; font-size:1rem; line-height:1.188rem; font-weight:500; color:#8A8A8A; }
 .tabs-wrap .tab-item li.on,
 .tabs-wrap .swiper-pager li.swiper-pagination-bullet-active { position:relative; }
 .tabs-wrap .tab-item li.on a,
@@ -1423,3 +1423,6 @@ iframe { border:none; }
 
 /** 신용조회동의 등록 페이지 **/
 .flag-list { display:flex; gap:5px; }
+
+/* 신용조회관리 */
+.conRegist .tabs-wrap .tabs .tab-item { display:flex; white-space:nowrap; margin-bottom:30px; padding:0 4px; }

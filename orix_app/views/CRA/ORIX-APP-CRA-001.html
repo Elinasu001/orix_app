@@ -62,123 +62,260 @@
                 <!-- <section class="urgency-wrap type-spread">
                     <a href="#none">비대면 모바일 플랫폼 구축 TF팀 긴급 회의</a>
                 </section> -->
-                <div class="form-wrap">
-                    <div class="tit-cont-area">
-                        <p class="tit">신용조회동의 등록 (<span>김영수</span>)님</p>
-                    </div>
-                    <div class="btn-cont-wrap">
-                        <a href="#none" class="btn btn-primary">초기화</a>
-                    </div>
-                
-
-                    <div class="rc-gray type-spread"></div>
-                
-                    <p class="form-tit">요청내역</p>
-                    <div class="form-group">
-                        <div class="form-row radio-bg-button">
-                            <div class="col">
-                                <input type="radio" name="q3" id="q1" value="Y" checked>
-                                <label for="q1" class="rd">차주</label>
-                            </div>
-                            <div class="col">
-                                <input type="radio" name="q3" id="q2" value="N" >
-                                <label for="q2" class="rd">보증</label>
+                <section class="tabs-wrap">
+                    <div class="tabs">
+                        <ul class="tab-item type-spread">
+                            <li data-tab="tab-cont01" class="on"><a href="#none" title="선택됨">신용조회 요청</a></li>
+                            <li data-tab="tab-cont02"><a href="#none">신용조회 결과</a></li>
+                            <li data-tab="tab-cont03"><a href="#none">대체키발급 등록</a></li>
+                        </ul>
+                        <div class="tab-content-area">
                             
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="form-tit">고객구분</p>
-                    <div class="form-group">
-                        <div class="form-row radio-bg-button">
-                            <div class="col">
-                                <input type="radio" name="q6" id="q4" value="Y" checked>
-                                <label for="q4" class="img"><span class="img individual">개인</span></label>
-                            </div>
-                            <div class="col">
-                                <input type="radio" name="q6" id="q5" value="N"><!--[D]: 개인사업자 선택시 사업자 번호 disabled 삭제 활성화 -->
-                                <label for="q2q52" class="img"><span class="img businessman"></span>개인사업자</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">사업자번호</label>
-                        <input id="" type="text" name="" class="form-control" placeholder="사업자번호 입력" disabled=""><!--disalbed-->
-                    </div>
-                    <div class="form-group">
-                        <label for="">사업자번호</label>
-                        <input id="" type="text" name="" class="form-control" placeholder="사업자번호 입력"><!--[D]: 개인사업자 선택시 사업자 번호 disabled 삭제 활성화 -->
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">상품구분</label>
-                        <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel1')" value="상품구분"  readonly><!--[D]:상품구분 default값-->
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">물건구분</label>
-                        <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel2')" value="물건구분" readonly><!--[D]:물건구분 default값-->
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">고객명</label>
-                        <input id="" type="text" name="" class="form-control" placeholder="고객명 입력" invalid="">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">연락처</label>
-                        <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="연락처 입력" invalid="">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">차량(물건)가격</label>
-                        <div class="amount">
-                            <input id="" type="amount" class="form-control amount-num" placeholder="가격 입력" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
-                            <span class="amount-txt">원</span>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">여신신청금액</label>
-                        <div class="amount">
-                            <input id="" type="amount" class="form-control amount-num" placeholder="금액 입력" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
-                            <span class="amount-txt">원</span>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="" class="">주요메모</label><!--essential 필수일 경우-->
-                        <textarea id="myTextarea" type="text" title="성명" class="" name="" placeholder="내용을 입력해주세요" maxlength="" required=""></textarea>
-                    </div>
+                            <div id="tab-cont01" class="tab-content">
+                                <div class="form-wrap">
+                                    <div class="tit-cont-area">
+                                        <p class="tit">신용조회동의 등록 (<span>김영수</span>)님</p>
+                                    </div>
+                                    <div class="btn-cont-wrap">
+                                        <a href="#none" class="btn btn-primary">초기화</a>
+                                    </div>
+                                
                 
-                <div class="rc-gray type-spread"></div>
-
-                <div class="form-group check-buttons"><!--[D]: 체크 시 하단에 성명 연락처 입력 란 보여짐-->
-                    <label for="check-1" class="check-button">
-                        <input type="checkbox" id="check-1" name="terms">
-                        <span class="custom-check"></span>
-                        <span class="text">알림문자 수신여부</span>
-                    </label>
-                </div>
+                                    <div class="rc-gray type-spread"></div>
+                                
+                                    <p class="form-tit">요청내역</p>
+                                    <div class="form-group">
+                                        <div class="form-row radio-bg-button">
+                                            <div class="col">
+                                                <input type="radio" name="q3" id="q1" value="Y" >
+                                                <label for="q1" class="rd">차주</label>
+                                            </div>
+                                            <div class="col">
+                                                <input type="radio" name="q3" id="q2" value="N" >
+                                                <label for="q2" class="rd">보증</label>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
                 
-                <div class="check-result-wrap on"><!--[D]: 알림 문자 수신여부 동의 시 성명 연락처 입력 란 보여짐 On 클래스 : display:block;-->
-                    <div class="form-group">
-                        <label for="" class="">성명</label><!--essential 필수일 경우-->
-                        <div class="form-row">
-                            <div class="col">
-                                <input id="" type="text" class="form-control" placeholder="" readonly>
+                                    <p class="form-tit">고객구분</p>
+                                    <div class="form-group">
+                                        <div class="form-row radio-bg-button">
+                                            <div class="col">
+                                                <input type="radio" name="q6" id="q4" value="Y" >
+                                                <label for="q4" class="img"><span class="img individual">개인</span></label>
+                                            </div>
+                                            <div class="col">
+                                                <input type="radio" name="q6" id="q5" value="N"><!--[D]: 개인사업자 선택시 사업자 번호 disabled 삭제 활성화 -->
+                                                <label for="q5" class="img"><span class="img businessman"></span>개인사업자</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="">사업자번호</label>
+                                        <input id="" type="text" name="" class="form-control" placeholder="사업자번호 입력" disabled=""><!--disalbed-->
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">사업자번호</label>
+                                        <input id="" type="text" name="" class="form-control" placeholder="사업자번호 입력"><!--[D]: 개인사업자 선택시 사업자 번호 disabled 삭제 활성화 -->
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="">상품구분</label>
+                                        <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel1')" value="상품구분"  readonly><!--[D]:상품구분 default값-->
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="">물건구분</label>
+                                        <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel2')" value="물건구분" readonly><!--[D]:물건구분 default값-->
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="">고객명</label>
+                                        <input id="" type="text" name="" class="form-control" placeholder="고객명 입력" invalid="">
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="">연락처</label>
+                                        <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="연락처 입력" invalid="">
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="">차량(물건)가격</label>
+                                        <div class="amount">
+                                            <input id="" type="amount" class="form-control amount-num" placeholder="가격 입력" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                            <span class="amount-txt">원</span>
+                                        </div>
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="">여신신청금액</label>
+                                        <div class="amount">
+                                            <input id="" type="amount" class="form-control amount-num" placeholder="금액 입력" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                            <span class="amount-txt">원</span>
+                                        </div>
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="" class="">주요메모</label><!--essential 필수일 경우-->
+                                        <textarea id="myTextarea" type="text" title="성명" class="" name="" placeholder="내용을 입력해주세요" maxlength="" required=""></textarea>
+                                    </div>
+                                
+                                    <div class="rc-gray type-spread"></div>
+                    
+                                    <div class="form-group check-buttons"><!--[D]: 체크 시 하단에 성명 연락처 입력 란 보여짐-->
+                                        <label for="check-1" class="check-button">
+                                            <input type="checkbox" id="check-1" name="terms">
+                                            <span class="custom-check"></span>
+                                            <span class="text">알림문자 수신여부</span>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="check-result-wrap on"><!--[D]: 알림 문자 수신여부 동의 시 성명 연락처 입력 란 보여짐 On 클래스 : display:block;-->
+                                        <div class="form-group">
+                                            <label for="" class="">성명</label><!--essential 필수일 경우-->
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <input id="" type="text" class="form-control" placeholder="" readonly>
+                                                </div>
+                                                <button class="btn btn-txt search-img" type="button" onclick="openPopup('lySel3')" >검색</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">연락처</label>
+                                            <input id="" type="text" name="" class="form-control" placeholder="" invalid="" readonly>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <button class="btn btn-txt search-img" type="button" onclick="openPopup('lySel3')" >검색</button>
+                            
+                            <div id="tab-cont02" class="tab-content dp-none">
+                                
+                            </div>
+
+                            <div id="tab-cont03" class="tab-content dp-none">
+                                <div class="form-wrap">
+                                    <div class="tit-cont-area">
+                                        <p class="tit">대체키 등록 (<span>김영수</span>)님</p>
+                                    </div>
+                                    <div class="btn-cont-wrap">
+                                        <a href="#none" class="btn btn-primary">초기화</a>
+                                    </div>
+                                
+                
+                                    <div class="rc-gray type-spread"></div>
+                                
+                                    <p class="form-tit">요청내역</p>
+                                    <div class="form-group">
+                                        <div class="form-row radio-bg-button">
+                                            <div class="col">
+                                                <input type="radio" name="q3" id="q1" value="Y">
+                                                <label for="q1" class="rd">차주</label>
+                                            </div>
+                                            <div class="col">
+                                                <input type="radio" name="q3" id="q2" value="N" >
+                                                <label for="q2" class="rd">보증</label>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <p class="form-tit">고객구분</p>
+                                    <div class="form-group">
+                                        <div class="form-row radio-bg-button">
+                                            <div class="col">
+                                                <input type="radio" name="q6" id="q4" value="Y">
+                                                <label for="q4" class="img"><span class="img individual">개인</span></label>
+                                            </div>
+                                            <div class="col">
+                                                <input type="radio" name="q6" id="q5" value="N"><!--[D]: 개인사업자 선택시 사업자 번호 disabled 삭제 활성화 -->
+                                                <label for="q5" class="img"><span class="img businessman"></span>개인사업자</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="">사업자번호</label>
+                                        <input id="" type="text" name="" class="form-control" placeholder="사업자번호 입력" disabled=""><!--disalbed-->
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">사업자번호</label>
+                                        <input id="" type="text" name="" class="form-control" placeholder="사업자번호 입력"><!--[D]: 개인사업자 선택시 사업자 번호 disabled 삭제 활성화 -->
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="">상품구분</label>
+                                        <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel1')" value="상품구분"  readonly><!--[D]:상품구분 default값-->
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="">물건구분</label>
+                                        <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel2')" value="물건구분" readonly><!--[D]:물건구분 default값-->
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="">고객명</label>
+                                        <input id="" type="text" name="" class="form-control" placeholder="고객명 입력" invalid="">
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="">연락처</label>
+                                        <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="연락처 입력" invalid="">
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="">차량(물건)가격</label>
+                                        <div class="amount">
+                                            <input id="" type="amount" class="form-control amount-num" placeholder="가격 입력" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                            <span class="amount-txt">원</span>
+                                        </div>
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="">여신신청금액</label>
+                                        <div class="amount">
+                                            <input id="" type="amount" class="form-control amount-num" placeholder="금액 입력" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                            <span class="amount-txt">원</span>
+                                        </div>
+                                    </div>
+                
+                                    <div class="form-group">
+                                        <label for="" class="">주요메모</label><!--essential 필수일 경우-->
+                                        <textarea id="myTextarea" type="text" title="성명" class="" name="" placeholder="내용을 입력해주세요" maxlength="" required=""></textarea>
+                                    </div>
+                                
+                                <div class="rc-gray type-spread"></div>
+                
+                                <div class="form-group check-buttons"><!--[D]: 체크 시 하단에 성명 연락처 입력 란 보여짐-->
+                                    <label for="check-1" class="check-button">
+                                        <input type="checkbox" id="check-1" name="terms">
+                                        <span class="custom-check"></span>
+                                        <span class="text">알림문자 수신여부</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="check-result-wrap on"><!--[D]: 알림 문자 수신여부 동의 시 성명 연락처 입력 란 보여짐 On 클래스 : display:block;-->
+                                    <div class="form-group">
+                                        <label for="" class="">성명</label><!--essential 필수일 경우-->
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <input id="" type="text" class="form-control" placeholder="" readonly>
+                                            </div>
+                                            <button class="btn btn-txt search-img" type="button" onclick="openPopup('lySel3')" >검색</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">연락처</label>
+                                        <input id="" type="text" name="" class="form-control" placeholder="" invalid="" readonly>
+                                    </div>
+                                </div>
+                
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="">연락처</label>
-                        <input id="" type="text" name="" class="form-control" placeholder="" invalid="" readonly>
-                    </div>
-                </div>
-
-                </div>
+                </section>
             </div>
             <!--contents-wrap//-->
             <div class="fixed-btn-wrap">

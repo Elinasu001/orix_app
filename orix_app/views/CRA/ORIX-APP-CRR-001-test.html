@@ -1,0 +1,271 @@
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ORIX Capital</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords" />
+    <meta name="description" content="ORIX Capital description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../resources/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../../resources/favicon.png" />
+    
+    <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../../resources/css/ui/jquery-ui.css">
+    <link rel="stylesheet" href="../../resources/css/ui/datepicker.css">
+    
+    <script type="text/javascript" src="../../resources/js/ui/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui/jquery-1.12.4.min.js"></script>
+    <script  type="text/javascript" src="../../resources/js/ui/jquery-ui-1.12.1.js"></script>
+
+    <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
+</head>
+
+<body>
+    <!--//wrap-->
+    <div class="wrap">
+        <!-- //headerWrap -->
+        <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_header.html");
+			});
+			</script>
+        </div>
+        <!-- headerWrap// -->
+        <!-- //menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("../include/inc_all_menu.html");
+            });
+            </script>
+        </div>
+	    <!-- menuWrap// -->
+        <form>
+            <div class="contents-wrap conRegist">
+                
+                <div class="input-box-wrap">
+                    <div class="tit-cont-area">
+                        <p class="tit">요청목록</p>
+                    </div>
+                    <div class="input-box">
+                        <div class="form-wrap">
+
+                            <div class="form-group">
+                                <label for="">검색기준</label>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel1')" value="신용정보" readonly><!--[D]: 신용정보 default값으로 들어감-->
+                                    </div>
+                                    <div class="col">
+                                        <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel2')" value="본인" readonly><!--[D]: 본인 default값으로 들어감-->
+                                    </div>
+                                </div>
+                                <input id="" type="text" name="" class="form-control" placeholder="이름 입력">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">조회기준일</label>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input id="" type="text" class="form-control datepicker" placeholder="" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <input id="" type="text" class="form-control datepicker" placeholder="" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-cont-wrap">
+                                <a href="#none" class="btn btn-primary">조회</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rc-gray type-spread"></div>
+
+                <div class="table-type ta-c style4 table-scroll tblTy01 tyHor">
+                    <div class="tit-cont-area">
+                        <p class="tit">요청내역</p>
+                        <ul class="flag-list">
+                            <li><span class="credit flag style5">기본키</span></li>
+                            <li><span class="altKey flag style6">대체키</span></li>
+                        </ul>
+                    </div>
+					<table>
+						<caption>요청내역</caption>
+						<colgroup>
+							<col width="20%">
+                            <col width="20%">
+                            <col width="20%">
+							<col width="20%">
+                            <col width="20%">
+						</colgroup>
+						<tbody>
+                            <!-- [퍼블]:1/25 - 헤더부분 br처리한 부분 tr로 나눠서 변경 -->
+							<tr class="table-bg">
+								<th>요청일자</th>
+								<th>담당자</th>
+								<th>전화번호</th>
+								<th>진행상태</th>
+								<th>이력</th>
+							</tr>
+							<tr  class="table-bg">
+								<th>고객클릭</th>
+								<th>고객명</th>
+								<th>문자발송</th>
+								<th>동의일시</th>
+								<th>결과</th>
+							</tr>
+                            <!-- [퍼블]:1/25 - 헤더부분 br처리한 부분 tr로 나눠서 변경 -->
+							<!-- s : 신용정보인 경우-->
+							<tr class="credit part">
+								<td>210805 19:45</td>
+								<td>유혜영</td>
+								<td>9957 - **30</td>
+								<td>[00] MMS 발송</td>
+								<td class="under">보기</td>
+							</tr>
+							<tr class="credit">
+								<td>-</td>
+								<td>서해준</td>
+								<td>성공</td>
+								<td>-</td>
+								<td>-</td>
+							</tr>
+							<!-- e : 신용정보인 경우-->
+
+							<!-- s : 대체키인 경우-->
+							<tr class="altKey part">
+								<td>210805 13:03</td>
+								<td>김준호</td>
+								<td>9957 - **30</td>
+								<td>[99] 조회동의완료</td>
+								<td class="under">보기</td>
+							</tr>
+							<tr class="altKey">
+								<td>210805 19:45</td>
+								<td>김세일</td>
+								<td>성공</td>
+								<td>210805 19:47</td>
+								<td>-</td>
+							</tr>
+							<!-- e : 대체키인 경우-->
+						</tbody>
+					</table>
+				</div>
+
+                <!-- <div class="table-type tblTy01 tyHor ta-c style4 table-scroll">
+                    
+                    <div class="tit-cont-area">
+                        <p class="tit">요청내역</p>
+                        <ul class="flag-list">
+                            <li><span class="credit flag style5">기본키</span></li>
+                            <li><span class="altKey flag style6">대체키</span></li>
+                        </ul>
+                    </div>
+                    <table>
+                        <caption>가로형</caption>
+                        <colgroup>
+                            <col width="20%"><col width="20%"><col width="20%">
+                            <col width="20%"><col width="20%">
+                        </colgroup>
+                        <tbody>
+                            [퍼블]:1/25 - 이부분만 삭제
+                            <tr class="table-bg">
+                                <th>요청일자<br>고객클릭</th>
+                                <th>담당자<br>고객명</th>
+                                <th>전화번호<br>문자발송</th>
+                                <th>진행상태<br>동의일시</th>
+                                <th>이력<br>결과</th>
+                            </tr>
+                            [퍼블]:1/25 - 이부분만 삭제
+                            <tr class="credit part">
+                                <td>210805 18:07</td>
+                                <td>김준호</td>
+                                <td>9957 - **30</td>
+                                <td>[00] MMS 발송</td>
+                                <td class="under">보기</td>
+                            </tr>
+                            <tr class="credit">
+                                <td>210805 19:45</td>
+                                <td>김준호</td>
+                                <td>전송대기</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+
+                            <tr class="altKey part">
+                                <td>210805 18:07</td>
+                                <td>김준호</td>
+                                <td>9957 - **30</td>
+                                <td>[00] MMS 발송</td>
+                                <td  class="under">보기</td>
+                            </tr>
+                            <tr class="altKey">
+                                <td>210805 19:45</td>
+                                <td>김준호</td>
+                                <td>전송대기</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> -->
+            </div>
+        </form>
+    </div>
+    <!--wrap//-->
+</body>
+<!--//신용정보-->
+<div id="lySel1" class="layerpopup layer-up" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">전체</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>대체키</button></li>
+                <li><button>신용정보</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--신용정보//-->
+
+<!--//본인-->
+<div id="lySel2" class="layerpopup layer-up " tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">전체</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>본인</button></li>
+                <li><button>성명</button></li>
+                <li><button>본점</button></li>
+                <li><button>지점</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--본인//-->
+
+</html>
