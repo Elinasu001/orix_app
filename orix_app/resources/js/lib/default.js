@@ -206,7 +206,7 @@ $(".table-type.check tbody tr").click(function () {
 
         reader.onload = function(e) {
             const imageUrl = e.target.result;
-            
+
             const newListItem = $('<li><img src="' + imageUrl + '" alt="Uploaded Image"><span>추가</span></li>');
 
             $parentListItem.replaceWith(newListItem);
