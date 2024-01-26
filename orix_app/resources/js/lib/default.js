@@ -47,7 +47,7 @@ $('.form-control:not(.form-control.select, input.form-control:read-only), textar
   $(document).on('click', '.txt-list-wrap.click .txt-detail-area', function(){
     $('.txt-list-wrap.click .txt-detail-area').not(this).removeClass('on');
     $(this).toggleClass('on');
-    $('.txt-list-wrap.click .txt-detail-area').not(this).find('input').removeClasss('on');
+    $('.txt-list-wrap.click .txt-detail-area').not(this).find('input').removeClasss('on');//개발 추가
     $(this).find('input').toggleClass('on');
   })
 
@@ -307,31 +307,32 @@ function deleteBlock(_full) {
 }
 
 
-// popup
-function openPopup(id) {
+// messagePopup
+function messagePopup(id) {
   var _target = $('#' + id);
   currentTop = $(window).scrollTop();
-  $('body').css({ 'position': 'fixed', 'top': -currentTop });
-  _target.find('.btn-layer-close').on('click', function () {
+  // $('body').css({ 'position': 'fixed', 'top': -currentTop });
+  _target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
     closePopup(id);
     $('body').removeAttr('style');
     $(window).scrollTop(currentTop);
   });
-  if (_target.hasClass('layer-up, type-alert')) {
+  if (_target.hasClass('layer-up')) {
+
+  }else if (_target.hasClass('type-alert')){
     _target.fadeIn(600);
     _target.focus();
     _target.addClass("on");
-  // } else if (_target.hasClass('type-alert')){
-  // // _target.css('top','0');
-	// _target.fadeIn(600);
-  // _target.focus();
-	// _target.addClass("on");
-  // }
+
+  }else{
+    _target.fadeIn(600);
+    _target.addClass("on");
+    _target.focus();
   }
 
 }
 
-//open popup slideup
+// popup
 function openPopup(id) {
   var _target = $('#' + id);
   currentTop = $(window).scrollTop();
@@ -343,29 +344,20 @@ function openPopup(id) {
   _target.removeClass('close');
   _target.addClass('on').show();
   _target.focus();
-  
   _target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
     closePopupUp(id);
     // $('body').removeAttr('style');
     // $(window).scrollTop(currentTop);
     // _target.removeClass('on');
-    // $('.layerpopup').css('display', '');
   });
 
   if (_target.has('.ly-select-list').length > 0) {
   _target.find('.ly-select-list > li > button').on('click', function () {
 
-      //2023-01-23 추가함
-      // var selectedText = $(this).text();
-      
-      // $('[onclick="openPopup(\'' + id + '\')"]').closest('.form-control.select, .form-control.amount-num').val(selectedText);
-      // $('#' + id).val(selectedText);
-      //2023-01-23 추가함
-
       closePopupUp(id);
       // $('body').removeAttr('style');
       // $(window).scrollTop(currentTop);
-      // _target.removeClass('on');
+      // _target.removeClass('show');
     });
 
   }
@@ -374,18 +366,12 @@ function openPopup(id) {
   if (_target.has('.ly-select > .table-type.check').length > 0) {
     _target.find('.ly-select .table-type.check tbody tr').on('click', function () {
 
-         //2023-01-23 추가함
-         var selectedText = $(this).text();
-      
-         $('[onclick="openPopup(\'' + id + '\')"]').closest('.form-control.select').val(selectedText);
-         $('#' + id).val(selectedText);
-         //2023-01-23 추가함
+        closePopupUp(id);
+        // $('body').removeAttr('style');
+        // $(window).scrollTop(currentTop);
+        // _target.removeClass('show');
+        e.preventDefault();
 
-      closePopupUp(id);
-      // $('body').removeAttr('style');
-      // $(window).scrollTop(currentTop);
-      // _target.removeClass('on');
-       e.preventDefault();
     });
   }
 
@@ -396,9 +382,9 @@ function closePopup(id) {
   deleteBlock();
   _target.fadeOut(600);
   _target.removeClass('on');
-  $(window).scrollTop(currentTop);  // Set the scroll position back to the stored value
+  $(window).scrollTop(currentTop);
 }
-//close popup slideDown
+
 function closePopupUp(id) {
   deleteBlock();
   //ADD eunji 2020-10-05

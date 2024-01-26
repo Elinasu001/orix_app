@@ -173,11 +173,11 @@
 	src: local('Pretendard Thin'), url(../font/woff2/Pretendard-Thin.woff2) format('woff2'), url(../font/woff/Pretendard-Thin.woff) format('woff');
 } */
 
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+/* @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 .notosanskr * {
 	font-family: 'Noto Sans KR', sans-serif;
-}
+} */
 
 
 html { font-family:'Pretendard'; /*-webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/ height:100%;  box-sizing:border-box; -ms-overflow-style:scrollbar;}
