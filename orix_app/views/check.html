@@ -1,0 +1,160 @@
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ORIX Capital</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords" />
+    <meta name="description" content="ORIX Capital description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.png" />
+    
+    <link rel="stylesheet" href="../resources/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../resources/css/ui/jquery-ui.css">
+    <link rel="stylesheet" href="../resources/css/ui/datepicker.css">
+    
+    <script type="text/javascript" src="../resources/js/ui/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../resources/js/ui/jquery-1.12.4.min.js"></script>
+    <script  type="text/javascript" src="../resources/js/ui/jquery-ui-1.12.1.js"></script>
+
+    <script type="text/javascript" src="../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/datepicker.js"></script>
+</head>
+
+<body>
+    <!--//wrap-->
+    <div class="wrap">
+        <!-- //headerWrap -->
+        <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_header.html");
+			});
+			</script>
+        </div>
+        <!-- headerWrap// -->
+        <!-- //menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("../include/inc_all_menu.html");
+            });
+            </script>
+        </div>
+	    <!-- menuWrap// -->
+        <form>
+            <div class="contents-wrap conRegist">
+                
+            </div>
+        </form>
+    </div>
+    <!--wrap//-->
+</body>
+
+<!--//신용조회결과(이력조회 팝업) - 이력이 있을 경우--> 
+<div id="lySel4" class="layerpopup layer-up on" tabindex="0" style="position: absolute; top: 294px; left: 0px; display: block;">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">차량 직접 검색</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="form-wrap">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col">
+                        <input id="" type="text" name="" class="form-control" placeholder="차량모델명 입력">
+                    </div>
+                    <div class="col-3">
+                        <input id="" type="text" name="" class="form-control" placeholder="연식 입력">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-cont-wrap">
+            <a type="button" class="btn btn-primary" onclick="openPopup('lyAlert');$('#lySel4').hide();">검색</a>
+        </div>
+        <div class="rc-gray type-spread"></div>
+        <div class="ly-cont-wrap ly-scroll-con">
+            <div class="result-tit-area">
+                <p class="tit">모델명과 연식을 입력해 주세요</p>
+            </div>
+            <div class="txt-list-wrap">
+                <div class="txt-detail-area">
+                    <div class="txt-detail-header">
+                        <p><span class="tit">현대 쏘나타 N Line 2.5 T 인스퍼레이션</span></p>
+                    </div>
+                    <ul class="txt-list">
+                        <li>
+                            <span class="tit">연식</span>
+                            <span class="txt">2022년식</span>
+                        </li>
+                        <li>
+                            <span class="tit">금액</span>
+                            <span class="txt">3,940 만원</span>
+                        </li>
+                    </ul>
+                    <div class="btn-cont-wrap">
+                        <a href="#none" class="btn btn-primary">선택</a>
+                    </div>
+                </div>
+                <div class="txt-detail-area">
+                    <div class="txt-detail-header">
+                        <p><span class="tit">현대 쏘나타 하이브리드(DN8) 2.0 하이브리드 인스퍼레이션</span></p>
+                    </div>
+                    <ul class="txt-list">
+                        <li>
+                            <span class="tit">연식</span>
+                            <span class="txt">2022년식</span>
+                        </li>
+                        <li>
+                            <span class="tit">금액</span>
+                            <span class="txt">3,600 만원</span>
+                        </li>
+                    </ul>
+                    <div class="btn-cont-wrap">
+                        <a href="#none" class="btn btn-primary">선택</a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-area nodata"><!--[D]:조회 결과가 없을 경우-->
+                <div class="txt-wrap">
+                    <p class="tit">조회 결과가 없습니다</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--신용조회결과(이력조회 팝업) - 이력이 있을 경우//-->
+
+<!--//alert-->
+<div id="lyAlert" class="layerpopup type-alert" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">확인해주세요</h2>
+        </div>
+        <div class="ly-cont-wrap">
+            <p class="sub-title">차량모델명을 입력해주세요</p>
+        </div>
+        <div class="btn-wrap">
+            <a href="#none" class="btn btn-primary confirm" onclick="$('#lySel4').show();" >확인</a>
+        </div>
+    </div>
+</div>
+<!--alert//-->
+
+</html> 

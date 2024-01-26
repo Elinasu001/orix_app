@@ -1123,7 +1123,7 @@ iframe { border:none; }
 .txt-detail-area .txt-detail-header p  { font-size:1rem; line-height:1.188rem; font-weight:600; }
 .txt-detail-area .txt-detail-header .txt  { font-weight:400; }
 .txt-detail-area .txt-detail-header span.tit { font-size:1rem; line-height:1.188rem; font-weight:700; color:#003F86; }
-.txt-detail-area .txt-detail-header span.small-tit { font-family:'Noto Sans KR';   font-size:0.875rem; line-height:1rem; font-weight:600; }
+.txt-detail-area .txt-detail-header span.small-tit { font-family:'NotoSanKR';   font-size:0.875rem; line-height:1rem; font-weight:600; }
 .txt-detail-area .txt-detail-header.no-line { margin-top: 0; padding: 22px 0; border-bottom:none; }
 .txt-detail-area.pd-top { padding:15px 20px 20px; border:1px solid #DDDDDD; border-radius:8px; }
 
