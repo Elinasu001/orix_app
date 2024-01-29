@@ -311,7 +311,7 @@ function deleteBlock(_full) {
 function messagePopup(id) {
   var _target = $('#' + id);
   currentTop = $(window).scrollTop();
-  // $('body').css({ 'position': 'fixed', 'top': -currentTop });
+  $('body').css({ 'position': 'fixed', 'top': -currentTop });
   _target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
     closePopup(id);
     $('body').removeAttr('style');
@@ -336,7 +336,7 @@ function messagePopup(id) {
 function openPopup(id) {
   var _target = $('#' + id);
   currentTop = $(window).scrollTop();
-  // $('body').css({ 'position': 'fixed', 'top': -currentTop });
+  $('body').css({ 'position': 'fixed', 'top': -currentTop });
 
 
   //_target.fadeIn(300);
@@ -346,18 +346,18 @@ function openPopup(id) {
   _target.focus();
   _target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
     closePopupUp(id);
-    // $('body').removeAttr('style');
-    // $(window).scrollTop(currentTop);
-    // _target.removeClass('on');
+    $('body').removeAttr('style');
+    $(window).scrollTop(currentTop);
+    _target.removeClass('on');
   });
 
   if (_target.has('.ly-select-list').length > 0) {
   _target.find('.ly-select-list > li > button').on('click', function () {
 
       closePopupUp(id);
-      // $('body').removeAttr('style');
-      // $(window).scrollTop(currentTop);
-      // _target.removeClass('show');
+      $('body').removeAttr('style');
+      $(window).scrollTop(currentTop);
+      _target.removeClass('show');
     });
 
   }
@@ -367,9 +367,9 @@ function openPopup(id) {
     _target.find('.ly-select .table-type.check tbody tr').on('click', function () {
 
         closePopupUp(id);
-        // $('body').removeAttr('style');
-        // $(window).scrollTop(currentTop);
-        // _target.removeClass('show');
+        $('body').removeAttr('style');
+        $(window).scrollTop(currentTop);
+        _target.removeClass('show');
         e.preventDefault();
 
     });
