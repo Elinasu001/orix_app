@@ -115,13 +115,27 @@
             <div class="fixed-btn-wrap">
                 <div class="btn-wrap">
                     <a href="#none" class="btn btn-close">초기화</a>
-                    <a href="#none" class="btn btn-primary">계산하기</a>
+                    <a href="#none" class="btn btn-primary result">계산하기</a>
                 </div>
             </div>
         </form>
     </div>
     <!--wrap//-->
 </body>
+<script>
+    $(document).ready(function () {
+        $('.btn-primary.result').on('click', function (e) {
+            e.preventDefault();
+            scrollDown();
+        });
 
+        function scrollDown() {
+            var windowHeight = $(window).height();
+            $('body').animate({
+                scrollTop: windowHeight
+            }, 800);
+        }
+    });
+</script>
 
 </html>

@@ -350,7 +350,6 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .btn.btn-primary { background:#003F86; color:#FFFFFF; }
 .btn.btn-close,
 .btn.view { background:#EDF3FA; color:#002748; }
-
 .btn-wrap .btn.btn-close,
 .btn-wrap .btn.btn-view {  padding-right:30px; padding-left:30px; }
 .btn-wrap .btn.btn-close { width:initial;  }
