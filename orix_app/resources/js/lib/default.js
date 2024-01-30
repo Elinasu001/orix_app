@@ -7,41 +7,28 @@ $(document).ready(function() {
     this.value = this.value.replace(/,/g, ''); // ,값 공백처리
     this.value = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규식을 이용해서 3자리 마다 , 추가
   });
-  
 
- 
-// $('.form-control:not(.form-control.select), textarea, .layerpopup').focus(function(){
-//   if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
-//     $('.fixed-btn-wrap').hide();
-//   }
-// });
+  //계산 완료
+  $('.btn.btn-primary.result').on('click', function (e) {
+    e.preventDefault();
 
-// $('.form-control:not(.form-control.select), textarea, .layerpopup, .form-control.amount-num').blur(function(){
-//   if (!$(this).hasClass('select') && !$(this).hasClass('amount-num')) {
-//     $('.fixed-btn-wrap').show();
-//   }
-// });
+    $('.contents-wrap').animate({
+        scrollTop: $('.txt-list-wrap').offset().top
+    }, 1000);
+  });
 
-$('.form-control:not(.form-control.select, input.form-control:read-only), textarea').focus(function(){
-  if (!$(this).hasClass('select')) {
-    $('.fixed-btn-wrap').hide();
-  }
-});
+  //input focus
+  $('.form-control:not(.form-control.select, input.form-control:read-only), textarea').focus(function(){
+    if (!$(this).hasClass('select')) {
+      $('.fixed-btn-wrap').hide();
+    }
+  });
 
-$('.form-control:not(.form-control.select, input.form-control:read-only), textarea').blur(function(){
-  if (!$(this).hasClass('select')) {
-    $('.fixed-btn-wrap').show();
-  }
-});
-
-  /** 리스트 선택이 필요한 경우 **/
-  // $('.txt-list-wrap.click .txt-detail-area').click(function () {
-
-  //   $('.txt-list-wrap.click .txt-detail-area').not(this).removeClass('on');
-    
-  //   $(this).toggleClass('on');
-    
-  // });
+  $('.form-control:not(.form-control.select, input.form-control:read-only), textarea').blur(function(){
+    if (!$(this).hasClass('select')) {
+      $('.fixed-btn-wrap').show();
+    }
+  });
 
    /** 리스트 선택이 필요한 경우 **/
   $(document).on('click', '.txt-list-wrap.click .txt-detail-area', function(){

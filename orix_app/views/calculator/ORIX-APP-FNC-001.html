@@ -112,7 +112,7 @@
                 </section>
             </div>
             <!--contents-wrap//-->
-            <div class="fixed-btn-wrap">
+            <div  class="fixed-btn-wrap">
                 <div class="btn-wrap">
                     <a href="#none" class="btn btn-close">초기화</a>
                     <a href="#none" class="btn btn-primary result">계산하기</a>
@@ -124,17 +124,13 @@
 </body>
 <script>
     $(document).ready(function () {
-        $('.btn-primary.result').on('click', function (e) {
+        $('.btn.btn-primary.result').on('click', function (e) {
             e.preventDefault();
-            scrollDown();
-        });
 
-        function scrollDown() {
-            var windowHeight = $(window).height();
-            $('body').animate({
-                scrollTop: windowHeight
-            }, 800);
-        }
+            $('.contents-wrap').animate({
+                scrollTop: $('.txt-list-wrap').offset().top
+            }, 1000);
+        });
     });
 </script>
 
