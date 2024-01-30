@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     $('.contents-wrap').animate({
         scrollTop: $('.txt-list-wrap').offset().top
-    }, 1000);
+    });
   });
 
   //input focus
