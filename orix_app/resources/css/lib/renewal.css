@@ -800,20 +800,26 @@ iframe { border:none; }
 
 /* 서류제출 개별 테이블 */
 [class^="table-type"].style6 tbody tr th {  background:#F8F8F8; color:#333333; }
-[class^="table-type"].style6 tbody tr > td:first-child { text-align:left; color:#212121; font-weight:400; }
-[class^="table-type"].style6 tbody tr > td:last-child { text-align:right; }
-[class^="table-type"].style6 tbody tr th:first-child { text-align:left; }
+/* [class^="table-type"].style6 tbody tr > td:first-child { text-align:left; color:#212121; font-weight:400; }
+[class^="table-type"].style6 tbody tr > td:last-child { text-align:right; } */
+/* [class^="table-type"].style6 tbody tr th:first-child { text-align:left; } */
 [class^="table-type"].style6 tbody { border:1px solid #DDDDDD; }
 [class^="table-type"].style6 tbody tr { border-bottom:1px solid #DDDDDD; }
 [class^="table-type"].style6 tbody tr:last-child { border-bottom:0; }
 
 /* 서류제출 이미지 들어올 경우 - 삭제 */
-[class^="table-type"].style6 tbody tr.on td:first-child { color:#000000; font-weight:500; }
-[class^="table-type"].style6 tbody tr.on td:last-child { color:#003F86; font-weight:400; }
+/* [class^="table-type"].style6 tbody tr.on td:first-child { color:#000000; font-weight:500; }
+[class^="table-type"].style6 tbody tr.on td:last-child { color:#003F86; font-weight:400; } */
 
+/* 서류제출 */
+
+.camera-header-wrap,
+.image-wrap { display:flex; width:100%; align-items:center; justify-content: space-between; font-weight:400; }
+.image-wrap p { font-weight:400; }
+.image-wrap.on p { font-weight:500; }
+.image-wrap.on p.txt { color:#003F86; }
 
 /* .table-type.style6 tbody tr th:nth-of-type(2) { border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD; } */
-
 
 /** text 공통 **/
 .tit-main-area { margin-top:25px; margin-bottom:40px; }

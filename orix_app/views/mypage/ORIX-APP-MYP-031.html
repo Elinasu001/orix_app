@@ -89,13 +89,13 @@
                         <table>
                             <caption>신용조회 동의 완료 고객 선택 테이블</caption>
                             <colgroup>
-                                <col width="*%">
-                                <col width="33.333%">
+                                <col width="*">
+                                <!-- <col width="*"> -->
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th colspan="2">매매계약서</th>
-                                    <th>
+                                    <th colspan="2" class="camera-header-wrap">
+                                        <p class="tit">매매계약서</p>
                                         <div class="camera-wrap">
                                             <div class="camera-area camera">
                                                 <input type="file" accept="image/*" capture="camera" class="img"><!--[D]: 사진촬영 -->
@@ -105,101 +105,99 @@
                                             </div>
                                         </div>
                                     </th>
-                                    
+                                    <td class="image-wrap on"><!--[D]: 갤러리에서 선택한 이미지 파일명이 목록에 노출될 경우 on 클래스 사용 -->
+                                        <p class="img">IMG001.jpg</p>
+                                        <p class="txt">삭제</p>
+                                    </td>
+                                    <td class="image-wrap on">
+                                        <p class="img">IMG001.jpg</p>
+                                        <p class="txt">삭제</p>
+                                    </td>
+                                    <td class="image-wrap on">
+                                        <p class="img">IMG001.jpg</p>
+                                        <p class="txt">삭제</p>
+                                    </td>
                                 </tr>
-                                <tr class="on"><!--[D]: on 클래스 : 이미지 선택되었을 경우-->
-                                    <td colspan="2">IMG001.jpg</td>
-                                    <td>삭제</td>
-                                </tr>
-                                <tr class="on"><!--[D]: on 클래스 : 이미지 선택되었을 경우-->
-                                    <td colspan="2">IMG001.jpg</td>
-                                    <td>삭제</td>
-                                </tr>
-                                <tr class="on"><!--[D]: on 클래스 : 이미지 선택되었을 경우-->
-                                    <td colspan="2">IMG001.jpg</td>
-                                    <td>삭제</td>
-                                </tr>
-
                                 <tr>
-                                    <th colspan="2">가족관계증명서</th>
-                                    <th>
+                                    <th colspan="2" class="camera-header-wrap">
+                                        <p class="tit">가족관계증명서</p>
                                     </th>
-                                </tr>
-                                <tr class="on"><!--[D]: on 클래스 :이미지가 이미 있는 경우-->
-                                    <td colspan="2">IMG001.jpg</td>
-                                    <td></td>
+                                    <td class="image-wrap">
+                                        <p class="img">IMG001.jpg</p>
+                                        <p class="txt"></p>
+                                    </td>
                                 </tr>
 
                                 <tr>
-                                    <th colspan="2">부동산 등기부 등본</th>
-                                    <th>
+                                    <th colspan="2" class="camera-header-wrap">
+                                        <p class="tit">부동산 등기부 등본</p>
                                         <div class="camera-wrap">
                                             <div class="camera-area camera">
-                                                <input type="file" accept="image/*" capture="camera" class="img">
+                                                <input type="file" accept="image/*" capture="camera" class="img"><!--[D]: 사진촬영 -->
                                             </div>
                                             <div class="camera-area document">
-                                                &nbsp;<input type="file" accept="image/*" class="img">
+                                                &nbsp;<input type="file" accept="image/*" class="img"><!--[D]: 사진 불러오기 -->
                                             </div>
                                         </div>
                                     </th>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">첨부 파일 없음</td>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <th colspan="2">사업자 등록증</th>
-                                    <th>
-                                        <div class="camera-wrap">
-                                            <div class="camera-area camera">
-                                                <input type="file" accept="image/*" capture="camera" class="img">
-                                            </div>
-                                            <div class="camera-area document">
-                                                &nbsp;<input type="file" accept="image/*" class="img">
-                                            </div>
-                                        </div>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">첨부 파일 없음</td>
-                                    <td></td>
+                                    <td class="image-wrap">
+                                        <p class="img">첨부파일 없음</p>
+                                        <p class="txt"></p>
+                                    </td>
                                 </tr>
 
                                 <tr>
-                                    <th colspan="2">초본</th>
-                                    <th>
+                                    <th colspan="2" class="camera-header-wrap">
+                                        <p class="tit">사업자 등록증</p>
                                         <div class="camera-wrap">
                                             <div class="camera-area camera">
-                                                <input type="file" accept="image/*" capture="camera" class="img">
+                                                <input type="file" accept="image/*" capture="camera" class="img"><!--[D]: 사진촬영 -->
                                             </div>
                                             <div class="camera-area document">
-                                                &nbsp;<input type="file" accept="image/*" class="img">
+                                                &nbsp;<input type="file" accept="image/*" class="img"><!--[D]: 사진 불러오기 -->
                                             </div>
                                         </div>
                                     </th>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">첨부 파일 없음</td>
-                                    <td></td>
+                                    <td class="image-wrap">
+                                        <p class="img">첨부파일 없음</p>
+                                        <p class="txt"></p>
+                                    </td>
                                 </tr>
 
                                 <tr>
-                                    <th colspan="2">기타</th>
-                                    <th>
+                                    <th colspan="2" class="camera-header-wrap">
+                                        <p class="tit">초본</p>
                                         <div class="camera-wrap">
                                             <div class="camera-area camera">
-                                                <input type="file" accept="image/*" capture="camera" class="img">
+                                                <input type="file" accept="image/*" capture="camera" class="img"><!--[D]: 사진촬영 -->
                                             </div>
                                             <div class="camera-area document">
-                                                &nbsp;<input type="file" accept="image/*" class="img">
+                                                &nbsp;<input type="file" accept="image/*" class="img"><!--[D]: 사진 불러오기 -->
                                             </div>
                                         </div>
                                     </th>
+                                    <td class="image-wrap">
+                                        <p class="img">첨부파일 없음</p>
+                                        <p class="txt"></p>
+                                    </td>
                                 </tr>
+
                                 <tr>
-                                    <td colspan="2">첨부 파일 없음</td>
-                                    <td></td>
+                                    <th colspan="2" class="camera-header-wrap">
+                                        <p class="tit">기타</p>
+                                        <div class="camera-wrap">
+                                            <div class="camera-area camera">
+                                                <input type="file" accept="image/*" capture="camera" class="img"><!--[D]: 사진촬영 -->
+                                            </div>
+                                            <div class="camera-area document">
+                                                &nbsp;<input type="file" accept="image/*" class="img"><!--[D]: 사진 불러오기 -->
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td class="image-wrap">
+                                        <p class="img">첨부파일 없음</p>
+                                        <p class="txt"></p>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -216,6 +214,6 @@
         </div>
         <!--wrap//-->
     </body>
- 
+
 </html>
     
