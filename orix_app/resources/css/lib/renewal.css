@@ -225,6 +225,8 @@ textarea:read-only:focus { color:#000000; border-color:initial;  } */
 
 /* focus */
 /** 인풋 자동완성 reset **/
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset;  background-color:#FFFFFF !important; color:#000000; }
+
 /* input:focus,
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
