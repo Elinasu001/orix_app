@@ -803,10 +803,13 @@ iframe { border:none; }
 /* [class^="table-type"].style6 tbody tr > td:first-child { text-align:left; color:#212121; font-weight:400; }
 [class^="table-type"].style6 tbody tr > td:last-child { text-align:right; } */
 /* [class^="table-type"].style6 tbody tr th:first-child { text-align:left; } */
-[class^="table-type"].style6 tbody { border:1px solid #DDDDDD; }
+[class^="table-type"].style6 tbody { border:1px solid #DDDDDD; border-bottom:0; }
+[class^="table-type"].style6 tbody:last-child { border-bottom:0; }
 [class^="table-type"].style6 tbody td,
 [class^="table-type"].style6 tbody th { border-bottom:1px solid #DDDDDD; }
-[class^="table-type"].style6 tbody:last-child { border-bottom:0; }
+[class^="table-type"].style6 tbody tr { border-bottom:1px solid #DDDDDD; }
+[class^="table-type"].style6 tbody tr td:last-child { border-bottom:0; }
+/* [class^="table-type"].style6 tbody:last-child { border-bottom:0; } */
 
 /* 서류제출 이미지 들어올 경우 - 삭제 */
 /* [class^="table-type"].style6 tbody tr.on td:first-child { color:#000000; font-weight:500; }
