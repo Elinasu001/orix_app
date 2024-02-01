@@ -852,7 +852,7 @@ iframe { border:none; }
 .tit-cont-area.point::after { position:absolute; content:''; width:58px; height:58px; right:20px;   background:url(../../images/common/ic_point.png)no-repeat 50%/58px auto;}
 
 /* intro box */
-.intro-box-wrap { margin-top:97px; padding:76px 20px 40px 20px; border-radius:20px; background: linear-gradient(#003F86, #002C50); }
+.intro-box-wrap { /*margin-top:97px;*/ width:100%; padding:76px 20px 40px 20px; border-radius:20px; background: linear-gradient(#003F86, #002C50); }
 .intro-box-wrap p {  font-size:33px; line-height:2.063rem;  color:#FFFFFF; }
 .intro-box-wrap p + p { margin-top:11px; }
 /* .intro-box-wrap .tit + .tit  {  margin-left:60px; } */
