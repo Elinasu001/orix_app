@@ -1321,13 +1321,17 @@ iframe { border:none; }
 
 /** main **/
 .contents-wrap.main  { margin-top:141px; padding:0; }
-.contents-wrap.main .tabs-wrap { padding-top:14px; height:100%; }
-.contents-wrap.main .tabs { /*padding-bottom:70px;*/ height:100%; }
+.contents-wrap.main .tabs-wrap { padding-top:14px; }/*height:100%; 개발 대응*/
+.contents-wrap.main .tabs { /*padding-bottom:70px;*/ }
 .contents-wrap.main .tab-item { padding:0px 20px 0 20px; }
 .main-bg-wrap { padding:20px; height:100%; background:#F8F8F8; }
 .main-bg-wrap > .quick-service-area { margin-top:0; }
-.contents-wrap.main .tab-content-area { height:100%; }
-.contents-wrap.main  .tab-content { height:100%; }
+.contents-wrap.main .tabs-wrap ,
+.contents-wrap.main .tabs,
+.contents-wrap.main .tab-content,
+.contents-wrap.main .tab-content-area { height:100% }
+
+
 /* 긴급공지 - main */
 .urgency-wrap.main { border-radius:12px; margin:65px 15px 20px; padding:16px 20px 16px 46px; }
 .urgency-wrap.main a { font-weight:600; }
