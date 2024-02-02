@@ -1,0 +1,187 @@
+<html lang="ko">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ORIX Capital</title>
+        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta name="keywords" content="ORIX Capital keywords" />
+        <meta name="description" content="ORIX Capital description" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta http-equiv="Expires" content="-1">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="No-Cache">
+    
+        <link rel="shortcut icon" type="image/x-icon" href="../../resources/favicon.png" />
+        <link rel="icon" type="image/x-icon" href="../../resources/favicon.png" />
+        
+        <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+        <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+        <link rel="stylesheet" href="../../resources/css/lib/default.css">
+        <link rel="stylesheet" href="../../resources/css/ui/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/ui/datepicker.css">
+        
+        <script type="text/javascript" src="../../resources/js/ui/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="../../resources/js/ui/jquery-1.12.4.min.js"></script>
+        <script  type="text/javascript" src="../../resources/js/ui/jquery-ui-1.12.1.js"></script>
+    
+        <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+        <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
+    </head>
+    
+    <body>
+        <!--//wrap-->
+        <div class="wrap">
+            <!-- //headerWrap -->
+            <div id="headerWrap">
+                <script>
+                $(document).ready(function(){
+                    document.charset="euc-kr";
+                    $("#headerWrap").load("../include/inc_header.html");
+                });
+                </script>
+            </div>
+            <!-- headerWrap// -->
+            <!-- //menuWrap -->
+            <div id="menuWrap">
+                <script>
+                $(document).ready(function(){
+                    document.charset="euc-kr";
+                    $("#menuWrap").load("../include/inc_all_menu.html");
+                });
+                </script>
+            </div>
+            <!-- menuWrap// -->
+            <form>
+                <!--//contents-wrap-->
+                <div class="contents-wrap">
+                    <section class="tit-main-area">
+                        <p class="tit">서류제출</p>
+                        <p class="text">제출이 필요한 서류를 업로드 해주세요.</p>
+                    </section>
+                    <section class="txt-list-wrap">
+                        <div class="txt-detail-area result">
+                            <div class="txt-detail-header">
+                                <p>고객정보</p>
+                            </div>
+                            <div class="txt-detail-header no-line">
+                                <p>벤틀리 플라잉스퍼 3세대 4.0 2023년형<br>
+                                    234나 5678</p>
+                            </div>
+                            <ul class="txt-list">
+                                <li>
+                                    <span class="tit">신청금액</span>
+                                    <span class="txt">5,000 만원</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <section class="table-type ta-c table-scroll style6">
+                        <table>
+                            <caption>신용조회 동의 완료 고객 선택 테이블</caption>
+                            <colgroup>
+                                <col width="*">
+                                <!-- <col width="*"> -->
+                            </colgroup>
+                            <tbody>
+
+                                <tr>
+                                    <th colspan="2" class="camera-header-wrap">
+                                        <p class="tit">차량사진(앞)</p>
+                                        <div class="camera-wrap">
+                                            <div class="camera-area camera">
+                                                <input type="file" accept="image/*" capture="camera" class="img"><!--[D]: 사진촬영 -->
+                                            </div>
+                                            <div class="camera-area document">
+                                                &nbsp;<input type="file" accept="image/*" class="img"><!--[D]: 사진 불러오기 -->
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td class="image-wrap on"><!--[D]: 갤러리에서 선택한 이미지 파일명이 목록에 노출될 경우 on 클래스 사용 -->
+                                        <p class="img">IMG001.jpg</p>
+                                        <p class="txt">삭제</p>
+                                    </td>
+                                    <td class="image-wrap">
+                                        <p class="img">첨부파일 없음</p>
+                                        <p class="txt"></p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th colspan="2" class="camera-header-wrap">
+                                        <p class="tit">차량사진(뒤)</p>
+                                        <div class="camera-wrap">
+                                            <div class="camera-area camera">
+                                                <input type="file" accept="image/*" capture="camera" class="img"><!--[D]: 사진촬영 -->
+                                            </div>
+                                            <div class="camera-area document">
+                                                &nbsp;<input type="file" accept="image/*" class="img"><!--[D]: 사진 불러오기 -->
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td class="image-wrap">
+                                        <p class="img">첨부파일 없음</p>
+                                        <p class="txt"></p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th colspan="2" class="camera-header-wrap">
+                                        <p class="tit">차대번호</p>
+                                        <div class="camera-wrap">
+                                            <div class="camera-area camera">
+                                                <input type="file" accept="image/*" capture="camera" class="img"><!--[D]: 사진촬영 -->
+                                            </div>
+                                            <div class="camera-area document">
+                                                &nbsp;<input type="file" accept="image/*" class="img"><!--[D]: 사진 불러오기 -->
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td class="image-wrap">
+                                        <p class="img">첨부파일 없음</p>
+                                        <p class="txt"></p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th colspan="2" class="camera-header-wrap">
+                                        <p class="tit">기타</p>
+                                        <div class="camera-wrap">
+                                            <div class="camera-area camera">
+                                                <input type="file" accept="image/*" capture="camera" class="img"><!--[D]: 사진촬영 -->
+                                            </div>
+                                            <div class="camera-area document">
+                                                &nbsp;<input type="file" accept="image/*" class="img"><!--[D]: 사진 불러오기 -->
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td class="image-wrap">
+                                        <p class="img">첨부파일 없음</p>
+                                        <p class="txt"></p>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                </div>
+                <!--contents-wrap//-->
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="#none" class="btn btn-primary">제출</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--wrap//-->
+    </body>
+
+</html>
+    
