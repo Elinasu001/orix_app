@@ -124,6 +124,7 @@
 </body>
 <script>
 
+<<<<<<< Updated upstream
     $(document).ready(function () {
         $('.btn.btn-primary.result').on('click', function (e) {
             e.preventDefault();
@@ -132,6 +133,14 @@
                 scrollTop: $('.txt-list-wrap').offset().top
             });
         });
+=======
+        function scrollDown() {
+            var windowHeight = $(window).height();
+            $('html, body').animate({
+                scrollTop: windowHeight
+            }, 800);
+        }
+>>>>>>> Stashed changes
     });
 </script>
 
