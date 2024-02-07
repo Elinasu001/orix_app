@@ -241,6 +241,18 @@ $(".table-type.check tbody tr").click(function () {
   
     });
 
+    $(".tab-item.type2 > li").click(function(){//개발대응으로 추가
+	
+      var tabCont = $(this).attr("data-tab");
+      
+      $(this).siblings().removeClass("on");
+      if (!$(this).hasClass('swiper'))  $(this).addClass("on");
+  
+      // $(".tab-content").addClass("dp-none");
+      // $("#" + tabCont).removeClass("dp-none");
+  
+    });
+
 });
 
 // var winH2 = $(window).height() || window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
