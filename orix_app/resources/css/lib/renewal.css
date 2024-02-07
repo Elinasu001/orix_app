@@ -1387,6 +1387,15 @@ iframe { border:none; }
 .list-tit-wrap strong { font-size:1.125rem; line-height:1.45rem; font-weight:700; color:#333333; }
 .list-tit-wrap .date { display:block; margin-top:10px; color:#555555; font-size:0.875rem; line-height:1rem; font-weight:400; }
 .notice-contents { min-height:230px; width:100%; margin-top:16px; padding-top:20px; padding-bottom:50px; border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD; font-size:0.875rem; color:#555555; }
+.notice-contents + .notice-contents { margin-top:0; border-top:none; }
+
+/* 품의결재 내용 맟 의견 */
+.notice-contents.pay .tit,
+.notice-contents.pay .text,
+.date-area.pay .date { color:#333333; font-weight:700; }
+.notice-contents.pay  .contents { color:#212121; font-weight:500; }
+.notice-contents.pay .opnion-area { display:flex; justify-content: space-between; }
+.opnion-area { margin-bottom:10px; }
 
 
 /* 품의결재 상세 */
