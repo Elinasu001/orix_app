@@ -229,7 +229,7 @@ $(".table-type.check tbody tr").click(function () {
     });
 
     /** tab **/
-    $(".tab-item > li").click(function(){
+    $(".tab-item.type2 > li").click(function(){//개발대응으로 type2추가
 	
       var tabCont = $(this).attr("data-tab");
       
