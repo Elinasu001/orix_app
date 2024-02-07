@@ -66,8 +66,8 @@ ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; }
 body, p, h1, h2, h3, h4, h5, h6, table, caption, form, fieldset, legend, span, div, th, td, address { position:relative; margin:0; padding:0;  }
 label,
 .form-tit { display: inline-block; font-size:0.875rem; line-height:1rem; color:#333333; }
-label:not(label.check-button),
-.form-tit { margin-bottom:10px; }
+label:not(label.check-button, .custom-check-label),
+.form-tit { margin-bottom:10px; }/*수현*/
 .dp-none { display:none; }
 legend, caption{width:0; height:0; text-indent:-10000px; font-size:0; line-height:0; position:absolute; left:-99999px; }
 table{/*border-collapse:collapse;*/ border-spacing:0; width:100%}
@@ -302,11 +302,12 @@ select { background: url('../../images/common/svg/ico_select.svg') no-repeat rig
 /*input-hyphen*/
 .input-hyphen { display:flex; align-items:center; justify-content: center; }
 
-/** [table] custom-check label 없는 경우 **/
+/** [table] custom-check label 없는 경우 **//*수현*/
 input[type="checkbox"].custom-check { display:none; }
-input[type="checkbox"].custom-check + label { display:inline-block;   position:relative; width:20px; height:20px; border:2px solid #E2E2E2; border-radius:5px; vertical-align: middle; }
-input[type="checkbox"]:checked.custom-check + label {  border:0; }
-input[type="checkbox"]:checked.custom-check + label:after { z-index:0; content:"✓";  position:absolute; top:0; left:0px; font-size:0.68rem; font-weight:600; width:20px; height:20px; border:2px solid #B095DC; border-radius:5px; color:#FFFFFF; background-color:#B095DC; text-align:center; /*background:url(../../../resources/images/common/ic-checkmark-on.png)no-repeat center 100%/16px auto;*/ }
+input[type="checkbox"].custom-check + label { display:inline-block; position:relative; width:20px; height:20px; border:1px solid #E2E2E2; background-color:#FFFFFF;; border-radius:4px; vertical-align: middle; }
+input[type="checkbox"].custom-check + label:after { content:"";  position:absolute; top:50%; transform:translate(-50%,-50%);  width:20px; height:20px; background: url(../../images/common/ic_check_off.png)no-repeat 50%/16px auto ; }
+input[type="checkbox"]:checked.custom-check + label { border:1px solid #003F86; background-color:#003F86; }
+input[type="checkbox"]:checked.custom-check + label:after { background: url("../../images/common/ic_check_on.png")no-repeat 50%/16px auto; }
 
 /* 주민등록번호 뒷자리 1개 노출일 경우 */
 .jumintext{ position:absolute; left:26px; top:50%; transform:translate(0, -50%); font-size:0.875rem; font-weight:300; color:#003F86;  }
@@ -1391,21 +1392,22 @@ iframe { border:none; }
 .notice-contents + .notice-contents { margin-top:0; border-top:none; }
 
 /* 품의결재 내용 맟 의견 */
+.list-tit-wrap .notice-contents.pay { border-bottom:0; }
 .notice-contents.pay .tit,
 .notice-contents.pay .text,
 .date-area.pay .date { color:#333333; font-weight:700; }
 .notice-contents.pay  .contents { color:#212121; font-weight:500; }
-.notice-contents.pay .opnion-area { display:flex; justify-content: space-between; }
-.opnion-area { margin-bottom:10px; }
+.notice-contents.pay .opinion-area { display:flex; justify-content: space-between; }
+.opinion-area { margin-bottom:10px; }
 
 
 /* 품의결재 상세 */
 .list-tit-wrap .date-area { display:flex; align-items:center; justify-content:space-between; margin-top:10px; }
 .list-tit-wrap .date-area .date { margin-top:0; }
 .list-tit-wrap .date-area .num { font-size:0.875rem; line-height:1rem; font-weight:500; color:#212121; }
-.notice-bottom-area { display:flex; align-items:center; justify-content:space-between; margin-top:20px; }
+/* .notice-bottom-area { display:flex; align-items:center; justify-content:space-between; margin-top:20px; }
 .notice-bottom-area .tit { font-size:0.875rem; line-height:1rem; font-weight:400; color:#555555; }
-.notice-bottom-area .text { font-size:0.875rem; line-height:1rem; font-weight:500; color:#212121; }
+.notice-bottom-area .text { font-size:0.875rem; line-height:1rem; font-weight:500; color:#212121; } */
 
 /* 2024-01-10 이솔 ??*/
 .txt-list-wrap .txt-detail-area .txt-list .tit-c { justify-content: center; margin-bottom:0; }
