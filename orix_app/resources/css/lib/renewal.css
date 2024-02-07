@@ -561,7 +561,8 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .layerpopup.layer-up .pop-header + .form-wrap { margin-top:0; margin-bottom:20px; }
 
 .layerpopup.layer-up .ly-cont-wrap.has-height,
-.layerpopup.layer-up .ly-scroll-con{ min-height:350px; }
+.layerpopup.layer-up .ly-scroll-con.has-height,
+.layerpopup.type-alert .ly-cont-wrap.has-height { min-height:350px; }
 
 .layerpopup.layer-up .result-area.nodata::before { width:45px; height:45px; }
 .layerpopup.layer-up .result-area.nodata .txt-wrap .tit { font-size:1rem; line-height:1.188rem; }

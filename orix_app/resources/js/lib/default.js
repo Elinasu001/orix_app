@@ -18,13 +18,13 @@ $(document).ready(function() {
   });
 
   //input focus
-  $('.form-control:not(.form-control.select, input.form-control:read-only), textarea').focus(function(){
+  $('.form-control:not(.form-control.select, input.form-control:read-only), textarea, #loanRegNum').focus(function(){// #loanRegNum개발대응으로 추가
     if (!$(this).hasClass('select')) {
       $('.fixed-btn-wrap').hide();
     }
   });
 
-  $('.form-control:not(.form-control.select, input.form-control:read-only), textarea').blur(function(){
+  $('.form-control:not(.form-control.select, input.form-control:read-only), textarea,  #loanRegNum').blur(function(){// #loanRegNum개발대응으로 추가
     if (!$(this).hasClass('select')) {
       $('.fixed-btn-wrap').show();
     }

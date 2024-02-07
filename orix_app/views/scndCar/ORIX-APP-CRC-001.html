@@ -90,11 +90,11 @@
                         <label>고객 구분</label>
                         <div class="form-row radio-bg-button">
                             <div class="col">
-                                <input type="radio" name="q2" id="q21" value="Y">
+                                <input type="radio" name="q2" id="q21" value="Y" onclick="funcDis();">
                                 <label for="q21" class="img"><span class="img individual">개인</span></label>
                             </div>
                             <div class="col">
-                                <input type="radio" name="q2" id="q22" value="N"><!--[D]: 개인 사업자 선택 시 사업자 번호 활성화-->
+                                <input type="radio" name="q2" id="q22" value="N" onclick="funcSh();"><!--[D]: 개인 사업자 선택 시 사업자 번호 활성화-->
                                 <label for="q22" class="img"><span class="img businessman">개인사업자</span></label>
                             </div>
                         </div>
@@ -102,11 +102,11 @@
                    
                     <div class="form-group">
                         <label for="">사업자 번호</label>
-                        <input id="" type="text" name="" class="form-control" placeholder="사업자 번호 입력" disabled=""><!--[D]: disalbed-->
+                        <input id="#loanRegNum" type="text" name="" class="form-control" placeholder="사업자 번호 입력" disabled><!--[D]: disalbed-->
                     </div>
                     <div class="form-group">
                         <label for="">사업자 번호</label>
-                        <input id="" type="text" name="" class="form-control" placeholder="사업자 번호 입력" ><!--[D]: 개인사업자 선택 시 사업자 번호 활성화-->
+                        <input id="" type="text" name="" class="form-control" placeholder="사업자 번호 입력" >
                     </div>
                     
                 </section>
@@ -121,6 +121,16 @@
     </div>
     <!--wrap//-->
 </body>
+
+<script>
+    function funcSh() {
+        $('#loanRegNum').prop("disabled", "");
+    }
+    function funcDis() {
+        $('#loanRegNum').prop("disabled", true);
+        $('#loanRegNum').val('');
+    }
+</script>
 <!--//통신사 선탱-->
 <div id="lySel1" class="layerpopup layer-up on" tabindex="0">
     <div class="content-wrap">
@@ -179,3 +189,4 @@
 <!--요청완료//-->
 
 </html>
+
