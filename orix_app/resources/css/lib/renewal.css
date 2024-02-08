@@ -1271,7 +1271,7 @@ iframe { border:none; }
 /* 긴급공지 */
 .urgency-wrap { position:relative; padding:10px 20px 10px 46px; background:#EEF8FF; }
 .urgency-wrap a { font-size:0.875rem; line-height:1rem; font-weight:400; color:#003F86; }
-.urgency-wrap a::before { content:""; position:absolute; width:16px; height:16px; left:20px; top:50%; transform:translateY(-50%); background: url(../../images/common/ico_urgency.png) no-repeat center 50%/16px auto; }
+.urgency-wrap a::before { content:""; position:absolute; width:16px; height:16px; left:15px; top:50%; transform:translateY(-50%); background: url(../../images/common/ico_urgency.png) no-repeat center 50%/16px auto; }
 .urgency-wrap + .check-wrap { padding-top:28px; }
 
 /* loading */
@@ -1342,7 +1342,7 @@ iframe { border:none; }
 
 
 /* 긴급공지 - main */
-.urgency-wrap.main { border-radius:12px; margin:65px 15px 20px; padding:16px 20px 16px 46px; }
+.urgency-wrap.main { border-radius:12px; margin:65px 15px 20px; padding:16px 10px 16px 40px; }
 .urgency-wrap.main a { font-weight:600; }
 .contents-wrap.main .tabs-wrap .tab-item:before  { content:none; }
 .contents-wrap.main .tabs-wrap .tab-item li a { border-bottom:2px solid #CBCBCB; }
@@ -1362,22 +1362,22 @@ iframe { border:none; }
 
 @-webkit-keyframes slide-top {
   0% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 @keyframes slide-top {
   0% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
