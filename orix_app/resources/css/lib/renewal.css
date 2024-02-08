@@ -564,6 +564,9 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .layerpopup.layer-up .ly-cont-wrap.has-height,
 .layerpopup.layer-up .ly-scroll-con.has-height,
 .layerpopup.type-alert .ly-cont-wrap.has-height { min-height:350px; }
+.layerpopup.layer-up .ly-cont-wrap.has-height2,
+.layerpopup.layer-up .ly-scroll-con.has-height2,
+.layerpopup.type-alert .ly-cont-wrap.has-height2 { min-height:450px; }/*개발 test용*/
 
 .layerpopup.layer-up .result-area.nodata::before { width:45px; height:45px; }
 .layerpopup.layer-up .result-area.nodata .txt-wrap .tit { font-size:1rem; line-height:1.188rem; }
@@ -1351,6 +1354,34 @@ iframe { border:none; }
 .main-cont-wrap .tit { margin-top:8px;  font-size:1.125rem; line-height:1.25rem; font-weight:700;color:#003F86;}
 .main-cont-wrap { position:relative; }
 .main-cont-wrap::after { position:absolute; content:""; right:10px; top:10%;}
+
+.main-cont-wrap.slide-top::after {
+	-webkit-animation: slide-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+} 
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+
 .main-cont-wrap.car::after  { width:110px; height:97px; background:url(../../images/common/main_car.png)no-repeat 50%/110px auto; }
 .main-cont-wrap.graph::after{ width:110px; height:97px; background:url(../../images/common/main_graph.png)no-repeat 50%/110px auto;}
 .main-cont-wrap.banking::after{ width:110px; height:97px; background:url(../../images/common/main_banking.png)no-repeat 50%/110px auto;}
