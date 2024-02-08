@@ -509,7 +509,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /* tab-bg - cont*/
 .tabs-wrap.tab-bg.cont .tab-item li a { padding:7px 0; font-weight:400; color:#555555;}
 
-.tab-content-area .tab-content + .tab-content { margin-top:20px; }
+/* .tab-content-area .tab-content + .tab-content { margin-top:20px; } */
 
 /** .tabs.swiper -text **/
 .tabs.swiper li { padding:8px 20px; }
