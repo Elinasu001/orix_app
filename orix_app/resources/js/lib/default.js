@@ -241,7 +241,7 @@ $(".table-type.check tbody tr").click(function () {
   
     });
 
-    $(".tab-item.type2 > li").click(function(){//개발대응으로 추가
+    $(".tab-item > li").click(function(){//개발대응으로 추가
 	
       var tabCont = $(this).attr("data-tab");
       
