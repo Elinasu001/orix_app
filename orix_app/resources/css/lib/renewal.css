@@ -793,6 +793,10 @@ iframe { border:none; }
 .table-type.result { display:none; }
 .table-type.check + .table-type.result { margin-top:30px;  }
 
+/* 신용조회관리 이력 결과 개별 테이블  - 개발 as-is로 인한 스타일 추간 반영  */
+[class^="table-type"].style3.style4 thead th,
+[class^="table-type"].style3.style4 tbody td { padding:15px 10px; text-align:left; }
+
 /* 신용조회 개별 테이블 */
 .table-type.style4 .credit td { background:#FFECD0; }
 .table-type.style4 .altKey td { background:#EEF5FF; }
