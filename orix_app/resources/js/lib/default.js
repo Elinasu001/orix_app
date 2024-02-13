@@ -95,7 +95,15 @@ $(".table-type.check tbody tr").click(function () {
 
   /** 전체동의**/
   $('.check.all').on('click',  function() {
+    var termsPopID = $(this).attr("terms-all");
     
+    if ($(this).prop("checked")) {
+      $("#" + termsPopID).closest('.layerpopup').show();
+      
+    } else {
+      $("#" + termsPopID).closest('.layerpopup').hide();
+    }
+
     if (!$(this).parents('fieldset').siblings().hasClass('etc')) {
       //약관 전체동의
       if ($('.level1 .all').prop('checked')) {
@@ -111,7 +119,9 @@ $(".table-type.check tbody tr").click(function () {
       };
     }
 
+
   });
+
 
   /** 개별 약관**/
   $('.check').on('click', function() {
@@ -123,39 +133,23 @@ $(".table-type.check tbody tr").click(function () {
    
     var terms_id = $(this).attr("terms-pop");
   
-    
-    if ($(this).prop("checked")) {
-        $("#" + terms_id).show();
+    if (totalNum == checkNum) {
+        $('.level1 .all').prop('checked', true);
     } else {
-        $("#" + terms_id).hide();
+        $('.level1 .all').prop('checked', false);
     }
 
-    $(".layerpopup .btn.btn-primary").on("click", function() {
-      var popup = $(this).closest('.layerpopup');
-      var popupID = popup.attr("id");
-    
-      
-      var termsPopID = popupID.replace("-popup", "");
-    
-      
-      $("[terms-pop='" + termsPopID + "']").prop("checked", true);
+    if (dmCheckNum >= 1) {
+        $('.level2 fieldset .all').prop('checked', true);
+    } else if (dmCheckNum == 0) {
+        $('.level2 fieldset .all').prop('checked', false);
+    }
 
-      popup.hide();
-    });
-
-    $(".btn-layer-close").on("click", function() {
-      var popup = $(this).closest('.layerpopup');
-      var popupID = popup.attr("id"); // Get the ID of the popup
-    
-      
-      var termsPopID = popupID.replace("-popup", "");
-    
-      
-      $("[terms-pop='" + termsPopID + "']").prop("checked", false);
-
-      popup.hide();
-    });
-    
+    if ($(this).prop("checked")) {
+        $("#" + terms_id).closest('.layerpopup').show();
+    } else {
+        $("#" + terms_id).closest('.layerpopup').hide();
+    }
     
     if (!$(this).parent().parent('div.level3').hasClass('etc')) {
       //약관 개별동의
@@ -174,6 +168,31 @@ $(".table-type.check tbody tr").click(function () {
       agreeChek();
     };
 
+    $(".layerpopup .btn.btn-primary").on("click", function() {
+      var popup = $(this).closest('.layerpopup');
+      var popupID = popup.attr("id");
+    
+      
+      var termsPopID = popupID.replace("-popup", "");
+    
+      
+      $("[terms-pop='" + termsPopID + "']").prop("checked", true);
+
+      popup.hide();
+    });
+
+    $(".btn-layer-close").on("click", function() {
+      var popup = $(this).closest('.layerpopup');
+      var popupID = popup.attr("id");
+      
+      var termsPopID = popupID.replace("-popup", "");
+    
+      
+      $("[terms-pop='" + termsPopID + "']").prop("checked", false);
+
+      popup.hide();
+    });
+    
   });
 
   /** accorion **/
@@ -238,7 +257,21 @@ $(".table-type.check tbody tr").click(function () {
   
       $(".tab-content").addClass("dp-none");
       $("#" + tabCont).removeClass("dp-none");
-  
+      
+      $(".tab-item.scroll > li").click(function() {
+        var tabContPosition = $(".tab-item.scroll > li:first-child").offset().left;
+        var listItemPosition = $(this).offset().left;
+        var distance = listItemPosition - tabContPosition;
+        
+        $(".tab-item.scroll").animate({
+            scrollLeft: distance
+        }, 100);
+      });
+
+    //   $(".tab-item.scroll > li").click(function() {
+    //     $(".tab-item.type2").scrollLeft(0);
+    // });
+
     });
 
     $(".tab-item > li").click(function(){//개발대응으로 추가

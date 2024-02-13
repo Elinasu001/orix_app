@@ -547,9 +547,23 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 .news-slider-wrap > .swiper-pagination { width:initial !important; height:4px; top:0 !important; right:12px; text-align:right; }
 .news-slider-wrap .swiper-pagination .swiper-pagination-bullet { width:4px; height:4px; background:#74375940; opacity:1; }
-.news-slider-wrap .swiper-pagination .swiper-pagination-bullet-active { width:12px; transition:width .5s; border-radius:5px; background:#743759; }
+.news-slider-wrap .swiper-pagination .swiper-pagination-bullet-active { width:12px; transition:.5s; border-radius:5px; background:#743759; }
+
+/* 개발 대응 추가 tab-item type2 -  tab-round 별개 관리로 기본 tab에 는 type2 추가필요 */
 
 
+/* 신용조회관리 */
+.tab-item.type3 { display:flex; width:100%; white-space:nowrap; justify-content:space-between; margin-bottom:30px; }
+.tab-item.type3 li { width:calc(100% /3); }
+.tab-item.type3 li a { padding:20px 0px; font-size:0.9rem; line-height:1.188rem; }
+.tab-item.type3:before { right:-20px; left:-20px; }
+.conRegist .tabs-wrap .form-wrap { margin-top:0; }
+
+/* 약관 */
+.tab-item.scroll {  display: flex; width:100%; overflow-y:hidden; overflow-x:auto; white-space:nowrap; }
+.tabs-wrap .tab-item.scroll::before{ content:none; }
+.tabs-wrap .tab-item.scroll { border-bottom:1px solid #EEEEEE; }
+.tabs-wrap .tab-item.scroll li a { padding:8px 10px; }
 
 /** popup **/
 
@@ -1493,12 +1507,3 @@ iframe { border:none; }
 /** 신용조회동의 등록 페이지 **/
 .flag-list { display:flex; gap:5px; }
 
-/* 신용조회관리 */
-.conRegist .tabs-wrap .tabs .tab-item { display:flex; width:100%; white-space:nowrap; justify-content:space-between; margin-bottom:30px; }
-/* .conRegist .tabs-wrap .tabs .tab-item li { margin-right:5px; }
-.conRegist .tabs-wrap .tabs .tab-item li:last-child { margin-right:0; } */
-.conRegist .tabs-wrap .tab-item li { width:calc(100% /3); }
-.conRegist .tabs-wrap .tab-item li a { padding:20px 0px; font-size:0.9rem; line-height:1.188rem; }
-/* .conRegist  .tabs-wrap .tab-item:after { content:""; position:absolute; border-top:1px solid #EEEEEE; right:-20px; left:-20px; } */
-.conRegist  .tabs-wrap .tab-item:before { right:-20px; left:-20px; }
-.conRegist .tabs-wrap .form-wrap { margin-top:0; }
