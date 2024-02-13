@@ -794,6 +794,10 @@ iframe { border:none; }
 .table-type.result { display:none; }
 .table-type.check + .table-type.result { margin-top:30px;  }
 
+/* 신용조회관리 이력 결과 개별 테이블  - 개발 as-is로 인한 스타일 추간 반영  */
+[class^="table-type"].style3.style4 thead th,
+[class^="table-type"].style3.style4 tbody td { padding:15px 10px; text-align:left; }
+
 /* 신용조회 개별 테이블 */
 .table-type.style4 .credit td { background:#FFECD0; }
 .table-type.style4 .altKey td { background:#EEF5FF; }
@@ -1272,7 +1276,7 @@ iframe { border:none; }
 /* 긴급공지 */
 .urgency-wrap { position:relative; padding:10px 20px 10px 46px; background:#EEF8FF; }
 .urgency-wrap a { font-size:0.875rem; line-height:1rem; font-weight:400; color:#003F86; }
-.urgency-wrap a::before { content:""; position:absolute; width:16px; height:16px; left:20px; top:50%; transform:translateY(-50%); background: url(../../images/common/ico_urgency.png) no-repeat center 50%/16px auto; }
+.urgency-wrap a::before { content:""; position:absolute; width:16px; height:16px; left:15px; top:50%; transform:translateY(-50%); background: url(../../images/common/ico_urgency.png) no-repeat center 50%/16px auto; }
 .urgency-wrap + .check-wrap { padding-top:28px; }
 
 /* loading */
@@ -1343,7 +1347,7 @@ iframe { border:none; }
 
 
 /* 긴급공지 - main */
-.urgency-wrap.main { border-radius:12px; margin:65px 15px 20px; padding:16px 20px 16px 46px; }
+.urgency-wrap.main { border-radius:12px; margin:65px 15px 20px; padding:16px 10px 16px 40px; }
 .urgency-wrap.main a { font-weight:600; }
 .contents-wrap.main .tabs-wrap .tab-item:before  { content:none; }
 .contents-wrap.main .tabs-wrap .tab-item li a { border-bottom:2px solid #CBCBCB; }
