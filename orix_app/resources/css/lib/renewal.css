@@ -59,6 +59,7 @@ button {font-family:'Pretendard'; }
 *::before,
 *::after { box-sizing: border-box; outline:none; }
 
+html { height:100%; }/*개발대응*/
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display: block; }
 [tabindex="-1"]:focus { outline: 0 !important; }
 ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; }
@@ -1354,30 +1355,30 @@ iframe { border:none; }
 .main-cont-wrap .tit { margin-top:8px;  font-size:1.125rem; line-height:1.25rem; font-weight:700;color:#003F86;}
 .main-cont-wrap { position:relative; }
 .main-cont-wrap::after { position:absolute; content:""; right:10px; top:10%;}
-
-.main-cont-wrap.slide-top::after {
-	-webkit-animation: slide-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+/* 슬라이드 필요할 경우 사용 */
+.main-cont-wrap.slide-right::after {
+	-webkit-animation: slide-right 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-right 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 } 
 
-@-webkit-keyframes slide-top {
+@-webkit-keyframes slide-right {
   0% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
-@keyframes slide-top {
+@keyframes slide-right {
   0% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
