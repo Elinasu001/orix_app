@@ -176,13 +176,15 @@ input[type="file"] { position:absolute; top:0; right:0; opacity:0; }
 .camera-wrap { display:flex; align-items:center; justify-content:flex-end; }
 .camera-area { position:relative; width:20px; height:20px; font-size:0; }
 .camera-area.document { margin-left:20px; }
-.camera-area.camera input[type="file"] { left:-20%; }
+.camera-area.camera input[type="button"] { left:-20%; }
 .camera-area.document input[type="file"] { right:-20%; }
-.camera-area input[type="file"] { position:absolute; transform:translateY(-50%); top:50%;  width:30px; height:30px; }
+.camera-area input[type="file"],
+.camera-area input[type="button"] { position:absolute; transform:translateY(-50%); top:50%;  width:30px; height:30px; }
 .camera-area:before { width:20px; height:20px;  }
 .camera-area.camera::before { content:""; position:absolute; left:0; transform:translateY(-50%); top:50%; width:20px; height:17px;  background:url(../../images/common/ic_br_camera.png) no-repeat 50%/20px auto; }
 .camera-area.document::before { content:""; position:absolute; right:0; transform:translateY(-50%); top:50%; width:20px; height:17px; background:url(../../images/common/ic_br_document.png)no-repeat 50%/20px auto; }
-
+.camera-area input[type="button"],
+.camera-area input[type="file"] { padding:0; border-style:none; background: none;}
 /* button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -624,7 +626,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 .layerpopup.type-alert .content-wrap { width:calc(100% - 25px); z-index:999; position:absolute; left:50%; bottom:15px; border-radius:10px; background:#fff; transform:translate(-50%,0); } */
 .layerpopup.type-alert .content-wrap { border-radius:20px; margin:15px; }
-.type-alert { display:none; overflow: hidden; width:100%; position: fixed; right:0 !important; top:auto !important; bottom:15px !important; z-index:100; padding-bottom:0px; border-radius:20px; box-sizing:border-box; }
+.type-alert { display:none; overflow: hidden; width:100%; position: fixed; right:0 !important; top:auto !important; bottom:15px !important; z-index:999; padding-bottom:0px; border-radius:20px; box-sizing:border-box; }
 /* .layerpopup.type-alert .content-wrap { border-radius:20px;} */
 
 
@@ -938,7 +940,7 @@ iframe { border:none; }
 .list-area-wrap .tit-area + .list-icon,
 .list-area-wrap .tit-area + .list-icon2 { margin-top:28px; }
 .list-icon li::before{ content:''; position:absolute; top:12px; left:15px; width:36px;; height:36px; border-radius:12px; }
-.list-icon li a { padding-left:63px; font-size:0.8rem; font-weight:500; }
+.list-icon li a { padding-left:63px; font-size:0.875rem; font-weight:500; }
 
 .list-icon .audit::before { background:url('../../images/common/list_audit.png') no-repeat #DFF2FF 50%/22px auto; }
 .list-icon .documents::before { background:url('../../images/common/list_documents.png')  no-repeat #DFF2FF 50%/21px auto; }
@@ -1287,11 +1289,7 @@ iframe { border:none; }
 .check-result-wrap.on { display:block; }
 .form-group.check-buttons + .check-result-wrap { margin-top:24px; }
 
-/* 긴급공지 */
-.urgency-wrap { position:relative; padding:10px 20px 10px 46px; background:#EEF8FF; }
-.urgency-wrap a { font-size:0.875rem; line-height:1rem; font-weight:400; color:#003F86; }
-.urgency-wrap a::before { content:""; position:absolute; width:16px; height:16px; left:15px; top:50%; transform:translateY(-50%); background: url(../../images/common/ico_urgency.png) no-repeat center 50%/16px auto; }
-.urgency-wrap + .check-wrap { padding-top:28px; }
+
 
 /* loading */
 .loading-wrap {position:fixed; display:flex; justify-content:center; right:0; top:0; bottom:0; z-index:100001; width:100%; height:100vh; min-height:100%; background:rgba(0,0,0,0.2); }
@@ -1359,10 +1357,37 @@ iframe { border:none; }
 .contents-wrap.main .tab-content,
 .contents-wrap.main .tab-content-area { height:100% }
 
+/* 긴급공지 - contents */
+.urgency-wrap.type-spread { background:#EEF8FF; }
+
+.urgency-wrap::before { content:""; position:absolute; width:16px; height:16px; left:15px; top:50%; transform:translateY(-50%); background: url(../../images/common/ico_urgency.png) no-repeat center 50%/16px auto; }
+.urgency-wrap.type-spread { position:relative; padding:10px 20px 10px 46px; overflow:hidden;}
+.urgency-wrap .urgency-area { overflow:hidden; }
+.urgency-wrap + .check-wrap { padding-top:28px; }
+
+.urgency-wrap.type-spread .urgency-area a { font-weight:400; font-size:0.875rem; line-height:1rem; color:#003661; text-overflow:ellipsis; white-space:nowrap; display:inline-block; animation:text-scroll 4s linear infinite; }
+.urgency-wrap.main .urgency-area a { font-weight:600; font-size:0.875rem; line-height:1rem; ; color:#00345F; text-overflow:ellipsis; white-space:nowrap; display:inline-block; animation:text-scroll 18s linear infinite; }
+@keyframes text-scroll{
+  from{
+    transform:translateX(20%);
+    -moz-transform:translateX(20%);
+    -webkit-transform:translateX(20%);
+    -o-transform:translateX(20%);
+    -ms-transform:translateX(20%);
+  }
+  to{
+    transform:translateX(-100%);
+    -moz-transform:translateX(-100%);
+    -webkit-transform:translateX(-100%);
+    -o-transform:translateX(-100%);
+    -ms-transform:translateX(-100%);
+  }
+}
 
 /* 긴급공지 - main */
+.urgency-wrap.main{ background:#EFF3F6; }
 .urgency-wrap.main { border-radius:12px; margin:65px 15px 20px; padding:16px 10px 16px 40px; }
-.urgency-wrap.main a { font-weight:600; }
+
 .contents-wrap.main .tabs-wrap .tab-item:before  { content:none; }
 .contents-wrap.main .tabs-wrap .tab-item li a { border-bottom:2px solid #CBCBCB; }
 .contents-wrap.main .tabs-wrap .tab-item li.on::after { border-radius:0; }
@@ -1373,11 +1398,12 @@ iframe { border:none; }
 .main-cont-wrap .tit { margin-top:8px;  font-size:1.125rem; line-height:1.25rem; font-weight:700;color:#003F86;}
 .main-cont-wrap { position:relative; }
 .main-cont-wrap::after { position:absolute; content:""; right:10px; top:10%;}
+
 /* 슬라이드 필요할 경우 사용 */
 .main-cont-wrap.slide-right::after {
 	-webkit-animation: slide-right 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-right 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-} 
+	  animation: slide-right 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
 @-webkit-keyframes slide-right {
   0% {
