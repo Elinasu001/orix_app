@@ -1065,6 +1065,9 @@ iframe { border:none; }
 .top-menu .top-icon li.settlement > a::before { background: url('../../images/common/list_loanProgress.png')no-repeat #DFF2FF 50%/26px auto; }
 .top-menu .top-icon li.car > a::before { background: url('../../images/common/list_car.png')no-repeat #DFF2FF 50%/26px auto; }
 .top-menu .top-icon li.document-sub > a::before { background: url('../../images/common/list_document-sub.png')no-repeat #DFF2FF 50%/21px auto; }
+.top-menu .top-icon li.banking > a::before { background: url('../../images/common/list_banking.png')no-repeat #DFF2FF 50%/26px auto; }
+.top-menu .top-icon li.goods > a::before { background: url('../../images/common/list_goods.png')no-repeat #DFF2FF 50%/20px auto; }
+.top-menu .top-icon li.visit-sale > a::before { background: url('../../images/common/list_visit_sale.png')no-repeat #DFF2FF 50%/21px auto; }
 /* .top-menu .top-icon li.alarm > a::after { content:''; position:absolute; border:3px solid #FF0000; transform:translate(-50%,-50%); top:25px; right:25%; top:25px; right:25px; border-radius:50%; } */
 .alarm-flag { position: relative; }
 .alarm-flag:before { content:''; position:absolute; top:-44px; right:-26px; width:6px; height:6px; border-radius:50%; box-sizing:content-box; background:#FF0000; }
