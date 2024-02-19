@@ -1069,7 +1069,7 @@ iframe { border:none; }
 .top-menu .top-icon li.car > a::before { background: url('../../images/common/list_car.png')no-repeat #DFF2FF 50%/26px auto; }
 .top-menu .top-icon li.document-sub > a::before { background: url('../../images/common/list_document-sub.png')no-repeat #DFF2FF 50%/21px auto; }
 /* 2024-02-16 */
-.top-menu .top-icon li.banking > a::before { background: url('../../images/common/list_banking2.png')no-repeat #DFF2FF  50%/26px auto; }
+.top-menu .top-icon li.banking > a::before { background: url('../../images/common/list_banking2.png')no-repeat #DFF2FF  50%/28px auto; }
 .top-menu .top-icon li.goods > a::before { background: url('../../images/common/list_goods.png')no-repeat #DFF2FF 50%/20px auto; }
 .top-menu .top-icon li.visit-sale > a::before { background: url('../../images/common/list_visit_sale.png')no-repeat #DFF2FF 50%/27px auto; }
 /* .top-menu .top-icon li.alarm > a::after { content:''; position:absolute; border:3px solid #FF0000; transform:translate(-50%,-50%); top:25px; right:25%; top:25px; right:25px; border-radius:50%; } */
