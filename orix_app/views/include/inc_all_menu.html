@@ -409,7 +409,7 @@
 </div>
 <!-- e:menuWrap -->
 
-<div id="menuPopup" class="layerpopup layer-up on" tabindex="0">
+<div id="menuPopup" class="layerpopup layer-up" tabindex="0">
     <div class="content-wrap">
         <div class="pop-header">
             <div class="pop-title pop-header-img"><img src="../../resources/images/header/header_logo.png" alt="오릭스캐피탈 로고"></div>
@@ -427,25 +427,60 @@
 <script>
 		
 /** 전체 메뉴 **/
+// function publeInit(){
+// 	$('.btn-menu').off('click');
+// 	$('.btn-menu').click(function(){
+// 		$('#menuWrap').addClass('menu-open');
+// 		$('body').addClass('no-scroll');
+// 	});
+
+// 	$('.btn-menu-close').off('click');
+// 	$('.btn-menu-close').click(function(){
+// 		$('#menuWrap').removeClass('menu-open');
+// 		$('body').removeClass('no-scroll');
+// 	});
+
+// 	makeBackEvent(function(){
+// 		runScript(function(){
+// 			history.fo(-1);
+// 		});
+// 	});
+// }
+
+// $('.menuArea > li > a').off('click');
+// $('menuArea > li > a').click(function(){
+// 	var $this = $(this).parent('li');
+// 	target = $(this).attr('data-focus');
+// 	$('.menuArea > li').remveClass('on');
+// 	$('.listArea > li').removeClass('on');
+
+// 	$this.addClass('on');
+// 	$('.listArea > li.'+target).addClass('on');
+
+// 	$('.scroll-wrap').scrollTop(0);
+// });
 
 
 
 // menu open, close
 $(document).ready(function() {
-	$('.btn-menu').on('click', function() {
+	$('.btn-menu').on('click', function(ｅ) {
+		ｅ.stopPropagation();
 		$('#menuWrap').addClass('menu-open');
 		// $('#menuWrap').addClass('on')
 		$('body').addClass('no-scroll');
 		
 	});
 
-	$('.btn-menu-close').on('click', function() {
+	$('.btn-menu-close').on('click', function(e){
+		e.stopPropagation();
 		$('#menuWrap').removeClass('menu-open');
 		// $('#menuWrap').removeClass('on')
 		$('body').removeClass('no-scroll');
 	});
 
-	$(".menuArea > li > a").on("click", function () {
+	$(".menuArea > li > a").on("click", function (e) {
+		e.stopPropagation();
 		var $this = $(this).parent("li");
 		target = $(this).attr("data-focus");
 

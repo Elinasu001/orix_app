@@ -329,6 +329,7 @@ input[type="checkbox"]:checked.custom-check + label:after { background: url("../
 /* .btn:hover { color:#212529; text-decoration:none; } */
 
 .btn.btn-primary.disabled,
+.btn.btn-primary2.disabled,/*팝업개발대응*/
 .btn.disabled,
 .btn:disabled { color:#8A8A8A; background:#EFEFEF; }
 .btn-cont-wrap .btn.btn-primary.disabled,
@@ -353,7 +354,8 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .btn-wrap.center { display:flex; justify-content:center; }
 
 /* btn-primary */
-.btn.btn-primary { background:#003F86; color:#FFFFFF; }
+.btn.btn-primary,
+.btn.btn-primary2 { background:#003F86; color:#FFFFFF; }
 .btn.btn-close,
 .btn.view { background:#EDF3FA; color:#002748; }
 .btn-wrap .btn.btn-close,

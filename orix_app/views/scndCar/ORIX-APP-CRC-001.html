@@ -90,25 +90,25 @@
                         <label>고객 구분</label>
                         <div class="form-row radio-bg-button">
                             <div class="col">
-                                <input type="radio" name="q2" id="q21" value="Y" onclick="funcDis();">
-                                <label for="q21" class="img"><span class="img individual">개인</span></label>
+                                <input type="radio" name="q2" id="individual" value="Y">
+                                <label for="individual" class="img"><span class="img individual">개인</span></label>
                             </div>
                             <div class="col">
-                                <input type="radio" name="q2" id="q22" value="N" onclick="funcSh();"><!--[D]: 개인 사업자 선택 시 사업자 번호 활성화-->
-                                <label for="q22" class="img"><span class="img businessman">개인사업자</span></label>
+                                <input type="radio" name="q2" id="businessman" value="N"><!--[D]: 개인 사업자 선택 시 사업자 번호 활성화-->
+                                <label for="businessman" class="img"><span class="img businessman">개인사업자</span></label>
                             </div>
                         </div>
                     </div>
                    
                     <div class="form-group">
                         <label for="">사업자 번호</label>
-                        <input id="#loanRegNum" type="text" name="" class="form-control" placeholder="사업자 번호 입력" disabled><!--[D]: disalbed-->
+                        <input id="loanRegNum" type="text" name="" class="form-control" placeholder="사업자 번호 입력" disabled><!--[D]: disalbed-->
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="">사업자 번호</label>
                         <input id="" type="text" name="" class="form-control" placeholder="사업자 번호 입력" >
                     </div>
-                    
+                     -->
                 </section>
             </div>
             <!--contents-wrap//-->
@@ -120,9 +120,32 @@
         </form>
     </div>
     <!--wrap//-->
+    
 </body>
 
 <script>
+    
+
+    // 개인 라디오 버튼을 클릭할 때 실행되는 함수
+    $('#individual').click(function() {
+        // 개인 라디오 버튼이 체크되어 있으면
+        if ($(this).is(':checked')) {
+            // #loanRegNum 요소의 disabled 속성을 제거하여 활성화
+            $('#loanRegNum').prop('disabled', true);
+        }
+    });
+    // 개인사업자 라디오 버튼을 클릭할 때 실행되는 함수
+    $('#businessman').click(function() {
+        // 개인사업자 라디오 버튼이 체크되어 있으면
+        if ($(this).is(':checked')) {
+            // #loanRegNum 요소의 disabled 속성을 추가하여 비활성화
+            $('#loanRegNum').prop('disabled', false);
+        }
+    });
+
+
+</script>
+<!-- <script>
     function funcSh() {
         $('#loanRegNum').prop("disabled", "");
     }
@@ -130,7 +153,7 @@
         $('#loanRegNum').prop("disabled", true);
         $('#loanRegNum').val('');
     }
-</script>
+</script> -->
 <!--//통신사 선탱-->
 <div id="lySel1" class="layerpopup layer-up on" tabindex="0">
     <div class="content-wrap">
@@ -187,6 +210,8 @@
     </div>
 </div>
 <!--요청완료//-->
+
+
 
 </html>
 
