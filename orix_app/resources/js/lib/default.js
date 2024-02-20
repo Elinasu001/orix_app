@@ -161,49 +161,49 @@ $('.check').on('click', function() {
     });
   
     /** 이미지 불러오기 **/
-    $('.thumb-wrap ul').on('change', '.plus', function(e) {
-      const file = e.target.files[0]; // 불러온 파일 가져오기
-      const $parentListItem = $(this).closest('li');
+    // $('.thumb-wrap ul').on('change', '.plus', function(e) {
+    //   const file = e.target.files[0]; // 불러온 파일 가져오기
+    //   const $parentListItem = $(this).closest('li');
   
-      if (file) {
-          const reader = new FileReader();
+    //   if (file) {
+    //       const reader = new FileReader();
   
-          reader.onload = function(e) {
-              const imageUrl = e.target.result;
+    //       reader.onload = function(e) {
+    //           const imageUrl = e.target.result;
   
-              const newListItem = $('<li><img src="' + imageUrl + '" alt="Uploaded Image"><span>추가</span></li>');
+    //           const newListItem = $('<li><img src="' + imageUrl + '" alt="Uploaded Image"><span>추가</span></li>');
   
-              $parentListItem.replaceWith(newListItem);
+    //           $parentListItem.replaceWith(newListItem);
   
-              newListItem.addClass('delete');
+    //           newListItem.addClass('delete');
   
-              const newPlusListItem = $('<li class="plus"><input type="file" id="file" class="ip-file"><span>추가</span></li>');
+    //           const newPlusListItem = $('<li class="plus"><input type="file" id="file" class="ip-file"><span>추가</span></li>');
               
-              $('.thumb-wrap ul').append(newPlusListItem);
-          };
+    //           $('.thumb-wrap ul').append(newPlusListItem);
+    //       };
   
-          reader.readAsDataURL(file);
-      }
-    });
+    //       reader.readAsDataURL(file);
+    //   }
+    // });
     /** 이미지 불러오기 삭제 **/
-    $('.thumb-wrap ul').on('click', '.delete', function(e) {
-      e.stopPropagation();//중단
+    // $('.thumb-wrap ul').on('click', '.delete', function(e) {
+    //   e.stopPropagation();//중단
   
-      $(this).remove();
-    });
+    //   $(this).remove();
+    // });
       
-      /** textarea css **/
-      $('#myTextarea').on('focus', function() {
-        $(this).css({
-            'border-color': '#003763',
-            'color': '#000000',
-        });
-      }).on('blur', function() {
-          $(this).css({
-              'border-color': '#DDDDDD',
-              'color': '#999999',
-          });
-      });
+    //   /** textarea css **/
+    //   $('#myTextarea').on('focus', function() {
+    //     $(this).css({
+    //         'border-color': '#003763',
+    //         'color': '#000000',
+    //     });
+    //   }).on('blur', function() {
+    //       $(this).css({
+    //           'border-color': '#DDDDDD',
+    //           'color': '#999999',
+    //       });
+    //   });
   
       /** tab & tab scroll**/
       $(".tab-item.type2 > li").click(function(){//개발대응으로 type2추가
@@ -341,9 +341,9 @@ $('.check').on('click', function() {
   
     if (_target.has('.ly-select-list').length > 0) {
     _target.find('.ly-select-list > li > button').on('click', function () {
-      var selectedText = $(this).text();
+      // var selectedText = $(this).text();
       
-      $('[onclick="openPopup(\'' + id + '\')"]').val(selectedText);
+      // $('[onclick="openPopup(\'' + id + '\')"]').val(selectedText);
       
         closePopupUp(id);
         $('body').removeAttr('style');

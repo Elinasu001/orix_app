@@ -424,6 +424,8 @@
     </div>
 </div>
 
+
+
 <script>
 		
 /** 전체 메뉴 **/
@@ -469,7 +471,7 @@ $(document).ready(function() {
 		$('#menuWrap').addClass('menu-open');
 		// $('#menuWrap').addClass('on')
 		$('body').addClass('no-scroll');
-		
+		$('.alarm-flag').addClass('shake-horizontal')
 	});
 
 	$('.btn-menu-close').on('click', function(e){
@@ -477,6 +479,7 @@ $(document).ready(function() {
 		$('#menuWrap').removeClass('menu-open');
 		// $('#menuWrap').removeClass('on')
 		$('body').removeClass('no-scroll');
+		$('.alarm-flag').removeClass('shake-horizontal')
 	});
 
 	$(".menuArea > li > a").on("click", function (e) {

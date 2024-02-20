@@ -76,11 +76,15 @@
                                     <label for="" class="essential">검색 구분</label>
                                     <input id="" type="text" name="" class="form-control select" placeholder="" onclick="openPopup('lySel')" value="차량번호로 검색" readonly><!--[D]:default값 매매상사명-->
                                 </div>
-                                <div class="form-group">
+                                <div  class="form-group chkCarNum">
                                     <label for="" class="essential">차량번호</label>
                                     <input id="" type="text" class="form-control" placeholder="차량번호 입력">
                                 </div>
-                                <div class="form-group"><!--[D]:차량번호없이 직접검색 눌렀을 때 노출-->
+                                <div  class="form-group chkCarModel">
+                                    <label for="" class="essential">차량모델명</label>
+                                    <input id="" type="text" class="form-control" placeholder="차량모델명 입력">
+                                </div>
+                                <div class="form-group chkYear"><!--[D]:차량번호없이 직접검색 눌렀을 때 노출-->
                                     <label for="" class="essential">연식</label>
                                     <input id="" type="text" class="form-control" placeholder="차량번호 입력">
                                 </div>
@@ -138,4 +142,39 @@
         </form>
     </div>
 </body>
+
+<div id="lySel" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">검색구분</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li class="carNumber"><button>차량번호로 검색</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                <li  class="carNoNumber"><button>차량번호없이 직접검색</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
 </html>
+<style>
+    .chkCarModel,
+    .chkYear { display:none; }
+</style>
+<script>
+
+    $('.carNumber').click(function(){
+        $('.chkCarNum').show();
+        $('.chkCarModel , .chkYear').hide();
+        
+    });
+
+    $('.carNoNumber').click(function(){
+        $('.chkCarNum').hide();
+        $('.chkCarModel , .chkYear').show();
+       
+    });
+
+</script>
+
