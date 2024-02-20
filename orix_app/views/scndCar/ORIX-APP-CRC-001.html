@@ -126,23 +126,21 @@
 <script>
     
 
-    // 개인 라디오 버튼을 클릭할 때 실행되는 함수
     $('#individual').click(function() {
-        // 개인 라디오 버튼이 체크되어 있으면
+        
         if ($(this).is(':checked')) {
-            // #loanRegNum 요소의 disabled 속성을 제거하여 활성화
+            
             $('#loanRegNum').prop('disabled', true);
         }
     });
-    // 개인사업자 라디오 버튼을 클릭할 때 실행되는 함수
+
     $('#businessman').click(function() {
-        // 개인사업자 라디오 버튼이 체크되어 있으면
+      
         if ($(this).is(':checked')) {
-            // #loanRegNum 요소의 disabled 속성을 추가하여 비활성화
+           
             $('#loanRegNum').prop('disabled', false);
         }
     });
-
 
 </script>
 <!-- <script>
