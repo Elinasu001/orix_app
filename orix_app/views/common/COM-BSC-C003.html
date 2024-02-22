@@ -79,7 +79,7 @@
 
                     <div class="form-group">
                         <label for="">이메일</label>
-                        <input id="emailInput" type="text" name="" class="form-control"  placeholder="이메일을 입력해주세요">
+                        <input id="emailInput" type="text" name="" class="form-control"  placeholder="이메일을 입력해 주세요">
                         <div id="emailList"></div>
                         <div class="info-txt-wrap">
                             <p class="info">영문, 숫자, 특수문자를 조합한 8~12자리를 입력해 주세요</p>
@@ -160,11 +160,11 @@
                     
                     <div class="form-group">
                         <label for="">아이디</label>
-                        <input id="" type="text" class="form-control" placeholder="아이디를 입력해주세요">
+                        <input id="" type="text" class="form-control" placeholder="아이디를 입력해 주세요">
                     </div>
                     <div class="form-group">
                         <label for="">비밀번호</label>
-                        <input id="" type="password" class="form-control" placeholder="비밀번호를 입력해주세요">
+                        <input id="" type="password" class="form-control" placeholder="비밀번호를 입력해 주세요">
                     </div>
                     <div class="form-group">
                         <label for="">비밀번호 확인</label>
@@ -174,7 +174,7 @@
                     <div class="form-group">
                         <label for="">금액</label>
                         <div class="amount">
-                            <input id="" type="amount" class="form-control amount-num"  placeholder="금액을 입력해주세요" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                            <input id="" type="amount" class="form-control amount-num"  placeholder="금액을 입력해 주세요" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
                             <span class="amount-txt">원</span>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
                     <div class="form-group">
                         <label for="amount">개월 - 팝업일 경우</label>
                         <div class="amount">
-                            <input type="number" class="form-control amount-num" id="amount" placeholder="기간을 입력해주세요"  onclick="openPopup('lySel5')">
+                            <input type="number" class="form-control amount-num" id="amount" placeholder="기간을 입력해 주세요"  onclick="openPopup('lySel5')">
                             <span class="amount-txt">개월</span>
                         </div>
                     </div>
@@ -190,7 +190,7 @@
                     <div class="form-group">
                         <label for="amount">개월 - 입력일 경우 -> [type="number"]로 갈 경우 스크립트와 oninput 추가 필요, [type="tel"]일 경우 불필요</label>
                         <div class="amount">
-                            <input type="number" class="form-control amount-num" id="amount" placeholder="기간을 입력해주세요"  maxlength="4" oninput="maxLengthCheck(this)">
+                            <input type="number" class="form-control amount-num" id="amount" placeholder="기간을 입력해 주세요"  maxlength="4" oninput="maxLengthCheck(this)">
                             <span class="amount-txt">개월</span>
                         </div>
                     </div>
@@ -198,7 +198,7 @@
                     <div class="form-group">
                         <label for="amount">%</label>
                         <div class="amount">
-                            <input type="number" class="form-control amount-num" id="amount" placeholder="예상 금리를 입력해주세요">
+                            <input type="number" class="form-control amount-num" id="amount" placeholder="예상 금리를 입력해 주세요">
                             <span class="amount-txt">%</span>
                         </div>
                     </div>
@@ -233,17 +233,18 @@
                     
 
                     <div class="form-group">
-                        <label for="" class="essential">주소 검색</label><!--essential 필수일 경우-->
+                        <label for="" class="essential">검색</label><!--essential 필수일 경우-->
                         <div class="form-row">
                             <div class="col">
-                                <input id="" type="text" class="form-control" placeholder="도로명, 지번을 입력해주세요">
+                                <input id="" type="text" class="form-control" placeholder="이름을 입력해 주세요">
                             </div>
                             <button class="btn btn-txt search-img" type="button">검색</button>
+                            <button class="btn btn-txt research" type="button">초기화</button>
                         </div>
                     </div>
 
                 </section>
-                <section class="form-wrap">
+                <!-- <section class="form-wrap">
                     <div class="form-group address line">
                         <div class="input">
                             <span class="address-num">12347</span>
@@ -262,7 +263,7 @@
                             <button class="btn btn-research" type="button">재검색</button>
                         </div>
                     </div>
-                </section>
+                </section> -->
                 
                 <section class="form-wrap">
                     <div class="form-group radio-buttons">
@@ -305,7 +306,7 @@
 
                     <div class="form-group">
                         <label for="" class="essential">내용</label><!--essential 필수일 경우-->
-                        <textarea id="myTextarea" type="text" title="성명" class="inp" name="" placeholder="내용을 입력해주세요" maxlength="" required=""></textarea>
+                        <textarea id="myTextarea" type="text" title="성명" class="inp" name="" placeholder="내용을 입력해 주세요" maxlength="" required=""></textarea>
                     </div>
                 </section>
 
