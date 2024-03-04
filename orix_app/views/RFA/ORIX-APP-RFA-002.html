@@ -60,35 +60,33 @@
         <form>
             <!--//contents-wrap-->
             <div class="contents-wrap">
-                
-                <section class="table-type ta-c table-scroll  style5" >
-                    <table>
+                <!--//[퍼블]: 3/4 테이블 변경-->
+                <section class="table-type ta-c table-row table-scroll pay">
+                    <table class="">
                         <caption>신용조회 동의 완료 고객 선택 테이블</caption>
                         <colgroup>
-                            <col width="*%">
-                            <col width="*%">
-                            <col width="*%">
-                            <col width="*%">
+                            <col width="33.333%">
+                            <col width="33.333%">
+                            <col width="*">
                         </colgroup>
                         <thead>
-                            
+                            <tr>
+                                <th scope="row">담당:김영수</th>
+                                <th scope="row">팀장</th>
+                                <th scope="row">동의일자</th>
+                             
+                            </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th rowspan="2">결재</th>
-                                <th>김영수</th>
-                                <th>홍길동</th>
-                                <th>유재석</th>
-                            </tr>
-                            <tr>
-                                <td>기안 </td>
-                                <td>승인</td>
+                                <td>23/12/20</td>
+                                <td>23/12/20 14:35</td>
                                 <td>-</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
-
+                <!--[퍼블]: 3/4 테이블 변경//-->
                 <section class="list-tit-wrap">
                     <p><strong>000 결재 승인 요청의 건.</strong></p>
                     <div class="date-area pay">
@@ -97,24 +95,263 @@
                     </div>
                     
                 </section>
+                <!--//[퍼블]: 3/4 - 상세 테이블 추가 및 아코디언 추가-->
                 <section class="notice-contents pay">
-                    <div class="opinion-area">
-                        <span class="tit">기안 내용</span>
-                    </div>
                     <div class="contents"><!--D:게시글 본문 들어가는 부분-->
-                        가나다라마바사아자차카타파하호랑나비
+                        <div class="accordion-cont-wrap">
+                            <!--//[D]: 반복문-->
+                            <div class="accordion-item type2"><!--[D]: 이용자 현황-->
+                                <div class="accordion">
+                                    <button type="button" class="btn-accordion">· 이용자 현황</button>
+                                    <div class="accordion-cont form-wrap">
+                                        <div class="table-type table-col table-scroll">
+                                            <table>
+                                                <caption>이용자 현황</caption>
+                                                <colgroup>
+                                                    <col width="40%">
+                                                    <col width="*">
+                                                </colgroup>
+                                            
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="col">1.이용자명</th>
+                                                        <td>김상연(닥터에버스의원)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">2.주민번호</th>
+                                                        <td>810809-1******</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">3.설립일자</th>
+                                                        <td>2024-03-01</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">4.업종</th>
+                                                        <td>일반의원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">5. 신용등급<br/>
+                                                            (NICE/AS/최종)</th>
+                                                        <td>969/808(2등급) /<br/>
+                                                            889(2등급)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item type2"><!--[D]: 취급물건내역-->
+                                <div class="accordion">
+                                    <button type="button" class="btn-accordion">· 취급물건내역</button>
+                                    <div class="accordion-cont form-wrap">
+                                        <div class="table-type table-col table-scroll">
+                                            <table>
+                                                <caption>취급물건내역</caption>
+                                                <colgroup>
+                                                    <col width="40%">
+                                                    <col width="*">
+                                                </colgroup>
+                                            
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="col">1. 물건명(연식)</th>
+                                                        <td>피부 레이저기기(피코르 외) 2대</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">2. 매도인</th>
+                                                        <td>주)블루코어컴퍼니</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">3. 물건가격 /<br/>
+                                                            취득원가</th>
+                                                        <td>274,760,000원 /<br/>274,760,000원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item type2"><!--[D]: 금융조건-->
+                                <div class="accordion">
+                                    <button type="button" class="btn-accordion">· 금융조건</button>
+                                    <div class="accordion-cont form-wrap">
+                                        <div class="table-type table-col table-scroll">
+                                            <table>
+                                                <caption>금융조건</caption>
+                                                <colgroup>
+                                                    <col width="40%">
+                                                    <col width="*">
+                                                </colgroup>
+                                            
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="col">1.상품구분</th>
+                                                        <td>일반리스</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">2.상품종류</th>
+                                                        <td>금융</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">3.여신기간</th>
+                                                        <td>36 개월</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">4.보증금율 /잔가율</th>
+                                                        <td>10% / 0%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">5.TR(적용 /실질)</th>
+                                                        <td>5.5700% / 6.8235 %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">6.등록명의 /<br/>저당설정액</th>
+                                                        <td>당사 / 0원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">7.수수료율(총합)</th>
+                                                        <td>0%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">8.CM거래경위</th>
+                                                        <td>CM거래없음.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item type2"><!--[D]: 사후관리조건-->
+                                <div class="accordion">
+                                    <button type="button" class="btn-accordion">· 사후관리조건</button>
+                                    <div class="accordion-cont form-wrap">
+                                        <div class="table-type table-col table-scroll">
+                                            <table>
+                                                <caption>사후관리조건</caption>
+                                                <colgroup>
+                                                    <col width="40%">
+                                                    <col width="*">
+                                                </colgroup>
+                                            
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="col">1.중도해지수수료<br/>율(반납/인수)</th>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">2.초과운행 수수료 /<br/>감가청구</th>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">3.승계수수료 /<br/>반환지연수수료</th>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item type2"><!--[D]: 여신취급현황-->
+                                <div class="accordion">
+                                    <button type="button" class="btn-accordion">· 여신취급현황</button>
+                                    <div class="accordion-cont form-wrap">
+                                        <div class="table-type table-col table-scroll">
+                                            <table>
+                                                <caption>여신취급현황</caption>
+                                                <colgroup>
+                                                    <col width="40%">
+                                                    <col width="*">
+                                                </colgroup>
+                                            
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="col">1.본건</th>
+                                                        <td>3,189,600</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">2.주채무</th>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">3.보증채무</th>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">4.총채무액</th>
+                                                        <td>3,189,600</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item type2"><!--[D]: 채권보전-->
+                                <div class="accordion">
+                                    <button type="button" class="btn-accordion">· 채권보전</button>
+                                    <div class="accordion-cont form-wrap">
+                                        <div class="table-type table-col table-scroll">
+                                            <table>
+                                                <caption>채권보전</caption>
+                                                <colgroup>
+                                                    <col width="40%">
+                                                    <col width="*">
+                                                </colgroup>
+                                            
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="col">1. 연대보증인<br/>(이름/나이/등급)</th>
+                                                        <td>홍길동/38세/995(2등급)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">2.물적담보종류</th>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item type2"><!--[D]: 심사의견-->
+                                <div class="accordion">
+                                    <button type="button" class="btn-accordion">· 심사의견</button>
+                                    <div class="accordion-cont form-wrap">
+                                        <div class="form-group">
+                                            <textarea id="myTextarea" type="text" title="의견" class="inp pay" name="" maxlength="" required="" value="" disabled>품의 작성 시 기안자가 작성</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item type2"><!--[D]: 팀장의견-->
+                                <div class="accordion">
+                                    <button type="button" class="btn-accordion">· 팀장의견</button>
+                                    <div class="accordion-cont form-wrap">
+                                        <div class="form-group">
+                                            <textarea id="myTextarea" type="text" title="의견" class="inp pay" name="" placeholder="" maxlength="" required="" disabled>팀장 승인 시 기재한 검토의견</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item type2"><!--[D]: 본부장의견-->
+                                <div class="accordion">
+                                    <button type="button" class="btn-accordion">· 본부장의견</button>
+                                    <div class="accordion-cont form-wrap">
+                                        <div class="form-group">
+                                            <textarea id="myTextarea" type="text" title="의견" class="inp pay" name="" placeholder="" maxlength="" required="" disabled>본부장 승인 시 기재한 검토의견</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--[D]: 반복문//-->
+                        </div>
                     </div>
                 </section>
-                
-                <section class="notice-contents pay">
-                    <div class="opinion-area">
-                        <span class="tit">검토의견</span>
-                        <span class="text">홍길동</span>
-                    </div>
-                    <div class="contents"><!--D:게시글 본문 들어가는 부분-->
-                        가나다라마바사아자차카타파하호랑나비
-                    </div>
-                </section>
+                <!--[퍼블]: 3/4 - 상세 테이블 추가 및 아코디언 추가//-->
 
             </div>
             <!--contents-wrap//-->
@@ -124,6 +361,13 @@
                     <a href="#none" class="btn btn-primary">승인</a>
                 </div>
             </div>
+            <!--//[퍼블]: 3/4 - 버튼 추가-->
+            <div class="fixed-btn-wrap"><!--[D]: 기안 상세 버튼-->
+                <div class="btn-wrap">
+                    <a href="#none" class="btn btn-primary">목록으로</a>
+                </div>
+            </div>
+            <!--[퍼블]: 3/4 - 버튼 추가//-->
         </form>
     </div>
     <!--wrap//-->

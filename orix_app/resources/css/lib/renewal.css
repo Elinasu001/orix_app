@@ -85,8 +85,10 @@ button { border-radius:0; }
 .essential::after { content:"*"; color:#FF0000; padding-left:3px; }
 textarea { overflow-y:scroll; width:100%; height:200px; padding:10px; resize:none; border-radius:4px; border:1px solid #DDDDDD; background:#FFFFFF; font-size:0.875rem; line-height:1rem; color:#AAAAAA; font-weight:300; white-space:pre-line; }
 textarea::placeholder { color:#AAAAAA; }
-textarea:focus { color:#000000; font-size:0.875rem; font-weight:300; border-color:#003763; outline:none; }
-textarea:valid { color: #000000 !important; }
+textarea:focus { color:#212121; font-size:0.875rem; font-weight:300; border-color:#003763; outline:none; }
+textarea:valid { color: #212121 !important; }
+/* 품의결재 - 영업결재 */
+textarea.pay:disabled { color:#212121; }
 
 .flag { /*position:absolute; right:0;*/  padding:3px 12px; border-radius:4px; color:#000000; font-size:0.75rem; line-height:0.875rem; font-weight:400; }
 .flag.style1 { background:#DEF5E3; }
@@ -764,6 +766,12 @@ iframe { border:none; }
 [class^="table-type"] thead td,
 [class^="table-type"] tbody td { padding:15px 10px; }
 
+/* 품의결재 - 영업결재 */
+[class^="table-type"].pay thead th,
+[class^="table-type"].pay tbody th,
+[class^="table-type"].pay thead td,
+[class^="table-type"].pay tbody td { padding:10px 10px; }
+
 [class^="table-type"] thead th,
 [class^="table-type"] tbody th { font-size:0.875rem; line-height:1rem; color:#333333; font-weight:400; }
 
@@ -1198,6 +1206,9 @@ iframe { border:none; }
 .accordion-item.list .accordion .accordion-tit { padding:20px; text-align:left; font-size:1.125rem; line-height:1.25rem; font-weight:500; color:#000000;  }
 .accordion-item.list { border:1px solid #DDDDDD; }
 
+/* 품의결재 - 영업결재 */
+/* .accordion-item.type2 { border:inherit; border-radius: inherit; border-bottom:1px solid #B2B2B2; } */
+
 
 /* 이미지 불러오기 */
 .thumb-wrap ul { display:flex; flex-wrap:wrap; width:100%; margin-top:20px; }
@@ -1541,7 +1552,7 @@ iframe { border:none; }
 .notice-contents.pay  .contents { color:#212121; font-weight:500; }
 .notice-contents.pay .opinion-area { display:flex; justify-content: space-between; }
 .opinion-area { margin-bottom:10px; }
-
+.notice-contents.pay { min-height:inherit; padding-bottom:20px; border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD;}
 
 /* 품의결재 상세 */
 .list-tit-wrap .date-area { display:flex; align-items:center; justify-content:space-between; margin-top:10px; }
