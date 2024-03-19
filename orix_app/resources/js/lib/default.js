@@ -32,7 +32,7 @@ $(document).ready(function() {
     }
   });
 
-
+  //keyboard focus
   $(document).keydown(function(event){
     if (event.key === "Escape") {
       var inputField = $("input.form-control");
@@ -40,6 +40,14 @@ $(document).ready(function() {
     }
   })
 
+  // popup focus
+  $('.layerpopup.layer-up .form-control').focus(function(){
+    $('.ly-cont-wrap.ly-scroll-con').removeClass('plus-height2');
+  });
+
+  $('.layerpopup.layer-up .form-control').blur(function(){
+      $('.ly-cont-wrap.ly-scroll-con').addClass('plus-height2');
+  });
 
    /** 리스트 선택이 필요한 경우 **/
   $(document).on('click', '.txt-list-wrap.click .txt-detail-area', function(){
