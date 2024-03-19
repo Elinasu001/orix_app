@@ -77,24 +77,25 @@
                     </div>
                     <div class="form-group">
                         <label for="">휴대폰 번호</label>
-                        <div class="form-row">
+                        <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력"><!--[퍼블]:3/6 - 통신사 삭제-->
+                        <!-- <div class="form-row">
                             <div class="col-3">
                                 <input id="" type="text" class="form-control select" placeholder="통신사" onclick="openPopup('lySel1')" readonly>
                             </div>
                             <div class="col">
                                 <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력">
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="form-group">
                         <label>고객 구분</label>
                         <div class="form-row radio-bg-button">
                             <div class="col">
-                                <input type="radio" name="q2" id="individual" value="Y">
+                                <input type="radio" name="q2" id="individual" value="Y" onclick="funcDis();" checked="checked">
                                 <label for="individual" class="img"><span class="img individual">개인</span></label>
                             </div>
                             <div class="col">
-                                <input type="radio" name="q2" id="businessman" value="N"><!--[D]: 개인 사업자 선택 시 사업자 번호 활성화-->
+                                <input type="radio" name="q2" id="businessman" value="N" onclick="funcSh();"><!--[D]: 개인 사업자 선택 시 사업자 번호 활성화-->
                                 <label for="businessman" class="img"><span class="img businessman">개인사업자</span></label>
                             </div>
                         </div>
@@ -126,32 +127,33 @@
 <script>
     
 
-    $('#individual').click(function() {
+    // $('#individual').click(function() {
         
-        if ($(this).is(':checked')) {
+    //     if ($(this).is(':checked')) {
             
-            $('#loanRegNum').prop('disabled', true);
-        }
-    });
+    //         $('#loanRegNum').prop('disabled', true);
+    //     }
+    // });
 
-    $('#businessman').click(function() {
+    // $('#businessman').click(function() {
       
-        if ($(this).is(':checked')) {
+    //     if ($(this).is(':checked')) {
            
-            $('#loanRegNum').prop('disabled', false);
-        }
-    });
+    //         $('#loanRegNum').prop('disabled', false);
+    //     }
+    // });
 
 </script>
-<!-- <script>
+<script>
+    $('#loanRegNum').prop('disabled', true);
     function funcSh() {
-        $('#loanRegNum').prop("disabled", "");
+        $('#loanRegNum').prop('disabled', false);
     }
     function funcDis() {
-        $('#loanRegNum').prop("disabled", true);
-        $('#loanRegNum').val('');
+        $('#loanRegNum').prop('disabled', true);
+       
     }
-</script> -->
+</script>
 <!--//통신사 선탱-->
 <div id="lySel1" class="layerpopup layer-up on" tabindex="0">
     <div class="content-wrap">
