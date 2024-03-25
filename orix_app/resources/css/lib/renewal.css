@@ -673,7 +673,8 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .layer-up .ly-scroll-con { overflow:hidden; overflow-y:auto; max-height:250px; /*padding:0 20px 10px;*/ }
 .layer-up .ly-scroll-con.plus-height { max-height:350px; }/*높이 더 늘릴 경우*/
 /* 차량직접검색 */
-.layer-up .ly-scroll-con.plus-height2 { max-height:450px; }
+.layer-up .ly-scroll-con.plus-height2 { max-height:420px; }
+.layer-up .ly-scroll-con.plus-height3 { max-height:380px; }
 .layer-up.plus .pop-header { padding:10px 0 15px 0; }
 /* .layer-up .ly-scroll-con.min-height {   } */
 .layer-up .default-wrap {  padding:0 20px 10px; }

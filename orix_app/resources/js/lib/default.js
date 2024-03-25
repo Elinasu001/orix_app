@@ -42,12 +42,13 @@ $(document).ready(function() {
 
   // popup focus
   $('.layerpopup.layer-up .form-control').focus(function(){
-    $('.ly-cont-wrap.ly-scroll-con').removeClass('plus-height2');
+    $('.ly-cont-wrap.ly-scroll-con').removeClass('plus-height2').addClass('plus-height3');
   });
 
   $('.layerpopup.layer-up .form-control').blur(function(){
-      $('.ly-cont-wrap.ly-scroll-con').addClass('plus-height2');
+      $('.ly-cont-wrap.ly-scroll-con').addClass('plus-height2').removeClass('plus-height3');
   });
+
 
    /** 리스트 선택이 필요한 경우 **/
   $(document).on('click', '.txt-list-wrap.click .txt-detail-area', function(){
@@ -323,3 +324,12 @@ function getCenterAlignPos(containerSize, targetSize) {
 }
 
 
+// var dl = $('dl.faqList');
+// 	dl.find('dt > a').removeClass('open').attr('title', '열림');
+// 	dl.find('dd').hide();
+// 	dl.find('dt > a').on('click', function(e){
+// 		e.preventDefault();	
+// 		var isOpen = 	$(this).parent().next().is(':visible') 
+// 		isOpen ? $(this).removeClass('open').attr('title', '열림') :$(this).addClass('open').attr('title', '닫힘');
+// 		$(this).parent().next().toggle();
+// });
