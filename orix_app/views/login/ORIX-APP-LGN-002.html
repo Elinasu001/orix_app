@@ -37,7 +37,17 @@
     <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
     <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
 </head>
-
+<style>
+    .login-bg { z-index:0; padding-top:33px; height:334px; }
+    .login-bg .logo { display:block; margin:0 auto; width:71px; height:87px; }
+    .login-bg .intro-wrap { display:flex; width:100%; justify-content:center; flex-direction:column; align-items:center; margin-top:11px; }
+    .login-bg .intro-wrap p {  display:inline-block; font-size:33px; line-height:2.063rem; color:#FFFFFF; }
+    .login-bg .intro-wrap .tit { font-weight:500; color:#DEDEDE; }
+    .login-bg .intro-wrap .intro-bold { font-weight:800; color:#FFFFFF; }
+    .login-bg .intro-wrap p + p { margin-top:11px; }
+    .login-bg .intro-wrap .text { margin-top:8px; font-size:1rem; line-height:1.188rem; font-weight:500;  }
+    .login-bg .intro-wrap { font-weight:500; color: #dedede; }
+</style>
 <body>
     <div class="wrap login">
          <!-- //headerWrap -->
@@ -54,6 +64,11 @@
             <div class="contents-wrap">
                 <section class="login-bg  type-spread">
                     <img class="logo" src="../../resources/images/common/login_orix_logo.png" alt="오릭스로고">
+                    <div class="intro-wrap">
+                        <p><span class="tit">Finding</span> <span class="intro-bold">paths</span></p><!-- [퍼블]:1/25 - 태그 변경 -->
+                        <p><span class="tit">Making</span> <span class="intro-bold">impact!</span></p><!-- [퍼블]:1/25 - 태그 변경 -->
+                        <p class="text">오릭스 캐피탈 가족 여러분, 환영합니다.</p>
+                    </div>
                 </section>
                 <section class="form-wrap login">
                     <div class="form-group">
