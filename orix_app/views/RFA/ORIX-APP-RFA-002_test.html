@@ -1,0 +1,131 @@
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ORIX Capital</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords" />
+    <meta name="description" content="ORIX Capital description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../resources/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../../resources/favicon.png" />
+    
+    <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../../resources/css/ui/jquery-ui.css">
+    <link rel="stylesheet" href="../../resources/css/ui/datepicker.css">
+    
+    <script type="text/javascript" src="../../resources/js/ui/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui/jquery-1.12.4.min.js"></script>
+    <script  type="text/javascript" src="../../resources/js/ui/jquery-ui-1.12.1.js"></script>
+
+    <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
+</head>
+
+<body>
+    <!--//wrap-->
+    <div class="wrap">
+        <!-- //headerWrap -->
+        <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_header.html");
+			});
+			</script>
+        </div>
+        <!-- headerWrap// -->
+        <!-- //menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("../include/inc_all_menu.html");
+            });
+            </script>
+        </div>
+	    <!-- menuWrap// -->
+        <form>
+            <!--//contents-wrap-->
+            <div class="contents-wrap">
+                
+                <section class="table-type ta-c table-scroll  style5" >
+                    <table>
+                        <caption>신용조회 동의 완료 고객 선택 테이블</caption>
+                        <colgroup>
+                            <col width="*%">
+                            <col width="*%">
+                            <col width="*%">
+                            <col width="*%">
+                        </colgroup>
+                        <thead>
+                            
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="2">결재</th>
+                                <th>김영수</th>
+                                <th>홍길동</th>
+                                <th>유재석</th>
+                            </tr>
+                            <tr>
+                                <td>기안 </td>
+                                <td>승인</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="list-tit-wrap">
+                    <p><strong>000 결재 승인 요청의 건.</strong></p>
+                    <div class="date-area pay">
+                        <span class="date">품의일자</span>
+                        <span class="num">YYY.MM.DD</span>
+                    </div>
+                    
+                </section>
+                <section class="notice-contents pay">
+                    <div class="opinion-area">
+                        <span class="tit">기안 내용</span>
+                    </div>
+                    <div class="contents"><!--D:게시글 본문 들어가는 부분-->
+                        가나다라마바사아자차카타파하호랑나비
+                    </div>
+                </section>
+                
+                <section class="notice-contents pay">
+                    <div class="opinion-area">
+                        <span class="tit">검토의견</span>
+                        <span class="text">홍길동</span>
+                    </div>
+                    <div class="contents"><!--D:게시글 본문 들어가는 부분-->
+                        가나다라마바사아자차카타파하호랑나비
+                    </div>
+                </section>
+
+            </div>
+            <!--contents-wrap//-->
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <a href="#none" class="btn btn-close">목록으로</a>
+                    <a href="#none" class="btn btn-primary">승인</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--wrap//-->
+</body>
+</html>

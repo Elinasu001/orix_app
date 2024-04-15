@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ORIX Capital</title>
+	<meta charset="UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="keywords" content="ORIX Capital keywords" />
+	<meta name="description" content="ORIX Capital description" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<!-- 
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+	-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="No-Cache">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.png" />
+	<link rel="icon" type="image/x-icon" href="../resources/favicon.png" />
+
+	<link rel="stylesheet" href="../resources/css/lib/renewal.css">
+	<link rel="stylesheet" href="../resources/css/lib/default.css">
+	<link rel="stylesheet" href="../resources/css/ui/jquery-ui.css">
+	<link rel="stylesheet" href="../resources/css/ui/datepicker.css">
+	
+	<script type="text/javascript" src="../resources/js/ui/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="../resources/js/ui/jquery-1.12.4.min.js"></script>
+	<script  type="text/javascript" src="../resources/js/ui/jquery-ui-1.12.1.js"></script>
+
+	<script type="text/javascript" src="../resources/js/lib/default.js"></script>
+	<script type="text/javascript" src="../resources/js/lib/default6.js"></script>
+	<script type="text/javascript" src="../resources/js/lib/datepicker.js"></script>
+</head>
+<style>
+[tabindex="-1"]:focus { outline: 1 !important; }
+.tabs-wrap { margin-top:30px; }
+.tab-item2 { display:flex; gap:10px; }
+.tab-item2 > li { border:1px solid #dddddd; padding:10px; border-radius:6px; }
+.tab-item2 > li.on { border:1px solid red; }
+.tab-item2 { position:relative; }
+</style>
+<body>
+	<!-- header -->
+	<div class="wrap">
+
+		<div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("./include/inc_header.html");
+			});
+			</script>
+        </div>
+		
+		<form id="formWrap">
+			<!-- s: contentsWrap -->
+			<div class="contents-wrap">
+				<section class="tabs-wrap">
+					<div class="tabs-area">
+						<ul class="tab-item2 type5">
+							<li data-tab="tab-cont06" class="on"><a href="#none" title="선택됨">텍스트1</a></li>
+							<li data-tab="tab-cont07" class=""><a href="#none">텍스트2</a></li>
+						</ul>
+						<div class="tab-content-area">
+							<div id="tab-cont06" class="tab-content">
+								내용 1
+							</div>
+
+							<div id="tab-cont07" class="tab-content dp-none">
+								내용 2
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+            
+		</form>
+	</div>
+
+</body>
+
+<script>
+
+$(".tab-item2 > li").click(function() {
+    // 클릭된 요소의 data-tab 속성 값 가져오기
+    var tabCont = $(this).attr("data-tab");
+    
+    // 현재 요소에 "on" 클래스 추가하고 나머지 형제 요소에서 "on" 클래스 제거
+    $(this).addClass("on").siblings().removeClass("on");
+    
+    // 모든 탭 컨텐츠를 숨기고, 클릭된 탭 컨텐츠만 보이도록 함
+    $(".tab-content").addClass("dp-none");
+    $("#" + tabCont).removeClass("dp-none");
+    
+    // 모든 탭 아이템에 있는 title 속성 제거
+    $(".tab-item2 > li").removeAttr("title");
+    // 현재 클릭된 탭 아이템에만 title 속성 추가
+    $(this).attr("title", "선택됨");
+});
+
+</script>
+
+
+</html>

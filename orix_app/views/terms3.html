@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ORIX Capital</title>
+	<meta charset="UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="keywords" content="ORIX Capital keywords" />
+	<meta name="description" content="ORIX Capital description" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<!-- 
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+	-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="No-Cache">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.png" />
+	<link rel="icon" type="image/x-icon" href="../resources/favicon.png" />
+
+	<link rel="stylesheet" href="../resources/css/lib/renewal.css">
+	<link rel="stylesheet" href="../resources/css/lib/default.css">
+	<link rel="stylesheet" href="../resources/css/ui/jquery-ui.css">
+	<link rel="stylesheet" href="../resources/css/ui/datepicker.css">
+	
+	<script type="text/javascript" src="../resources/js/ui/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="../resources/js/ui/jquery-1.12.4.min.js"></script>
+	<script  type="text/javascript" src="../resources/js/ui/jquery-ui-1.12.1.js"></script>
+
+	<script type="text/javascript" src="../resources/js/lib/default.js"></script>
+	<script type="text/javascript" src="../resources/js/lib/default4.js"></script>
+	<script type="text/javascript" src="../resources/js/lib/datepicker.js"></script>
+</head>
+<style>
+.terms-wrap .input-check-all label,
+.terms-wrap .input-check label { margin-bottom:0!important; }
+.terms-wrap { margin-top:30px; }
+.terms-wrap > .terms-box { padding-bottom:15px; margin-bottom:15px; border-bottom:1px solid #CCCCCC; }
+/* .terms-wrap .terms-area .terms-box:first-child { margin-top:10px; } */
+.terms-area li { margin-bottom:10px; }
+.terms-box { display:flex; justify-content:space-between; align-items: center; }
+.input-check-all + .terms-view a { display:flex; align-items:center; padding:6px; font-size:0.75rem; line-height:0.875rem; font-weight:600; color:#8A8A8A; background:#e3edf4; border-radius:5px; }
+.input-check + .terms-view a { display:flex; align-items:center; padding:3px 6px; font-size:0.75rem; line-height:0.875rem; font-weight:400; color:#555555; background:#e3edf4; border-radius:5px; }
+
+.terms-wrap .input-check-all label,
+.terms-wrap .input-check label { position:relative; padding-left:30px; color:#333333; }
+
+.terms-wrap .input-check-all label { font-size:1rem; line-height:1.188rem; font-weight:600; }
+.terms-wrap .input-check label { font-size:0.875rem; line-height:1rem; }
+
+.terms-wrap .input-check-all input + label::before,
+.terms-wrap .input-check input + label::before { position:absolute; content:'';  left:0; top:50%; transform:translateY(-50%); }
+
+.terms-wrap .input-check-all input + label::before { width:20px; height:20px; background:url(../resources/images/common/chk_all_off.png)no-repeat 50%/20px auto; }
+.terms-wrap .input-check-all input:checked + label::before { width:20px; height:20px; background:url(../resources/images/common/chk_all_on.png)no-repeat 50%/20px auto; }
+
+.terms-wrap .input-check input + label::before { width:16px; height:16px; background:url(../resources/images/common/chk_off.png)no-repeat 50%/16px auto; }
+.terms-wrap .input-check input:checked + label::before { width:16px; height:16px; background:url(../resources/images/common/chk_on.png)no-repeat 50%/16px auto; }
+button.btn.btn-primary:disabled {  color: #8A8A8A; background: #EFEFEF; }
+.contents-wrap.tb-flex { display:flex; flex-direction:column; justify-content:space-between; }
+</style>
+<body>
+	<!-- header -->
+	<div class="wrap">
+
+		<div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("./include/inc_header.html");
+			});
+			</script>
+        </div>
+		
+		<form id="formWrap">
+			<!-- s: contentsWrap -->
+			<div class="contents-wrap tb-flex">
+                <section class="form-wrap">
+
+                    <div class="form-group">
+                        <label for="" class="essential">성명</label>
+                        <input id="" type="text" name="" class="form-control" placeholder="성명" invalid="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="essential">생년월일</label>
+                        <div class="form-row">
+                            <div class="col">
+                                <input id="" type="tel" class="form-control" maxlength="6" name="" value="" placeholder="" required="">
+                            </div>
+                            <div class="input-hyphen">-</div>
+                            <div class="col">
+                                <input id="" type="tel" class="form-control jumin" maxlength="1" placeholder="●" name="" value="" required="">
+                                <span class="jumintext">●●●●●●</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="essential">휴대폰 번호</label>
+                        <div class="form-row">
+                            <div class="col-3">
+                                <input id="" type="text" class="form-control select" placeholder="통신사" onclick="openPopup('lySel1')" readonly="">
+                            </div>
+                            <div class="col">
+                                <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <input id="" type="number" class="form-control" placeholder="인증번호 입력">
+                            </div>
+                            <button class="btn btn-txt" type="button">인증번호요청</button>
+                        </div>
+                    </div>
+
+                </section>
+				<section class="terms-wrap">
+					<div class="terms-box">
+                        <div class="input-check-all">
+                            <input type="checkbox" name="checkAll" id="checkAll"/>
+                            <label for="checkAll">약관에 모두 동의할게요.</label>
+                        </div>
+                        <!-- <p class="terms-view"><a href="#none" onclick="openPopup('termsAll')">약관보기</a></p> -->
+                    </div>
+                    <div class="terms-list-wrap">
+                        <ul class="terms-area">
+                            <li class="terms-box">
+                                <p class="input-check">
+                                    <input type="checkbox" name="agreement" id="termsOfService" value="termsOfService" required />
+                                    <label for="termsOfService" class="required"><span>[필수] 서비스 이용 동의</span></label>
+                                </p>
+                                <p class="terms-view"><a href="#none" onclick="openPopup('terms01')">약관보기</a></p>
+                            </li>
+                            <li class="terms-box">
+                                <p class="input-check">
+                                    <input type="checkbox" name="agreement" id="privacyPolicy" value="privacyPolicy" required />
+                                    <label for="privacyPolicy" class="required"><span>[필수] 개인정보 수집 이용 동의</span></label>
+                                </p>
+                                <p class="terms-view"><a href="#none" onclick="openPopup('terms02')">약관보기</a></p>
+                            </li>
+                            <li class="terms-box">
+                                <p class="input-check">
+                                    <input type="checkbox" name="agreement" id="allowPromotions" value="allowPromotions" required />
+                                    <label for="allowPromotions" class="required"><span>[선택] 이벤트 수신 동의</span></label>
+                                </p>
+                                <p class="terms-view"><a href="#none" onclick="openPopup('terms03')">약관보기</a></p>
+                            </li>
+                            <li class="terms-box">
+                                <p class="input-check">
+                                    <input type="checkbox" name="agreement" id="allowPromotions11" value="allowPromotions11" required />
+                                    <label for="allowPromotions11" class="required"><span>[선택] 이벤트 가가 동의</span></label>
+                                </p>
+                                <p class="terms-view"><a href="#none" onclick="openPopup('terms03')">약관보기</a></p>
+                            </li>
+                            <li class="terms-box">
+                                <p class="input-check">
+                                    <input type="checkbox" name="agreement" id="allowPromotions22" value="allowPromotions22" required />
+                                    <label for="allowPromotions22" class="required"><span>[선택] 이벤트 나나 동의</span></label>
+                                </p>
+                                <p class="terms-view"><a href="#none" onclick="openPopup('terms03')">약관보기</a></p>
+                            </li>
+                        </ul>
+                    </div>
+				</section>
+			</div>
+            <section class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <button type="submit" class="btn btn-primary" disabled>확인</button>
+                </div>
+            </section>
+		</form>
+	</div>
+
+</body>
+
+<!--//전체동의-->
+<div id="termsAll" class="layerpopup laypop-all" >
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">전체동의</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+
+        <div class="pop-con-wrap" id="">
+            <section class="tabs-wrap type-spread"><!-- [퍼블]:1/26 - 탭 추가( 기존 내용은 tab-content 안에 그대로 가져감 ) -->
+                <div class="tabs">
+                    <ul class="tab-item type2 scroll">
+                        <li data-tab="tab-cont01" class="on"><a href="#none" title="선택됨">개인정보 수집 이용 동의</a></li>
+                        <li data-tab="tab-cont02"><a href="#none">고유식별 정보처리 동의</a></li>
+                        <li data-tab="tab-cont03"><a href="#none">통신사 이용약관 동의</a></li>
+                        <li data-tab="tab-cont04"><a href="#none">서비스 이용약관 동의</a></li>
+                        <li data-tab="tab-cont05"><a href="#none">개인정보 제3자 제공 동의</a></li>
+                    </ul>
+                    <div class="tab-content-area revert-type-spread">
+                        
+                        <div id="tab-cont01" class="tab-content">
+                            <p class="terms-title"> 개인정보 수집 이용 동의</p>
+                            <div class="terms-text-wrap">
+                                <dl class="terms-text-style1">
+                                    <dt>[SK텔레콤 귀중]</dt>
+                                    <dd>본인은 SK텔레콤(주) (이하 “회사” 라 합니다.)가 제공하는 본인확인 서비스(이하 “서비스” 라 합니다.)를 이용하기 위해, 다으모가 같이 “회사”가 본인의 개인정보를 수집ㆍ이용하고,  개인정보의 취급을 위탁하는 것에 동의합니다.</dd>
+                                </dl>
+                                <ul class="terms-text-style2">
+                                    <li class="terms-tit">1. 수집항목</li>
+                                    <li>이용자의 성명, 이동전화번호, 가입한 이동전화회사, 생년월일, 성별</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="tab-cont02" class="tab-content dp-none">
+                            <p class="terms-title">고유식별 정보처리 동의</p>
+                            <div class="terms-text-wrap">
+                                <dl class="terms-text-style1">
+                                    <dt>[SK텔레콤 귀중]</dt>
+                                    <dd>본인은 SK텔레콤(주) (이하 “회사” 라 합니다.)가 제공하는 본인확인 서비스(이하 “서비스” 라 합니다.)를 이용하기 위해, 다으모가 같이 “회사”가 본인의 개인정보를 수집ㆍ이용하고,  개인정보의 취급을 위탁하는 것에 동의합니다.</dd>
+                                </dl>
+                                <ul class="terms-text-style2">
+                                    <li class="terms-tit">1. 수집항목</li>
+                                    <li>이용자의 성명, 이동전화번호, 가입한 이동전화회사, 생년월일, 성별</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="tab-cont03" class="tab-content dp-none">
+                            <p class="terms-title">통신사 이용약관 동의</p>
+                            <div class="terms-text-wrap">
+                                <dl class="terms-text-style1">
+                                    <dt>[SK텔레콤 귀중]</dt>
+                                    <dd>본인은 SK텔레콤(주) (이하 “회사” 라 합니다.)가 제공하는 본인확인 서비스(이하 “서비스” 라 합니다.)를 이용하기 위해, 다으모가 같이 “회사”가 본인의 개인정보를 수집ㆍ이용하고,  개인정보의 취급을 위탁하는 것에 동의합니다.</dd>
+                                </dl>
+                                <ul class="terms-text-style2">
+                                    <li class="terms-tit">1. 수집항목</li>
+                                    <li>이용자의 성명, 이동전화번호, 가입한 이동전화회사, 생년월일, 성별</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="tab-cont04" class="tab-content dp-none">
+                            <p class="terms-title">서비스 이용약관 동의</p>
+                            <div class="terms-text-wrap">
+                                <dl class="terms-text-style1">
+                                    <dt>[SK텔레콤 귀중]</dt>
+                                    <dd>본인은 SK텔레콤(주) (이하 “회사” 라 합니다.)가 제공하는 본인확인 서비스(이하 “서비스” 라 합니다.)를 이용하기 위해, 다으모가 같이 “회사”가 본인의 개인정보를 수집ㆍ이용하고,  개인정보의 취급을 위탁하는 것에 동의합니다.</dd>
+                                </dl>
+                                <ul class="terms-text-style2">
+                                    <li class="terms-tit">1. 수집항목</li>
+                                    <li>이용자의 성명, 이동전화번호, 가입한 이동전화회사, 생년월일, 성별</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="tab-cont05" class="tab-content dp-none">
+                            <p class="terms-title">개인정보 제3자 제공 동의</p>
+                            <div class="terms-text-wrap">
+                                <dl class="terms-text-style1">
+                                    <dt>[SK텔레콤 귀중]</dt>
+                                    <dd>본인은 SK텔레콤(주) (이하 “회사” 라 합니다.)가 제공하는 본인확인 서비스(이하 “서비스” 라 합니다.)를 이용하기 위해, 다으모가 같이 “회사”가 본인의 개인정보를 수집ㆍ이용하고,  개인정보의 취급을 위탁하는 것에 동의합니다.</dd>
+                                </dl>
+                                <ul class="terms-text-style2">
+                                    <li class="terms-tit">1. 수집항목</li>
+                                    <li>이용자의 성명, 이동전화번호, 가입한 이동전화회사, 생년월일, 성별</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <a href="#none" class="btn btn-primary">확인했어요</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--전체동의//-->
+
+
+<!--//[필수] 서비스이용동의-->
+<div id="terms01" class="layerpopup laypop-all" >
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">서비스 이용 동의</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+
+        <div class="ly-con-wrap">
+            <p class="terms-title"> 개인정보 수집 이용 동의</p>
+            <div class="terms-text-wrap">
+                <dl class="terms-text-style1">
+                    <dt>[SK텔레콤 귀중]</dt>
+                    <dd>본인은 SK텔레콤(주) (이하 “회사” 라 합니다.)가 제공하는 본인확인 서비스(이하 “서비스” 라 합니다.)를 이용하기 위해, 다으모가 같이 “회사”가 본인의 개인정보를 수집ㆍ이용하고,  개인정보의 취급을 위탁하는 것에 동의합니다.</dd>
+                </dl>
+                <ul class="terms-text-style2">
+                    <li class="terms-tit">1. 수집항목</li>
+                    <li>이용자의 성명, 이동전화번호, 가입한 이동전화회사, 생년월일, 성별</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-btn-wrap">
+        <div class="btn-wrap">
+            <a href="#none" class="btn btn-primary confirm">확인했어요</a>
+        </div>
+    </div>
+</div>
+<!--[필수] 서비스이용동의//-->
+
+<!--//[필수] 개인정보수집이용동의-->
+<div id="terms02" class="layerpopup laypop-all" >
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">개인정보 수집 이용 동의</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+
+        <div class="ly-con-wrap">
+            <p class="terms-title"> 개인정보 수집 이용 동의</p>
+            <div class="terms-text-wrap">
+                <dl class="terms-text-style1">
+                    <dt>[SK텔레콤 귀중]</dt>
+                    <dd>본인은 SK텔레콤(주) (이하 “회사” 라 합니다.)가 제공하는 본인확인 서비스(이하 “서비스” 라 합니다.)를 이용하기 위해, 다으모가 같이 “회사”가 본인의 개인정보를 수집ㆍ이용하고,  개인정보의 취급을 위탁하는 것에 동의합니다.</dd>
+                </dl>
+                <ul class="terms-text-style2">
+                    <li class="terms-tit">1. 수집항목</li>
+                    <li>이용자의 성명, 이동전화번호, 가입한 이동전화회사, 생년월일, 성별</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-btn-wrap">
+        <div class="btn-wrap">
+            <a href="#none" class="btn btn-primary confirm">확인했어요</a>
+        </div>
+    </div>
+</div>
+<!--[필수] 개인정보수집이용동의//-->
+
+<!--//[필수] 이벤트수신동의-->
+<div id="terms03" class="layerpopup laypop-all" >
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">이벤트 수신 동의</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+
+        <div class="ly-con-wrap">
+            <p class="terms-title"> 개인정보 수집 이용 동의</p>
+            <div class="terms-text-wrap">
+                <dl class="terms-text-style1">
+                    <dt>[SK텔레콤 귀중]</dt>
+                    <dd>본인은 SK텔레콤(주) (이하 “회사” 라 합니다.)가 제공하는 본인확인 서비스(이하 “서비스” 라 합니다.)를 이용하기 위해, 다으모가 같이 “회사”가 본인의 개인정보를 수집ㆍ이용하고,  개인정보의 취급을 위탁하는 것에 동의합니다.</dd>
+                </dl>
+                <ul class="terms-text-style2">
+                    <li class="terms-tit">1. 수집항목</li>
+                    <li>이용자의 성명, 이동전화번호, 가입한 이동전화회사, 생년월일, 성별</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-btn-wrap">
+        <div class="btn-wrap">
+            <a href="#none" class="btn btn-primary confirm">확인했어요</a>
+        </div>
+    </div>
+</div>
+<!--[필수] 이벤트수신동의//-->
+</html>

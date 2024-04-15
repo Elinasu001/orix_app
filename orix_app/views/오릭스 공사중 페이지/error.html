@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>에러 페이지</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        hr {
+            border: none; /* 기본 테두리를 제거 */
+            height: 4px; /* 수평선의 두께를 조정 */
+            background-color: #007bff; /* 수평선의 색상을 지정 */
+            margin-top: 20px; /* 수평선 위의 여백을 조정 */
+            margin-bottom: 20px; /* 수평선 아래의 여백을 조정 */
+        }
+        .error-icon {
+            /* 이미지를 추가할 때 적절한 크기로 조정 */
+            margin-bottom: 20px;
+        }
+        .error-code {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px; /* 오류 코드 아래 간격 조정 */
+        }
+        .error-message {
+            font-size: 18px;
+            margin-bottom: 20px; /* 오류 메시지 아래 간격 조정 */
+        }
+        .close-app-btn {
+            position: fixed; /* 버튼을 화면 하단에 고정 */
+            bottom: 0; /* 하단에 위치 */
+            left: 0; /* 왼쪽에 위치 */
+            right: 0;
+            width: 94%; /* 버튼의 너비를 화면 가로폭에 맞춤 */
+            padding: 15px 0; /* 상하 패딩 조정으로 버튼 높이 변경 */
+            font-size: 18px;
+            color: white;
+            background-color: #003F86;
+            border: none;
+            border-top-left-radius: 15px; /* 상단 왼쪽 둥근 모서리 */
+            border-top-right-radius: 15px; /* 상단 오른쪽 둥근 모서리 */
+            border-bottom-left-radius: 15px; /* 상단 왼쪽 둥근 모서리 */
+            border-bottom-right-radius: 15px; /* 상단 오른쪽 둥근 모서리 */
+            cursor: pointer;
+            text-align: center; /* 버튼 텍스트 가운데 정렬 */
+            margin-bottom: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+            text-align: center; /* 버튼 텍스트 가운데 정렬 */
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 추후 이미지 파일 경로로 'src' 속성을 업데이트하세요. -->
+    <img src="error_icon.png" alt="Error Icon" class="error-icon">
+        <div class="error-code">불편을 드려서 죄송해요</div>
+        <hr>
+        <div class="error-message" >일시적인 오류로 서비스 이용이 어려줘요.<Br>
+            잠시 후 다시 이용해 주세요.</div>
+    <div class="error-code" id="errorCode">404 Error</div>
+    <div class="error-message" id="errorMessage">요청하신 페이지를 찾을 수 없습니다.</div>
+    <button class="close-app-btn" onclick="closeApp()">앱 종료</button>
+    <script>
+        function getQueryParams() {
+            var params = {};
+            location.search.slice(1).split("&").forEach(function (pair) {
+                var [key, value] = pair.split("=");
+                params[key] = decodeURIComponent(value);
+            });
+            return params;
+        }
+
+        var isReal = false;
+        document.addEventListener("DOMContentLoaded", function() {
+            var params = getQueryParams();
+            isReal = params.mode == "true" ? true:false;
+            document.getElementById("errorCode").textContent = params.errorCode || "Unknown Error";
+            document.getElementById("errorMessage").textContent = params.errorMessage || "No error message provided.";
+            window.webkit.messageHandlers.gnb.postMessage(JSON.stringify({"callback":"","cmd":"loading","flag":"N"}))
+        });
+
+        function closeApp() {
+            window.webkit.messageHandlers.gnb.postMessage(JSON.stringify({"callback":"","cmd":"appClose"}))
+        }
+
+        function mainGo(){
+            if(isReal){
+                location.href='https://app.orix.co.kr';
+            }else{
+                location.href='http://110.13.183.104:6881';
+            }
+        }
+    </script>
+</body>
+</html>
