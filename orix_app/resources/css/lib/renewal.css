@@ -903,9 +903,11 @@ iframe { border:none; }
 .tit-main-area .text2 .blue { font-size:1.375rem; line-height:1.5rem; font-weight:800; color:#003F86; }
 .tit-main-area .text2 .red { font-size:1.375rem; line-height:1.5rem; font-weight:800; color:#FF0000; }
 
+.tit-main-area .txt-area { font-size:1.375rem; line-height:1.5rem; }
 
 .tit-area { display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; }
 .tit-area .tit { font-size:1.125rem; line-height:1.25rem; color:#003F86; font-weight:600; }
+.tit-area .txt { font-size:1rem; font-weight:400; color:#212529; }/* 20240902 : 디자인 추가 */
 
 .tit-cont-area { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
 .tit-cont-area .tit { font-size:1rem; line-height:1.188rem; font-weight:400; color:#000000; }
@@ -1006,6 +1008,7 @@ iframe { border:none; }
 .list-icon2 .call::before { background:url('../../images/common/list_call.png') no-repeat #EFF3F6 50%/16px auto; }
 .list-icon2 .sms::before { background:url('../../images/common/list_sms.png') no-repeat #EFF3F6 50%/21px auto; }
 .list-icon2 .picture::before { background:url('../../images/common/list_picture.png') no-repeat #EFF3F6 50%/21px auto; }
+.list-icon2 .deviceInfo::before { background: url(../../images/common/list_deviceInfo.png)no-repeat #EFF3F6 50%/16px auto; }/*20240902 : 텍스트 디자인 추가*/
 
 /* 리스트 공통-화살표X */
 .list-icon2 li { position:relative; }
@@ -1013,6 +1016,9 @@ iframe { border:none; }
 .list-icon2 li::before{ content:''; position:absolute; top:4px; left:5px; width:40px;; height:40px; border-radius:10px; }
 .list-icon2 li span { display:block; padding-left:69px; font-size:1rem; line-height:1.188rem; }
 .list-icon2 li .tit { font-weight:700; }
+
+.list-icon2.type2 li span em { font-style:normal; color:#003F86; }/*20240902 : 텍스트 디자인 추가*/
+.list-icon2.type2 li span.txt { font-size:0.875rem; }/*20240902 : 텍스트 디자인 추가*/
 
 /* txt-flex-box */
 .history-list { display:flex; justify-content:space-between; padding:28px 26px; border-radius:10px; border:1px solid #E2E2E2; }

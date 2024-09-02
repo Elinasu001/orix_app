@@ -35,7 +35,11 @@
     <script type="text/javascript" src="../../resources/js/lib/datepicker.js"></script>
 </head>
 <style>
-    .list-icon2 li span {  font-size:0.875rem; }
+    .tit-main-area .txt-area { font-size:1.375rem; line-height:1.5rem; } /*906*/
+    .tit-area .txt { font-size:1rem; font-weight:400; color:#212529; }
+    .list-icon2.type2 li span em { font-style:normal; color:#003F86; }
+    .list-icon2.type2 li span.txt { font-size:0.875rem; } /*1019*/
+    .list-icon2 .deviceInfo::before { background: url(../../images/common/list_deviceInfo.png)no-repeat #EFF3F6 50%/16px auto; }
 </style>
 <body>
     <div class="wrap">
@@ -51,51 +55,69 @@
         <form>
             <div class="contents-wrap">
                 <section class="tit-main-area">
-                    <p class="tit">앱 접근 권한</p>
-                    <p class="text">앱 서비스 이용을 위해 권한 허용이 필요합니다</p>
+                    <p class="txt-area"><strong class="tit">D-WAVE 앱 서비스 이용</strong>을 위해 <br/><strong class="tit">아래의 권한 허용</strong>이 필요합니다.</p>
                 </section>
                 <section class="list-area-wrap">
                     <div class="tit-area">
-                        <p class="tit">필수 접근 권한</p>
+                        <p class="tit">필수 권한<span class="txt"> &#58; 서비스의 핵심 기능을 제공하기 위해 반드시 필요합니다. 동의하지 않을 경우 일부 기능이 제한될 수 있습니다.</span></p>
                     </div>
-                    <ul class="list-icon2">
+                    <!-- <div class="tit-area">
+                        <p class=tit>선택적 권한<span class="txt"> &#58; 부가적인 기능을 제공하기 위해 필요합니다. 동의하지 않더라도 기본적인 서비스 이용에는 문제가 없으나, 특정 기능이 제한될 수 있습니다.</span></p>
+                    </div> -->
+                    <!-- <div class="tit-cont-area">
+                        <p class="tit ft-bold">필수 권한</p>
+                    </div> -->
+                    <ul class="list-icon2 type2">
                         <li class="camera">
-                            <span class="tit">카메라 접근 권한</span>
+                            <span class="tit">카메라 접근 권한 <em>[필수]</em></span>
                             <span class="txt">
                                 앱에서 사진을 찍거나 동영상을 촬영하기 위해 카메라 접근 권한이 필요합니다.<br/>
                                 카메라를 사용하여 실명확인을 위한 신분증 촬영을 할 수 있습니다.
                             </span>
                         </li>
-                        <li class="storage">
-                            <span class="tit">저장공간 접근 권한</span>
-                            <span class="txt">
-                                앱에서 파일을 저장하거나 불러오기 위해 저장공간 접근 권한이 필요합니다.<br/>
-                                파일을 다운로드하거나, 저장된 파일을 불러와서 사용하실 수 있습니다.
-                            </span>
-                        </li>
                         <!-- <li class="location">
-                            <span class="tit">위치</span>
-                            <span class="txt">주변 영업점 검색 시 사용</span>
+                            <span class="tit">위치 접근 권한 [필수]</span>
+                            <span class="txt">
+                            앱에서 사용자의 실시간 위치 정보를 사용하여 기능을 수행하기 위해 접근 권한이 필요합니다.<br/>
+                            사용자 주변 영업점 검색 시 사용하실 수 있습니다.
+                        </span>
                         </li> -->
                         <li class="call">
-                            <span class="tit">전화 접근 권한</span>
+                            <span class="tit">전화 접근 권한 <em>[필수]</em></span>
                             <span class="txt">
                                 앱에서 전화를 걸거나 수신하기 위해 전화 접근 권한이 필요합니다.<br/>
                                 고객지원 센터에 바로 전화를 걸거나, 비상시 연락을 취할 수 있습니다.
                             </span>
                         </li>
-                        <li class="sms">
+
+                        <!--D: 사진 접근 권한으로 대체-->
+                        <!-- <li class="storage">
+                            <span class="tit">저장공간 접근 권한</span>
+                            <span class="txt">
+                                앱에서 파일을 저장하거나 불러오기 위해 저장공간 접근 권한이 필요합니다.<br/>
+                                파일을 다운로드하거나, 저장된 파일을 불러와서 사용하실 수 있습니다.
+                            </span>
+                        </li> -->
+                        <!--D: 사진 접근 권한으로 대체-->
+                        <!-- <li class="sms">
                             <span class="tit">SMS</span>
                             <span class="txt">
                                 앱에서 SMS를 보내거나 읽기 위해 SMS 접근 권한이 필요합니다.<br/>
                                 본인 확인 코드 전송, 예약 알림 등의 서비스를 이용하실 수 있습니다.
                             </span>
-                        </li>
+                        </li> -->
                         <li class="picture">
-                            <span class="tit">사진 접근 권한</span>
+                            <span class="tit">사진 접근 권한 <em>[필수]</em></span>
                             <span class="txt">
                                 앱에서 사진을 저장하거나 불러오기 위해서 사진 접근 권한이 필요합니다.<br/>
                                 갤러리에 저장된 사진을 앱에서 불러오기 프로필 설정이나 콘텐츠 공유에 사용하실 수 있습니다.
+                            </span>
+                        </li>
+
+                        <li class="deviceInfo">
+                            <span class="tit">디바이스 정보 <em>[필수]</em></span>
+                            <span class="txt">
+                                단말기 인증 및 보안 강화를 위해 단말기 고유 식별번호(UUID), 전화번호, 디바이스 모델명 등의 정보를 수집할 수 있습니다.<br/>
                             </span>
                         </li>
                     </ul>
