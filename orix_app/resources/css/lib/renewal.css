@@ -1008,7 +1008,7 @@ iframe { border:none; }
 .list-icon2 .call::before { background:url('../../images/common/list_call.png') no-repeat #EFF3F6 50%/16px auto; }
 .list-icon2 .sms::before { background:url('../../images/common/list_sms.png') no-repeat #EFF3F6 50%/21px auto; }
 .list-icon2 .picture::before { background:url('../../images/common/list_picture.png') no-repeat #EFF3F6 50%/21px auto; }
-.list-icon2 .deviceInfo::before { background: url(../../images/common/list_deviceInfo.png)no-repeat #EFF3F6 50%/16px auto; }/*20240902 : 텍스트 디자인 추가*/
+.list-icon2 .deviceInfo::before { background: url('../../images/common/list_deviceInfo.png')no-repeat #EFF3F6 50%/30px auto; }/*20240902 : 텍스트 디자인 추가*/
 
 /* 리스트 공통-화살표X */
 .list-icon2 li { position:relative; }
