@@ -114,10 +114,23 @@
                                     <th scope="col">신청금액</th>
                                     <td>5,000 만원</td>
                                 </tr>
+                                <!--S: 20240926 수정-->
                                 <tr>
-                                    <th scope="col">기간/금리</th>
-                                    <td>36개월/7.5%</td>
+                                    <th scope="col">기간</th>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="amount">
+                                                <input type="number" class="form-control amount-num" id="amount" placeholder="기간 선택" onclick="openPopup('lySel1')" readonly="">
+                                                <span class="amount-txt">개월</span>
+                                            </div>
+                                        </div>
+                                    </td>
                                 </tr>
+                                <tr>
+                                    <th scope="col">금리</th>
+                                    <td>7.5%</td>
+                                </tr>
+                                <!--E: 20240926 수정-->
                                 <tr>
                                     <th scope="col">상환방식</th>
                                     <td>원리금균등분할</td>
@@ -153,6 +166,7 @@
 			</div>
             
 		</div>
+        <!--S: 20240926 버튼 추가-->
         <div class="fixed-btn-wrap">
             <div class="btn-wrap">
                 <a href="#none" class="btn btn-line">계약조건변경</a>
@@ -160,8 +174,28 @@
                 <a href="#none" class="btn btn-primary">다음단계로 이동</a>
             </div>
         </div>
-        
+        <!--E: 20240926 버튼 추가-->
 	</div>
+
+    <!--S: 20240926 기간 선택-->
+    <div id="lySel1" class="layerpopup layer-up" tabindex="0">
+        <div class="content-wrap">
+            <div class="pop-header">
+                <h2 class="pop-title">개월 선택</h2>
+                <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+            </div>
+            <div class="ly-scroll-con ly-select">
+                <ul class="ly-select-list">
+                    <li><button>24</button></li>
+                    <li><button>36</button></li>
+                    <li><button>48</button></li>
+                    <li><button>60 </button></li>
+                    <li><button>72</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--E: 20240926 기간 선택-->
     
 </body>
 </html>
